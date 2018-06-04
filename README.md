@@ -7,7 +7,8 @@ http://www.dcat-ap.de/def/ <br>
 Für die Vorschläge für die DCAT-AP.de Version 1.1 sind insbesondere die Spezifikation und das Konventionenhandbuch relevant:   
 http://dcat-ap.de/def/dcatde/1.0.1/spec/specification.pdf <br>
 http://dcat-ap.de/def/dcatde/1.0.1/implRules.pdf <br>
-Dort finden Sie auch in einer Readme Datei (http://www.dcat-ap.de/def/readme/) die wichtigsten Änderungen von Version 1.0 auf die aktuelle Version 1.0.1. zusammengefasst. 
+
+Weiterhin finden Sie in der Readme Datei (http://www.dcat-ap.de/def/readme/) die wichtigsten Änderungen von Version 1.0 auf die aktuelle Version 1.0.1. zusammengefasst und eine umfassende Liste dieser Änderungen finden Sie unter https://github.com/GovDataOfficial/DCAT-AP.de/blob/master/Change-Requests-f%C3%BCr-Release-1.0.1.pdf. 
 
 ## Zur Eingabe Ihrer Vorschläge stehen Ihnen folgende Wege offen: 
 
