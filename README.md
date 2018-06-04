@@ -11,7 +11,7 @@ Dort finden Sie auch in einer Readme Datei (http://www.dcat-ap.de/def/readme/) d
 
 ## Zur Eingabe Ihrer Vorschläge stehen Ihnen folgende Wege offen: 
 
-1. Die können ein neues „Issue“ auf Github erstellen. (Klicken Sie hierfür unter dem Tab „Issues“ auf den grünen Button „New Issues“.)  
+1. Sie können ein neues „Issue“ auf Github erstellen. (Klicken Sie hierfür unter dem Tab „Issues“ auf den grünen Button „New Issues“.)  
 2. Sie nutzen das Formular „Änderungsantrag DCAT-AP.de“ (https://github.com/GovDataOfficial/DCAT-AP.de/blob/master/CR-Formular-LeerNutzerv02.xlsx) und senden es an info@govdata.de 
 3. Sie nutzen das Kontaktformular unter: https://www.govdata.de/web/guest/kontakt  
 4. Sie schreiben eine E-Mail an: info@govdata.de 
