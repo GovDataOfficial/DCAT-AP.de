@@ -19,7 +19,7 @@ Dort finden Sie auch in einer Readme Datei (http://www.dcat-ap.de/def/readme/) d
 ## Bei der Eingabe von Vorschlägen gibt es folgendes zu beachten:
 
 -	Geben Sie für mögliche Rückfragen ihre Kontaktdaten (Email und Telefonnummer) an. 
--	Gehen Sie bei Ihren Vorschlägen kurz auf die Gründe für Ihren Bedarf ein und geben machen Sie nach Möglichkeit Angaben zum Kosten/Nutzenverhältnis der vorgeschlagenen Änderung an.
+-	Gehen Sie bei Ihren Vorschlägen kurz auf die Gründe für Ihren Bedarf ein und geben Sie nach Möglichkeit eine Einschätzung zum Kosten/Nutzenverhältnis der vorgeschlagenen Änderung.
 -	Bitte fügen Sie nach Möglichkeit Lösungsvorschläge für das skizzierte Problem bei. 
 -	Geben Sie zudem an, auf welche Dokumente sich Ihre Änderungen beziehen mit Stellenangaben (z.B. Konventionenhandbuch, S. 35-36). 
 - Bitte reichen Sie Ihre Vorschläge nach Möglichkeit in deutscher Sprache ein. 
