@@ -4,7 +4,7 @@ DCAT-AP.de ist die deutsche Adaption des „Data Catalogue Application Profile�
 
 # Weiterentwicklung DCAT-AP.de
 
-Dieses Repository dient dazu über DCAT-AP.de zu informieren und Änderungsvorschläge einzubringen. Bis zum 30.06.2018 für die DCAT-AP.de Version 1.1. wurden fachliche Erweiterungs- oder Korrekturvorschläge basierend auf dem seit dem 18.05. verfügbaren DCAT-AP.de 1.0.1 gesammelt. 
+Dieses Repository dient dazu über DCAT-AP.de zu informieren und Änderungsvorschläge einzubringen. Bis zum 30.06.2018 wurden fachliche Erweiterungs- oder Korrekturvorschläge basierend auf dem seit dem 18.05. verfügbaren DCAT-AP.de 1.0.1 gesammelt. 
 
 Die eingegebenen Erweiterungs- und Korrekturvorschläge werden im Anschluss zusammengetragen, aufbereitet, bewertet und zur Beschlussfassung an die Fachgruppe GovData als Expertengremium weitergegeben.
 
