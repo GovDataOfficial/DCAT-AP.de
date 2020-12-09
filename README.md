@@ -10,7 +10,9 @@ Dieses Repository dient dazu über DCAT-AP.de zu informieren und Change-Requests
 Auf Basis der dort eingestellten Version könnnen hier CRs eingegeben werden. 
 Benutzen Sie hierzu im Reiter "Issues" die Funktion "New Issue", die am rechten oberen Bildrand erscheinen sollte.
 
-CRs können fortlaufend eingereicht werden. Alle kleinere CRs die bis 15. Mai 2020 eingehen, können entsprechend ihrem Änderungsaufwand noch beim kommenden Minor-Release-Prozess behandelt werden. Größere Änderungsanträge werden zu einem späteren Zeitpunkt gemeinsam mit den CRs aus dem Major Release von DCAT-AP gebündelt aufbereitet, bewertet zur Beschlussfassung an die Fachgruppe GovData als Expertengremium weitergegeben.  
+CRs können fortlaufend eingereicht werden. 
+
+Alle CRs die bis 15. Februar 2021 eingehen, können noch in der Abstimmung zum kommenden Major-Release-Prozess behandelt werden. Diese werden gemeinsam mit den CRs aus dem Major Release von DCAT-AP gebündelt aufbereitet, bewertet zur Beschlussfassung an die Fachgruppe GovData als Expertengremium weitergegeben.  
 
 Wir bedanken uns bei allen Teilnehmerinnen und Teilnehmern für ihre Unterstützung. 
 
