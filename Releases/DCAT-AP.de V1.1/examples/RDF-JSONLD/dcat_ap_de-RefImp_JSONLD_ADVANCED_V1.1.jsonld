@@ -1,0 +1,343 @@
+{
+  "__comment": "Version 1.1, 13.08.2020, dcat-ap.de ausfuehrlichere Beispielimplementation - (C) CC BY 4.0 ']init[ AG für GovData'",
+  "@context": {
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcatde": "http://dcat-ap.de/def/dcatde/",
+    "dct": "http://purl.org/dc/terms/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "http://www.hamburg.de/bue/#publisher",
+      "@type": "foaf:Organization",
+      "foaf:name": "Behörde für Umwelt und Energie (BUE), Amt für Umweltschutz"
+    },
+    {
+      "@id": "https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de/resource/de72be51-7910-43ad-9dfc-10797b42cc0b#distribution",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de/resource/de72be51-7910-43ad-9dfc-10797b42cc0b"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "42702"
+      },
+      "dcat:downloadURL": {
+        "@id": "http://daten-hamburg.de/umwelt_klima/badegewaesser/Badegewaesser_messwerte_historisch_HH_2004-2013.zip"
+      },
+      "dcat:mediaType": {
+        "@id": "https://www.iana.org/assignments/media-types/text/csv+zip"
+      },
+      "dcatde:licenseAttributionByText": "Freie und Hansestadt Hamburg, Behoerde für Umwelt und Energie",
+      "dcterms:conformsTo": {
+        "@id": "http://dcat-ap.de/def/dcatde/1.0.2/"
+      },
+      "dcterms:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2018-07-28T00:00:00"
+      },
+      "dcterms:language": {
+        "@id": "http://publications.europa.eu/resource/authority/language/DEU"
+      },
+      "dcterms:license": {
+        "@id": "http://dcat-ap.de/def/licenses/dl-by-de/2.0"
+      },
+      "dcterms:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2018-09-04T19:39:09"
+      },
+      "dcterms:title": "Download Badegewässer -Hisorische Messwerte Hamburg, 2004-2013 (CSV)",
+      "spdx:checksum": {
+        "@id": "_:ub89bL97C17"
+      }
+    },
+    {
+      "@id": "_:ub89bL124C17",
+      "@type": "spdx:Checksum",
+      "spdx:algorithm": {
+        "@id": "https://www.dcat-ap.de/def/hashAlgorithms/1_0#md/5"
+      },
+      "spdx:checksumValue": {
+        "@type": "xsd:hexBinary",
+        "@value": "733d0612b5d3459bae57fc5059412ab8"
+      }
+    },
+    {
+      "@id": "https://www.govdata.de/web/guest/impressum#publisher",
+      "@type": "foaf:Organization",
+      "foaf:name": "Geschäfts- und Koordinierungsstelle GovData"
+    },
+    {
+      "@id": "_:ub89bL28C15",
+      "@type": "dcat:CatalogRecord",
+      "dcterms:description": "Diese Metadaten wurden vor dem Datensatz veröffentlicht.",
+      "dcterms:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2018-04-01T00:00:00"
+      },
+      "dcterms:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2018-04-01T00:00:00"
+      },
+      "foaf:primaryTopic": {
+        "@id": "https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de#dataset"
+      }
+    },
+    {
+      "@id": "http://suche.transparenz.hamburg.de/dataset/68180d85-df56-48e0-993e-b9da36103a72#dataset",
+      "@type": "dcat:Dataset",
+      "dcat:contactPoint": {
+        "@id": "_:ub89bL150C21"
+      },
+      "dcat:distribution": {
+        "@id": "http://suche.transparenz.hamburg.de/dataset/68180d85-df56-48e0-993e-b9da36103a72/resource/e3df4ce6-4729-4b06-9a0a-4fe29db46f88#distribution"
+      },
+      "dcat:granularity": {
+        "@id": "http://publications.europa.eu/resource/authority/frequency/WEEKLY"
+      },
+      "dcat:keyword": [
+        "Polizeikommissariatsgrenzen",
+        "Polizei",
+        "Polizeireviere"
+      ],
+      "dcat:theme": {
+        "@id": "http://publications.europa.eu/resource/authority/data-theme/GOVE"
+      },
+      "dcatde:contributorID": {
+        "@id": "http://dcat-ap.de/def/contributors/transparenzportalHamburg"
+      },
+      "dcatde:geocodingDescription": "Freie und Hansestadt Hamburg",
+      "dcatde:legalBasis": "Hamburgisches Transparenzgesetz (HmbTG).",
+      "dcatde:politicalGeocodingLevelURI": {
+        "@id": "http://dcat-ap.de/def/politicalGeocoding/Level/state"
+      },
+      "dcatde:politicalGeocodingURI": {
+        "@id": "http://dcat-ap.de/def/politicalGeocoding/stateKey/02"
+      },
+      "dcterms:accrualPeriodicity": {
+        "@id": "http://publications.europa.eu/resource/authority/frequency/MONTHLY"
+      },
+      "dcterms:description": "Mit den Polizeikommissariatsgrenzen werden die örtlichen Zustaendigkeiten der Hamburger Polizeikommissariatsgebiete geregelt.",
+      "dcterms:maintainer": {
+        "@id": "https://www.hamburg.de/innenbehoerde/#publisher"
+      },
+      "dcterms:originator": {
+        "@id": "https://www.hamburg.de/innenbehoerde/#publisher"
+      },
+      "dcterms:publisher": {
+        "@id": "https://www.hamburg.de/innenbehoerde/#publisher"
+      },
+      "dcterms:title": "Gebietsgrenzen Polizeikommissariate"
+    },
+    {
+      "@id": "https://www.hamburg.de/innenbehoerde/#publisher",
+      "@type": "foaf:Organization",
+      "foaf:name": "Behörde für Inneres und Sport, Polizei Hamburg"
+    },
+    {
+      "@id": "_:ub89bL150C21",
+      "@type": "vcard:Individual",
+      "vcard:fn": "Koenig, Julia, Frau",
+      "vcard:hasTelephone": "+49 40 123 45665"
+    },
+    {
+      "@id": "_:ub89bL97C17",
+      "@type": "spdx:Checksum",
+      "spdx:algorithm": {
+        "@id": "https://www.dcat-ap.de/def/hashAlgorithms/1_0#md/5"
+      },
+      "spdx:checksumValue": {
+        "@type": "xsd:hexBinary",
+        "@value": "a58d35bebefa4972898110b9f5da62bc"
+      }
+    },
+    {
+      "@id": "http://suche.transparenz.hamburg.de/dataset/68180d85-df56-48e0-993e-b9da36103a72/resource/e3df4ce6-4729-4b06-9a0a-4fe29db46f88#distribution",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "http://suche.transparenz.hamburg.de/dataset/68180d85-df56-48e0-993e-b9da36103a72/resource/e3df4ce6-4729-4b06-9a0a-4fe29db46f88"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "935108"
+      },
+      "dcat:downloadURL": {
+        "@id": "https://geodienste.hamburg.de/HH_WFS_PKGrenzen?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&typename=app:pk_grenzen"
+      },
+      "dcterms:conformsTo": {
+        "@id": "http://dcat-ap.de/def/dcatde/1.0.2/"
+      },
+      "dcterms:format": {
+        "@id": "http://publications.europa.eu/resource/authority/file-type/XML"
+      },
+      "dcterms:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2018-07-27T00:00:00"
+      },
+      "dcterms:language": {
+        "@id": "http://publications.europa.eu/resource/authority/language/DEU"
+      },
+      "dcterms:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2018-09-04T19:26:09"
+      },
+      "dcterms:title": "Download WFS Gebietsgrenzen Polizeikommissariate (GML)",
+      "spdx:checksum": {
+        "@id": "_:ub89bL180C17"
+      }
+    },
+    {
+      "@id": "_:ub89bL68C21",
+      "@type": "vcard:Individual",
+      "vcard:fn": "Meister, Thomas, Herr",
+      "vcard:hasTelephone": "+49 40 123 45678"
+    },
+    {
+      "@id": "_:ub89bL180C17",
+      "@type": "spdx:Checksum",
+      "spdx:algorithm": {
+        "@id": "https://www.dcat-ap.de/def/hashAlgorithms/1_0#md/5"
+      },
+      "spdx:checksumValue": {
+        "@type": "xsd:hexBinary",
+        "@value": "b05ef732323f43c8cd0b73cdc6a954ddee99763b3041c9ab8219c18abfd5185a"
+      }
+    },
+    {
+      "@id": "https://govdata.de#catalog",
+      "@type": "dcat:Catalog",
+      "dcat:dataset": [
+        {
+          "@id": "http://suche.transparenz.hamburg.de/dataset/68180d85-df56-48e0-993e-b9da36103a72#dataset"
+        },
+        {
+          "@id": "https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de#dataset"
+        }
+      ],
+      "dcat:record": {
+        "@id": "_:ub89bL28C15"
+      },
+      "dcat:themeTaxonomy": {
+        "@id": "http://publications.europa.eu/resource/authority/data-theme/"
+      },
+      "dcterms:description": "Das Datenportal für Deutschland - Open Government: Verwaltungsdaten transparent, offen und frei nutzbar.",
+      "dcterms:hasPart": {
+        "@id": "http://transparenz.hamburg.de/"
+      },
+      "dcterms:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2013-02-19T00:00:00"
+      },
+      "dcterms:language": {
+        "@id": "http://publications.europa.eu/resource/authority/language/DEU"
+      },
+      "dcterms:license": {
+        "@id": "http://dcat-ap.de/def/licenses/dl-by-de/2.0"
+      },
+      "dcterms:publisher": {
+        "@id": "https://www.govdata.de/web/guest/impressum#publisher"
+      },
+      "dcterms:rights": {
+        "@id": "https://www.govdata.de/web/guest/lizenzen"
+      },
+      "dcterms:spatial": {
+        "@id": "http://www.geonames.org/2921044/federal-republic-of-germany.html"
+      },
+      "dcterms:title": "GovData",
+      "foaf:homepage": {
+        "@id": "https://www.govdata.de/"
+      }
+    },
+    {
+      "@id": "https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de#dataset",
+      "@type": "dcat:Dataset",
+      "dcat:contactPoint": {
+        "@id": "_:ub89bL68C21"
+      },
+      "dcat:distribution": [
+        {
+          "@id": "https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de/resource/de72be51-7910-43ad-9dfc-10797b42cc0b#distribution"
+        },
+        {
+          "@id": "https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de/resource/a289c289-55c9-410f-b4c7-f88e5f6f4e47#distribution"
+        }
+      ],
+      "dcat:keyword": [
+        "umweltueberwachung",
+        "gewaesserqualitaet",
+        "wasser",
+        "wasserbelastung",
+        "badestelle"
+      ],
+      "dcat:theme": {
+        "@id": "http://publications.europa.eu/resource/authority/data-theme/ENVI"
+      },
+      "dcatde:contributorID": {
+        "@id": "http://dcat-ap.de/def/contributors/transparenzportalHamburg"
+      },
+      "dcatde:geocodingDescription": "Freie und Hansestadt Hamburg",
+      "dcatde:politicalGeocodingLevelURI": {
+        "@id": "http://dcat-ap.de/def/politicalGeocoding/Level/state"
+      },
+      "dcatde:politicalGeocodingURI": {
+        "@id": "http://dcat-ap.de/def/politicalGeocoding/stateKey/02"
+      },
+      "dcterms:description": "Darstellung der Badegewässer und ihrer Überwachungsmessstellen im Internet.",
+      "dcterms:maintainer": {
+        "@id": "http://www.hamburg.de/bue/#publisher"
+      },
+      "dcterms:originator": {
+        "@id": "http://www.hamburg.de/bue/#publisher"
+      },
+      "dcterms:publisher": {
+        "@id": "http://www.hamburg.de/bue/#publisher"
+      },
+      "dcterms:title": "Badegewässer (Daten) Hamburg"
+    },
+    {
+      "@id": "https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de/resource/a289c289-55c9-410f-b4c7-f88e5f6f4e47#distribution",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de/resource/a289c289-55c9-410f-b4c7-f88e5f6f4e47"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "5056"
+      },
+      "dcat:downloadURL": {
+        "@id": "http://daten-hamburg.de/umwelt_klima/badegewaesser/Badegewaesser_HH_2004-2013.zip"
+      },
+      "dcat:mediaType": {
+        "@id": "https://www.iana.org/assignments/media-types/text/gml+zip"
+      },
+      "dcatde:licenseAttributionByText": "Freie und Hansestadt Hamburg, Behoerde für Umwelt und Energie",
+      "dcterms:conformsTo": {
+        "@id": "http://dcat-ap.de/def/dcatde/1.0.2/"
+      },
+      "dcterms:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2018-07-27T00:00:00"
+      },
+      "dcterms:language": {
+        "@id": "http://publications.europa.eu/resource/authority/language/DEU"
+      },
+      "dcterms:license": {
+        "@id": "http://dcat-ap.de/def/licenses/dl-by-de/2.0"
+      },
+      "dcterms:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2018-09-04T19:26:09"
+      },
+      "dcterms:title": "Download Badegewässer (Daten) Hamburg, 2004-2013 (GML)",
+      "spdx:checksum": {
+        "@id": "_:ub89bL124C17"
+      }
+    }
+  ]
+}

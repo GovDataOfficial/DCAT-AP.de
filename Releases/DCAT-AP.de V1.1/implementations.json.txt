@@ -1,0 +1,174 @@
+{
+    "title": "Bekannte Nutzungen von DCAT-AP und DCAT-AP.de",
+    "description": "Um einen Überblick über die Nutzung der deutschen, EU und W3C Spezifikation zu erhalten, die Möglichkeit des Community-Building zu fördern und das Verständnis über die Bedeutung von DCAT-AP und DCAT-AP.de ausserhalb des GovData Horizontes zu schärfen, wird eine Liste von Projekten geführt, die DCAT-AP oder DCAT-AP.de verwenden.",
+    "list": [
+        {
+            "Name": "GovData - das Datenportal für Deutschland",
+            "URI": "https://www.govdata.de/",
+            "Kategorie": "Nutzung von DCAT-AP.de",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "BMFSFJ Open Data Portal",
+            "URI": "https://www.daten.bmfsfj.de/",
+            "Kategorie": "Nutzung von DCAT-AP.de",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "Transparenzportal Schleswig-Holstein",
+            "URI": "https://transparenz.schleswig-holstein.de/dataset",
+            "Kategorie": "Nutzung von DCAT-AP.de",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "BASt mit dem eigenen Profil DCAT-AP.NAP",
+            "URI": "https://www.its-platform.eu/highlights/harmonised-metadata-national-access-points",
+            "Kategorie": "sonstige Verwendungen von DCAT-AP",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "BRegDCAT-AP",
+            "URI": "https://joinup.ec.europa.eu/sites/default/files/document/2020-05/SC380_D02.01_Final%20Specification%20of%20the%20BRegDCAT-AP_v1.02.docx",
+            "Kategorie": "sonstige Verwendungen von DCAT-AP",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "GeoDCAT-AP",
+            "URI": "https://joinup.ec.europa.eu/solution/geodcat-application-profile-data-portals-europe/distribution/geodcat-ap-101-docx",
+            "Kategorie": "sonstige Verwendungen von DCAT-AP",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "StatDCAT-AP",
+            "URI": "https://joinup.ec.europa.eu/solution/statdcat-application-profile-data-portals-europe/distribution/statdcat-ap-v101-pdf",
+            "Kategorie": "sonstige Verwendungen von DCAT-AP",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "Italien",
+            "URI": "https://www.dati.gov.it/sites/default/files/2020-02/linee-guida-cataloghi-dati-profilo-dcat-ap-it-2.pdf",
+            "Kategorie": "weitere nationale Varianten von DCAT-AP für Datenportale",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "Norwegen",
+            "URI": "https://data.norge.no/specification/dcat-ap-no/",
+            "Kategorie": "weitere nationale Varianten von DCAT-AP für Datenportale",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "Schweden",
+            "URI": "https://diggsweden.github.io/DCAT-AP-SE/en/",
+            "Kategorie": "weitere nationale Varianten von DCAT-AP für Datenportale",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "Belgien",
+            "URI": "http://dcat.be/",
+            "Kategorie": "weitere nationale Varianten von DCAT-AP für Datenportale",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "Tschechische Republik",
+            "URI": "https://ofn.gov.cz/rozhran%C3%AD-katalog%C5%AF-otev%C5%99en%C3%BDch-dat/2019-04-04/",
+            "Kategorie": "weitere nationale Varianten von DCAT-AP für Datenportale",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "RegionalStatistik",
+            "URI": "https://www.regionalstatistik.de",
+            "Kategorie": "Nutzung von DCAT-AP.de mit Anlieferung an GovData",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "Brandenburg",
+            "URI": "https://datenadler.de/",
+            "Kategorie": "Nutzung von DCAT-AP.de mit Anlieferung an GovData",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "Hamburg",
+            "URI": "http://transparenz.hamburg.de/",
+            "Kategorie": "Nutzung von DCAT-AP.de mit Anlieferung an GovData",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "BKG",
+            "URI": "https://gdz.bkg.bund.de/index.php/default/open-data.html",
+            "Kategorie": "Nutzung von DCAT-AP.de mit Anlieferung an GovData",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "Genesis-Destatis",
+            "URI": "https://www-genesis.destatis.de/genesis/online",
+            "Kategorie": "Nutzung von DCAT-AP.de mit Anlieferung an GovData",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "BMBF",
+            "URI": "https://www.datenportal.bmbf.de/portal/de/index.html",
+            "Kategorie": "Nutzung von DCAT-AP.de mit Anlieferung an GovData",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "mCloud",
+            "URI": "https://www.mcloud.de/",
+            "Kategorie": "Nutzung von DCAT-AP.de mit Anlieferung an GovData",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "Statistisches Bundesamt",
+            "URI": "http://www.destatis.de",
+            "Kategorie": "Nutzung von DCAT-AP.de mit Anlieferung an GovData",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "Schleswig-Holstein",
+            "URI": "https://opendata.schleswig-holstein.de",
+            "Kategorie": "Nutzung von DCAT-AP.de mit Anlieferung an GovData",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "OpenNRW",
+            "URI": "https://open.nrw/",
+            "Kategorie": "Nutzung von DCAT-AP.de mit Anlieferung an GovData",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "Deutschen Nationalbibliothek",
+            "URI": "https://d-nb.info/",
+            "Kategorie": "Nutzung von DCAT-AP.de mit Anlieferung an GovData",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "Sachsen",
+            "URI": "https://www.opendata.sachsen.de/",
+            "Kategorie": "Nutzung von DCAT-AP.de mit Anlieferung an GovData",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "Berlin",
+            "URI": "https://daten.berlin.de/",
+            "Kategorie": "Nutzung von DCAT-AP.de mit Anlieferung an GovData",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "Bremen",
+            "URI": "https://transparenz.bremen.de/",
+            "Kategorie": "Nutzung von DCAT-AP.de mit Anlieferung an GovData",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "Rostock",
+            "URI": "https://www.opendata-hro.de/",
+            "Kategorie": "Nutzung von DCAT-AP.de mit Anlieferung an GovData",
+            "Bemerkung": ""
+        },
+        {
+            "Name": "Rheinland-Pfalz",
+            "URI": "https://daten.rlp.de/",
+            "Kategorie": "Nutzung von DCAT-AP.de mit Anlieferung an GovData",
+            "Bemerkung": ""
+        },
+    ]
+}

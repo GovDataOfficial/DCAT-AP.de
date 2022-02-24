@@ -1,0 +1,52 @@
+# Version 1.1, 13.08.2020, dcat-ap.de einfache Beispielimplementation - (C) CC BY 4.0 ']init[ AG für GovData'
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+<https://govdata.de#catalog>
+  # Minimalanforderungen DCAT-AP.de
+  a dcat:Catalog ;
+  dct:title "GovData" ;
+  dct:description "Das Datenportal für Deutschland - Open Government: Verwaltungsdaten transparent, offen und frei nutzbar." ;
+  dct:publisher <https://www.govdata.de/web/guest/impressum#publisher> ;
+  dcat:dataset <https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de#dataset> .
+
+<https://www.govdata.de/web/guest/impressum#publisher>
+  # Minimalanforderungen DCAT-AP.de
+  a foaf:Organization ;
+  foaf:name "Geschäfts- und Koordinierungsstelle GovData" .
+
+<https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de#dataset>
+  # Minimalanforderungen DCAT-AP.de
+  a dcat:Dataset ;
+  dct:title "Badegewässer (Daten) Hamburg" ;
+  dct:description "Darstellung der Badegewässer und ihrer Überwachungsmessstellen im Internet." ;
+
+  # Empfohlen gemaeß DCAT-AP.de
+  dcat:distribution <https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de/resource/a289c289-55c9-410f-b4c7-f88e5f6f4e47#distribution> ;
+  
+  # Konvention 1 {
+  dcat:contactPoint [
+    a <http://www.w3.org/2006/vcard/ns#Individual> ;
+    vcard:fn "Meister, Thomas, Herr" ;
+    vcard:hasTelephone "+49 40 123 45678" ; 
+  ] ; # }
+  
+  # Konvention 12 {
+  dcatde:contributorID <http://dcat-ap.de/def/contributors/transparenzportalHamburg> . # }
+
+<https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de/resource/a289c289-55c9-410f-b4c7-f88e5f6f4e47#distribution>
+  # Minimalanforderungen DCAT-AP.de
+  a dcat:Distribution ;
+  dcat:accessURL <https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de/resource/a289c289-55c9-410f-b4c7-f88e5f6f4e47> ;
+
+  # Optional gemaeß DCAT-AP.de
+  dcat:downloadURL <http://daten-hamburg.de/umwelt_klima/badegewaesser/Badegewaesser_HH_2004-2013.zip> ;
+  
+  # Konvention 32 {
+  dct:license <http://dcat-ap.de/def/licenses/dl-by-de/2.0> ; # }
+  # Konvention 35 {
+  dcatde:licenseAttributionByText "Freie und Hansestadt Hamburg, Behoerde für Umwelt und Energie" . # }

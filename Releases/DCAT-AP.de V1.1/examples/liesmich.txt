@@ -1,0 +1,66 @@
+============================================================================================
+=============================== dcat-ap.de readme für 1.1 ==================================
+============================================================================================
+
+Beispieldateien:
+Die nicht-normativen Beispieldateien wurden in RDF Turtle erstellt und mittels des Tools http://rdf-translator.appspot.com/ in die Formate RDF/XML und JSON-LD überführt.
+Die Beispiele wurden so angepasst, dass sie zum DCAT-AP.de Validator (BETA, siehe https://www.itb.ec.europa.eu/shacl/dcat-ap.de/upload) valide sind.
+
+Insbesondere Verschärfungen Datentyp:
+1.0.2: spdx:algorithm hat als Range ein rdfs:Literal
+1.1:   spdx:algorithm hat als Range eine rdfs:Resource 
+
+
+============================================================================================
+=============================== dcat-ap.de readme für 1.0.2 ================================
+============================================================================================
+
+Beispieldateien:
+Die beiliegenden Beispieldateien sind nicht-normativ und enthalten in den verschiedenen technischen Implementierungen (RDF/XML, RDF Turtle, JSON-LD) verschiedene Attribute in minimaler und maximaler Ausführung.
+
+Validierung:
+Die Validierungsdateien der Version 1.0 entfallen zukünftig. JSON, XML sowie JSON-Schema und XSD-Schemavalidierung werden nicht weiter gepflegt. In Version 1.1 ist eine Validierung mit SHACL geplant. 
+Zusätzlich wird als Beispieldatei bereitgestellt RDF Turtle Notation, JSON-LD
+
+Migrationshinweise für Version 1.0 auf 1.0.1:
+Errata für Implementierer der Version 1.0 zur Version 1.0.1:
+
+Feldumbenennungen:
+
+1.0: (überall) geocodingText
+1.0.1: (überall) geocodingDescription
+
+1.0: (überall) legalBasisText
+1.0.1: (überall) legalBasis
+
+
+
+Verschärfungen Datentyp:
+
+1.0: (UML): plannedAvailability:rdfs:Literal
+1.0.1: (UML): plannedAvailability:rdfs:Resource
+
+
+
+1.0: (UML): qualityProcessURI:rdfs:Literal
+1.0.1: (UML): qualityProcessURI:rdfs:Resource
+
+
+
+1.0: (UML): politicalGeocodingURI:rdfs:Literal
+1.0.1: (UML): politicalGeocodingURI:rdfs:Resource
+
+
+Verschärfungen Feldverbindlichkeiten:
+-keine -
+
+
+Vereinfachung Feldverbindlichkeiten:
+1.0: distribution.licence 1 - verbindlich
+1.0.1: distribution.licence 0..1 - empfohlen
+1.0: distribution.contributorID 1 - verbindlich
+1.0.1: distribution.contributorID 0..1 - optional
+
+
+Die Art in der Werteliste als RDF auf dcat-ap.de ausgeliefert werden wurde geändert.
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Version 1.1, 13.08.2020, dcat-ap.de einfache Beispielimplementation - (C) CC BY 4.0 ']init[ AG für GovData' -->
+
+<rdf:RDF
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+  xmlns:dcatde="http://dcat-ap.de/def/dcatde/"
+>
+  <dcat:Catalog rdf:about="https://govdata.de#catalog">
+    <dct:description>Das Datenportal für Deutschland - Open Government: Verwaltungsdaten transparent, offen und frei nutzbar.</dct:description>
+    <dcat:dataset>
+      <dcat:Dataset rdf:about="https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de#dataset">
+        <dct:title>Badegewässer (Daten) Hamburg</dct:title>
+        <dcat:distribution rdf:resource="https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de/resource/a289c289-55c9-410f-b4c7-f88e5f6f4e47#distribution"/>
+        <dcat:contactPoint>
+          <vcard:Individual rdf:nodeID="ub85bL31C21">
+            <vcard:fn>Meister, Thomas, Herr</vcard:fn>
+            <vcard:hasTelephone>+49 40 123 45678</vcard:hasTelephone>
+          </vcard:Individual>
+        </dcat:contactPoint>
+        <dct:description>Darstellung der Badegewässer und ihrer Überwachungsmessstellen im Internet.</dct:description>
+        <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/transparenzportalHamburg"/>
+      </dcat:Dataset>
+    </dcat:dataset>
+    <dct:publisher>
+      <foaf:Organization rdf:about="https://www.govdata.de/web/guest/impressum#publisher">
+        <foaf:name>Geschäfts- und Koordinierungsstelle GovData</foaf:name>
+      </foaf:Organization>
+    </dct:publisher>
+    <dct:title>GovData</dct:title>
+  </dcat:Catalog>
+  <dcat:Distribution rdf:about="https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de/resource/a289c289-55c9-410f-b4c7-f88e5f6f4e47#distribution">
+    <dcat:downloadURL rdf:resource="http://daten-hamburg.de/umwelt_klima/badegewaesser/Badegewaesser_HH_2004-2013.zip"/>
+    <dcat:accessURL rdf:resource="https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de/resource/a289c289-55c9-410f-b4c7-f88e5f6f4e47"/>
+    <dcatde:licenseAttributionByText>Freie und Hansestadt Hamburg, Behoerde für Umwelt und Energie</dcatde:licenseAttributionByText>
+    <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+  </dcat:Distribution>
+</rdf:RDF>

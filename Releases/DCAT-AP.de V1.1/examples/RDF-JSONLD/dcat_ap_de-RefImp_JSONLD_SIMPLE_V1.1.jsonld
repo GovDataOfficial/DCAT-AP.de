@@ -1,0 +1,68 @@
+{
+  "__comment": "Version 1.1, 13.08.2020, dcat-ap.de einfache Beispielimplementation - (C) CC BY 4.0 ']init[ AG für GovData'",
+  "@context": {
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcatde": "http://dcat-ap.de/def/dcatde/",
+    "dct": "http://purl.org/dc/terms/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://www.govdata.de/web/guest/impressum#publisher",
+      "@type": "foaf:Organization",
+      "foaf:name": "Geschäfts- und Koordinierungsstelle GovData"
+    },
+    {
+      "@id": "https://govdata.de#catalog",
+      "@type": "dcat:Catalog",
+      "dcat:dataset": {
+        "@id": "https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de#dataset"
+      },
+      "dcterms:description": "Das Datenportal für Deutschland - Open Government: Verwaltungsdaten transparent, offen und frei nutzbar.",
+      "dcterms:publisher": {
+        "@id": "https://www.govdata.de/web/guest/impressum#publisher"
+      },
+      "dcterms:title": "GovData"
+    },
+    {
+      "@id": "_:ub87bL31C21",
+      "@type": "vcard:Individual",
+      "vcard:fn": "Meister, Thomas, Herr",
+      "vcard:hasTelephone": "+49 40 123 45678"
+    },
+    {
+      "@id": "https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de#dataset",
+      "@type": "dcat:Dataset",
+      "dcat:contactPoint": {
+        "@id": "_:ub87bL31C21"
+      },
+      "dcat:distribution": {
+        "@id": "https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de/resource/a289c289-55c9-410f-b4c7-f88e5f6f4e47#distribution"
+      },
+      "dcatde:contributorID": {
+        "@id": "http://dcat-ap.de/def/contributors/transparenzportalHamburg"
+      },
+      "dcterms:description": "Darstellung der Badegewässer und ihrer Überwachungsmessstellen im Internet.",
+      "dcterms:title": "Badegewässer (Daten) Hamburg"
+    },
+    {
+      "@id": "https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de/resource/a289c289-55c9-410f-b4c7-f88e5f6f4e47#distribution",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://ckan.govdata.de/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de/resource/a289c289-55c9-410f-b4c7-f88e5f6f4e47"
+      },
+      "dcat:downloadURL": {
+        "@id": "http://daten-hamburg.de/umwelt_klima/badegewaesser/Badegewaesser_HH_2004-2013.zip"
+      },
+      "dcatde:licenseAttributionByText": "Freie und Hansestadt Hamburg, Behoerde für Umwelt und Energie",
+      "dcterms:license": {
+        "@id": "http://dcat-ap.de/def/licenses/dl-by-de/2.0"
+      }
+    }
+  ]
+}
