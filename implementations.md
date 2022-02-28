@@ -44,4 +44,4 @@ Eine ähnliche, kürzere Liste wird, von DCAT gepflegt: https://www.w3.org/TR/vo
  - [Bremen](https://transparenz.bremen.de/)
  - [Rostock](https://www.opendata-hro.de/)
  - [Rheinland-Pfalz](https://daten.rlp.de/)
- - [Destatis] (https://www.destatis.de/DE/Service/OpenData/_inhalt.html) 
+ - [Destatis](https://www.destatis.de/DE/Service/OpenData/_inhalt.html) 
