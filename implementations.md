@@ -34,7 +34,7 @@ Eine ähnliche, kürzere Liste wird, von DCAT gepflegt: https://www.w3.org/TR/vo
  - [BKG](https://gdz.bkg.bund.de/index.php/default/open-data.html)
  - [Genesis-Destatis](https://www-genesis.destatis.de/genesis/online)
  - [BMBF](https://www.datenportal.bmbf.de/portal/de/index.html)
- - [mCloud](https://www.mcloud.de/)
+ - [mCLOUD](https://www.mcloud.de/)
  - [Statistisches Bundesamt](http://www.destatis.de)
  - [Schleswig-Holstein](https://opendata.schleswig-holstein.de)
  - [OpenNRW](https://open.nrw/)
