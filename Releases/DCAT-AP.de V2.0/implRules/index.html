@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+  <meta charset="utf-8">
+  <title>DCAT-AP.de Konventionenhandbuch 2.0</title>
+  <link href="https://www.dcat-ap.de/assets/favicon.ico" rel="icon" />
+
+  <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
+  <script class="remove">
+    var respecConfig = {  
+      shortName: "DCAT-AP.de Konventionenhandbuch",
+      subtitle: "Technische, semantische und organisatorische Konventionen für „GovData“",
+      github: "https://github.com/GovDataOfficial/DCAT-AP.de",
+      latestVersion: "http://dcat-ap.de/def/dcatde/2.0/implRules/",
+
+      xref: "web-platform",
+      format: "markdown",
+      maxTocLevel: 2,
+      lint: false,
+      specStatus: "base",
+      doJsonLd: true,
+      noRecTrack: true,
+      addSectionLinks: false,
+      
+      currentVersion: "2.0",
+      publishDate: "2022-03-01",
+      modificationDate: "2022-02-28",
+      copyrightStart: 2017,
+      license : "cc-by",
+      additionalCopyrightHolders: "Creative Commons Namensnennung 4.0 „]init[ AG für GovData“",
+      
+      postProcess: [doPostProcessing],
+      
+      alternateFormats: [
+        {
+          label: "PDF",
+          uri: "https://www.dcat-ap.de/def/dcatde/2.0/implRules.pdf",
+        },
+      ],
+
+      logos: [
+        {
+            src: "./img/logo-govdata.jpg",
+            url: "./img/logo-govdata.jpg",
+            alt: "GovData.de",
+            width: 261,
+            height: 72,
+            id: "govdata-logo",
+          },
+        ],
+
+      authors: [
+        {
+          name: "Christian Wittig",
+          company: "GKSt GovData",
+          companyURL: "https://www.govdata.de/",
+        },
+        {
+          name: "Antje Göldner",
+          company: "GKSt GovData",
+          companyURL: "https://www.govdata.de/",
+        },
+        {
+          name: "Christian Horn",
+          company: "GKSt GovData",
+          companyURL: "https://www.govdata.de/",
+        },
+        {
+          name: "Ludger Rinsche",
+          company: "]init[ AG",
+          companyURL: "https://www.init.de/"
+        },
+        {
+          name: "Adam Kirschstein",
+          company: "]init[ AG",
+          companyURL: "https://www.init.de/"
+        },
+        {
+          name: "Sebastian Sklarß",
+          company: "]init[ AG",
+          companyURL: "https://www.init.de/"
+        },
+      ],
+      editors: [
+        {
+          name: "Dr. Jesper Zedlitz",
+          company: "MELUND Schleswig-Holstein",
+        }, 
+        {
+          name: "Evelyn Priefer",
+          company: "MIK Brandenburg",
+        }, 
+        {
+          name: "Jörn Hauptvogel",
+          company: "SID Sachsen",
+        }, 
+        {
+          name: "Dominik Panic",
+          company: "BKM Hamburg",
+        }, 
+        {
+          name: "Nils Volkening",
+          company: "BKM Hamburg",
+        }, 
+        {
+          name: "Peter Kochmann",
+          company: "GDI Nordrhein-Westfahlen",
+        }
+      ],
+      
+      localBiblio: {
+        GLD: {
+          title: "Government Linked Data (GLD) Working Group",
+          href: "http://www.w3.org/2011/gld/wiki/Main_Page",
+          publisher: "DCAT-AP",
+        },
+
+        RDF: {
+          title: "Resource Description Framework (RDF)",
+          href: "http://www.w3.org/RDF/",
+          publisher: "DCAT-AP",
+        },
+
+        DCAT: {
+          title: "Data Catalog Vocabulary (DCAT)",
+          href: "http://www.w3.org/TR/2014/REC-vocab-dcat-20140116/",
+          publisher: "DCAT-AP",
+          status: "W3C Recommendation 16 January 2014",
+        },
+
+        DCAT_AP: {
+          title: "DCAT Application Profile for Data Portals in Europe (DCAT-AP)",
+          href: "https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe",
+          publisher: "Semantic Interoperability Community (SEMIC)",
+          status: "Die DCAT-AP Spezifikation wurde von einer Arbeitsgruppe unter Federführung von Mitarbeitern des Generaldirektorates CONNECT, des Amtes für Veröffentlichungen der Europäischen Union (OPOCE) und des ISA Programmes des Generaldirektorates Informatik (DIGIT) entwickelt.",
+        },
+      }
+    };
+
+    function findDTDD(content) {
+      let allDTs = document.getElementsByTagName("dt");
+      let DT = null;
+      let DD = null;
+
+      for (var i = 0; i < allDTs.length; i++) {
+        if (allDTs[i].innerText===content) {
+          DT = allDTs[i];
+          DD = DT.nextSibling;
+          break;
+        }
+      }
+
+      return {DT, DD};
+    }
+
+    function sortConventions() {
+      // Grab a reference to the UL
+        var container = document.getElementsByClassName("tof")[0];
+
+        // Gather all the LI's from the container
+        var contents = container.querySelectorAll("li");
+
+        // The querySelector doesn't return a traditional array
+        // that we can sort, so we'll need to convert the contents 
+        // to a normal array.
+
+        var list = [];
+        for(var i=0; i<contents.length; i++) {
+            list.push(contents[i]);
+        }
+
+        // Sort based on innerHTML (sorts "in place")
+        list.sort(function(a, b) {
+            var aa = parseInt(a.querySelector("bdi").innerText);
+            var bb = parseInt(b.querySelector("bdi").innerText);
+            return aa < bb ? -1 : (aa > bb ? 1 : 0);
+        });
+
+        // We'll reverse the array because our shuffle runs backwards
+        list.reverse();
+
+        // Shuffle the order based on the order of our list array.
+        for(var i=0; i<list.length; i++) {
+            console.log(list[i].innerHTML);
+            container.insertBefore(list[i], container.firstChild);
+        }
+    }
+
+    function doPostProcessing() {
+      // remove Letzter Entwurf:
+      let le = findDTDD("Letzter Entwurf:");
+      if (le.DT) le.DT.remove();
+      if (le.DD) le.DD.remove();
+
+      // remove History:
+      let history = findDTDD("History:");
+      if (history.DT) history.DT.remove();
+      if (history.DD) history.DD.remove();
+
+      // rename Redaktion:
+      let re = findDTDD("Redaktion:");
+      if (re.DT) re.DT.innerText = "Erstellt von:";
+
+      // rename Autor/innen:
+      let au = findDTDD("Autor/innen:");
+      if (au.DT) au.DT.innerText = "Verfasst von:";
+      
+      // add details
+      let dliH = document.getElementsByTagName("dl")[0].innerHTML;
+      let addDetails = "";
+
+      // ++ Aktuelle Version
+      addDetails += "<dt>Aktuelle Version:</dt><dd>" + respecConfig.currentVersion + "</dd>";
+
+      // ++ Veröffentlichungsdatum
+      let vDate = new Date(respecConfig.publishDate).toLocaleDateString("de-de", {
+          day : 'numeric',
+          month : 'long',
+          year : 'numeric'
+      });
+      addDetails += "<dt>Veröffentlichungsdatum:</dt><dd>" + vDate + "</dd>";
+
+      // ++ Letzte Änderung
+      let laDate = new Date(respecConfig.modificationDate).toLocaleDateString("de-de", {
+          day : 'numeric',
+          month : 'long',
+          year : 'numeric'
+      });
+      addDetails += "<dt>Letzte Änderung:</dt><dd>" + laDate + "</dd>";
+
+      // finalize add details
+      document.getElementsByTagName("dl")[0].innerHTML = addDetails + dliH;
+
+      // passe Copyright an
+      document.getElementsByClassName("copyright")[0].innerText = document.getElementsByClassName("copyright")[0].innerText.substr(0,22) + respecConfig.additionalCopyrightHolders;
+
+      // wandle Abbildungen in Konventionen um
+      let konventionen = document.getElementsByClassName("konvention");
+      for (var i = 0; i < konventionen.length; i++) {
+        konventionen[i].innerHTML = konventionen[i].innerHTML.replace("Abbildung", "<b>Konvention ").replace("</bdi>", "</bdi>:</b>");
+        konventionen[i].getElementsByTagName("bdi")[0].innerHTML = konventionen[i].id.substr(-2);
+      }
+
+      // entferne unnötige tof-Überschrift
+      // document.getElementById("liste-der-konventionen").nextSibling.remove(); // <-- funktioniert nicht mehr
+      document.getElementById("abbildungsverzeichnis-0").remove();
+      document.querySelectorAll("a[href='#abbildungsverzeichnis']")[0].parentElement.parentElement.remove();
+
+      // wandle in der TOF Abbildungen in Konventionen um
+      let konv_list = document.getElementsByClassName("tof")[0].getElementsByTagName("a")
+      for (var i = 0; i < konv_list.length; i++) {
+        konv_list[i].innerHTML = konv_list[i].innerHTML.replace("Abbildung", "<b>Konvention ").replace("</bdi>", "</bdi>:</b>");
+        konv_list[i].getElementsByTagName("bdi")[0].innerHTML = konv_list[i].href.substr(-2);
+      }
+
+      // sortiere Konventionen
+      sortConventions();
+    }
+  </script>
+
+  <style>
+    mark {
+      background: none;
+      color: rgb(230,90,10);
+    }
+    
+    code {
+      color: #034575 !important;
+    }
+
+    th {
+      padding-right: 2em;
+    }
+
+    td {
+      padding-right: 2em;
+      vertical-align: top;
+    }
+
+    small {
+      text-align: center;
+      display: block;
+    }
+
+    .example pre {
+      background-color: rgba(0,0,0,0);
+    }
+    
+    .konvention {
+      text-align: left;
+      padding: .5em;
+      border: .5em;
+      border-top-style: none;
+      border-right-style: none;
+      border-bottom-style: none;
+      border-left-color: rgb(230,90,10);
+      border-left-style: solid;
+      page-break-inside: avoid;
+      margin: 1em auto;
+      background-color: rgba(230, 91, 10, 0.1);
+    }
+
+    .konvention figcaption {
+      font-style: normal;
+      font-size: 100%;
+    }
+
+    .tof a {
+      color: black !important;
+    }
+
+    .hljs {
+      background: none !important;
+    }
+  </style>
+</head>
+
+<body>
+<!--
+  <section id="sotd">
+    <p>Hier steht der Status des Dokuments.</p>
+  </section>
+  
+-->
+
+<section 
+  id="overview" 
+  class="introductory"
+  data-include="0A0_overview.md"
+  data-include-format="markdown"
+></section>
+
+<section
+  id="abstract"
+  class="introductory"
+  data-include="0B0_abstract.md"
+  data-include-format="markdown"
+></section>
+
+---
+
+<section id="tof" class="introductory">
+  <h2 id="liste-der-konventionen">Liste der Konventionen</h2>
+</section>
+
+---
+
+<section 
+  class="informative"
+  data-include="020_conventions_dataset.md"
+  data-include-format="markdown"
+  data-include-replace="true"
+></section>
+
+---
+
+<section 
+  class="informative"
+  data-include="021_conventions_distribution.md"
+  data-include-format="markdown"
+  data-include-replace="true"
+></section>
+
+---
+
+<section 
+  class="informative"
+  data-include="022_conventions_other.md"
+  data-include-format="markdown"
+  data-include-replace="true"
+></section>
+
+---
+
+<section 
+  class="informative"
+  data-include="030_vocabularies.md"
+  data-include-format="markdown"
+  data-include-replace="true"
+></section>
+
+---
+
+# Changelog
+
+<section 
+  class="informative"
+  data-include="040_changelog_2_0.md"
+  data-include-format="markdown"
+  data-include-replace="true"
+></section>
+
+---
+
+<section 
+  class="informative"
+  data-include="../shared/glossar.md"
+  data-include-format="markdown"
+  data-include-replace="true"
+></section>
+
+</body>
+</html>

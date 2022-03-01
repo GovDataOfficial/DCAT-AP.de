@@ -1,0 +1,711 @@
+[
+  {
+    "__comment": "Version 2.0, 18.02.2022, dcat-ap.de ausfuehrlichere Beispielimplementation - (C) CC BY 4.0 ']init[ AG für GovData'",
+    "@id": "https://govdata.de/#catalog",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Catalog"
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "GovData"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "Das Datenportal für Deutschland - Open Government: Verwaltungsdaten transparent, offen und frei nutzbar."
+      }
+    ],
+    "http://purl.org/dc/terms/publisher": [
+      {
+        "@id": "https://www.govdata.de/web/guest/impressum#publisher"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#dataset": [
+      {
+        "@id": "https://example.com/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de#dataset"
+      },
+      {
+        "@id": "https://example.com/dataset/68180d85-df56-48e0-993e-b9da36103a72#dataset"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/homepage": [
+      {
+        "@id": "https://www.govdata.de/"
+      }
+    ],
+    "http://purl.org/dc/terms/language": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/language/DEU"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@value": "2013-02-19T00:00:00",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#themeTaxonomy": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/data-theme/"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@id": "http://dcat-ap.de/def/licenses/dl-by-de/2.0"
+      }
+    ],
+    "http://purl.org/dc/terms/hasPart": [
+      {
+        "@id": "http://transparenz.hamburg.de/"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#record": [
+      {
+        "@id": "_:b0"
+      }
+    ],
+    "http://purl.org/dc/terms/rights": [
+      {
+        "@id": "https://www.govdata.de/web/guest/lizenzen"
+      }
+    ],
+    "http://purl.org/dc/terms/spatial": [
+      {
+        "@id": "http://www.geonames.org/2921044/federal-republic-of-germany.html"
+      }
+    ]
+  },
+  {
+  "@id": "_:b0",
+  "@type": [
+    "http://www.w3.org/ns/dcat#CatalogRecord"
+  ],
+  "http://purl.org/dc/terms/modified": [
+    {
+      "@value": "2018-04-01T00:00:00",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  ],
+  "http://purl.org/dc/terms/issued": [
+    {
+      "@value": "2018-04-01T00:00:00",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  ],
+  "http://purl.org/dc/terms/description": [
+    {
+      "@value": "Diese Metadaten wurden vor dem Datensatz veröffentlicht."
+    }
+  ],
+  "http://xmlns.com/foaf/0.1/primaryTopic": [
+    {
+      "@id": "https://example.com/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de#dataset"
+    }
+  ]
+},
+{
+  "@id": "_:b1",
+  "@type": [
+    "http://www.w3.org/2006/vcard/ns#Individual"
+  ],
+  "http://www.w3.org/2006/vcard/ns#fn": [
+    {
+      "@value": "Meister, Thomas, Herr"
+    }
+  ],
+  "http://www.w3.org/2006/vcard/ns#hasEmail": [
+    {
+      "@value": "thomas.meister@example.com"
+    }
+  ]
+},
+{
+  "@id": "_:b2",
+  "@type": [
+    "http://spdx.org/rdf/terms#Checksum"
+  ],
+  "http://spdx.org/rdf/terms#algorithm": [
+    {
+      "@id": "http://dcat-ap.de/def/hashAlgorithms/md/5"
+    }
+  ],
+  "http://spdx.org/rdf/terms#checksumValue": [
+    {
+      "@value": "a58d35bebefa4972898110b9f5da62bc",
+      "@type": "http://www.w3.org/2001/XMLSchema#hexBinary"
+    }
+  ]
+},
+{
+  "@id": "_:b3",
+  "@type": [
+    "http://spdx.org/rdf/terms#Checksum"
+  ],
+  "http://spdx.org/rdf/terms#algorithm": [
+    {
+      "@id": "http://dcat-ap.de/def/hashAlgorithms/md/5"
+    }
+  ],
+  "http://spdx.org/rdf/terms#checksumValue": [
+    {
+      "@value": "733d0612b5d3459bae57fc5059412ab8",
+      "@type": "http://www.w3.org/2001/XMLSchema#hexBinary"
+    }
+  ]
+},
+{
+  "@id": "_:b4",
+  "@type": [
+    "http://www.w3.org/2006/vcard/ns#Individual"
+  ],
+  "http://www.w3.org/2006/vcard/ns#fn": [
+    {
+      "@value": "Koenig, Julia, Frau"
+    }
+  ],
+  "http://www.w3.org/2006/vcard/ns#hasEmail": [
+    {
+      "@value": "julia.koenig@example.com"
+    }
+  ],
+  "http://www.w3.org/2006/vcard/ns#hasTelephone": [
+    {
+      "@id": "_:b5"
+    }
+  ]
+},
+{
+  "@id": "_:b5",
+  "@type": [
+    "http://www.w3.org/2006/vcard/ns#Work",
+    "http://www.w3.org/2006/vcard/ns#Voice"
+  ],
+  "http://www.w3.org/2006/vcard/ns#hasValue": [
+    {
+      "@id": "tel:+494012345665"
+    }
+  ]
+},
+{
+  "@id": "_:b6",
+  "@type": [
+    "http://spdx.org/rdf/terms#Checksum"
+  ],
+  "http://spdx.org/rdf/terms#algorithm": [
+    {
+      "@id": "http://dcat-ap.de/def/hashAlgorithms/md/5"
+    }
+  ],
+  "http://spdx.org/rdf/terms#checksumValue": [
+    {
+      "@value": "b05ef732323f43c8cd0b73cdc6a954ddee99763b3041c9ab8219c18abfd5185a",
+      "@type": "http://www.w3.org/2001/XMLSchema#hexBinary"
+    }
+  ]
+},
+{
+  "@id": "http://dcat-ap.de/def/contributors/transparenzportalHamburg"
+},
+{
+  "@id": "http://dcat-ap.de/def/hashAlgorithms/md/5"
+},
+{
+  "@id": "http://dcat-ap.de/def/licenses/dl-by-de/2.0"
+},
+{
+  "@id": "http://dcat-ap.de/def/politicalGeocoding/Level/state"
+},
+{
+  "@id": "http://dcat-ap.de/def/politicalGeocoding/stateKey/02"
+},
+{
+  "@id": "http://example.com/badegewaesser/Badegewaesser_HH_2004-2013.zip"
+},
+{
+  "@id": "http://example.com/badegewaesser/Badegewaesser_messwerte_historisch_HH_2004-2013.zip"
+},
+{
+  "@id": "http://example.com/resource/e3df4ce6-4729-4b06-9a0a-4fe29db46f88"
+},
+{
+  "@id": "http://example.com/resource/e3df4ce6-4729-4b06-9a0a-4fe29db46f88#distribution",
+  "@type": [
+    "http://www.w3.org/ns/dcat#Distribution"
+  ],
+  "http://www.w3.org/ns/dcat#accessURL": [
+    {
+      "@id": "http://example.com/resource/e3df4ce6-4729-4b06-9a0a-4fe29db46f88"
+    }
+  ],
+  "http://purl.org/dc/terms/title": [
+    {
+      "@value": "Download Gebietsgrenzen Polizeikommissariate"
+    }
+  ],
+  "http://purl.org/dc/terms/license": [
+    {
+      "@id": "http://dcat-ap.de/def/licenses/dl-by-de/2.0"
+    }
+  ],
+  "http://purl.org/dc/terms/modified": [
+    {
+      "@value": "2018-09-04T19:26:09",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  ],
+  "http://purl.org/dc/terms/format": [
+    {
+      "@id": "http://publications.europa.eu/resource/authority/file-type/GML"
+    }
+  ],
+  "http://www.w3.org/ns/dcat#downloadURL": [
+    {
+      "@id": "https://example.com/HH_WFS_PKGrenzen?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&typename=app:pk_grenzen"
+    }
+  ],
+  "http://spdx.org/rdf/terms#checksum": [
+    {
+      "@id": "_:b6"
+    }
+  ],
+  "http://purl.org/dc/terms/issued": [
+    {
+      "@value": "2018-07-27T00:00:00",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  ],
+  "http://purl.org/dc/terms/language": [
+    {
+      "@id": "http://publications.europa.eu/resource/authority/language/DEU"
+    }
+  ],
+  "http://www.w3.org/ns/dcat#byteSize": [
+    {
+      "@value": "935108",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    }
+  ]
+},
+{
+  "@id": "http://publications.europa.eu/resource/authority/data-theme/"
+},
+{
+  "@id": "http://publications.europa.eu/resource/authority/data-theme/ENVI"
+},
+{
+  "@id": "http://publications.europa.eu/resource/authority/data-theme/GOVE"
+},
+{
+  "@id": "http://publications.europa.eu/resource/authority/file-type/CSV"
+},
+{
+  "@id": "http://publications.europa.eu/resource/authority/file-type/GML"
+},
+{
+  "@id": "http://publications.europa.eu/resource/authority/file-type/XML"
+},
+{
+  "@id": "http://publications.europa.eu/resource/authority/frequency/MONTHLY"
+},
+{
+  "@id": "http://publications.europa.eu/resource/authority/language/DEU"
+},
+{
+  "@id": "http://spdx.org/rdf/terms#Checksum"
+},
+{
+  "@id": "http://transparenz.hamburg.de/"
+},
+{
+  "@id": "http://www.geonames.org/2921044/federal-republic-of-germany.html"
+},
+{
+  "@id": "http://www.hamburg.de/bue/#publisher",
+  "@type": [
+    "http://xmlns.com/foaf/0.1/Organization"
+  ],
+  "http://xmlns.com/foaf/0.1/name": [
+    {
+      "@value": "Behörde für Umwelt und Energie (BUE), Amt für Umweltschutz"
+    }
+  ]
+},
+{
+  "@id": "http://www.iana.org/assignments/media-types/application/zip"
+},
+{
+  "@id": "http://www.w3.org/2006/vcard/ns#Individual"
+},
+{
+  "@id": "http://www.w3.org/2006/vcard/ns#Voice"
+},
+{
+  "@id": "http://www.w3.org/2006/vcard/ns#Work"
+},
+{
+  "@id": "http://www.w3.org/ns/dcat#Catalog"
+},
+{
+  "@id": "http://www.w3.org/ns/dcat#CatalogRecord"
+},
+{
+  "@id": "http://www.w3.org/ns/dcat#Dataset"
+},
+{
+  "@id": "http://www.w3.org/ns/dcat#Distribution"
+},
+{
+  "@id": "http://xmlns.com/foaf/0.1/Organization"
+},
+{
+  "@id": "https://example.com/HH_WFS_PKGrenzen?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&typename=app:pk_grenzen"
+},
+{
+  "@id": "https://example.com/dataset/68180d85-df56-48e0-993e-b9da36103a72#dataset",
+  "@type": [
+    "http://www.w3.org/ns/dcat#Dataset"
+  ],
+  "http://purl.org/dc/terms/title": [
+    {
+      "@value": "Gebietsgrenzen Polizeikommissariate"
+    }
+  ],
+  "http://purl.org/dc/terms/description": [
+    {
+      "@value": "Mit den Polizeikommissariatsgrenzen werden die örtlichen Zustaendigkeiten der Hamburger Polizeikommissariatsgebiete geregelt."
+    }
+  ],
+  "http://www.w3.org/ns/dcat#distribution": [
+    {
+      "@id": "http://example.com/resource/e3df4ce6-4729-4b06-9a0a-4fe29db46f88#distribution"
+    }
+  ],
+  "http://www.w3.org/ns/dcat#keyword": [
+    {
+      "@value": "Polizei"
+    },
+    {
+      "@value": "Polizeikommissariatsgrenzen"
+    },
+    {
+      "@value": "Polizeireviere"
+    }
+  ],
+  "http://purl.org/dc/terms/publisher": [
+    {
+      "@id": "https://www.hamburg.de/innenbehoerde/#publisher"
+    }
+  ],
+  "http://www.w3.org/ns/dcat#theme": [
+    {
+      "@id": "http://publications.europa.eu/resource/authority/data-theme/GOVE"
+    }
+  ],
+  "http://dcat-ap.de/def/dcatde/politicalGeocodingLevelURI": [
+    {
+      "@id": "http://dcat-ap.de/def/politicalGeocoding/Level/state"
+    }
+  ],
+  "http://dcat-ap.de/def/dcatde/politicalGeocodingURI": [
+    {
+      "@id": "http://dcat-ap.de/def/politicalGeocoding/stateKey/02"
+    }
+  ],
+  "http://www.w3.org/ns/dcat#contactPoint": [
+    {
+      "@id": "_:b4"
+    }
+  ],
+  "http://purl.org/dc/terms/accrualPeriodicity": [
+    {
+      "@id": "http://publications.europa.eu/resource/authority/frequency/MONTHLY"
+    }
+  ],
+  "http://dcat-ap.de/def/dcatde/contributorID": [
+    {
+      "@id": "http://dcat-ap.de/def/contributors/transparenzportalHamburg"
+    }
+  ],
+  "http://dcat-ap.de/def/dcatde/legalBasis": [
+    {
+      "@value": "Hamburgisches Transparenzgesetz (HmbTG)."
+    }
+  ],
+  "http://dcat-ap.de/def/dcatde/originator": [
+    {
+      "@id": "https://www.hamburg.de/innenbehoerde/#publisher"
+    }
+  ],
+  "http://dcat-ap.de/def/dcatde/maintainer": [
+    {
+      "@id": "https://www.hamburg.de/innenbehoerde/#publisher"
+    }
+  ],
+  "http://dcat-ap.de/def/dcatde/geocodingDescription": [
+    {
+      "@value": "Freie und Hansestadt Hamburg"
+    }
+  ]
+},
+{
+  "@id": "https://example.com/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de#dataset",
+  "@type": [
+    "http://www.w3.org/ns/dcat#Dataset"
+  ],
+  "http://purl.org/dc/terms/title": [
+    {
+      "@value": "Badegewässer in Hamburg"
+    }
+  ],
+  "http://purl.org/dc/terms/description": [
+    {
+      "@value": "Historische Daten der Badegewässer und ihrer Überwachungsmessstellen im Internet."
+    }
+  ],
+  "http://www.w3.org/ns/dcat#distribution": [
+    {
+      "@id": "https://example.com/resource/de72be51-7910-43ad-9dfc-10797b42cc0b#distribution"
+    },
+    {
+      "@id": "https://example.com/resource/a289c289-55c9-410f-b4c7-f88e5f6f4e47#distribution"
+    }
+  ],
+  "http://www.w3.org/ns/dcat#keyword": [
+    {
+      "@value": "wasserbelastung"
+    },
+    {
+      "@value": "gewaesserqualitaet"
+    },
+    {
+      "@value": "umweltueberwachung"
+    },
+    {
+      "@value": "wasser"
+    },
+    {
+      "@value": "badestelle"
+    }
+  ],
+  "http://purl.org/dc/terms/publisher": [
+    {
+      "@id": "http://www.hamburg.de/bue/#publisher"
+    }
+  ],
+  "http://www.w3.org/ns/dcat#theme": [
+    {
+      "@id": "http://publications.europa.eu/resource/authority/data-theme/ENVI"
+    }
+  ],
+  "http://dcat-ap.de/def/dcatde/politicalGeocodingLevelURI": [
+    {
+      "@id": "http://dcat-ap.de/def/politicalGeocoding/Level/state"
+    }
+  ],
+  "http://dcat-ap.de/def/dcatde/politicalGeocodingURI": [
+    {
+      "@id": "http://dcat-ap.de/def/politicalGeocoding/stateKey/02"
+    }
+  ],
+  "http://www.w3.org/ns/dcat#contactPoint": [
+    {
+      "@id": "_:b1"
+    }
+  ],
+  "http://dcat-ap.de/def/dcatde/contributorID": [
+    {
+      "@id": "http://dcat-ap.de/def/contributors/transparenzportalHamburg"
+    }
+  ],
+  "http://dcat-ap.de/def/dcatde/originator": [
+    {
+      "@id": "http://www.hamburg.de/bue/#publisher"
+    }
+  ],
+  "http://dcat-ap.de/def/dcatde/maintainer": [
+    {
+      "@id": "http://www.hamburg.de/bue/#publisher"
+    }
+  ],
+  "http://dcat-ap.de/def/dcatde/geocodingDescription": [
+    {
+      "@value": "Freie und Hansestadt Hamburg"
+    }
+  ]
+},
+{
+  "@id": "https://example.com/resource/a289c289-55c9-410f-b4c7-f88e5f6f4e47"
+},
+{
+  "@id": "https://example.com/resource/a289c289-55c9-410f-b4c7-f88e5f6f4e47#distribution",
+  "@type": [
+    "http://www.w3.org/ns/dcat#Distribution"
+  ],
+  "http://www.w3.org/ns/dcat#accessURL": [
+    {
+      "@id": "https://example.com/resource/a289c289-55c9-410f-b4c7-f88e5f6f4e47"
+    }
+  ],
+  "http://purl.org/dc/terms/title": [
+    {
+      "@value": "Download Historische Messwerte Hamburg, 2004-2013 (XML)"
+    }
+  ],
+  "http://purl.org/dc/terms/modified": [
+    {
+      "@value": "2018-09-04T19:26:09",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  ],
+  "http://purl.org/dc/terms/format": [
+    {
+      "@id": "http://publications.europa.eu/resource/authority/file-type/XML"
+    }
+  ],
+  "http://www.w3.org/ns/dcat#compressFormat": [
+    {
+      "@id": "http://www.iana.org/assignments/media-types/application/zip"
+    }
+  ],
+  "http://purl.org/dc/terms/license": [
+    {
+      "@id": "http://dcat-ap.de/def/licenses/dl-by-de/2.0"
+    }
+  ],
+  "http://www.w3.org/ns/dcat#downloadURL": [
+    {
+      "@id": "http://example.com/badegewaesser/Badegewaesser_HH_2004-2013.zip"
+    }
+  ],
+  "http://spdx.org/rdf/terms#checksum": [
+    {
+      "@id": "_:b3"
+    }
+  ],
+  "http://purl.org/dc/terms/issued": [
+    {
+      "@value": "2018-07-27T00:00:00",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  ],
+  "http://purl.org/dc/terms/language": [
+    {
+      "@id": "http://publications.europa.eu/resource/authority/language/DEU"
+    }
+  ],
+  "http://www.w3.org/ns/dcat#byteSize": [
+    {
+      "@value": "5056",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    }
+  ],
+  "http://dcat-ap.de/def/dcatde/licenseAttributionByText": [
+    {
+      "@value": "Freie und Hansestadt Hamburg, Behoerde für Umwelt und Energie"
+    }
+  ]
+},
+{
+  "@id": "https://example.com/resource/de72be51-7910-43ad-9dfc-10797b42cc0b"
+},
+{
+  "@id": "https://example.com/resource/de72be51-7910-43ad-9dfc-10797b42cc0b#distribution",
+  "@type": [
+    "http://www.w3.org/ns/dcat#Distribution"
+  ],
+  "http://www.w3.org/ns/dcat#accessURL": [
+    {
+      "@id": "https://example.com/resource/de72be51-7910-43ad-9dfc-10797b42cc0b"
+    }
+  ],
+  "http://purl.org/dc/terms/title": [
+    {
+      "@value": "Download Historische Messwerte Hamburg, 2004-2013 (CSV)"
+    }
+  ],
+  "http://purl.org/dc/terms/modified": [
+    {
+      "@value": "2018-09-04T19:39:09",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  ],
+  "http://purl.org/dc/terms/format": [
+    {
+      "@id": "http://publications.europa.eu/resource/authority/file-type/CSV"
+    }
+  ],
+  "http://www.w3.org/ns/dcat#compressFormat": [
+    {
+      "@id": "http://www.iana.org/assignments/media-types/application/zip"
+    }
+  ],
+  "http://purl.org/dc/terms/license": [
+    {
+      "@id": "http://dcat-ap.de/def/licenses/dl-by-de/2.0"
+    }
+  ],
+  "http://www.w3.org/ns/dcat#downloadURL": [
+    {
+      "@id": "http://example.com/badegewaesser/Badegewaesser_messwerte_historisch_HH_2004-2013.zip"
+    }
+  ],
+  "http://spdx.org/rdf/terms#checksum": [
+    {
+      "@id": "_:b2"
+    }
+  ],
+  "http://purl.org/dc/terms/issued": [
+    {
+      "@value": "2018-07-28T00:00:00",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  ],
+  "http://purl.org/dc/terms/language": [
+    {
+      "@id": "http://publications.europa.eu/resource/authority/language/DEU"
+    }
+  ],
+  "http://www.w3.org/ns/dcat#byteSize": [
+    {
+      "@value": "42702",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    }
+  ],
+  "http://dcat-ap.de/def/dcatde/licenseAttributionByText": [
+    {
+      "@value": "Freie und Hansestadt Hamburg, Behoerde für Umwelt und Energie"
+    }
+  ]
+},
+{
+  "@id": "https://www.govdata.de/"
+},
+{
+  "@id": "https://www.govdata.de/web/guest/impressum#publisher",
+  "@type": [
+    "http://xmlns.com/foaf/0.1/Organization"
+  ],
+  "http://xmlns.com/foaf/0.1/name": [
+    {
+      "@value": "Geschäfts- und Koordinierungsstelle GovData"
+    }
+  ]
+},
+{
+  "@id": "https://www.govdata.de/web/guest/lizenzen"
+},
+{
+  "@id": "https://www.hamburg.de/innenbehoerde/#publisher",
+  "@type": [
+    "http://xmlns.com/foaf/0.1/Organization"
+  ],
+  "http://xmlns.com/foaf/0.1/name": [
+    {
+      "@value": "Behörde für Inneres und Sport, Polizei Hamburg"
+    }
+  ]
+},
+{
+  "@id": "tel:+494012345665"
+}
+]

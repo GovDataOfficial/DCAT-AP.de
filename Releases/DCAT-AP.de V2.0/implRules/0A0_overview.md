@@ -1,0 +1,1 @@
+![GovData.de Logo](./img/logo-govdata.jpg)

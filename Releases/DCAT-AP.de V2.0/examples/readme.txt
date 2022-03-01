@@ -1,0 +1,1 @@
+Die nicht-normativen Beispieldateien wurden in RDF Turtle erstellt und mittels des Tools https://www.easyrdf.org/converter in die Formate RDF/XML und JSON-LD überführt.

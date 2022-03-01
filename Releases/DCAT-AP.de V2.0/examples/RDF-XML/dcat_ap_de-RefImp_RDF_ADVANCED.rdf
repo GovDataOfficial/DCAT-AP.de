@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Version 2.0, 18.02.2022, dcat-ap.de ausfuehrlichere Beispielimplementation - (C) CC BY 4.0 ']init[ AG für GovData' -->
+
+<rdf:RDF xmlns:rdf    = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dcat   = "http://www.w3.org/ns/dcat#"
+         xmlns:dct    = "http://purl.org/dc/terms/"
+         xmlns:foaf   = "http://xmlns.com/foaf/0.1/"
+         xmlns:spdx   = "http://spdx.org/rdf/terms#"
+         xmlns:dcatde = "http://dcat-ap.de/def/dcatde/"
+         xmlns:vcard  = "http://www.w3.org/2006/vcard/ns#">
+
+  <dcat:Catalog rdf:about="https://govdata.de/#catalog">
+    <dct:title>GovData</dct:title>
+    <dct:description>Das Datenportal für Deutschland - Open Government: Verwaltungsdaten transparent, offen und frei nutzbar.</dct:description>
+    <dct:publisher>
+      <foaf:Organization rdf:about="https://www.govdata.de/web/guest/impressum#publisher">
+        <foaf:name>Geschäfts- und Koordinierungsstelle GovData</foaf:name>
+      </foaf:Organization>
+    </dct:publisher>
+
+    <dcat:dataset rdf:resource="https://example.com/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de#dataset"/>
+    <dcat:dataset>
+      <dcat:Dataset rdf:about="https://example.com/dataset/68180d85-df56-48e0-993e-b9da36103a72#dataset">
+        <dct:title>Gebietsgrenzen Polizeikommissariate</dct:title>
+        <dct:description>Mit den Polizeikommissariatsgrenzen werden die örtlichen Zustaendigkeiten der Hamburger Polizeikommissariatsgebiete geregelt.</dct:description>
+        <dcat:distribution>
+          <dcat:Distribution rdf:about="http://example.com/resource/e3df4ce6-4729-4b06-9a0a-4fe29db46f88#distribution">
+            <dcat:accessURL rdf:resource="http://example.com/resource/e3df4ce6-4729-4b06-9a0a-4fe29db46f88"/>
+            <dct:title>Download Gebietsgrenzen Polizeikommissariate</dct:title>
+            <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-04T19:26:09</dct:modified>
+            <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/GML"/>
+            <dcat:downloadURL rdf:resource="https://example.com/HH_WFS_PKGrenzen?SERVICE=WFS&amp;VERSION=1.1.0&amp;REQUEST=GetFeature&amp;typename=app:pk_grenzen"/>
+            <spdx:checksum>
+              <spdx:Checksum>
+                <spdx:algorithm rdf:resource="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+                <spdx:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">B05EF732323F43C8CD0B73CDC6A954DDEE99763B3041C9AB8219C18ABFD5185A</spdx:checksumValue>
+              </spdx:Checksum>
+            </spdx:checksum>
+            <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+            <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-27T00:00:00</dct:issued>
+            <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+            <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">935108.0</dcat:byteSize>
+          </dcat:Distribution>
+        </dcat:distribution>
+
+        <dcat:keyword>Polizei</dcat:keyword>
+        <dcat:keyword>Polizeikommissariatsgrenzen</dcat:keyword>
+        <dcat:keyword>Polizeireviere</dcat:keyword>
+        <dct:publisher rdf:resource="https://www.hamburg.de/innenbehoerde/#publisher"/>
+        <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+        <dcatde:politicalGeocodingLevelURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/Level/state"/>
+        <dcatde:politicalGeocodingURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/stateKey/02"/>
+        <dcat:contactPoint>
+          <vcard:Individual>
+            <vcard:fn>Koenig, Julia, Frau</vcard:fn>
+            <vcard:hasEmail>julia.koenig@example.com</vcard:hasEmail>
+            <vcard:hasTelephone>
+              <vcard:Work>
+                <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Voice"/>
+                <vcard:hasValue rdf:resource="tel:+494012345665"/>
+              </vcard:Work>
+            </vcard:hasTelephone>
+
+          </vcard:Individual>
+        </dcat:contactPoint>
+
+        <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/MONTHLY"/>
+        <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/transparenzportalHamburg"/>
+        <dcatde:legalBasis>Hamburgisches Transparenzgesetz (HmbTG).</dcatde:legalBasis>
+        <dcatde:originator rdf:resource="https://www.hamburg.de/innenbehoerde/#publisher"/>
+        <dcatde:maintainer rdf:resource="https://www.hamburg.de/innenbehoerde/#publisher"/>
+        <dcatde:geocodingDescription>Freie und Hansestadt Hamburg</dcatde:geocodingDescription>
+      </dcat:Dataset>
+    </dcat:dataset>
+
+    <foaf:homepage rdf:resource="https://www.govdata.de/"/>
+    <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-02-19T00:00:00</dct:issued>
+    <dcat:themeTaxonomy rdf:resource="http://publications.europa.eu/resource/authority/data-theme/"/>
+    <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+    <dct:hasPart rdf:resource="http://transparenz.hamburg.de/"/>
+    <dcat:record>
+      <dcat:CatalogRecord>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-01T00:00:00</dct:modified>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-01T00:00:00</dct:issued>
+        <dct:description>Diese Metadaten wurden vor dem Datensatz veröffentlicht.</dct:description>
+        <foaf:primaryTopic rdf:resource="https://example.com/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de#dataset"/>
+      </dcat:CatalogRecord>
+    </dcat:record>
+
+    <dct:rights rdf:resource="https://www.govdata.de/web/guest/lizenzen"/>
+    <dct:spatial rdf:resource="http://www.geonames.org/2921044/federal-republic-of-germany.html"/>
+  </dcat:Catalog>
+
+  <foaf:Organization rdf:about="http://www.hamburg.de/bue/#publisher">
+    <foaf:name>Behörde für Umwelt und Energie (BUE), Amt für Umweltschutz</foaf:name>
+  </foaf:Organization>
+
+  <foaf:Organization rdf:about="https://www.hamburg.de/innenbehoerde/#publisher">
+    <foaf:name>Behörde für Inneres und Sport, Polizei Hamburg</foaf:name>
+  </foaf:Organization>
+
+  <dcat:Dataset rdf:about="https://example.com/dataset/d4ce4e6e-ab89-44cb-bf5c-33a162c234de#dataset">
+    <dct:title>Badegewässer in Hamburg</dct:title>
+    <dct:description>Historische Daten der Badegewässer und ihrer Überwachungsmessstellen im Internet.</dct:description>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://example.com/resource/de72be51-7910-43ad-9dfc-10797b42cc0b#distribution">
+        <dcat:accessURL rdf:resource="https://example.com/resource/de72be51-7910-43ad-9dfc-10797b42cc0b"/>
+        <dct:title>Download Historische Messwerte Hamburg, 2004-2013 (CSV)</dct:title>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-04T19:39:09</dct:modified>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+        <dcat:compressFormat rdf:resource="http://www.iana.org/assignments/media-types/application/zip"/>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:downloadURL rdf:resource="http://example.com/badegewaesser/Badegewaesser_messwerte_historisch_HH_2004-2013.zip"/>
+        <spdx:checksum>
+          <spdx:Checksum>
+            <spdx:algorithm rdf:resource="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+            <spdx:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">A58D35BEBEFA4972898110B9F5DA62BC</spdx:checksumValue>
+          </spdx:Checksum>
+        </spdx:checksum>
+
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-28T00:00:00</dct:issued>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42702.0</dcat:byteSize>
+        <dcatde:licenseAttributionByText>Freie und Hansestadt Hamburg, Behoerde für Umwelt und Energie</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://example.com/resource/a289c289-55c9-410f-b4c7-f88e5f6f4e47#distribution">
+        <dcat:accessURL rdf:resource="https://example.com/resource/a289c289-55c9-410f-b4c7-f88e5f6f4e47"/>
+        <dct:title>Download Historische Messwerte Hamburg, 2004-2013 (XML)</dct:title>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-04T19:26:09</dct:modified>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+        <dcat:compressFormat rdf:resource="http://www.iana.org/assignments/media-types/application/zip"/>
+        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+        <dcat:downloadURL rdf:resource="http://example.com/badegewaesser/Badegewaesser_HH_2004-2013.zip"/>
+        <spdx:checksum>
+          <spdx:Checksum>
+            <spdx:algorithm rdf:resource="http://dcat-ap.de/def/hashAlgorithms/md/5"/>
+            <spdx:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">733D0612B5D3459BAE57FC5059412AB8</spdx:checksumValue>
+          </spdx:Checksum>
+        </spdx:checksum>
+
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-27T00:00:00</dct:issued>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DEU"/>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5056.0</dcat:byteSize>
+        <dcatde:licenseAttributionByText>Freie und Hansestadt Hamburg, Behoerde für Umwelt und Energie</dcatde:licenseAttributionByText>
+      </dcat:Distribution>
+    </dcat:distribution>
+
+    <dcat:keyword>wasserbelastung</dcat:keyword>
+    <dcat:keyword>gewaesserqualitaet</dcat:keyword>
+    <dcat:keyword>umweltueberwachung</dcat:keyword>
+    <dcat:keyword>wasser</dcat:keyword>
+    <dcat:keyword>badestelle</dcat:keyword>
+    <dct:publisher rdf:resource="http://www.hamburg.de/bue/#publisher"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dcatde:politicalGeocodingLevelURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/Level/state"/>
+    <dcatde:politicalGeocodingURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/stateKey/02"/>
+    <dcat:contactPoint>
+      <vcard:Individual>
+        <vcard:fn>Meister, Thomas, Herr</vcard:fn>
+        <vcard:hasEmail>thomas.meister@example.com</vcard:hasEmail>
+      </vcard:Individual>
+    </dcat:contactPoint>
+
+    <dcatde:contributorID rdf:resource="http://dcat-ap.de/def/contributors/transparenzportalHamburg"/>
+    <dcatde:originator rdf:resource="http://www.hamburg.de/bue/#publisher"/>
+    <dcatde:maintainer rdf:resource="http://www.hamburg.de/bue/#publisher"/>
+    <dcatde:geocodingDescription>Freie und Hansestadt Hamburg</dcatde:geocodingDescription>
+  </dcat:Dataset>
+
+</rdf:RDF>

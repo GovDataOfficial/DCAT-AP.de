@@ -1,0 +1,59 @@
+<rdf:RDF 
+    xmlns:rdf    = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:dcat   = "http://www.w3.org/ns/dcat#" 
+    xmlns:dct    = "http://purl.org/dc/terms/" 
+    xmlns:dcatap = "http://data.europa.eu/r5r#" 
+    xmlns:adms   = "http://www.w3.org/ns/adms#" 
+    xmlns:dcatde = "http://dcat-ap.de/def/dcatde/">
+
+    <dcat:Dataset rdf:nodeID="dataset-123">
+        <dct:title>Kontaktdaten aller deutschen Polizeidienststellen</dct:title>
+        <dct:description>Dieser Datensatz beinhaltet alle Polizeidienststellen in Deutschland. Er beinhaltet die Adressen, ihre Geo-Position und Telefonnummer. Da der Datensatz sehr groß ist, wird ebenfalls ein WebService zur Verfügung gestellt, der immer nur die Polizeidienststellen einer Postleitzahl zurück gibt.</dct:description>
+        <dcat:distribution>
+            <dcat:Distribution>
+                <dcat:accessURL rdf:resource="https://example.org/polizeidienststellen.xml" />
+                <dcat:downloadURL rdf:resource="https://example.org/polizeidienststellen.xml" />
+                <dct:title>Kontaktdaten aller deutschen Polizeidienststellen</dct:title>
+                <dct:description>Diese Distribution beinhaltet die Kontaktdaten aller Polizeidienststelle in Deutschland zum Download. ACHTUNG: Die Datei ist sehr groß!</dct:description>
+                <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2500000000.0</dcat:byteSize>
+                <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML" />
+            </dcat:Distribution>
+        </dcat:distribution>
+
+        <dcat:distribution>
+            <dcat:Distribution>
+                <dcat:accessURL rdf:resource="https://example.org/api/polizeidienststellen/" />
+                <dct:accessService>
+                    <dcat:DataService>
+                        <dct:title>Datenservice für die Kontaktdaten aller deutschen Polizeidienststellen</dct:title>
+                        <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-zero-de/2.0" />
+                        <dcat:endpointURL rdf:resource="https://example.org/api/polizeidienststellen/" />
+                        <dcat:endpointDescription rdf:resource="https://example.org/api/polizeidienststellen/wfs?service=WFS&amp;request=getcapabilities" />
+                        <dcatap:availability rdf:resource="http://publications.europa.eu/resource/authority/planned-availability/STABLE" />
+                        <dcat:servesDataset rdf:nodeID="dataset-123" />
+                    </dcat:DataService>
+                </dct:accessService>
+
+                <dct:title>Distribution die zum Datenservice für die Kontaktdaten aller deutschen Polizeidienststellen gehört</dct:title>
+                <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-zero-de/2.0" />
+                <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON" />
+            </dcat:Distribution>
+        </dcat:distribution>
+
+        <adms:sample>
+            <dcat:Distribution>
+                <dcat:accessURL rdf:resource="https://example.org/polizeidienststellen-example.json" />
+                <dcat:downloadURL rdf:resource="https://example.org/polizeidienststellen-example.json" />
+                <dct:title>Beispiel der Kontaktdaten aller deutschen Polizeidienststellen gemäß Datenservice</dct:title>
+                <dct:description>Dieser Datensatz beinhaltet die Kontaktdaten aller Polizeidienststelle der Postleitzahl 13585 zum Download. Es handelt sich dabei um ein Beispiel, wie der Datenservice die Daten ausliefert. Anders als der Bulk-Download liegt dieses Beispiel, wie die Antworten des Datenservices, als JSON-Datei vor.</dct:description>
+                <dct:license rdf:resource="http://dcat-ap.de/def/licenses/dl-zero-de/2.0" />
+                <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10000.0</dcat:byteSize>
+                <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON" />
+            </dcat:Distribution>
+        </adms:sample>
+
+        <dcatde:politicalGeocoding rdf:resource="http://dcat-ap.de/def/politicalGeocoding/Level/federal" />
+        <dct:spatial rdf:resource="http://publications.europa.eu/mdr/resource/authority/country/DEU" />
+    </dcat:Dataset>
+
+</rdf:RDF>
