@@ -174,7 +174,7 @@ UML Modell (strukturiert):
 1.0.0: -
 
 UML Modell (graphisch):
-2.0:   https://www.dcat-ap.de/def/dcatde/1.1/uml/dcat-ap-de.svg
+2.0:   https://www.dcat-ap.de/def/dcatde/2.0/uml/dcat-ap-de.svg
 1.1:   https://www.dcat-ap.de/def/dcatde/1.1/uml/modelio.pdf
 1.0.2: https://www.dcat-ap.de/def/dcatde/1.0.2/uml/modelio.pdf
 1.0.1: https://www.dcat-ap.de/def/dcatde/1.0.1/uml/modelio.pdf
