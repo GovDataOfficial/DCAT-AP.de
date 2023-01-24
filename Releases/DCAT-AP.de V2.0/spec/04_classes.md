@@ -690,11 +690,11 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
 ###  Datensatz: Zeitliche Auflösung {#datensatz-zeitliche-auflosung}
 > | *URI*                    | [`dcat:temporalResolution`](http://www.w3.org/ns/dcat#temporalResolution) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`rdfs:Literal`]([`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als [`xsd:duration`](https://www.w3.org/TR/xmlschema11-2/#duration))                     |
+> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als [`xsd:duration`](https://www.w3.org/TR/xmlschema11-2/#duration)                     |
 > | Verbindlichkeit          | Optional                       |
 > | Kardinalität             | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf den kürzesten im Datensatz auflösbaren Zeitraum. |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial_resolution  | 
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_temporal_resolution  | 
 > | Änderungen zur Vorversion | 2.0: Neu hinzugefügt. | 
 
 <br>
