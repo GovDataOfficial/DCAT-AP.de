@@ -1,3 +1,8 @@
+[![CC BY 4.0][cc-by-shield]][cc-by]
+
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+
 # DCAT-AP.de
 
 DCAT-AP.de ist die deutsche Adaption des „Data Catalogue Application Profile“ (DCAT-AP) (https://github.com/SEMICeu/DCAT-AP) für Datenportale in Europa.
@@ -16,10 +21,9 @@ Alle eingegangenen CRs werden gemeinsam mit den CRs aus dem Release von DCAT-AP 
 
 Wir bedanken uns bei allen Teilnehmerinnen und Teilnehmern für ihre Unterstützung. 
 
-Falls Sie Fragen zur Weiterentwicklung von DCAT-AP.de haben, schreiben Sie gerne eine Mail an die Geschäfts- und Koordinierungsstelle GovData unter: info@govdata.de 
+Falls Sie Fragen zur Weiterentwicklung von DCAT-AP.de haben, schreiben Sie gerne eine Mail an das Produktmanagement GovData unter: info@govdata.de 
 
 Wir bedanken uns bei allen Teilnehmerinnen und Teilnehmern für ihre Unterstützung.
 
 Ihr GovData-Team 
-(CW) 
-	
+(TT)
