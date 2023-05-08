@@ -284,7 +284,7 @@ Für die Bundesländer können die folgenden alternativen `GeoNames`-URIs genutz
 
 Zur Unterstützung der Kommunikation im Portalverbund und um maschinenverarbeitbare Herkunftsangaben zu ermöglichen, pflegt die Geschäfts- und Koordinierungsstelle eine Liste der Datenbereitsteller des Portals GovData.de. Sie enthält direkte Datenbereitsteller des GovData.de Portals. Diese Liste ändert sich außerhalb des Releasezyklus von DCAT-AP.de.
 
-Neue Datenbereitsteller können jederzeit nach der Aufbauvorschrift `dcat-ap.de/def/contributors/`*`<contributorID>`* hinzugefügt werden. Kontaktieren Sie zur Aufnahme neuer Datenbereitsteller bitte die Geschäfts- und Koordinierungsstelle GovData: info@govdata.de.
+Neue Datenbereitsteller können jederzeit nach der Aufbauvorschrift `dcat-ap.de/def/contributors/`*`<contributorID>`* hinzugefügt werden. Kontaktieren Sie zur Aufnahme neuer Datenbereitsteller bitte die Geschäfts- und Koordinierungsstelle GovData: [info@govdata.de](mailto:info@govdata.de?subject=dcatde%3AcontributorID%20-%20Vergabe%20contributorID&body=Sehr%20geehrte%20Damen%20und%20Herren%2C%0D%0A%0D%0Ahiermit%20bitten%20wir%20Sie%20um%20die%20Vergabe%20eine%20contributorID%20f%C3%BCr%3A%0D%0A%0D%0AOrganisation%3A%20_________%0D%0A ).
 
 Die Liste der Datenbereitsteller wird nicht mehr im Konventionenhandbuch selbst gepflegt, sondern lediglich verlinkt. (Siehe [[[#kontrollierte-vokabulare]]])
 
