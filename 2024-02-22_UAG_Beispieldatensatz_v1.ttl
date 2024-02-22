@@ -1,0 +1,74 @@
+Standt: 22.02.2024 16:!2 
+
+# +mgroenewald fehlende prefixes hinzugefügt (vcard,foaf, xsd), Syntaxfehler korrigiert um nicht-inhaltiche Validierungsfehler zu beheben.
+
+@prefix :        <http://www.example.org/rdf#> . #Beispielnamensraum
+@prefix dcat:    <http://www.w3.org/ns/dcat#> . #DCAT3 Vokabular
+@prefix dcatap:  <http://data.europa.eu/r5r/> . #DCAT-AP Vokabular
+@prefix dcatde:  <http://dcat-ap.de/def/dcatde/> . #DCAT-AP.de Vokabular
+@prefix dcterms: <http://purl.org/dc/terms/> . #Dublin Core Vokabular
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> . 
+@prefix geo:     <http://www.opengis.net/ont/geosparql#> .
+@prefix locn:    <http://www.w3.org/ns/locn#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix vcard:   <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.example.org/dataset/12345678-9abc-4729-9044-f4d4ceaed491> a dcat:Dataset ;
+    
+    # Verpflichtende Attribute
+    dcterms:title "Haushaltsplan"@de ;
+    dcterms:description "Bitte bedenken Sie: Ein Haushaltsplan unterscheidet sich stark von Bilanzen und Konten, die viele aus der doppelten Buchführung gewohnt sind. Es erfordert eine gewisse Übung, die verwendete Systematik zu lesen."@de ;
+    
+    # Verpflichtend aus Konventionenhandbuch
+    # Konvention 1: (dcat:contactPoint wird von den Shacl-Shapes nicht verpflichtend gemacht, wenn er da ist, muss er aber E-Mail oder URL beinhalten.)
+    dcat:contactPoint [
+        a vcard:Kind; 
+        vcard:hasEmail <mailto:haushalt@example.com>;
+    ];
+    # Konvention 12/13:
+    dcatde:contributorID <http://dcat-ap.de/def/contributors/ORGANISATION>;
+    # Konvention 40:
+    dcterms:modified "2024-02-22T14:28:09.000"^^xsd:dateTime;
+    
+    # Empfohlene Attribute
+    dcatde:politicalGeocodingLevelURI <http://dcat-ap.de/def/politicalGeocoding/Level/state> ; 
+    dcatde:politicalGeocodingURI <http://dcat-ap.de/def/politicalGeocoding/stateKey/17> ; 
+    dcat:keyword "Haushalt"@de, "Haushaltsplan"@de; 
+    # Konvention 30:
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/GOVE> , <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
+    dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE> ;
+    # Konvention 04 - 07 finden Anwendung auf dcterms:spatial
+    dcterms:spatial [
+       a dcterms:Location ;
+       locn:geometry "POLYGON((7.278 52.567,7.278 52.582,7.31 52.582,7.31 52.567,7.278 52.567))"^^geo:wktLiteral ; 
+    ] ;
+    dcterms:temporal [ 
+       a dcterms:PeriodOfTime ;
+       dcat:startDate "2021-01-01"^^xsd:date ;
+       dcat:endDate "2021-12-31"^^xsd:date
+    ] ;
+    dcterms:publisher [
+        a foaf:Agent ;
+        foaf:name "Finanzministerium" ;
+        dcterms:type <http://purl.org/adms/publishertype/RegionalAuthority> ;
+    ] ; 
+    
+    # optional 
+    dcterms:issued "2024-02-14T13:45:00.000Z"^^xsd:dateTime ;
+    
+    # +jzedlitz
+    dcterms:references <https://musterdatenkatalog.de/def/musterdatensatz/haushalt/finanzplan> ;
+    
+    # +jzedlitz
+    dcterms:license <http://dcat-ap.de/def/licenses/officialWork> ;
+    
+    # +jzedlitz
+    foaf:page <http://www.example.org/wie-funktioniert-haushalt.html> ;
+    
+    # +mgroenewald    
+    dcat:distribution [
+      rdf:type dcat:Distribution ;
+      # dcat:accessURL + license fehlt noch 
+      ] ;
+    .
