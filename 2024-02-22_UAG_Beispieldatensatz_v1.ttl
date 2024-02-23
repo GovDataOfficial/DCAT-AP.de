@@ -1,4 +1,4 @@
-Standt: 22.02.2024 16:!2 
+Stand: 22.02.2024 16:12 
 
 # +mgroenewald fehlende prefixes hinzugefügt (vcard,foaf, xsd), Syntaxfehler korrigiert um nicht-inhaltiche Validierungsfehler zu beheben.
 
