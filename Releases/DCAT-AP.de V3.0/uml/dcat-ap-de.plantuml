@@ -1,0 +1,1344 @@
+@startuml
+
+remove @unlinked
+
+hide class circle
+' hide fields
+
+skinparam ClassBackgroundColor #C1C0C5|FDFEFD 
+skinparam ClassBorderColor black
+skinparam ArrowColor black
+skinparam BorderColor black 
+skinparam linetype ortho
+
+class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
+    <<mandatory>> dct:title ~> rdfs:Literal [1..*]
+        '@ rdfs:label      = Titel
+        '@ _:internalLink  = katalog-titel
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Diese Eigenschaft bezeichnet den einem Katalog zugewiesenen Titel.
+        '@ rdfs:comment    = Diese Eigenschaft kann für parallele Sprachversionen des Katalogtitels wiederholt werden.
+        '@ rdf:about       = http://purl.org/dc/terms/title
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title
+        '@ sh:shapes       = dcatap:Catalog_Property_dct_title
+    <<mandatory>> dct:description ~> rdfs:Literal [1..*]
+        '@ rdfs:label      = Beschreibung
+        '@ _:internalLink  = katalog-beschreibung
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Diese Eigenschaft enthält eine Beschreibung des Kataloges als Freitext.
+        '@ rdfs:comment    = Diese Eigenschaft kann für parallel existierende Sprachversionen der Katalogbeschreibung wiederholt werden.
+        '@ rdf:about       = http://purl.org/dc/terms/description
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_description
+        '@ sh:shapes       = dcatap:Catalog_Property_dct_description 
+
+    <<recommended>> dct:issued ~> rdfs:Literal [0..1]
+        '@ rdfs:label      = Veröffentlichungsdatum
+        '@ _:internalLink  = katalog-veroffentlichungsdatum
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`
+        '@ rdfs:comment    = Diese Eigenschaft enthält das Datum der Herausgabe/Emission (z.B. in Form einer Veröffentlichung) des Kataloges.
+        '@ rdf:about       = http://purl.org/dc/terms/issued
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_release_date
+        '@ sh:shapes       = dcatap:Catalog_Property_dct_issued (erlaubt auch xsd:gYear und xsd:gYearMonth)
+    <<recommended>> dct:modified ~> rdfs:Literal [0..1]
+        '@ rdfs:label      = Aktualisierungsdatum
+        '@ _:internalLink  = katalog-aktualisierungsdatum
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`
+        '@ rdfs:comment    = Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation des Kataloges.
+        '@ rdf:about       = http://purl.org/dc/terms/modified
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date
+        '@ sh:shapes       = dcatap:Catalog_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
+    <<recommended>> dct:language ~> dct:LinguisticSystem [*]
+        '@ rdfs:label      = Sprache
+        '@ _:internalLink  = katalog-sprache
+        '@ rdfs:range      = http://purl.org/dc/terms/LinguisticSystem
+        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf die Sprache, die in den textuellen Beschreibungen der dem Katalog zugehörigen DCAT-Ressourcen Verwendung findet (z.B. Titel, Beschreibungen usw.). 
+        '@ rdfs:comment    = Diese Eigenschaft kann wiederholt werden, falls die Metadaten in verschiedenen Sprachen zur Verfügung stehen.
+        '@ rdf:about       = http://purl.org/dc/terms/language
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_language
+        '@ _:vocabularyLink = #kv-languages
+        '@ sh:shapes       = ___TBD___(kein Test des Vokabulars)
+    <<recommended>> foaf:homepage ~> foaf:Document [0..1]
+        '@ rdfs:label      = Homepage
+        '@ _:internalLink  = katalog-homepage
+        '@ rdfs:range      = http://xmlns.com/foaf/0.1/Document
+        '@ rdfs:comment    = Diese Eigenschaft verweist auf eine Homepage, welche die zentrale Homepage des Kataloges ist.
+        '@ rdf:about       = http://xmlns.com/foaf/0.1/homepage
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_homepage
+        '@ sh:shapes       = dcatap:Catalog_Property_foaf_homepage, ___TBD___(kein Test, ob Ziel eine Ressource)
+    <<recommended>> dct:license ~> dct:LicenseDocument [0..1]
+        '@ rdfs:label      = Lizenz
+        '@ _:internalLink  = katalog-lizenz
+        '@ rdfs:range      = http://purl.org/dc/terms/LicenseDocument
+        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf die Lizenz, mit welcher der Katalog verwendet oder wiederverwendet werden kann.
+        '@ rdf:about       = http://purl.org/dc/terms/license
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_license
+        '@ _:vocabularyLink = #kv-licenses
+        '@ sh:shapes       = dcatap:Catalog_Property_dct_license, ___TBD___(kein Test des Vokabulars)
+    <<recommended>> dcat:themeTaxonomy ~> skos:ConceptScheme [*]
+        '@ rdfs:label      = Kategorienschema
+        '@ _:internalLink  = katalog-kategorienschema
+        '@ rdfs:range      = http://www.w3.org/2004/02/skos/core#ConceptScheme
+        '@ rdfs:comment    = Diese Eigenschaft verweist auf das eingesetzte Schema zur Klassifizierung der dem Katalog zugewiesenen DCAT-Ressourcen in Form von Kategorien.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#themeTaxonomy
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_themes
+        '@ _:deOriginal    = Für DCAT-AP.de muss dieser Wert immer mindestens http://publications.europa.eu/resource/authority/data-theme sein.
+        '@ sh:shapes       = dcatap:Catalog_Property_dcat_themeTaxonomy, ___TBD___(kein Test, ob mindestens einmal auf o.a. verlinkt, kein Test, ob Ziel eine Ressource)
+    <<recommended>> dcatap:availability ~> skos:Concept [0..1]
+        '@ rdfs:label      = Verfügbarkeit
+        '@ _:internalLink  = katalog-verfugbarkeit
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:comment    = Geplante Verfügbarkeit des Katalogs als Auswahl aus einer festen Liste von Werten via DCAT-AP URIs.
+        '@ rdf:about       = http://data.europa.eu/r5r/availability
+        '@ _:vocabularyLink = #kv-availability
+        '@ _:deOriginal    = DCAT-AP.de ordnet diese Eigenschaft allen DCAT-Ressourcen und Distributionen zu.
+        '@ sh:shapes       = ___TBD___(deutsche Besonderheit, kein Test des Vokabulars, Maximalzahl 1)
+
+    <<optional>> dct:rights ~> dct:RightsStatement [0..1]
+        '@ rdfs:label      = Nutzungsbestimmungen
+        '@ _:internalLink  = katalog-nutzungsbestimmungen
+        '@ rdfs:range      = http://purl.org/dc/terms/RightsStatement
+        '@ rdfs:comment    = Diese Eigenschaft verweist auf eine juristische Darlegung, welche die mit dem Katalog assoziierten Nutzungsbestimmungen spezifiziert.
+        '@ rdf:about       = http://purl.org/dc/terms/rights
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_rights
+        '@ sh:shapes       = dcatap:Catalog_Property_dct_rights, ___TBD___(kein Test, ob Ziel eine Ressource ist?)
+    <<optional>> dcat:catalog ~> dcat:Catalog [*]
+        '@ rdfs:label      = Katalog
+        '@ _:internalLink  = katalog-katalog
+        '@ rdfs:range      = http://www.w3.org/ns/dcat#Catalog
+        '@ rdfs:comment    = Ein Katalog, dessen Inhalt im Kontext dieses Katalogs von Interesse ist.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#catalog
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_catalog
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Catalog)
+}
+'@ rdfs:label      = Katalog
+'@ _:internalLink  = #klasse-katalog
+'@ rdf:about       = http://www.w3.org/ns/dcat#Catalog
+'@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Class:Catalog
+'@ rdfs:comment    = Eine Sammlung oder Quelle, welche die beschriebenen Datensätze, Datenservices oder Kataloge zur Verfügung stellt.
+'@ _:usedBy        = dcat:catalog, dct:hasPart, dct:isPartOf (dcat:Catalog)
+'@ rdfs:subClassOf = dcat:Dataset
+'@ _:resourceHeirloom = [`odrl:hasPolicy`](#distribution-regelwerk).
+
+"dcat:Catalog" --> "*" "dcat:DataService" : <<optional>> dcat:service
+    '@ rdfs:label      = Datenservice
+    '@ _:internalLink  = katalog-datenservice
+    '@ rdfs:range      = http://www.w3.org/ns/dcat#DataService
+    '@ rdfs:comment    = Diese Eigenschaft verknüpft den Katalog mit einem Datenservice, welcher somit Teil des Kataloges wird.
+    '@ rdf:about       = http://www.w3.org/ns/dcat#service
+    '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_service
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Catalog)
+
+"dcat:Catalog" --> "*" "dct:Location"     : <<recommended>> dct:spatial
+    '@ rdfs:label      = Räumliche Abdeckung
+    '@ _:internalLink  = katalog-raumliche-abdeckung
+    '@ rdfs:range      = http://purl.org/dc/terms/Location
+    '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf einen vom Katalog abgedeckten geographischen Bereich.
+    '@ rdf:about       = http://purl.org/dc/terms/spatial
+    '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial
+    '@ _:vocabularyLink = #kv-spatial
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars, schwierig hier, kein Test, ob Ziel dct:Location)
+
+"dcat:Catalog" --> "*"     "dcat:Catalog"       : <<optional>> dct:hasPart
+    '@ rdfs:label      = Hat Teilkatalog
+    '@ _:internalLink  = katalog-hat-teilkatalog
+    '@ rdfs:range      = http://www.w3.org/ns/dcat#Catalog
+    '@ rdfs:comment    = Diese Eigenschaft verweist auf einen in Beziehung stehenden Unterkatalog, der Teil des beschriebenen Kataloges ist.
+    '@ rdfs:comment    = Hinweis: Range von W3C-DCAT ist dcat:Resource, nicht nur dcat:Catalog, wurde von DCAT-AP geändert.
+    '@ rdf:about       = http://purl.org/dc/terms/hasPart
+    '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_has_part
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Catalog)
+
+"dcat:Catalog" --> "0..1"  "dcat:Catalog"       : <<optional>> dct:isPartOf
+    '@ rdfs:label      = Ist Teilkatalog
+    '@ _:internalLink  = katalog-ist-teilkatalog
+    '@ rdfs:range      = http://www.w3.org/ns/dcat#Catalog
+    '@ rdfs:comment    = Diese Eigenschaft verweist auf einen in Beziehung stehenden Hauptkatalog, in welchem der beschriebene Katalog physikalisch oder logisch eingebunden ist.
+    '@ rdfs:comment    = Hinweis: Nicht Teil von W3C-DCAT, von DCAT-AP hinzugefügt.
+    '@ rdf:about       = http://purl.org/dc/terms/isPartOf
+    '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isPartOf
+    '@ sh:shapes       = dcatap:Catalog_Property_dct_isPartOf, ___TBD___(kein Test, ob Ziel ein dcat:Catalog)
+
+"dcat:Catalog" --> "*"     "dcat:CatalogRecord" : <<optional>> dcat:record
+    '@ rdfs:label      = Katalogeintrag
+    '@ _:internalLink  = katalog-katalogeintrag
+    '@ rdfs:range      = http://www.w3.org/ns/dcat#CatalogRecord
+    '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf den Katalogeintrag, welcher Teil des Kataloges ist.
+    '@ rdfs:comment    = Diese Eigenschaft darf nur mit der besonderen Klasse [`dcat:CatalogRecord`](#klasse-katalogeintrag) verwendet werden. Es handelt sich dabei nicht um einen gewöhnlichen Datensatz.
+    '@ rdf:about       = http://www.w3.org/ns/dcat#record
+    '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_catalog_record
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:CatalogRecord)
+
+"dcat:Catalog" --> "1..*"  "dcat:Dataset"       : <<mandatory>> dcat:dataset
+    '@ rdfs:label      = Datensatz
+    '@ _:internalLink  = katalog-datensatz
+    '@ rdfs:range      = http://www.w3.org/ns/dcat#Dataset
+    '@ rdfs:comment    = Diese Eigenschaft verknüpft den Katalog mit einem Datensatz, welcher somit Teil des Kataloges wird.
+    '@ rdf:about       = http://www.w3.org/ns/dcat#dataset
+    '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_dataset
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test auf Mindestzahl, lohnt es sich, das wider besseren Wissens zu erzwingen?)
+
+"dcat:Catalog" --> "1"     "foaf:Agent"         : <<mandatory>> dct:publisher
+    '@ rdfs:label      = Herausgeber
+    '@ _:internalLink  = katalog-herausgeber
+    '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
+    '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf die Stelle oder Person, die verantwortlich für Bereitstellung des Kataloges ist.
+    '@ rdfs:comment    = Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat.
+    '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zum-herausgeber) genauer beschrieben.
+    '@ rdf:about       = http://purl.org/dc/terms/publisher
+    '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_publisher
+    '@ sh:shapes       = dcatap:Catalog_Property_dct_publisher, ___TBD___(kein Test, ob Ziel ein foaf:Agent)
+
+"dcat:Catalog" --> "*"     "foaf:Agent"         : <<optional>> dct:creator
+    '@ rdfs:label      = Autor
+    '@ _:internalLink  = katalog-autor
+    '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
+    '@ rdfs:comment    = Diese Eigenschaft verweist auf Stellen oder Personen, die den Katalog erstellt hat.
+    '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#weitere-wichtige-rollen) genauer beschrieben.
+    '@ rdf:about       = http://purl.org/dc/terms/creator
+    '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_creator
+    '@ sh:shapes       =  ___TBD___(Shape ohne Regeln
+
+class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC { 
+    <<mandatory>> dct:title ~> rdfs:Literal [1..*]
+        '@ rdfs:label      = Titel
+        '@ _:internalLink  = datensatz-titel
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Diese Eigenschaft bezeichnet den einem Datensatz zugewiesenen Titel.
+        '@ rdfs:comment    = Diese Eigenschaft kann für parallele Sprachversionen des Datensatztitels wiederholt werden.
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#redundante-angaben-im-titel) genauer beschrieben.
+        '@ rdf:about       = http://purl.org/dc/terms/title
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title
+        '@ sh:shapes       = dcatap:Dataset_Property_dct_title
+    <<mandatory>> dct:description ~> rdfs:Literal [1..*]
+        '@ rdfs:label      = Beschreibung
+        '@ _:internalLink  = datensatz-beschreibung
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Diese Eigenschaft enthält eine Beschreibung des Datensatzes als Freitext.
+        '@ rdfs:comment    = Diese Eigenschaft kann für parallel existierende Sprachversionen der Datensatzbeschreibung wiederholt werden.
+        '@ rdf:about       = http://purl.org/dc/terms/description
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_description
+        '@ sh:shapes       = dcatap:Dataset_Property_dct_title
+
+    <<recommended>> dcat:keyword ~> rdfs:Literal [*]
+        '@ rdfs:label      = Schlagwort
+        '@ _:internalLink  = datensatz-schlagwort
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Diese Eigenschaft enthält ein Schlagwort oder Schlüsselbegriff zur Beschreibung des Datensatzes. 
+        '@ rdfs:comment    = Diese Eigenschaft kann für unterschiedliche Schlagworte und parallel existierende Sprachversionen wiederholt werden.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#keyword
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_keyword
+        '@ sh:shapes       = dcatap:Dataset_Property_dcat_keyword
+    <<recommended>> dcatde:politicalGeocodingLevelURI ~> rdfs:Resource [*]
+        '@ rdfs:label      = Ebene der geopolitischen Abdeckung
+        '@ _:internalLink  = datensatz-ebene-geopolitischen-abdeckung
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:comment    = Geopolitische Abdeckung des Datensatzes, etwa durch Kennzeichnung der Verwaltungsebene Bund, Bundesland, Kreis oder Kommune, als dcat-ap.de URI.
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#ebene-des-verwaltungspolitischen-geobezug-als-uri) genauer beschrieben.
+        '@ rdf:about       = http://dcat-ap.de/def/dcatde/politicalGeocodingLevelURI
+        '@ _:deOriginal    = Für die Referenzierung sollen die auf https://www.dcat-ap.de/def/politicalGeocoding/Level/ veröffentlichte Wertelisten verwendet werden. (Siehe Vokabulare zur Nutzung DCAT-AP.de)
+        '@ _:vocabularyLink = #kv-political-geocoding-level
+        '@ sh:shapes       = ___TBD___(deutsche Eigenschaft)
+    <<recommended>> dcatde:politicalGeocodingURI ~> rdfs:Resource [*]
+        '@ rdfs:label      = Geopolitische Abdeckung
+        '@ _:internalLink  = datensatz-geopolitischen-abdeckung
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:comment    = Diese Eigenschaft verknüpft einen Datensatz mit dem von ihm abgedeckten administrativen Gebiet der Bundesrepublik Deutschland, etwa ein konkretes Bundesland, eine Kommune oder ein Landkreis repräsentiert durch eine URI.
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#verwaltungspolitischer-geobezug-als-uri) genauer beschrieben.
+        '@ rdf:about       = http://dcat-ap.de/def/dcatde/politicalGeocodingLevelURI
+        '@ _:deOriginal    = Für die Referenzierung wird eine zu nutzende Wertelisten separat veröffentlichten.
+        '@ _:vocabularyLink = #kv-political-geocoding-uri
+        '@ sh:shapes       = ___TBD___(deutsche Eigenschaft)
+    <<recommended>> dcat:theme ~> skos:Concept [*]
+        '@ rdfs:label      = Kategorie
+        '@ _:internalLink  = datensatz-kategorie
+        '@ rdfs:range      = http://www.w3.org/2004/02/skos/core#Concept
+        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf die dem Datensatz zugewiesenen Kategorien. Mit einem Datensatz können mehrere Kategorien assoziiert sein.
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zu-kategorien) genauer beschrieben.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#theme
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_theme
+        '@ _:vocabularyLink = #kv-data-theme
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars)
+    <<recommended>> dcat:contactPoint ~> vcard:Kind [*]
+        '@ rdfs:label      = Kontakt
+        '@ _:internalLink  = datensatz-kontakt
+        '@ rdfs:range      = http://www.w3.org/TR/vcard-rdf/#Kind
+        '@ rdfs:comment    = Diese Eigenschaft umfasst Kontaktinformationen, welche für das Zusenden von Kommentaren zum jeweiligen Datensatz verwendet werden können.
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#ansprechstelle) genauer beschrieben.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#contactPoint
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_contact_point
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein vcard:Kind)
+    <<recommended>> dcatap:availability ~> skos:Concept [0..1]
+        '@ rdfs:label      = Verfügbarkeit
+        '@ _:internalLink  = datensatz-verfugbarkeit
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:comment    = Geplante Verfügbarkeit des Datensatzes als Auswahl aus einer festen Liste von Werten via DCAT-AP URIs.
+        '@ rdf:about       = http://data.europa.eu/r5r/availability
+        '@ _:vocabularyLink = #kv-availability
+        '@ _:deOriginal    = DCAT-AP.de ordnet diese Eigenschaft allen DCAT-Ressourcen und Distributionen zu.
+        '@ sh:shapes       = ___TBD___(deutsche Besonderheit, kein Test des Vokabulars, Maximalzahl 1)
+
+    <<optional>> dcatde:contributorID ~> rdfs:Resource [*]
+        '@ rdfs:label        = Datenbereitsteller ID
+        '@ _:internalLink    = datensatz-datenbereitsteller-id
+        '@ rdfs:range        = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:comment      = Diese Eigenschaft übermittelt die ID des Bereitstellers der Daten aus dem jeweils portaleigenem Access- und Identitymanagement (wenn vorhanden).
+        '@ rdfs:comment      = Ihre genaue Verwendung ist nur für die Anlieferung an GovData festgelegt und wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#eindeutige-kennzeichnung-der-datenbereitsteller) genauer beschrieben.
+        '@ rdf:about         = http://dcat-ap.de/def/dcatde/contributorID
+        '@ _:deOriginal      = Von DCAT-AP.de eingeführte Eigenschaft.
+        '@ _:vocabularyLink = #kv-contributors
+        '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
+    <<optional>> dcatde:geocodingDescription ~> rdfs:Literal [*]
+        '@ rdfs:label      = Beschreibung der Abdeckung
+        '@ _:internalLink  = datensatz-beschreibung-abdeckung
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Diese Eigenschaft enthält die geografische Abdeckung eines Datensatzes, repräsentiert durch die Bezeichnung eines administrativen Gebiets oder eines fachlichen Bezugs als Freitext.
+        '@ rdfs:comment    = Ergänzend als Text bzw. alleinstehend für alle Fälle bei denen die geopolitische Abdeckung nicht durch eine URI angegeben werden kann (z.B. bei komplexeren Bund-Länder-Kooperationen oder auf kommunaler Ebene). 
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#geobezug-als-beschreibender-text) genauer beschrieben. Sie kann für parallele Sprachversionen wiederholt werden.
+        '@ rdf:about       = http://dcat-ap.de/def/dcatde/geocodingDescription
+        '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft. Beispiele: "Gemeinden des Wasserzweckverbands Straubing-Land" oder "Verband Region Rhein-Neckar".
+        '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
+    <<optional>> dct:identifier ~> rdfs:Literal [*]
+        '@ rdfs:label      = ID
+        '@ _:internalLink  = datensatz-id
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Diese Eigenschaft enthält die Haupt-ID des Datensatzes im Kontext des jeweiligen Kataloges (z.B. die URI-Adresse oder eine andere eindeutige ID).
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#identifier) genauer beschrieben.
+        '@ rdf:about       = http://purl.org/dc/terms/identifier
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_identifier
+        '@ sh:shapes       = dcatap:Dataset_Property_dct_identifier
+    <<optional>> adms:identifier ~> adms:Identifier [*]
+        '@ rdfs:label      = Andere ID
+        '@ _:internalLink  = datensatz-andere-id
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Diese Eigenschaft verweist auf sekundäre IDs des Datensatzes, wie zum Beispiel DataCite (http://www.datacite.org/), DOI (Digital Object Identifier: http://www.doi.org/), EZID (https://ezid.cdlib.org/), W3ID (W3C Permanent Identifiers for the Web: https://w3id.org/) oder andere fachspezifische Identifier.
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#identifier) genauer beschrieben.
+        '@ rdf:about       = http://purl.org/dc/terms/identifier
+        '@ rdfs:seeAlso    = [Beschreibung der Klasse bei DCAT-AP.de](#klasse-identifikator)
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein adms:Identifier)
+    <<optional>> dct:issued ~> rdfs:Literal [0..1]
+        '@ rdfs:label      = Veröffentlichungsdatum
+        '@ _:internalLink  = datensatz-veroffentlichungsdatum
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`
+        '@ rdfs:comment    = Diese Eigenschaft enthält das Datum der Herausgabe/Emission (z.B. in Form einer Veröffentlichung) des Datensatzes.
+        '@ rdf:about       = http://purl.org/dc/terms/issued
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_release_date
+        '@ sh:shapes       = dcatap:Dataset_Property_dct_issued (erlaubt auch xsd:gYear und xsd:gYearMonth)
+    <<optional>> dct:modified ~> rdfs:Literal [0..1]
+        '@ rdfs:label      = Aktualisierungsdatum
+        '@ _:internalLink  = datensatz-aktualisierungsdatum
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`
+        '@ rdfs:comment    = Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation des Datensatzes.
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#erkennung-von-dubletten) genauer beschrieben.
+        '@ rdf:about       = http://purl.org/dc/terms/modified
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date
+        '@ sh:shapes       = dcatap:Dataset_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
+    <<optional>> owl:versionInfo ~> rdfs:Literal [0..1]
+        '@ rdfs:label      = Versionsbezeichnung
+        '@ _:internalLink  = datensatz-versionsbezeichnung
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Diese Eigenschaft enthält eine Versionsnummer oder anderweitige Versionskennzeichnung des Datensatzes.
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zur-versionierung) genauer beschrieben.
+        '@ rdf:about       = http://www.w3.org/2002/07/owl#versionInfo
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/owl-ref/#versionInfo-def
+        '@ sh:shapes       = dcatap:Dataset_Property_owl_versionInfo
+        '@ rdfs:label      = Versionserläuterung
+        '@ _:internalLink  = datensatz-versionserlauterung
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Diese Eigenschaft enthält eine Beschreibung der Unterschiede zwischen dieser und den vorbestehenden Versionen des Datensatzes.
+        '@ rdfs:comment    = Dieses Eigenschaft kann für parallele Sprachversionen der Versionsbeschreibung wiederholt werden.
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zur-versionierung) genauer beschrieben.
+        '@ rdf:about       = http://www.w3.org/ns/adms#versionNotes
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-adms/#adms-versionnotes
+        '@ sh:shapes       = dcatap:Dataset_Property_adms_versionNotes
+    <<optional>> dcatde:legalBasis ~> rdfs:Literal [*]
+        '@ rdfs:label      = Rechtsgrundlage für die Zugangseröffnung
+        '@ _:internalLink  = datensatz-rechtsgrundlage-zugangseroffnung
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Dieses Feld dokumentiert als Freitext optional die Rechtsgrundlage für den Zugang zu den Informationen (die Zugangseröffnung), d.h. die originäre Rechtsgrundlage für den Zugang zu Daten der Verwaltung.
+        '@ rdfs:comment    = Diese Eigenschaft kann für parallele Sprachversionen wiederholt werden.
+        '@ rdf:about       = http://dcat-ap.de/def/dcatde/legalBasis
+        '@ _:deOriginal    = Beispiele: Public Sector Information Directive (PSI-Direktive), Umweltinformationsgesetz (UIG), deutsche Informationsfreiheits- (IFG) und Transparenzgesetze.
+        '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
+    <<optional>> dct:relation ~> rdfs:Resource [*]
+        '@ rdfs:label      = Verwandte Ressource
+        '@ _:internalLink  = datensatz-verwandte-ressource
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:comment    = Diese Eigenschaft verweist auf eine verwandte Ressource.
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#andere-beziehungen-zwischen-datensatzen-dct-relation) genauer beschrieben.
+        '@ rdf:about       = http://purl.org/dc/terms/relation
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_relation
+        '@ sh:shapes       = dcatap:Dataset_Property_dct_relation (erlaubt auch BlankNodes)
+    <<optional>> dcat:landingPage ~> foaf:Document [*]
+        '@ rdfs:label      = Ursprüngliche Webseite
+        '@ _:internalLink  = datensatz-ursprungliche-webseite
+        '@ rdfs:range      = http://xmlns.com/foaf/0.1/Document
+        '@ rdfs:comment    = Diese Eigenschaft verweist auf eine Webseite, welche Zugriff auf den Datensatz, seine Distributionen und/oder weitere Informationen ermöglicht. 
+        '@ rdfs:comment    = Es ist beabsichtigt, auf die Webseite des originären Datenbereitstellers zu verweisen und nicht auf zwischengeschaltete Intermediäre.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#landingPage
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_landing_page
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource)
+    <<optional>> foaf:page ~> foaf:Document [*]
+        '@ rdfs:label      = Dokumentation
+        '@ _:internalLink  = datensatz-dokumentation
+        '@ rdfs:range      = http://xmlns.com/foaf/0.1/Document
+        '@ rdfs:comment    = Diese Eigenschaft verweist auf eine Seite oder ein Dokument für den jeweiligen Datensatz.
+        '@ rdf:about       = http://xmlns.com/foaf/0.1/page
+        '@ rdfs:seeAlso    = http://xmlns.com/foaf/spec/#term_page
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource)
+    <<optional>> dct:language ~> dct:LinguisticSystem [*]
+        '@ rdfs:label      = Sprache
+        '@ _:internalLink  = datensatz-sprache
+        '@ rdfs:range      = http://purl.org/dc/terms/LinguisticSystem
+        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf die innerhalb des Datensatzes verwendete Sprache.
+        '@ rdfs:comment    = Diese Eigenschaft kann wiederholt werden, falls mehrere Sprachen im Datensatz Verwendung finden.
+        '@ rdf:about       = http://purl.org/dc/terms/language
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_language
+        '@ _:vocabularyLink = #kv-languages
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars)
+    <<optional>> dct:conformsTo ~> dct:Standard [*]
+        '@ rdfs:label        = Konform zu Standard
+        '@ _:internalLink    = datensatz-konform-zu-standard
+        '@ rdfs:range        = http://purl.org/dc/terms/Standard
+        '@ rdfs:comment      = Diese Eigenschaft verweist auf eine Implementierungsregel oder eine andere Spezifikation, zu welcher der Datensatz konform ist.
+        '@ rdf:about         = http://purl.org/dc/terms/conformsTo
+        '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_conforms_to
+        '@ sh:shapes         = ___TBD___(Shape ohne Regeln)
+    <<optional>> dct:accessRights ~> dct:RightsStatement [0..1]
+        '@ rdfs:label      = Grad der Zugänglichkeit
+        '@ _:internalLink  = datensatz-grad-zuganglichkeit
+        '@ rdfs:range      = http://purl.org/dc/terms/RightsStatement
+        '@ rdfs:comment    = Diese Eigenschaft verweist auf Informationen, die darlegen, ob der Datensatz öffentlich zugänglich ist, Zugriffseinschränkungen existieren oder er nicht-öffentlich ist.
+        '@ rdf:about       = http://purl.org/dc/terms/accessRights
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_access_rights
+        '@ sh:shapes       = dcatap:Dataset_Property_dct_accessRights, ___TBD___(kein Test, ob Ziel eine Ressource ist?)
+    <<optional>> dct:provenance ~> dct:ProvenanceStatement [*]
+        '@ rdfs:label      = Provenienz
+        '@ _:internalLink  = datensatz-provenienz
+        '@ rdfs:range      = http://purl.org/dc/terms/ProvenanceStatement
+        '@ rdfs:comment    = Diese Eigenschaft umfasst eine Angabe zur Entwicklungsgeschichte des Datensatzes, insbesondere in wessen Besitz oder Obhut die Ressource sich bislang befunden hat, soweit die Wechsel signifikanten Einfluss auf die Authentizität, Integrität und Interpretierbarkeit dieser Ressource hat.
+        '@ rdf:about       = http://purl.org/dc/terms/provenance
+        '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/provenance
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein ProvenanceStatement?)
+    <<optional>> dct:accrualPeriodicity ~> dct:Frequency [0..1]
+        '@ rdfs:label      = Aktualisierungsfrequenz
+        '@ _:internalLink  = datensatz-aktualisierungsfrequenz
+        '@ rdfs:range      = http://purl.org/dc/terms/Frequency
+        '@ rdfs:comment    = Diese Eigenschaft beschreibt die Aktualisierungsfrequenz des Datensatzes.
+        '@ rdf:about       = http://purl.org/dc/terms/accrualPeriodicity
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_frequency
+        '@ _:vocabularyLink = #kv-frequency
+        '@ sh:shapes       = dcatap:Dataset_Property_dct_accrualPeriodicity, ___TBD___(kein Test des Vokabulars)
+    <<optional>> dcatde:qualityProcessURI ~> rdfs:Resource [0..1]
+        '@ rdfs:label      = Qualitätssicherungsprozess
+        '@ _:internalLink  = datensatz-qualitatssicherungsprozess
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:comment    = Eine URI, die auf den Prozess zur Qualitätssicherung des Datensatzes verweist. Es handelt sich idealerweise um die URL einer Webseite.
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#webseite-mit-beschreibung-des-qualitatssicherungsprozesses) genauer beschrieben.
+        '@ rdf:about       = http://dcat-ap.de/def/dcatde/qualityProcessURI
+        '@ _:deOriginal    = Von dcat-ap.de eingeführte Eigenschaft.
+        '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
+    <<optional>> dct:type ~> skos:Concept [0..1]
+        '@ rdfs:label        = Typ des Datensatzes
+        '@ _:internalLink    = datensatz-typ
+        '@ rdfs:range        = http://www.w3.org/2004/02/skos/core#Concept
+        '@ rdfs:comment      = Diese Eigenschaft bezieht sich auf den Typ des Datensatzes. Es wurde noch kein kontrollierter Vokabular festgelegt.
+        '@ rdfs:comment      = 
+        '@ rdfs:comment      = [DEPRECATED](#glossar-deprecated): Zur Gruppierung von linearen und nichtlinearen Reihen/Collections ist gemäß dem DCAT-AP.de Konventionenhandbuch eine Gruppenstruktur vom Typ "Collection" anzulegen, die auf die gruppierten Datensätze mittels "Weitere Version" (`dct:hasVersion`) verweist. Alle gruppierten Datensätze verweisen dann mittels "ist Version von" (`dct:isVersionOf`) auf die URI (`http://dcat-ap.de/def/datasetTypes/collection`) dieser logischen Klammer. Feldübergreifende Beispiele und das Zusammenspiel mit der Eigenschaft `dct:hasVersion` sind im Konventionenhandbuch dokumentiert.
+        '@ rdf:about         = http://purl.org/dc/terms/type
+        '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_type
+        '@ _:deOriginal      = [DEPRECATED](#glossar-deprecated): Ausspezifiziert um linearen und nichtlinearen Reihen/Collections darstellen zu können.
+        '@ _:vocabularyLink  = #kv-dataset-type
+        '@ sh:shapes         = dcatap:Dataset_Property_dct_type, ___TBD___(kein Test des Vokabulars)
+    <<optional>> prov:wasGeneratedBy ~> prov:Activity [*]
+        '@ rdfs:label        = Wurde erzeugt von
+        '@ _:internalLink    = datensatz-wurde-erzeugt-von
+        '@ rdfs:range        = https://www.w3.org/TR/prov-o/#Activity
+        '@ rdfs:comment      = Diese Eigenschaft verweist auf die Aktivität, die zur Erstellung des Datensatzes geführt hat.
+        '@ rdfs:comment      = Eine Aktivität ist typischer Weise eine Initiative, ein Projekt, eine Umfrage oder dauerhafte Handlung ("business as usual").
+        '@ rdf:about         = https://www.w3.org/TR/prov-o/#wasGeneratedBy
+        '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_was_generated_by
+        '@ sh:shapes         = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource?)
+    <<optional>> dcat:spatialResolutionInMeters ~> rdfs:Literal [*]
+        '@ rdfs:label      = Räumliche Auflösung in Meter
+        '@ _:internalLink  = datensatz-raumliche-auflosung-in-meter
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als [`xsd:decimal`](https://www.w3.org/TR/xmlschema11-2/#decimal)
+        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf den kleinstmöglichen räumlichen Abstand, der in einem Datensatz auflösbar ist, gemessen in Metern.
+        '@ rdfs:comment    = **Verwendungshinweis:** Kann die räumliche Auflösung nicht in Metern beschrieben werden, können stattdessen die spezielleren Eigenschaften verwendet werden, die [GeoDCAT-AP](https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/#spatial-resolution-spatial-resolution-of-the-dataset) hierfür zur Verfügung stellt.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#spatialResolutionInMeters
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial_resolution
+        '@ sh:shapes       = dcatap:Dataset_Property_dcat_spatialResolutionInMeters, ___TBD___(Kard ändert sich bei DCAT-AP 2.1 von [*] auf  [0..1])
+    <<optional>> dcat:temporalResolution ~> rdfs:Literal [*]
+        '@ rdfs:label        = Zeitliche Auflösung
+        '@ _:internalLink    = datensatz-zeitliche-auflosung
+        '@ rdfs:range        = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als [`xsd:duration`](https://www.w3.org/TR/xmlschema11-2/#duration)
+        '@ rdfs:comment      = Diese Eigenschaft bezieht sich auf den kürzesten im Datensatz auflösbaren Zeitraum.
+        '@ rdf:about         = http://www.w3.org/ns/dcat#temporalResolution
+        '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial_resolution
+        '@ sh:shapes         = dcatap:Dataset_Property_dcat_temporalResolution, ___TBD___(Kard ändert sich bei DCAT-AP 2.1 von [*] auf  [0..1])
+    <<optional>> dcat:granularity ~> skos:Concept [0..1]
+        '@ rdfs:label      = Abgedeckte zeitliche Granularität (DEPRECATED)
+        '@ _:internalLink  = datensatz-abgedeckte-zeitliche-granularitat-deprecated
+        '@ rdfs:range      = http://www.w3.org/2004/02/skos/core#Concept
+        '@ rdfs:comment    = [DEPRECATED](#glossar-deprecated): Diese Eigenschaft beschreibt die durch den Datensatz abgedeckte zeitliche Granularität (z.B. wöchentlich, monatlich, jährlich).
+        '@ rdf:about       = http://www.w3.org/ns/dcat#granularity
+        '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft. Inzwischen überholt durch neue Eigenschaften zur Beschreibung von zeitlichen Parametern (z.B. [`dcat:temporalResolution`](#datensatz-zeitliche-auflosung)).
+        '@ _:vocabularyLink = #kv-frequency
+        '@ sh:shapes       = ___TBD___(deutsche Besonderheit, kein Test des Vokabulars, Maximalzahl 1, deprecated)
+    <<optional>> prov:qualifiedAttribution ~> prov:Attribution [*]
+        '@ rdfs:label      = Rollenzuordnung
+        '@ _:internalLink  = datensatz-rollenzuordnung
+        '@ rdfs:range      = https://www.w3.org/TR/prov-o/#Attribution
+        '@ rdfs:comment    = Verbindet den Datensatz über die Klasse `prov:Attribution` mit einem Agenten, der in beschriebener Weise Verantwortung für ihn trägt.
+        '@ rdf:about       = https://www.w3.org/TR/prov-o/#qualifiedAttribution
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_qualified_attribution
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine prov:Attribution)
+    <<optional>> dcat:qualifiedRelation ~> dcat:Relationship [*]
+        '@ rdfs:label      = Qualifizierte Beziehung
+        '@ _:internalLink  = datensatz-qualifizierte-beziehung
+        '@ rdfs:range      = https://www.w3.org/TR/vocab-dcat-2/#Class:Relationship
+        '@ rdfs:comment    = Link zu einer Beschreibung (in Form der Klasse `dcat:Relationship`) einer Beziehung zu einer anderen Ressource.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#qualifiedRelation
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_qualified_relation
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine dcat:Relation)
+    <<optional>> dct:isReferencedBy ~> rdfs:Resource [*]
+        '@ rdfs:label        = Wird Referenziert
+        '@ _:internalLink    = datensatz-wird-referenziert
+        '@ rdfs:range        = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:comment      = Diese Eigenschaft verweist auf eine Ressource, zum Beispiel eine Veröffentlichung, die ihrerseits auf den Datensatz referenziert, ihn verlinkt oder zitiert.
+        '@ rdf:about         = http://purl.org/dc/terms/isReferencedBy
+        '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_is_referenced_by
+        '@ sh:shapes         = dcatap:Dataset_Property_dc_isReferencedBy (erlaubt auch BlankNodes)
+    <<optional>> dct:references ~> rdfs:Resource [*]
+        '@ rdfs:label        = Referenziert
+        '@ _:internalLink    = datensatz-referenziert
+        '@ rdfs:range        = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:comment      = Diese Eigenschaft kann verwendet werden, um auf Referenzdatensätze wie ein High Value Dataset (HVD) oder einen Musterdatensatz des Musterdatenkatalogs zu verweisen.
+        '@ rdfs:comment      = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#verweis-auf-referenzobjekte) genauer beschrieben.
+        '@ rdf:about         = http://purl.org/dc/terms/references
+        '@ _:deOriginal      = Von DCAT-AP.de eingeführte Eigenschaft.
+        '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
+}   
+'@ rdfs:label      = Datensatz
+'@ _:internalLink  = #klasse-datensatz
+'@ rdf:about       = http://www.w3.org/ns/dcat#Dataset
+'@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset
+'@ rdfs:comment    = Eine logische Entität, welche die veröffentlichten Informationen repräsentiert.
+'@ _:usedBy        = dcat:dataset (dcat:Catalog), dct:hasVersion, dct:isVersionOf, dct:source, (dcat:Dataset), dcat:servesDataset (dcat:DataService), foaf:primaryTopic (dcat:CatalogRecord)
+'@ _:resourceHeirloom = [`dct:license`](#distribution-lizenz), [`dct:rights`](#distribution-grad-zuganglichkeit) und [`odrl:hasPolicy`](#distribution-regelwerk).
+'@ rdfs:subClassOf = dcat:Resource
+
+"dcat:Dataset" --> "*" "dct:Location"     : <<recommended>> dct:spatial
+    '@ rdfs:label        = Räumliche Abdeckung
+    '@ _:internalLink    = datensatz-raumliche-abdeckung
+    '@ rdfs:range        = http://purl.org/dc/terms/Location
+    '@ rdfs:comment      = Ein räumlicher Bereich oder ein bezeichneter Ort. Er kann durch ein kontrolliertes Vokabular oder mit geographischen Koordinaten repräsentiert werden.
+    '@ rdfs:comment      = Im letzteren Fall wird die Verwendung des Core Location Vocabulary empfohlen, wie in der GeoDCAT-AP-Spezifikation beschrieben.
+    '@ rdfs:comment      = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zur-geografischen-abdeckung) genauer beschrieben.
+    '@ rdf:about         = http://purl.org/dc/terms/spatial
+    '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial
+    '@ _:vocabularyLink  = #kv-spatial
+    '@ sh:shapes         = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars, schwierig hier, kein Test, ob Ziel dct:Location)
+
+"dcat:Dataset" --> "*" "dct:PeriodOfTime" : <<recommended>> dct:temporal
+    '@ rdfs:label        = Zeitliche Abdeckung
+    '@ _:internalLink    = datensatz-zeitliche-abdeckung
+    '@ rdfs:range        = http://purl.org/dc/terms/PeriodOfTime
+    '@ rdfs:comment      = Ein Zeitintervall, welches durch Start- und Endzeitpunkt bezeichnet bzw. definiert ist.
+    '@ rdf:about         = http://purl.org/dc/terms/temporal
+    '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_temporal
+    '@ sh:shapes         = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine dct:PeriodOfTime)
+
+"dcat:Dataset" -up-> "*"     "dcat:Dataset"       : <<optional>> dct:source
+    '@ rdfs:label      = Quelle des Datensatzes
+    '@ _:internalLink  = datensatz-quelle
+    '@ rdfs:range      = http://www.w3.org/ns/dcat#Dataset
+    '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf einen verwandten Datensatz, von dem der beschriebene Datensatz abgeleitet ist.
+    '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#quelle-von-metadaten) genauer beschrieben.
+    '@ rdf:about       = http://purl.org/dc/terms/source
+    '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source
+    '@ sh:shapes       = ___TBD___(kein Test, ob Ziel ein dcat:Dataset)
+
+"dcat:Dataset" -up-> "*"     "dcat:Dataset"       : <<optional>> dct:hasVersion
+    '@ rdfs:label      = Weitere Version
+    '@ _:internalLink  = datensatz-weitere-version
+    '@ rdfs:range      = http://www.w3.org/ns/dcat#Dataset
+    '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf einen verwandten Datensatz in Form einer weiteren/nachfolgenden Version, Edition oder Adaption des beschriebenen Datensatzes.
+    '@ rdfs:comment    = [DEPRECATED](#glossar-deprecated): dct:hasVersion verweist auf den Datensatz vom Typ "Collection" zur Gruppierung von Einzelelementen über Datensätze.
+    '@ rdf:about       = http://purl.org/dc/terms/hasVersion
+    '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/hasVersion
+    '@ sh:shapes       = ___TBD___(kein Test, ob Ziel ein dcat:Dataset)
+
+"dcat:Dataset" -up-> "*"     "dcat:Dataset"       : <<optional>> dct:isVersionOf
+    '@ rdfs:label      = Ist Version von
+    '@ _:internalLink  = datensatz-ist-version
+    '@ rdfs:range      = http://www.w3.org/ns/dcat#Dataset
+    '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf einen verwandten Datensatz, der vom beschriebenen Datensatz eine vorherige Version, Edition oder Adaption ist.
+    '@ rdf:about       = http://purl.org/dc/terms/isVersion
+    '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isVersion
+    '@ sh:shapes       = ___TBD___(kein Test, ob Ziel ein dcat:Dataset)
+
+"dcat:Dataset" --> "*"     "dcat:Distribution"  : <<recommended>> dcat:distribution
+    '@ rdfs:label      = Distribution
+    '@ _:internalLink  = datensatz-distribution
+    '@ rdfs:range      = http://www.w3.org/ns/dcat#Distribution
+    '@ rdfs:comment    = Diese Eigenschaft verknüpft den Datensatz mit einer verfügbaren Distribution.
+    '@ rdf:about       = http://www.w3.org/ns/dcat#distribution
+    '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_distribution
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine dcat:Distribution)
+
+"dcat:Dataset" --> "*"     "dcat:Distribution"  : <<optional>> adms:sample
+    '@ rdfs:label      = Beispieldistribution
+    '@ _:internalLink  = datensatz-beispieldistribution
+    '@ rdfs:range      = http://www.w3.org/ns/dcat#Distribution
+    '@ rdfs:comment    = Diese Eigenschaft verweist auf eine Beispieldistribution des Datensatzes.
+    '@ rdf:about       = http://www.w3.org/ns/adms#sample
+    '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-adms/#adms-sample
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine dcat:Distribution)
+
+"dcat:Dataset" --> "0..1"  "foaf:Agent"         : <<recommended>> dct:publisher
+    '@ rdfs:label      = Herausgeber
+    '@ _:internalLink  = datensatz-herausgeber
+    '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
+    '@ rdfs:comment    = Diese Eigenschaft verweist auf die Stelle oder Person, die für Bereitstellung des Datensatzes verantwortlich ist.
+    '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zum-herausgeber) genauer beschrieben.
+    '@ rdf:about       = http://purl.org/dc/terms/publisher
+    '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_publisher
+    '@ _:deOriginal    = Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat.
+    '@ sh:shapes       = dcatap:Dataset_Property_dct_publisher (kein Test, ob Ziel ein foaf:Agent)
+
+"dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> dct:creator
+    '@ rdfs:label      = Autor
+    '@ _:internalLink  = datensatz-autor
+    '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
+    '@ rdfs:comment    = Diese Eigenschaft verweist auf Stellen oder Personen, die die Daten erstellt haben. Die Autorenschaft umfasst für gewöhnlich das Recht am geistigen Eigentum
+    '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#weitere-wichtige-rollen) genauer beschrieben.
+    '@ rdf:about       = http://purl.org/dc/terms/creator
+    '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_creator
+    '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel foaf:Agent)
+
+"dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> dct:contributor
+    '@ rdfs:label      = Bearbeiter
+    '@ _:internalLink  = datensatz-bearbeiter
+    '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
+    '@ rdfs:comment    = Diese Eigenschaft verweist auf Stellen oder Personen, die die Daten bearbeitet haben (z.B. durch Formatierung derselben).
+    '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#weitere-wichtige-rollen) genauer beschrieben.
+    '@ rdf:about       = http://purl.org/dc/terms/contributor
+    '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor
+    '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
+    '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test, ob Ziel foaf:Agent)
+
+"dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> dcatde:originator
+    '@ rdfs:label      = Urheber
+    '@ _:internalLink  = datensatz-urheber
+    '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
+    '@ rdfs:comment    = Diese Eigenschaft verweist auf die Personen, die Urheberrechte am Datensatz haben. Geschützt ist laut Urheberrecht ein Werk, das einer persönlichen geistigen Schöpfung seines Urhebers entspringt.
+    '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#weitere-wichtige-rollen) genauer beschrieben.
+    '@ rdfs:comment    = Vgl.: https://de.wikipedia.org/wiki/Urheberrecht_(Deutschland).
+    '@ rdf:about       = http://dcat-ap.de/def/dcatde/originator
+    '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
+    '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test, ob Ziel foaf:Agent)
+
+"dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> dcatde:maintainer
+    '@ rdfs:label      = Verwalter
+    '@ _:internalLink  = datensatz-verwalter
+    '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
+    '@ rdfs:comment    = Diese Eigenschaft verweist auf die Stellen oder Personen, die Verantwortung und Rechenschaftspflicht für die Daten und ihre angemessene Pflege übernehmen.
+    '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#weitere-wichtige-rollen) genauer beschrieben.
+    '@ rdf:about       = http://dcat-ap.de/def/dcatde/maintainer
+    '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
+    '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test, ob Ziel foaf:Agent)
+
+class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
+    <<mandatory>> dcat:endpointURL ~> rdfs:Resource [1..*]
+        '@ rdfs:label      = URL des Endpunktes
+        '@ _:internalLink  = datenservice-url-endpunkt
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:comment    = Die URL unter der API-Endpunkt eines Datenservices erreichbar ist.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#endpointURL
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_endpoint_url
+        '@ sh:shapes       = dcatap:DataService_Property_dcat_endpointURL (erlaubt auch BlankNodes)
+    <<mandatory>> dct:title ~> rdfs:Literal [1..*]
+        '@ rdfs:label      = Titel
+        '@ _:internalLink  = datenservice-titel
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Diese Eigenschaft bezeichnet den einem Datenservice zugewiesenen Titel. Sie kann für parallele Sprachversionen wiederholt werden.
+        '@ rdf:about       = http://purl.org/dc/terms/title
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title
+        '@ sh:shapes       = dcatap:DataService_Property_dct_title
+
+    <<recommended>> dcat:endpointDescription ~> rdfs:Resource [*]
+        '@ rdfs:label      = Beschreibung des Endpunktes
+        '@ _:internalLink  = datenservice-beschreibung-endpunkt
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:comment    = Die Beschreibung der Services, die unter den angebenen Endpunkten erreicht werden können.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#endpointDescription
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_endpoint_description
+        '@ sh:shapes       = dcatap:DataService_Property_dcat_endpointDescription (erlaubt auch BlankNodes)
+    <<recommended>> dcatap:availability ~> skos:Concept [0..1]
+        '@ rdfs:label      = Verfügbarkeit
+        '@ _:internalLink  = datenservice-verfugbarkeit
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:comment    = Geplante Verfügbarkeit des Datenservices als Auswahl aus einer festen Liste von Werten via DCAT-AP URIs.
+        '@ rdf:about       = http://data.europa.eu/r5r/availability
+        '@ _:vocabularyLink = #kv-availability
+        '@ _:deOriginal    = DCAT-AP.de ordnet diese Eigenschaft allen DCAT-Ressourcen und Distributionen zu und empfiehlt sie für den `dcat:DataService`.
+        '@ sh:shapes       = ___TBD___(deutsche Besonderheit, kein Test des Vokabulars, Maximalzahl 1)
+
+    <<optional>> dct:description ~> rdfs:Literal [*]
+        '@ _:internalLink  = datenservice-beschreibung
+        '@ rdfs:label      = Beschreibung
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Diese Eigenschaft enthält eine Beschreibung des Datenservices als Freitext. Sie kann für parallel existierende Sprachversionen wiederholt werden.
+        '@ rdf:about       = http://purl.org/dc/terms/description
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_description
+        '@ sh:shapes       = dcatap:DataService_Property_dct_description
+    <<optional>> dct:license ~> dct:LicenseDocument [0..1]
+        '@ rdfs:label      = Lizenz
+        '@ _:internalLink  = datenservice-lizenz
+        '@ rdfs:range      = http://purl.org/dc/terms/LicenseDocument
+        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf die Lizenz, mit welcher der Datenservice verwendet oder seine Inhalte wiederverwendet werden können.
+        '@ rdf:about       = http://purl.org/dc/terms/license
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_license
+        '@ sh:shapes       = dcatap:DataService_Property_dct_license, ___TBD___(kein Test des Vokabulars)
+    <<optional>> dct:accessRights ~> dct:RightsStatement [0..1]
+        '@ rdfs:label      = Grad der Zugänglichkeit
+        '@ _:internalLink  = datenservice-grad-zuganglichkeit
+        '@ rdfs:range      = http://purl.org/dc/terms/RightsStatement
+        '@ rdfs:comment    = Diese Eigenschaft verweist auf Informationen, die darlegen, ob der Datenservice öffentlich zugänglich ist, Zugriffseinschränkungen existieren oder er nicht-öffentlich ist.
+        '@ rdf:about       = http://purl.org/dc/terms/accessRights
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_access_rights
+        '@ sh:shapes       = dcatap:DataService_Property_dct_accessRights
+}
+'@ rdfs:label      = Datenservice
+'@ _:internalLink  = #klasse-datenservice
+'@ rdf:about       = http://www.w3.org/ns/dcat#DataService
+'@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Class:Data_Service
+'@ rdfs:comment    = Ein Datenservice ermöglicht den Zugang zu einem oder mehreren Datensätzen oder stellt Datenverarbeitungsverfahren zur Verfügung.
+'@ rdfs:comment    = **Verwendungshinweis:** DCAT-AP.de empfiehlt zusätzlich die folgenden Eigenschaften zu verwenden, um den Datenservice genauer zu beschreiben: 
+'@ rdfs:comment    = [`dct:spatial`](#datensatz-raumliche-abdeckung), [`dct:temporal`](#datensatz-zeitliche-abdeckung), [`dcat:spatialResolutionInMeters`](#datensatz-raumliche-auflosung-in-meter), [`dcat:temporalResolution`](#datensatz-zeitliche-auflosung), [`dct:accrualPeriodicity`](#datensatz-aktualisierungsfrequenz) und [`prov:wasGeneratedBy`](#datensatz-wurde-erzeugt-von).
+'@ rdfs:comment    = Diese Änderungen werden zur Zeit auf Ebene des W3Cs diskutiert und das weitere Vorgehen von der Entscheidung des W3C und von DCAT-AP abhängig gemacht.
+'@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#modellierung-eines-datenservices) genauer beschrieben.
+'@ _:usedBy        = dcat:service (dcat:Catalog), dcat:accessService (dcat:Distribution), foaf:primaryTopic (dcat:CatalogRecord)
+'@ rdfs:subClassOf = dcat:Resource  
+'@ _:resourceHeirloom = [`dct:modified`](#datensatz-aktualisierungsdatum), [`dct:creator`](#datensatz-autor), [`dct:publisher`](#datensatz-herausgeber), [`dct:identifier`](#datensatz-id), [`dcat:theme`](#datensatz-kategorie), [`dct:conformsTo`](#datensatz-konform-zu-standard), [`dcat:contactPoint`](#datensatz-kontakt), [`dcat:qualifiedRelation`](#datensatz-qualifizierte-beziehung), [`prov:qualifiedAttribution`](#datensatz-rollenzuordnung), [`dcat:keyword`](#datensatz-schlagwort), [`dct:language`](#datensatz-sprache), [`dct:type`](#datensatz-typ), [`dcat:landingPage`](#datensatz-ursprungliche-webseite), [`dct:issued`](#datensatz-veroffentlichungsdatum), [`dct:relation`](#datensatz-verwandte-ressource), [`dct:rights`](#distribution-grad-zuganglichkeit), [`odrl:hasPolicy`](#distribution-regelwerk) und [`dct:isReferencedBy`](#datensatz-wird-referenziert). Zusätzliche, durch die deutschen Erweiterung von [`dcat:Resource`](#klasse-ressource), geerbte Eigenschaften: [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter), [`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dct:contributor`](#datensatz-bearbeiter) und [`dct:references`](#datensatz-referenziert).
+
+"dcat:DataService" --> "*" "dcat:Dataset"     : <<recommended>> dcat:servesDataset
+    '@ rdfs:label      = Liefert Datensatz aus
+    '@ _:internalLink  = datenservice-liefert-datensatz-aus
+    '@ rdfs:range      = http://www.w3.org/ns/dcat#Dataset
+    '@ rdfs:comment    = Verweist auf einen Datensatz, der vom Datenservice ausgeliefert werden kann.
+    '@ rdf:about       = http://www.w3.org/ns/dcat#servesdataset
+    '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_serves_dataset
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Dataset)
+
+class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
+    <<mandatory>> dcat:accessURL ~> rdfs:Resource [1..*]
+        '@ rdfs:label      = Zugangs-URL
+        '@ _:internalLink  = distribution-zugangs-url
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:comment    = Diese Eigenschaft enthält eine URL-Adresse, die Zugriff auf die Distribution eines Datensatzes ermöglicht. 
+        '@ rdfs:comment    = Die mit der Zugangs-URL erreichbare Ressource kann Informationen zur Verfügung stellen, wie die Distribution erreicht werden kann oder direkt auf eine Datei verweisen, die die Daten im angegebenen Format beinhaltet.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#accessURL
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_url
+        '@ sh:shapes       = dcatap:Distribution_Property_dcat_accessURL (erlaubt auch BlankNodes)
+
+    <<recommended>> dct:title ~> rdfs:Literal [*]
+        '@ rdfs:label      = Titel
+        '@ _:internalLink  = distribution-titel
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Diese Eigenschaft bezeichnet den einer Distribution zugewiesenen Titel. Diese Eigenschaft kann für parallele Sprachversionen des Distributionstitels wiederholt werden.
+        '@ rdf:about       = http://purl.org/dc/terms/title
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_title
+        '@ _:deOriginal    = Verbindlichkeit wurde von optional auf empfohlen hochgestuft.
+        '@ sh:shapes       = dcatap:Distribution_Property_dct_title
+    <<recommended>> dct:modified ~> rdfs:Literal [0..1]
+        '@ rdfs:label      = Aktualisierungsdatum
+        '@ _:internalLink  = distribution-aktualisierungsdatum
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`
+        '@ rdfs:comment    = Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation der Distribution.
+        '@ rdf:about       = http://purl.org/dc/terms/modified
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_update_date
+        '@ _:deOriginal    = Verbindlichkeit wurde von optional auf empfohlen hochgestuft.
+        '@ sh:shapes       = dcatap:Distribution_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
+    <<recommended>> dct:license ~> dct:LicenseDocument [0..1]
+        '@ rdfs:label      = Lizenz
+        '@ _:internalLink  = distribution-lizenz
+        '@ rdfs:range      = http://purl.org/dc/terms/LicenseDocument
+        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf die Lizenz, unter welcher die Distribution zur Verfügung gestellt wird. Es bestehen weitergehende Einschränkungen für die Kooperation GovData, welche im entsprechenden Konventionenhandbuch geklärt sind.
+        '@ rdf:about       = http://purl.org/dc/terms/license
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_license
+        '@ _:vocabularyLink = #kv-licenses
+        '@ sh:shapes       = dcatap:Distribution_Property_dct_license, ___TBD___(kein Test des Vokabulars)
+    <<recommended>> dct:format ~> dct:MediaType [0..1]
+        '@ rdfs:label      = Format
+        '@ _:internalLink  = distribution-format
+        '@ rdfs:range      = http://purl.org/dc/terms/MediaTypeOrExtent
+        '@ rdfs:comment    = Diese Eigenschaft verweist auf das Datenformat der Distribution.
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zu-dateiformaten) genauer beschrieben.
+        '@ rdf:about       = http://purl.org/dc/terms/format
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_format
+        '@ _:vocabularyLink = #kv-file-type
+        '@ sh:shapes       = dcatap:Distribution_Property_dct_format, ___TBD___(kein Test des Vokabulars)
+    <<recommended>> dcatap:availability ~> skos:Concept [0..1]
+        '@ rdfs:label      = Verfügbarkeit
+        '@ _:internalLink  = distribution-verfugbarkeit
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:comment    = Verfügbarkeit der Distribution eines Datensatzes, als Auswahl aus einer festen Liste von Werten via DCAT-AP URIs.
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#status-und-erwartete-verfugbarkeit) genauer beschrieben.
+        '@ rdf:about       = http://data.europa.eu/r5r/availability
+        '@ _:vocabularyLink = #kv-availability
+        '@ sh:shapes       = dcatap:Distribution_Property_dcatap_availability, ___TBD___(kein Test des Vokabulars)
+    <<recommended>> dcatde:plannedAvailability ~> rdfs:Resource [0..1]
+        '@ rdfs:label      = Verfügbarkeit (DEPRECATED)
+        '@ _:internalLink  = distribution-verfugbarkeit-deprecated
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:comment    = Verfügbarkeit der Distribution eines Datensatzes, als Auswahl aus einer festen Liste von Werten via DCAT-AP.de URIs.
+        '@ rdf:about       = http://dcat-ap.de/def/dcatde/plannedAvailability
+        '@ _:deOriginal    = Die Eigenschaft wurde auf Ebene von DCAT-AP als [`dcatap:availability`](#distribution-verfugbarkeit) eingeführt.
+        '@ _:vocabularyLink = #kv-planned-availability
+        '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test des Vokabulars, kein Test auf Maximalzahl, Deprecated-Warnung)
+
+    <<optional>> dcatde:licenseAttributionByText ~> rdfs:Literal [*]
+        '@ rdfs:label      = Namensnennungstext für By-Clauses
+        '@ _:internalLink  = distribution-namensnennungstext-by-clauses
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Diese Eigenschaft speichert den verpflichtenden Namensnennungstext bei Lizenzangaben.
+        '@ rdfs:comment    = Diese Eigenschaft kann für parallele Sprachversionen des Namensnennungstextes wiederholt werden.
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angabe-von-by-texten) genauer beschrieben.
+        '@ rdf:about       = http://dcat-ap.de/def/dcatde/licenseAttributionByText
+        '@ _:deOriginal    = Hilfskonstrukt bis zur Lösung in DCAT-AP.
+        '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test, ob Ziel Literal)
+    <<optional>> dct:description ~> rdfs:Literal [*]
+        '@ rdfs:label      = Beschreibung
+        '@ _:internalLink  = distribution-beschreibung
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Diese Eigenschaft enthält eine Freitextbeschreibung der Distribution.
+        '@ rdfs:comment    = Diese Eigenschaft kann für unterschiedliche Sprachversionen wiederholt werden.
+        '@ rdf:about       = http://purl.org/dc/terms/description
+        '@ _:deOriginal    = Verbindlichkeit wurde von empfohlen auf optional gesenkt.
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_description
+        '@ sh:shapes       = dcatap:Distribution_Property_dct_description
+    <<optional>> dcat:byteSize ~> rdfs:Literal [0..1]
+        '@ rdfs:label      = Größe in Bytes
+        '@ _:internalLink  = distribution-grosse-in-bytes
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:decimal`
+        '@ rdfs:comment    = Diese Eigenschaft enthält die Größe der Distribution in Bytes.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#byteSize
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_size
+        '@ sh:shapes       = dcatap:Distribution_Property_dcat_byteSize
+    <<optional>> dct:issued ~> rdfs:Literal [0..1]
+        '@ rdfs:label      = Veröffentlichungsdatum
+        '@ _:internalLink  = distribution-veroffentlichungsdatum
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`
+        '@ rdfs:comment    = Diese Eigenschaft enthält das Datum der Herausgabe/Emission (z.B. in Form einer Veröffentlichung) der Distribution.
+        '@ rdf:about       = http://purl.org/dc/terms/issued
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_release_date
+        '@ sh:shapes       = dcatap:Distribution_Property_dct_issued (erlaubt auch xsd:gYear und xsd:gYearMonth)
+    <<optional>> dcat:downloadURL ~> rdfs:Resource [*]
+        '@ rdfs:label      = Download-URL
+        '@ _:internalLink  = distribution-download-url
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:comment    = Diese Eigenschaft enthält eine URL-Adresse, welche einen direkten Zugriff/Link auf die herunterladbare Datei im beschriebenen Format liefert.
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#zugriff-auf-eine-herunterladbare-datei) genauer beschrieben.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#downloadURL
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_download_url
+        '@ sh:shapes       = dcatap:Distribution_Property_dcat_downloadURL (erlaubt auch BlankNodes)
+    <<optional>> dct:language ~> dct:LinguisticSystem [*]
+        '@ rdfs:label      = Sprache
+        '@ _:internalLink  = distribution-sprache
+        '@ rdfs:range      = http://purl.org/dc/terms/LinguisticSystem
+        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf die in der Distribution verwendete Sprache.
+        '@ rdfs:comment    = Diese Eigenschaft kann wiederholt werden, sofern die Distribution in mehreren Sprachen vorliegt.
+        '@ rdf:about       = http://purl.org/dc/terms/language
+        '@ rdfs:seeAlso    = Kein Link auf W3C-DCAT, da von DCAT-AP eingeführt
+        '@ _:vocabularyLink = #kv-languages
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars)
+    <<optional>> foaf:page ~> foaf:Document [*]
+        '@ rdfs:label      = Dokumentation
+        '@ _:internalLink  = distribution-dokumentation
+        '@ rdfs:range      = http://xmlns.com/foaf/0.1/Document
+        '@ rdfs:comment    = Diese Eigenschaft verweist auf eine Webseite oder ein Dokument (enthält eine URL-Adresse) mit Informationen über die Distribution.
+        '@ rdf:about       = http://xmlns.com/foaf/0.1/page
+        '@ rdfs:seeAlso    = http://xmlns.com/foaf/spec/#term_page
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource)
+    <<optional>> dct:rights ~> dct:RightsStatement [0..1]
+        '@ rdfs:label      = Grad der Zugänglichkeit
+        '@ _:internalLink  = distribution-grad-zuganglichkeit
+        '@ rdfs:range      = http://purl.org/dc/terms/RightsStatement
+        '@ rdfs:comment    = Diese Eigenschaft verweist auf eine juristische Quelle, welche die mit der Distribution assoziierten Rechte spezifiziert.
+        '@ rdf:about       = http://purl.org/dc/terms/accessRights
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_rights
+        '@ sh:shapes       = dcatap:Distribution_Property_dct_rights, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
+    <<optional>> dct:conformsTo ~> dct:Standard [*]
+        '@ rdfs:label      = Konform zu Standard
+        '@ _:internalLink  = distribution-konform-zu-standard
+        '@ rdfs:range      = http://purl.org/dc/terms/Standard
+        '@ rdfs:comment    = Diese Eigenschaft verweist auf ein etabliertes Schema, zu dem die Distribution konform ist.
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#konformitat-zu-bestehenden-standards) genauer beschrieben.
+        '@ rdf:about       = http://purl.org/dc/terms/conformsTo
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_conforms_to
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource oder BlankNode)
+    <<optional>> dcat:mediaType ~> dct:MediaType [0..1]
+        '@ rdfs:label      = Medientyp
+        '@ _:internalLink  = distribution-medientyp
+        '@ rdfs:range      = http://purl.org/dc/terms/MediaType
+        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf den Medientyp der Distribution.
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zu-dateiformaten) genauer beschrieben.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#mediaType
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_media_type
+        '@ _:vocabularyLink = #kv-iana-media-types
+        '@ sh:shapes       = dcatap:Distribution_Property_dcat_mediaType, ___TBD___(kein Test des Vokabulars)
+    <<optional>> dcat:compressFormat ~> dct:MediaType [0..1]
+        '@ rdfs:label      = Kompressionsformat
+        '@ _:internalLink  = distribution-kompressionsformat
+        '@ rdfs:range      = http://purl.org/dc/terms/MediaType
+        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf das Dateiformat, in dem die Daten der Distribution in komprimierter Form, z.B. um die Größe zu reduzieren, zum Download angeboten werden.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#mediaType
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_compression_format
+        '@ _:vocabularyLink = #kv-iana-media-types
+        '@ sh:shapes       = dcatap:Distribution_Property_dcat_compressFormat, ___TBD___(kein Test des Vokabulars)
+    <<optional>> dcat:packageFormat ~> dct:MediaType [0..1]
+        '@ rdfs:label      = Paketformat
+        '@ _:internalLink  = distribution-paketformat
+        '@ rdfs:range      = http://purl.org/dc/terms/MediaType
+        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf das Dateiformat, in dem die Daten der Distribution zusammengeschnürt zum Download angeboten werden. Zum Beispiel, um den Download zu erleichtern.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#mediaType
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_packaging_format
+        '@ _:vocabularyLink = #kv-iana-media-types
+        '@ sh:shapes       = dcatap:Distribution_Property_dcat_packageFormat, ___TBD___(kein Test des Vokabulars)
+    <<optional>> odrl:hasPolicy ~> odrl:Policy [0..1]
+        '@ rdfs:label      = Regelwerk
+        '@ _:internalLink  = distribution-regelwerk
+        '@ rdfs:range      = https://www.w3.org/TR/odrl-vocab/#term-Policy
+        '@ rdfs:comment    = Diese Eigenschaft verweist auf ein Regelwerk, das die Rechte die mit dieser Distribution assoziiert werden unter Verwendung des ODRL Vokabulars beschreibt.
+        '@ rdf:about       = https://www.w3.org/TR/odrl-vocab/#term-hasPolicy
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_has_policy
+        '@ sh:shapes       = dcatap:Distribution_Property_odrl_hasPolicy, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
+    <<optional>> adms:status ~> skos:Concept [0..1]
+        '@ rdfs:label      = Status
+        '@ _:internalLink  = distribution-status
+        '@ rdfs:range      = http://www.w3.org/2004/02/skos/core#Concept
+        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf den Status bzw. Reifegrad der Distribution.
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#status-und-erwartete-verfugbarkeit) genauer beschrieben.
+        '@ rdf:about       = http://www.w3.org/ns/adms#status
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-adms/#adms-status
+        '@ _:vocabularyLink = #kv-adms-status
+        '@ sh:shapes       = dcatap:Distribution_Property_adms_status, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
+}
+'@ rdfs:label      = Distribution
+'@ _:internalLink  = #klasse-distribution
+'@ rdf:about       = http://www.w3.org/ns/dcat#Distribution
+'@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution
+'@ rdfs:comment    = Eine physische Verkörperung/Repräsentanz des Datensatzes in einem spezifischen Format.
+'@ _:usedBy        = dcat:distribution, adms:sample (dcat:Distribution)
+
+"dcat:Distribution"    --> "*" "dcat:DataService"  : <<optional>> dcat:accessService
+    '@ rdfs:label      = Ausliefernder Datenservice
+    '@ _:internalLink  = distribution-ausliefernder-datenservice
+    '@ rdfs:range      = http://www.w3.org/ns/dcat#DataService
+    '@ rdfs:comment    = Diese Eigenschaft verweist auf den Datenservice, der Zugang zur Distribution ermöglicht.
+    '@ rdf:about       = http://www.w3.org/ns/dcat#accessService
+    '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_service
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource oder BlankNode)
+
+"dcat:Distribution"    --> "0..1"  "spdx:Checksum" : <<optional>> spdx:checksum
+    '@ rdfs:label      = Prüfsumme
+    '@ _:internalLink  = distribution-prufsumme
+    '@ rdfs:range      = http://spdx.org/rdf/terms#Checksum
+    '@ rdfs:comment    = Diese Eigenschaft stellt einen Mechanismus zur Verfügung, mit dem sichergestellt werden kann, dass die Inhalte der Distribution sich nicht verändert haben.
+    '@ rdf:about       = http://spdx.org/rdf/terms#checksum
+    '@ rdfs:seeAlso    = https://spdx.org/rdf/terms/#d4e165
+    '@ _:deOriginal    = DCAT-AP.de stellt ein erweitertes kontrolliertes Vokabular zur Verfügung, dass in der [Klasse Prüfsumme](#klasse-prufsumme) von der [Eigenschaft Algorithmus](#prufsumme-algorithmus) verwendet wird.
+    '@ sh:shapes       = dcatap:Distribution_Property_spdx_checksum, ___TBD___(kein Test, ob Ziel eine spdx:Checksum)
+
+class "dct:PeriodOfTime" <<recommended>> {
+    <<recommended>> dcat:startDate ~> rdfs:Literal [0..1]
+        '@ rdfs:label      = Startzeitpunkt
+        '@ _:internalLink  = zeitraum-startzeitpunkt
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime`
+        '@ rdfs:comment    = Diese Eigenschaft bezeichnet den Beginn des Zeitraumes.
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-zeitliche-abdeckung) genauer beschrieben.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#startDate
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:period_start_date
+        '@ sh:shapes       = dcatap:PeriodOfTime_Property_dcat_startDate
+    <<recommended>> dcat:endDate ~> rdfs:Literal [0..1]
+        '@ rdfs:label      = Endzeitpunkt
+        '@ _:internalLink  = zeitraum-endzeitpunkt
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime`
+        '@ rdfs:comment    = Diese Eigenschaft bezeichnet das Ende des Zeitraumes.
+        '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-zeitliche-abdeckung) genauer beschrieben.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#endDate
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:period_end_date
+        '@ sh:shapes       = dcatap:PeriodOfTime_Property_dcat_endDate
+
+    <<optional>> time:hasBeginning ~> time:Instant [0..1]
+        '@ rdfs:label      = Anfang
+        '@ _:internalLink  = zeitraum-anfang
+        '@ rdfs:range      = https://www.w3.org/TR/owl-time/#time:Instant
+        '@ rdfs:comment    = Anfang eines Zeitraums oder einer Periode.
+        '@ rdfs:comment    = Mit der Range `time:Instant` können auch unkonventionelle Zeitangaben gemacht werden.
+        '@ rdf:about       = https://www.w3.org/TR/owl-time/#time:hasBeginning
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:period_has_beginning
+        '@ sh:shapes       = dcatap:PeriodOfTime_Property_time_hasBeginning, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
+    <<optional>> time:hasEnd ~> time:Instant [0..1]
+        '@ rdfs:label      = Ende
+        '@ _:internalLink  = zeitraum-ende
+        '@ rdfs:range      = https://www.w3.org/TR/owl-time/#time:Instant
+        '@ rdfs:comment    = Ende eines Zeitraums oder einer Periode.
+        '@ rdfs:comment    = Mit der Range `time:Instant` können auch unkonventionelle Zeitangaben gemacht werden.
+        '@ rdf:about       = https://www.w3.org/TR/owl-time/#time:hasEnd
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:period_has_end
+        '@ sh:shapes       = dcatap:PeriodOfTime_Property_time_hasEnd, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
+    <<optional>> schema:startDate ~> rdfs:Literal [0..1]
+        '@ rdfs:label      = Startzeitpunkt (DEPRECATED)
+        '@ _:internalLink  = zeitraum-startzeitpunkt-deprecated
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`
+        '@ rdfs:comment    = Diese Eigenschaft bezeichnet den Beginn des Zeitraumes.
+        '@ rdf:about       = https://schema.org/startDate
+        '@ rdfs:seeAlso    = https://schema.org/startDate
+        '@ sh:shapes       = ___TBD___(kein Test auf Maximalzahl, kein Test auf getyptes Literal, keine Deprecated-Warnung)
+    <<optional>> schema:endDate ~> rdfs:Literal [0..1]
+        '@ rdfs:label      = Endzeitpunkt (DEPRECATED)
+        '@ _:internalLink  = zeitraum-endzeitpunkt-deprecated
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`
+        '@ rdfs:comment    = Diese Eigenschaft bezeichnet das Ende des Zeitraumes.
+        '@ rdf:about       = https://schema.org/endDate
+        '@ rdfs:seeAlso    = https://schema.org/endDate
+        '@ sh:shapes       = ___TBD___(kein Test auf Maximalzahl, kein Test auf getyptes Literal, keine Deprecated-Warnung)
+}
+'@ rdfs:label        = Zeitraum
+'@ _:internalLink    = #klasse-zeitraum
+'@ rdf:about         = http://purl.org/dc/terms/PeriodOfTime
+'@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Class:Period_of_Time
+'@ rdfs:subClassOf   = [dct:LocationPeriodOrJurisdiction](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LocationPeriodOrJurisdiction/)
+'@ _:usedBy          = dct:temporal (dcat:Dataset)
+'@ rdfs:comment      = Ein Zeitintervall, welches durch Start- und Endzeitpunkt bezeichnet bzw. definiert ist.
+'@ rdfs:comment      = Das Zeitintervall kann auch offen sein, dann hat es lediglich einen Start- oder Endzeitpunkt.
+'@ rdfs:comment      = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-zeitliche-abdeckung) genauer beschrieben.
+
+class "dct:Location" <<optional>> {
+    <<recommended>> dcat:bbox ~> rdfs:Resource [0..1]
+        '@ rdfs:label      = Bounding Box
+        '@ _:internalLink  = standort-bounding-box
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ _:rangeOverride = Bewusst generisch gehalten als [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) z. B. getyped als `geosparql:asWKT`
+        '@ rdfs:comment    = Diese Eigenschaft beschreibt die Bounding Box einer Ressource.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#bbox
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:location_bbox
+        '@ sh:shapes       = dcatap:Location_Shape_Property_dcat_bbox
+    <<recommended>> dcat:centroid ~> rdfs:Literal [0..1]
+        '@ rdfs:label      = Geografischer Mittelpunkt
+        '@ _:internalLink  = standort-geografischer-mittelpunkt
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ _:rangeOverride = Bewusst generisch gehalten als [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) z. B. getyped als `geosparql:asWKT`
+        '@ rdfs:comment    = Diese Eigenschaft beschreibt den geografischen Mittelpunkt einer Ressource.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#centroid
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:location_centroid
+        '@ sh:shapes       = dcatap:Location_Shape_Property_dcat_centroid
+
+    <<optional>> locn:geometry ~> rdfs:Literal [0..1]
+        '@ rdfs:label      = Geometrie
+        '@ _:internalLink  = standort-geometrie
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ _:rangeOverride = Bewusst generisch gehalten als [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) z. B. getyped als `geosparql:asWKT`
+        '@ rdfs:comment    = Diese Eigenschaft beschreibt die Geometrie einer Ressource.
+        '@ rdf:about       = http://www.w3.org/ns/locn#geometry
+        '@ rdfs:seeAlso    = https://www.w3.org/ns/locn#locn:geometry
+        '@ sh:shapes       = dcatap:Location_Shape_Property_locn_geometry
+}
+'@ rdfs:label      = Standort
+'@ _:internalLink  = #klasse-standort
+'@ rdf:about       = http://purl.org/dc/terms/Location
+'@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/Location/
+'@ rdfs:subClassOf = [dct:LocationPeriodOrJurisdiction](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LocationPeriodOrJurisdiction/)
+'@ _:usedBy        = dct:spatial (dcat:Dataset)
+'@ rdfs:comment    = Ein räumlicher Bereich oder ein bezeichneter Ort. Er kann durch ein kontrolliertes Vokabular oder mit geographischen Koordinaten repräsentiert werden.
+'@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zur-geografischen-abdeckung) genauer beschrieben.
+
+class "foaf:Agent" <<mandatory>> {
+    <<mandatory>> foaf:name ~> rdfs:Literal [1..*]
+        '@ rdfs:label        = Name
+        '@ _:internalLink    = verantwortliche-stelle-name
+        '@ rdfs:range        = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment      = Diese Eigenschaft enthält den Namen der verantwortlichen Stelle. 
+        '@ rdfs:comment      = Sie kann für unterschiedliche Ausprägungen des Namens (z.B. der Name in unterschiedlichen Sprachen) wiederholt werden.
+        '@ rdf:about         = http://xmlns.com/foaf/0.1/name
+        '@ rdfs:seeAlso      = http://xmlns.com/foaf/spec/#term_name
+        '@ _:vocabularyLink  = #kv-adms-publisher
+        '@ sh:shapes         = dcatap:Agent_Property_foaf_name
+    <<optional>> dct:type ~> skos:Concept [0..1]
+        '@ rdfs:label        = Typ
+        '@ _:internalLink    = verantwortliche-stelle-typ
+        '@ rdfs:range        = http://www.w3.org/2004/02/skos/core#Concept
+        '@ rdfs:comment      = Diese Eigenschaft bezieht sich auf den Typ der verantwortlichen Stelle, die die Ressource bereitstellt.
+        '@ _:vocabularyLinkv = #kv-adms-publisher
+        '@ rdf:about         = http://purl.org/dc/terms/type
+        '@ rdfs:seeAlso      = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type
+        '@ sh:shapes         = dcatap:Agent_Property_dct_type, ___TBD___(kein Test des Vokabulars)
+}
+'@ rdfs:label      = Verantwortliche Stelle
+'@ _:internalLink  = #klasse-verantwortliche-stelle
+'@ rdf:about       = http://xmlns.com/foaf/0.1/Agent
+'@ rdfs:seeAlso    = http://xmlns.com/foaf/spec/#term_Agent
+'@ rdfs:comment    = Eine Stelle oder Person, welche mit Katalogen und Datensätzen in unterschiedlichen Rollenausprägungen assoziiert ist.
+'@ _:usedBy        = dct:publisher (dcat:Catalog), dct:publisher (dcat:Dataset), dct:creator (dcat:Dataset), ...
+
+class "adms:Identifier" <<optional>> {
+    <<mandatory>> skos:notation ~> rdfs:Literal  [1]
+        '@ rdfs:label      = Notation des Identifier
+        '@ _:internalLink  = identifier-notation
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped mit der URI eines [DataCite Resource Identifier Schemes](https://sparontologies.github.io/datacite/current/datacite.html#d4e643)
+        '@ rdfs:comment    = Diese Eigenschaft enthält einen datentypreferenzierten ID-String im Kontext des ID-Schemas.
+        '@ rdf:about       = http://www.w3.org/2004/02/skos/core#notation
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-adms/#skos_notation
+        '@ sh:shapes         = dcatap:Identifier_Property_skos_notation, ___TBD___(kein Test auf minCount)
+}
+'@ rdfs:label      = Identifier
+'@ _:internalLink  = #klasse-identifier
+'@ rdf:about       = http://www.w3.org/ns/adms#Identifier
+'@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-adms/#dt_identifier
+'@ rdfs:comment    = Die Klasse "Identifier" besteht je nach spezifischen Kontext aus einem String, welcher
+'@ rdfs:comment    = - die ID ist, 
+'@ rdfs:comment    = - eine optionale ID für das ID-Schema ist,
+'@ rdfs:comment    = - eine optionale ID für die Version des ID-Schemas ist oder
+'@ rdfs:comment    = - eine optionale ID für die das ID-Schema pflegende verantwortliche Stelle ist.
+'@ _:usedBy        = adms:identifier (dcat:Dataset)
+
+class "spdx:Checksum" <<optional>> {
+    <<mandatory>> spdx:algorithm ~> rdfs:Resource [1]
+        '@ rdfs:label      = Algorithmus
+        '@ _:internalLink  = prufsumme-algorithmus
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:comment    = Diese Eigenschaft identifiziert den verwendeten Algorithmus zur Erzeugung der Prüfsumme.
+        '@ rdf:about       = http://spdx.org/rdf/terms#algorithm
+        '@ rdfs:seeAlso    = https://spdx.org/rdf/terms/#d4e52
+        '@ _:deOriginal    = dcat-ap.de führt eine eigene Liste an unterstützten Hashalgorithmen.
+        '@ _:vocabularyLink = #kv-hash-algorithms
+        '@ sh:shapes       = dcatap:Checksum_Property_spdx_algorithm <-- DEAKTIVIEREN DA SHA1 ERZWUNGEN!, ___TBD___(kein Test des Vokabulars, minCount, maxCount)
+    <<mandatory>> spdx:checksumValue ~> rdfs:Literal [1]
+        '@ rdfs:label      = Prüfsummenwert
+        '@ _:internalLink  = prufsumme-prufsummenwert
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:hexBinary`
+        '@ rdfs:comment    = Diese Eigenschaft stellt einen hexadezimal kodierten Übersichtswert in Kleinbuchstaben zur Verfügung, welcher mittels eines spezifischen Algorithmus erzeugt wurde.
+        '@ rdf:about       = http://spdx.org/rdf/terms#checksumValue
+        '@ rdfs:seeAlso    = https://spdx.org/rdf/terms/#d4e1111
+        '@ sh:shapes       = dcatap:Checksum_Property_spdx_checksumValue
+}
+'@ rdfs:label      = Prüfsumme
+'@ _:internalLink  = #klasse-prufsumme
+'@ rdf:about       = http://spdx.org/rdf/terms#Checksum
+'@ rdfs:seeAlso    = https://spdx.org/rdf/terms/#d4e1930
+'@ rdfs:comment    = Ein Wert, der es ermöglicht, die Inhalte einer Datei zu verifizieren (für korrekt zu erklären). 
+'@ rdfs:comment    = Diese Klasse ermöglicht es, die Ergebnisse einer Vielzahl von Prüfsummen- und Kryptoalgorithmen zu repräsentieren.
+'@ _:usedBy        = spdx:checksum (dcat:Distribution)
+
+class "dcat:CatalogRecord" <<optional>> {
+    <<mandatory>> dct:modified ~> rdfs:Literal [1]
+        '@ rdfs:label      = Aktualisierungsdatum
+        '@ _:internalLink  = katalogeintrag-aktualisierungsdatum
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`
+        '@ rdfs:comment    = Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation des Katalogeintrags.
+        '@ rdf:about       = http://purl.org/dc/terms/modified
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date
+        '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
+
+    <<recommended>> dct:conformsTo ~> rdfs:Resource [0..1]
+        '@ rdfs:label      = Application Profile der Metadaten
+        '@ _:internalLink  = katalogeintrag-konform-zu
+        '@ rdfs:range      = http://purl.org/dc/terms/Standard
+        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf das Application Profile zu dem die Metadaten im Katalog konform sind.
+        '@ rdf:about       = http://purl.org/dc/terms/conformsTo
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:record_conforms_to
+        '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_conformsTo, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
+    <<recommended>> adms:status ~> skos:Concept [0..1]
+        '@ rdfs:label      = Änderungstyp
+        '@ _:internalLink  = katalogeintrag-anderungstyp
+        '@ rdfs:range      = http://www.w3.org/2004/02/skos/core#Concept
+        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf den Typ der letzten Revision des Datensatzeintrags in den Katalog.
+        '@ rdf:about       = http://www.w3.org/ns/adms#status
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-adms/#adms-status
+        '@ _:deOriginal    = Diese Eigenschaft wird von DCAT-AP.de nicht unterstützt, unter anderem weil das eigentlich vorgesehene Vokabular nicht vorhanden ist.
+        '@ sh:shapes       = dcatap:CatalogRecord_Property_adms_status, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode), ___TBD___(Warnung, dass Feld nicht zu verwenden ist)
+    <<recommended>> dct:issued ~> rdfs:Literal [0..1]
+        '@ rdfs:label      = Veröffentlichungsdatum
+        '@ _:internalLink  = katalogeintrag-veroffentlichungsdatum
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`
+        '@ rdfs:comment    = Diese Eigenschaft enthält das Datum, an dem die Beschreibung der Ressource aufgenommen wurde.
+        '@ rdf:about       = http://purl.org/dc/terms/issued
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:record_listing_date
+        '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_issued (erlaubt auch xsd:gYear und xsd:gYearMonth)
+
+    <<optional>> dct:title ~> rdfs:Literal [*]
+        '@ rdfs:label      = Titel
+        '@ _:internalLink  = katalogeintrag-titel
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Diese Eigenschaft bezeichnet den Titel eines Katalogeintrags.
+        '@ rdfs:comment    = Diese Eigenschaft kann für parallele Sprachversionen des Katalogtitels wiederholt werden.
+        '@ rdf:about       = http://purl.org/dc/terms/title
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:record_title
+        '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_title
+    <<optional>> dct:description ~> rdfs:Literal [*]
+        '@ rdfs:label      = Beschreibung
+        '@ _:internalLink  = katalogeintrag-beschreibung
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Diese Eigenschaft enthält eine Freitextbeschreibung des Katalogeintrags.
+        '@ rdfs:comment    = Diese Eigenschaft kann für unterschiedliche Sprachversionen wiederholt werden.
+        '@ rdf:about       = http://purl.org/dc/terms/description
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:record_description
+        '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_description
+    <<optional>> dct:language ~> dct:LinguisticSystem [*]
+        '@ rdfs:label      = Sprache
+        '@ _:internalLink  = katalogeintrag-sprache
+        '@ rdfs:range      = http://purl.org/dc/terms/LinguisticSystem
+        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf die Sprache der Metadatenbeschreibung für die zum Katalogeintrag gehörenden Eigenschaften (z.B. Titel, Beschreibungen usw.).
+        '@ rdfs:comment    = Diese Eigenschaft kann wiederholt werden, falls die Metadaten in verschiedenen Sprachen zur Verfügung stehen.
+        '@ rdf:about       = http://purl.org/dc/terms/language
+        '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/language
+        '@ _:vocabularyLink = #kv-languages
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars)
+}
+'@ rdfs:label      = Katalogeintrag
+'@ _:internalLink  = #klasse-katalogeintrag
+'@ rdf:about       = http://www.w3.org/ns/dcat#CatalogRecord
+'@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Class:Catalog_Record
+'@ rdfs:comment    = Die Beschreibung des Eintrags in einem Katalog.
+'@ _:usedBy        = dcat:record (dcat:Catalog), dct:source (dcat:CatalogRecord)
+
+"dcat:CatalogRecord" --> "1"     "dcat:Resource"      : <<mandatory>> foaf:primaryTopic
+    '@ rdfs:label      = Katalogeintrag
+    '@ _:internalLink  = katalogeintrag-katalogeintrag
+    '@ _:rangeOverride = `dcat:Dataset`, `dcat:DataService` oder `dcat:Catalog`
+    '@ rdfs:comment    = Diese Eigenschaft verknüpft den Katalogeintrag mit der im Eintrag beschriebenen `dcat:Resource`.
+    '@ rdf:about       = http://xmlns.com/foaf/0.1/primaryTopic
+    '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:record_primary_topic
+    '@ sh:shapes       = dcatap:CatalogRecord_Property_foaf_primaryTopic
+"dcat:CatalogRecord" --> "0..1"  "dcat:CatalogRecord" : <<optional>> dct:source
+    '@ rdfs:label      = Original-Metadaten der Ressource
+    '@ _:internalLink  = katalogeintrag-original-metadaten-der-ressource
+    '@ rdfs:comment    = Diese Eigenschaft verweist auf die ursprünglichen Metadaten, mit Hilfe derer die Metadaten des Katalogeintrags erstellt wurden.
+    '@ rdf:about       = http://purl.org/dc/terms/source
+    '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source
+    '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_source, ___TBD___(kein Test, ob Ziel ein dcat:CatalogRecord)
+
+class "dct:LicenceType" <<recommended>> {
+    <<recommended>> dct:type ~> skos:Concept [*]
+        '@ rdfs:label      = Lizenztyp
+        '@ _:internalLink  = lizenzdokument-lizenztyp
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf den Typ einer Lizenz, z.B. "public domain" oder "royalties required".
+        '@ _:deOriginal    = Es wird empfohlen, die Eigenschaft Lizenztyp (und die ganze Klasse Lizenzdokument) nicht innerhalb des Schemas zu transportieren sondern als eine Frage der Klassifikation von Lizenzen zu sehen u.a. weil das von DCAT-AP.de vorgegebene ADMS Vokabular "LicenceType" mangels Trennschärfe mit überlappenden Einträgen ungeeignet für die Zwecke von GovData ist.
+        '@ rdf:about       = http://purl.org/dc/terms/type
+        '@ rdfs:seeAlso    = https://dublincore.org/specifications/dublin-core/dcmi-terms/#type
+        '@ _:vocabularyLink = #kv-adms-licencetype
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars, Wird nicht getestet, da CV zu verwenden ist)
+}
+'@ rdfs:label      = Lizenzdokument
+'@ _:internalLink  = #klasse-lizenzdokument
+'@ rdf:about       = http://purl.org/dc/terms/LicenseDocument
+'@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2012-06-14/#terms-LicenseDocument
+'@ rdfs:comment    = Ein rechtlich verbindliches Dokument, welches die Verwendung einer Ressource offiziell erlaubt.
+'@ _:usedBy        = dct:license (dcat:Distribution)
+
+class "dcat:Relationship" <<optional>> {
+    <<mandatory>> dcat:hadRole ~> dcat:Role [1..*]
+        '@ rdfs:label      = Hatte Rolle
+        '@ _:internalLink  = beziehung-rolle
+        '@ rdfs:range      = http://www.w3.org/ns/dcat#Role
+        '@ rdfs:comment    = Diese Eigenschaft verweist auf die Funktion einer Ressource in Beziehung zu einer anderen Ressource.
+        '@ rdfs:comment    = **Verwendungshinweis:** DCAT-AP.de definiert mehrere spezifische Rollen, die bevorzugt verwendet werden sollten. Die Klasse [`dcat:Role` (siehe DCAT)](https://www.w3.org/TR/vocab-dcat-2/#Class:Role) verfügt über keine empfohlenen, verpflichtenden oder optionalen Eigenschaften. `dcat:hadRole` sollte, wenn es notwendig ist, mit einem kontrollierten Vokabular verwendet werden, für das aber keine Vorgaben gemacht werden. Das W3C nennt jedoch einige mögliche Kandidaten.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#hadRole
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:relationship_hadRole
+        '@ sh:shapes       = dcatap:Relationship_Property_dcat_hadRole, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
+    <<mandatory>> dct:relation ~> rdfs:Resource [1..*]
+        '@ rdfs:label      = Beziehung
+        '@ _:internalLink  = beziehung-beziehung
+        '@ rdfs:range      = rdfs:Resource
+        '@ rdfs:comment    = Diese Eigenschaft verweist auf die Ressourcen, die miteinander in einer Beziehung stehen.
+        '@ rdf:about       = http://purl.org/dc/terms/relation
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:relationship_relation
+        '@ sh:shapes       = dcatap:Relationship_Property_dct_relation, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
+}
+'@ rdfs:label      = Beziehung
+'@ _:internalLink  = #klasse-beziehung
+'@ rdf:about       = http://www.w3.org/ns/dcat#Relationship
+'@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Class:Relationship
+'@ rdfs:comment    = Eine Klasse, um eine Beziehung zwischen mehreren DCAT Ressourcen genauer zu beschreiben.
+'@ _:usedBy        = dcat:qualifiedRelation (dcat:Dataset)
+'@ rdfs:subClassOf = [prov:EntityInfluence](https://www.w3.org/TR/prov-o/#EntityInfluence)
+
+class "prov:Attribution" <<optional>> {
+    <<mandatory>> dcat:hadRole ~> dcat:Role [1..*]
+        '@ rdfs:label      = Hatte Rolle
+        '@ _:internalLink  = rollenzuordnung-rolle
+        '@ rdfs:range      = http://www.w3.org/ns/dcat#Role
+        '@ rdfs:comment    = Beschreibt die Funktion, die Agenten in Bezug auf eine Ressource hatten.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#hadRole
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:relationship_hadRole
+        '@ sh:shapes       = ___TBD___(kein Test auf minCount, kein Test, ob Ziel eine Ressource oder BlankNode)
+    <<mandatory>> prov:agent ~> prov:Agent [1..*]
+        '@ rdfs:label      = Agent
+        '@ _:internalLink  = rollenzuordnung-agent
+        '@ rdfs:range      = https://www.w3.org/TR/prov-o/#Agent
+        '@ rdfs:comment    = Die Eigenschaft referenziert auf einen `prov:Agent`, der eine Ressource beeinflusst hat. 
+        '@ rdf:about       = http://www.w3.org/ns/prov#agent
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/prov-o/#p_agent
+        '@ sh:shapes       = ___TBD___(kein Test auf minCount, kein Test, ob Ziel eine Ressource oder BlankNode)
+}
+'@ rdfs:label      = Rollenzuordnung
+'@ _:internalLink  = #klasse-rollenzuordnung
+'@ rdf:about       = http://www.w3.org/ns/prov#Attribution
+'@ rdfs:seeAlso    = https://www.w3.org/TR/prov-o/#Attribution
+'@ rdfs:comment    = Diese Klasse verknüft eine Ressource mit Agenten und beschreibt, welche Rolle die Agenten im Bezug auf die Ressource eingenommen haben.
+'@ rdfs:comment    = Sie ist insbesondere dann relevant, wenn keine Eigenschaften wie `dcatde:originator`, `dct:creator` oder `dct:publisher` existieren, um die Rolle zu beschreiben.
+'@ _:usedBy        = prov:qualifiedAttribution (dcat:Dataset, dcat:DataService)
+'@ rdfs:subClassOf = [prov:AgentInfluence](https://www.w3.org/TR/prov-o/#AgentInfluence)
+
+class "skos:Concept" <<reccommended>> {
+    <<mandatory>> skos:prefLabel ~> rdfs:Literal [1..*]
+        '@ rdfs:label      = Bezeichnung
+        '@ _:internalLink  = kategorie-bezeichnung
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Präferierte Bezeichnung der Kategorie.
+        '@ rdf:about       = http://www.w3.org/2004/02/skos/core#prefLabel
+        '@ rdfs:seeAlso    = http://www.w3.org/2004/02/skos/core#prefLabel
+        '@ sh:shapes       = dcatap:Category_Property_skos_prefLabel <-- DEAKTIVIEREN, ___TBD___(Keine Tests geplant, da Kategorien als CV abgebildet werden.)
+}
+'@ rdfs:label      = Kategorie
+'@ _:internalLink  = #klasse-kategorie
+'@ rdf:about       = http://www.w3.org/2004/02/skos/core#Concept
+'@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Class:Concept
+'@ rdfs:comment    = Das Thema bzw. die Kategorie eines Datensatzes.
+'@ _:usedBy        = dcat:theme (dcat:Dataset)
+
+class "skos:ConceptScheme" <<recommended>> {
+    <<mandatory>> dct:title ~> rdfs:Literal [1..*]
+        '@ rdfs:label      = Titel
+        '@ _:internalLink  = kategorienschema-bezeichnung
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Titel des Kategorienschemas.
+        '@ rdf:about       = http://purl.org/dc/terms/title
+        '@ rdfs:seeAlso    = http://purl.org/dc/terms/title
+        '@ sh:shapes       = dcatap:CategoryScheme_Property_dct_title <-- DEAKTIVIEREN, ___TBD___(Keine Tests geplant, da Kategorienschemata als CV abgebildet werden.)
+}
+'@ rdfs:label      = Kategorienschema
+'@ _:internalLink  = #klasse-kategorienschema
+'@ rdf:about       = http://www.w3.org/2004/02/skos/core#ConceptScheme
+'@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Class:Concept_Scheme
+'@ rdfs:comment    = Eine Sammlung von Konzepten/Begrifflichkeiten (z.B. in Form eines kontrollierten Vokabulars) durch welche die Kategorie definiert ist.
+'@ _:usedBy        = dcat:themeTaxonomy (dcat:Catalog)
+
+class "dcat:Resource" #F8978D|FCFFFC
+
+"dcat:Catalog"     --|> "dcat:Dataset"
+"dcat:Dataset"     --|> "dcat:Resource"
+"dcat:DataService" --|> "dcat:Resource"
+
+@enduml

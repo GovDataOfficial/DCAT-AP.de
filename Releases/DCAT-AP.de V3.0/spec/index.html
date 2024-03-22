@@ -1,0 +1,414 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>DCAT-AP.de Spezifikation 2.0</title>
+  <link href="https://www.dcat-ap.de/assets/favicon.ico" rel="icon" />
+  
+  <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
+  <script class="remove">
+    var respecConfig = {
+      shortName: "DCAT-AP.de",
+      subtitle: "Deutsche Adaption des „Data Catalogue Application Profile“ (DCAT-AP) für Datenportale in Europa",
+      github: "https://github.com/GovDataOfficial/DCAT-AP.de",
+      latestVersion: "http://dcat-ap.de/def/dcatde/2.0/spec/",
+
+      xref: "web-platform",
+      format: "markdown",
+      maxTocLevel: 2,
+      lint: false,
+      specStatus: "base",
+      doJsonLd: true,
+      noRecTrack: true,
+      addSectionLinks: false,
+      
+      currentVersion: "2.0",
+      publishDate: "2022-03-01",
+      modificationDate: "2022-02-28",
+      copyrightStart: 2017,
+      license: "cc-by",
+      additionalCopyrightHolders: "Creative Commons Namensnennung 4.0 „]init[ AG für GovData“",
+
+      postProcess: [doPostProcessing],
+
+      alternateFormats: [
+        {
+          label: "PDF",
+          uri: "http://dcat-ap.de/def/dcatde/2.0/spec/specification.pdf",
+        },
+      ],
+
+      logos: [
+        {
+          src: "./img/dcat-ap-de.png",
+          url: "./img/dcat-ap-de.png",
+          alt: "DCAT-AP.de",
+          width: 261,
+          height: 59,
+          id: "dcat-ap-logo",
+        },
+      ],
+      
+      authors: [
+        {
+          name: "Christian Wittig",
+          company: "GKSt GovData",
+          companyURL: "https://www.govdata.de/",
+        },
+        {
+          name: "Antje Göldner",
+          company: "GKSt GovData",
+          companyURL: "https://www.govdata.de/",
+        },
+        {
+          name: "Christian Horn",
+          company: "GKSt GovData",
+          companyURL: "https://www.govdata.de/",
+        },
+        {
+          name: "Ludger Rinsche",
+          company: "]init[ AG",
+          companyURL: "https://www.init.de/"
+        },
+        {
+          name: "Adam Kirschstein",
+          company: "]init[ AG",
+          companyURL: "https://www.init.de/"
+        },
+        {
+          name: "Sebastian Sklarß",
+          company: "]init[ AG",
+          companyURL: "https://www.init.de/"
+        },
+      ],
+      editors: [
+        {
+          name: "Dr. Jesper Zedlitz",
+          company: "MELUND Schleswig-Holstein",
+        }, 
+        {
+          name: "Evelyn Priefer",
+          company: "MIK Brandenburg",
+        }, 
+        {
+          name: "Jörn Hauptvogel",
+          company: "SID Sachsen",
+        }, 
+        {
+          name: "Dominik Panic",
+          company: "BKM Hamburg",
+        }, 
+        {
+          name: "Nils Volkening",
+          company: "BKM Hamburg",
+        }, 
+        {
+          name: "Peter Kochmann",
+          company: "GDI Nordrhein-Westfahlen",
+        }
+      ],
+
+      localBiblio: {
+        GLD: {
+          title: "Government Linked Data (GLD) Working Group",
+          href: "http://www.w3.org/2011/gld/wiki/Main_Page",
+          publisher: "DCAT-AP",
+        },
+
+        RDF: {
+          title: "Resource Description Framework (RDF)",
+          href: "http://www.w3.org/RDF/",
+          publisher: "DCAT-AP",
+        },
+
+        DCAT: {
+          title: "Data Catalog Vocabulary (DCAT)",
+          href: "http://www.w3.org/TR/2014/REC-vocab-dcat-20140116/",
+          publisher: "DCAT-AP",
+          status: "W3C Recommendation 16 January 2014",
+        },
+
+        DCAT_AP: {
+          title: "DCAT Application Profile for Data Portals in Europe (DCAT-AP)",
+          href: "https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe",
+          publisher: "Semantic Interoperability Community (SEMIC)",
+          status: "Die DCAT-AP Spezifikation wurde von einer Arbeitsgruppe unter Federführung von Mitarbeitern des Generaldirektorates CONNECT, des Amtes für Veröffentlichungen der Europäischen Union (OPOCE) und des ISA Programmes des Generaldirektorates Informatik (DIGIT) entwickelt.",
+        },
+      }
+    };
+
+    function findDTDD(content) {
+      let allDTs = document.getElementsByTagName("dt");
+      let DT = null;
+      let DD = null;
+
+      for (var i = 0; i < allDTs.length; i++) {
+        if (allDTs[i].innerText===content) {
+          DT = allDTs[i];
+          DD = DT.nextSibling;
+          break;
+        }
+      }
+
+      return {DT, DD};
+    }
+
+    function doPostProcessing() {
+      // remove Letzter Entwurf:
+      let le = findDTDD("Letzter Entwurf:");
+      if (le.DT) le.DT.remove();
+      if (le.DD) le.DD.remove();
+
+      // remove History:
+      let history = findDTDD("History:");
+      if (history.DT) history.DT.remove();
+      if (history.DD) history.DD.remove();
+
+      // rename Redaktion:
+      let re = findDTDD("Redaktion:");
+      if (re.DT) re.DT.innerText = "Erstellt von:";
+
+      // rename Autor/innen:
+      let au = findDTDD("Autor/innen:");
+      if (au.DT) au.DT.innerText = "Verfasst von:";
+
+      // add details
+      let dliH = document.getElementsByTagName("dl")[0].innerHTML;
+      let addDetails = "";
+
+      // ++ Aktuelle Version
+      addDetails += "<dt>Aktuelle Version:</dt><dd>" + respecConfig.currentVersion + "</dd>";
+
+      // ++ Veröffentlichungsdatum
+      let vDate = new Date(respecConfig.publishDate).toLocaleDateString("de-de", {
+          day : 'numeric',
+          month : 'long',
+          year : 'numeric'
+      });
+      addDetails += "<dt>Veröffentlichungsdatum:</dt><dd>" + vDate + "</dd>";
+
+      // ++ Letzte Änderung
+      let laDate = new Date(respecConfig.modificationDate).toLocaleDateString("de-de", {
+          day : 'numeric',
+          month : 'long',
+          year : 'numeric'
+      });
+      addDetails += "<dt>Letzte Änderung:</dt><dd>" + laDate + "</dd>";
+
+      // finalize add details
+      document.getElementsByTagName("dl")[0].innerHTML = addDetails + dliH;
+
+      // passe Copyright an
+      document.getElementsByClassName("copyright")[0].innerText = document.getElementsByClassName("copyright")[0].innerText.substr(0,22) + respecConfig.additionalCopyrightHolders;
+
+      // remove all §
+      // let sl = document.getElementsByClassName("self-link");
+      // for (var i = 0; i < sl.length; i++) {
+      //   sl[i].remove()
+      // }
+    }
+  </script>
+
+  <style>
+    mark {
+      background: none;
+      color: rgb(230, 90, 10);
+    }
+
+    th {
+      padding-right: 2em;
+    }
+
+    td {
+      padding-right: 2em;
+      vertical-align: top;
+    }
+
+    code {
+      color: #034575 !important;
+    }
+
+    #tabellarische-ubersicht table {
+      width: 100%;
+      margin-bottom: 2em;
+      table-layout: fixed;
+    }
+
+    #tabellarische-ubersicht table td {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 25%;
+    }
+
+    #tabellarische-ubersicht table td:first-of-type {
+      text-overflow: unset;
+      white-space: break-spaces;
+    }
+
+    #klassen section > table {
+      width: 100% !important;
+    }
+
+    #klassen section > table > * > tr :first-child {
+      overflow-wrap: normal;
+      width: 30%;
+    }
+
+    #klassen section > table > * > tr :first-child + * {
+      overflow-wrap: anywhere;
+      word-break: break-all;
+      width: 25%;
+    }
+
+    #klassen section > table > * > tr :first-child + * + * {
+      overflow-wrap: anywhere;
+      word-break: break-all;
+      width: 25%;
+    }
+
+    #klassen section > table > * > tr :first-child + * + * + * {
+      overflow-wrap: anywhere;
+      width: 10%;
+    }
+
+    #klassen section > table > * > tr :first-child + * + * + * + * {
+      overflow-wrap: normal;
+      width: 10%;
+    }
+  </style>
+</head>
+
+<body>
+
+<section 
+  id="overview" 
+  class="introductory"
+  data-include="0A_overview.md"
+  data-include-format="markdown"
+></section>
+
+<!-- 
+---
+
+<section 
+  id="sotd"
+  class="introductory"
+  data-include="0B_sotd.md"
+  data-include-format="markdown"
+></section>
+-->
+
+<section 
+  id="abstract"
+  class="introductory"
+  data-include="0C_abstract.md"
+  data-include-format="markdown"
+></section>
+
+---
+
+<section 
+  id="intro" 
+  class="informative"
+  data-include="01_intro.md"
+  data-include-format="markdown"
+  data-include-replace="true"
+></section>
+
+---
+
+<section 
+  class="informative"
+  data-include="02_term-def.md"
+  data-include-format="markdown"
+  data-include-replace="true"
+></section>
+
+---
+
+<section 
+  class="informative"
+  data-include="03_overview_main.md"
+  data-include-format="markdown"
+  data-include-replace="true"
+></section>
+
+## Tabellarische Übersicht
+
+<small>
+  <div 
+  data-include="03_overview_table.md" 
+  data-include-format="markdown" 
+  data-include-replace="true">
+</div>
+</small>
+
+---
+
+# Klassen
+
+<div 
+  data-include="04_classes_resource.md" 
+  data-include-format="markdown" 
+  data-include-replace="true">
+</div>
+
+---
+
+<section
+  data-include="04_classes.md"
+  data-include-replace="true"
+></section>
+
+
+<section 
+  class="informative"
+  data-include="05_vocabularies.md"
+  data-include-format="markdown"
+  data-include-replace="true"
+></section>
+
+---
+
+<section 
+  class="informative"
+  data-include="06_conformity.md"
+  data-include-format="markdown"
+  data-include-replace="true"
+></section>
+
+---
+
+<section 
+  class="informative"
+  data-include="../shared/glossar.md"
+  data-include-format="markdown"
+  data-include-replace="true"
+></section>
+
+---
+
+# Changelog
+
+## Änderungen in der Version 2.0
+
+<section 
+  class="informative"
+  data-include="08_changelog_2_0.md"
+  data-include-format="markdown"
+  data-include-replace="true"
+></section>
+
+<!-- 
+<section id="conformance">
+  <p>This is required for specifications that contain normative material.</p>
+</section>
+
+<section id="tof" class="appendix">
+  TOF - APPENDIX
+</section>
+-->
+
+</body>
+</html>
