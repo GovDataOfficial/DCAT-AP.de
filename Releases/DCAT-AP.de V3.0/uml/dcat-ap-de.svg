@@ -1,42 +1,42 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1684px" preserveAspectRatio="none" style="width:1907px;height:1684px;background:#FFFFFF;" version="1.1" viewBox="0 0 1907 1684" width="1907px" zoomAndPan="magnify"><defs><linearGradient id="g5108hzecqpsk0" x1="0%" x2="100%" y1="50%" y2="50%"><stop offset="0%" stop-color="#F8978D"/><stop offset="100%" stop-color="#FCFFFC"/></linearGradient><filter height="300%" id="f5108hzecqpsk" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter><linearGradient id="g5108hzecqpsk1" x1="0%" x2="100%" y1="50%" y2="50%"><stop offset="0%" stop-color="#C1C0C5"/><stop offset="100%" stop-color="#FDFEFD"/></linearGradient></defs><g><!--MD5=[97928c39d8631133d4d52e3c20e10a02]
-class dcat:Catalog--><rect codeLine="13" fill="url(#g5108hzecqpsk0)" filter="url(#f5108hzecqpsk)" height="236.0547" id="dcat:Catalog" style="stroke:#000000;stroke-width:1.5;" width="334" x="1082" y="30"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="73" x="1212.5" y="47.457">«mandatory»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="69" x="1214.5" y="62.5508">dcat:Catalog</text><line style="stroke:#000000;stroke-width:1.5;" x1="1083" x2="1415" y1="70.1875" y2="70.1875"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="195" x="1088" y="85.6064">«mandatory» dct:title ~&gt; rdfs:Literal [1..*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="232" x="1088" y="99.4424">«mandatory» dct:description ~&gt; rdfs:Literal [1..*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="1091" y="113.2783"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="230" x="1088" y="127.1143">«recommended» dct:issued ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="238" x="1088" y="140.9502">«recommended» dct:modified ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="275" x="1088" y="154.7861">«recommended» dct:language ~&gt; dct:LinguisticSystem [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="272" x="1088" y="168.6221">«recommended» foaf:homepage ~&gt; foaf:Document [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="284" x="1088" y="182.458">«recommended» dct:license ~&gt; dct:LicenseDocument [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="322" x="1088" y="196.2939">«recommended» dcat:themeTaxonomy ~&gt; skos:ConceptScheme [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="279" x="1088" y="210.1299">«recommended» dcatap:availability ~&gt; skos:Concept [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="1091" y="223.9658"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="238" x="1088" y="237.8018">«optional» dct:rights ~&gt; dct:RightsStatement [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="202" x="1088" y="251.6377">«optional» dcat:catalog ~&gt; dcat:Catalog [*]</text><line style="stroke:#000000;stroke-width:1.5;" x1="1083" x2="1415" y1="258.0547" y2="258.0547"/><!--MD5=[d8a7bd4d2885a8d688cf5e00cec84630]
-class dcat:DataService--><rect codeLine="607" fill="url(#g5108hzecqpsk0)" filter="url(#f5108hzecqpsk)" height="180.7109" id="dcat:DataService" style="stroke:#000000;stroke-width:1.5;" width="315" x="934.5" y="1388"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="58" x="1063" y="1405.457">«optional»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="92" x="1046" y="1420.5508">dcat:DataService</text><line style="stroke:#000000;stroke-width:1.5;" x1="935.5" x2="1248.5" y1="1428.1875" y2="1428.1875"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="264" x="940.5" y="1443.6064">«mandatory» dcat:endpointURL ~&gt; rdfs:Resource [1..*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="195" x="940.5" y="1457.4424">«mandatory» dct:title ~&gt; rdfs:Literal [1..*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="943.5" y="1471.2783"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="303" x="940.5" y="1485.1143">«recommended» dcat:endpointDescription ~&gt; rdfs:Resource [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="279" x="940.5" y="1498.9502">«recommended» dcatap:availability ~&gt; skos:Concept [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="943.5" y="1512.7861"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="206" x="940.5" y="1526.6221">«optional» dct:description ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="253" x="940.5" y="1540.458">«optional» dct:license ~&gt; dct:LicenseDocument [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="277" x="940.5" y="1554.2939">«optional» dct:accessRights ~&gt; dct:RightsStatement [0..1]</text><line style="stroke:#000000;stroke-width:1.5;" x1="935.5" x2="1248.5" y1="1560.7109" y2="1560.7109"/><!--MD5=[9655ad61792b4ed0d4f91a9adcbf26fa]
-class dct:Location--><rect codeLine="955" fill="url(#g5108hzecqpsk1)" filter="url(#f5108hzecqpsk)" height="111.5313" id="dct:Location" style="stroke:#000000;stroke-width:1.5;" width="258" x="570" y="1085"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="58" x="670" y="1102.457">«optional»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="66" x="666" y="1117.5508">dct:Location</text><line style="stroke:#000000;stroke-width:1.5;" x1="571" x2="827" y1="1125.1875" y2="1125.1875"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="246" x="576" y="1140.6064">«recommended» dcat:bbox ~&gt; rdfs:Resource [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="243" x="576" y="1154.4424">«recommended» dcat:centroid ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="579" y="1168.2783"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="217" x="576" y="1182.1143">«optional» locn:geometry ~&gt; rdfs:Literal [0..1]</text><line style="stroke:#000000;stroke-width:1.5;" x1="571" x2="827" y1="1188.5313" y2="1188.5313"/><!--MD5=[7d28b2a37567e4fb37bfcc3a4fba052e]
-class dcat:CatalogRecord--><rect codeLine="1068" fill="url(#g5108hzecqpsk1)" filter="url(#f5108hzecqpsk)" height="180.7109" id="dcat:CatalogRecord" style="stroke:#000000;stroke-width:1.5;" width="286" x="160" y="519.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="58" x="274" y="536.957">«optional»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="109" x="248.5" y="552.0508">dcat:CatalogRecord</text><line style="stroke:#000000;stroke-width:1.5;" x1="161" x2="445" y1="559.6875" y2="559.6875"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="209" x="166" y="575.1064">«mandatory» dct:modified ~&gt; rdfs:Literal [1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="169" y="588.9424"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="274" x="166" y="602.7783">«recommended» dct:conformsTo ~&gt; rdfs:Resource [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="253" x="166" y="616.6143">«recommended» adms:status ~&gt; skos:Concept [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="230" x="166" y="630.4502">«recommended» dct:issued ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="169" y="644.2861"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="169" x="166" y="658.1221">«optional» dct:title ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="206" x="166" y="671.958">«optional» dct:description ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="244" x="166" y="685.7939">«optional» dct:language ~&gt; dct:LinguisticSystem [*]</text><line style="stroke:#000000;stroke-width:1.5;" x1="161" x2="445" y1="692.2109" y2="692.2109"/><!--MD5=[ea4ee9eb21488ab326ad9443bd203771]
-class dcat:Dataset--><rect codeLine="186" fill="url(#g5108hzecqpsk0)" filter="url(#f5108hzecqpsk)" height="568.1172" id="dcat:Dataset" style="stroke:#000000;stroke-width:1.5;" width="361" x="1068.5" y="326"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="73" x="1212.5" y="343.457">«mandatory»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="69" x="1214.5" y="358.5508">dcat:Dataset</text><line style="stroke:#000000;stroke-width:1.5;" x1="1069.5" x2="1428.5" y1="366.1875" y2="366.1875"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="195" x="1074.5" y="381.6064">«mandatory» dct:title ~&gt; rdfs:Literal [1..*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="232" x="1074.5" y="395.4424">«mandatory» dct:description ~&gt; rdfs:Literal [1..*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="1077.5" y="409.2783"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="233" x="1074.5" y="423.1143">«recommended» dcat:keyword ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="349" x="1074.5" y="436.9502">«recommended» dcatde:politicalGeocodingLevelURI ~&gt; rdfs:Resource [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="323" x="1074.5" y="450.7861">«recommended» dcatde:politicalGeocodingURI ~&gt; rdfs:Resource [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="233" x="1074.5" y="464.6221">«recommended» dcat:theme ~&gt; skos:Concept [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="249" x="1074.5" y="478.458">«recommended» dcat:contactPoint ~&gt; vcard:Kind [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="279" x="1074.5" y="492.2939">«recommended» dcatap:availability ~&gt; skos:Concept [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="1077.5" y="506.1299"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="250" x="1074.5" y="519.9658">«optional» dcatde:contributorID ~&gt; rdfs:Resource [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="275" x="1074.5" y="533.8018">«optional» dcatde:geocodingDescription ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="194" x="1074.5" y="547.6377">«optional» dct:identifier ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="223" x="1074.5" y="561.4736">«optional» adms:identifier ~&gt; adms:Identifier [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="199" x="1074.5" y="575.3096">«optional» dct:issued ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="207" x="1074.5" y="589.1455">«optional» dct:modified ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="224" x="1074.5" y="602.9814">«optional» owl:versionInfo ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="228" x="1074.5" y="616.8174">«optional» adms:versionNotes ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="220" x="1074.5" y="630.6533">«optional» dcatde:legalBasis ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="206" x="1074.5" y="644.4893">«optional» dct:relation ~&gt; rdfs:Resource [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="236" x="1074.5" y="658.3252">«optional» dcat:landingPage ~&gt; foaf:Document [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="201" x="1074.5" y="672.1611">«optional» foaf:page ~&gt; foaf:Document [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="244" x="1074.5" y="685.9971">«optional» dct:language ~&gt; dct:LinguisticSystem [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="221" x="1074.5" y="699.833">«optional» dct:conformsTo ~&gt; dct:Standard [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="277" x="1074.5" y="713.6689">«optional» dct:accessRights ~&gt; dct:RightsStatement [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="283" x="1074.5" y="727.5049">«optional» dct:provenance ~&gt; dct:ProvenanceStatement [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="270" x="1074.5" y="741.3408">«optional» dct:accrualPeriodicity ~&gt; dct:Frequency [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="290" x="1074.5" y="755.1768">«optional» dcatde:qualityProcessURI ~&gt; rdfs:Resource [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="202" x="1074.5" y="769.0127">«optional» dct:type ~&gt; skos:Concept [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="255" x="1074.5" y="782.8486">«optional» prov:wasGeneratedBy ~&gt; prov:Activity [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="281" x="1074.5" y="796.6846">«optional» dcat:spatialResolutionInMeters ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="250" x="1074.5" y="810.5205">«optional» dcat:temporalResolution ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="238" x="1074.5" y="824.3564">«optional» dcat:granularity ~&gt; skos:Concept [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="271" x="1074.5" y="838.1924">«optional» prov:qualifiedAttribution ~&gt; prov:Attribution [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="267" x="1074.5" y="852.0283">«optional» dcat:qualifiedRelation ~&gt; dcat:Relationship [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="249" x="1074.5" y="865.8643">«optional» dct:isReferencedBy ~&gt; rdfs:Resource [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="225" x="1074.5" y="879.7002">«optional» dct:references ~&gt; rdfs:Resource [*]</text><line style="stroke:#000000;stroke-width:1.5;" x1="1069.5" x2="1428.5" y1="886.1172" y2="886.1172"/><!--MD5=[84612bed34b900519fce1dd1c39e16c2]
-class foaf:Agent--><rect codeLine="993" fill="url(#g5108hzecqpsk1)" filter="url(#f5108hzecqpsk)" height="83.8594" id="foaf:Agent" style="stroke:#000000;stroke-width:1.5;" width="222" x="1671" y="1099"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="73" x="1745.5" y="1116.457">«mandatory»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="54" x="1755" y="1131.5508">foaf:Agent</text><line style="stroke:#000000;stroke-width:1.5;" x1="1672" x2="1892" y1="1139.1875" y2="1139.1875"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="210" x="1677" y="1154.6064">«mandatory» foaf:name ~&gt; rdfs:Literal [1..*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="202" x="1677" y="1168.4424">«optional» dct:type ~&gt; skos:Concept [0..1]</text><line style="stroke:#000000;stroke-width:1.5;" x1="1672" x2="1892" y1="1174.8594" y2="1174.8594"/><!--MD5=[d6205e6d98fab7bf4c6d19d2d9cdbb4b]
-class dct:PeriodOfTime--><rect codeLine="890" fill="url(#g5108hzecqpsk1)" filter="url(#f5108hzecqpsk)" height="153.0391" id="dct:PeriodOfTime" style="stroke:#000000;stroke-width:1.5;" width="260" x="1376" y="1064.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="95" x="1458.5" y="1081.957">«recommended»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="95" x="1458.5" y="1097.0508">dct:PeriodOfTime</text><line style="stroke:#000000;stroke-width:1.5;" x1="1377" x2="1635" y1="1104.6875" y2="1104.6875"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="248" x="1382" y="1120.1064">«recommended» dcat:startDate ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="244" x="1382" y="1133.9424">«recommended» dcat:endDate ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="1385" y="1147.7783"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="238" x="1382" y="1161.6143">«optional» time:hasBeginning ~&gt; time:Instant [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="209" x="1382" y="1175.4502">«optional» time:hasEnd ~&gt; time:Instant [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="234" x="1382" y="1189.2861">«optional» schema:startDate ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="230" x="1382" y="1203.1221">«optional» schema:endDate ~&gt; rdfs:Literal [0..1]</text><line style="stroke:#000000;stroke-width:1.5;" x1="1377" x2="1635" y1="1209.5391" y2="1209.5391"/><!--MD5=[69836d0b0084e034bb272508acbdc7ac]
-class dcat:Distribution--><rect codeLine="683" fill="url(#g5108hzecqpsk0)" filter="url(#f5108hzecqpsk)" height="374.4141" id="dcat:Distribution" style="stroke:#000000;stroke-width:1.5;" width="335" x="1005.5" y="954"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="95" x="1125.5" y="971.457">«recommended»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="89" x="1128.5" y="986.5508">dcat:Distribution</text><line style="stroke:#000000;stroke-width:1.5;" x1="1006.5" x2="1339.5" y1="994.1875" y2="994.1875"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="259" x="1011.5" y="1009.6064">«mandatory» dcat:accessURL ~&gt; rdfs:Resource [1..*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="1014.5" y="1023.4424"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="200" x="1011.5" y="1037.2783">«recommended» dct:title ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="238" x="1011.5" y="1051.1143">«recommended» dct:modified ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="284" x="1011.5" y="1064.9502">«recommended» dct:license ~&gt; dct:LicenseDocument [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="247" x="1011.5" y="1078.7861">«recommended» dct:format ~&gt; dct:MediaType [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="279" x="1011.5" y="1092.6221">«recommended» dcatap:availability ~&gt; skos:Concept [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="323" x="1011.5" y="1106.458">«recommended» dcatde:plannedAvailability ~&gt; rdfs:Resource [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="1014.5" y="1120.2939"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="288" x="1011.5" y="1134.1299">«optional» dcatde:licenseAttributionByText ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="206" x="1011.5" y="1147.9658">«optional» dct:description ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="215" x="1011.5" y="1161.8018">«optional» dcat:byteSize ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="199" x="1011.5" y="1175.6377">«optional» dct:issued ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="245" x="1011.5" y="1189.4736">«optional» dcat:downloadURL ~&gt; rdfs:Resource [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="244" x="1011.5" y="1203.3096">«optional» dct:language ~&gt; dct:LinguisticSystem [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="201" x="1011.5" y="1217.1455">«optional» foaf:page ~&gt; foaf:Document [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="238" x="1011.5" y="1230.9814">«optional» dct:rights ~&gt; dct:RightsStatement [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="221" x="1011.5" y="1244.8174">«optional» dct:conformsTo ~&gt; dct:Standard [*]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="243" x="1011.5" y="1258.6533">«optional» dcat:mediaType ~&gt; dct:MediaType [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="272" x="1011.5" y="1272.4893">«optional» dcat:compressFormat ~&gt; dct:MediaType [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="265" x="1011.5" y="1286.3252">«optional» dcat:packageFormat ~&gt; dct:MediaType [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="213" x="1011.5" y="1300.1611">«optional» odrl:hasPolicy ~&gt; odrl:Policy [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="222" x="1011.5" y="1313.9971">«optional» adms:status ~&gt; skos:Concept [0..1]</text><line style="stroke:#000000;stroke-width:1.5;" x1="1006.5" x2="1339.5" y1="1320.4141" y2="1320.4141"/><!--MD5=[07bb0abd476c3d07987a65f8e572198c]
-class spdx:Checksum--><rect codeLine="1041" fill="url(#g5108hzecqpsk1)" filter="url(#f5108hzecqpsk)" height="83.8594" id="spdx:Checksum" style="stroke:#000000;stroke-width:1.5;" width="267" x="1284.5" y="1436.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="58" x="1389" y="1453.957">«optional»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="89" x="1373.5" y="1469.0508">spdx:Checksum</text><line style="stroke:#000000;stroke-width:1.5;" x1="1285.5" x2="1550.5" y1="1476.6875" y2="1476.6875"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="239" x="1290.5" y="1492.1064">«mandatory» spdx:algorithm ~&gt; rdfs:Resource [1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="255" x="1290.5" y="1505.9424">«mandatory» spdx:checksumValue ~&gt; rdfs:Literal [1]</text><line style="stroke:#000000;stroke-width:1.5;" x1="1285.5" x2="1550.5" y1="1512.3594" y2="1512.3594"/><!--MD5=[d19ee991e1ab383974ffbee4ed7063ae]
-class dcat:Resource--><rect codeLine="1255" fill="url(#g5108hzecqpsk0)" filter="url(#f5108hzecqpsk)" height="41.0938" id="dcat:Resource" style="stroke:#000000;stroke-width:1.5;" width="86" x="838" y="1629"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="80" x="841" y="1646.457">dcat:Resource</text><line style="stroke:#000000;stroke-width:1.5;" x1="839" x2="923" y1="1654.0938" y2="1654.0938"/><line style="stroke:#000000;stroke-width:1.5;" x1="839" x2="923" y1="1662.0938" y2="1662.0938"/><!--MD5=[4c9aa583c43b731ac7ec7e0c42172e19]
-link dcat:Catalog to dcat:DataService--><path codeLine="115" d="M1081.87,207 C1022.45,207 970,207 970,207 C970,207 970,1382.82 970,1382.82 " fill="none" id="dcat:Catalog-to-dcat:DataService" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="970,1387.82,974,1378.82,970,1382.82,966,1378.82,970,1387.82" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="132" x="837" y="735.4651">«optional» dcat:service</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="954.6898" y="1377.1697">*</text><!--MD5=[f051d608c23ec8f09fc4ac15551b15b5]
-link dcat:Catalog to dct:Location--><path codeLine="123" d="M1081.84,148 C906.47,148 656,148 656,148 C656,148 656,1079.77 656,1079.77 " fill="none" id="dcat:Catalog-to-dct:Location" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="656,1084.77,660,1075.77,656,1079.77,652,1075.77,656,1084.77" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="160" x="495" y="397.4551">«recommended» dct:spatial</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="645.1703" y="1074.0882">*</text><!--MD5=[9e3deceb3154c07f594516aaf632db87]
-link dcat:Catalog to dcat:Catalog--><path codeLine="132" d="M1193.33,30 C1193.33,22.57 1193.33,18 1193.33,18 C1193.33,18 1077.5,18 1077.5,18 C1077.5,18 1077.5,276 1077.5,276 C1077.5,276 1148.8,276 1148.8,276 C1148.8,276 1148.8,271.38 1148.8,271.38 " fill="none" id="dcat:Catalog-to-dcat:Catalog" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1148.8,266.38,1144.8,275.38,1148.8,271.38,1152.8,275.38,1148.8,266.38" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="130" x="941.5" y="140.5451">«optional» dct:hasPart</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1137.5417" y="287.5854">*</text><!--MD5=[9e3deceb3154c07f594516aaf632db87]
-link dcat:Catalog to dcat:Catalog--><path codeLine="141" d="M1304.67,29.77 C1304.67,15.58 1304.67,6 1304.67,6 C1304.67,6 1075.25,6 1075.25,6 C1075.25,6 1075.25,286 1075.25,286 C1075.25,286 1215.6,286 1215.6,286 C1215.6,286 1215.6,271.23 1215.6,271.23 " fill="none" id="dcat:Catalog-to-dcat:Catalog-1" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1215.6,266.23,1211.6,275.23,1215.6,271.23,1219.6,275.23,1215.6,266.23" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="132" x="937.25" y="88.4651">«optional» dct:isPartOf</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="1190.8944" y="287.4263">0..1</text><!--MD5=[b8202766cb8cbeb59bb1530ee3867851]
-link dcat:Catalog to dcat:CatalogRecord--><path codeLine="150" d="M1081.87,89 C822.03,89 350.67,89 350.67,89 C350.67,89 350.67,514.25 350.67,514.25 " fill="none" id="dcat:Catalog-to-dcat:CatalogRecord" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="350.67,519.25,354.67,510.25,350.67,514.25,346.67,510.25,350.67,519.25" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="128" x="374.65" y="85.4951">«optional» dcat:record</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="349.4106" y="508.5939">*</text><!--MD5=[3c0e3b5dadefeabdd2e8d19eb0cb9e81]
-link dcat:Catalog to dcat:Dataset--><path codeLine="159" d="M1282.4,266.08 C1282.4,266.08 1282.4,320.89 1282.4,320.89 " fill="none" id="dcat:Catalog-to-dcat:Dataset" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1282.4,325.89,1286.4,316.89,1282.4,320.89,1278.4,316.89,1282.4,325.89" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="151" x="1130.4" y="289.9751">«mandatory» dcat:dataset</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="1263.0947" y="314.7166">1..*</text><!--MD5=[3c0e3b5dadefeabdd2e8d19eb0cb9e81]
-link dcat:Catalog to dcat:Dataset--><path codeLine="1257" d="M1349.2,266.08 C1349.2,266.08 1349.2,305.89 1349.2,305.89 " fill="none" id="dcat:Catalog-to-dcat:Dataset-1" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="none" points="1356.2,305.89,1349.2,325.89,1342.2,305.89,1356.2,305.89" style="stroke:#000000;stroke-width:1.0;"/><!--MD5=[edc135658f29a801d7ffb8e290acc240]
-link dcat:Catalog to foaf:Agent--><path codeLine="167" d="M1416.07,188 C1590.05,188 1837.5,188 1837.5,188 C1837.5,188 1837.5,1093.82 1837.5,1093.82 " fill="none" id="dcat:Catalog-to-foaf:Agent" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1837.5,1098.82,1841.5,1089.82,1837.5,1093.82,1833.5,1089.82,1837.5,1098.82" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="153" x="1683.5" y="426.6851">«mandatory» dct:publisher</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="1839.1125" y="1088.0448">1</text><!--MD5=[edc135658f29a801d7ffb8e290acc240]
-link dcat:Catalog to foaf:Agent--><path codeLine="177" d="M1416.17,109 C1598.67,109 1865.25,109 1865.25,109 C1865.25,109 1865.25,1093.94 1865.25,1093.94 " fill="none" id="dcat:Catalog-to-foaf:Agent-1" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1865.25,1098.94,1869.25,1089.94,1865.25,1093.94,1861.25,1089.94,1865.25,1098.94" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="125" x="1739.25" y="373.4251">«optional» dct:creator</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1873.6242" y="1088.1847">*</text><!--MD5=[c56c675c046856e6415eac59a7039f52]
-link dcat:Dataset to dct:Location--><path codeLine="494" d="M1068.47,749 C922.8,749 742,749 742,749 C742,749 742,1079.84 742,1079.84 " fill="none" id="dcat:Dataset-to-dct:Location" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="742,1084.84,746,1075.84,742,1079.84,738,1075.84,742,1084.84" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="160" x="581" y="747.6751">«recommended» dct:spatial</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="742.1891" y="1074.1672">*</text><!--MD5=[7bea43a55d475617ec108deb7d596ac6]
-link dcat:Dataset to dct:PeriodOfTime--><path codeLine="506" d="M1402.75,894.15 C1402.75,894.15 1402.75,1059.38 1402.75,1059.38 " fill="none" id="dcat:Dataset-to-dct:PeriodOfTime" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1402.75,1064.38,1406.75,1055.38,1402.75,1059.38,1398.75,1055.38,1402.75,1064.38" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="172" x="1403.75" y="973.2651">«recommended» dct:temporal</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1387.3402" y="1053.5607">*</text><!--MD5=[d9bb97f6e2610f3bd4a7ec9105c9b5dd]
-reverse link dcat:Dataset to dcat:Dataset--><path codeLine="515" d="M1079.75,320.82 C1079.75,320.82 1079.75,296 1079.75,296 C1079.75,296 1021.25,296 1021.25,296 C1021.25,296 1021.25,939 1021.25,939 C1021.25,939 1204.5,939 1204.5,939 C1204.5,939 1204.5,921.38 1204.5,894.29 " fill="none" id="dcat:Dataset-backto-dcat:Dataset" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1079.75,325.82,1083.75,316.82,1079.75,320.82,1075.75,316.82,1079.75,325.82" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="124" x="891.25" y="681.3151">«optional» dct:source</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1070.1879" y="315.5572">*</text><!--MD5=[d9bb97f6e2610f3bd4a7ec9105c9b5dd]
-reverse link dcat:Dataset to dcat:Dataset--><path codeLine="524" d="M1070.75,320.78 C1070.75,320.78 1070.75,316 1070.75,316 C1070.75,316 1052.75,316 1052.75,316 C1052.75,316 1052.75,909 1052.75,909 C1052.75,909 1113.83,909 1113.83,909 C1113.83,909 1113.83,903.57 1113.83,894.17 " fill="none" id="dcat:Dataset-backto-dcat:Dataset-1" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1070.75,325.78,1074.75,316.78,1070.75,320.78,1066.75,316.78,1070.75,325.78" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="150" x="896.75" y="630.5551">«optional» dct:hasVersion</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1060.9488" y="315.5161">*</text><!--MD5=[d9bb97f6e2610f3bd4a7ec9105c9b5dd]
-reverse link dcat:Dataset to dcat:Dataset--><path codeLine="534" d="M1073,320.95 C1073,320.95 1073,306 1073,306 C1073,306 1037,306 1037,306 C1037,306 1037,924 1037,924 C1037,924 1159.17,924 1159.17,924 C1159.17,924 1159.17,912.61 1159.17,894.18 " fill="none" id="dcat:Dataset-backto-dcat:Dataset-2" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1073,325.95,1077,316.95,1073,320.95,1069,316.95,1073,325.95" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="152" x="879" y="657.0151">«optional» dct:isVersionOf</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1062.7008" y="314.7784">*</text><!--MD5=[af6e75540df68eee137d0bf6daf1a8fe]
-link dcat:Dataset to dcat:Distribution--><path codeLine="542" d="M1295.17,894.15 C1295.17,894.15 1295.17,948.91 1295.17,948.91 " fill="none" id="dcat:Dataset-to-dcat:Distribution" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1295.17,953.91,1299.17,944.91,1295.17,948.91,1291.17,944.91,1295.17,953.91" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="192" x="1102.17" y="918.0251">«recommended» dcat:distribution</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1295.2186" y="943.1734">*</text><!--MD5=[af6e75540df68eee137d0bf6daf1a8fe]
-link dcat:Dataset to dcat:Distribution--><path codeLine="550" d="M1249.83,894.15 C1249.83,894.15 1249.83,948.91 1249.83,948.91 " fill="none" id="dcat:Dataset-to-dcat:Distribution-1" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1249.83,953.91,1253.83,944.91,1249.83,948.91,1245.83,944.91,1249.83,953.91" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="141" x="1107.83" y="936.0251">«optional» adms:sample</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1247.9658" y="943.1734">*</text><!--MD5=[3e75a082c910989715d90bcfefa8d3bf]
-link dcat:Dataset to foaf:Agent--><path codeLine="558" d="M1429.66,800 C1554.71,800 1698.75,800 1698.75,800 C1698.75,800 1698.75,1093.84 1698.75,1093.84 " fill="none" id="dcat:Dataset-to-foaf:Agent" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1698.75,1098.84,1702.75,1089.84,1698.75,1093.84,1694.75,1089.84,1698.75,1098.84" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="174" x="1523.75" y="808.8751">«recommended» dct:publisher</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="1661.1398" y="1088.0681">0..1</text><!--MD5=[3e75a082c910989715d90bcfefa8d3bf]
-link dcat:Dataset to foaf:Agent--><path codeLine="568" d="M1429.52,705 C1564.74,705 1726.5,705 1726.5,705 C1726.5,705 1726.5,1093.8 1726.5,1093.8 " fill="none" id="dcat:Dataset-to-foaf:Agent-1" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1726.5,1098.8,1730.5,1089.8,1726.5,1093.8,1722.5,1089.8,1726.5,1098.8" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="125" x="1600.5" y="747.4051">«optional» dct:creator</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1711.8938" y="1088.0215">*</text><!--MD5=[3e75a082c910989715d90bcfefa8d3bf]
-link dcat:Dataset to foaf:Agent--><path codeLine="578" d="M1429.62,610 C1574.66,610 1754.25,610 1754.25,610 C1754.25,610 1754.25,1093.89 1754.25,1093.89 " fill="none" id="dcat:Dataset-to-foaf:Agent-2" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1754.25,1098.89,1758.25,1089.89,1754.25,1093.89,1750.25,1089.89,1754.25,1098.89" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="146" x="1607.25" y="686.1251">«optional» dct:contributor</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1744.2398" y="1088.1264">*</text><!--MD5=[3e75a082c910989715d90bcfefa8d3bf]
-link dcat:Dataset to foaf:Agent--><path codeLine="588" d="M1429.82,516 C1584.39,516 1782,516 1782,516 C1782,516 1782,1093.53 1782,1093.53 " fill="none" id="dcat:Dataset-to-foaf:Agent-3" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1782,1098.53,1786,1089.53,1782,1093.53,1778,1089.53,1782,1098.53" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="159" x="1622" y="625.1751">«optional» dcatde:originator</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1776.6016" y="1088.0207">*</text><!--MD5=[3e75a082c910989715d90bcfefa8d3bf]
-link dcat:Dataset to foaf:Agent--><path codeLine="598" d="M1429.51,421 C1593.44,421 1809.75,421 1809.75,421 C1809.75,421 1809.75,1093.91 1809.75,1093.91 " fill="none" id="dcat:Dataset-to-foaf:Agent-4" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1809.75,1098.91,1813.75,1089.91,1809.75,1093.91,1805.75,1089.91,1809.75,1098.91" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="166" x="1642.75" y="563.8351">«optional» dcatde:maintainer</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1808.932" y="1088.1497">*</text><!--MD5=[e2aaa57d4edefb28652008739b097653]
-link dcat:DataService to dcat:Dataset--><path codeLine="675" d="M1249.57,1413 C1307.06,1413 1358.25,1413 1358.25,1413 C1358.25,1413 1358.25,899.24 1358.25,899.24 " fill="none" id="dcat:DataService-to-dcat:Dataset" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1358.25,894.24,1354.25,903.24,1358.25,899.24,1362.25,903.24,1358.25,894.24" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="211" x="1359.25" y="1224.9551">«recommended» dcat:servesDataset</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1356.0855" y="915.5009">*</text><!--MD5=[d12b5b775a799a50c6b06f6f5f53b2dc]
-link dcat:Distribution to dcat:DataService--><path codeLine="872" d="M1127.5,1328.01 C1127.5,1328.01 1127.5,1382.69 1127.5,1382.69 " fill="none" id="dcat:Distribution-to-dcat:DataService" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1127.5,1387.69,1131.5,1378.69,1127.5,1382.69,1123.5,1378.69,1127.5,1387.69" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="176" x="950.5" y="1351.8451">«optional» dcat:accessService</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1125.2328" y="1377.0289">*</text><!--MD5=[aa07dc1c918be5a80dc0ddf97bdbfd24]
-link dcat:Distribution to spdx:Checksum--><path codeLine="881" d="M1312.5,1328.01 C1312.5,1328.01 1312.5,1431.31 1312.5,1431.31 " fill="none" id="dcat:Distribution-to-spdx:Checksum" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1312.5,1436.31,1316.5,1427.31,1312.5,1431.31,1308.5,1427.31,1312.5,1436.31" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="155" x="1156.5" y="1376.1551">«optional» spdx:checksum</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="1271.2047" y="1425.5332">0..1</text><!--MD5=[027600adeb6ca995c26b901053133359]
-link dcat:CatalogRecord to dcat:Resource--><path codeLine="1135" d="M446.31,610 C611.2,610 859.5,610 859.5,610 C859.5,610 859.5,1623.74 859.5,1623.74 " fill="none" id="dcat:CatalogRecord-to-dcat:Resource" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="859.5,1628.74,863.5,1619.74,859.5,1623.74,855.5,1619.74,859.5,1628.74" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="177" x="681.5" y="906.7651">«mandatory» foaf:primaryTopic</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="845.4688" y="1618.1826">1</text><!--MD5=[3d6912d1a3d804482102523a44594ed3]
-link dcat:CatalogRecord to dcat:CatalogRecord--><path codeLine="1142" d="M255.33,519.24 C255.33,471.59 255.33,423 255.33,423 C255.33,423 142,423 142,423 C142,423 142,846 142,846 C142,846 303,846 303,846 C303,846 303,705.57 303,705.57 " fill="none" id="dcat:CatalogRecord-to-dcat:CatalogRecord" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="303,700.57,299,709.57,303,705.57,307,709.57,303,700.57" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="124" x="12" y="671.9251">«optional» dct:source</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="280.1578" y="721.6364">0..1</text><!--MD5=[6ffcdc0a4e3f968eb3a729b77a48167d]
-link dcat:Dataset to dcat:Resource--><path codeLine="1258" d="M1068.23,798 C975.17,798 881,798 881,798 C881,798 881,1608.87 881,1608.87 " fill="none" id="dcat:Dataset-to-dcat:Resource" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="none" points="888,1608.87,881,1628.87,874,1608.87,888,1608.87" style="stroke:#000000;stroke-width:1.0;"/><!--MD5=[a636109e5dfafdf5784c233f81d5fa0e]
-link dcat:DataService to dcat:Resource--><path codeLine="1259" d="M934.22,1479 C915.29,1479 902.5,1479 902.5,1479 C902.5,1479 902.5,1608.93 902.5,1608.93 " fill="none" id="dcat:DataService-to-dcat:Resource" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="none" points="909.5,1608.93,902.5,1628.93,895.5,1608.93,909.5,1608.93" style="stroke:#000000;stroke-width:1.0;"/><!--MD5=[f013bac09879468cbd54af6a3fd59f2c]
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1999px" preserveAspectRatio="none" style="width:2299px;height:1999px;background:#FFFFFF;" version="1.1" viewBox="0 0 2299 1999" width="2299px" zoomAndPan="magnify"><defs><linearGradient id="ge08lxdzk6u150" x1="0%" x2="100%" y1="50%" y2="50%"><stop offset="0%" stop-color="#F8978D"/><stop offset="100%" stop-color="#FCFFFC"/></linearGradient><linearGradient id="ge08lxdzk6u151" x1="0%" x2="100%" y1="50%" y2="50%"><stop offset="0%" stop-color="#C1C0C5"/><stop offset="100%" stop-color="#FDFEFD"/></linearGradient></defs><g><!--MD5=[97928c39d8631133d4d52e3c20e10a02]
+class dcat:Catalog--><g id="elem_dcat:Catalog"><rect codeLine="13" fill="url(#ge08lxdzk6u150)" height="287.625" id="dcat:Catalog" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="435" x="1265" y="30"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="73" x="1446" y="47.457">«mandatory»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80" x="1442.5" y="64.627">dcat:Catalog</text><line style="stroke:#000000;stroke-width:0.5;" x1="1266" x2="1699" y1="72.7031" y2="72.7031"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="256" x="1271" y="91.2363">«mandatory» dct:title ~&gt; rdfs:Literal [1..*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="303" x="1271" y="108.8457">«mandatory» dct:description ~&gt; rdfs:Literal [1..*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1271" y="126.4551"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="301" x="1271" y="144.0645">«recommended» dct:issued ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="313" x="1271" y="161.6738">«recommended» dct:modified ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="361" x="1271" y="179.2832">«recommended» dct:language ~&gt; dct:LinguisticSystem [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="357" x="1271" y="196.8926">«recommended» foaf:homepage ~&gt; foaf:Document [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="373" x="1271" y="214.502">«recommended» dct:license ~&gt; dct:LicenseDocument [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="423" x="1271" y="232.1113">«recommended» dcat:themeTaxonomy ~&gt; skos:ConceptScheme [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="368" x="1271" y="249.7207">«recommended» dcatap:availability ~&gt; skos:Concept [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1271" y="267.3301"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="315" x="1271" y="284.9395">«optional» dct:rights ~&gt; dct:RightsStatement [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="268" x="1271" y="302.5488">«optional» dcat:catalog ~&gt; dcat:Catalog [*]</text><line style="stroke:#000000;stroke-width:0.5;" x1="1266" x2="1699" y1="309.625" y2="309.625"/></g><!--MD5=[d8a7bd4d2885a8d688cf5e00cec84630]
+class dcat:DataService--><g id="elem_dcat:DataService"><rect codeLine="654" fill="url(#ge08lxdzk6u150)" height="217.1875" id="dcat:DataService" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="409" x="1092" y="1672"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="58" x="1267.5" y="1689.457">«optional»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108" x="1242.5" y="1706.627">dcat:DataService</text><line style="stroke:#000000;stroke-width:0.5;" x1="1093" x2="1500" y1="1714.7031" y2="1714.7031"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="346" x="1098" y="1733.2363">«mandatory» dcat:endpointURL ~&gt; rdfs:Resource [1..*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="256" x="1098" y="1750.8457">«mandatory» dct:title ~&gt; rdfs:Literal [1..*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1098" y="1768.4551"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="397" x="1098" y="1786.0645">«recommended» dcat:endpointDescription ~&gt; rdfs:Resource [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="368" x="1098" y="1803.6738">«recommended» dcatap:availability ~&gt; skos:Concept [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1098" y="1821.2832"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="270" x="1098" y="1838.8926">«optional» dct:description ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="333" x="1098" y="1856.502">«optional» dct:license ~&gt; dct:LicenseDocument [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="364" x="1098" y="1874.1113">«optional» dct:accessRights ~&gt; dct:RightsStatement [0..1]</text><line style="stroke:#000000;stroke-width:0.5;" x1="1093" x2="1500" y1="1881.1875" y2="1881.1875"/></g><!--MD5=[9655ad61792b4ed0d4f91a9adcbf26fa]
+class dct:Location--><g id="elem_dct:Location"><rect codeLine="1024" fill="url(#ge08lxdzk6u151)" height="129.1406" id="dct:Location" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="332" x="653.5" y="1315.5"/><rect fill="url(#ge08lxdzk6u151)" height="42.7031" rx="2.5" ry="2.5" style="stroke:url(#ge08lxdzk6u151);stroke-width:0.5;" width="332" x="653.5" y="1315.5"/><rect fill="url(#ge08lxdzk6u151)" height="2.5" style="stroke:url(#ge08lxdzk6u151);stroke-width:0.5;" width="332" x="653.5" y="1355.7031"/><rect codeLine="1024" fill="none" height="129.1406" id="dct:Location" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="332" x="653.5" y="1315.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="58" x="790.5" y="1332.957">«optional»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77" x="781" y="1350.127">dct:Location</text><line style="stroke:#000000;stroke-width:0.5;" x1="654.5" x2="984.5" y1="1358.2031" y2="1358.2031"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="320" x="659.5" y="1376.7363">«recommended» dcat:bbox ~&gt; rdfs:Resource [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="319" x="659.5" y="1394.3457">«recommended» dcat:centroid ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="659.5" y="1411.9551"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="286" x="659.5" y="1429.5645">«optional» locn:geometry ~&gt; rdfs:Literal [0..1]</text><line style="stroke:#000000;stroke-width:0.5;" x1="654.5" x2="984.5" y1="1436.6406" y2="1436.6406"/></g><!--MD5=[7d28b2a37567e4fb37bfcc3a4fba052e]
+class dcat:CatalogRecord--><g id="elem_dcat:CatalogRecord"><rect codeLine="1142" fill="url(#ge08lxdzk6u151)" height="217.1875" id="dcat:CatalogRecord" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="369" x="160" y="624.5"/><rect fill="url(#ge08lxdzk6u151)" height="42.7031" rx="2.5" ry="2.5" style="stroke:url(#ge08lxdzk6u151);stroke-width:0.5;" width="369" x="160" y="624.5"/><rect fill="url(#ge08lxdzk6u151)" height="2.5" style="stroke:url(#ge08lxdzk6u151);stroke-width:0.5;" width="369" x="160" y="664.7031"/><rect codeLine="1142" fill="none" height="217.1875" id="dcat:CatalogRecord" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="369" x="160" y="624.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="58" x="315.5" y="641.957">«optional»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="281.5" y="659.127">dcat:CatalogRecord</text><line style="stroke:#000000;stroke-width:0.5;" x1="161" x2="528" y1="667.2031" y2="667.2031"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="274" x="166" y="685.7363">«mandatory» dct:modified ~&gt; rdfs:Literal [1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="166" y="703.3457"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="357" x="166" y="720.9551">«recommended» dct:conformsTo ~&gt; rdfs:Resource [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="332" x="166" y="738.5645">«recommended» adms:status ~&gt; skos:Concept [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="301" x="166" y="756.1738">«recommended» dct:issued ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="166" y="773.7832"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="223" x="166" y="791.3926">«optional» dct:title ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="270" x="166" y="809.002">«optional» dct:description ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="321" x="166" y="826.6113">«optional» dct:language ~&gt; dct:LinguisticSystem [*]</text><line style="stroke:#000000;stroke-width:0.5;" x1="161" x2="528" y1="833.6875" y2="833.6875"/></g><!--MD5=[ea4ee9eb21488ab326ad9443bd203771]
+class dcat:Dataset--><g id="elem_dcat:Dataset"><rect codeLine="201" fill="url(#ge08lxdzk6u150)" height="710.25" id="dcat:Dataset" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="471" x="1247" y="378"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="73" x="1446" y="395.457">«mandatory»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80" x="1442.5" y="412.627">dcat:Dataset</text><line style="stroke:#000000;stroke-width:0.5;" x1="1248" x2="1717" y1="420.7031" y2="420.7031"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="256" x="1253" y="439.2363">«mandatory» dct:title ~&gt; rdfs:Literal [1..*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="303" x="1253" y="456.8457">«mandatory» dct:description ~&gt; rdfs:Literal [1..*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1253" y="474.4551"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="301" x="1253" y="492.0645">«recommended» dcat:keyword ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="459" x="1253" y="509.6738">«recommended» dcatde:politicalGeocodingLevelURI ~&gt; rdfs:Resource [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="425" x="1253" y="527.2832">«recommended» dcatde:politicalGeocodingURI ~&gt; rdfs:Resource [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="307" x="1253" y="544.8926">«recommended» dcat:theme ~&gt; skos:Concept [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="327" x="1253" y="562.502">«recommended» dcat:contactPoint ~&gt; vcard:Kind [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="368" x="1253" y="580.1113">«recommended» dcatap:availability ~&gt; skos:Concept [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1253" y="597.7207"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="328" x="1253" y="615.3301">«optional» dcatde:contributorID ~&gt; rdfs:Resource [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="362" x="1253" y="632.9395">«optional» dcatde:geocodingDescription ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="255" x="1253" y="650.5488">«optional» dct:identifier ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="295" x="1253" y="668.1582">«optional» adms:identifier ~&gt; adms:Identifier [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="261" x="1253" y="685.7676">«optional» dct:issued ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="273" x="1253" y="703.377">«optional» dct:modified ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="290" x="1253" y="720.9863">«optional» owl:versionInfo ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="306" x="1253" y="738.5957">«optionale» adms:versionNotes ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="289" x="1253" y="756.2051">«optional» dcatde:legalBasis ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="270" x="1253" y="773.8145">«optional» dct:relation ~&gt; rdfs:Resource [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="313" x="1253" y="791.4238">«optional» dcat:landingPage ~&gt; foaf:Document [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="263" x="1253" y="809.0332">«optional» foaf:page ~&gt; foaf:Document [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="321" x="1253" y="826.6426">«optional» dct:language ~&gt; dct:LinguisticSystem [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="290" x="1253" y="844.252">«optional» dct:conformsTo ~&gt; dct:Standard [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="364" x="1253" y="861.8613">«optional» dct:accessRights ~&gt; dct:RightsStatement [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="372" x="1253" y="879.4707">«optional» dct:provenance ~&gt; dct:ProvenanceStatement [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="355" x="1253" y="897.0801">«optional» dct:accrualPeriodicity ~&gt; dct:Frequency [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="380" x="1253" y="914.6895">«optional» dcatde:qualityProcessURI ~&gt; rdfs:Resource [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="266" x="1253" y="932.2988">«optional» dct:type ~&gt; skos:Concept [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="327" x="1253" y="949.9082">«optional» prov:wasGeneratedBy ~&gt; prov:Activity [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="371" x="1253" y="967.5176">«optional» dcat:spatialResolutionInMeters ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="331" x="1253" y="985.127">«optional» dcat:temporalResolution ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="314" x="1253" y="1002.7363">«optional» dcat:granularity ~&gt; skos:Concept [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="356" x="1253" y="1020.3457">«optional» prov:qualifiedAttribution ~&gt; prov:Attribution [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="356" x="1253" y="1037.9551">«optional» dcat:qualifiedRelation ~&gt; dcat:Relationship [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="323" x="1253" y="1055.5645">«optional» dct:isReferencedBy ~&gt; rdfs:Resource [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="291" x="1253" y="1073.1738">«optional» dct:references ~&gt; rdfs:Resource [*]</text><line style="stroke:#000000;stroke-width:0.5;" x1="1248" x2="1717" y1="1080.25" y2="1080.25"/></g><!--MD5=[84612bed34b900519fce1dd1c39e16c2]
+class foaf:Agent--><g id="elem_foaf:Agent"><rect codeLine="1063" fill="url(#ge08lxdzk6u151)" height="93.9219" id="foaf:Agent" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="286" x="2006.5" y="1333"/><rect fill="url(#ge08lxdzk6u151)" height="42.7031" rx="2.5" ry="2.5" style="stroke:url(#ge08lxdzk6u151);stroke-width:0.5;" width="286" x="2006.5" y="1333"/><rect fill="url(#ge08lxdzk6u151)" height="2.5" style="stroke:url(#ge08lxdzk6u151);stroke-width:0.5;" width="286" x="2006.5" y="1373.2031"/><rect codeLine="1063" fill="none" height="93.9219" id="foaf:Agent" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="286" x="2006.5" y="1333"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="73" x="2113" y="1350.457">«mandatory»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="2117" y="1367.627">foaf:Agent</text><line style="stroke:#000000;stroke-width:0.5;" x1="2007.5" x2="2291.5" y1="1375.7031" y2="1375.7031"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="274" x="2012.5" y="1394.2363">«mandatory» foaf:name ~&gt; rdfs:Literal [1..*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="266" x="2012.5" y="1411.8457">«optional» dct:type ~&gt; skos:Concept [0..1]</text><line style="stroke:#000000;stroke-width:0.5;" x1="2007.5" x2="2291.5" y1="1418.9219" y2="1418.9219"/></g><!--MD5=[d6205e6d98fab7bf4c6d19d2d9cdbb4b]
+class dct:PeriodOfTime--><g id="elem_dct:PeriodOfTime"><rect codeLine="959" fill="url(#ge08lxdzk6u151)" height="181.9688" id="dct:PeriodOfTime" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="338" x="1633.5" y="1289"/><rect fill="url(#ge08lxdzk6u151)" height="42.7031" rx="2.5" ry="2.5" style="stroke:url(#ge08lxdzk6u151);stroke-width:0.5;" width="338" x="1633.5" y="1289"/><rect fill="url(#ge08lxdzk6u151)" height="2.5" style="stroke:url(#ge08lxdzk6u151);stroke-width:0.5;" width="338" x="1633.5" y="1329.2031"/><rect codeLine="959" fill="none" height="181.9688" id="dct:PeriodOfTime" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="338" x="1633.5" y="1289"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="95" x="1755" y="1306.457">«recommended»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110" x="1747.5" y="1323.627">dct:PeriodOfTime</text><line style="stroke:#000000;stroke-width:0.5;" x1="1634.5" x2="1970.5" y1="1331.7031" y2="1331.7031"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="326" x="1639.5" y="1350.2363">«recommended» dcat:startDate ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="322" x="1639.5" y="1367.8457">«recommended» dcat:endDate ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1639.5" y="1385.4551"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="318" x="1639.5" y="1403.0645">«optional» time:hasBeginning ~&gt; time:Instant [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="280" x="1639.5" y="1420.6738">«optional» time:hasEnd ~&gt; time:Instant [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="308" x="1639.5" y="1438.2832">«optional» schema:startDate ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="304" x="1639.5" y="1455.8926">«optional» schema:endDate ~&gt; rdfs:Literal [0..1]</text><line style="stroke:#000000;stroke-width:0.5;" x1="1634.5" x2="1970.5" y1="1462.9688" y2="1462.9688"/></g><!--MD5=[69836d0b0084e034bb272508acbdc7ac]
+class dcat:Distribution--><g id="elem_dcat:Distribution"><rect codeLine="737" fill="url(#ge08lxdzk6u150)" height="463.7188" id="dcat:Distribution" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="435" x="1163" y="1148"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="95" x="1333" y="1165.457">«recommended»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="1329.5" y="1182.627">dcat:Distribution</text><line style="stroke:#000000;stroke-width:0.5;" x1="1164" x2="1597" y1="1190.7031" y2="1190.7031"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="335" x="1169" y="1209.2363">«mandatory» dcat:accessURL ~&gt; rdfs:Resource [1..*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1169" y="1226.8457"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="263" x="1169" y="1244.4551">«recommended» dct:title ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="313" x="1169" y="1262.0645">«recommended» dct:modified ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="373" x="1169" y="1279.6738">«recommended» dct:license ~&gt; dct:LicenseDocument [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="326" x="1169" y="1297.2832">«recommended» dct:format ~&gt; dct:MediaType [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="368" x="1169" y="1314.8926">«recommended» dcatap:availability ~&gt; skos:Concept [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="423" x="1169" y="1332.502">«recommended» dcatde:plannedAvailability ~&gt; rdfs:Resource [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1169" y="1350.1113"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="376" x="1169" y="1367.7207">«optional» dcatde:licenseAttributionByText ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="270" x="1169" y="1385.3301">«optional» dct:description ~&gt; rdfs:Literal [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="281" x="1169" y="1402.9395">«optional» dcat:byteSize ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="261" x="1169" y="1420.5488">«optional» dct:issued ~&gt; rdfs:Literal [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="318" x="1169" y="1438.1582">«optional» dcat:downloadURL ~&gt; rdfs:Resource [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="321" x="1169" y="1455.7676">«optional» dct:language ~&gt; dct:LinguisticSystem [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="263" x="1169" y="1473.377">«optional» foaf:page ~&gt; foaf:Document [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="315" x="1169" y="1490.9863">«optional» dct:rights ~&gt; dct:RightsStatement [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="290" x="1169" y="1508.5957">«optional» dct:conformsTo ~&gt; dct:Standard [*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="324" x="1169" y="1526.2051">«optional» dcat:mediaType ~&gt; dct:MediaType [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="360" x="1169" y="1543.8145">«optional» dcat:compressFormat ~&gt; dct:MediaType [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="353" x="1169" y="1561.4238">«optional» dcat:packageFormat ~&gt; dct:MediaType [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="283" x="1169" y="1579.0332">«optional» odrl:hasPolicy ~&gt; odrl:Policy [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="292" x="1169" y="1596.6426">«optional» adms:status ~&gt; skos:Concept [0..1]</text><line style="stroke:#000000;stroke-width:0.5;" x1="1164" x2="1597" y1="1603.7188" y2="1603.7188"/></g><!--MD5=[07bb0abd476c3d07987a65f8e572198c]
+class spdx:Checksum--><g id="elem_spdx:Checksum"><rect codeLine="1113" fill="url(#ge08lxdzk6u151)" height="93.9219" id="spdx:Checksum" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="342" x="1536.5" y="1733.5"/><rect fill="url(#ge08lxdzk6u151)" height="42.7031" rx="2.5" ry="2.5" style="stroke:url(#ge08lxdzk6u151);stroke-width:0.5;" width="342" x="1536.5" y="1733.5"/><rect fill="url(#ge08lxdzk6u151)" height="2.5" style="stroke:url(#ge08lxdzk6u151);stroke-width:0.5;" width="342" x="1536.5" y="1773.7031"/><rect codeLine="1113" fill="none" height="93.9219" id="spdx:Checksum" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="342" x="1536.5" y="1733.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="58" x="1678.5" y="1750.957">«optional»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99" x="1658" y="1768.127">spdx:Checksum</text><line style="stroke:#000000;stroke-width:0.5;" x1="1537.5" x2="1877.5" y1="1776.2031" y2="1776.2031"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="311" x="1542.5" y="1794.7363">«mandatory» spdx:algorithm ~&gt; rdfs:Resource [1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="330" x="1542.5" y="1812.3457">«mandatory» spdx:checksumValue ~&gt; rdfs:Literal [1]</text><line style="stroke:#000000;stroke-width:0.5;" x1="1537.5" x2="1877.5" y1="1819.4219" y2="1819.4219"/></g><!--MD5=[d19ee991e1ab383974ffbee4ed7063ae]
+class dcat:Resource--><g id="elem_dcat:Resource"><rect codeLine="1338" fill="url(#ge08lxdzk6u150)" height="43.6094" id="dcat:Resource" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="98" x="989.5" y="1949"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="992.5" y="1968.5332">dcat:Resource</text><line style="stroke:#000000;stroke-width:0.5;" x1="990.5" x2="1086.5" y1="1976.6094" y2="1976.6094"/><line style="stroke:#000000;stroke-width:0.5;" x1="990.5" x2="1086.5" y1="1984.6094" y2="1984.6094"/></g><!--MD5=[4c9aa583c43b731ac7ec7e0c42172e19]
+link dcat:Catalog to dcat:DataService--><g id="link_dcat:Catalog_dcat:DataService"><path codeLine="122" d="M1264.75,246 C1191.27,246 1127.5,246 1127.5,246 C1127.5,246 1127.5,1666.99 1127.5,1666.99 " fill="none" id="dcat:Catalog-to-dcat:DataService" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1127.5,1671.99,1131.5,1662.99,1127.5,1666.99,1123.5,1662.99,1127.5,1671.99" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="132" x="994.5" y="884.3651">«optional» dcat:service</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1110.4414" y="1661.2988">*</text></g><!--MD5=[f051d608c23ec8f09fc4ac15551b15b5]
+link dcat:Catalog to dct:Location--><g id="link_dcat:Catalog_dct:Location"><path codeLine="131" d="M1264.54,174 C1053.16,174 764.17,174 764.17,174 C764.17,174 764.17,1310.16 764.17,1310.16 " fill="none" id="dcat:Catalog-to-dct:Location" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="764.17,1315.16,768.17,1306.16,764.17,1310.16,760.17,1306.16,764.17,1315.16" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="160" x="603.17" y="488.3851">«recommended» dct:spatial</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="752.8448" y="1304.6998">*</text></g><!--MD5=[9e3deceb3154c07f594516aaf632db87]
+link dcat:Catalog to dcat:Catalog--><g id="link_dcat:Catalog_dcat:Catalog"><path codeLine="141" d="M1410,29.98 C1410,22.5 1410,18 1410,18 C1410,18 1259,18 1259,18 C1259,18 1259,328 1259,328 C1259,328 1352,328 1352,328 C1352,328 1352,323.37 1352,323.37 " fill="none" id="dcat:Catalog-to-dcat:Catalog" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1352,318.37,1348,327.37,1352,323.37,1356,327.37,1352,318.37" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="130" x="1123" y="131.8251">«optional» dct:hasPart</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1340.5578" y="339.2631">*</text></g><!--MD5=[9e3deceb3154c07f594516aaf632db87]
+link dcat:Catalog to dcat:Catalog--><g id="link_dcat:Catalog_dcat:Catalog"><path codeLine="151" d="M1555,29.71 C1555,15.38 1555,6 1555,6 C1555,6 1256,6 1256,6 C1256,6 1256,338 1256,338 C1256,338 1439,338 1439,338 C1439,338 1439,323.22 1439,323.22 " fill="none" id="dcat:Catalog-to-dcat:Catalog-1" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1439,318.22,1435,327.22,1439,323.22,1443,327.22,1439,318.22" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="132" x="1118" y="101.0251">«optional» dct:isPartOf</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="1414.3602" y="339.1059">0..1</text></g><!--MD5=[b8202766cb8cbeb59bb1530ee3867851]
+link dcat:Catalog to dcat:CatalogRecord--><g id="link_dcat:Catalog_dcat:CatalogRecord"><path codeLine="161" d="M1264.98,102 C950.47,102 406,102 406,102 C406,102 406,619.17 406,619.17 " fill="none" id="dcat:Catalog-to-dcat:CatalogRecord" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="406,624.17,410,615.17,406,619.17,402,615.17,406,624.17" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="128" x="447.91" y="98.4951">«optional» dcat:record</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="404.9641" y="613.8211">*</text></g><!--MD5=[3c0e3b5dadefeabdd2e8d19eb0cb9e81]
+link dcat:Catalog to dcat:Dataset--><g id="link_dcat:Catalog_dcat:Dataset"><path codeLine="171" d="M1526,318.32 C1526,318.32 1526,372.86 1526,372.86 " fill="none" id="dcat:Catalog-to-dcat:Dataset" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1526,377.86,1530,368.86,1526,372.86,1522,368.86,1526,377.86" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="151" x="1374" y="342.0851">«mandatory» dcat:dataset</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="1506.7852" y="366.8452">1..*</text></g><!--MD5=[3c0e3b5dadefeabdd2e8d19eb0cb9e81]
+link dcat:Catalog to dcat:Dataset--><g id="link_dcat:Catalog_dcat:Dataset"><path codeLine="1340" d="M1613,318.32 C1613,318.32 1613,357.86 1613,357.86 " fill="none" id="dcat:Catalog-to-dcat:Dataset-1" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="none" points="1620,357.86,1613,377.86,1606,357.86,1620,357.86" style="stroke:#000000;stroke-width:1.0;"/></g><!--MD5=[edc135658f29a801d7ffb8e290acc240]
+link dcat:Catalog to foaf:Agent--><g id="link_dcat:Catalog_foaf:Agent"><path codeLine="180" d="M1700.08,222 C1917.92,222 2221,222 2221,222 C2221,222 2221,1327.81 2221,1327.81 " fill="none" id="dcat:Catalog-to-foaf:Agent" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="2221,1332.81,2225,1323.81,2221,1327.81,2217,1323.81,2221,1332.81" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="153" x="2067" y="510.9351">«mandatory» dct:publisher</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="2223.9875" y="1322.2306">1</text></g><!--MD5=[edc135658f29a801d7ffb8e290acc240]
+link dcat:Catalog to foaf:Agent--><g id="link_dcat:Catalog_foaf:Agent"><path codeLine="191" d="M1700.23,126 C1929.24,126 2256.75,126 2256.75,126 C2256.75,126 2256.75,1327.75 2256.75,1327.75 " fill="none" id="dcat:Catalog-to-foaf:Agent-1" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="2256.75,1332.75,2260.75,1323.75,2256.75,1327.75,2252.75,1323.75,2256.75,1332.75" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="125" x="2130.75" y="445.1151">«optional» dct:creator</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="2267.1352" y="1322.1618">*</text></g><!--MD5=[c56c675c046856e6415eac59a7039f52]
+link dcat:Dataset to dct:Location--><g id="link_dcat:Dataset_dct:Location"><path codeLine="532" d="M1246.69,904 C1075.88,904 874.83,904 874.83,904 C874.83,904 874.83,1310.31 874.83,1310.31 " fill="none" id="dcat:Dataset-to-dct:Location" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="874.83,1315.31,878.83,1306.31,874.83,1310.31,870.83,1306.31,874.83,1315.31" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="160" x="713.83" y="917.7251">«recommended» dct:spatial</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="875.6083" y="1304.8662">*</text></g><!--MD5=[7bea43a55d475617ec108deb7d596ac6]
+link dcat:Dataset to dct:PeriodOfTime--><g id="link_dcat:Dataset_dct:PeriodOfTime"><path codeLine="544" d="M1675.75,1088.2 C1675.75,1088.2 1675.75,1283.96 1675.75,1283.96 " fill="none" id="dcat:Dataset-to-dct:PeriodOfTime" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1675.75,1288.96,1679.75,1279.96,1675.75,1283.96,1671.75,1279.96,1675.75,1288.96" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="172" x="1676.75" y="1182.5751">«recommended» dct:temporal</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1660.0465" y="1278.2692">*</text></g><!--MD5=[d9bb97f6e2610f3bd4a7ec9105c9b5dd]
+reverse link dcat:Dataset to dcat:Dataset--><g id="link_dcat:Dataset_dcat:Dataset"><path codeLine="553" d="M1262,372.89 C1262,372.89 1262,348 1262,348 C1262,348 1184,348 1184,348 C1184,348 1184,1133 1184,1133 C1184,1133 1422.5,1133 1422.5,1133 C1422.5,1133 1422.5,1115.69 1422.5,1088.28 " fill="none" id="dcat:Dataset-backto-dcat:Dataset" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1262,377.89,1266,368.89,1262,372.89,1258,368.89,1262,377.89" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="124" x="1054" y="822.1651">«optional» dct:source</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1251.7734" y="366.8759">*</text></g><!--MD5=[d9bb97f6e2610f3bd4a7ec9105c9b5dd]
+reverse link dcat:Dataset to dcat:Dataset--><g id="link_dcat:Dataset_dcat:Dataset"><path codeLine="563" d="M1250,372.76 C1250,372.76 1250,368 1250,368 C1250,368 1226,368 1226,368 C1226,368 1226,1103 1226,1103 C1226,1103 1305.5,1103 1305.5,1103 C1305.5,1103 1305.5,1097.57 1305.5,1088.04 " fill="none" id="dcat:Dataset-backto-dcat:Dataset-1" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1250,377.76,1254,368.76,1250,372.76,1246,368.76,1250,377.76" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="150" x="1070" y="759.8451">«optional» dct:hasVersion</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1239.4922" y="366.7429">*</text></g><!--MD5=[d9bb97f6e2610f3bd4a7ec9105c9b5dd]
+reverse link dcat:Dataset to dcat:Dataset--><g id="link_dcat:Dataset_dcat:Dataset"><path codeLine="573" d="M1253,372.9 C1253,372.9 1253,358 1253,358 C1253,358 1205,358 1205,358 C1205,358 1205,1118 1205,1118 C1205,1118 1364,1118 1364,1118 C1364,1118 1364,1106.76 1364,1088.11 " fill="none" id="dcat:Dataset-backto-dcat:Dataset-2" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1253,377.9,1257,368.9,1253,372.9,1249,368.9,1253,377.9" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="152" x="1047" y="792.4951">«optional» dct:isVersionOf</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1247.6797" y="366.8862">*</text></g><!--MD5=[af6e75540df68eee137d0bf6daf1a8fe]
+link dcat:Dataset to dcat:Distribution--><g id="link_dcat:Dataset_dcat:Distribution"><path codeLine="582" d="M1539.5,1088.2 C1539.5,1088.2 1539.5,1142.81 1539.5,1142.81 " fill="none" id="dcat:Dataset-to-dcat:Distribution" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1539.5,1147.81,1543.5,1138.81,1539.5,1142.81,1535.5,1138.81,1539.5,1147.81" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="192" x="1346.5" y="1111.9951">«recommended» dcat:distribution</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1539.6352" y="1137.4343">*</text></g><!--MD5=[af6e75540df68eee137d0bf6daf1a8fe]
+link dcat:Dataset to dcat:Distribution--><g id="link_dcat:Dataset_dcat:Distribution"><path codeLine="591" d="M1481,1088.2 C1481,1088.2 1481,1142.81 1481,1142.81 " fill="none" id="dcat:Dataset-to-dcat:Distribution-1" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1481,1147.81,1485,1138.81,1481,1142.81,1477,1138.81,1481,1147.81" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="141" x="1339" y="1129.9951">«optional» adms:sample</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1479.2156" y="1137.4343">*</text></g><!--MD5=[3e75a082c910989715d90bcfefa8d3bf]
+link dcat:Dataset to foaf:Agent--><g id="link_dcat:Dataset_foaf:Agent"><path codeLine="600" d="M1718.28,852 C1884.64,852 2078,852 2078,852 C2078,852 2078,1327.68 2078,1327.68 " fill="none" id="dcat:Dataset-to-foaf:Agent" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="2078,1332.68,2082,1323.68,2078,1327.68,2074,1323.68,2078,1332.68" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="174" x="1903" y="906.4751">«recommended» dct:publisher</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="2043.8828" y="1322.0815">0..1</text></g><!--MD5=[3e75a082c910989715d90bcfefa8d3bf]
+link dcat:Dataset to foaf:Agent--><g id="link_dcat:Dataset_foaf:Agent"><path codeLine="611" d="M1718.26,970 C1871.24,970 2042.25,970 2042.25,970 C2042.25,970 2042.25,1327.97 2042.25,1327.97 " fill="none" id="dcat:Dataset-to-foaf:Agent-1" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="2042.25,1332.97,2046.25,1323.97,2042.25,1327.97,2038.25,1323.97,2042.25,1332.97" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="125" x="1916.25" y="983.4851">«optional» dct:creator</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="2020.4445" y="1322.0715">*</text></g><!--MD5=[3e75a082c910989715d90bcfefa8d3bf]
+link dcat:Dataset to foaf:Agent--><g id="link_dcat:Dataset_foaf:Agent"><path codeLine="622" d="M1718.46,497 C1922.62,497 2185.25,497 2185.25,497 C2185.25,497 2185.25,1327.84 2185.25,1327.84 " fill="none" id="dcat:Dataset-to-foaf:Agent-2" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="2185.25,1332.84,2189.25,1323.84,2185.25,1327.84,2181.25,1323.84,2185.25,1332.84" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="146" x="2038.25" y="675.5151">«optional» dct:contributor</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="2185.1336" y="1322.265">*</text></g><!--MD5=[3e75a082c910989715d90bcfefa8d3bf]
+link dcat:Dataset to foaf:Agent--><g id="link_dcat:Dataset_foaf:Agent"><path codeLine="633" d="M1718.13,615 C1910.08,615 2149.5,615 2149.5,615 C2149.5,615 2149.5,1327.72 2149.5,1327.72 " fill="none" id="dcat:Dataset-to-foaf:Agent-3" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="2149.5,1332.72,2153.5,1323.72,2149.5,1327.72,2145.5,1323.72,2149.5,1332.72" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="159" x="1989.5" y="752.1751">«optional» dcatde:originator</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="2144.1328" y="1322.1274">*</text></g><!--MD5=[3e75a082c910989715d90bcfefa8d3bf]
+link dcat:Dataset to foaf:Agent--><g id="link_dcat:Dataset_foaf:Agent"><path codeLine="644" d="M1718,733 C1897.39,733 2113.75,733 2113.75,733 C2113.75,733 2113.75,1327.95 2113.75,1327.95 " fill="none" id="dcat:Dataset-to-foaf:Agent-4" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="2113.75,1332.95,2117.75,1323.95,2113.75,1327.95,2109.75,1323.95,2113.75,1332.95" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="166" x="1946.75" y="829.0951">«optional» dcatde:maintainer</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="2102.893" y="1322.0485">*</text></g><!--MD5=[e2aaa57d4edefb28652008739b097653]
+link dcat:DataService to dcat:Dataset--><g id="link_dcat:DataService_dcat:Dataset"><path codeLine="728" d="M1501.4,1703 C1563.57,1703 1615.75,1703 1615.75,1703 C1615.75,1703 1615.75,1093.34 1615.75,1093.34 " fill="none" id="dcat:DataService-to-dcat:Dataset" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1615.75,1088.34,1611.75,1097.34,1615.75,1093.34,1619.75,1097.34,1615.75,1088.34" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="211" x="1616.75" y="1469.8451">«recommended» dcat:servesDataset</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1613.4059" y="1109.2165">*</text></g><!--MD5=[d12b5b775a799a50c6b06f6f5f53b2dc]
+link dcat:Distribution to dcat:DataService--><g id="link_dcat:Distribution_dcat:DataService"><path codeLine="940" d="M1332,1612.1 C1332,1612.1 1332,1666.97 1332,1666.97 " fill="none" id="dcat:Distribution-to-dcat:DataService" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1332,1671.97,1336,1662.97,1332,1666.97,1328,1662.97,1332,1671.97" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="176" x="1155" y="1636.0351">«optional» dcat:accessService</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="1329.3203" y="1661.2774">*</text></g><!--MD5=[aa07dc1c918be5a80dc0ddf97bdbfd24]
+link dcat:Distribution to spdx:Checksum--><g id="link_dcat:Distribution_spdx:Checksum"><path codeLine="949" d="M1567.25,1612.1 C1567.25,1612.1 1567.25,1728.41 1567.25,1728.41 " fill="none" id="dcat:Distribution-to-spdx:Checksum" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1567.25,1733.41,1571.25,1724.41,1567.25,1728.41,1563.25,1724.41,1567.25,1733.41" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="155" x="1411.25" y="1666.7551">«optional» spdx:checksum</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="1522.0898" y="1722.5024">0..1</text></g><!--MD5=[027600adeb6ca995c26b901053133359]
+link dcat:CatalogRecord to dcat:Resource--><g id="link_dcat:CatalogRecord_dcat:Resource"><path codeLine="1215" d="M529.22,733 C727.38,733 1014,733 1014,733 C1014,733 1014,1943.99 1014,1943.99 " fill="none" id="dcat:CatalogRecord-to-dcat:Resource" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1014,1948.99,1018,1939.99,1014,1943.99,1010,1939.99,1014,1948.99" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="177" x="836" y="1092.5951">«mandatory» foaf:primaryTopic</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="999.125" y="1938.1492">1</text></g><!--MD5=[3d6912d1a3d804482102523a44594ed3]
+link dcat:CatalogRecord to dcat:CatalogRecord--><g id="link_dcat:CatalogRecord_dcat:CatalogRecord"><path codeLine="1223" d="M283,624.26 C283,564.35 283,502 283,502 C283,502 142,502 142,502 C142,502 142,1027 142,1027 C142,1027 344.5,1027 344.5,1027 C344.5,1027 344.5,846.64 344.5,846.64 " fill="none" id="dcat:CatalogRecord-to-dcat:CatalogRecord" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="344.5,841.64,340.5,850.64,344.5,846.64,348.5,850.64,344.5,841.64" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="124" x="12" y="815.7951">«optional» dct:source</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="321.7266" y="863.3421">0..1</text></g><!--MD5=[6ffcdc0a4e3f968eb3a729b77a48167d]
+link dcat:Dataset to dcat:Resource--><g id="link_dcat:Dataset_dcat:Resource"><path codeLine="1341" d="M1246.85,965 C1140.58,965 1038.5,965 1038.5,965 C1038.5,965 1038.5,1928.58 1038.5,1928.58 " fill="none" id="dcat:Dataset-to-dcat:Resource" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="none" points="1045.5,1928.58,1038.5,1948.58,1031.5,1928.58,1045.5,1928.58" style="stroke:#000000;stroke-width:1.0;"/></g><!--MD5=[a636109e5dfafdf5784c233f81d5fa0e]
+link dcat:DataService to dcat:Resource--><g id="link_dcat:DataService_dcat:Resource"><path codeLine="1342" d="M1091.63,1781 C1074.17,1781 1063,1781 1063,1781 C1063,1781 1063,1928.83 1063,1928.83 " fill="none" id="dcat:DataService-to-dcat:Resource" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="none" points="1070,1928.83,1063,1948.83,1056,1928.83,1070,1928.83" style="stroke:#000000;stroke-width:1.0;"/></g><!--MD5=[81a777c2b39e716ea163c7cf734dba96]
 @startuml
 
 remove @unlinked
@@ -59,6 +59,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft kann fÃ¼r parallele Sprachversionen des Katalogtitels wiederholt werden.
         '@ rdf:about       = http://purl.org/dc/terms/title
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title
+        '@ sh:shapes       = dcatap:Catalog_Property_dct_title
     <<mandatory>> dct:description ~> rdfs:Literal [1..*]
         '@ rdfs:label      = Beschreibung
         '@ _:internalLink  = katalog-beschreibung
@@ -67,6 +68,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft kann fÃ¼r parallel existierende Sprachversionen der Katalogbeschreibung wiederholt werden.
         '@ rdf:about       = http://purl.org/dc/terms/description
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_description
+        '@ sh:shapes       = dcatap:Catalog_Property_dct_description 
 
     <<recommended>> dct:issued ~> rdfs:Literal [0..1]
         '@ rdfs:label      = VerÃ¶ffentlichungsdatum
@@ -76,6 +78,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft enthÃ¤lt das Datum der Herausgabe/Emission (z.B. in Form einer VerÃ¶ffentlichung) des Kataloges.
         '@ rdf:about       = http://purl.org/dc/terms/issued
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_release_date
+        '@ sh:shapes       = dcatap:Catalog_Property_dct_issued (erlaubt auch xsd:gYear und xsd:gYearMonth)
     <<recommended>> dct:modified ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Aktualisierungsdatum
         '@ _:internalLink  = katalog-aktualisierungsdatum
@@ -83,16 +86,17 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation des Kataloges.
         '@ rdf:about       = http://purl.org/dc/terms/modified
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date
+        '@ sh:shapes       = dcatap:Catalog_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
     <<recommended>> dct:language ~> dct:LinguisticSystem [*]
         '@ rdfs:label      = Sprache
         '@ _:internalLink  = katalog-sprache
         '@ rdfs:range      = http://purl.org/dc/terms/LinguisticSystem
-        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf die Sprache, welche in der textuellen Beschreibung der Metadaten der dem Katalog zugehÃ¶rigen Datenstrukturen Verwendung findet (z.B. Titel, Beschreibungen usw.). 
+        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf die Sprache, die in den textuellen Beschreibungen der dem Katalog zugehÃ¶rigen DCAT-Ressourcen Verwendung findet (z.B. Titel, Beschreibungen usw.). 
         '@ rdfs:comment    = Diese Eigenschaft kann wiederholt werden, falls die Metadaten in verschiedenen Sprachen zur VerfÃ¼gung stehen.
         '@ rdf:about       = http://purl.org/dc/terms/language
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_language
-        '@ adms:versionNotes = 2.0: Kontrolliertes Vokabular angegeben.
         '@ _:vocabularyLink = #kv-languages
+        '@ sh:shapes       = ___TBD___(kein Test des Vokabulars)
     <<recommended>> foaf:homepage ~> foaf:Document [0..1]
         '@ rdfs:label      = Homepage
         '@ _:internalLink  = katalog-homepage
@@ -100,6 +104,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft verweist auf eine Homepage, welche die zentrale Homepage des Kataloges ist.
         '@ rdf:about       = http://xmlns.com/foaf/0.1/homepage
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_homepage
+        '@ sh:shapes       = dcatap:Catalog_Property_foaf_homepage, ___TBD___(kein Test, ob Ziel eine Ressource)
     <<recommended>> dct:license ~> dct:LicenseDocument [0..1]
         '@ rdfs:label      = Lizenz
         '@ _:internalLink  = katalog-lizenz
@@ -108,23 +113,25 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://purl.org/dc/terms/license
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_license
         '@ _:vocabularyLink = #kv-licenses
+        '@ sh:shapes       = dcatap:Catalog_Property_dct_license, ___TBD___(kein Test des Vokabulars)
     <<recommended>> dcat:themeTaxonomy ~> skos:ConceptScheme [*]
         '@ rdfs:label      = Kategorienschema
         '@ _:internalLink  = katalog-kategorienschema
         '@ rdfs:range      = http://www.w3.org/2004/02/skos/core#ConceptScheme
-        '@ rdfs:comment    = Diese Eigenschaft verweist auf das eingesetzte Schema zur Klassifizierung der dem Katalog zugewiesenen Datenstrukturen in Form von Kategorien.
+        '@ rdfs:comment    = Diese Eigenschaft verweist auf das eingesetzte Schema zur Klassifizierung der dem Katalog zugewiesenen DCAT-Ressourcen in Form von Kategorien.
         '@ rdf:about       = http://www.w3.org/ns/dcat#themeTaxonomy
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_themes
         '@ _:deOriginal    = FÃ¼r DCAT-AP.de muss dieser Wert immer mindestens http://publications.europa.eu/resource/authority/data-theme sein.
+        '@ sh:shapes       = dcatap:Catalog_Property_dcat_themeTaxonomy, ___TBD___(kein Test, ob mindestens einmal auf o.a. verlinkt, kein Test, ob Ziel eine Ressource)
     <<recommended>> dcatap:availability ~> skos:Concept [0..1]
         '@ rdfs:label      = VerfÃ¼gbarkeit
         '@ _:internalLink  = katalog-verfugbarkeit
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
         '@ rdfs:comment    = Geplante VerfÃ¼gbarkeit des Katalogs als Auswahl aus einer festen Liste von Werten via DCAT-AP URIs.
         '@ rdf:about       = http://data.europa.eu/r5r/availability
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
         '@ _:vocabularyLink = #kv-availability
         '@ _:deOriginal    = DCAT-AP.de ordnet diese Eigenschaft allen DCAT-Ressourcen und Distributionen zu.
+        '@ sh:shapes       = ___TBD___(deutsche Besonderheit, kein Test des Vokabulars, Maximalzahl 1)
 
     <<optional>> dct:rights ~> dct:RightsStatement [0..1]
         '@ rdfs:label      = Nutzungsbestimmungen
@@ -133,6 +140,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft verweist auf eine juristische Darlegung, welche die mit dem Katalog assoziierten Nutzungsbestimmungen spezifiziert.
         '@ rdf:about       = http://purl.org/dc/terms/rights
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_rights
+        '@ sh:shapes       = dcatap:Catalog_Property_dct_rights, ___TBD___(kein Test, ob Ziel eine Ressource ist?)
     <<optional>> dcat:catalog ~> dcat:Catalog [*]
         '@ rdfs:label      = Katalog
         '@ _:internalLink  = katalog-katalog
@@ -140,7 +148,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Ein Katalog, dessen Inhalt im Kontext dieses Katalogs von Interesse ist.
         '@ rdf:about       = http://www.w3.org/ns/dcat#catalog
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_catalog
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Catalog)
 }
 '@ rdfs:label      = Katalog
 '@ _:internalLink  = #klasse-katalog
@@ -149,7 +157,6 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
 '@ rdfs:comment    = Eine Sammlung oder Quelle, welche die beschriebenen DatensÃ¤tze, Datenservices oder Kataloge zur VerfÃ¼gung stellt.
 '@ _:usedBy        = dcat:catalog, dct:hasPart, dct:isPartOf (dcat:Catalog)
 '@ rdfs:subClassOf = dcat:Dataset
-'@ _:datasetHeirloom = [`adms:identifier`](#datensatz-andere-id), [`adms:sample`](#datensatz-beispieldistribution), [`adms:versionNotes`](#datensatz-versionserlauterung), [`dcat:contactPoint`](#datensatz-kontakt), [`dcat:distribution`](#datensatz-distribution), [`dcat:granularity`](#datensatz-abgedeckte-zeitliche-granularitat-deprecated), [`dcat:keyword`](#datensatz-schlagwort), [`dcat:landingPage`](#datensatz-ursprungliche-webseite), [`dcat:qualifiedRelation`](#datensatz-qualifizierte-beziehung), [`dcat:spatialResolutionInMeters`](#datensatz-raumliche-auflosung-in-meter), [`dcat:temporalResolution`](#datensatz-zeitliche-auflosung), [`dcat:theme`](#datensatz-kategorie), [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcatde:maintainer`](#datensatz-verwalter), [`dcatde:originator`](#datensatz-urheber), [`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dct:accessRights`](#datensatz-grad-zuganglichkeit), [`dct:accrualPeriodicity`](#datensatz-aktualisierungsfrequenz), [`dct:conformsTo`](#datensatz-konform-zu-standard), [`dct:contributor`](#datensatz-bearbeiter), [`dct:hasVersion`](#datensatz-weitere-version), [`dct:identifier`](#datensatz-id), [`dct:isReferencedBy`](#datensatz-wird-referenziert), [`dct:isVersionOf`](#datensatz-ist-version), [`dct:provenance`](#datensatz-provenienz), [`dct:references`](#datensatz-referenziert), [`dct:relation`](#datensatz-verwandte-ressource), [`dct:source`](#datensatz-quelle), [`dct:temporal`](#datensatz-zeitliche-abdeckung), [`dct:type`](#datensatz-typ), [`foaf:page`](#datensatz-dokumentation), [`owl:versionInfo`](#datensatz-versionsbezeichnung), [`prov:qualifiedAttribution`](#datensatz-rollenzuordnung) und [`prov:wasGeneratedBy`](#datensatz-wurde-erzeugt-von).
 '@ _:resourceHeirloom = [`odrl:hasPolicy`](#distribution-regelwerk).
 
 "dcat:Catalog" - -> "*" "dcat:DataService" : <<optional>> dcat:service
@@ -159,6 +166,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:comment    = Diese Eigenschaft verknÃ¼pft den Katalog mit einem Datenservice, welcher somit Teil des Kataloges wird.
     '@ rdf:about       = http://www.w3.org/ns/dcat#service
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_service
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Catalog)
 
 "dcat:Catalog" - -> "*" "dct:Location"     : <<recommended>> dct:spatial
     '@ rdfs:label      = RÃ¤umliche Abdeckung
@@ -168,6 +176,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdf:about       = http://purl.org/dc/terms/spatial
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial
     '@ _:vocabularyLink = #kv-spatial
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars, schwierig hier, kein Test, ob Ziel dct:Location)
 
 "dcat:Catalog" - -> "*"     "dcat:Catalog"       : <<optional>> dct:hasPart
     '@ rdfs:label      = Hat Teilkatalog
@@ -177,6 +186,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:comment    = Hinweis: Range von W3C-DCAT ist dcat:Resource, nicht nur dcat:Catalog, wurde von DCAT-AP geÃ¤ndert.
     '@ rdf:about       = http://purl.org/dc/terms/hasPart
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_has_part
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Catalog)
 
 "dcat:Catalog" - -> "0..1"  "dcat:Catalog"       : <<optional>> dct:isPartOf
     '@ rdfs:label      = Ist Teilkatalog
@@ -186,6 +196,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:comment    = Hinweis: Nicht Teil von W3C-DCAT, von DCAT-AP hinzugefÃ¼gt.
     '@ rdf:about       = http://purl.org/dc/terms/isPartOf
     '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isPartOf
+    '@ sh:shapes       = dcatap:Catalog_Property_dct_isPartOf, ___TBD___(kein Test, ob Ziel ein dcat:Catalog)
 
 "dcat:Catalog" - -> "*"     "dcat:CatalogRecord" : <<optional>> dcat:record
     '@ rdfs:label      = Katalogeintrag
@@ -195,6 +206,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:comment    = Diese Eigenschaft darf nur mit der besonderen Klasse [`dcat:CatalogRecord`](#klasse-katalogeintrag) verwendet werden. Es handelt sich dabei nicht um einen gewÃ¶hnlichen Datensatz.
     '@ rdf:about       = http://www.w3.org/ns/dcat#record
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_catalog_record
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:CatalogRecord)
 
 "dcat:Catalog" - -> "1..*"  "dcat:Dataset"       : <<mandatory>> dcat:dataset
     '@ rdfs:label      = Datensatz
@@ -203,6 +215,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:comment    = Diese Eigenschaft verknÃ¼pft den Katalog mit einem Datensatz, welcher somit Teil des Kataloges wird.
     '@ rdf:about       = http://www.w3.org/ns/dcat#dataset
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_dataset
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test auf Mindestzahl, lohnt es sich, das wider besseren Wissens zu erzwingen?)
 
 "dcat:Catalog" - -> "1"     "foaf:Agent"         : <<mandatory>> dct:publisher
     '@ rdfs:label      = Herausgeber
@@ -213,6 +226,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zum-herausgeber) genauer beschrieben.
     '@ rdf:about       = http://purl.org/dc/terms/publisher
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_publisher
+    '@ sh:shapes       = dcatap:Catalog_Property_dct_publisher, ___TBD___(kein Test, ob Ziel ein foaf:Agent)
 
 "dcat:Catalog" - -> "*"     "foaf:Agent"         : <<optional>> dct:creator
     '@ rdfs:label      = Autor
@@ -222,6 +236,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#weitere-wichtige-rollen) genauer beschrieben.
     '@ rdf:about       = http://purl.org/dc/terms/creator
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_creator
+    '@ sh:shapes       =  ___TBD___(Shape ohne Regeln
 
 class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC { 
     <<mandatory>> dct:title ~> rdfs:Literal [1..*]
@@ -233,6 +248,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#redundante-angaben-im-titel) genauer beschrieben.
         '@ rdf:about       = http://purl.org/dc/terms/title
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title
+        '@ sh:shapes       = dcatap:Dataset_Property_dct_title
     <<mandatory>> dct:description ~> rdfs:Literal [1..*]
         '@ rdfs:label      = Beschreibung
         '@ _:internalLink  = datensatz-beschreibung
@@ -241,15 +257,17 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft kann fÃ¼r parallel existierende Sprachversionen der Datensatzbeschreibung wiederholt werden.
         '@ rdf:about       = http://purl.org/dc/terms/description
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_description
+        '@ sh:shapes       = dcatap:Dataset_Property_dct_title
 
     <<recommended>> dcat:keyword ~> rdfs:Literal [*]
         '@ rdfs:label      = Schlagwort
         '@ _:internalLink  = datensatz-schlagwort
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
-        '@ rdfs:comment    = Diese Eigenschaft enthÃ¤lt ein Schlagwort oder SchlÃ¼sselbegriff zur Beschreibung der Datenstruktur. 
+        '@ rdfs:comment    = Diese Eigenschaft enthÃ¤lt ein Schlagwort oder SchlÃ¼sselbegriff zur Beschreibung des Datensatzes. 
         '@ rdfs:comment    = Diese Eigenschaft kann fÃ¼r unterschiedliche Schlagworte und parallel existierende Sprachversionen wiederholt werden.
         '@ rdf:about       = http://www.w3.org/ns/dcat#keyword
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_keyword
+        '@ sh:shapes       = dcatap:Dataset_Property_dcat_keyword
     <<recommended>> dcatde:politicalGeocodingLevelURI ~> rdfs:Resource [*]
         '@ rdfs:label      = Ebene der geopolitischen Abdeckung
         '@ _:internalLink  = datensatz-ebene-geopolitischen-abdeckung
@@ -259,6 +277,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://dcat-ap.de/def/dcatde/politicalGeocodingLevelURI
         '@ _:deOriginal    = FÃ¼r die Referenzierung sollen die auf https://www.dcat-ap.de/def/politicalGeocoding/Level/ verÃ¶ffentlichte Wertelisten verwendet werden. (Siehe Vokabulare zur Nutzung DCAT-AP.de)
         '@ _:vocabularyLink = #kv-political-geocoding-level
+        '@ sh:shapes       = ___TBD___(deutsche Eigenschaft)
     <<recommended>> dcatde:politicalGeocodingURI ~> rdfs:Resource [*]
         '@ rdfs:label      = Geopolitische Abdeckung
         '@ _:internalLink  = datensatz-geopolitischen-abdeckung
@@ -268,6 +287,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://dcat-ap.de/def/dcatde/politicalGeocodingLevelURI
         '@ _:deOriginal    = FÃ¼r die Referenzierung wird eine zu nutzende Wertelisten separat verÃ¶ffentlichten.
         '@ _:vocabularyLink = #kv-political-geocoding-uri
+        '@ sh:shapes       = ___TBD___(deutsche Eigenschaft)
     <<recommended>> dcat:theme ~> skos:Concept [*]
         '@ rdfs:label      = Kategorie
         '@ _:internalLink  = datensatz-kategorie
@@ -277,23 +297,25 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://www.w3.org/ns/dcat#theme
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_theme
         '@ _:vocabularyLink = #kv-data-theme
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars)
     <<recommended>> dcat:contactPoint ~> vcard:Kind [*]
         '@ rdfs:label      = Kontakt
         '@ _:internalLink  = datensatz-kontakt
         '@ rdfs:range      = http://www.w3.org/TR/vcard-rdf/#Kind
-        '@ rdfs:comment    = Diese Eigenschaft umfasst Kontaktinformationen, welche fÃ¼r das Zusenden von Kommentaren zu der jeweiligen Datenstruktur verwendet werden kÃ¶nnen.
+        '@ rdfs:comment    = Diese Eigenschaft umfasst Kontaktinformationen, welche fÃ¼r das Zusenden von Kommentaren zum jeweiligen Datensatz verwendet werden kÃ¶nnen.
         '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#ansprechstelle) genauer beschrieben.
         '@ rdf:about       = http://www.w3.org/ns/dcat#contactPoint
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_contact_point
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein vcard:Kind)
     <<recommended>> dcatap:availability ~> skos:Concept [0..1]
         '@ rdfs:label      = VerfÃ¼gbarkeit
         '@ _:internalLink  = datensatz-verfugbarkeit
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
-        '@ rdfs:comment    = Geplante VerfÃ¼gbarkeit der Datenstruktur als Auswahl aus einer festen Liste von Werten via DCAT-AP URIs.
+        '@ rdfs:comment    = Geplante VerfÃ¼gbarkeit des Datensatzes als Auswahl aus einer festen Liste von Werten via DCAT-AP URIs.
         '@ rdf:about       = http://data.europa.eu/r5r/availability
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
         '@ _:vocabularyLink = #kv-availability
         '@ _:deOriginal    = DCAT-AP.de ordnet diese Eigenschaft allen DCAT-Ressourcen und Distributionen zu.
+        '@ sh:shapes       = ___TBD___(deutsche Besonderheit, kein Test des Vokabulars, Maximalzahl 1)
 
     <<optional>> dcatde:contributorID ~> rdfs:Resource [*]
         '@ rdfs:label        = Datenbereitsteller ID
@@ -303,17 +325,18 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment      = Ihre genaue Verwendung ist nur fÃ¼r die Anlieferung an GovData festgelegt und wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#eindeutige-kennzeichnung-der-datenbereitsteller) genauer beschrieben.
         '@ rdf:about         = http://dcat-ap.de/def/dcatde/contributorID
         '@ _:deOriginal      = Von DCAT-AP.de eingefÃ¼hrte Eigenschaft.
-        '@ adms:versionNotes = 2.0: Beschreibung angepasst, Pflicht, bestehende IDs zu erhalten entfernt.
         '@ _:vocabularyLink = #kv-contributors
+        '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
     <<optional>> dcatde:geocodingDescription ~> rdfs:Literal [*]
         '@ rdfs:label      = Beschreibung der Abdeckung
         '@ _:internalLink  = datensatz-beschreibung-abdeckung
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
-        '@ rdfs:comment    = Diese Eigenschaft enthÃ¤lt die geografische Abdeckung einer Datenstruktur reprÃ¤sentiert durch die Bezeichnung eines administrativen Gebiets oder eines fachlichen Bezugs als Freitext.
+        '@ rdfs:comment    = Diese Eigenschaft enthÃ¤lt die geografische Abdeckung eines Datensatzes, reprÃ¤sentiert durch die Bezeichnung eines administrativen Gebiets oder eines fachlichen Bezugs als Freitext.
         '@ rdfs:comment    = ErgÃ¤nzend als Text bzw. alleinstehend fÃ¼r alle FÃ¤lle bei denen die geopolitische Abdeckung nicht durch eine URI angegeben werden kann (z.B. bei komplexeren Bund-LÃ¤nder-Kooperationen oder auf kommunaler Ebene). 
         '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#geobezug-als-beschreibender-text) genauer beschrieben. Sie kann fÃ¼r parallele Sprachversionen wiederholt werden.
         '@ rdf:about       = http://dcat-ap.de/def/dcatde/geocodingDescription
         '@ _:deOriginal    = Von DCAT-AP.de eingefÃ¼hrte Eigenschaft. Beispiele: "Gemeinden des Wasserzweckverbands Straubing-Land" oder "Verband Region Rhein-Neckar".
+        '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
     <<optional>> dct:identifier ~> rdfs:Literal [*]
         '@ rdfs:label      = ID
         '@ _:internalLink  = datensatz-id
@@ -322,14 +345,16 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#identifier) genauer beschrieben.
         '@ rdf:about       = http://purl.org/dc/terms/identifier
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_identifier
+        '@ sh:shapes       = dcatap:Dataset_Property_dct_identifier
     <<optional>> adms:identifier ~> adms:Identifier [*]
         '@ rdfs:label      = Andere ID
         '@ _:internalLink  = datensatz-andere-id
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
-        '@ rdfs:comment    = Diese Eigenschaft verweist auf sekundÃ¤re IDs der Datenstruktur wie zum Beispiel DataCite (http://www.datacite.org/), DOI (Digital Object Identifier: http://www.doi.org/), EZID (https://ezid.cdlib.org/), W3ID (W3C Permanent Identifiers for the Web: https://w3id.org/) oder andere fachspezifische Identifier.
+        '@ rdfs:comment    = Diese Eigenschaft verweist auf sekundÃ¤re IDs des Datensatzes, wie zum Beispiel DataCite (http://www.datacite.org/), DOI (Digital Object Identifier: http://www.doi.org/), EZID (https://ezid.cdlib.org/), W3ID (W3C Permanent Identifiers for the Web: https://w3id.org/) oder andere fachspezifische Identifier.
         '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#identifier) genauer beschrieben.
         '@ rdf:about       = http://purl.org/dc/terms/identifier
         '@ rdfs:seeAlso    = [Beschreibung der Klasse bei DCAT-AP.de](#klasse-identifikator)
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein adms:Identifier)
     <<optional>> dct:issued ~> rdfs:Literal [0..1]
         '@ rdfs:label      = VerÃ¶ffentlichungsdatum
         '@ _:internalLink  = datensatz-veroffentlichungsdatum
@@ -337,6 +362,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft enthÃ¤lt das Datum der Herausgabe/Emission (z.B. in Form einer VerÃ¶ffentlichung) des Datensatzes.
         '@ rdf:about       = http://purl.org/dc/terms/issued
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_release_date
+        '@ sh:shapes       = dcatap:Dataset_Property_dct_issued (erlaubt auch xsd:gYear und xsd:gYearMonth)
     <<optional>> dct:modified ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Aktualisierungsdatum
         '@ _:internalLink  = datensatz-aktualisierungsdatum
@@ -345,6 +371,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#erkennung-von-dubletten) genauer beschrieben.
         '@ rdf:about       = http://purl.org/dc/terms/modified
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date
+        '@ sh:shapes       = dcatap:Dataset_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
     <<optional>> owl:versionInfo ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Versionsbezeichnung
         '@ _:internalLink  = datensatz-versionsbezeichnung
@@ -353,7 +380,8 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zur-versionierung) genauer beschrieben.
         '@ rdf:about       = http://www.w3.org/2002/07/owl#versionInfo
         '@ rdfs:seeAlso    = https://www.w3.org/TR/owl-ref/#versionInfo-def
-    <<optional>> adms:versionNotes ~> rdfs:Literal [*]
+        '@ sh:shapes       = dcatap:Dataset_Property_owl_versionInfo
+    <<optionale>> adms:versionNotes ~> rdfs:Literal [*]
         '@ rdfs:label      = VersionserlÃ¤uterung
         '@ _:internalLink  = datensatz-versionserlauterung
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -362,6 +390,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zur-versionierung) genauer beschrieben.
         '@ rdf:about       = http://www.w3.org/ns/adms#versionNotes
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-adms/#adms-versionnotes
+        '@ sh:shapes       = dcatap:Dataset_Property_adms_versionNotes
     <<optional>> dcatde:legalBasis ~> rdfs:Literal [*]
         '@ rdfs:label      = Rechtsgrundlage fÃ¼r die ZugangserÃ¶ffnung
         '@ _:internalLink  = datensatz-rechtsgrundlage-zugangseroffnung
@@ -370,6 +399,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft kann fÃ¼r parallele Sprachversionen wiederholt werden.
         '@ rdf:about       = http://dcat-ap.de/def/dcatde/legalBasis
         '@ _:deOriginal    = Beispiele: Public Sector Information Directive (PSI-Direktive), Umweltinformationsgesetz (UIG), deutsche Informationsfreiheits- (IFG) und Transparenzgesetze.
+        '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
     <<optional>> dct:relation ~> rdfs:Resource [*]
         '@ rdfs:label      = Verwandte Ressource
         '@ _:internalLink  = datensatz-verwandte-ressource
@@ -378,6 +408,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#andere-beziehungen-zwischen-datensatzen-dct-relation) genauer beschrieben.
         '@ rdf:about       = http://purl.org/dc/terms/relation
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_relation
+        '@ sh:shapes       = dcatap:Dataset_Property_dct_relation (erlaubt auch BlankNodes)
     <<optional>> dcat:landingPage ~> foaf:Document [*]
         '@ rdfs:label      = UrsprÃ¼ngliche Webseite
         '@ _:internalLink  = datensatz-ursprungliche-webseite
@@ -386,6 +417,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Es ist beabsichtigt, auf die Webseite des originÃ¤ren Datenbereitstellers zu verweisen und nicht auf zwischengeschaltete IntermediÃ¤re.
         '@ rdf:about       = http://www.w3.org/ns/dcat#landingPage
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_landing_page
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource)
     <<optional>> foaf:page ~> foaf:Document [*]
         '@ rdfs:label      = Dokumentation
         '@ _:internalLink  = datensatz-dokumentation
@@ -393,6 +425,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft verweist auf eine Seite oder ein Dokument fÃ¼r den jeweiligen Datensatz.
         '@ rdf:about       = http://xmlns.com/foaf/0.1/page
         '@ rdfs:seeAlso    = http://xmlns.com/foaf/spec/#term_page
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource)
     <<optional>> dct:language ~> dct:LinguisticSystem [*]
         '@ rdfs:label      = Sprache
         '@ _:internalLink  = datensatz-sprache
@@ -402,6 +435,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://purl.org/dc/terms/language
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_language
         '@ _:vocabularyLink = #kv-languages
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars)
     <<optional>> dct:conformsTo ~> dct:Standard [*]
         '@ rdfs:label        = Konform zu Standard
         '@ _:internalLink    = datensatz-konform-zu-standard
@@ -409,7 +443,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment      = Diese Eigenschaft verweist auf eine Implementierungsregel oder eine andere Spezifikation, zu welcher der Datensatz konform ist.
         '@ rdf:about         = http://purl.org/dc/terms/conformsTo
         '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_conforms_to
-        '@ adms:versionNotes = 2.0: Label der Eigenschafft von "Application Profile der Metadaten" zu "Konform zu Standard" geÃ¤ndert, um Verwendung an DCAT-AP anzugleichen.
+        '@ sh:shapes         = ___TBD___(Shape ohne Regeln)
     <<optional>> dct:accessRights ~> dct:RightsStatement [0..1]
         '@ rdfs:label      = Grad der ZugÃ¤nglichkeit
         '@ _:internalLink  = datensatz-grad-zuganglichkeit
@@ -417,41 +451,45 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft verweist auf Informationen, die darlegen, ob der Datensatz Ã¶ffentlich zugÃ¤nglich ist, ZugriffseinschrÃ¤nkungen existieren oder er nicht-Ã¶ffentlich ist.
         '@ rdf:about       = http://purl.org/dc/terms/accessRights
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_access_rights
+        '@ sh:shapes       = dcatap:Dataset_Property_dct_accessRights, ___TBD___(kein Test, ob Ziel eine Ressource ist?)
     <<optional>> dct:provenance ~> dct:ProvenanceStatement [*]
         '@ rdfs:label      = Provenienz
         '@ _:internalLink  = datensatz-provenienz
         '@ rdfs:range      = http://purl.org/dc/terms/ProvenanceStatement
-        '@ rdfs:comment    = Diese Eigenschaft umfasst eine Angabe zur Entwicklungsgeschichte der Datenstruktur, insbesondere in wessen Besitz oder Obhut die Ressource sich bislang befunden hat, soweit die Wechsel signifikanten Einfluss auf die AuthentizitÃ¤t, IntegritÃ¤t und Interpretierbarkeit dieser Ressource hat.
+        '@ rdfs:comment    = Diese Eigenschaft umfasst eine Angabe zur Entwicklungsgeschichte des Datensatzes, insbesondere in wessen Besitz oder Obhut die Ressource sich bislang befunden hat, soweit die Wechsel signifikanten Einfluss auf die AuthentizitÃ¤t, IntegritÃ¤t und Interpretierbarkeit dieser Ressource hat.
         '@ rdf:about       = http://purl.org/dc/terms/provenance
         '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/provenance
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein ProvenanceStatement?)
     <<optional>> dct:accrualPeriodicity ~> dct:Frequency [0..1]
         '@ rdfs:label      = Aktualisierungsfrequenz
         '@ _:internalLink  = datensatz-aktualisierungsfrequenz
         '@ rdfs:range      = http://purl.org/dc/terms/Frequency
-        '@ rdfs:comment    = Diese Eigenschaft beschreibt die Aktualisierungsfrequenz der Datenstruktur.
+        '@ rdfs:comment    = Diese Eigenschaft beschreibt die Aktualisierungsfrequenz des Datensatzes.
         '@ rdf:about       = http://purl.org/dc/terms/accrualPeriodicity
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_frequency
         '@ _:vocabularyLink = #kv-frequency
+        '@ sh:shapes       = dcatap:Dataset_Property_dct_accrualPeriodicity, ___TBD___(kein Test des Vokabulars)
     <<optional>> dcatde:qualityProcessURI ~> rdfs:Resource [0..1]
         '@ rdfs:label      = QualitÃ¤tssicherungsprozess
         '@ _:internalLink  = datensatz-qualitatssicherungsprozess
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
-        '@ rdfs:comment    = Eine URI, die auf den Prozess zur QualitÃ¤tssicherung der Datenstrukturen verweist. Es handelt sich idealerweise um die URL einer Webseite.
+        '@ rdfs:comment    = Eine URI, die auf den Prozess zur QualitÃ¤tssicherung des Datensatzes verweist. Es handelt sich idealerweise um die URL einer Webseite.
         '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#webseite-mit-beschreibung-des-qualitatssicherungsprozesses) genauer beschrieben.
         '@ rdf:about       = http://dcat-ap.de/def/dcatde/qualityProcessURI
         '@ _:deOriginal    = Von dcat-ap.de eingefÃ¼hrte Eigenschaft.
+        '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
     <<optional>> dct:type ~> skos:Concept [0..1]
         '@ rdfs:label        = Typ des Datensatzes
         '@ _:internalLink    = datensatz-typ
         '@ rdfs:range        = http://www.w3.org/2004/02/skos/core#Concept
         '@ rdfs:comment      = Diese Eigenschaft bezieht sich auf den Typ des Datensatzes. Es wurde noch kein kontrollierter Vokabular festgelegt.
         '@ rdfs:comment      = 
-        '@ rdfs:comment      = [DEPRECATED](#glossar-deprecated): Zur Gruppierung von linearen und nichtlinearen Reihen/Collections ist gemÃ¤ÃŸ dem DCAT-AP.de Konventionenhandbuch eine Gruppenstruktur vom Typ "Collection" anzulegen, die auf die gruppierten Datenstrukturen mittels "Weitere Version" (`dct:hasVersion`) verweist. Alle gruppierten Datenstrukturen verweisen dann mittels "ist Version von" (`dct:isVersionOf`) auf die URI (`http://dcat-ap.de/def/datasetTypes/collection`) dieser logischen Klammer. FeldÃ¼bergreifende Beispiele und das Zusammenspiel mit der Eigenschaft `dct:hasVersion` sind im Konventionenhandbuch dokumentiert.
+        '@ rdfs:comment      = [DEPRECATED](#glossar-deprecated): Zur Gruppierung von linearen und nichtlinearen Reihen/Collections ist gemÃ¤ÃŸ dem DCAT-AP.de Konventionenhandbuch eine Gruppenstruktur vom Typ "Collection" anzulegen, die auf die gruppierten DatensÃ¤tze mittels "Weitere Version" (`dct:hasVersion`) verweist. Alle gruppierten DatensÃ¤tze verweisen dann mittels "ist Version von" (`dct:isVersionOf`) auf die URI (`http://dcat-ap.de/def/datasetTypes/collection`) dieser logischen Klammer. FeldÃ¼bergreifende Beispiele und das Zusammenspiel mit der Eigenschaft `dct:hasVersion` sind im Konventionenhandbuch dokumentiert.
         '@ rdf:about         = http://purl.org/dc/terms/type
         '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_type
         '@ _:deOriginal      = [DEPRECATED](#glossar-deprecated): Ausspezifiziert um linearen und nichtlinearen Reihen/Collections darstellen zu kÃ¶nnen.
-        '@ adms:versionNotes = 2.0: Beschreibung Ã¼berarbeitet. Die Eigenschaft soll nicht mehr fÃ¼r Collections verwendet werden ([DEPRECATED](#glossar-deprecated)). HierfÃ¼r soll kÃ¼nftig [`dcat:DatasetSeries`](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#sammlungen-und-reihen-von-datensatzen) verwendet werden.
         '@ _:vocabularyLink  = #kv-dataset-type
+        '@ sh:shapes         = dcatap:Dataset_Property_dct_type, ___TBD___(kein Test des Vokabulars)
     <<optional>> prov:wasGeneratedBy ~> prov:Activity [*]
         '@ rdfs:label        = Wurde erzeugt von
         '@ _:internalLink    = datensatz-wurde-erzeugt-von
@@ -460,17 +498,17 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment      = Eine AktivitÃ¤t ist typischer Weise eine Initiative, ein Projekt, eine Umfrage oder dauerhafte Handlung ("business as usual").
         '@ rdf:about         = https://www.w3.org/TR/prov-o/#wasGeneratedBy
         '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_was_generated_by
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
+        '@ sh:shapes         = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource?)
     <<optional>> dcat:spatialResolutionInMeters ~> rdfs:Literal [*]
         '@ rdfs:label      = RÃ¤umliche AuflÃ¶sung in Meter
         '@ _:internalLink  = datensatz-raumliche-auflosung-in-meter
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
         '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als [`xsd:decimal`](https://www.w3.org/TR/xmlschema11-2/#decimal)
         '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf den kleinstmÃ¶glichen rÃ¤umlichen Abstand, der in einem Datensatz auflÃ¶sbar ist, gemessen in Metern.
-        '@ rdfs:comment    = **Verwendungshinweis:** Kann die rÃ¤umliche AuflÃ¶sung nicht in Metern beschrieben werden, kann stattdessen die spezielleren Eigenschaften verwenden, die [GeoDCAT-AP](https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/#spatial-resolution-spatial-resolution-of-the-dataset) hierfÃ¼r zur VerfÃ¼gung stellt.
+        '@ rdfs:comment    = **Verwendungshinweis:** Kann die rÃ¤umliche AuflÃ¶sung nicht in Metern beschrieben werden, kÃ¶nnen stattdessen die spezielleren Eigenschaften verwendet werden, die [GeoDCAT-AP](https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/#spatial-resolution-spatial-resolution-of-the-dataset) hierfÃ¼r zur VerfÃ¼gung stellt.
         '@ rdf:about       = http://www.w3.org/ns/dcat#spatialResolutionInMeters
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial_resolution
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
+        '@ sh:shapes       = dcatap:Dataset_Property_dcat_spatialResolutionInMeters, ___TBD___(Kard Ã¤ndert sich bei DCAT-AP 2.1 von [*] auf  [0..1])
     <<optional>> dcat:temporalResolution ~> rdfs:Literal [*]
         '@ rdfs:label        = Zeitliche AuflÃ¶sung
         '@ _:internalLink    = datensatz-zeitliche-auflosung
@@ -478,7 +516,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment      = Diese Eigenschaft bezieht sich auf den kÃ¼rzesten im Datensatz auflÃ¶sbaren Zeitraum.
         '@ rdf:about         = http://www.w3.org/ns/dcat#temporalResolution
         '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial_resolution
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
+        '@ sh:shapes         = dcatap:Dataset_Property_dcat_temporalResolution, ___TBD___(Kard Ã¤ndert sich bei DCAT-AP 2.1 von [*] auf  [0..1])
     <<optional>> dcat:granularity ~> skos:Concept [0..1]
         '@ rdfs:label      = Abgedeckte zeitliche GranularitÃ¤t (DEPRECATED)
         '@ _:internalLink  = datensatz-abgedeckte-zeitliche-granularitat-deprecated
@@ -486,8 +524,8 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = [DEPRECATED](#glossar-deprecated): Diese Eigenschaft beschreibt die durch den Datensatz abgedeckte zeitliche GranularitÃ¤t (z.B. wÃ¶chentlich, monatlich, jÃ¤hrlich).
         '@ rdf:about       = http://www.w3.org/ns/dcat#granularity
         '@ _:deOriginal    = Von DCAT-AP.de eingefÃ¼hrte Eigenschaft. Inzwischen Ã¼berholt durch neue Eigenschaften zur Beschreibung von zeitlichen Parametern (z.B. [`dcat:temporalResolution`](#datensatz-zeitliche-auflosung)).
-        '@ adms:versionNotes = 2.0: [DEPRECATED](#glossar-deprecated)
         '@ _:vocabularyLink = #kv-frequency
+        '@ sh:shapes       = ___TBD___(deutsche Besonderheit, kein Test des Vokabulars, Maximalzahl 1, deprecated)
     <<optional>> prov:qualifiedAttribution ~> prov:Attribution [*]
         '@ rdfs:label      = Rollenzuordnung
         '@ _:internalLink  = datensatz-rollenzuordnung
@@ -495,7 +533,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Verbindet den Datensatz Ã¼ber die Klasse `prov:Attribution` mit einem Agenten, der in beschriebener Weise Verantwortung fÃ¼r ihn trÃ¤gt.
         '@ rdf:about       = https://www.w3.org/TR/prov-o/#qualifiedAttribution
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_qualified_attribution
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine prov:Attribution)
     <<optional>> dcat:qualifiedRelation ~> dcat:Relationship [*]
         '@ rdfs:label      = Qualifizierte Beziehung
         '@ _:internalLink  = datensatz-qualifizierte-beziehung
@@ -503,7 +541,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Link zu einer Beschreibung (in Form der Klasse `dcat:Relationship`) einer Beziehung zu einer anderen Ressource.
         '@ rdf:about       = http://www.w3.org/ns/dcat#qualifiedRelation
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_qualified_relation
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine dcat:Relation)
     <<optional>> dct:isReferencedBy ~> rdfs:Resource [*]
         '@ rdfs:label        = Wird Referenziert
         '@ _:internalLink    = datensatz-wird-referenziert
@@ -511,7 +549,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment      = Diese Eigenschaft verweist auf eine Ressource, zum Beispiel eine VerÃ¶ffentlichung, die ihrerseits auf den Datensatz referenziert, ihn verlinkt oder zitiert.
         '@ rdf:about         = http://purl.org/dc/terms/isReferencedBy
         '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_is_referenced_by
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
+        '@ sh:shapes         = dcatap:Dataset_Property_dc_isReferencedBy (erlaubt auch BlankNodes)
     <<optional>> dct:references ~> rdfs:Resource [*]
         '@ rdfs:label        = Referenziert
         '@ _:internalLink    = datensatz-referenziert
@@ -520,7 +558,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment      = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#verweis-auf-referenzobjekte) genauer beschrieben.
         '@ rdf:about         = http://purl.org/dc/terms/references
         '@ _:deOriginal      = Von DCAT-AP.de eingefÃ¼hrte Eigenschaft.
-        '@ adms:versionNotes = 2.0: Neu durch DCAT-AP.de hinzugefÃ¼gt.
+        '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
 }   
 '@ rdfs:label      = Datensatz
 '@ _:internalLink  = #klasse-datensatz
@@ -540,8 +578,8 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:comment      = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zur-geografischen-abdeckung) genauer beschrieben.
     '@ rdf:about         = http://purl.org/dc/terms/spatial
     '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial
-    '@ adms:versionNotes = 2.0: Ã„nderung von optional auf recommended. Umbenennung von "Standort" in "RÃ¤umliche Abdeckung".
-    '@ _:vocabularyLink = #kv-spatial
+    '@ _:vocabularyLink  = #kv-spatial
+    '@ sh:shapes         = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars, schwierig hier, kein Test, ob Ziel dct:Location)
 
 "dcat:Dataset" - -> "*" "dct:PeriodOfTime" : <<recommended>> dct:temporal
     '@ rdfs:label        = Zeitliche Abdeckung
@@ -550,7 +588,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:comment      = Ein Zeitintervall, welches durch Start- und Endzeitpunkt bezeichnet bzw. definiert ist.
     '@ rdf:about         = http://purl.org/dc/terms/temporal
     '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_temporal
-    '@ adms:versionNotes = 2.0: Verbindlichkeit wurde von optional auf empfohlen hochgestuft. Umbenennung von "Zeitraum" in "Zeitliche Abdeckung".
+    '@ sh:shapes         = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine dct:PeriodOfTime)
 
 "dcat:Dataset" -up-> "*"     "dcat:Dataset"       : <<optional>> dct:source
     '@ rdfs:label      = Quelle des Datensatzes
@@ -560,24 +598,26 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#quelle-von-metadaten) genauer beschrieben.
     '@ rdf:about       = http://purl.org/dc/terms/source
     '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source
+    '@ sh:shapes       = ___TBD___(kein Test, ob Ziel ein dcat:Dataset)
 
 "dcat:Dataset" -up-> "*"     "dcat:Dataset"       : <<optional>> dct:hasVersion
     '@ rdfs:label      = Weitere Version
     '@ _:internalLink  = datensatz-weitere-version
     '@ rdfs:range      = http://www.w3.org/ns/dcat#Dataset
-    '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf eine verwandte Datenstruktur in Form einer weiteren/nachfolgenden Version, Edition oder Adaption der beschriebenen Datenstruktur.
-    '@ rdfs:comment    = [DEPRECATED](#glossar-deprecated): dct:hasVersion verweist auf die Datenstruktur vom Typ "Collection" zur Gruppierung von Einzelelementen Ã¼ber Datenstrukturen.
+    '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf einen verwandten Datensatz in Form einer weiteren/nachfolgenden Version, Edition oder Adaption des beschriebenen Datensatzes.
+    '@ rdfs:comment    = [DEPRECATED](#glossar-deprecated): dct:hasVersion verweist auf den Datensatz vom Typ "Collection" zur Gruppierung von Einzelelementen Ã¼ber DatensÃ¤tze.
     '@ rdf:about       = http://purl.org/dc/terms/hasVersion
     '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/hasVersion
-    '@ adms:versionNotes = 2.0: Beschreibung Ã¼berarbeitet. Die Eigenschaft soll nicht mehr fÃ¼r Collections verwendet werden ([DEPRECATED](#glossar-deprecated)). HierfÃ¼r soll kÃ¼nftig [`dcat:DatasetSeries`](https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series) verwendet werden.
+    '@ sh:shapes       = ___TBD___(kein Test, ob Ziel ein dcat:Dataset)
 
 "dcat:Dataset" -up-> "*"     "dcat:Dataset"       : <<optional>> dct:isVersionOf
     '@ rdfs:label      = Ist Version von
     '@ _:internalLink  = datensatz-ist-version
     '@ rdfs:range      = http://www.w3.org/ns/dcat#Dataset
-    '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf eine verwandte Datenstruktur, die von der beschriebenen Datenstruktur eine vorherige Version, Edition oder Adaption ist.
+    '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf einen verwandten Datensatz, der vom beschriebenen Datensatz eine vorherige Version, Edition oder Adaption ist.
     '@ rdf:about       = http://purl.org/dc/terms/isVersion
     '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isVersion
+    '@ sh:shapes       = ___TBD___(kein Test, ob Ziel ein dcat:Dataset)
 
 "dcat:Dataset" - -> "*"     "dcat:Distribution"  : <<recommended>> dcat:distribution
     '@ rdfs:label      = Distribution
@@ -586,14 +626,16 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:comment    = Diese Eigenschaft verknÃ¼pft den Datensatz mit einer verfÃ¼gbaren Distribution.
     '@ rdf:about       = http://www.w3.org/ns/dcat#distribution
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_distribution
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine dcat:Distribution)
 
 "dcat:Dataset" - -> "*"     "dcat:Distribution"  : <<optional>> adms:sample
     '@ rdfs:label      = Beispieldistribution
     '@ _:internalLink  = datensatz-beispieldistribution
     '@ rdfs:range      = http://www.w3.org/ns/dcat#Distribution
-    '@ rdfs:comment    = Diese Eigenschaft verweist auf eine Beispieldistribution der Datenstruktur.
+    '@ rdfs:comment    = Diese Eigenschaft verweist auf eine Beispieldistribution des Datensatzes.
     '@ rdf:about       = http://www.w3.org/ns/adms#sample
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-adms/#adms-sample
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine dcat:Distribution)
 
 "dcat:Dataset" - -> "0..1"  "foaf:Agent"         : <<recommended>> dct:publisher
     '@ rdfs:label      = Herausgeber
@@ -604,6 +646,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdf:about       = http://purl.org/dc/terms/publisher
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_publisher
     '@ _:deOriginal    = Es ist zugleich die Stelle oder Person, die Ã¼ber die EinrÃ¤umung von Zugang und Nutzungsrechten fÃ¼r Dritte entschieden hat.
+    '@ sh:shapes       = dcatap:Dataset_Property_dct_publisher (kein Test, ob Ziel ein foaf:Agent)
 
 "dcat:Dataset" - -> "*"     "foaf:Agent"         : <<optional>> dct:creator
     '@ rdfs:label      = Autor
@@ -614,6 +657,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdf:about       = http://purl.org/dc/terms/creator
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_creator
     '@ _:deOriginal    = Von DCAT-AP.de eingefÃ¼hrte Eigenschaft.
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel foaf:Agent)
 
 "dcat:Dataset" - -> "*"     "foaf:Agent"         : <<optional>> dct:contributor
     '@ rdfs:label      = Bearbeiter
@@ -624,16 +668,18 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdf:about       = http://purl.org/dc/terms/contributor
     '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor
     '@ _:deOriginal    = Von DCAT-AP.de eingefÃ¼hrte Eigenschaft.
+    '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test, ob Ziel foaf:Agent)
 
 "dcat:Dataset" - -> "*"     "foaf:Agent"         : <<optional>> dcatde:originator
     '@ rdfs:label      = Urheber
     '@ _:internalLink  = datensatz-urheber
     '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
-    '@ rdfs:comment    = Diese Eigenschaft verweist auf die Personen, die Urheberrechte an der Datenstruktur haben. GeschÃ¼tzt ist laut Urheberrecht ein Werk, das einer persÃ¶nlichen geistigen SchÃ¶pfung seines Urhebers entspringt.
+    '@ rdfs:comment    = Diese Eigenschaft verweist auf die Personen, die Urheberrechte am Datensatz haben. GeschÃ¼tzt ist laut Urheberrecht ein Werk, das einer persÃ¶nlichen geistigen SchÃ¶pfung seines Urhebers entspringt.
     '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#weitere-wichtige-rollen) genauer beschrieben.
     '@ rdfs:comment    = Vgl.: https://de.wikipedia.org/wiki/Urheberrecht_(Deutschland).
     '@ rdf:about       = http://dcat-ap.de/def/dcatde/originator
     '@ _:deOriginal    = Von DCAT-AP.de eingefÃ¼hrte Eigenschaft.
+    '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test, ob Ziel foaf:Agent)
 
 "dcat:Dataset" - -> "*"     "foaf:Agent"         : <<optional>> dcatde:maintainer
     '@ rdfs:label      = Verwalter
@@ -643,6 +689,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#weitere-wichtige-rollen) genauer beschrieben.
     '@ rdf:about       = http://dcat-ap.de/def/dcatde/maintainer
     '@ _:deOriginal    = Von DCAT-AP.de eingefÃ¼hrte Eigenschaft.
+    '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test, ob Ziel foaf:Agent)
 
 class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
     <<mandatory>> dcat:endpointURL ~> rdfs:Resource [1..*]
@@ -652,6 +699,7 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Die URL unter der API-Endpunkt eines Datenservices erreichbar ist.
         '@ rdf:about       = http://www.w3.org/ns/dcat#endpointURL
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_endpoint_url
+        '@ sh:shapes       = dcatap:DataService_Property_dcat_endpointURL (erlaubt auch BlankNodes)
     <<mandatory>> dct:title ~> rdfs:Literal [1..*]
         '@ rdfs:label      = Titel
         '@ _:internalLink  = datenservice-titel
@@ -659,6 +707,7 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft bezeichnet den einem Datenservice zugewiesenen Titel. Sie kann fÃ¼r parallele Sprachversionen wiederholt werden.
         '@ rdf:about       = http://purl.org/dc/terms/title
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title
+        '@ sh:shapes       = dcatap:DataService_Property_dct_title
 
     <<recommended>> dcat:endpointDescription ~> rdfs:Resource [*]
         '@ rdfs:label      = Beschreibung des Endpunktes
@@ -667,15 +716,16 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Die Beschreibung der Services, die unter den angebenen Endpunkten erreicht werden kÃ¶nnen.
         '@ rdf:about       = http://www.w3.org/ns/dcat#endpointDescription
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_endpoint_description
+        '@ sh:shapes       = dcatap:DataService_Property_dcat_endpointDescription (erlaubt auch BlankNodes)
     <<recommended>> dcatap:availability ~> skos:Concept [0..1]
         '@ rdfs:label      = VerfÃ¼gbarkeit
         '@ _:internalLink  = datenservice-verfugbarkeit
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
         '@ rdfs:comment    = Geplante VerfÃ¼gbarkeit des Datenservices als Auswahl aus einer festen Liste von Werten via DCAT-AP URIs.
         '@ rdf:about       = http://data.europa.eu/r5r/availability
-        '@ adms:versionNotes = 2.0: Neu von DCAT-AP.de hinzugefÃ¼gt.
         '@ _:vocabularyLink = #kv-availability
         '@ _:deOriginal    = DCAT-AP.de ordnet diese Eigenschaft allen DCAT-Ressourcen und Distributionen zu und empfiehlt sie fÃ¼r den `dcat:DataService`.
+        '@ sh:shapes       = ___TBD___(deutsche Besonderheit, kein Test des Vokabulars, Maximalzahl 1)
 
     <<optional>> dct:description ~> rdfs:Literal [*]
         '@ _:internalLink  = datenservice-beschreibung
@@ -684,6 +734,7 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft enthÃ¤lt eine Beschreibung des Datenservices als Freitext. Sie kann fÃ¼r parallel existierende Sprachversionen wiederholt werden.
         '@ rdf:about       = http://purl.org/dc/terms/description
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_description
+        '@ sh:shapes       = dcatap:DataService_Property_dct_description
     <<optional>> dct:license ~> dct:LicenseDocument [0..1]
         '@ rdfs:label      = Lizenz
         '@ _:internalLink  = datenservice-lizenz
@@ -691,6 +742,7 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf die Lizenz, mit welcher der Datenservice verwendet oder seine Inhalte wiederverwendet werden kÃ¶nnen.
         '@ rdf:about       = http://purl.org/dc/terms/license
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_license
+        '@ sh:shapes       = dcatap:DataService_Property_dct_license, ___TBD___(kein Test des Vokabulars)
     <<optional>> dct:accessRights ~> dct:RightsStatement [0..1]
         '@ rdfs:label      = Grad der ZugÃ¤nglichkeit
         '@ _:internalLink  = datenservice-grad-zuganglichkeit
@@ -698,6 +750,7 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft verweist auf Informationen, die darlegen, ob der Datenservice Ã¶ffentlich zugÃ¤nglich ist, ZugriffseinschrÃ¤nkungen existieren oder er nicht-Ã¶ffentlich ist.
         '@ rdf:about       = http://purl.org/dc/terms/accessRights
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_access_rights
+        '@ sh:shapes       = dcatap:DataService_Property_dct_accessRights
 }
 '@ rdfs:label      = Datenservice
 '@ _:internalLink  = #klasse-datenservice
@@ -719,16 +772,18 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
     '@ rdfs:comment    = Verweist auf einen Datensatz, der vom Datenservice ausgeliefert werden kann.
     '@ rdf:about       = http://www.w3.org/ns/dcat#servesdataset
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_serves_dataset
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Dataset)
 
 class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
     <<mandatory>> dcat:accessURL ~> rdfs:Resource [1..*]
         '@ rdfs:label      = Zugangs-URL
         '@ _:internalLink  = distribution-zugangs-url
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
-        '@ rdfs:comment    = Diese Eigenschaft enthÃ¤lt eine URL-Adresse, die Zugriff auf die Distribution einer Datenstruktur ermÃ¶glicht. 
+        '@ rdfs:comment    = Diese Eigenschaft enthÃ¤lt eine URL-Adresse, die Zugriff auf die Distribution eines Datensatzes ermÃ¶glicht. 
         '@ rdfs:comment    = Die mit der Zugangs-URL erreichbare Ressource kann Informationen zur VerfÃ¼gung stellen, wie die Distribution erreicht werden kann oder direkt auf eine Datei verweisen, die die Daten im angegebenen Format beinhaltet.
         '@ rdf:about       = http://www.w3.org/ns/dcat#accessURL
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_url
+        '@ sh:shapes       = dcatap:Distribution_Property_dcat_accessURL (erlaubt auch BlankNodes)
 
     <<recommended>> dct:title ~> rdfs:Literal [*]
         '@ rdfs:label      = Titel
@@ -738,6 +793,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdf:about       = http://purl.org/dc/terms/title
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_title
         '@ _:deOriginal    = Verbindlichkeit wurde von optional auf empfohlen hochgestuft.
+        '@ sh:shapes       = dcatap:Distribution_Property_dct_title
     <<recommended>> dct:modified ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Aktualisierungsdatum
         '@ _:internalLink  = distribution-aktualisierungsdatum
@@ -746,6 +802,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdf:about       = http://purl.org/dc/terms/modified
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_update_date
         '@ _:deOriginal    = Verbindlichkeit wurde von optional auf empfohlen hochgestuft.
+        '@ sh:shapes       = dcatap:Distribution_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
     <<recommended>> dct:license ~> dct:LicenseDocument [0..1]
         '@ rdfs:label      = Lizenz
         '@ _:internalLink  = distribution-lizenz
@@ -754,6 +811,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdf:about       = http://purl.org/dc/terms/license
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_license
         '@ _:vocabularyLink = #kv-licenses
+        '@ sh:shapes       = dcatap:Distribution_Property_dct_license, ___TBD___(kein Test des Vokabulars)
     <<recommended>> dct:format ~> dct:MediaType [0..1]
         '@ rdfs:label      = Format
         '@ _:internalLink  = distribution-format
@@ -763,24 +821,25 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdf:about       = http://purl.org/dc/terms/format
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_format
         '@ _:vocabularyLink = #kv-file-type
+        '@ sh:shapes       = dcatap:Distribution_Property_dct_format, ___TBD___(kein Test des Vokabulars)
     <<recommended>> dcatap:availability ~> skos:Concept [0..1]
         '@ rdfs:label      = VerfÃ¼gbarkeit
         '@ _:internalLink  = distribution-verfugbarkeit
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
-        '@ rdfs:comment    = VerfÃ¼gbarkeit der Distribution einer Datenstruktur als Auswahl aus einer festen Liste von Werten via DCAT-AP URIs.
+        '@ rdfs:comment    = VerfÃ¼gbarkeit der Distribution eines Datensatzes, als Auswahl aus einer festen Liste von Werten via DCAT-AP URIs.
         '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#status-und-erwartete-verfugbarkeit) genauer beschrieben.
         '@ rdf:about       = http://data.europa.eu/r5r/availability
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
         '@ _:vocabularyLink = #kv-availability
+        '@ sh:shapes       = dcatap:Distribution_Property_dcatap_availability, ___TBD___(kein Test des Vokabulars)
     <<recommended>> dcatde:plannedAvailability ~> rdfs:Resource [0..1]
         '@ rdfs:label      = VerfÃ¼gbarkeit (DEPRECATED)
         '@ _:internalLink  = distribution-verfugbarkeit-deprecated
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
-        '@ rdfs:comment    = VerfÃ¼gbarkeit der Distribution einer Datenstruktur als Auswahl aus einer festen Liste von Werten via DCAT-AP.de URIs.
+        '@ rdfs:comment    = VerfÃ¼gbarkeit der Distribution eines Datensatzes, als Auswahl aus einer festen Liste von Werten via DCAT-AP.de URIs.
         '@ rdf:about       = http://dcat-ap.de/def/dcatde/plannedAvailability
         '@ _:deOriginal    = Die Eigenschaft wurde auf Ebene von DCAT-AP als [`dcatap:availability`](#distribution-verfugbarkeit) eingefÃ¼hrt.
-        '@ adms:versionNotes = 2.0: [DEPRECATED](#glossar-deprecated).
         '@ _:vocabularyLink = #kv-planned-availability
+        '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test des Vokabulars, kein Test auf Maximalzahl, Deprecated-Warnung)
 
     <<optional>> dcatde:licenseAttributionByText ~> rdfs:Literal [*]
         '@ rdfs:label      = Namensnennungstext fÃ¼r By-Clauses
@@ -791,6 +850,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angabe-von-by-texten) genauer beschrieben.
         '@ rdf:about       = http://dcat-ap.de/def/dcatde/licenseAttributionByText
         '@ _:deOriginal    = Hilfskonstrukt bis zur LÃ¶sung in DCAT-AP.
+        '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test, ob Ziel Literal)
     <<optional>> dct:description ~> rdfs:Literal [*]
         '@ rdfs:label      = Beschreibung
         '@ _:internalLink  = distribution-beschreibung
@@ -800,6 +860,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdf:about       = http://purl.org/dc/terms/description
         '@ _:deOriginal    = Verbindlichkeit wurde von empfohlen auf optional gesenkt.
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_description
+        '@ sh:shapes       = dcatap:Distribution_Property_dct_description
     <<optional>> dcat:byteSize ~> rdfs:Literal [0..1]
         '@ rdfs:label      = GrÃ¶ÃŸe in Bytes
         '@ _:internalLink  = distribution-grosse-in-bytes
@@ -808,6 +869,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft enthÃ¤lt die GrÃ¶ÃŸe der Distribution in Bytes.
         '@ rdf:about       = http://www.w3.org/ns/dcat#byteSize
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_size
+        '@ sh:shapes       = dcatap:Distribution_Property_dcat_byteSize
     <<optional>> dct:issued ~> rdfs:Literal [0..1]
         '@ rdfs:label      = VerÃ¶ffentlichungsdatum
         '@ _:internalLink  = distribution-veroffentlichungsdatum
@@ -816,6 +878,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft enthÃ¤lt das Datum der Herausgabe/Emission (z.B. in Form einer VerÃ¶ffentlichung) der Distribution.
         '@ rdf:about       = http://purl.org/dc/terms/issued
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_release_date
+        '@ sh:shapes       = dcatap:Distribution_Property_dct_issued (erlaubt auch xsd:gYear und xsd:gYearMonth)
     <<optional>> dcat:downloadURL ~> rdfs:Resource [*]
         '@ rdfs:label      = Download-URL
         '@ _:internalLink  = distribution-download-url
@@ -824,6 +887,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#zugriff-auf-eine-herunterladbare-datei) genauer beschrieben.
         '@ rdf:about       = http://www.w3.org/ns/dcat#downloadURL
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_download_url
+        '@ sh:shapes       = dcatap:Distribution_Property_dcat_downloadURL (erlaubt auch BlankNodes)
     <<optional>> dct:language ~> dct:LinguisticSystem [*]
         '@ rdfs:label      = Sprache
         '@ _:internalLink  = distribution-sprache
@@ -832,8 +896,8 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft kann wiederholt werden, sofern die Distribution in mehreren Sprachen vorliegt.
         '@ rdf:about       = http://purl.org/dc/terms/language
         '@ rdfs:seeAlso    = Kein Link auf W3C-DCAT, da von DCAT-AP eingefÃ¼hrt
-        '@ adms:versionNotes = 2.0: Beschreibung klarer formuliert. Kontrolliertes Vokabular angegeben.
         '@ _:vocabularyLink = #kv-languages
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars)
     <<optional>> foaf:page ~> foaf:Document [*]
         '@ rdfs:label      = Dokumentation
         '@ _:internalLink  = distribution-dokumentation
@@ -841,6 +905,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft verweist auf eine Webseite oder ein Dokument (enthÃ¤lt eine URL-Adresse) mit Informationen Ã¼ber die Distribution.
         '@ rdf:about       = http://xmlns.com/foaf/0.1/page
         '@ rdfs:seeAlso    = http://xmlns.com/foaf/spec/#term_page
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource)
     <<optional>> dct:rights ~> dct:RightsStatement [0..1]
         '@ rdfs:label      = Grad der ZugÃ¤nglichkeit
         '@ _:internalLink  = distribution-grad-zuganglichkeit
@@ -848,6 +913,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft verweist auf eine juristische Quelle, welche die mit der Distribution assoziierten Rechte spezifiziert.
         '@ rdf:about       = http://purl.org/dc/terms/accessRights
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_rights
+        '@ sh:shapes       = dcatap:Distribution_Property_dct_rights, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
     <<optional>> dct:conformsTo ~> dct:Standard [*]
         '@ rdfs:label      = Konform zu Standard
         '@ _:internalLink  = distribution-konform-zu-standard
@@ -856,7 +922,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#konformitat-zu-bestehenden-standards) genauer beschrieben.
         '@ rdf:about       = http://purl.org/dc/terms/conformsTo
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_conforms_to
-        '@ adms:versionNotes = 2.0: Beschreibung angepasst. Label der Eigenschafft von "Application Profile der Metadaten" zu "Konform zu Standard" geÃ¤ndert.
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource oder BlankNode)
     <<optional>> dcat:mediaType ~> dct:MediaType [0..1]
         '@ rdfs:label      = Medientyp
         '@ _:internalLink  = distribution-medientyp
@@ -866,6 +932,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdf:about       = http://www.w3.org/ns/dcat#mediaType
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_media_type
         '@ _:vocabularyLink = #kv-iana-media-types
+        '@ sh:shapes       = dcatap:Distribution_Property_dcat_mediaType, ___TBD___(kein Test des Vokabulars)
     <<optional>> dcat:compressFormat ~> dct:MediaType [0..1]
         '@ rdfs:label      = Kompressionsformat
         '@ _:internalLink  = distribution-kompressionsformat
@@ -873,8 +940,8 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf das Dateiformat, in dem die Daten der Distribution in komprimierter Form, z.B. um die GrÃ¶ÃŸe zu reduzieren, zum Download angeboten werden.
         '@ rdf:about       = http://www.w3.org/ns/dcat#mediaType
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_compression_format
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
         '@ _:vocabularyLink = #kv-iana-media-types
+        '@ sh:shapes       = dcatap:Distribution_Property_dcat_compressFormat, ___TBD___(kein Test des Vokabulars)
     <<optional>> dcat:packageFormat ~> dct:MediaType [0..1]
         '@ rdfs:label      = Paketformat
         '@ _:internalLink  = distribution-paketformat
@@ -882,8 +949,8 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf das Dateiformat, in dem die Daten der Distribution zusammengeschnÃ¼rt zum Download angeboten werden. Zum Beispiel, um den Download zu erleichtern.
         '@ rdf:about       = http://www.w3.org/ns/dcat#mediaType
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_packaging_format
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
         '@ _:vocabularyLink = #kv-iana-media-types
+        '@ sh:shapes       = dcatap:Distribution_Property_dcat_packageFormat, ___TBD___(kein Test des Vokabulars)
     <<optional>> odrl:hasPolicy ~> odrl:Policy [0..1]
         '@ rdfs:label      = Regelwerk
         '@ _:internalLink  = distribution-regelwerk
@@ -891,7 +958,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft verweist auf ein Regelwerk, das die Rechte die mit dieser Distribution assoziiert werden unter Verwendung des ODRL Vokabulars beschreibt.
         '@ rdf:about       = https://www.w3.org/TR/odrl-vocab/#term-hasPolicy
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_has_policy
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
+        '@ sh:shapes       = dcatap:Distribution_Property_odrl_hasPolicy, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
     <<optional>> adms:status ~> skos:Concept [0..1]
         '@ rdfs:label      = Status
         '@ _:internalLink  = distribution-status
@@ -901,12 +968,13 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdf:about       = http://www.w3.org/ns/adms#status
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-adms/#adms-status
         '@ _:vocabularyLink = #kv-adms-status
+        '@ sh:shapes       = dcatap:Distribution_Property_adms_status, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
 }
 '@ rdfs:label      = Distribution
 '@ _:internalLink  = #klasse-distribution
 '@ rdf:about       = http://www.w3.org/ns/dcat#Distribution
 '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution
-'@ rdfs:comment    = Eine physische VerkÃ¶rperung/ReprÃ¤sentanz der Datenstruktur in einem spezifischen Format.
+'@ rdfs:comment    = Eine physische VerkÃ¶rperung/ReprÃ¤sentanz des Datensatzes in einem spezifischen Format.
 '@ _:usedBy        = dcat:distribution, adms:sample (dcat:Distribution)
 
 "dcat:Distribution"    - -> "*" "dcat:DataService"  : <<optional>> dcat:accessService
@@ -916,7 +984,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
     '@ rdfs:comment    = Diese Eigenschaft verweist auf den Datenservice, der Zugang zur Distribution ermÃ¶glicht.
     '@ rdf:about       = http://www.w3.org/ns/dcat#accessService
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_service
-    '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource oder BlankNode)
 
 "dcat:Distribution"    - -> "0..1"  "spdx:Checksum" : <<optional>> spdx:checksum
     '@ rdfs:label      = PrÃ¼fsumme
@@ -926,6 +994,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
     '@ rdf:about       = http://spdx.org/rdf/terms#checksum
     '@ rdfs:seeAlso    = https://spdx.org/rdf/terms/#d4e165
     '@ _:deOriginal    = DCAT-AP.de stellt ein erweitertes kontrolliertes Vokabular zur VerfÃ¼gung, dass in der [Klasse PrÃ¼fsumme](#klasse-prufsumme) von der [Eigenschaft Algorithmus](#prufsumme-algorithmus) verwendet wird.
+    '@ sh:shapes       = dcatap:Distribution_Property_spdx_checksum, ___TBD___(kein Test, ob Ziel eine spdx:Checksum)
 
 class "dct:PeriodOfTime" <<recommended>> {
     <<recommended>> dcat:startDate ~> rdfs:Literal [0..1]
@@ -936,7 +1005,7 @@ class "dct:PeriodOfTime" <<recommended>> {
         '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-zeitliche-abdeckung) genauer beschrieben.
         '@ rdf:about       = http://www.w3.org/ns/dcat#startDate
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:period_start_date
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt. Zudem sind bei dieser Eigenschaft auch `xsd:gYear` und `xsd:gYearMonth` erlaubt.
+        '@ sh:shapes       = dcatap:PeriodOfTime_Property_dcat_startDate
     <<recommended>> dcat:endDate ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Endzeitpunkt
         '@ _:internalLink  = zeitraum-endzeitpunkt
@@ -945,7 +1014,7 @@ class "dct:PeriodOfTime" <<recommended>> {
         '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-zeitliche-abdeckung) genauer beschrieben.
         '@ rdf:about       = http://www.w3.org/ns/dcat#endDate
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:period_end_date
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt. Zudem sind bei dieser Eigenschaft auch `xsd:gYear` und `xsd:gYearMonth` erlaubt.
+        '@ sh:shapes       = dcatap:PeriodOfTime_Property_dcat_endDate
 
     <<optional>> time:hasBeginning ~> time:Instant [0..1]
         '@ rdfs:label      = Anfang
@@ -955,7 +1024,7 @@ class "dct:PeriodOfTime" <<recommended>> {
         '@ rdfs:comment    = Mit der Range `time:Instant` kÃ¶nnen auch unkonventionelle Zeitangaben gemacht werden.
         '@ rdf:about       = https://www.w3.org/TR/owl-time/#time:hasBeginning
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:period_has_beginning
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
+        '@ sh:shapes       = dcatap:PeriodOfTime_Property_time_hasBeginning, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
     <<optional>> time:hasEnd ~> time:Instant [0..1]
         '@ rdfs:label      = Ende
         '@ _:internalLink  = zeitraum-ende
@@ -964,7 +1033,7 @@ class "dct:PeriodOfTime" <<recommended>> {
         '@ rdfs:comment    = Mit der Range `time:Instant` kÃ¶nnen auch unkonventionelle Zeitangaben gemacht werden.
         '@ rdf:about       = https://www.w3.org/TR/owl-time/#time:hasEnd
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:period_has_end
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
+        '@ sh:shapes       = dcatap:PeriodOfTime_Property_time_hasEnd, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
     <<optional>> schema:startDate ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Startzeitpunkt (DEPRECATED)
         '@ _:internalLink  = zeitraum-startzeitpunkt-deprecated
@@ -972,7 +1041,7 @@ class "dct:PeriodOfTime" <<recommended>> {
         '@ rdfs:comment    = Diese Eigenschaft bezeichnet den Beginn des Zeitraumes.
         '@ rdf:about       = https://schema.org/startDate
         '@ rdfs:seeAlso    = https://schema.org/startDate
-        '@ adms:versionNotes = 2.0: [DEPRECATED](#glossar-deprecated).
+        '@ sh:shapes       = ___TBD___(kein Test auf Maximalzahl, kein Test auf getyptes Literal, keine Deprecated-Warnung)
     <<optional>> schema:endDate ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Endzeitpunkt (DEPRECATED)
         '@ _:internalLink  = zeitraum-endzeitpunkt-deprecated
@@ -980,7 +1049,7 @@ class "dct:PeriodOfTime" <<recommended>> {
         '@ rdfs:comment    = Diese Eigenschaft bezeichnet das Ende des Zeitraumes.
         '@ rdf:about       = https://schema.org/endDate
         '@ rdfs:seeAlso    = https://schema.org/endDate
-        '@ adms:versionNotes = 2.0: [DEPRECATED](#glossar-deprecated).
+        '@ sh:shapes       = ___TBD___(kein Test auf Maximalzahl, kein Test auf getyptes Literal, keine Deprecated-Warnung)
 }
 '@ rdfs:label        = Zeitraum
 '@ _:internalLink    = #klasse-zeitraum
@@ -1001,7 +1070,7 @@ class "dct:Location" <<optional>> {
         '@ rdfs:comment    = Diese Eigenschaft beschreibt die Bounding Box einer Ressource.
         '@ rdf:about       = http://www.w3.org/ns/dcat#bbox
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:location_bbox
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
+        '@ sh:shapes       = dcatap:Location_Shape_Property_dcat_bbox
     <<recommended>> dcat:centroid ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Geografischer Mittelpunkt
         '@ _:internalLink  = standort-geografischer-mittelpunkt
@@ -1010,7 +1079,7 @@ class "dct:Location" <<optional>> {
         '@ rdfs:comment    = Diese Eigenschaft beschreibt den geografischen Mittelpunkt einer Ressource.
         '@ rdf:about       = http://www.w3.org/ns/dcat#centroid
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:location_centroid
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
+        '@ sh:shapes       = dcatap:Location_Shape_Property_dcat_centroid
 
     <<optional>> locn:geometry ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Geometrie
@@ -1020,6 +1089,7 @@ class "dct:Location" <<optional>> {
         '@ rdfs:comment    = Diese Eigenschaft beschreibt die Geometrie einer Ressource.
         '@ rdf:about       = http://www.w3.org/ns/locn#geometry
         '@ rdfs:seeAlso    = https://www.w3.org/ns/locn#locn:geometry
+        '@ sh:shapes       = dcatap:Location_Shape_Property_locn_geometry
 }
 '@ rdfs:label      = Standort
 '@ _:internalLink  = #klasse-standort
@@ -1039,7 +1109,8 @@ class "foaf:Agent" <<mandatory>> {
         '@ rdfs:comment      = Sie kann fÃ¼r unterschiedliche AusprÃ¤gungen des Namens (z.B. der Name in unterschiedlichen Sprachen) wiederholt werden.
         '@ rdf:about         = http://xmlns.com/foaf/0.1/name
         '@ rdfs:seeAlso      = http://xmlns.com/foaf/spec/#term_name
-        '@ _:vocabularyLink = #kv-adms-publisher
+        '@ _:vocabularyLink  = #kv-adms-publisher
+        '@ sh:shapes         = dcatap:Agent_Property_foaf_name
     <<optional>> dct:type ~> skos:Concept [0..1]
         '@ rdfs:label        = Typ
         '@ _:internalLink    = verantwortliche-stelle-typ
@@ -1048,12 +1119,13 @@ class "foaf:Agent" <<mandatory>> {
         '@ _:vocabularyLinkv = #kv-adms-publisher
         '@ rdf:about         = http://purl.org/dc/terms/type
         '@ rdfs:seeAlso      = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type
+        '@ sh:shapes         = dcatap:Agent_Property_dct_type, ___TBD___(kein Test des Vokabulars)
 }
 '@ rdfs:label      = Verantwortliche Stelle
 '@ _:internalLink  = #klasse-verantwortliche-stelle
 '@ rdf:about       = http://xmlns.com/foaf/0.1/Agent
 '@ rdfs:seeAlso    = http://xmlns.com/foaf/spec/#term_Agent
-'@ rdfs:comment    = Eine Stelle oder Person, welche mit Katalogen und Datenstrukturen in unterschiedlichen RollenausprÃ¤gungen assoziiert ist.
+'@ rdfs:comment    = Eine Stelle oder Person, welche mit Katalogen und DatensÃ¤tzen in unterschiedlichen RollenausprÃ¤gungen assoziiert ist.
 '@ _:usedBy        = dct:publisher (dcat:Catalog), dct:publisher (dcat:Dataset), dct:creator (dcat:Dataset), ...
 
 class "adms:Identifier" <<optional>> {
@@ -1065,7 +1137,7 @@ class "adms:Identifier" <<optional>> {
         '@ rdfs:comment    = Diese Eigenschaft enthÃ¤lt einen datentypreferenzierten ID-String im Kontext des ID-Schemas.
         '@ rdf:about       = http://www.w3.org/2004/02/skos/core#notation
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-adms/#skos_notation
-        '@ adms:versionNotes = 2.0: Range neu formuliert. Auf "mandatory" korrigiert.
+        '@ sh:shapes         = dcatap:Identifier_Property_skos_notation, ___TBD___(kein Test auf minCount)
 }
 '@ rdfs:label      = Identifier
 '@ _:internalLink  = #klasse-identifier
@@ -1088,6 +1160,7 @@ class "spdx:Checksum" <<optional>> {
         '@ rdfs:seeAlso    = https://spdx.org/rdf/terms/#d4e52
         '@ _:deOriginal    = dcat-ap.de fÃ¼hrt eine eigene Liste an unterstÃ¼tzten Hashalgorithmen.
         '@ _:vocabularyLink = #kv-hash-algorithms
+        '@ sh:shapes       = dcatap:Checksum_Property_spdx_algorithm <- - DEAKTIVIEREN DA SHA1 ERZWUNGEN!, ___TBD___(kein Test des Vokabulars, minCount, maxCount)
     <<mandatory>> spdx:checksumValue ~> rdfs:Literal [1]
         '@ rdfs:label      = PrÃ¼fsummenwert
         '@ _:internalLink  = prufsumme-prufsummenwert
@@ -1096,6 +1169,7 @@ class "spdx:Checksum" <<optional>> {
         '@ rdfs:comment    = Diese Eigenschaft stellt einen hexadezimal kodierten Ãœbersichtswert in Kleinbuchstaben zur VerfÃ¼gung, welcher mittels eines spezifischen Algorithmus erzeugt wurde.
         '@ rdf:about       = http://spdx.org/rdf/terms#checksumValue
         '@ rdfs:seeAlso    = https://spdx.org/rdf/terms/#d4e1111
+        '@ sh:shapes       = dcatap:Checksum_Property_spdx_checksumValue
 }
 '@ rdfs:label      = PrÃ¼fsumme
 '@ _:internalLink  = #klasse-prufsumme
@@ -1113,6 +1187,7 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ rdfs:comment    = Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation des Katalogeintrags.
         '@ rdf:about       = http://purl.org/dc/terms/modified
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date
+        '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
 
     <<recommended>> dct:conformsTo ~> rdfs:Resource [0..1]
         '@ rdfs:label      = Application Profile der Metadaten
@@ -1121,6 +1196,7 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf das Application Profile zu dem die Metadaten im Katalog konform sind.
         '@ rdf:about       = http://purl.org/dc/terms/conformsTo
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:record_conforms_to
+        '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_conformsTo, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
     <<recommended>> adms:status ~> skos:Concept [0..1]
         '@ rdfs:label      = Ã„nderungstyp
         '@ _:internalLink  = katalogeintrag-anderungstyp
@@ -1129,7 +1205,7 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ rdf:about       = http://www.w3.org/ns/adms#status
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-adms/#adms-status
         '@ _:deOriginal    = Diese Eigenschaft wird von DCAT-AP.de nicht unterstÃ¼tzt, unter anderem weil das eigentlich vorgesehene Vokabular nicht vorhanden ist.
-        '@ adms:versionNotes = 2.0: Zu verwendendes Vokabular entfernt.
+        '@ sh:shapes       = dcatap:CatalogRecord_Property_adms_status, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode), ___TBD___(Warnung, dass Feld nicht zu verwenden ist)
     <<recommended>> dct:issued ~> rdfs:Literal [0..1]
         '@ rdfs:label      = VerÃ¶ffentlichungsdatum
         '@ _:internalLink  = katalogeintrag-veroffentlichungsdatum
@@ -1138,6 +1214,7 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ rdfs:comment    = Diese Eigenschaft enthÃ¤lt das Datum, an dem die Beschreibung der Ressource aufgenommen wurde.
         '@ rdf:about       = http://purl.org/dc/terms/issued
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:record_listing_date
+        '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_issued (erlaubt auch xsd:gYear und xsd:gYearMonth)
 
     <<optional>> dct:title ~> rdfs:Literal [*]
         '@ rdfs:label      = Titel
@@ -1147,6 +1224,7 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ rdfs:comment    = Diese Eigenschaft kann fÃ¼r parallele Sprachversionen des Katalogtitels wiederholt werden.
         '@ rdf:about       = http://purl.org/dc/terms/title
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:record_title
+        '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_title
     <<optional>> dct:description ~> rdfs:Literal [*]
         '@ rdfs:label      = Beschreibung
         '@ _:internalLink  = katalogeintrag-beschreibung
@@ -1155,6 +1233,7 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ rdfs:comment    = Diese Eigenschaft kann fÃ¼r unterschiedliche Sprachversionen wiederholt werden.
         '@ rdf:about       = http://purl.org/dc/terms/description
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:record_description
+        '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_description
     <<optional>> dct:language ~> dct:LinguisticSystem [*]
         '@ rdfs:label      = Sprache
         '@ _:internalLink  = katalogeintrag-sprache
@@ -1164,6 +1243,7 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ rdf:about       = http://purl.org/dc/terms/language
         '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/language
         '@ _:vocabularyLink = #kv-languages
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars)
 }
 '@ rdfs:label      = Katalogeintrag
 '@ _:internalLink  = #klasse-katalogeintrag
@@ -1179,12 +1259,14 @@ class "dcat:CatalogRecord" <<optional>> {
     '@ rdfs:comment    = Diese Eigenschaft verknÃ¼pft den Katalogeintrag mit der im Eintrag beschriebenen `dcat:Resource`.
     '@ rdf:about       = http://xmlns.com/foaf/0.1/primaryTopic
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:record_primary_topic
+    '@ sh:shapes       = dcatap:CatalogRecord_Property_foaf_primaryTopic
 "dcat:CatalogRecord" - -> "0..1"  "dcat:CatalogRecord" : <<optional>> dct:source
     '@ rdfs:label      = Original-Metadaten der Ressource
     '@ _:internalLink  = katalogeintrag-original-metadaten-der-ressource
     '@ rdfs:comment    = Diese Eigenschaft verweist auf die ursprÃ¼nglichen Metadaten, mit Hilfe derer die Metadaten des Katalogeintrags erstellt wurden.
     '@ rdf:about       = http://purl.org/dc/terms/source
     '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source
+    '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_source, ___TBD___(kein Test, ob Ziel ein dcat:CatalogRecord)
 
 class "dct:LicenceType" <<recommended>> {
     <<recommended>> dct:type ~> skos:Concept [*]
@@ -1196,6 +1278,7 @@ class "dct:LicenceType" <<recommended>> {
         '@ rdf:about       = http://purl.org/dc/terms/type
         '@ rdfs:seeAlso    = https://dublincore.org/specifications/dublin-core/dcmi-terms/#type
         '@ _:vocabularyLink = #kv-adms-licencetype
+        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars, Wird nicht getestet, da CV zu verwenden ist)
 }
 '@ rdfs:label      = Lizenzdokument
 '@ _:internalLink  = #klasse-lizenzdokument
@@ -1213,7 +1296,7 @@ class "dcat:Relationship" <<optional>> {
         '@ rdfs:comment    = **Verwendungshinweis:** DCAT-AP.de definiert mehrere spezifische Rollen, die bevorzugt verwendet werden sollten. Die Klasse [`dcat:Role` (siehe DCAT)](https://www.w3.org/TR/vocab-dcat-2/#Class:Role) verfÃ¼gt Ã¼ber keine empfohlenen, verpflichtenden oder optionalen Eigenschaften. `dcat:hadRole` sollte, wenn es notwendig ist, mit einem kontrollierten Vokabular verwendet werden, fÃ¼r das aber keine Vorgaben gemacht werden. Das W3C nennt jedoch einige mÃ¶gliche Kandidaten.
         '@ rdf:about       = http://www.w3.org/ns/dcat#hadRole
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:relationship_hadRole
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
+        '@ sh:shapes       = dcatap:Relationship_Property_dcat_hadRole, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
     <<mandatory>> dct:relation ~> rdfs:Resource [1..*]
         '@ rdfs:label      = Beziehung
         '@ _:internalLink  = beziehung-beziehung
@@ -1221,7 +1304,7 @@ class "dcat:Relationship" <<optional>> {
         '@ rdfs:comment    = Diese Eigenschaft verweist auf die Ressourcen, die miteinander in einer Beziehung stehen.
         '@ rdf:about       = http://purl.org/dc/terms/relation
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:relationship_relation
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
+        '@ sh:shapes       = dcatap:Relationship_Property_dct_relation, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
 }
 '@ rdfs:label      = Beziehung
 '@ _:internalLink  = #klasse-beziehung
@@ -1230,7 +1313,6 @@ class "dcat:Relationship" <<optional>> {
 '@ rdfs:comment    = Eine Klasse, um eine Beziehung zwischen mehreren DCAT Ressourcen genauer zu beschreiben.
 '@ _:usedBy        = dcat:qualifiedRelation (dcat:Dataset)
 '@ rdfs:subClassOf = [prov:EntityInfluence](https://www.w3.org/TR/prov-o/#EntityInfluence)
-'@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
 
 class "prov:Attribution" <<optional>> {
     <<mandatory>> dcat:hadRole ~> dcat:Role [1..*]
@@ -1240,7 +1322,7 @@ class "prov:Attribution" <<optional>> {
         '@ rdfs:comment    = Beschreibt die Funktion, die Agenten in Bezug auf eine Ressource hatten.
         '@ rdf:about       = http://www.w3.org/ns/dcat#hadRole
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:relationship_hadRole
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
+        '@ sh:shapes       = ___TBD___(kein Test auf minCount, kein Test, ob Ziel eine Ressource oder BlankNode)
     <<mandatory>> prov:agent ~> prov:Agent [1..*]
         '@ rdfs:label      = Agent
         '@ _:internalLink  = rollenzuordnung-agent
@@ -1248,7 +1330,7 @@ class "prov:Attribution" <<optional>> {
         '@ rdfs:comment    = Die Eigenschaft referenziert auf einen `prov:Agent`, der eine Ressource beeinflusst hat. 
         '@ rdf:about       = http://www.w3.org/ns/prov#agent
         '@ rdfs:seeAlso    = https://www.w3.org/TR/prov-o/#p_agent
-        '@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
+        '@ sh:shapes       = ___TBD___(kein Test auf minCount, kein Test, ob Ziel eine Ressource oder BlankNode)
 }
 '@ rdfs:label      = Rollenzuordnung
 '@ _:internalLink  = #klasse-rollenzuordnung
@@ -1258,7 +1340,6 @@ class "prov:Attribution" <<optional>> {
 '@ rdfs:comment    = Sie ist insbesondere dann relevant, wenn keine Eigenschaften wie `dcatde:originator`, `dct:creator` oder `dct:publisher` existieren, um die Rolle zu beschreiben.
 '@ _:usedBy        = prov:qualifiedAttribution (dcat:Dataset, dcat:DataService)
 '@ rdfs:subClassOf = [prov:AgentInfluence](https://www.w3.org/TR/prov-o/#AgentInfluence)
-'@ adms:versionNotes = 2.0: Neu hinzugefÃ¼gt.
 
 class "skos:Concept" <<reccommended>> {
     <<mandatory>> skos:prefLabel ~> rdfs:Literal [1..*]
@@ -1268,6 +1349,7 @@ class "skos:Concept" <<reccommended>> {
         '@ rdfs:comment    = PrÃ¤ferierte Bezeichnung der Kategorie.
         '@ rdf:about       = http://www.w3.org/2004/02/skos/core#prefLabel
         '@ rdfs:seeAlso    = http://www.w3.org/2004/02/skos/core#prefLabel
+        '@ sh:shapes       = dcatap:Category_Property_skos_prefLabel <- - DEAKTIVIEREN, ___TBD___(Keine Tests geplant, da Kategorien als CV abgebildet werden.)
 }
 '@ rdfs:label      = Kategorie
 '@ _:internalLink  = #klasse-kategorie
@@ -1284,6 +1366,7 @@ class "skos:ConceptScheme" <<recommended>> {
         '@ rdfs:comment    = Titel des Kategorienschemas.
         '@ rdf:about       = http://purl.org/dc/terms/title
         '@ rdfs:seeAlso    = http://purl.org/dc/terms/title
+        '@ sh:shapes       = dcatap:CategoryScheme_Property_dct_title <- - DEAKTIVIEREN, ___TBD___(Keine Tests geplant, da Kategorienschemata als CV abgebildet werden.)
 }
 '@ rdfs:label      = Kategorienschema
 '@ _:internalLink  = #klasse-kategorienschema
@@ -1362,7 +1445,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     <<optional>> dct:issued ~> rdfs:Literal [0..1]
     <<optional>> dct:modified ~> rdfs:Literal [0..1]
     <<optional>> owl:versionInfo ~> rdfs:Literal [0..1]
-    <<optional>> adms:versionNotes ~> rdfs:Literal [*]
+    <<optionale>> adms:versionNotes ~> rdfs:Literal [*]
     <<optional>> dcatde:legalBasis ~> rdfs:Literal [*]
     <<optional>> dct:relation ~> rdfs:Resource [*]
     <<optional>> dcat:landingPage ~> foaf:Document [*]
@@ -1528,10 +1611,10 @@ class "dcat:Resource" #F8978D|FCFFFC
 
 @enduml
 
-PlantUML version 1.2021.16(Wed Dec 08 18:25:22 CET 2021)
+PlantUML version 1.2022.7(Mon Aug 22 19:01:30 CEST 2022)
 (GPL source distribution)
-Java Runtime: Java(TM) SE Runtime Environment
-JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
 Default Encoding: Cp1252
 Language: de
 Country: DE
