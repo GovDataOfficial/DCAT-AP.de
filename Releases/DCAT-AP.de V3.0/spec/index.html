@@ -2,15 +2,15 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <title>DCAT-AP.de Spezifikation 2.0</title>
+  <title>DCAT-AP.de Spezifikation 3.0</title>
   <link href="https://www.dcat-ap.de/assets/favicon.ico" rel="icon" />
   
   <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
   <script class="remove">
     var respecConfig = {
       shortName: "DCAT-AP.de",
-      subtitle: "Deutsche Adaption des „Data Catalogue Application Profile“ (DCAT-AP) für Datenportale in Europa",
-      github: "https://github.com/GovDataOfficial/DCAT-AP.de",
+      subtitle: "Deutsche Adaption von DCAT-AP 3.0",
+      github: "https://gitlab.opencode.de/fitko/govdata/dcat-ap.de",
       latestVersion: "http://dcat-ap.de/def/dcatde/2.0/spec/",
 
       xref: "web-platform",
@@ -20,11 +20,11 @@
       specStatus: "base",
       doJsonLd: true,
       noRecTrack: true,
-      addSectionLinks: false,
+      addSectionLinks: true,
       
-      currentVersion: "2.0",
-      publishDate: "2022-03-01",
-      modificationDate: "2022-02-28",
+      currentVersion: "3.0",
+      publishDate: "2024-06-01",
+      modificationDate: "2024-06-01",
       copyrightStart: 2017,
       license: "cc-by",
       additionalCopyrightHolders: "Creative Commons Namensnennung 4.0 „]init[ AG für GovData“",
@@ -33,8 +33,8 @@
 
       alternateFormats: [
         {
-          label: "PDF",
-          uri: "http://dcat-ap.de/def/dcatde/2.0/spec/specification.pdf",
+          label: "PDF (tbd)",
+          uri: "http://dcat-ap.de/def/dcatde/3.0/spec/specification.pdf",
         },
       ],
 
@@ -51,19 +51,14 @@
       
       authors: [
         {
-          name: "Christian Wittig",
-          company: "GKSt GovData",
-          companyURL: "https://www.govdata.de/",
+          name: "Thomas Tursics",
+          company: "FITKO (Föderale IT-Kooperation)",
+          companyURL: "https://www.fitko.de/",
         },
         {
-          name: "Antje Göldner",
-          company: "GKSt GovData",
-          companyURL: "https://www.govdata.de/",
-        },
-        {
-          name: "Christian Horn",
-          company: "GKSt GovData",
-          companyURL: "https://www.govdata.de/",
+          name: "Dr. Matthias Grönewald",
+          company: "FITKO (Föderale IT-Kooperation)",
+          companyURL: "https://www.fitko.de/",
         },
         {
           name: "Ludger Rinsche",
@@ -71,17 +66,16 @@
           companyURL: "https://www.init.de/"
         },
         {
-          name: "Adam Kirschstein",
-          company: "]init[ AG",
-          companyURL: "https://www.init.de/"
-        },
-        {
-          name: "Sebastian Sklarß",
+          name: "Loretta Gomell",
           company: "]init[ AG",
           companyURL: "https://www.init.de/"
         },
       ],
       editors: [
+        {
+          name: "TO BE DONE",
+          company: "TO BE DONE",
+        }, 
         {
           name: "Dr. Jesper Zedlitz",
           company: "MELUND Schleswig-Holstein",
@@ -123,14 +117,14 @@
 
         DCAT: {
           title: "Data Catalog Vocabulary (DCAT)",
-          href: "http://www.w3.org/TR/2014/REC-vocab-dcat-20140116/",
-          publisher: "DCAT-AP",
-          status: "W3C Recommendation 16 January 2014",
+          href: "https://www.w3.org/TR/vocab-dcat-3/",
+          publisher: "W3C",
+          status: "W3C Candidate Recommendation 18 January 2024",
         },
 
         DCAT_AP: {
           title: "DCAT Application Profile for Data Portals in Europe (DCAT-AP)",
-          href: "https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe",
+          href: "https://semiceu.github.io/DCAT-AP/releases/3.0.0/",
           publisher: "Semantic Interoperability Community (SEMIC)",
           status: "Die DCAT-AP Spezifikation wurde von einer Arbeitsgruppe unter Federführung von Mitarbeitern des Generaldirektorates CONNECT, des Amtes für Veröffentlichungen der Europäischen Union (OPOCE) und des ISA Programmes des Generaldirektorates Informatik (DIGIT) entwickelt.",
         },
@@ -201,15 +195,14 @@
       // passe Copyright an
       document.getElementsByClassName("copyright")[0].innerText = document.getElementsByClassName("copyright")[0].innerText.substr(0,22) + respecConfig.additionalCopyrightHolders;
 
-      // remove all §
-      // let sl = document.getElementsByClassName("self-link");
-      // for (var i = 0; i < sl.length; i++) {
-      //   sl[i].remove()
-      // }
     }
   </script>
 
   <style>
+    a.self-link {
+      text-decoration: none;
+    }
+
     mark {
       background: none;
       color: rgb(230, 90, 10);
@@ -390,6 +383,17 @@
 ---
 
 # Changelog
+
+## Änderungen in der Version 3.0
+
+<section 
+  class="informative"
+  data-include="08_changelog_3_0.md"
+  data-include-format="markdown"
+  data-include-replace="true"
+></section>
+
+---
 
 ## Änderungen in der Version 2.0
 

@@ -342,6 +342,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://www.w3.org/2002/07/owl#versionInfo
         '@ rdfs:seeAlso    = https://www.w3.org/TR/owl-ref/#versionInfo-def
         '@ sh:shapes       = dcatap:Dataset_Property_owl_versionInfo
+    <<optionale>> adms:versionNotes ~> rdfs:Literal [*]
         '@ rdfs:label      = Versionserläuterung
         '@ _:internalLink  = datensatz-versionserlauterung
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal

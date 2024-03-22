@@ -1,0 +1,9 @@
+Nachdem die Fachgruppe GovData am 21. November 2016 beschlossen hat, dass dem Datenaustausch zwischen dem Datenportal GovData und anderen Datenportalen eine deutsche Ableitung des europäischen Metadatenstandards DCAT-AP zugrunde gelegt werden soll, wurde die erste Version dieser Spezifikation als Teil des neu geschaffenen Standards DCAT-AP.de vom Unternehmen ]init[ AG im Auftrag des Staatsbetrieb Sächsische Informatik Dienste (SID) erstellt, in die Herausgeberschaft von GovData überführt, im Juni 2017 veröffentlicht und im Juni 2018 vom IT-Planungsrat beschlossen. 
+
+Sie stellt eine direkte Kompatibilität zum EU-Standard sicher und ist für den Datenaustausch im GovData-Verbund verpfichtend zu nutzen.
+
+Seit dem wird DCAT-AP.de sowie die dazugehörige Spezifikation von der Geschäfts- und Koordinierungsstelle GovData (GKSt) gepflegt und weiterentwickelt. Die Spezifikation und die ergänzenen Artefakte regeln verbindlich, wie Daten auf dezentraler Seite auszuzeichnen und zur zentralen deutschlandweiten Bereitstellung im GovData-Portal anzuliefern sind.
+
+Die DCAT-AP Spezifikation wurde von einer Arbeitsgruppe unter Federführung von Mitarbeitern des Generaldirektorates CONNECT, des Amtes für Veröffentlichungen der Europäischen Union [OPOCE](https://op.europa.eu/de/home) und des [ISA Programmes](https://ec.europa.eu/isa2/home_en) des Generaldirektorates Informatik [DIGIT](https://ec.europa.eu/info/departments/informatics_de) entwickelt. (https://joinup.ec.europa.eu/asset/dcat_application_profile)
+
+Die vorliegende Version 2.0 wurde von der Fachgruppe GovData beschlossen. Die Beschlussvorlage erarbeitete die Unterarbeitsgruppe DCAT-AP.de in mehreren Online-Abstimmungsrunden. Dabei wurden auch zahlreiche Änderungsanträge aus https://github.com/GovDataOfficial/DCAT-AP.de begutachtet.
