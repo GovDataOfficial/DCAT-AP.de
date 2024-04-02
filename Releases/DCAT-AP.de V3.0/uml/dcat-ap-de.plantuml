@@ -478,15 +478,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about         = http://www.w3.org/ns/dcat#temporalResolution
         '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial_resolution
         '@ sh:shapes         = dcatap:Dataset_Property_dcat_temporalResolution, ___TBD___(Kard ändert sich bei DCAT-AP 2.1 von [*] auf  [0..1])
-    <<optional>> dcat:granularity ~> skos:Concept [0..1]
-        '@ rdfs:label      = Abgedeckte zeitliche Granularität (DEPRECATED)
-        '@ _:internalLink  = datensatz-abgedeckte-zeitliche-granularitat-deprecated
-        '@ rdfs:range      = http://www.w3.org/2004/02/skos/core#Concept
-        '@ rdfs:comment    = [DEPRECATED](#glossar-deprecated): Diese Eigenschaft beschreibt die durch den Datensatz abgedeckte zeitliche Granularität (z.B. wöchentlich, monatlich, jährlich).
-        '@ rdf:about       = http://www.w3.org/ns/dcat#granularity
-        '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft. Inzwischen überholt durch neue Eigenschaften zur Beschreibung von zeitlichen Parametern (z.B. [`dcat:temporalResolution`](#datensatz-zeitliche-auflosung)).
-        '@ _:vocabularyLink = #kv-frequency
-        '@ sh:shapes       = ___TBD___(deutsche Besonderheit, kein Test des Vokabulars, Maximalzahl 1, deprecated)
     <<optional>> prov:qualifiedAttribution ~> prov:Attribution [*]
         '@ rdfs:label      = Rollenzuordnung
         '@ _:internalLink  = datensatz-rollenzuordnung

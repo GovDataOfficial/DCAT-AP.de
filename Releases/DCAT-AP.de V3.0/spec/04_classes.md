@@ -266,7 +266,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatap:availability`](#datensatz-verfugbarkeit), [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dct:type`](#datensatz-typ), [`dcat:granularity`](#datensatz-abgedeckte-zeitliche-granularitat-deprecated), [`dct:references`](#datensatz-referenziert), [`dct:publisher`](#datensatz-herausgeber), [`dct:creator`](#datensatz-autor), [`dct:contributor`](#datensatz-bearbeiter), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter).<br>
+[`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatap:availability`](#datensatz-verfugbarkeit), [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dct:type`](#datensatz-typ), [`dct:references`](#datensatz-referenziert), [`dct:publisher`](#datensatz-herausgeber), [`dct:creator`](#datensatz-autor), [`dct:contributor`](#datensatz-bearbeiter), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
@@ -301,7 +301,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Wurde erzeugt von](#datensatz-wurde-erzeugt-von) | `prov:wasGeneratedBy` | [`prov:Activity`](https://www.w3.org/TR/prov-o/#Activity)| <small>Optional</small> | `[*]` |
 | [Räumliche Auflösung in Meter](#datensatz-raumliche-auflosung-in-meter) | `dcat:spatialResolutionInMeters` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als [`xsd:decimal`](https://www.w3.org/TR/xmlschema11-2/#decimal)| <small>Optional</small> | `[*]` |
 | [Zeitliche Auflösung](#datensatz-zeitliche-auflosung) | `dcat:temporalResolution` | [`rdfs:Literal`]([&#x60;rdfs:Literal&#x60;](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als [&#x60;xsd:duration&#x60;](https://www.w3.org/TR/xmlschema11-2/#duration))| <small>Optional</small> | `[*]` |
-| [Abgedeckte zeitliche Granularität (DEPRECATED)](#datensatz-abgedeckte-zeitliche-granularitat-deprecated) | `dcat:granularity` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept)| <small>Optional</small> | `[0..1]` |
 | [Rollenzuordnung](#datensatz-rollenzuordnung) | `prov:qualifiedAttribution` | [`prov:Attribution`](https://www.w3.org/TR/prov-o/#Attribution)| <small>Optional</small> | `[*]` |
 | [Qualifizierte Beziehung](#datensatz-qualifizierte-beziehung) | `dcat:qualifiedRelation` | [`dcat:Relationship`](https://www.w3.org/TR/vocab-dcat-2/#Class:Relationship)| <small>Optional</small> | `[*]` |
 | [Wird Referenziert](#datensatz-wird-referenziert) | `dct:isReferencedBy` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Optional</small> | `[*]` |
@@ -648,16 +647,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf den kürzesten im Datensatz auflösbaren Zeitraum.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial_resolution  | 
 
-<br>
-
-###  Datensatz: Abgedeckte zeitliche Granularität (DEPRECATED) {#datensatz-abgedeckte-zeitliche-granularitat-deprecated}
-> | *URI*                    | [`dcat:granularity`](http://www.w3.org/ns/dcat#granularity) |
-> |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-> | Verbindlichkeit          | Optional |
-> | Multiplizität            | `[0..1]`                    |
-> | Beschreibung             | [DEPRECATED](#glossar-deprecated): Diese Eigenschaft beschreibt die durch den Datensatz abgedeckte zeitliche Granularität (z.B. wöchentlich, monatlich, jährlich). <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-frequency) |
-> | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. Inzwischen überholt durch neue Eigenschaften zur Beschreibung von zeitlichen Parametern (z.B. [`dcat:temporalResolution`](#datensatz-zeitliche-auflosung)). | 
 <br>
 
 ###  Datensatz: Rollenzuordnung {#datensatz-rollenzuordnung}
