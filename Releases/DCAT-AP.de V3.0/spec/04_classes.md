@@ -288,7 +288,8 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Versionsbezeichnung](#datensatz-versionsbezeichnung) | `dcat:version` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
 | [Versionsbezeichnung (DEPRECATED)](#datensatz-versionsbezeichnung-deprecated) | `owl:versionInfo` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[0..1]` |
 | [Versionserläuterung](#datensatz-versionserlauterung) | `adms:versionNotes` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
-| [Rechtsgrundlage für die Zugangseröffnung](#datensatz-rechtsgrundlage-zugangseroffnung) | `dcatde:legalBasis` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
+| [Rechtsgrundlage](#datensatz-rechtsgrundlage) | `dcatap:applicableLegislation` | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource)| <small>Optional</small> | `[*]` |
+| [Rechtsgrundlage für die Zugangseröffnung (DEPRECATED)](#datensatz-rechtsgrundlage-zugangseroffnung) | `dcatde:legalBasis` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
 | [Verwandte Ressource](#datensatz-verwandte-ressource) | `dct:relation` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Optional</small> | `[*]` |
 | [Ursprüngliche Webseite](#datensatz-ursprungliche-webseite) | `dcat:landingPage` | [`foaf:Document`](http://xmlns.com/foaf/0.1/Document)| <small>Optional</small> | `[*]` |
 | [Dokumentation](#datensatz-dokumentation) | `foaf:page` | [`foaf:Document`](http://xmlns.com/foaf/0.1/Document)| <small>Optional</small> | `[*]` |
@@ -512,13 +513,27 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 <br>
 
-###  Datensatz: Rechtsgrundlage für die Zugangseröffnung {#datensatz-rechtsgrundlage-zugangseroffnung}
+###  Datensatz: Rechtsgrundlage {#datensatz-rechtsgrundlage}
+> | *URI*                    | [`dcatap:applicableLegislation`](http://data.europa.eu/r5r/applicableLegislation) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) |
+> | Verbindlichkeit          | Optional |
+> | Multiplizität            | `[*]`                    |
+> | Beschreibung             | Die Rechtsvorschriften, die die Erstellung oder Verwaltung des Datensatzes vorschreiben.  |
+> | Verwendungshinweis       | Handelt es sich um ein High Value Dataset, muss `http://data.europa.eu/eli/reg_impl/2023/138/oj` angegeben werden.<br>Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden. | 
+> | Weiterführende Dokumentationen | https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation  | 
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+
+<br>
+
+###  Datensatz: Rechtsgrundlage für die Zugangseröffnung (DEPRECATED) {#datensatz-rechtsgrundlage-zugangseroffnung}
 > | *URI*                    | [`dcatde:legalBasis`](http://dcat-ap.de/def/dcatde/legalBasis) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Dieses Feld dokumentiert als Freitext optional die Rechtsgrundlage für den Zugang zu den Informationen (die Zugangseröffnung), d.h. die originäre Rechtsgrundlage für den Zugang zu Daten der Verwaltung.<br>Diese Eigenschaft kann für parallele Sprachversionen wiederholt werden.  |
+> | Änderungen zur Vorversion | 3.0: [DEPRECATED](#glossar-deprecated) | 
 > | Änderungen durch DCAT-AP.de | Beispiele: Public Sector Information Directive (PSI-Direktive), Umweltinformationsgesetz (UIG), deutsche Informationsfreiheits- (IFG) und Transparenzgesetze. | 
 <br>
 

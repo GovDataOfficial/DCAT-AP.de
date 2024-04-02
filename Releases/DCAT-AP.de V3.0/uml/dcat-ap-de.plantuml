@@ -362,14 +362,25 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://www.w3.org/ns/adms#versionNotes
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-adms/#adms-versionnotes
         '@ sh:shapes       = dcatap:Dataset_Property_adms_versionNotes
+    <<optional>> dcatap:applicableLegislation ~> eli:LegalResource [*]
+        '@ rdfs:label      = Rechtsgrundlage
+        '@ _:internalLink  = datensatz-rechtsgrundlage
+        '@ rdfs:range      = http://data.europa.eu/eli/ontology#LegalResource
+        '@ rdfs:comment    = Die Rechtsvorschriften, die die Erstellung oder Verwaltung des Datensatzes vorschreiben.
+        '@ skos:scopeNote  = Handelt es sich um ein High Value Dataset, muss `http://data.europa.eu/eli/reg_impl/2023/138/oj` angegeben werden.
+        '@ skos:scopeNote  = Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden.
+        '@ rdf:about       = http://data.europa.eu/r5r/applicableLegislation
+        '@ rdfs:seeAlso    = https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation
+        '@ adms:versionNotes = 3.0: Neu hinzugefügt.
     <<optional>> dcatde:legalBasis ~> rdfs:Literal [*]
-        '@ rdfs:label      = Rechtsgrundlage für die Zugangseröffnung
+        '@ rdfs:label      = Rechtsgrundlage für die Zugangseröffnung (DEPRECATED)
         '@ _:internalLink  = datensatz-rechtsgrundlage-zugangseroffnung
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
         '@ rdfs:comment    = Dieses Feld dokumentiert als Freitext optional die Rechtsgrundlage für den Zugang zu den Informationen (die Zugangseröffnung), d.h. die originäre Rechtsgrundlage für den Zugang zu Daten der Verwaltung.
         '@ rdfs:comment    = Diese Eigenschaft kann für parallele Sprachversionen wiederholt werden.
         '@ rdf:about       = http://dcat-ap.de/def/dcatde/legalBasis
         '@ _:deOriginal    = Beispiele: Public Sector Information Directive (PSI-Direktive), Umweltinformationsgesetz (UIG), deutsche Informationsfreiheits- (IFG) und Transparenzgesetze.
+        '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated)
         '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
     <<optional>> dct:relation ~> rdfs:Resource [*]
         '@ rdfs:label      = Verwandte Ressource
