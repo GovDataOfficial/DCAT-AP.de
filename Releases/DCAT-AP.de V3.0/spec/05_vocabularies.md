@@ -80,7 +80,19 @@ Gemeinden können mit dem Gemeindeschlüssel oder dem Regionalschlüssel referen
 > | Beispiele                      | Borgsum: `<http://dcat-ap.de/def/politicalGeocoding/municipalityKey/01054015>` <br> Halle (Saale): `<http://dcat-ap.de/def/politicalGeocoding/regionalKey/15002000000>` <br> Bornhöved: `<http://dcat-ap.de/def/politicalGeocoding/municipalAssociationKey/010605024>` <br> Main-Tauber-Kreis: `<http://dcat-ap.de/def/politicalGeocoding/districtKey/08128>` <br> Mittelfranken: `<http://dcat-ap.de/def/politicalGeocoding/governmentDistrictKey/095>` <br> Hamburg: `<http://dcat-ap.de/def/politicalGeocoding/stateKey/02>` |
 
 
-## Liste der Algorithmen {#kv-hash-algorithms}
+## SPDX-Liste der Algorithmen {#kv-hash-algorithms}
+Mit DCAT-AP.de 3.0 wird empfohlen, den verwendeten Algorithmus mittels der URI anzugeben, die von SPDX vorgegeben wird.
+
+> | Betroffene Eigenschaften       | [`spdx:algorithm`](#prufsumme-algorithmus) |
+> |:-------------------------------|:-------------------------|
+> | Verbindlichkeit Vokabular      | Optional                 |
+> | Verwendung in Klassen          | [`spdx:Checksum`](#prufsumme-algorithmus)           |
+> | Menschenlesbare Ansicht        | https://spdx.org/rdf/terms/#d4e2129                 |
+> | Basis-URI                      | `http://spdx.org/rdf/terms#checksumAlgorithm_`      |
+> | Beispiel                       | `<http://spdx.org/rdf/terms#checksumAlgorithm_md5>` |
+
+
+## Liste der Algorithmen (DEPRECATED) {#kv-hash-algorithms-deprecated}
 Diese Liste ist eine Erweiterung von Algorithmen, die durch SPDX veröffentlich werden.
 
 > | Betroffene Eigenschaften       | [`spdx:algorithm`](#prufsumme-algorithmus) |

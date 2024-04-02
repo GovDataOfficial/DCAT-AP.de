@@ -1101,7 +1101,9 @@ class "spdx:Checksum" <<optional>> {
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
         '@ rdfs:comment    = Diese Eigenschaft identifiziert den verwendeten Algorithmus zur Erzeugung der Prüfsumme.
         '@ rdf:about       = http://spdx.org/rdf/terms#algorithm
-        '@ rdfs:seeAlso    = https://spdx.org/rdf/terms/#d4e52
+        '@ rdfs:seeAlso    = https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Checksum.algorithm
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-3/#Property:checksum_algorithm
+        '@ rdfs:seeAlso    = https://spdx.org/rdf/terms/#d4e46
         '@ _:deOriginal    = dcat-ap.de führt eine eigene Liste an unterstützten Hashalgorithmen.
         '@ _:vocabularyLink = #kv-hash-algorithms
         '@ sh:shapes       = dcatap:Checksum_Property_spdx_algorithm <-- DEAKTIVIEREN DA SHA1 ERZWUNGEN!, ___TBD___(kein Test des Vokabulars, minCount, maxCount)
@@ -1112,13 +1114,17 @@ class "spdx:Checksum" <<optional>> {
         '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:hexBinary`
         '@ rdfs:comment    = Diese Eigenschaft stellt einen hexadezimal kodierten Übersichtswert in Kleinbuchstaben zur Verfügung, welcher mittels eines spezifischen Algorithmus erzeugt wurde.
         '@ rdf:about       = http://spdx.org/rdf/terms#checksumValue
-        '@ rdfs:seeAlso    = https://spdx.org/rdf/terms/#d4e1111
+        '@ rdfs:seeAlso    = https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Checksum.checksumvalue
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-3/#Property:checksum_checksum_value
+        '@ rdfs:seeAlso    = https://spdx.org/rdf/terms/#d4e1053
         '@ sh:shapes       = dcatap:Checksum_Property_spdx_checksumValue
 }
 '@ rdfs:label      = Prüfsumme
 '@ _:internalLink  = #klasse-prufsumme
 '@ rdf:about       = http://spdx.org/rdf/terms#Checksum
-'@ rdfs:seeAlso    = https://spdx.org/rdf/terms/#d4e1930
+'@ rdfs:seeAlso    = https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Checksum
+'@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-3/#Class:Checksum
+'@ rdfs:seeAlso    = https://spdx.org/rdf/terms/#d4e2091
 '@ rdfs:comment    = Ein Wert, der es ermöglicht, die Inhalte einer Datei zu verifizieren (für korrekt zu erklären). 
 '@ rdfs:comment    = Diese Klasse ermöglicht es, die Ergebnisse einer Vielzahl von Prüfsummen- und Kryptoalgorithmen zu repräsentieren.
 '@ _:usedBy        = spdx:checksum (dcat:Distribution)

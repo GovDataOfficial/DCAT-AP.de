@@ -20,4 +20,11 @@ Die folgenden Codelisten sind in Version 2.0 als _deprecated_ gekennzeichnet gew
  - [Liste der zugesicherten Verfügbarkeiten](https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-planned-availability)
  - [Liste der Datenstrukturtypen](https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-dataset-type)
 
+
+### Kontrolliertes Vokabular für Prüfsummen
+
+SPDX stellt inzwischen eine umfangreiche Liste an möglichen Hash-Algorithmen zur Verfügung. Diese Liste soll künftig statt der selbst veröffentlichen Liste verwendet werden.
+
+Die von GovData gepflegte [Liste der Algorithmen](#kv-hash-algorithms-deprecated) wurde daher als _deprecated_ gekennzeichnet und die [SPDX-Liste der Algorithmen](#kv-hash-algorithms) wurde aufgenommen.
+
 ---

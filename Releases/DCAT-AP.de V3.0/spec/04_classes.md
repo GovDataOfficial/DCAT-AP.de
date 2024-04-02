@@ -1492,7 +1492,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Ein Wert, der es ermöglicht, die Inhalte einer Datei zu verifizieren (für korrekt zu erklären). <br>Diese Klasse ermöglicht es, die Ergebnisse einer Vielzahl von Prüfsummen- und Kryptoalgorithmen zu repräsentieren.     |
 > | eingebunden über | spdx:checksum (dcat:Distribution)         | 
-> | Weiterführende Dokumentationen | https://spdx.org/rdf/terms/#d4e1930 |
+> | Weiterführende Dokumentationen | https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Checksum<br>https://www.w3.org/TR/vocab-dcat-3/#Class:Checksum<br>https://spdx.org/rdf/terms/#d4e2091 |
 
 <br>
 
@@ -1517,7 +1517,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit          | Pflicht |
 > | Multiplizität            | `[1]`                    |
 > | Beschreibung             | Diese Eigenschaft identifiziert den verwendeten Algorithmus zur Erzeugung der Prüfsumme. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-hash-algorithms) |
-> | Weiterführende Dokumentationen | https://spdx.org/rdf/terms/#d4e52  | 
+> | Weiterführende Dokumentationen | https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Checksum.algorithm<br>https://www.w3.org/TR/vocab-dcat-3/#Property:checksum_algorithm<br>https://spdx.org/rdf/terms/#d4e46  | 
 > | Änderungen durch DCAT-AP.de | dcat-ap.de führt eine eigene Liste an unterstützten Hashalgorithmen. | 
 <br>
 
@@ -1528,7 +1528,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit          | Pflicht |
 > | Multiplizität            | `[1]`                    |
 > | Beschreibung             | Diese Eigenschaft stellt einen hexadezimal kodierten Übersichtswert in Kleinbuchstaben zur Verfügung, welcher mittels eines spezifischen Algorithmus erzeugt wurde.  |
-> | Weiterführende Dokumentationen | https://spdx.org/rdf/terms/#d4e1111  | 
+> | Weiterführende Dokumentationen | https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Checksum.checksumvalue<br>https://www.w3.org/TR/vocab-dcat-3/#Property:checksum_checksum_value<br>https://spdx.org/rdf/terms/#d4e1053  | 
 
 <br>
 
