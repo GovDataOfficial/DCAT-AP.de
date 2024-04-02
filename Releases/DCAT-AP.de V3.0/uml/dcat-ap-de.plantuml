@@ -792,15 +792,6 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdf:about       = http://data.europa.eu/r5r/availability
         '@ _:vocabularyLink = #kv-availability
         '@ sh:shapes       = dcatap:Distribution_Property_dcatap_availability, ___TBD___(kein Test des Vokabulars)
-    <<recommended>> dcatde:plannedAvailability ~> rdfs:Resource [0..1]
-        '@ rdfs:label      = Verfügbarkeit (DEPRECATED)
-        '@ _:internalLink  = distribution-verfugbarkeit-deprecated
-        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
-        '@ rdfs:comment    = Verfügbarkeit der Distribution eines Datensatzes, als Auswahl aus einer festen Liste von Werten via DCAT-AP.de URIs.
-        '@ rdf:about       = http://dcat-ap.de/def/dcatde/plannedAvailability
-        '@ _:deOriginal    = Die Eigenschaft wurde auf Ebene von DCAT-AP als [`dcatap:availability`](#distribution-verfugbarkeit) eingeführt.
-        '@ _:vocabularyLink = #kv-planned-availability
-        '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test des Vokabulars, kein Test auf Maximalzahl, Deprecated-Warnung)
 
     <<optional>> dcatde:licenseAttributionByText ~> rdfs:Literal [*]
         '@ rdfs:label      = Namensnennungstext für By-Clauses

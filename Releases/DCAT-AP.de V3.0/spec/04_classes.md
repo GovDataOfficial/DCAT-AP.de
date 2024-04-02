@@ -974,7 +974,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dct:title`](#distribution-titel), [`dct:modified`](#distribution-aktualisierungsdatum), [`dcatde:plannedAvailability`](#distribution-verfugbarkeit-deprecated), [`dcatde:licenseAttributionByText`](#distribution-namensnennungstext-by-clauses), [`dct:description`](#distribution-beschreibung), [`spdx:checksum`](#distribution-prufsumme).<br>
+[`dct:title`](#distribution-titel), [`dct:modified`](#distribution-aktualisierungsdatum), [`dcatde:licenseAttributionByText`](#distribution-namensnennungstext-by-clauses), [`dct:description`](#distribution-beschreibung), [`spdx:checksum`](#distribution-prufsumme).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
@@ -985,7 +985,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Lizenz](#distribution-lizenz) | `dct:license` | [`dct:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument)| <small>Empfohlen</small> | `[0..1]` |
 | [Format](#distribution-format) | `dct:format` | [`dct:MediaType`](http://purl.org/dc/terms/MediaTypeOrExtent)| <small>Empfohlen</small> | `[0..1]` |
 | [Verfügbarkeit](#distribution-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Empfohlen</small> | `[0..1]` |
-| [Verfügbarkeit (DEPRECATED)](#distribution-verfugbarkeit-deprecated) | `dcatde:plannedAvailability` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Empfohlen</small> | `[0..1]` |
 | [Namensnennungstext für By-Clauses](#distribution-namensnennungstext-by-clauses) | `dcatde:licenseAttributionByText` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
 | [Beschreibung](#distribution-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
 | [Größe in Bytes](#distribution-grosse-in-bytes) | `dcat:byteSize` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:decimal`| <small>Optional</small> | `[0..1]` |
@@ -1071,16 +1070,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Verfügbarkeit der Distribution eines Datensatzes, als Auswahl aus einer festen Liste von Werten via DCAT-AP URIs.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#status-und-erwartete-verfugbarkeit) genauer beschrieben. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-availability) |
 
-<br>
-
-###  Distribution: Verfügbarkeit (DEPRECATED) {#distribution-verfugbarkeit-deprecated}
-> | *URI*                    | [`dcatde:plannedAvailability`](http://dcat-ap.de/def/dcatde/plannedAvailability) |
-> |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) |
-> | Verbindlichkeit          | Empfohlen |
-> | Multiplizität            | `[0..1]`                    |
-> | Beschreibung             | Verfügbarkeit der Distribution eines Datensatzes, als Auswahl aus einer festen Liste von Werten via DCAT-AP.de URIs. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-planned-availability) |
-> | Änderungen durch DCAT-AP.de | Die Eigenschaft wurde auf Ebene von DCAT-AP als [`dcatap:availability`](#distribution-verfugbarkeit) eingeführt. | 
 <br>
 
 ###  Distribution: Namensnennungstext für By-Clauses {#distribution-namensnennungstext-by-clauses}
