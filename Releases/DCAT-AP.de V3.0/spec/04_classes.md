@@ -309,7 +309,8 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Räumliche Abdeckung](#datensatz-raumliche-abdeckung) | `dct:spatial` | [`dct:Location`](http://purl.org/dc/terms/Location)| <small>Empfohlen</small> | `[*]` |
 | [Zeitliche Abdeckung](#datensatz-zeitliche-abdeckung) | `dct:temporal` | [`dct:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime)| <small>Empfohlen</small> | `[*]` |
 | [Quelle des Datensatzes](#datensatz-quelle) | `dct:source` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset)| <small>Optional</small> | `[*]` |
-| [Weitere Version](#datensatz-weitere-version) | `dct:hasVersion` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset)| <small>Optional</small> | `[*]` |
+| [Weitere Version](#datensatz-weitere-version) | `dcat:hasVersion` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset)| <small>Optional</small> | `[*]` |
+| [Weitere Version (DEPRECATED)](#datensatz-weitere-version-deprecated) | `dct:hasVersion` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset)| <small>Optional</small> | `[*]` |
 | [Ist Version von](#datensatz-ist-version) | `dct:isVersionOf` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset)| <small>Optional</small> | `[*]` |
 | [Distribution](#datensatz-distribution) | `dcat:distribution` | [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution)| <small>Empfohlen</small> | `[*]` |
 | [Beispieldistribution](#datensatz-beispieldistribution) | `adms:sample` | [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution)| <small>Optional</small> | `[*]` |
@@ -740,6 +741,18 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Weitere Version {#datensatz-weitere-version}
+> | *URI*                    | [`dcat:hasVersion`](http://www.w3.org/ns/dcat#hasVersion) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) |
+> | Verbindlichkeit          | Optional |
+> | Multiplizität            | `[*]`                    |
+> | Beschreibung             | Diese Eigenschaft bezieht sich auf einen verwandten Datensatz in Form einer weiteren/nachfolgenden Version, Edition oder Adaption des beschriebenen Datensatzes.  |
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-3/#Property:resource_has_version<br>https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.hasversion  | 
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+
+<br>
+
+###  Datensatz: Weitere Version (DEPRECATED) {#datensatz-weitere-version-deprecated}
 > | *URI*                    | [`dct:hasVersion`](http://purl.org/dc/terms/hasVersion) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) |
@@ -747,6 +760,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf einen verwandten Datensatz in Form einer weiteren/nachfolgenden Version, Edition oder Adaption des beschriebenen Datensatzes.  |
 > | Weiterführende Dokumentationen | https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/hasVersion  | 
+> | Änderungen zur Vorversion | 3.0: [DEPRECATED](#glossar-deprecated) | 
 
 <br>
 

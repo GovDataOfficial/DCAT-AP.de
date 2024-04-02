@@ -106,9 +106,8 @@ Diese Verfügbarkeitsgrade geben an, wie lange geplant ist, das Dokument verfüg
 
 ## EU Vokabular "Frequency" {#kv-frequency}
 Diese Tabelle enthält die mögliche Aktualisierungsfrequenzen (-häufigkeiten) in den 24 Amtssprachen der Europäischen Union.
-Sie war auch für `dcat:granularity` vorgesehen, was jedoch [DEPRECATED](#glossar-deprecated) ist.
 
-> | Betroffene Eigenschaften       | [`dct:accrualPeriodicity`](#datensatz-aktualisierungsfrequenz) <br> [`dcat:granularity`](#datensatz-abgedeckte-zeitliche-granularitat-deprecated) (DEPRECATED) |
+> | Betroffene Eigenschaften       | [`dct:accrualPeriodicity`](#datensatz-aktualisierungsfrequenz) |
 > |:-------------------------------|:----------------------------------|
 > | Verbindlichkeit Vokabular      | Pflicht                           |
 > | Verwendung in Klassen          | [`dcat:Dataset`](#datensatz-aktualisierungsfrequenz) |
