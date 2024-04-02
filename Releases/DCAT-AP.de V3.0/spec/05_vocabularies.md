@@ -104,35 +104,6 @@ Diese Verfügbarkeitsgrade geben an, wie lange geplant ist, das Dokument verfüg
 > | Beispiel                       | `<http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE>` |
 
 
-## Liste der zugesicherten Verfügbarkeiten (DEPRECATED) {#kv-planned-availability}
-Diese Verfügbarkeitsgrade geben an, wie lange geplant ist das Dokument verfügbar zu halten. Sie waren für die Eigenschaft `dcatde:plannedAvailability` vorgesehen, die für das deutsche Application Profile eingeführt wurde, inzwischen aber [DEPRECATED](#glossar-deprecated) ist. 
-
-Mit der Einführung der neuen europäischen Eigenschaft [`dcatap:availability`](#distribution-verfugbarkeit), soll weder `dcatde:plannedAvailability` noch die dazugehörige Liste verwendet werden. _Solange_ Sie jedoch `dcatde:plannedAvailability` nutzen, müssen Sie auch weiterhin die hier angegebene Liste verwenden.
-
-> | Betroffene Eigenschaften       | [`dcatde:plannedAvailability`](#distribution-verfugbarkeit-deprecated) |
-> |:-------------------------------|:-----------------------------|
-> | Verbindlichkeit Vokabular      | Optional                     |
-> | Verwendung in Klassen          | [`dcat:Distribution`](#distribution-verfugbarkeit-deprecated) |
-> | Menschenlesbare Ansicht        | http://dcat-ap.de/def/plannedAvailability/           |
-> | Basis-URI                      | `http://dcat-ap.de/def/plannedAvailability/`         |
-> | Beispiel                       | `<http://dcat-ap.de/def/plannedAvailability/stable>` |
-
-
-## Liste der Datenstrukturtypen (DEPRECATED) {#kv-dataset-type}
-Über das Feld `dct:type` in der Klasse `dcat:dataset` kann das Vorhandensein einer Reihe gekennzeichnet werden. Dazu MUSS `dct:type` den Wert `http://dcat-ap.de/def/datasetTypes/collection` erhalten. Weitere Datensatztypen sind nicht vorgesehen.
-
-Mit der künftigen Einführung von [dcat:DatasetSeries](https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series), soll das Collections-Feature von DCAT-AP.de nicht mehr benutzt werden, es ist [DEPRECATED](#glossar-deprecated).
-Das [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#sammlungen-und-reihen-von-datensatzen) wird das empfohlene Vorgehen zukünftig genauer beschreiben.
-
-> | Betroffene Eigenschaften       | [`dct:type`](#datensatz-typ) |
-> |:-------------------------------|:--------------------------|
-> | Verbindlichkeit Vokabular      | Optional                  |
-> | Verwendung in Klassen          | [`dcat:Dataset`](#datensatz-typ)                   |
-> | Menschenlesbare Ansicht        | http://dcat-ap.de/def/datasetTypes/               |
-> | Basis-URI                      | `http://dcat-ap.de/def/datasetTypes/`             |
-> | Möglicher Wert                 | `<http://dcat-ap.de/def/datasetTypes/collection>` |
-
-
 ## EU Vokabular "Frequency" {#kv-frequency}
 Diese Tabelle enthält die mögliche Aktualisierungsfrequenzen (-häufigkeiten) in den 24 Amtssprachen der Europäischen Union.
 Sie war auch für `dcat:granularity` vorgesehen, was jedoch [DEPRECATED](#glossar-deprecated) ist.
