@@ -333,14 +333,24 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://purl.org/dc/terms/modified
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date
         '@ sh:shapes       = dcatap:Dataset_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
-    <<optional>> owl:versionInfo ~> rdfs:Literal [0..1]
+    <<optional>> dcat:version ~> rdfs:Literal [*]
         '@ rdfs:label      = Versionsbezeichnung
         '@ _:internalLink  = datensatz-versionsbezeichnung
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment    = Diese Eigenschaft enthält eine Versionsnummer oder anderweitige Versionskennzeichnung des Datensatzes.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#version
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version
+        '@ rdfs:seeAlso    = https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.version
+        '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+    <<optional>> owl:versionInfo ~> rdfs:Literal [0..1]
+        '@ rdfs:label      = Versionsbezeichnung (DEPRECATED)
+        '@ _:internalLink  = datensatz-versionsbezeichnung-deprecated
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
         '@ rdfs:comment    = Diese Eigenschaft enthält eine Versionsnummer oder anderweitige Versionskennzeichnung des Datensatzes.
         '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zur-versionierung) genauer beschrieben.
         '@ rdf:about       = http://www.w3.org/2002/07/owl#versionInfo
         '@ rdfs:seeAlso    = https://www.w3.org/TR/owl-ref/#versionInfo-def
+        '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated)
         '@ sh:shapes       = dcatap:Dataset_Property_owl_versionInfo
     <<optionale>> adms:versionNotes ~> rdfs:Literal [*]
         '@ rdfs:label      = Versionserläuterung
