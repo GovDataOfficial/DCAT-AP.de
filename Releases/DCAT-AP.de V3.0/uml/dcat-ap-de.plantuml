@@ -444,11 +444,8 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ _:internalLink    = datensatz-typ
         '@ rdfs:range        = http://www.w3.org/2004/02/skos/core#Concept
         '@ rdfs:comment      = Diese Eigenschaft bezieht sich auf den Typ des Datensatzes. Es wurde noch kein kontrollierter Vokabular festgelegt.
-        '@ rdfs:comment      = 
-        '@ rdfs:comment      = [DEPRECATED](#glossar-deprecated): Zur Gruppierung von linearen und nichtlinearen Reihen/Collections ist gemäß dem DCAT-AP.de Konventionenhandbuch eine Gruppenstruktur vom Typ "Collection" anzulegen, die auf die gruppierten Datensätze mittels "Weitere Version" (`dct:hasVersion`) verweist. Alle gruppierten Datensätze verweisen dann mittels "ist Version von" (`dct:isVersionOf`) auf die URI (`http://dcat-ap.de/def/datasetTypes/collection`) dieser logischen Klammer. Feldübergreifende Beispiele und das Zusammenspiel mit der Eigenschaft `dct:hasVersion` sind im Konventionenhandbuch dokumentiert.
         '@ rdf:about         = http://purl.org/dc/terms/type
         '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_type
-        '@ _:deOriginal      = [DEPRECATED](#glossar-deprecated): Ausspezifiziert um linearen und nichtlinearen Reihen/Collections darstellen zu können.
         '@ _:vocabularyLink  = #kv-dataset-type
         '@ sh:shapes         = dcatap:Dataset_Property_dct_type, ___TBD___(kein Test des Vokabulars)
     <<optional>> prov:wasGeneratedBy ~> prov:Activity [*]
@@ -557,7 +554,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ _:internalLink  = datensatz-weitere-version
     '@ rdfs:range      = http://www.w3.org/ns/dcat#Dataset
     '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf einen verwandten Datensatz in Form einer weiteren/nachfolgenden Version, Edition oder Adaption des beschriebenen Datensatzes.
-    '@ rdfs:comment    = [DEPRECATED](#glossar-deprecated): dct:hasVersion verweist auf den Datensatz vom Typ "Collection" zur Gruppierung von Einzelelementen über Datensätze.
     '@ rdf:about       = http://purl.org/dc/terms/hasVersion
     '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/hasVersion
     '@ sh:shapes       = ___TBD___(kein Test, ob Ziel ein dcat:Dataset)

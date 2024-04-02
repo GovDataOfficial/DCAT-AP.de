@@ -266,7 +266,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatap:availability`](#datensatz-verfugbarkeit), [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dct:type`](#datensatz-typ), [`dct:references`](#datensatz-referenziert), [`dct:publisher`](#datensatz-herausgeber), [`dct:creator`](#datensatz-autor), [`dct:contributor`](#datensatz-bearbeiter), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter).<br>
+[`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatap:availability`](#datensatz-verfugbarkeit), [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dct:references`](#datensatz-referenziert), [`dct:publisher`](#datensatz-herausgeber), [`dct:creator`](#datensatz-autor), [`dct:contributor`](#datensatz-bearbeiter), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
@@ -611,9 +611,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Wertebereich             | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
-> | Beschreibung             | Diese Eigenschaft bezieht sich auf den Typ des Datensatzes. Es wurde noch kein kontrollierter Vokabular festgelegt.<br><br>[DEPRECATED](#glossar-deprecated): Zur Gruppierung von linearen und nichtlinearen Reihen/Collections ist gemäß dem DCAT-AP.de Konventionenhandbuch eine Gruppenstruktur vom Typ "Collection" anzulegen, die auf die gruppierten Datensätze mittels "Weitere Version" (`dct:hasVersion`) verweist. Alle gruppierten Datensätze verweisen dann mittels "ist Version von" (`dct:isVersionOf`) auf die URI (`http://dcat-ap.de/def/datasetTypes/collection`) dieser logischen Klammer. Feldübergreifende Beispiele und das Zusammenspiel mit der Eigenschaft `dct:hasVersion` sind im Konventionenhandbuch dokumentiert. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-dataset-type) |
+> | Beschreibung             | Diese Eigenschaft bezieht sich auf den Typ des Datensatzes. Es wurde noch kein kontrollierter Vokabular festgelegt. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-dataset-type) |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_type  | 
-> | Änderungen durch DCAT-AP.de | [DEPRECATED](#glossar-deprecated): Ausspezifiziert um linearen und nichtlinearen Reihen/Collections darstellen zu können. | 
+
 <br>
 
 ###  Datensatz: Wurde erzeugt von {#datensatz-wurde-erzeugt-von}
@@ -731,7 +731,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Wertebereich             | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[*]`                    |
-> | Beschreibung             | Diese Eigenschaft bezieht sich auf einen verwandten Datensatz in Form einer weiteren/nachfolgenden Version, Edition oder Adaption des beschriebenen Datensatzes.<br>[DEPRECATED](#glossar-deprecated): dct:hasVersion verweist auf den Datensatz vom Typ "Collection" zur Gruppierung von Einzelelementen über Datensätze.  |
+> | Beschreibung             | Diese Eigenschaft bezieht sich auf einen verwandten Datensatz in Form einer weiteren/nachfolgenden Version, Edition oder Adaption des beschriebenen Datensatzes.  |
 > | Weiterführende Dokumentationen | https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/hasVersion  | 
 
 <br>
