@@ -1269,8 +1269,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Endzeitpunkt](#zeitraum-endzeitpunkt) | `dcat:endDate` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime`| <small>Empfohlen</small> | `[0..1]` |
 | [Anfang](#zeitraum-anfang) | `time:hasBeginning` | [`time:Instant`](https://www.w3.org/TR/owl-time/#time:Instant)| <small>Optional</small> | `[0..1]` |
 | [Ende](#zeitraum-ende) | `time:hasEnd` | [`time:Instant`](https://www.w3.org/TR/owl-time/#time:Instant)| <small>Optional</small> | `[0..1]` |
-| [Startzeitpunkt (DEPRECATED)](#zeitraum-startzeitpunkt-deprecated) | `schema:startDate` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`| <small>Optional</small> | `[0..1]` |
-| [Endzeitpunkt (DEPRECATED)](#zeitraum-endzeitpunkt-deprecated) | `schema:endDate` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`| <small>Optional</small> | `[0..1]` |
 
 
 <br>
@@ -1318,28 +1316,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Ende eines Zeitraums oder einer Periode.<br>Mit der Range `time:Instant` können auch unkonventionelle Zeitangaben gemacht werden.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:period_has_end  | 
-
-<br>
-
-###  Zeitraum: Startzeitpunkt (DEPRECATED) {#zeitraum-startzeitpunkt-deprecated}
-> | *URI*                    | [`schema:startDate`](https://schema.org/startDate) |
-> |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime` |
-> | Verbindlichkeit          | Optional |
-> | Multiplizität            | `[0..1]`                    |
-> | Beschreibung             | Diese Eigenschaft bezeichnet den Beginn des Zeitraumes.  |
-> | Weiterführende Dokumentationen | https://schema.org/startDate  | 
-
-<br>
-
-###  Zeitraum: Endzeitpunkt (DEPRECATED) {#zeitraum-endzeitpunkt-deprecated}
-> | *URI*                    | [`schema:endDate`](https://schema.org/endDate) |
-> |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime` |
-> | Verbindlichkeit          | Optional |
-> | Multiplizität            | `[0..1]`                    |
-> | Beschreibung             | Diese Eigenschaft bezeichnet das Ende des Zeitraumes.  |
-> | Weiterführende Dokumentationen | https://schema.org/endDate  | 
 
 <br>
 

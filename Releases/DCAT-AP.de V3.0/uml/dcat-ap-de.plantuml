@@ -986,22 +986,6 @@ class "dct:PeriodOfTime" <<recommended>> {
         '@ rdf:about       = https://www.w3.org/TR/owl-time/#time:hasEnd
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:period_has_end
         '@ sh:shapes       = dcatap:PeriodOfTime_Property_time_hasEnd, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
-    <<optional>> schema:startDate ~> rdfs:Literal [0..1]
-        '@ rdfs:label      = Startzeitpunkt (DEPRECATED)
-        '@ _:internalLink  = zeitraum-startzeitpunkt-deprecated
-        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`
-        '@ rdfs:comment    = Diese Eigenschaft bezeichnet den Beginn des Zeitraumes.
-        '@ rdf:about       = https://schema.org/startDate
-        '@ rdfs:seeAlso    = https://schema.org/startDate
-        '@ sh:shapes       = ___TBD___(kein Test auf Maximalzahl, kein Test auf getyptes Literal, keine Deprecated-Warnung)
-    <<optional>> schema:endDate ~> rdfs:Literal [0..1]
-        '@ rdfs:label      = Endzeitpunkt (DEPRECATED)
-        '@ _:internalLink  = zeitraum-endzeitpunkt-deprecated
-        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`
-        '@ rdfs:comment    = Diese Eigenschaft bezeichnet das Ende des Zeitraumes.
-        '@ rdf:about       = https://schema.org/endDate
-        '@ rdfs:seeAlso    = https://schema.org/endDate
-        '@ sh:shapes       = ___TBD___(kein Test auf Maximalzahl, kein Test auf getyptes Literal, keine Deprecated-Warnung)
 }
 '@ rdfs:label        = Zeitraum
 '@ _:internalLink    = #klasse-zeitraum
