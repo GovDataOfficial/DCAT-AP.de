@@ -311,7 +311,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Quelle des Datensatzes](#datensatz-quelle) | `dct:source` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset)| <small>Optional</small> | `[*]` |
 | [Weitere Version](#datensatz-weitere-version) | `dcat:hasVersion` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset)| <small>Optional</small> | `[*]` |
 | [Weitere Version (DEPRECATED)](#datensatz-weitere-version-deprecated) | `dct:hasVersion` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset)| <small>Optional</small> | `[*]` |
-| [Ist Version von](#datensatz-ist-version) | `dct:isVersionOf` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset)| <small>Optional</small> | `[*]` |
+| [Ist Version von (DEPRECATED)](#datensatz-ist-version) | `dct:isVersionOf` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset)| <small>Optional</small> | `[*]` |
 | [Distribution](#datensatz-distribution) | `dcat:distribution` | [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution)| <small>Empfohlen</small> | `[*]` |
 | [Beispieldistribution](#datensatz-beispieldistribution) | `adms:sample` | [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution)| <small>Optional</small> | `[*]` |
 | [Herausgeber](#datensatz-herausgeber) | `dct:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent)| <small>Empfohlen</small> | `[0..1]` |
@@ -764,7 +764,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 <br>
 
-###  Datensatz: Ist Version von {#datensatz-ist-version}
+###  Datensatz: Ist Version von (DEPRECATED) {#datensatz-ist-version}
 > | *URI*                    | [`dct:isVersionOf`](http://purl.org/dc/terms/isVersion) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) |
@@ -772,6 +772,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf einen verwandten Datensatz, der vom beschriebenen Datensatz eine vorherige Version, Edition oder Adaption ist.  |
 > | Weiterführende Dokumentationen | https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isVersion  | 
+> | Änderungen zur Vorversion | 3.0: [DEPRECATED](#glossar-deprecated) | 
 
 <br>
 

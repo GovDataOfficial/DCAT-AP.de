@@ -11,5 +11,6 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Versionsbezeichnung (DEPRECATED)](#datensatz-versionsbezeichnung-deprecated) (`owl:versionInfo`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
 | [Weitere Version](#datensatz-weitere-version) (`dcat:hasVersion`) | 3.0: Neu hinzugefügt. | 
 | [Weitere Version (DEPRECATED)](#datensatz-weitere-version-deprecated) (`dct:hasVersion`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
+| [Ist Version von (DEPRECATED)](#datensatz-ist-version) (`dct:isVersionOf`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
 
 

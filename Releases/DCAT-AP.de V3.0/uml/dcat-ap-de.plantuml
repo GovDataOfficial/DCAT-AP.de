@@ -579,12 +579,13 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ sh:shapes       = ___TBD___(kein Test, ob Ziel ein dcat:Dataset)
 
 "dcat:Dataset" -up-> "*"     "dcat:Dataset"       : <<optional>> dct:isVersionOf
-    '@ rdfs:label      = Ist Version von
+    '@ rdfs:label      = Ist Version von (DEPRECATED)
     '@ _:internalLink  = datensatz-ist-version
     '@ rdfs:range      = http://www.w3.org/ns/dcat#Dataset
     '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf einen verwandten Datensatz, der vom beschriebenen Datensatz eine vorherige Version, Edition oder Adaption ist.
     '@ rdf:about       = http://purl.org/dc/terms/isVersion
     '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isVersion
+    '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated)
     '@ sh:shapes       = ___TBD___(kein Test, ob Ziel ein dcat:Dataset)
 
 "dcat:Dataset" --> "*"     "dcat:Distribution"  : <<recommended>> dcat:distribution
