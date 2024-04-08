@@ -164,6 +164,18 @@ Weitere Details und Beispiele finden Sie im [Konventionenhandbuch](https://www.d
 > | Beispiel                       | Gesundheit: `<http://publications.europa.eu/resource/authority/data-theme/HEAL>` |
 
 
+## EU Vokabular "Access Right" {#kv-access-right}
+Die Access right authority table ist ein kontrolliertes Vokabular, in dem die Zugriffsrechte oder -beschränkungen auf Ressourcen aufgeführt sind. Sie ist für DCAT-Beschreibungen von Datensätzen gedacht, aber nicht auf diese beschränkt.
+
+> | Betroffene Eigenschaften       | [`dct:accessRights`](#datensatz-grad-zuganglichkeit) |
+> |:-------------------------------|:-------------------------|
+> | Verbindlichkeit Vokabular      | Pflicht                  |
+> | Verwendung in Klassen          | [dcat:Dataset](#datensatz-grad-zuganglichkeit),  [dcat:DataService](#datenservice-grad-zuganglichkeit) |
+> | Menschenlesbare Ansicht        | [EU Vocabularies: access-right](https://op.europa.eu/de/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/access-right) |
+> | Basis-URI                      | `http://publications.europa.eu/resource/authority/access-right/`                    |
+> | Beispiel                       | Öffentlich:  `http://publications.europa.eu/resource/authority/access-right/PUBLIC` |
+> | Verwendungsnotiz               | Folgende Werte sollen verwendet werden: <br> `PUBLIC` <br> `RESTRICTED` <br> `NON_PUBLIC` |
+
 ## EU Vokabular "File Type" {#kv-file-type}
 Die File type authority table ist ein kontrolliertes Vokabular, in dem die verschiedenen Arten von (digitalen) Dateien (z. B. PDF, XML, DOC, ...) aufgeführt sind. Die File type authority table wird vom Interinstitutional Metadata Maintenance Committee (IMMC) verwaltet und vom Amt für Veröffentlichungen der Europäischen Union auf der Website EU Vocabularies gepflegt. 
 Fehlende Dateitypen können und müssen über die Funktion ["BEITRAGEN" ("CONTRIBUTE")](https://op.europa.eu/de/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type) der Liste hinzugefügt werden.

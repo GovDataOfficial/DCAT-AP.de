@@ -598,8 +598,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Wertebereich             | [`dct:RightsStatement`](http://purl.org/dc/terms/RightsStatement) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
-> | Beschreibung             | Diese Eigenschaft verweist auf Informationen, die darlegen, ob der Datensatz öffentlich zugänglich ist, Zugriffseinschränkungen existieren oder er nicht-öffentlich ist.  |
+> | Beschreibung             | Diese Eigenschaft verweist auf Informationen, die darlegen, ob der Datensatz öffentlich zugänglich ist, Zugriffseinschränkungen existieren oder er nicht-öffentlich ist. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-access-right) |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_access_rights  | 
+> | Änderungen zur Vorversion | 3.0: Kontrolliertes Vokabular hinzugefügt. | 
 
 <br>
 
@@ -975,8 +976,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Wertebereich             | [`dct:RightsStatement`](http://purl.org/dc/terms/RightsStatement) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
-> | Beschreibung             | Diese Eigenschaft verweist auf Informationen, die darlegen, ob der Datenservice öffentlich zugänglich ist, Zugriffseinschränkungen existieren oder er nicht-öffentlich ist.  |
+> | Beschreibung             | Diese Eigenschaft verweist auf Informationen, die darlegen, ob der Datenservice öffentlich zugänglich ist, Zugriffseinschränkungen existieren oder er nicht-öffentlich ist. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-access-right) |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_access_rights  | 
+> | Änderungen zur Vorversion | 3.0: Kontrolliertes Vokabular hinzugefügt. | 
 
 <br>
 

@@ -433,6 +433,8 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft verweist auf Informationen, die darlegen, ob der Datensatz öffentlich zugänglich ist, Zugriffseinschränkungen existieren oder er nicht-öffentlich ist.
         '@ rdf:about       = http://purl.org/dc/terms/accessRights
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_access_rights
+        '@ _:vocabularyLink = #kv-access-right
+        '@ adms:versionNotes = 3.0: Kontrolliertes Vokabular hinzugefügt.
         '@ sh:shapes       = dcatap:Dataset_Property_dct_accessRights, ___TBD___(kein Test, ob Ziel eine Ressource ist?)
     <<optional>> dct:provenance ~> dct:ProvenanceStatement [*]
         '@ rdfs:label      = Provenienz
@@ -730,6 +732,8 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Diese Eigenschaft verweist auf Informationen, die darlegen, ob der Datenservice öffentlich zugänglich ist, Zugriffseinschränkungen existieren oder er nicht-öffentlich ist.
         '@ rdf:about       = http://purl.org/dc/terms/accessRights
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_access_rights
+        '@ _:vocabularyLink = #kv-access-right
+        '@ adms:versionNotes = 3.0: Kontrolliertes Vokabular hinzugefügt.
         '@ sh:shapes       = dcatap:DataService_Property_dct_accessRights
 }
 '@ rdfs:label      = Datenservice
