@@ -462,13 +462,14 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://dcat-ap.de/def/dcatde/qualityProcessURI
         '@ _:deOriginal    = Von dcat-ap.de eingeführte Eigenschaft.
         '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
-    <<optional>> dct:type ~> skos:Concept [0..1]
+    <<optional>> dct:type ~> skos:Concept [*]
         '@ rdfs:label        = Typ des Datensatzes
         '@ _:internalLink    = datensatz-typ
         '@ rdfs:range        = http://www.w3.org/2004/02/skos/core#Concept
         '@ rdfs:comment      = Diese Eigenschaft bezieht sich auf den Typ des Datensatzes. Es wurde noch kein kontrollierter Vokabular festgelegt.
         '@ rdf:about         = http://purl.org/dc/terms/type
         '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_type
+        '@ adms:versionNotes = 3.0: Kardinalität von `0..1` auf `*` geändert.
         '@ _:vocabularyLink  = #kv-dataset-type
         '@ sh:shapes         = dcatap:Dataset_Property_dct_type, ___TBD___(kein Test des Vokabulars)
     <<optional>> prov:wasGeneratedBy ~> prov:Activity [*]
