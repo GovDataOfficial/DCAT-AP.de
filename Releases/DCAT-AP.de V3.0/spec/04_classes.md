@@ -1023,7 +1023,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Verfügbarkeit](#distribution-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Empfohlen</small> | `[0..1]` |
 | [Namensnennungstext für By-Clauses](#distribution-namensnennungstext-by-clauses) | `dcatde:licenseAttributionByText` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
 | [Beschreibung](#distribution-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
-| [Größe in Bytes](#distribution-grosse-in-bytes) | `dcat:byteSize` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:decimal`| <small>Optional</small> | `[0..1]` |
+| [Größe in Bytes](#distribution-grosse-in-bytes) | `dcat:byteSize` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:nonNegativeInteger`| <small>Optional</small> | `[0..1]` |
 | [Veröffentlichungsdatum](#distribution-veroffentlichungsdatum) | `dct:issued` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`| <small>Optional</small> | `[0..1]` |
 | [Download-URL](#distribution-download-url) | `dcat:downloadURL` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Optional</small> | `[*]` |
 | [Sprache](#distribution-sprache) | `dct:language` | [`dct:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem)| <small>Optional</small> | `[*]` |
@@ -1132,11 +1132,12 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 ###  Distribution: Größe in Bytes {#distribution-grosse-in-bytes}
 > | *URI*                    | [`dcat:byteSize`](http://www.w3.org/ns/dcat#byteSize) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:decimal` |
+> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:nonNegativeInteger` |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft enthält die Größe der Distribution in Bytes.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_size  | 
+> | Änderungen zur Vorversion | 3.0: Änderung der Range von xsd:decimal auf xsd:nonNegativeInteger. | 
 
 <br>
 

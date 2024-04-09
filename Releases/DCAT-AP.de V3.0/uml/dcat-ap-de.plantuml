@@ -841,10 +841,11 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:label      = Größe in Bytes
         '@ _:internalLink  = distribution-grosse-in-bytes
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
-        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:decimal`
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:nonNegativeInteger`
         '@ rdfs:comment    = Diese Eigenschaft enthält die Größe der Distribution in Bytes.
         '@ rdf:about       = http://www.w3.org/ns/dcat#byteSize
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_size
+        '@ adms:versionNotes = 3.0: Änderung der Range von xsd:decimal auf xsd:nonNegativeInteger.
         '@ sh:shapes       = dcatap:Distribution_Property_dcat_byteSize
     <<optional>> dct:issued ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Veröffentlichungsdatum
