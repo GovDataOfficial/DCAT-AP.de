@@ -42,6 +42,18 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Größe in Bytes](#distribution-grosse-in-bytes) (`dcat:byteSize`) | 3.0: Änderung der Range von xsd:decimal auf xsd:nonNegativeInteger. | 
 
 
+### Klasse: Standort
+
+Auf Ebene der Klasse [Standort](#klasse-standort) (`dct:Location`) gibt es 
+keine Änderungen zur Vorversion.
+
+Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
+
+| Eigenschaft           | Änderungen                      |
+|:----------------------|:--------------------------------|
+| [Geometrie](#standort-geometrie) (`locn:geometry`) | 3.0: Wertebereich auf locn:Geometry geändert.<br>3.0: Verwendungshinweis und weiterführende Dokumentation hinzugefügt. | 
+
+
 ### Klasse: Katalogeintrag
 
 Auf Ebene der Klasse [Katalogeintrag](#klasse-katalogeintrag) (`dcat:CatalogRecord`) gibt es 

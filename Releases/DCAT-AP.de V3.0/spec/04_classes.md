@@ -1376,7 +1376,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
 | [Bounding Box](#standort-bounding-box) | `dcat:bbox` | Bewusst generisch gehalten als [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) z. B. getyped als `geosparql:asWKT`| <small>Empfohlen</small> | `[0..1]` |
 | [Geografischer Mittelpunkt](#standort-geografischer-mittelpunkt) | `dcat:centroid` | Bewusst generisch gehalten als [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) z. B. getyped als `geosparql:asWKT`| <small>Empfohlen</small> | `[0..1]` |
-| [Geometrie](#standort-geometrie) | `locn:geometry` | Bewusst generisch gehalten als [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) z. B. getyped als `geosparql:asWKT`| <small>Optional</small> | `[0..1]` |
+| [Geometrie](#standort-geometrie) | `locn:geometry` | [`locn:Geometry`](http://www.w3.org/ns/locn#Geometry)| <small>Optional</small> | `[0..1]` |
 
 
 <br>
@@ -1408,11 +1408,13 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 ###  Standort: Geometrie {#standort-geometrie}
 > | *URI*                    | [`locn:geometry`](http://www.w3.org/ns/locn#geometry) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | Bewusst generisch gehalten als [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) z. B. getyped als `geosparql:asWKT` |
+> | Wertebereich             | [`locn:Geometry`](http://www.w3.org/ns/locn#Geometry) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft beschreibt die Geometrie einer Ressource.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/ns/locn#locn:geometry  | 
+> | Verwendungshinweis       | Der Wertebereich dieser Eigenschaft lässt jede Art von Geometriespezifikation zu.<br>Empfohlen wird z.B. die Angabe als WKT-Literal (`rdfs:Literal`  getyped als `geosparql:wktLiteral`). | 
+> | Weiterführende Dokumentationen | https://semiceu.github.io/Core-Location-Vocabulary/releases/w3c/#locn:geometry<br>https://www.w3.org/ns/locn#locn:geometry  | 
+> | Änderungen zur Vorversion | 3.0: Wertebereich auf locn:Geometry geändert.<br>3.0: Verwendungshinweis und weiterführende Dokumentation hinzugefügt. | 
 
 <br>
 
