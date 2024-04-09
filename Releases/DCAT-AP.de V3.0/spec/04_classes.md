@@ -1572,7 +1572,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
 | [Aktualisierungsdatum](#katalogeintrag-aktualisierungsdatum) | `dct:modified` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`| <small>Pflicht</small> | `[1]` |
-| [Application Profile der Metadaten](#katalogeintrag-konform-zu) | `dct:conformsTo` | [`rdfs:Resource`](http://purl.org/dc/terms/Standard)| <small>Empfohlen</small> | `[0..1]` |
+| [Application Profile der Metadaten](#katalogeintrag-konform-zu) | `dct:conformsTo` | [`rdfs:Resource`](http://purl.org/dc/terms/Standard)| <small>Empfohlen</small> | `[*]` |
 | [Änderungstyp](#katalogeintrag-anderungstyp) | `adms:status` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept)| <small>Empfohlen</small> | `[0..1]` |
 | [Veröffentlichungsdatum](#katalogeintrag-veroffentlichungsdatum) | `dct:issued` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`| <small>Empfohlen</small> | `[0..1]` |
 | [Titel](#katalogeintrag-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
@@ -1602,9 +1602,10 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Resource`](http://purl.org/dc/terms/Standard) |
 > | Verbindlichkeit          | Empfohlen |
-> | Multiplizität            | `[0..1]`                    |
+> | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf das Application Profile zu dem die Metadaten im Katalog konform sind.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:record_conforms_to  | 
+> | Änderungen zur Vorversion | 3.0: Kardinalität von `0..1` auf `*` geändert. | 
 
 <br>
 

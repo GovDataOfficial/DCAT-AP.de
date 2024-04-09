@@ -30,3 +30,15 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Grad der Zugänglichkeit](#datenservice-grad-zuganglichkeit) (`dct:accessRights`) | 3.0: Kontrolliertes Vokabular hinzugefügt. | 
 
 
+### Klasse: Katalogeintrag
+
+Auf Ebene der Klasse [Katalogeintrag](#klasse-katalogeintrag) (`dcat:CatalogRecord`) gibt es 
+keine Änderungen zur Vorversion.
+
+Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
+
+| Eigenschaft           | Änderungen                      |
+|:----------------------|:--------------------------------|
+| [Application Profile der Metadaten](#katalogeintrag-konform-zu) (`dct:conformsTo`) | 3.0: Kardinalität von `0..1` auf `*` geändert. | 
+
+

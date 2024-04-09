@@ -1155,13 +1155,14 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date
         '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
 
-    <<recommended>> dct:conformsTo ~> rdfs:Resource [0..1]
+    <<recommended>> dct:conformsTo ~> rdfs:Resource [*]
         '@ rdfs:label      = Application Profile der Metadaten
         '@ _:internalLink  = katalogeintrag-konform-zu
         '@ rdfs:range      = http://purl.org/dc/terms/Standard
         '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf das Application Profile zu dem die Metadaten im Katalog konform sind.
         '@ rdf:about       = http://purl.org/dc/terms/conformsTo
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:record_conforms_to
+        '@ adms:versionNotes = 3.0: Kardinalität von `0..1` auf `*` geändert.
         '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_conformsTo, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
     <<recommended>> adms:status ~> skos:Concept [0..1]
         '@ rdfs:label      = Änderungstyp
