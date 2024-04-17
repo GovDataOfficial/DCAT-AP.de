@@ -1,0 +1,157 @@
+# (C) CC BY 4.0 ']init[ AG fuer GovData'
+#
+# Diese Datei fügt zu den DCAT-AP-SHACL-Shapes eine deutsche Übersetzung hinzu.
+
+@prefix dcatap: <http://data.europa.eu/r5r#> .
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+
+
+# Deutsche Fehlermeldungen zu foaf:Agent
+    dcatap:Agent_Property_foaf_name sh:message "foaf:Agent: foaf:name MUSS vorhanden und ein Literal sein."@de .
+    dcatap:Agent_Property_dct_type  sh:message "foaf:Agent: DARF maximal ein dct:type haben."@de .
+
+
+# Deutsche Fehlermeldungen zu dcat:CatalogRecord
+    dcatap:CatalogRecord_Property_dct_modified      sh:message "dcat:CatalogRecord: dct:modified MUSS ein als xsd:date, xsd:dateTime, xsd:gYear oder xsd:gYearMonth getyptes Literal sein. Es MUSS genau einmal vorhanden sein."@de .
+    dcatap:CatalogRecord_Property_dct_conformsTo    sh:message "dcat:CatalogRecord: DARF maximal ein dct:conformsTo haben."@de .
+    dcatap:CatalogRecord_Property_adms_status       sh:message "dcat:CatalogRecord: DARF maximal einen adms:status haben."@de .
+    dcatap:CatalogRecord_Property_dct_issued        sh:message "dcat:CatalogRecord: dct:issued MUSS ein als xsd:date, xsd:dateTime, xsd:gYear oder xsd:gYearMonth getyptes Literal sein. Es DARF maximal einmal vorhanden sein."@de .
+    dcatap:CatalogRecord_Property_dct_title         sh:message "dcat:CatalogRecord: dct:title MUSS ein Literal sein."@de .
+    dcatap:CatalogRecord_Property_dct_description   sh:message "dcat:CatalogRecord: dct:description MUSS ein Literal sein."@de .
+    # dcatap:CatalogRecord_Property_dct_language    sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    dcatap:CatalogRecord_Property_foaf_primaryTopic sh:message "dcat:CatalogRecord: foaf:primaryTopic MUSS genau einmal vorhanden sein. Es MUSS auf eine dcat:Resource zeigen."@de .
+    dcatap:CatalogRecord_Property_dct_source        sh:message "dcat:CatalogRecord: Mehr als ein dct:source vorhanden! Sie müssen beachten, dass ein dcat:CatalogRecord nicht über mehrere dct:source verfügen darf."@de .
+
+
+# Deutsche Fehlermeldungen zu dcat:Catalog
+    dcatap:Catalog_Property_dct_title            sh:message "dcat:Catalog: dct:title MUSS vorhanden und ein Literal sein."@de .
+    dcatap:Catalog_Property_dct_description      sh:message "dcat:Catalog: dct:description MUSS vorhanden und ein Literal sein."@de .
+    dcatap:Catalog_Property_dct_issued           sh:message "dcat:Catalog: dct:issued MUSS ein als xsd:date, xsd:dateTime, xsd:gYear oder xsd:gYearMonth getyptes Literal sein. Es DARF maximal einmal vorhanden sein."@de .
+    dcatap:Catalog_Property_dct_modified         sh:message "dcat:Catalog: dct:modified MUSS ein als xsd:date, xsd:dateTime, xsd:gYear oder xsd:gYearMonth getyptes Literal sein. Es DARF maximal einmal vorhanden sein."@de .
+    # dcatap:Catalog_Property_dct_language       sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    dcatap:Catalog_Property_foaf_homepage        sh:message "dcat:Catalog: DARF maximal eine foaf:homepage haben."@de .
+    dcatap:Catalog_Property_dct_license          sh:message "dcat:Catalog: DARF maximal eine dct:license haben."@de .
+    dcatap:Catalog_Property_dct_rights           sh:message "dcat:Catalog: DARF maximal ein dct:rights haben."@de .
+    # dcatap:Catalog_Property_dcat_catalog       sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    # dcatap:Catalog_Property_dcat_themeTaxonomy sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    # dcatap:Catalog_Property_dcat_service       sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    # dcatap:Catalog_Property_dct_spatial        sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    # dcatap:Catalog_Property_dct_hasPart        sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    dcatap:Catalog_Property_dct_isPartOf         sh:message "dcat:Catalog: DARF maximal ein dct:isPartOf haben."@de .
+    # dcatap:Catalog_Property_dcat_record        sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    # dcatap:Catalog_Property_dcat_dataset       sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    dcatap:Catalog_Property_dct_publisher        sh:message "dcat:Catalog: dct:publisher MUSS genau einmal vorhanden sein."@de .
+    # dcatap:Catalog_Property_dct_creator        sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+
+
+# Deutsche Fehlermeldungen zu skos:ConceptScheme
+    dcatap:CategoryScheme_Property_dct_title sh:message "Pflicht: dct:title ist kein Literal oder nicht vorhanden! Ein skos:ConceptScheme muss über mindestens einen Titel verfügen. Alle Titel müssen Text sein."@de .
+
+
+# Deutsche Fehlermeldungen zu skos:Concept
+    dcatap:Category_Property_skos_prefLabel sh:message "Pflicht: skos:prefLabel ist kein Literal oder nicht vorhanden! Ein skos:Concept muss über mindestens ein Label verfügen. Alle Label müssen Text sein."@de .
+
+
+# Deutsche Fehlermeldungen zu spdx:Checksum
+    dcatap:Checksum_Property_spdx_checksumValue sh:message "spdx:Checksum: spdx:checksumValue MUSS ein Literal vom Typ xsd:hexBinary sein. Es MUSS genau einmal vorhanden sein."@de .
+
+
+# Deutsche Fehlermeldungen zu dcat:DataService
+    dcatap:DataService_Property_dcat_endpointURL         sh:message "dcat:DataService: dcat:endpointURL MUSS eine IRI oder BlankNode sein."@de .
+    dcatap:DataService_Property_dct_title                sh:message "dcat:DataService: dct:title MUSS vorhanden und ein Literal sein."@de .
+    dcatap:DataService_Property_dcat_endpointDescription sh:message "dcat:DataService: dcat:endpointDescription MUSS eine IRI oder BlankNode sein."@de .
+    dcatap:DataService_Property_dct_description          sh:message "dcat:DataService: dct:description MUSS ein Literal sein."@de .
+    dcatap:DataService_Property_dct_license              sh:message "dcat:DataService: DARF maximal eine dct:license haben."@de .
+    dcatap:DataService_Property_dct_accessRights         sh:message "dcat:DataService: DARF maximal ein dct:accessRights haben."@de .
+    # dcatap:DataService_Property_dcat_servesDataset     sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+
+
+# Deutsche Fehlermeldungen zu dcat:Dataset
+    dcatap:Dataset_Property_dct_title                      sh:message "dcat:Dataset: dct:title MUSS vorhanden und ein Literal sein."@de .
+    dcatap:Dataset_Property_dct_description                sh:message "dcat:Dataset: dct:description MUSS vorhanden und ein Literal sein."@de .
+    dcatap:Dataset_Property_dcat_keyword                   sh:message "dcat:Dataset: dcat:keyword MUSS ein Literal sein."@de .
+    # dcatap:Dataset_Property_dcat_theme                   sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    # dcatap:Dataset_Property_dcat_contactPoint            sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    dcatap:Dataset_Property_dct_identifier                 sh:message "dcat:Dataset: dct:identifier MUSS ein Literal sein."@de .
+    # dcatap:Dataset_Property_adms_identifier              sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    dcatap:Dataset_Property_dct_issued                     sh:message "dcat:Dataset: dct:issued MUSS ein als xsd:date, xsd:dateTime, xsd:gYear oder xsd:gYearMonth getyptes Literal sein. Es DARF maximal einmal vorhanden sein."@de .
+    dcatap:Dataset_Property_dct_modified                   sh:message "dcat:Dataset: dct:modified MUSS ein als xsd:date, xsd:dateTime, xsd:gYear oder xsd:gYearMonth getyptes Literal sein. Es DARF maximal einmal vorhanden sein."@de .
+    dcatap:Dataset_Property_owl_versionInfo                sh:message "dcat:Dataset: owl:versionInfo MUSS ein Literal sein. Es DARF maximal einmal vorhanden sein."@de .
+    dcatap:Dataset_Property_adms_versionNotes              sh:message "dcat:Dataset: adms:versionNotes MUSS ein Literal sein."@de .
+    dcatap:Dataset_Property_dct_relation                   sh:message "dcat:Dataset: dct:relation MUSS eine IRI oder BlankNode sein."@de .
+    # dcatap:Dataset_Property_dcat_landingPage             sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    # dcatap:Dataset_Property_foaf_page                    sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    # dcatap:Dataset_Property_dct_language                 sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    # dcatap:Dataset_Property_dct_conformsTo               sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    dcatap:Dataset_Property_dct_accessRights               sh:message "dcat:Dataset: dct:accessRights DARF maximal einmal vorhanden sein."@de .
+    # dcatap:Dataset_Property_dct_provenance               sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    dcatap:Dataset_Property_dct_accrualPeriodicity         sh:message "dcat:Dataset: dct:accrualPeriodicity DARF maximal einmal vorhanden sein."@de .
+    # dcatap:Dataset_Property_dct_type                     sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    # dcatap:Dataset_Property_prov_wasGeneratedBy          sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    dcatap:Dataset_Property_dcat_spatialResolutionInMeters sh:message "dcat:Dataset: dcat:spatialResolutionInMeters MUSS ein als xsd:decimal getyptes Literal sein. Es DARF maximal einmal vorhanden sein (dieses Änderung wird in DCAT-AP.de 2.1 nachgezogen)."@de .
+    dcatap:Dataset_Property_dcat_temporalResolution        sh:message "dcat:Dataset: dcat:temporalResolution MUSS ein als xsd:duration getyptes Literal sein. Es DARF maximal einmal vorhanden sein (dieses Änderung wird in DCAT-AP.de 2.1 nachgezogen)."@de .
+    # dcatap:Dataset_Property_prov_qualifiedAttribution    sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    # dcatap:Dataset_Property_dcat_qualifiedRelation       sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    dcatap:Dataset_Property_dc_isReferencedBy              sh:message "dcat:Dataset: dct:isReferencedBy MUSS eine IRI oder BlankNode sein."@de .
+    # dcatap:Dataset_Property_dct_spatial                  sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    # dcatap:Dataset_Property_dct_temporal                 sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    # dcatap:Dataset_Property_dct_source                   sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    # dcatap:Dataset_Property_dct_isVersionOf              sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    # dcatap:Dataset_Property_dct_hasVersion               sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    # dcatap:Dataset_Property_dcat_distribution            sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    # dcatap:Dataset_Property_adms_sample                  sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    dcatap:Dataset_Property_dct_publisher                  sh:message "dcat:Dataset: dct:publisher DARF maximal einmal vorhanden sein."@de .
+    # dcatap:Dataset_Property_dct_creator                  sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+
+
+# Deutsche Fehlermeldungen zu dcat:Distribution
+    dcatap:Distribution_Property_dcat_accessURL                 sh:message "dcat:Distribution: dcat:accessURL MUSS vorhanden und eine IRI oder BlankNode sein."@de .
+    dcatap:Distribution_Property_dct_title                      sh:message "dcat:Distribution: dct:title MUSS ein Literal sein."@de .
+    dcatap:Distribution_Property_dct_modified                   sh:message "dcat:Distribution: dct:modified MUSS ein als xsd:date, xsd:dateTime, xsd:gYear oder xsd:gYearMonth getyptes Literal sein. Es DARF maximal einmal vorhanden sein."@de .
+    dcatap:Distribution_Property_dct_license                    sh:message "dcat:Distribution: dct:license DARF maximal einmal vorhanden sein."@de .
+    dcatap:Distribution_Property_dct_format                     sh:message "dcat:Distribution: dct:format DARF maximal einmal vorhanden sein."@de .
+    dcatap:Distribution_Property_dcatap_availability            sh:message "dcat:Distribution: DARF maximal eine dcatap:availability haben."@de .
+    dcatap:Distribution_Property_dct_description                sh:message "dcat:Distribution: dct:description MUSS ein Literal sein."@de .
+    dcatap:Distribution_Property_dcat_byteSize                  sh:message "dcat:Distribution: dcat:byteSize MUSS ein als xsd:decimal getyptes Literal sein. Es DARF maximal einmal vorhanden sein."@de .
+    dcatap:Distribution_Property_dct_issued                     sh:message "dcat:Distribution: dct:issued MUSS ein als xsd:date, xsd:dateTime, xsd:gYear oder xsd:gYearMonth getyptes Literal sein. Es DARF maximal einmal vorhanden sein."@de .
+    dcatap:Distribution_Property_dcat_downloadURL               sh:message "dcat:Distribution: dcat:downloadURL MUSS eine IRI oder BlankNode sein."@de .
+    # dcatap:Distribution_Property_dct_language                 sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    # dcatap:Distribution_Property_foaf_page                    sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    dcatap:Distribution_Property_dct_rights                     sh:message "dcat:Distribution: DARF maximal ein dct:rights haben."@de .
+    # dcatap:Distribution_Property_dct_conformsTo               sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    dcatap:Distribution_Property_dcat_mediaType                 sh:message "dcat:Distribution: DARF maximal ein dcat:mediaType haben."@de .
+    dcatap:Distribution_Property_dcat_compressFormat            sh:message "dcat:Distribution: DARF maximal ein dcat:compressFormat haben."@de .
+    dcatap:Distribution_Property_dcat_packageFormat             sh:message "dcat:Distribution: DARF maximal ein dcat:packageFormat haben."@de .
+    dcatap:Distribution_Property_odrl_hasPolicy                 sh:message "dcat:Distribution: DARF maximal ein odrl:hasPolicy haben."@de .
+    dcatap:Distribution_Property_adms_status                    sh:message "dcat:Distribution: DARF maximal ein adms:status haben."@de .
+    # dcatap:Distribution_Property_dcat_accessService           sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+    dcatap:Distribution_Property_spdx_checksum                  sh:message "dcat:Distribution: Mehr als eine spdx:checksum vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere spdx:checksum verfügen darf."@de .
+
+    dcatap:Distribution_Property_dcat_spatialResolutionInMeters sh:message "dcat:Distribution: dcat:spatialResolutionInMeters MUSS ein als xsd:decimal getyptes Literal sein. Es DARF maximal einmal vorhanden sein (dieses Änderung wird in DCAT-AP.de 2.1 nachgezogen)."@de .
+    dcatap:Distribution_Property_dcat_temporalResolution        sh:message "dcat:Distribution: dcat:temporalResolution MUSS ein als xsd:duration getyptes Literal sein. Es DARF maximal einmal vorhanden sein (dieses Änderung wird in DCAT-AP.de 2.1 nachgezogen)."@de .
+
+
+# Deutsche Fehlermeldungen zu adms:Identifier
+    dcatap:Identifier_Property_skos_notation                    sh:message "adms:Identifier: skos:notation MUSS vorhanden und ein Literal sein."@de .
+
+# Deutsche Fehlermeldungen zu dct:LicenseDocument
+    # dcatap:LicenceDocument_Property_dct_typsh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
+
+# Deutsche Fehlermeldungen zu dct:Location
+    dcatap:Location_Property_dcat_bbox                          sh:message "dct:Location: dcat:bbox MUSS ein Literal sein. Es DARF maximal einmal vorhanden sein."@de .
+    dcatap:Location_Property_dcat_centroid                      sh:message "dct:Location: dcat:centroid MUSS ein Literal sein. Es DARF maximal einmal vorhanden sein."@de .
+    dcatap:Location_Property_locn_geometry                      sh:message "dct:Location: locn:geometry MUSS ein Literal sein. Es DARF maximal einmal vorhanden sein."@de .
+
+# Deutsche Fehlermeldungen zu dct:PeriodOfTime
+    dcatap:PeriodOfTime_Property_dcat_startDate                 sh:message "dct:PeriodOfTime: dcat:startDate MUSS ein als xsd:date, xsd:dateTime, xsd:gYear oder xsd:gYearMonth getyptes Literal sein. Es DARF maximal einmal vorhanden sein."@de .
+    dcatap:PeriodOfTime_Property_dcat_endDate                   sh:message "dct:PeriodOfTime: dcat:endDate MUSS ein als xsd:date, xsd:dateTime, xsd:gYear oder xsd:gYearMonth getyptes Literal sein. Es DARF maximal einmal vorhanden sein."@de .
+    dcatap:PeriodOfTime_Property_time_hasBeginning              sh:message "dct:PeriodOfTime: time:hasBeginning DARF maximal einmal vorhanden sein."@de .
+    dcatap:PeriodOfTime_Property_time_hasEnd                    sh:message "dct:PeriodOfTime: time:hasEnd DARF maximal einmal vorhanden sein."@de .
+
+# Deutsche Fehlermeldungen zu dcat:Relationship
+    dcatap:Relationship_Property_dcat_hadRole                   sh:message "dcat:Relationship: dcat:hadRole MUSS mindestens einmal vorhanden sein."@de .
+    dcatap:Relationship_Property_dct_relation                   sh:message "dcat:Relationship: dct:relation MUSS mindestens einmal vorhanden sein."@de .
+
+# Deutsche Fehlermeldungen zu Sammel-Prüfungen
+    dcatap:DateOrDateTimeDataType_Shape                         sh:message "Das Objekt MUSS vom Typ xsd:date, xsd:dateTime, xsd:gYear oder xsd:gYearMonth sein."@de .
+    dcatap:DcatResource_Shape                                   sh:message "Das Objekt MUSS vom Typ dcat:Catalog, dcat:Dataset oder dcat:DataService sein."@de .

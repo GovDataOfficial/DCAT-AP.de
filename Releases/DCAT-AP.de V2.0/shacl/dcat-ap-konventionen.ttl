@@ -1,0 +1,352 @@
+# (C) CC BY 4.0 ']init[ AG fuer GovData'
+#
+# Diese Datei fügt zu den DCAT-AP-SHACL-Shapes deutsche Regeln hinzu, so dass das Konventionenhandbuch
+# und Empfehlungen für die Anlieferung an GovData geprüft werden.
+
+@prefix :       <http://dcat-ap.de/def/dcatde/> .
+@prefix adms:   <http://www.w3.org/ns/adms#> .
+@prefix dc:     <http://purl.org/dc/elements/1.1/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix locn:   <http://www.w3.org/ns/locn#> .
+@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix spdx:   <http://spdx.org/rdf/terms#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix vcard:  <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml:    <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+:Konv01_hasEmail_hasURL_v_Min
+    sh:message "K01: Kontaktinformationen (dcat:contactPoint) MÜSSEN mindestens Angaben zur Email (vcard:hasEmail) oder einen Link zum Kontaktformular oder Chatbot (vcard:hasURL) enthalten. "@de ;
+    sh:severity sh:Violation ;
+
+    sh:minCount 1 ;
+    sh:path [ sh:alternativePath ( 
+        vcard:hasURL 
+        vcard:hasEmail 
+    ) ] ;
+.
+
+:Konv_contactPoint_Shape
+    a sh:NodeShape ;
+    sh:targetObjectsOf dcat:contactPoint ;
+    sh:name "Konventionen zum dcat:contactPoint gemäß DCAT-AP.de 2.0"@de ;
+
+    sh:property :Konv01_hasEmail_hasURL_v_Min ; # Würde man hier auf sh:node wechseln, wäre es konform, die Fehlermeldung ginge aber verloren.
+.
+
+:Konv12_13_contributorID_v_List
+    sh:message "K12&13: dcat:Dataset: dcatde:contributorID MUSS verwendet werden und DARF nur genau einmal eine IRI aus http://dcat-ap.de/def/contributors/ verwenden. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/implRules/#konvention-12 "@de ;
+    sh:severity sh:Violation ;
+
+    sh:path dcatde:contributorID ;
+
+    sh:qualifiedValueShape [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://dcat-ap.de/def/contributors> ;
+    ] ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedMaxCount 1 ;
+.
+
+:Konv36_dct_publisher_v_Min
+    sh:message "K36: dcat:Dataset: dct:publisher MUSS verwendet werden. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/implRules/#konvention-36 "@de ;
+    sh:severity sh:Violation ;
+
+    sh:path dct:publisher ;
+    sh:minCount 1 ;
+.
+
+:Konv30_dcat_theme_w_Min
+    sh:message "K30: dcat:Dataset: dcat:theme: Zur Steigerung der Metadatenqualität wird die Angabe von Kategorien empfohlen. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zu-kategorien "@de ;
+    sh:severity sh:Warning ;
+
+    sh:path dcat:theme ;
+    sh:minCount 1 ;
+.
+
+:KonvXX_dcat_keyword_w_Min
+    sh:message "KXX: dcat:Dataset: dcat:keyword: Zur Steigerung der Metadatenqualität wird die Angabe von Schlagworten empfohlen. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-schlagwort "@de ;
+    sh:severity sh:Warning ;
+
+    sh:path dcat:keyword ;
+    sh:minCount 1 ;
+.
+
+:KonvXX_dcat_landingPage_w_Min
+    sh:message "KXX: dcat:Dataset: dcat:landingPage: Zur Steigerung der Metadatenqualität wird die Angabe der ursprünglichen Webseite empfohlen. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-ursprungliche-webseite "@de ;
+    sh:severity sh:Warning ;
+
+    sh:path dcat:landingPage ;
+    sh:minCount 1 ;
+.
+
+:KonvXX_dct_issued_w_Min
+    sh:message "KXX: dcat:Dataset: dct:issued: Zur Steigerung der Metadatenqualität wird die Angabe des Veröffentlichungsdatums empfohlen. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-veroffentlichungsdatum "@de ;
+    sh:severity sh:Warning ;
+
+    sh:path dct:issued ;
+    sh:minCount 1 ;
+.
+
+:Dubletten_dct_identifier_i_Min
+    sh:message "dcat:Dataset: Ggf. MUSS dct:identifier zur Dublettenprüfung verwendet werden. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/implRules/#erkennung-von-dubletten "@de ;
+    sh:severity sh:Info ;
+
+    sh:path dct:identifier ;
+    sh:minCount 1 ;
+.
+
+:Dubletten_dct_modified_i_Min
+    sh:message "dcat:Dataset: Ggf. MUSS dct:modified zur Dublettenprüfung verwendet werden. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/implRules/#erkennung-von-dubletten "@de ;
+    sh:severity sh:Info ;
+
+    sh:path dct:modified ;
+    sh:minCount 1 ;
+.
+
+:Dataset_dcat_distribution_i_Min
+    sh:message "dcat:Dataset: dcat:distribution: Es wird empfohlen, dass jedes Dataset über eine Distribution verfügt."@de ;
+    sh:severity sh:Info ;
+
+    sh:path dcat:distribution ;
+    sh:minCount 1 ;
+.
+
+:Konv_Dataset_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:name "Konventionen zum dcat:Dataset gemäß DCAT-AP.de 2.0"@de ;
+
+    sh:property :Konv12_13_contributorID_v_List ;
+    sh:property :Konv36_dct_publisher_v_Min ;
+    sh:property :Konv30_dcat_theme_w_Min ;
+    sh:property :KonvXX_dcat_keyword_w_Min ;
+    sh:property :KonvXX_dcat_landingPage_w_Min ;
+    sh:property :KonvXX_dct_issued_w_Min ;
+    sh:property :Dubletten_dct_identifier_i_Min ;
+    sh:property :Dubletten_dct_modified_i_Min ;
+    sh:property :Dataset_dcat_distribution_i_Min ;
+.
+
+:Konv31_dct_license_v_List
+    sh:message "K31: dcat:Distribution: dct:license MUSS eine IRI aus http://dcat-ap.de/def/licenses/ verwenden. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/implRules/#konvention-31 "@de ;
+    sh:path dct:license ;
+
+    sh:qualifiedValueShape [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://dcat-ap.de/def/licenses> ;
+    ] ;
+    sh:qualifiedMinCount 1 ;
+
+    sh:severity sh:Violation ;
+.
+
+:Konv32_dct_format_v_List
+    sh:path dct:format ;
+
+    sh:property [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/file-type> ;
+
+        sh:message "K32: dcat:Distribution: dct:format MUSS eine IRI aus dem  EU Vokabular 'File Type' verwenden. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/implRules/#konvention-32 "@de ;
+        sh:severity sh:Violation ;
+    ] ;
+.
+
+:KonvXX_dct_title_w_Min
+    sh:message "KXX: dcat:Distribution: dct:title: Es wird empfohlen, dass jede Distribution über einen dct:title verfügt."@de ;
+    sh:severity sh:Warning ;
+
+    sh:path dct:title ;
+    sh:minCount 1 ;
+.
+
+:Konv_Distribution_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:Distribution ;
+    sh:name "Konventionen zur dcat:Distribution gemäß DCAT-AP.de 2.0"@de ;
+
+    sh:property :Konv31_dct_license_v_List ;
+    sh:property :Konv32_dct_format_v_List ;
+    sh:property :KonvXX_dct_title_w_Min ;
+.
+
+####################################################
+#########     Ranges zum dcat:Dataset      #########
+####################################################
+
+:Range_Dataset_dct_conformsTo_w_IRIOrLiteral
+    sh:path dct:conformsTo ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Dataset: dct:conformsTo SOLL eine IRI oder ein Literal sein."@de ;
+.
+
+:Range_Dataset_dct_accessRights_w_IRIOrLiteral
+    sh:path dct:accessRights ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Dataset: dct:accessRights SOLL eine IRI oder ein Literal sein."@de ;
+.
+
+:Range_Dataset_dct_provenance_w_IRIOrLiteral
+    sh:path dct:provenance ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Dataset: dct:provenance SOLL eine IRI oder ein Literal sein."@de ;
+.
+
+:Range_Dataset_prov_wasGeneratedBy_w_IRI
+    sh:path prov:wasGeneratedBy ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Dataset: prov:wasGeneratedBy SOLL eine IRI sein."@de ;
+.
+
+:Range_Dataset_dcat_landingPage_w_IRI
+    sh:path dcat:landingPage ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Dataset: dcat:landingPage SOLL eine IRI sein."@de ;
+.
+
+:Range_Dataset_foaf_page_w_IRI
+    sh:path foaf:page ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Dataset: foaf:page SOLL eine IRI sein."@de ;
+.
+
+:Range_Dataset_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:name "Range-Bedingungen zum dcat:Dataset gemäß DCAT-AP.de 2.0"@de ;
+
+    sh:property :Range_Dataset_dct_conformsTo_w_IRIOrLiteral ;
+    sh:property :Range_Dataset_dct_accessRights_w_IRIOrLiteral ;
+    sh:property :Range_Dataset_dct_provenance_w_IRIOrLiteral ;
+    sh:property :Range_Dataset_prov_wasGeneratedBy_w_IRI ;
+    sh:property :Range_Dataset_dcat_landingPage_w_IRI ;
+    sh:property :Range_Dataset_foaf_page_w_IRI ;
+.
+
+####################################################
+#########     Ranges zum dcat:Catalog      #########
+####################################################
+
+:Range_Catalog_dct_rights_w_IRIOrLiteral
+    sh:path dct:rights ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Catalog: dct:rights SOLL eine IRI oder ein Literal sein."@de ;
+.
+
+:Range_Catalog_foaf_homepage_w_IRI
+    sh:path foaf:homepage ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Catalog: foaf:homepage SOLL eine IRI sein."@de ;
+.
+
+:Range_Catalog_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:Catalog ;
+    sh:name "Range-Bedingungen zum dcat:Catalog gemäß DCAT-AP.de 2.0"@de ;
+
+    sh:property :Range_Catalog_dct_rights_w_IRIOrLiteral ;
+    sh:property :Range_Catalog_foaf_homepage_w_IRI ;
+.
+
+####################################################
+#######     Ranges zum dcat:DataService      #######
+####################################################
+
+:Range_DataService_dct_accessRights_w_IRIOrLiteral
+    sh:path dct:accessRights ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:DataService: dct:accessRights SOLL eine IRI oder ein Literal sein."@de ;
+.
+
+:Range_DataService_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:DataService ;
+    sh:name "Range-Bedingungen zum dcat:DataService gemäß DCAT-AP.de 2.0"@de ;
+
+    sh:property :Range_DataService_dct_accessRights_w_IRIOrLiteral ;
+.
+
+####################################################
+#######     Ranges zur dcat:Distribution     #######
+####################################################
+
+:Range_Distribution_dct_rights_w_IRIOrLiteral
+    sh:path dct:rights ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Distribution: dct:rights SOLL eine IRI oder ein Literal sein."@de ;
+.
+
+:Range_Distribution_dct_conformsTo_w_IRIOrLiteral
+    sh:path dct:conformsTo ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Distribution: dct:conformsTo SOLL eine IRI oder ein Literal sein."@de ;
+.
+
+:Range_Distribution_foaf_page_w_IRI
+    sh:path foaf:page ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Distribution: foaf:page SOLL eine IRI sein."@de ;
+.
+
+:Range_Distribution_odrl_hasPolicy_w_IRI
+    sh:path odrl:hasPolicy ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Distribution: odrl:hasPolicy SOLL eine IRI sein."@de ;
+.
+
+:Range_Distribution_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:Distribution ;
+    sh:name "Range-Bedingungen zur dcat:Distribution gemäß DCAT-AP.de 2.0"@de ;
+
+    sh:property :Range_Distribution_dct_rights_w_IRIOrLiteral ;
+    sh:property :Range_Distribution_dct_conformsTo_w_IRIOrLiteral ;
+    sh:property :Range_Distribution_foaf_page_w_IRI ;
+    sh:property :Range_Distribution_odrl_hasPolicy_w_IRI ;
+.
+
+####################################################
+#######    Ranges zum dcat:CatalogRecord     #######
+####################################################
+
+:Range_CatalogRecord_dct_conformsTo_w_IRIOrLiteral
+    sh:path dct:conformsTo ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:CatalogRecord: dct:conformsTo SOLL eine IRI oder ein Literal sein."@de ;
+.
+
+:Range_CatalogRecord_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:CatalogRecord ;
+    sh:name "Range-Bedingungen zur dcat:CatalogRecord gemäß DCAT-AP.de 2.0"@de ;
+
+    sh:property :Range_CatalogRecord_dct_conformsTo_w_IRIOrLiteral ;
+.
