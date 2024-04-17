@@ -1,0 +1,981 @@
+# (C) CC BY 4.0 ']init[ AG fuer GovData'
+#
+# Diese Datei fügt zu den DCAT-AP-SHACL-Shapes deutsche Regeln hinzu, so dass DCAT-AP.de 2.0 geprüft wird.
+# Das beinhaltet, dass widersprüchliche DCAT-AP-SHACL-Shapes deaktiviert werden.
+
+@prefix :       <http://dcat-ap.de/def/dcatde/> .
+@prefix adms:   <http://www.w3.org/ns/adms#> .
+@prefix dc:     <http://purl.org/dc/elements/1.1/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix locn:   <http://www.w3.org/ns/locn#> .
+@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix spdx:   <http://spdx.org/rdf/terms#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix vcard:  <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml:    <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+
+# Allgemeine deutsche Änderungen
+# Deaktiviere alle Shapes zum "CategoryScheme", da diese bei jedem skos:ConceptScheme andocken.
+# Deaktiviere alle Shapes zum "Category", da diese bei jedem skos:Concept andocken.
+# Deaktiviere die Tests zum spdx:algorithm, da DCAT-AP.de ein anderes Vokabular vorschreibt.
+dcatap:CategoryScheme_Shape              sh:deactivated true .
+dcatap:Category_Shape                    sh:deactivated true .
+dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true . 
+
+
+# Deutsche Änderungen und Ergänzungen zu dcat:Dataset
+
+:Dataset_dcatde_politicalGeocodingLevelURI_v_IRI
+    sh:path dcatde:politicalGeocodingLevelURI ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dcatde:politicalGeocodingLevelURI MUSS eine IRI sein."@de ;
+.
+
+:Dataset_dcatde_politicalGeocodingLevelURI_w_List
+    sh:path dcatde:politicalGeocodingLevelURI ;
+    sh:property [
+        sh:severity sh:Warning ;
+        sh:message "dcat:Dataset: dcatde:politicalGeocodingLevelURI SOLL folgendes Vokabular benutzten: http://dcat-ap.de/def/politicalGeocoding/Level/"@de ;
+
+        sh:path skos:inScheme ;
+        sh:hasValue <http://dcat-ap.de/def/politicalGeocoding/Level> ;
+    ] ;
+.
+
+:Dataset_dcatde_politicalGeocodingURI_v_IRI
+    sh:path dcatde:politicalGeocodingURI ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dcatde:politicalGeocodingURI MUSS eine IRI sein."@de ;
+.
+
+:Dataset_dcatde_politicalGeocodingURI_w_List
+    sh:path dcatde:politicalGeocodingURI ;
+    sh:node [ 
+        sh:or (
+            [
+                sh:path skos:inScheme ;
+                sh:hasValue <http://dcat-ap.de/def/politicalGeocoding/municipalityKey> ;
+            ]
+            [
+                sh:path skos:inScheme ;
+                sh:hasValue <http://dcat-ap.de/def/politicalGeocoding/regionalKey> ;
+            ]
+            [
+                sh:path skos:inScheme ;
+                sh:hasValue <http://dcat-ap.de/def/politicalGeocoding/municipalAssociationKey> ;
+            ]
+            [
+                sh:path skos:inScheme ;
+                sh:hasValue <http://dcat-ap.de/def/politicalGeocoding/districtKey> ;
+            ]
+            [
+                sh:path skos:inScheme ;
+                sh:hasValue <http://dcat-ap.de/def/politicalGeocoding/governmentDistrictKey> ;
+            ]
+            [
+                sh:path skos:inScheme ;
+                sh:hasValue <http://dcat-ap.de/def/politicalGeocoding/stateKey> ;
+            ]
+        )
+    ] ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Dataset: dcatde:politicalGeocodingURI SOLL eines der hier aufgelisteten Vokabulare benutzten: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-political-geocoding-uri"@de ;
+.
+
+:Dataset_dcat_theme_v_List
+    sh:description "Todo: Wenn zutreffend, so umbauen, dass lediglich wenigstens einmal das Vokabular genutzt wurde. Dann wird auch :Dataset_dcat_theme_v_IRI zusätzlich benötigt." ;
+    sh:path dcat:theme ;
+    sh:property [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/data-theme> ;
+
+        sh:severity sh:Violation ;
+        sh:message "dcat:Dataset: dcat:theme MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-data-theme"@de ;
+    ] ;
+.
+
+:Dataset_dcat_contactPoint_v_Class
+    sh:path dcat:contactPoint ;
+    sh:class vcard:Kind ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dcat:contactPoint MUSS auf einen vcard:Kind verweisen."@de ;
+.
+
+:Dataset_dcatap_availability_v_Max
+    sh:maxCount 1 ;
+    sh:path dcatap:availability ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: DARF maximal eine dcatap:availability haben."@de ;
+.
+
+:Dataset_dcatap_availability_v_List
+    sh:path  dcatap:availability ;
+    sh:property [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/planned-availability> ;
+
+        sh:severity sh:Violation ;
+        sh:message "dcat:Dataset: dcatap:availability MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-availability"@de ;
+    ] ;
+.
+
+:Dataset_dcatde_contributorID_v_IRI
+    sh:path dcatde:contributorID ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dcatde:contributorID MUSS eine IRI sein."@de ;
+.
+
+:Dataset_dcatde_geocodingDescription_v_Literal
+    sh:path dcatde:geocodingDescription ;
+    sh:nodeKind sh:Literal ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dcatde:geocodingDescription MUSS ein Literal sein."@de ;
+.
+
+:Dataset_adms_identifier_v_Class
+    sh:path adms:identifier ;
+    sh:class adms:Identifier ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: adms:identifier MUSS auf einen adms:Identifier verweisen."@de ;
+.
+
+:Dataset_dcatde_legalBasis_v_Literal
+    sh:path dcatde:legalBasis ;
+    sh:nodeKind sh:Literal ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dcatde:legalBasis MUSS ein Literal sein."@de ;
+.
+
+:Dataset_dct_language_v_List
+    sh:path  dct:language ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "dcat:Dataset: dct:language MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-languages"@de ;
+
+        sh:path skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/language> ;
+    ] ;
+.
+
+:Dataset_dct_accrualPeriodicity_v_List
+    sh:path dct:accrualPeriodicity ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "dcat:Dataset: dct:accrualPeriodicity MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-frequency"@de ;
+
+        sh:path skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/frequency> ;
+    ] ;
+.
+
+:Dataset_dcatde_qualityProcessURI_v_IRI
+    sh:path dcatde:qualityProcessURI ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dcatde:qualityProcessURI MUSS eine IRI sein."@de ;
+.
+
+:Dataset_dcatde_qualityProcessURI_v_Max
+    sh:maxCount 1 ;
+    sh:path dcatde:qualityProcessURI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: DARF maximal eine dcatde:qualityProcessURI haben."@de ;
+.
+
+:Dataset_dct_type_v_IRI
+    sh:path dct:type ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dct:type MUSS eine IRI sein."@de ;
+.
+
+:Dataset_dct_type_v_Max
+    sh:maxCount 1 ;
+    sh:path dct:type ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: DARF maximal eine dct:type haben."@de ;
+.
+
+:Dataset_dcat_granularity_v_IRI
+    sh:path dcat:granularity ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dcat:granularity MUSS eine IRI sein."@de ;
+.
+
+:Dataset_dcat_granularity_v_Max
+    sh:maxCount 1 ;
+    sh:path dcat:granularity ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: DARF maximal eine dcat:granularity haben."@de ;
+.
+
+:Dataset_prov_qualifiedAttribution_v_Class
+    sh:path prov:qualifiedAttribution ;
+    sh:class  prov:Attribution ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: prov:qualifiedAttribution MUSS auf eine prov:Attribution verweisen."@de ;
+.
+
+:Dataset_dcat_qualifiedRelation_v_Class
+    sh:path dcat:qualifiedRelation ;
+    sh:class dcat:Relationship ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dcat:qualifiedRelation MUSS auf eine dcat:Relationship verweisen."@de ;
+.
+
+:Dataset_dct_references_v_IRI
+    sh:path dct:references ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dct:references MUSS eine IRI sein."@de ;
+.
+
+:Dataset_dct_spatial_v_IRIorClass
+    sh:path dct:spatial ;
+    sh:or (
+        [
+            sh:nodeKind sh:IRI ;
+        ]
+        [
+            sh:nodeKind sh:BlankNode ;
+            sh:class dct:Location ;
+        ]
+    ) ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dct:spatial MUSS auf eine IRI oder einen BlankNode (vom Typ dct:Location) verweisen."@de ;
+.
+
+:Dataset_dct_temporal_v_Class
+    sh:path dct:temporal ;
+    sh:class dct:PeriodOfTime ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dct:temporal MUSS auf eine dct:PeriodOfTime verweisen."@de ;
+.
+
+:Dataset_dct_source_w_Class
+    sh:path dct:source ;
+    sh:class dcat:Dataset ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Dataset: dct:source MUSS auf ein dcat:Dataset verweisen. (Löst auch aus, wenn nur eine IRI angegeben wird, die verlinkte Ressource aber nicht mit validiert wird.)"@de ;
+.
+
+:Dataset_dct_hasVersion_w_Class
+    sh:path dct:hasVersion ;
+    sh:class dcat:Dataset ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Dataset: dct:hasVersion MUSS auf ein dcat:Dataset verweisen. (Löst auch aus, wenn nur eine IRI angegeben wird, die verlinkte Ressource aber nicht mit validiert wird.)"@de ;
+.
+
+:Dataset_dct_isVersionOf_w_Class
+    sh:path dct:isVersionOf ;
+    sh:class dcat:Dataset ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Dataset: dct:isVersionOf MUSS auf ein dcat:Dataset verweisen. (Löst auch aus, wenn nur eine IRI angegeben wird, die verlinkte Ressource aber nicht mit validiert wird.)"@de ;
+.
+
+:Dataset_dcat_distribution_v_Class
+    sh:path dcat:distribution ;
+    sh:class dcat:Distribution ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dcat:distribution MUSS auf eine dcat:Distribution verweisen."@de ;
+.
+
+:Dataset_adms_sample_w_Class
+    sh:path adms:sample ;
+    sh:class dcat:Distribution ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Dataset: adms:sample MUSS auf eine dcat:Distribution verweisen. (Löst auch aus, wenn nur eine IRI angegeben wird, die verlinkte Ressource aber nicht mit validiert wird.)"@de ;
+.
+
+:Dataset_dct_publisher_v_Class
+    sh:path dct:publisher ;
+    sh:class foaf:Agent ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dct:publisher MUSS auf einen foaf:Agent verweisen."@de ;
+.
+
+:Dataset_dct_publisher_v_Max
+    sh:maxCount 1 ;
+    sh:path dct:publisher ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: DARF maximal einen dct:publisher haben."@de ;
+.
+
+:Dataset_dct_creator_v_Class
+    sh:path dct:creator ;
+    sh:class foaf:Agent ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dct:creator MUSS auf einen foaf:Agent verweisen."@de ;
+.
+
+:Dataset_dct_contributor_v_Class
+    sh:path dct:contributor ;
+    sh:class foaf:Agent ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dct:contributor MUSS auf einen foaf:Agent verweisen."@de ;
+.
+
+:Dataset_dcatde_originator_v_Class
+    sh:path dcatde:originator ;
+    sh:class foaf:Agent ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dcatde:originator MUSS auf einen foaf:Agent verweisen."@de ;
+.
+
+:Dataset_dcatde_maintainer_v_Class
+    sh:path dcatde:maintainer ;
+    sh:class foaf:Agent ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dcatde:maintainer MUSS auf einen foaf:Agent verweisen."@de ;
+.
+
+:Dataset_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:name "dcat:Dataset gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    sh:property :Dataset_dcatde_politicalGeocodingLevelURI_v_IRI ;
+    sh:property :Dataset_dcatde_politicalGeocodingLevelURI_w_List ;
+    sh:property :Dataset_dcatde_politicalGeocodingURI_v_IRI ;
+    sh:property :Dataset_dcatde_politicalGeocodingURI_w_List ;
+    sh:property :Dataset_dcat_theme_v_List ;
+    sh:property :Dataset_dcat_contactPoint_v_Class ;
+    sh:property :Dataset_dcatap_availability_v_Max ;
+    sh:property :Dataset_dcatap_availability_v_List ;
+    sh:property :Dataset_dcatde_contributorID_v_IRI ;
+    sh:property :Dataset_dcatde_geocodingDescription_v_Literal ;
+    sh:property :Dataset_adms_identifier_v_Class ;
+    sh:property :Dataset_dcatde_legalBasis_v_Literal ;
+#    sh:property :Dataset_dcat_landingPage_v_IRI ;
+#    sh:property :Dataset_foaf_page_v_IRI ;
+    sh:property :Dataset_dct_language_v_List ;
+#    sh:property :Dataset_dct_conformsTo_v_IRI ;
+#    sh:property :Dataset_dct_accessRights_v_IRI ;
+#    sh:property :Dataset_dct_provenance_v_IRI ;
+    sh:property :Dataset_dct_accrualPeriodicity_v_List ;
+    sh:property :Dataset_dcatde_qualityProcessURI_v_IRI ;
+    sh:property :Dataset_dcatde_qualityProcessURI_v_Max ;
+    sh:property :Dataset_dct_type_v_IRI ;
+    sh:property :Dataset_dct_type_v_Max ;
+#    sh:property :Dataset_prov_wasGeneratedBy_v_IRI ;
+    sh:property :Dataset_dcat_granularity_v_IRI ;
+    sh:property :Dataset_dcat_granularity_v_Max ;
+    sh:property :Dataset_prov_qualifiedAttribution_v_Class ;
+    sh:property :Dataset_dcat_qualifiedRelation_v_Class ;
+    sh:property :Dataset_dct_references_v_IRI ;
+    sh:property :Dataset_dct_spatial_v_IRIorClass ;
+    sh:property :Dataset_dct_temporal_v_Class ;
+    sh:property :Dataset_dct_source_w_Class ;
+    sh:property :Dataset_dct_hasVersion_w_Class ;
+    sh:property :Dataset_dct_isVersionOf_w_Class ;
+    sh:property :Dataset_dcat_distribution_v_Class ;
+    sh:property :Dataset_adms_sample_w_Class ;
+    sh:property :Dataset_dct_publisher_v_Class ;
+    sh:property :Dataset_dct_publisher_v_Max ;
+    sh:property :Dataset_dct_creator_v_Class ;
+    sh:property :Dataset_dct_contributor_v_Class ;
+    sh:property :Dataset_dcatde_originator_v_Class ;
+    sh:property :Dataset_dcatde_maintainer_v_Class ;
+.
+
+:Catalog_dct_language_v_List
+    sh:path  dct:language ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "dcat:Catalog: dct:language MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-languages"@de ;
+
+        sh:path skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/language> ;
+    ] ;
+.
+
+:Catalog_dct_license_w_List
+    sh:path dct:license ;
+    sh:property [
+        sh:severity sh:Warning ;
+        sh:message "dcat:Catalog: dct:license SOLL folgendes Vokabular benutzten: https://www.dcat-ap.de/def/licenses/"@de ;
+
+        sh:path skos:inScheme ;
+        sh:hasValue <http://dcat-ap.de/def/licenses> ;
+    ] ;
+.
+
+:Catalog_dct_license_v_IRI
+    sh:path dct:license ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dct:license MUSS eine IRI sein."@de ;
+.
+
+:Catalog_dcat_themeTaxonomy_v_IRI
+    sh:path dcat:themeTaxonomy;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dcat:themeTaxonomy MUSS eine IRI sein."@de ;
+.
+
+#   Deaktiviert, Konformitätsproblem behoben wurde oder die Regel nicht mehr relevant ist.
+#
+# :Catalog_dcat_themeTaxonomy_v_Fixed
+#     sh:message "dcat:Catalog: dcat:themeTaxonomy MUSS, wenn sie verwendet wird, einmal auf http://publications.europa.eu/resource/authority/data-theme zeigen."@de ;
+#     sh:severity sh:Violation ;
+#     sh:or (
+#         [
+#             sh:path dcat:themeTaxonomy ;
+#             sh:maxCount 0;
+#         ]
+#         [
+#             sh:path dcat:themeTaxonomy ;
+#             sh:minCount 1;
+#             sh:qualifiedValueShape [
+#                 sh:hasValue <http://publications.europa.eu/resource/authority/data-theme> ;
+#             ] ;
+#             sh:qualifiedMinCount 1 ;
+#         ]
+#     ) ;
+# .
+
+:Catalog_dcatap_availability_v_Max
+    sh:maxCount 1 ;
+    sh:path dcatap:availability ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: DARF maximal eine dcatap:availability haben."@de ;
+.
+
+:Catalog_dcatap_availability_v_List
+    sh:path dcatap:availability ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "dcat:Catalog: dcatap:availability MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-availability"@de ;
+
+        sh:path skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/planned-availability> ;
+    ] ;
+.
+
+:Catalog_dcat_catalog_v_Class
+    sh:path dcat:catalog ;
+    sh:class dcat:Catalog ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dcat:catalog MUSS auf einen dcat:Catalog verweisen."@de ;
+.
+
+:Catalog_dcat_service_v_Class
+    sh:path dcat:service ;
+    sh:class dcat:DataService ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dcat:service MUSS auf einen dcat:DataService verweisen."@de ;
+.
+
+:Catalog_dct_spatial_v_IRIorClass
+    sh:path dct:spatial ;
+    sh:or (
+        [
+            sh:nodeKind sh:IRI ;
+        ]
+        [
+            sh:nodeKind sh:BlankNode ;
+            sh:class dct:Location ;
+        ]
+    ) ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dct:spatial MUSS auf eine IRI oder einen BlankNode (vom Typ dct:Location) verweisen."@de ;
+.
+
+:Catalog_dct_hasPart_w_Class
+    sh:path dct:hasPart ;
+    sh:class dcat:Catalog ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Catalog: dct:hasPart MUSS auf einen dcat:Catalog verweisen. (Löst auch aus, wenn nur eine IRI angegeben wird, die verlinkte Ressource aber nicht mit validiert wird.)"@de ;
+.
+
+:Catalog_dct_isPartOf_w_Class
+    sh:path dct:isPartOf ;
+    sh:class dcat:Catalog ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Catalog: dct:isPartOf MUSS auf einen dcat:Catalog verweisen. (Löst auch aus, wenn nur eine IRI angegeben wird, die verlinkte Ressource aber nicht mit validiert wird.)"@de ;
+.
+
+:Catalog_dcat_record_v_Class
+    sh:path dcat:record ;
+    sh:class dcat:CatalogRecord ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dcat:record MUSS auf einen dcat:CatalogRecord verweisen."@de ;
+.
+
+:Catalog_dcat_dataset_v_Class
+    sh:path dcat:dataset ;
+    sh:class dcat:Dataset ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dcat:dataset MUSS auf ein dcat:Dataset verweisen."@de ;
+.
+
+:Catalog_dct_publisher_v_Class
+    sh:path dct:publisher ;
+    sh:class foaf:Agent ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dct:publisher MUSS auf einen foaf:Agent verweisen."@de ;
+.
+
+:Catalog_dct_creator_v_Class
+    sh:path dct:creator ;
+    sh:class foaf:Agent ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dct:creator MUSS auf einen foaf:Agent verweisen."@de ;
+.
+
+:Catalog_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:Catalog ;
+    sh:name "dcat:Catalog gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    sh:property :Catalog_dct_language_v_List ;
+#    sh:property :Catalog_foaf_homepage_v_IRI ;
+    sh:property :Catalog_dct_license_w_List ;
+    sh:property :Catalog_dct_license_v_IRI ;
+    sh:property :Catalog_dcat_themeTaxonomy_v_IRI ;
+#    sh:node     :Catalog_dcat_themeTaxonomy_v_Fixed ;
+    sh:property :Catalog_dcatap_availability_v_Max ;
+    sh:property :Catalog_dcatap_availability_v_List ;
+#    sh:property :Catalog_dct_rights_v_IRI ;
+    sh:property :Catalog_dcat_catalog_v_Class ;
+    sh:property :Catalog_dcat_service_v_Class ;
+    sh:property :Catalog_dct_spatial_v_IRIorClass ;
+    sh:property :Catalog_dct_hasPart_w_Class ;
+    sh:property :Catalog_dct_isPartOf_w_Class ;
+    sh:property :Catalog_dcat_record_v_Class ;
+    sh:property :Catalog_dcat_dataset_v_Class ;
+    sh:property :Catalog_dct_publisher_v_Class ;
+    sh:property :Catalog_dct_creator_v_Class ;
+.
+
+:DataService_dcat_endpointURL_v_Min
+    sh:minCount 1 ;
+    sh:path dcat:endpointURL ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:DataService: MUSS mindestens eine dcat:endpointURL haben."@de ;
+.
+
+:DataService_dcatap_availability_v_Max
+    sh:maxCount 1 ;
+    sh:path dcatap:availability ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:DataService: DARF maximal eine dcatap:availability haben."@de ;
+.
+
+:DataService_dcatap_availability_v_List
+    sh:path  dcatap:availability ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "dcat:DataService: dcatap:availability MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-availability"@de ;
+
+        sh:path skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/planned-availability> ;
+    ] ;
+.
+
+:DataService_dct_license_w_List
+    sh:path dct:license ;
+    sh:property [
+        sh:severity sh:Warning ;
+        sh:message "dcat:DataService: dct:license SOLL folgendes Vokabular benutzten: https://www.dcat-ap.de/def/licenses/"@de ;
+
+        sh:path skos:inScheme ;
+        sh:hasValue <http://dcat-ap.de/def/licenses> ;
+    ] ;
+.
+
+:DataService_dct_license_v_IRI
+    sh:path dct:license ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:DataService: dct:license MUSS eine IRI sein."@de ;
+.
+
+:DataService_dcat_servesDataset_v_Class
+    sh:path dcat:servesDataset ;
+    sh:class dcat:Dataset ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:DataService: dcat:servesDataset MUSS auf ein dcat:Dataset verweisen."@de ;
+.
+
+:DataService_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:DataService ;
+    sh:name "dcat:DataService gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    sh:property :DataService_dcat_endpointURL_v_Min ;
+    sh:property :DataService_dcatap_availability_v_Max ;
+    sh:property :DataService_dcatap_availability_v_List ;
+    sh:property :DataService_dct_license_w_List ;
+    sh:property :DataService_dct_license_v_IRI ;
+#    sh:property :DataService_dct_accessRights_v_IRI ;
+    sh:property :DataService_dcat_servesDataset_v_Class ;
+.
+
+:Distribution_dct_license_w_List
+    sh:path dct:license ;
+    sh:property [
+        sh:severity sh:Warning ;
+        sh:message "dcat:Distribution: dct:license SOLL folgendes Vokabular benutzten: https://www.dcat-ap.de/def/licenses/"@de ;
+
+        sh:path skos:inScheme ;
+        sh:hasValue <http://dcat-ap.de/def/licenses> ;
+    ] ;
+.
+
+:Distribution_dct_license_v_IRI
+    sh:path dct:license ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: dct:license MUSS eine IRI sein."@de ;
+.
+
+:Distribution_dct_format_v_List
+    sh:path dct:format ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "dcat:Distribution: dct:format MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-file-type"@de ;
+
+        sh:path skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/file-type> ;
+    ] ;
+.
+
+:Distribution_dcatap_availability_v_Max
+    sh:maxCount 1 ;
+    sh:path dcatap:availability ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: DARF maximal eine dcatap:availability haben."@de ;
+.
+
+:Distribution_dcatap_availability_v_List
+    sh:path  dcatap:availability ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "dcat:Distribution: dcatap:availability MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-availability"@de ;
+
+        sh:path skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/planned-availability> ;
+    ] ;
+.
+
+:Distribution_dcatde_plannedAvailability_v_Max
+    sh:path dcatde:plannedAvailability ;
+    sh:maxCount 1 ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: DARF maximal eine dcatde:plannedAvailability haben."@de ;
+.
+
+:Distribution_dcatde_plannedAvailability_v_IRI
+    sh:path dcatde:plannedAvailability ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: dcatde:plannedAvailability MUSS eine IRI sein."@de ;
+.
+
+:Distribution_dcatde_licenseAttributionByText_v_Literal
+    sh:path dcatde:licenseAttributionByText ;
+    sh:nodeKind sh:Literal ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: dcatde:licenseAttributionByText MUSS ein Literal sein."@de ;
+.
+
+:Distribution_dct_language_v_List
+    sh:path  dct:language ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "dcat:Distribution: dct:language MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-languages"@de ;
+
+        sh:path skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/language> ;
+    ] ;
+.
+
+:Distribution_dcat_mediaType_v_List
+    sh:path dcat:mediaType ;
+    sh:pattern "^https?://www.iana.org/assignments/media-types/" ;
+    sh:flags "i" ; 
+    sh:message "dcat:Distribution: dcat:mediaType MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-iana-media-types (Getestet wird in diesem Fall lediglich, ob die verwendete IRI mit https://www.iana.org/assignments/media-types/ beginnt.)"@de ;
+.
+
+:Distribution_dcat_compressFormat_v_List
+    sh:path dcat:compressFormat ;
+    sh:pattern "^https?://www.iana.org/assignments/media-types/" ;
+    sh:flags "i" ; 
+    sh:message "dcat:Distribution: dcat:compressFormat MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-iana-media-types (Getestet wird in diesem Fall lediglich, ob die verwendete IRI mit https://www.iana.org/assignments/media-types/ beginnt.)"@de ;
+.
+
+:Distribution_dcat_packageFormat_v_List
+    sh:path dcat:packageFormat ;
+    sh:pattern "^https?://www.iana.org/assignments/media-types/" ;
+    sh:flags "i" ; 
+    sh:message "dcat:Distribution: dcat:packageFormat MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-iana-media-types (Getestet wird in diesem Fall lediglich, ob die verwendete IRI mit https://www.iana.org/assignments/media-types/ beginnt.)"@de ;
+.
+
+:Distribution_adms_status_v_List
+    sh:path  adms:status ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "dcat:Distribution: adms:status MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-adms-status"@de ;
+
+        sh:path skos:inScheme ;
+        sh:hasValue <http://purl.org/adms/status/1.0> ;
+    ] ;
+.
+
+:Distribution_dcat_accessService_v_Class
+    sh:path dcat:accessService ;
+    sh:class dcat:DataService ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: dcat:accessService MUSS auf einen dcat:DataService verweisen."@de ;
+.
+
+:Distribution_spdx_checksum_v_Class
+    sh:path spdx:checksum ;
+    sh:class spdx:Checksum ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: spdx:checksum MUSS auf einen spdx:Checksum verweisen."@de ;
+.
+
+:Distribution_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:Distribution ;
+    sh:name "dcat:Distribution gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    sh:property :Distribution_dct_license_w_List ;
+    sh:property :Distribution_dct_license_v_IRI ;
+    sh:property :Distribution_dct_format_v_List ;
+    sh:property :Distribution_dcatap_availability_v_Max ;
+    sh:property :Distribution_dcatap_availability_v_List ;
+    sh:property :Distribution_dcatde_plannedAvailability_v_Max ;
+    sh:property :Distribution_dcatde_plannedAvailability_v_IRI ;
+    sh:property :Distribution_dcatde_licenseAttributionByText_v_Literal ;
+    sh:property :Distribution_dct_language_v_List ;
+#    sh:property :Distribution_foaf_page_v_IRI ;
+#    sh:property :Distribution_dct_rights_v_IRI ;
+#    sh:property :Distribution_dct_conformsTo_v_IRI ;
+    sh:property :Distribution_dcat_mediaType_v_List ;
+    sh:property :Distribution_dcat_compressFormat_v_List ;
+    sh:property :Distribution_dcat_packageFormat_v_List ;
+#    sh:property :Distribution_odrl_hasPolicy_v_IRI ;
+    sh:property :Distribution_adms_status_v_List ;
+    sh:property :Distribution_dcat_accessService_v_Class ;
+    sh:property :Distribution_spdx_checksum_v_Class ;
+.
+
+:PeriodOfTime_periodPoints_v_Min
+    sh:message "dct:PeriodOfTime: MUSS mindestens eine der folgenden Eigenschaften besitzen: Empfohlen: dcat:startDate, dcat:endDate. Andere Möglichkeiten: time:hasBeginning, time:hasEnd, schema:startDate, schema:endDate."@de ;
+    sh:severity sh:Violation ;
+
+    sh:minCount 1 ;
+    sh:path [ sh:alternativePath ( 
+        dcat:startDate 
+        dcat:endDate 
+        time:hasBeginning 
+        time:hasEnd 
+        schema:startDate 
+        schema:endDate 
+    ) ] ;
+.
+
+:PeriodOfTime_schema_startDate_v_Max
+    sh:maxCount 1 ;
+    sh:path schema:startDate ;
+    sh:severity sh:Violation ;
+    sh:message "dct:PeriodOfTime: schema:startDate DARF maximal einmal vorhanden sein."@de ;
+.
+
+:PeriodOfTime_schema_endDate_v_Max
+    sh:maxCount 1 ;
+    sh:path schema:endDate ;
+    sh:severity sh:Violation ;
+    sh:message "dct:PeriodOfTime: schema:endDate DARF maximal einmal vorhanden sein."@de ;
+.
+
+:PeriodOfTime_schema_startDate_v_Type
+    sh:path schema:startDate ;
+    sh:node dcatap:DateOrDateTimeDataType_Shape ;
+    sh:severity sh:Violation ;
+    sh:message "dct:PeriodOfTime: schema:startDate MUSS ein als xsd:date, xsd:dateTime, xsd:gYear oder xsd:gYearMonth getyptes Literal sein."@de ;
+.
+
+:PeriodOfTime_schema_endDate_v_Type
+    sh:path schema:endDate ;
+    sh:node dcatap:DateOrDateTimeDataType_Shape ;
+    sh:severity sh:Violation ;
+    sh:message "dct:PeriodOfTime: schema:endDate MUSS ein als xsd:date, xsd:dateTime, xsd:gYear oder xsd:gYearMonth getyptes Literal sein."@de ;
+.
+
+:PeriodOfTime_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dct:PeriodOfTime ;
+    sh:name "dcat:PeriodOfTime gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    sh:property :PeriodOfTime_periodPoints_v_Min ;
+    sh:property :PeriodOfTime_schema_startDate_v_Max ;
+    sh:property :PeriodOfTime_schema_endDate_v_Max ;
+    sh:property :PeriodOfTime_schema_startDate_v_Type ;
+    sh:property :PeriodOfTime_schema_endDate_v_Type ;
+.
+
+:Location_locations_v_Min
+    sh:message "dct:Location: SOLL eine der folgenden Eigenschaften nutzen: dcat:bbox, dcat:centroid, locn:geometry. Wenn Sie eine davon abweichende Eigenschaften nutzen, können Sie den Fehler ignorieren."@de ;
+    sh:severity sh:Warning ;
+
+    sh:minCount 1 ;
+    # sh:maxCount 1 ;
+    sh:path [ sh:alternativePath ( 
+        dcat:bbox 
+        dcat:centroid 
+        locn:geometry 
+    ) ] ;
+.
+
+:Location_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dct:Location ;
+    sh:name "dct:Location gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    sh:property :Location_locations_v_Min ;
+.
+
+:Identifier_skos_notation_v_Min
+    sh:minCount 1 ;
+    sh:path skos:notation ;
+    sh:severity sh:Violation ;
+    sh:message "adms:Identifier: MUSS genaue eine skos:notation haben."
+.
+
+:Identifier_Shape 
+    a sh:NodeShape ;
+    sh:targetClass adms:Identifier ;
+    sh:name "adms:Identifier gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    sh:property :Identifier_skos_notation_v_Min ;
+.
+
+:Checksum_spdx_algorithm_v_Min_Max
+    sh:path spdx:algorithm ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:severity sh:Violation ;
+    sh:message "spdx:Checksum: MUSS genaue einen spdx:algorithm haben."
+.
+
+:Checksum_spdx_algorithm_v_List
+    sh:path  spdx:algorithm ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "spdx:Checksum: spdx:algorithm MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-hash-algorithms"@de ;
+
+        sh:path skos:inScheme ;
+        sh:hasValue <http://dcat-ap.de/def/hashAlgorithms> ;
+    ] ;
+.
+
+:Checksum_Shape 
+    a sh:NodeShape ;
+    sh:targetClass spdx:Checksum ;
+    sh:name "spdx:Checksum gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    sh:property :Checksum_spdx_algorithm_v_Min_Max ;
+    sh:property :Checksum_spdx_algorithm_v_List ;
+.
+
+:CatalogRecord_adms_status_v_IRI
+    sh:path adms:status ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:CatalogRecord: adms:status MUSS eine IRI sein."@de ;
+.
+
+:CatalogRecord_dct_language_v_List
+    sh:path  dct:language ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "dcat:CatalogRecord: dct:language MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-languages"@de ;
+
+        sh:path skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/language> ;
+    ] ;
+.
+
+:CatalogRecord_dct_source_v_Class
+    sh:path dct:source ;
+    sh:class dcat:CatalogRecord ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:CatalogRecord: dct:source MUSS auf einen dcat:CatalogRecord verweisen."@de ;
+.
+
+:CatalogRecord_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:CatalogRecord ;
+    sh:name "dcat:CatalogRecord gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+#    sh:property :CatalogRecord_dct_conformsTo_v_IRI ;
+    sh:property :CatalogRecord_adms_status_v_IRI ;
+    sh:property :CatalogRecord_dct_language_v_List ;
+    sh:property :CatalogRecord_dct_source_v_Class ;
+.
+
+:Attribution_dcat_hadRole_v_Min
+    sh:minCount 1 ;
+    sh:path dcat:hadRole ;
+    sh:severity sh:Violation ;
+    sh:message "prov:Attribution: MUSS mindestens einmal dcat:hadRole haben."
+.
+
+:Attribution_prov_agent_v_Min
+    sh:minCount 1 ;
+    sh:path prov:agent ;
+    sh:severity sh:Violation ;
+    sh:message "prov:Attribution: MUSS mindestens einmal prov:agent haben."
+.
+
+:Attribution_Shape 
+    a sh:NodeShape ;
+    sh:targetClass prov:Attribution ;
+    sh:name "prov:Attribution gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    sh:property :Attribution_dcat_hadRole_v_Min ;
+    sh:property :Attribution_prov_agent_v_Min ;
+.
+
+:Agent_dct_type_v_List
+    sh:path  dct:type ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "foaf:Agent: dct:type MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-adms-publisher"@de ;
+
+        sh:path skos:inScheme ;
+        sh:hasValue <http://purl.org/adms/publishertype/1.0> ;
+    ] ;
+.
+
+:Agent_Shape 
+    a sh:NodeShape ;
+    sh:targetClass foaf:Agent ;
+    sh:name "foaf:Agent gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    sh:property :Agent_dct_type_v_List ;
+.

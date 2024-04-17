@@ -1,0 +1,114 @@
+# (C) CC BY 4.0 ']init[ AG fuer GovData'
+#
+# Diese Datei prüft, ob in DCAT-AP.de als deprecated gekennzeichnete Eigenschaften genutzt werden.
+
+@prefix :       <http://dcat-ap.de/def/dcatde/> .
+@prefix adms:   <http://www.w3.org/ns/adms#> .
+@prefix dc:     <http://purl.org/dc/elements/1.1/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix locn:   <http://www.w3.org/ns/locn#> .
+@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix spdx:   <http://spdx.org/rdf/terms#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix vcard:  <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml:    <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+
+
+:Deprecated_dcat_Dataset_dct_type
+    sh:message "Deprecated: dcat:Dataset: dct:type soll nicht mehr für Collections verwendet werden. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/implRules/#sammlungen-und-reihen-von-datensatzen "@de ;
+    sh:severity sh:Warning ;
+    sh:path     dct:type ;
+    sh:maxCount 0 ;
+.
+
+:Deprecated_dcat_Dataset_dcat_granularity
+    sh:message "Deprecated: dcat:Dataset: dcat:granularity soll nicht mehr verwendet werden. Stattdessen z.B. dcat:temporalResolution. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-zeitliche-auflosung "@de ;
+    sh:severity sh:Warning ;
+    sh:path     dcat:granularity ;
+    sh:maxCount 0 ;
+.
+
+:Deprecated_dcat_Dataset_dct_hasVersion
+    sh:message "Deprecated: dcat:Dataset: dct:hasVersion soll nicht mehr für Collections verwendet werden. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/implRules/#sammlungen-und-reihen-von-datensatzen "@de ;
+    sh:severity sh:Warning ;
+    sh:path     dct:hasVersion ;
+    sh:maxCount 0 ;
+.
+
+:Deprecated_dcat_Dataset_Shape
+    a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:name "Deprecated Eigenschaften beim dcat:Dataset gemäß DCAT-AP.de 2.0"@de ;
+
+    sh:property :Deprecated_dcat_Dataset_dct_type ;
+    sh:property :Deprecated_dcat_Dataset_dcat_granularity ;
+    sh:property :Deprecated_dcat_Dataset_dct_hasVersion ;
+.
+
+:Deprecated_dcat_Distribution_dcat_plannedAvailability
+    sh:message "Deprecated: dcat:Distribution: dcat:plannedAvailability soll nicht mehr verwendet werden. Stattdessen dcatap:availability. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/spec/#distribution-verfugbarkeit "@de ;
+    sh:severity sh:Warning ;
+    sh:path     dcat:plannedAvailability ;
+    sh:maxCount 0 ;
+.
+
+:Deprecated_dcat_Distribution_Shape
+    a sh:NodeShape ;
+    sh:targetClass dcat:Distribution ;
+    sh:name "Deprecated Eigenschaften bei dcat:Distribution gemäß DCAT-AP.de 2.0"@de ;
+
+    sh:property :Deprecated_dcat_Distribution_dcat_plannedAvailability ;
+.
+
+:Deprecated_dct_PeriodOfTime_schema_startDate
+    sh:message "Deprecated: dct:PeriodOfTime: schema:startDate soll nicht mehr verwendet werden. Stattdessen dcat:startDate. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/spec/#zeitraum-startzeitpunkt "@de ;
+    sh:severity sh:Warning ;
+    sh:path     schema:startDate ;
+    sh:maxCount 0 ;
+.
+
+:Deprecated_dct_PeriodOfTime_schema_endDate
+    sh:message "Deprecated: dct:PeriodOfTime: schema:endDate soll nicht mehr verwendet werden. Stattdessen dcat:endDate. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/spec/#zeitraum-endzeitpunkt "@de ;
+    sh:severity sh:Warning ;
+    sh:path     schema:endDate ;
+    sh:maxCount 0 ;
+.
+
+:Deprecated_dct_PeriodOfTime_Shape
+    a sh:NodeShape ;
+    sh:targetClass dct:PeriodOfTime ;
+    sh:name "Deprecated Eigenschaften bei dct:PeriodOfTime gemäß DCAT-AP.de 2.0"@de ;
+
+    sh:property :Deprecated_dct_PeriodOfTime_schema_startDate ;
+    sh:property :Deprecated_dct_PeriodOfTime_schema_endDate ;
+.
+
+:Deprecated_CatalogRecord_adms_status
+    sh:path adms:status ;
+    sh:severity sh:Warning ;
+    sh:message  "Deprecated: dcat:CatalogRecord: adms:status wird von DCAT-AP.de nicht unterstützt, unter anderem, weil das eigentlich vorgesehene Vokabular nicht vorhanden ist."@de ;
+    sh:maxCount 0 ;
+.
+
+:Deprecated_CatalogRecord_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:CatalogRecord ;
+    sh:name "Deprecated Eigenschaften bei dcat:CatalogRecord gemäß DCAT-AP.de 2.0"@de ;
+
+    sh:property :Deprecated_CatalogRecord_adms_status ;
+.
