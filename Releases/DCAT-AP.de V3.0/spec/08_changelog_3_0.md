@@ -64,6 +64,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
 | [Application Profile der Metadaten](#katalogeintrag-konform-zu) (`dct:conformsTo`) | 3.0: Kardinalität von `0..1` auf `*` geändert. | 
+| [Katalogeintrag](#katalogeintrag-katalogeintrag) (`foaf:primaryTopic`) | 3.0: Aufnahme der Ressource `dcat:DatasetSeries` | 
 
 
 ### Klasse: Lizenzdokument

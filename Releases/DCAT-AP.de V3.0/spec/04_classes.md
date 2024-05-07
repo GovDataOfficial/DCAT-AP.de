@@ -1581,7 +1581,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Titel](#katalogeintrag-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
 | [Beschreibung](#katalogeintrag-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
 | [Sprache](#katalogeintrag-sprache) | `dct:language` | [`dct:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem)| <small>Optional</small> | `[*]` |
-| [Katalogeintrag](#katalogeintrag-katalogeintrag) | `foaf:primaryTopic` | `dcat:Dataset`, `dcat:DataService` oder `dcat:Catalog`| <small>Pflicht</small> | `[1]` |
+| [Katalogeintrag](#katalogeintrag-katalogeintrag) | `foaf:primaryTopic` | `dcat:Dataset`, `dcat:DataService`, `dcat:DatasetSeries` oder `dcat:Catalog`| <small>Pflicht</small> | `[1]` |
 | [Original-Metadaten der Ressource](#katalogeintrag-original-metadaten-der-ressource) | `dct:source` | [`dcat:CatalogRecord`]()| <small>Optional</small> | `[0..1]` |
 
 
@@ -1670,11 +1670,12 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 ###  Katalogeintrag: Katalogeintrag {#katalogeintrag-katalogeintrag}
 > | *URI*                    | [`foaf:primaryTopic`](http://xmlns.com/foaf/0.1/primaryTopic) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | `dcat:Dataset`, `dcat:DataService` oder `dcat:Catalog` |
+> | Wertebereich             | `dcat:Dataset`, `dcat:DataService`, `dcat:DatasetSeries` oder `dcat:Catalog` |
 > | Verbindlichkeit          | Pflicht |
 > | Multiplizität            | `[1]`                    |
 > | Beschreibung             | Diese Eigenschaft verknüpft den Katalogeintrag mit der im Eintrag beschriebenen `dcat:Resource`.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:record_primary_topic  | 
+> | Änderungen zur Vorversion | 3.0: Aufnahme der Ressource `dcat:DatasetSeries` | 
 
 <br>
 

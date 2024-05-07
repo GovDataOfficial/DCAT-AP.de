@@ -1227,11 +1227,12 @@ class "dcat:CatalogRecord" <<optional>> {
 "dcat:CatalogRecord" --> "1"     "dcat:Resource"      : <<mandatory>> foaf:primaryTopic
     '@ rdfs:label      = Katalogeintrag
     '@ _:internalLink  = katalogeintrag-katalogeintrag
-    '@ _:rangeOverride = `dcat:Dataset`, `dcat:DataService` oder `dcat:Catalog`
+    '@ _:rangeOverride = `dcat:Dataset`, `dcat:DataService`, `dcat:DatasetSeries` oder `dcat:Catalog`
     '@ rdfs:comment    = Diese Eigenschaft verknüpft den Katalogeintrag mit der im Eintrag beschriebenen `dcat:Resource`.
     '@ rdf:about       = http://xmlns.com/foaf/0.1/primaryTopic
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:record_primary_topic
     '@ sh:shapes       = dcatap:CatalogRecord_Property_foaf_primaryTopic
+    '@ adms:versionNotes = 3.0: Aufnahme der Ressource `dcat:DatasetSeries`
 "dcat:CatalogRecord" --> "0..1"  "dcat:CatalogRecord" : <<optional>> dct:source
     '@ rdfs:label      = Original-Metadaten der Ressource
     '@ _:internalLink  = katalogeintrag-original-metadaten-der-ressource
