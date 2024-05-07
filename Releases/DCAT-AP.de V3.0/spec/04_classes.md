@@ -1523,7 +1523,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [Algorithmus](#prufsumme-algorithmus) | `spdx:algorithm` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Pflicht</small> | `[1]` |
+| [Algorithmus](#prufsumme-algorithmus) | `spdx:algorithm` | [`spdx:ChecksumAlgorithm`](http://spdx.org/rdf/terms#ChecksumAlgorithm)| <small>Pflicht</small> | `[1]` |
 | [Prüfsummenwert](#prufsumme-prufsummenwert) | `spdx:checksumValue` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:hexBinary`| <small>Pflicht</small> | `[1]` |
 
 
@@ -1534,11 +1534,12 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 ###  Prüfsumme: Algorithmus {#prufsumme-algorithmus}
 > | *URI*                    | [`spdx:algorithm`](http://spdx.org/rdf/terms#algorithm) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) |
+> | Wertebereich             | [`spdx:ChecksumAlgorithm`](http://spdx.org/rdf/terms#ChecksumAlgorithm) |
 > | Verbindlichkeit          | Pflicht |
 > | Multiplizität            | `[1]`                    |
 > | Beschreibung             | Diese Eigenschaft identifiziert den verwendeten Algorithmus zur Erzeugung der Prüfsumme. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-hash-algorithms) |
 > | Weiterführende Dokumentationen | https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Checksum.algorithm<br>https://www.w3.org/TR/vocab-dcat-3/#Property:checksum_algorithm<br>https://spdx.org/rdf/terms/#d4e46  | 
+> | Änderungen zur Vorversion | 3.0: Range von `rdfs:Resource` auf `spdx:ChecksumAlgorithm` geändert. | 
 > | Änderungen durch DCAT-AP.de | dcat-ap.de führt eine eigene Liste an unterstützten Hashalgorithmen. | 
 <br>
 

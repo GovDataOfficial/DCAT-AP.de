@@ -1116,10 +1116,10 @@ class "adms:Identifier" <<optional>> {
 '@ _:usedBy        = adms:identifier (dcat:Dataset)
 
 class "spdx:Checksum" <<optional>> {
-    <<mandatory>> spdx:algorithm ~> rdfs:Resource [1]
+    <<mandatory>> spdx:algorithm ~> spdx:ChecksumAlgorithm [1]
         '@ rdfs:label      = Algorithmus
         '@ _:internalLink  = prufsumme-algorithmus
-        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:range      = http://spdx.org/rdf/terms#ChecksumAlgorithm
         '@ rdfs:comment    = Diese Eigenschaft identifiziert den verwendeten Algorithmus zur Erzeugung der Prüfsumme.
         '@ rdf:about       = http://spdx.org/rdf/terms#algorithm
         '@ rdfs:seeAlso    = https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Checksum.algorithm
@@ -1127,6 +1127,7 @@ class "spdx:Checksum" <<optional>> {
         '@ rdfs:seeAlso    = https://spdx.org/rdf/terms/#d4e46
         '@ _:deOriginal    = dcat-ap.de führt eine eigene Liste an unterstützten Hashalgorithmen.
         '@ _:vocabularyLink = #kv-hash-algorithms
+        '@ adms:versionNotes = 3.0: Range von `rdfs:Resource` auf `spdx:ChecksumAlgorithm` geändert.
         '@ sh:shapes       = dcatap:Checksum_Property_spdx_algorithm <-- DEAKTIVIEREN DA SHA1 ERZWUNGEN!, ___TBD___(kein Test des Vokabulars, minCount, maxCount)
     <<mandatory>> spdx:checksumValue ~> rdfs:Literal [1]
         '@ rdfs:label      = Prüfsummenwert

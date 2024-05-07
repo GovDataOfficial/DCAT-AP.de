@@ -54,6 +54,18 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Geometrie](#standort-geometrie) (`locn:geometry`) | 3.0: Wertebereich auf locn:Geometry geändert.<br>3.0: Verwendungshinweis und weiterführende Dokumentation hinzugefügt. | 
 
 
+### Klasse: Prüfsumme
+
+Auf Ebene der Klasse [Prüfsumme](#klasse-prufsumme) (`spdx:Checksum`) gibt es 
+keine Änderungen zur Vorversion.
+
+Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
+
+| Eigenschaft           | Änderungen                      |
+|:----------------------|:--------------------------------|
+| [Algorithmus](#prufsumme-algorithmus) (`spdx:algorithm`) | 3.0: Range von `rdfs:Resource` auf `spdx:ChecksumAlgorithm` geändert. | 
+
+
 ### Klasse: Katalogeintrag
 
 Auf Ebene der Klasse [Katalogeintrag](#klasse-katalogeintrag) (`dcat:CatalogRecord`) gibt es 
