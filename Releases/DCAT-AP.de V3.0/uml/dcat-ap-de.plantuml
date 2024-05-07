@@ -1240,7 +1240,7 @@ class "dcat:CatalogRecord" <<optional>> {
     '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source
     '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_source, ___TBD___(kein Test, ob Ziel ein dcat:CatalogRecord)
 
-class "dct:LicenceType" <<recommended>> {
+class "dct:LicenseDocument" <<recommended>> {
     <<recommended>> dct:type ~> skos:Concept [*]
         '@ rdfs:label      = Lizenztyp
         '@ _:internalLink  = lizenzdokument-lizenztyp
@@ -1258,6 +1258,7 @@ class "dct:LicenceType" <<recommended>> {
 '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2012-06-14/#terms-LicenseDocument
 '@ rdfs:comment    = Ein rechtlich verbindliches Dokument, welches die Verwendung einer Ressource offiziell erlaubt.
 '@ _:usedBy        = dct:license (dcat:Distribution)
+'@ adms:versionNotes = 3.0: Errata: Label korrigiert.
 
 class "dcat:Relationship" <<optional>> {
     <<mandatory>> dcat:hadRole ~> dcat:Role [1..*]

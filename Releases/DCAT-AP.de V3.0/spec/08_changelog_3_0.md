@@ -66,3 +66,13 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Application Profile der Metadaten](#katalogeintrag-konform-zu) (`dct:conformsTo`) | 3.0: Kardinalität von `0..1` auf `*` geändert. | 
 
 
+### Klasse: Lizenzdokument
+
+Auf Ebene der Klasse [Lizenzdokument](#klasse-lizenzdokument) (`dct:LicenseDocument`) gibt es 
+folgende Änderungen zur Vorversion:
+
+> 3.0: Errata: Label korrigiert.
+
+Bei ihren Eigenschaften gibt es keine Änderungen zur Vorversion.
+
+

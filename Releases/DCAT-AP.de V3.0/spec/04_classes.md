@@ -1696,11 +1696,12 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 ## Klasse: Lizenzdokument
 
-> | *URI der Klasse* | [`dct:LicenceType`](http://purl.org/dc/terms/LicenseDocument)      |
+> | *URI der Klasse* | [`dct:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument)      |
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Ein rechtlich verbindliches Dokument, welches die Verwendung einer Ressource offiziell erlaubt.     |
 > | eingebunden über | dct:license (dcat:Distribution)         | 
 > | Weiterführende Dokumentationen | https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2012-06-14/#terms-LicenseDocument |
+> | Änderungen zur Vorversion | 3.0: Errata: Label korrigiert. |
 
 <br>
 
