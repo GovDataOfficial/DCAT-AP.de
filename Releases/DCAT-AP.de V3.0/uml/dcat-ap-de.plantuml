@@ -804,7 +804,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_license
         '@ _:vocabularyLink = #kv-licenses
         '@ sh:shapes       = dcatap:Distribution_Property_dct_license, ___TBD___(kein Test des Vokabulars)
-    <<recommended>> dct:format ~> dct:MediaType [0..1]
+    <<recommended>> dct:format ~> dct:MediaTypeOrExtent [0..1]
         '@ rdfs:label      = Format
         '@ _:internalLink  = distribution-format
         '@ rdfs:range      = http://purl.org/dc/terms/MediaTypeOrExtent
@@ -814,6 +814,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_format
         '@ _:vocabularyLink = #kv-file-type
         '@ sh:shapes       = dcatap:Distribution_Property_dct_format, ___TBD___(kein Test des Vokabulars)
+        '@ adms:versionNotes = 3.0: Errata: Wertebereichs auf dct:MediaTypeOrExtent geändert.
     <<recommended>> dcatap:availability ~> skos:Concept [0..1]
         '@ rdfs:label      = Verfügbarkeit
         '@ _:internalLink  = distribution-verfugbarkeit

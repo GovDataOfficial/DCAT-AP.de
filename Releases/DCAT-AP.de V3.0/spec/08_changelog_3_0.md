@@ -56,6 +56,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
 | [Aktualisierungsdatum](#distribution-aktualisierungsdatum) (`dct:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Format](#distribution-format) (`dct:format`) | 3.0: Errata: Wertebereichs auf dct:MediaTypeOrExtent geändert. | 
 | [Größe in Bytes](#distribution-grosse-in-bytes) (`dcat:byteSize`) | 3.0: Änderung der Range von xsd:decimal auf xsd:nonNegativeInteger. | 
 | [Veröffentlichungsdatum](#distribution-veroffentlichungsdatum) (`dct:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 | [Räumliche Auflösung in Meter](#distribution-raumliche-auflosung-in-meter) (`dcat:spatialResolutionInMeters`) | 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 

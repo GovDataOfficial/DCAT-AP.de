@@ -1024,7 +1024,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Titel](#distribution-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[*]` |
 | [Aktualisierungsdatum](#distribution-aktualisierungsdatum) | `dct:modified` | [`rdfs:Literal`]() | <small>Empfohlen</small> | `[0..1]` |
 | [Lizenz](#distribution-lizenz) | `dct:license` | [`dct:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) | <small>Empfohlen</small> | `[0..1]` |
-| [Format](#distribution-format) | `dct:format` | [`dct:MediaType`](http://purl.org/dc/terms/MediaTypeOrExtent) | <small>Empfohlen</small> | `[0..1]` |
+| [Format](#distribution-format) | `dct:format` | [`dct:MediaTypeOrExtent`](http://purl.org/dc/terms/MediaTypeOrExtent) | <small>Empfohlen</small> | `[0..1]` |
 | [Verfügbarkeit](#distribution-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..1]` |
 | [Namensnennungstext für By-Clauses](#distribution-namensnennungstext-by-clauses) | `dcatde:licenseAttributionByText` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
 | [Beschreibung](#distribution-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
@@ -1098,11 +1098,12 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 ###  Distribution: Format {#distribution-format}
 > | *URI*                    | [`dct:format`](http://purl.org/dc/terms/format) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:MediaType`](http://purl.org/dc/terms/MediaTypeOrExtent) |
+> | Wertebereich             | [`dct:MediaTypeOrExtent`](http://purl.org/dc/terms/MediaTypeOrExtent) |
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft verweist auf das Datenformat der Distribution.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zu-dateiformaten) genauer beschrieben. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-file-type) |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_format  | 
+> | Änderungen zur Vorversion | 3.0: Errata: Wertebereichs auf dct:MediaTypeOrExtent geändert. | 
 
 <br>
 
