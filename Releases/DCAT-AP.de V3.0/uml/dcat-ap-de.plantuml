@@ -954,6 +954,17 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-adms/#adms-status
         '@ _:vocabularyLink = #kv-adms-status
         '@ sh:shapes       = dcatap:Distribution_Property_adms_status, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
+    <<optional>> dcat:spatialResolutionInMeters ~> rdfs:Literal [0..*]
+        '@ rdfs:label      = Räumliche Auflösung in Meter
+        '@ _:internalLink  = distribution-raumliche-auflosung-in-meter
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als [`xsd:decimal`](https://www.w3.org/TR/xmlschema11-2/#decimal)
+        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf den kleinsten räumlichen Abstand, der in der Distribution auflösbar ist, gemessen in Metern.
+        '@ rdfs:comment    = **Verwendungshinweis:** Kann die räumliche Auflösung nicht in Metern beschrieben werden, können stattdessen die spezielleren Eigenschaften verwendet werden, die [GeoDCAT-AP](https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/#spatial-resolution-spatial-resolution-of-the-dataset) hierfür zur Verfügung stellt.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#spatialResolutionInMeters
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial_resolution
+        '@ adms:versionNotes = 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0.
+
 }
 '@ rdfs:label      = Distribution
 '@ _:internalLink  = #klasse-distribution
