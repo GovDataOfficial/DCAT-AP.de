@@ -1059,21 +1059,22 @@ class "dct:Location" <<optional>> {
         '@ rdfs:label      = Bounding Box
         '@ _:internalLink  = standort-bounding-box
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
-        '@ _:rangeOverride = Bewusst generisch gehalten als [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) z. B. getyped als `geosparql:asWKT`
+        '@ _:rangeOverride = Bewusst generisch gehalten als [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) z. B. getyped als `geo:wktLiteral`
         '@ rdfs:comment    = Diese Eigenschaft beschreibt die Bounding Box einer Ressource.
         '@ rdf:about       = http://www.w3.org/ns/dcat#bbox
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:location_bbox
         '@ sh:shapes       = dcatap:Location_Shape_Property_dcat_bbox
+        '@ adms:versionNotes = 3.0: Errata: Korrektur des zu verwendenden Types.
     <<recommended>> dcat:centroid ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Geografischer Mittelpunkt
         '@ _:internalLink  = standort-geografischer-mittelpunkt
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
-        '@ _:rangeOverride = Bewusst generisch gehalten als [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) z. B. getyped als `geosparql:asWKT`
+        '@ _:rangeOverride = Bewusst generisch gehalten als [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) z. B. getyped als `geo:wktLiteral`
         '@ rdfs:comment    = Diese Eigenschaft beschreibt den geografischen Mittelpunkt einer Ressource.
         '@ rdf:about       = http://www.w3.org/ns/dcat#centroid
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:location_centroid
         '@ sh:shapes       = dcatap:Location_Shape_Property_dcat_centroid
-
+        '@ adms:versionNotes = 3.0: Errata: Korrektur des zu verwendenden Types.
     <<optional>> locn:geometry ~> locn:Geometry [0..1]
         '@ rdfs:label      = Geometrie
         '@ _:internalLink  = standort-geometrie
@@ -1083,7 +1084,7 @@ class "dct:Location" <<optional>> {
         '@ rdfs:seeAlso    = https://semiceu.github.io/Core-Location-Vocabulary/releases/w3c/#locn:geometry
         '@ rdfs:seeAlso    = https://www.w3.org/ns/locn#locn:geometry
         '@ skos:scopeNote  = Der Wertebereich dieser Eigenschaft lässt jede Art von Geometriespezifikation zu.
-        '@ skos:scopeNote  = Empfohlen wird z.B. die Angabe als WKT-Literal (`rdfs:Literal`  getyped als `geosparql:wktLiteral`).
+        '@ skos:scopeNote  = Empfohlen wird z.B. die Angabe als WKT-Literal (`rdfs:Literal` getyped als `geo:wktLiteral`).
         '@ adms:versionNotes = 3.0: Wertebereich auf locn:Geometry geändert.
         '@ adms:versionNotes = 3.0: Verwendungshinweis und weiterführende Dokumentation hinzugefügt.
         '@ sh:shapes       = dcatap:Location_Shape_Property_locn_geometry

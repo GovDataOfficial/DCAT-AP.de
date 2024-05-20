@@ -85,6 +85,8 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
+| [Bounding Box](#standort-bounding-box) (`dcat:bbox`) | 3.0: Errata: Korrektur des zu verwendenden Types. | 
+| [Geografischer Mittelpunkt](#standort-geografischer-mittelpunkt) (`dcat:centroid`) | 3.0: Errata: Korrektur des zu verwendenden Types. | 
 | [Geometrie](#standort-geometrie) (`locn:geometry`) | 3.0: Wertebereich auf locn:Geometry geändert.<br>3.0: Verwendungshinweis und weiterführende Dokumentation hinzugefügt. | 
 
 

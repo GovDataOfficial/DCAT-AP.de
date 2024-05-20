@@ -34,6 +34,7 @@ Das Application Profile verwendet Begriffe von verschiedenen existierenden Spezi
 | `dcatde`  | `http://dcat-ap.de/def/dcatde/`         | German Adaptation of DCAT-AP                                                                               |
 | `dct`     | `http://purl.org/dc/terms/`             | DCMI (Dublin Core Metadata Initiative) Metadata Terms                                                      |
 | `foaf`    | `http://xmlns.com/foaf/0.1/`            | FOAF (Friend of a friend) Vocabulary                                                                       |
+| `geo`     | `http://www.opengis.net/ont/geosparql#` | GeoSPARQL Ontology                                                                                         |
 | `owl`     | `http://www.w3.org/2002/07/owl#`        | OWL Web Ontology Language                                                                                  |
 | `rdfs`    | `http://www.w3.org/2000/01/rdf-schema#` | RDF (Resource Description Framework) Vocabulary Description Language 1.0: RDF Schema                       |
 | `schema`  | `http://schema.org/`                    | Vocabulary for structured data on the Internet                                                             |

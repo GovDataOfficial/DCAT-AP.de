@@ -1422,22 +1422,24 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 ###  Standort: Bounding Box {#standort-bounding-box}
 > | *URI*                    | [`dcat:bbox`](http://www.w3.org/ns/dcat#bbox) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | Bewusst generisch gehalten als [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) z. B. getyped als `geosparql:asWKT` |
+> | Wertebereich             | Bewusst generisch gehalten als [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) z. B. getyped als `geo:wktLiteral` |
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft beschreibt die Bounding Box einer Ressource.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:location_bbox  | 
+> | Änderungen zur Vorversion | 3.0: Errata: Korrektur des zu verwendenden Types. | 
 
 <br>
 
 ###  Standort: Geografischer Mittelpunkt {#standort-geografischer-mittelpunkt}
 > | *URI*                    | [`dcat:centroid`](http://www.w3.org/ns/dcat#centroid) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | Bewusst generisch gehalten als [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) z. B. getyped als `geosparql:asWKT` |
+> | Wertebereich             | Bewusst generisch gehalten als [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) z. B. getyped als `geo:wktLiteral` |
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft beschreibt den geografischen Mittelpunkt einer Ressource.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:location_centroid  | 
+> | Änderungen zur Vorversion | 3.0: Errata: Korrektur des zu verwendenden Types. | 
 
 <br>
 
@@ -1448,7 +1450,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft beschreibt die Geometrie einer Ressource.  |
-> | Verwendungshinweis       | Der Wertebereich dieser Eigenschaft lässt jede Art von Geometriespezifikation zu.<br>Empfohlen wird z.B. die Angabe als WKT-Literal (`rdfs:Literal`  getyped als `geosparql:wktLiteral`). | 
+> | Verwendungshinweis       | Der Wertebereich dieser Eigenschaft lässt jede Art von Geometriespezifikation zu.<br>Empfohlen wird z.B. die Angabe als WKT-Literal (`rdfs:Literal` getyped als `geo:wktLiteral`). | 
 > | Weiterführende Dokumentationen | https://semiceu.github.io/Core-Location-Vocabulary/releases/w3c/#locn:geometry<br>https://www.w3.org/ns/locn#locn:geometry  | 
 > | Änderungen zur Vorversion | 3.0: Wertebereich auf locn:Geometry geändert.<br>3.0: Verwendungshinweis und weiterführende Dokumentation hinzugefügt. | 
 
