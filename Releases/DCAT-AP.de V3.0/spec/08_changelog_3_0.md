@@ -110,7 +110,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
 | [Aktualisierungsdatum](#katalogeintrag-aktualisierungsdatum) (`dct:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
-| [Application Profile der Metadaten](#katalogeintrag-konform-zu) (`dct:conformsTo`) | 3.0: Kardinalität von `0..1` auf `*` geändert. | 
+| [Application Profile der Metadaten](#katalogeintrag-konform-zu) (`dct:conformsTo`) | 3.0: Kardinalität von `0..1` auf `*` geändert.<br>3.0: Errata: Anzeige des Wertebereichs korrigiert. | 
 | [Veröffentlichungsdatum](#katalogeintrag-veroffentlichungsdatum) (`dct:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 | [Katalogeintrag](#katalogeintrag-katalogeintrag) (`foaf:primaryTopic`) | 3.0: Aufnahme der Ressource `dcat:DatasetSeries` | 
 

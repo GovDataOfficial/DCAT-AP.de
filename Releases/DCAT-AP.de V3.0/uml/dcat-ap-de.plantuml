@@ -470,7 +470,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:label        = Typ
         '@ _:internalLink    = datensatz-typ
         '@ rdfs:range        = http://www.w3.org/2004/02/skos/core#Concept
-        '@ rdfs:comment      = Diese Eigenschaft bezieht sich auf den Typ des Datensatzes. Es wurde noch kein kontrollierter Vokabular festgelegt.
+        '@ rdfs:comment      = Diese Eigenschaft bezieht sich auf den Typ des Datensatzes.
         '@ rdf:about         = http://purl.org/dc/terms/type
         '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_type
         '@ adms:versionNotes = 3.0: Kardinalität von `0..1` auf `*` geändert.
@@ -1194,7 +1194,7 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
         '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
 
-    <<recommended>> dct:conformsTo ~> rdfs:Resource [*]
+    <<recommended>> dct:conformsTo ~> dct:Standard [*]
         '@ rdfs:label      = Application Profile der Metadaten
         '@ _:internalLink  = katalogeintrag-konform-zu
         '@ rdfs:range      = http://purl.org/dc/terms/Standard
@@ -1202,6 +1202,7 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ rdf:about       = http://purl.org/dc/terms/conformsTo
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:record_conforms_to
         '@ adms:versionNotes = 3.0: Kardinalität von `0..1` auf `*` geändert.
+        '@ adms:versionNotes = 3.0: Errata: Anzeige des Wertebereichs korrigiert.
         '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_conformsTo, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
     <<recommended>> adms:status ~> skos:Concept [0..1]
         '@ rdfs:label      = Änderungstyp

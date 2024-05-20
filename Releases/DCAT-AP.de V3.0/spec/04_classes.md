@@ -646,7 +646,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Wertebereich             | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[*]`                    |
-> | Beschreibung             | Diese Eigenschaft bezieht sich auf den Typ des Datensatzes. Es wurde noch kein kontrollierter Vokabular festgelegt. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-dataset-type) |
+> | Beschreibung             | Diese Eigenschaft bezieht sich auf den Typ des Datensatzes. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-dataset-type) |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_type  | 
 > | Änderungen zur Vorversion | 3.0: Kardinalität von `0..1` auf `*` geändert.<br>3.0: Namen vereinfacht.<br>3.0: Optionale Codeliste hinzugefügt. | 
 
@@ -1612,7 +1612,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
 | [Aktualisierungsdatum](#katalogeintrag-aktualisierungsdatum) | `dct:modified` | [`rdfs:Literal`]() | <small>Pflicht</small> | `[1]` |
-| [Application Profile der Metadaten](#katalogeintrag-konform-zu) | `dct:conformsTo` | [`rdfs:Resource`](http://purl.org/dc/terms/Standard) | <small>Empfohlen</small> | `[*]` |
+| [Application Profile der Metadaten](#katalogeintrag-konform-zu) | `dct:conformsTo` | [`dct:Standard`](http://purl.org/dc/terms/Standard) | <small>Empfohlen</small> | `[*]` |
 | [Änderungstyp](#katalogeintrag-anderungstyp) | `adms:status` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Empfohlen</small> | `[0..1]` |
 | [Veröffentlichungsdatum](#katalogeintrag-veroffentlichungsdatum) | `dct:issued` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[0..1]` |
 | [Titel](#katalogeintrag-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
@@ -1641,12 +1641,12 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 ###  Katalogeintrag: Application Profile der Metadaten {#katalogeintrag-konform-zu}
 > | *URI*                    | [`dct:conformsTo`](http://purl.org/dc/terms/conformsTo) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`rdfs:Resource`](http://purl.org/dc/terms/Standard) |
+> | Wertebereich             | [`dct:Standard`](http://purl.org/dc/terms/Standard) |
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf das Application Profile zu dem die Metadaten im Katalog konform sind.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:record_conforms_to  | 
-> | Änderungen zur Vorversion | 3.0: Kardinalität von `0..1` auf `*` geändert. | 
+> | Änderungen zur Vorversion | 3.0: Kardinalität von `0..1` auf `*` geändert.<br>3.0: Errata: Anzeige des Wertebereichs korrigiert. | 
 
 <br>
 
