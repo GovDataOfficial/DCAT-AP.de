@@ -14,25 +14,25 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [Titel](#katalog-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Pflicht</small> | `[1..*]` |
-| [Beschreibung](#katalog-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Pflicht</small> | `[1..*]` |
-| [Veröffentlichungsdatum](#katalog-veroffentlichungsdatum) | `dct:issued` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`| <small>Empfohlen</small> | `[0..1]` |
-| [Aktualisierungsdatum](#katalog-aktualisierungsdatum) | `dct:modified` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`| <small>Empfohlen</small> | `[0..1]` |
-| [Sprache](#katalog-sprache) | `dct:language` | [`dct:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem)| <small>Empfohlen</small> | `[*]` |
-| [Homepage](#katalog-homepage) | `foaf:homepage` | [`foaf:Document`](http://xmlns.com/foaf/0.1/Document)| <small>Empfohlen</small> | `[0..1]` |
-| [Lizenz](#katalog-lizenz) | `dct:license` | [`dct:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument)| <small>Empfohlen</small> | `[0..1]` |
-| [Kategorienschema](#katalog-kategorienschema) | `dcat:themeTaxonomy` | [`skos:ConceptScheme`](http://www.w3.org/2004/02/skos/core#ConceptScheme)| <small>Empfohlen</small> | `[*]` |
-| [Verfügbarkeit](#katalog-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Empfohlen</small> | `[0..1]` |
-| [Nutzungsbestimmungen](#katalog-nutzungsbestimmungen) | `dct:rights` | [`dct:RightsStatement`](http://purl.org/dc/terms/RightsStatement)| <small>Optional</small> | `[0..1]` |
-| [Katalog](#katalog-katalog) | `dcat:catalog` | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog)| <small>Optional</small> | `[*]` |
-| [Datenservice](#katalog-datenservice) | `dcat:service` | [`dcat:DataService`](http://www.w3.org/ns/dcat#DataService)| <small>Optional</small> | `[*]` |
-| [Räumliche Abdeckung](#katalog-raumliche-abdeckung) | `dct:spatial` | [`dct:Location`](http://purl.org/dc/terms/Location)| <small>Empfohlen</small> | `[*]` |
-| [Hat Teilkatalog](#katalog-hat-teilkatalog) | `dct:hasPart` | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog)| <small>Optional</small> | `[*]` |
-| [Ist Teilkatalog](#katalog-ist-teilkatalog) | `dct:isPartOf` | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog)| <small>Optional</small> | `[0..1]` |
-| [Katalogeintrag](#katalog-katalogeintrag) | `dcat:record` | [`dcat:CatalogRecord`](http://www.w3.org/ns/dcat#CatalogRecord)| <small>Optional</small> | `[*]` |
-| [Datensatz](#katalog-datensatz) | `dcat:dataset` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset)| <small>Pflicht</small> | `[1..*]` |
-| [Herausgeber](#katalog-herausgeber) | `dct:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent)| <small>Pflicht</small> | `[1]` |
-| [Autor](#katalog-autor) | `dct:creator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent)| <small>Optional</small> | `[*]` |
+| [Titel](#katalog-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
+| [Beschreibung](#katalog-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
+| [Veröffentlichungsdatum](#katalog-veroffentlichungsdatum) | `dct:issued` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[0..1]` |
+| [Aktualisierungsdatum](#katalog-aktualisierungsdatum) | `dct:modified` | [`rdfs:Literal`]() | <small>Empfohlen</small> | `[0..1]` |
+| [Sprache](#katalog-sprache) | `dct:language` | [`dct:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) | <small>Empfohlen</small> | `[*]` |
+| [Homepage](#katalog-homepage) | `foaf:homepage` | [`foaf:Document`](http://xmlns.com/foaf/0.1/Document) | <small>Empfohlen</small> | `[0..1]` |
+| [Lizenz](#katalog-lizenz) | `dct:license` | [`dct:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) | <small>Empfohlen</small> | `[0..1]` |
+| [Kategorienschema](#katalog-kategorienschema) | `dcat:themeTaxonomy` | [`skos:ConceptScheme`](http://www.w3.org/2004/02/skos/core#ConceptScheme) | <small>Empfohlen</small> | `[*]` |
+| [Verfügbarkeit](#katalog-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..1]` |
+| [Nutzungsbestimmungen](#katalog-nutzungsbestimmungen) | `dct:rights` | [`dct:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` |
+| [Katalog](#katalog-katalog) | `dcat:catalog` | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) | <small>Optional</small> | `[*]` |
+| [Datenservice](#katalog-datenservice) | `dcat:service` | [`dcat:DataService`](http://www.w3.org/ns/dcat#DataService) | <small>Optional</small> | `[*]` |
+| [Räumliche Abdeckung](#katalog-raumliche-abdeckung) | `dct:spatial` | [`dct:Location`](http://purl.org/dc/terms/Location) | <small>Empfohlen</small> | `[*]` |
+| [Hat Teilkatalog](#katalog-hat-teilkatalog) | `dct:hasPart` | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) | <small>Optional</small> | `[*]` |
+| [Ist Teilkatalog](#katalog-ist-teilkatalog) | `dct:isPartOf` | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) | <small>Optional</small> | `[0..1]` |
+| [Katalogeintrag](#katalog-katalogeintrag) | `dcat:record` | [`dcat:CatalogRecord`](http://www.w3.org/ns/dcat#CatalogRecord) | <small>Optional</small> | `[*]` |
+| [Datensatz](#katalog-datensatz) | `dcat:dataset` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Pflicht</small> | `[1..*]` |
+| [Herausgeber](#katalog-herausgeber) | `dct:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Pflicht</small> | `[1]` |
+| [Autor](#katalog-autor) | `dct:creator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` |
 
 
 <br> Die folgenden weiteren Eigenschaften wurden von der Superklasse [`dcat:Resource`](#klasse-ressource) geerbt, werden aber nicht genauer betrachtet: [`odrl:hasPolicy`](#distribution-regelwerk).
@@ -271,55 +271,55 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [Titel](#datensatz-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Pflicht</small> | `[1..*]` |
-| [Beschreibung](#datensatz-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Pflicht</small> | `[1..*]` |
-| [Schlagwort](#datensatz-schlagwort) | `dcat:keyword` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Empfohlen</small> | `[*]` |
-| [Ebene der geopolitischen Abdeckung](#datensatz-ebene-geopolitischen-abdeckung) | `dcatde:politicalGeocodingLevelURI` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Empfohlen</small> | `[*]` |
-| [Geopolitische Abdeckung](#datensatz-geopolitischen-abdeckung) | `dcatde:politicalGeocodingURI` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Empfohlen</small> | `[*]` |
-| [Kategorie](#datensatz-kategorie) | `dcat:theme` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept)| <small>Empfohlen</small> | `[*]` |
-| [Kontakt](#datensatz-kontakt) | `dcat:contactPoint` | [`vcard:Kind`](http://www.w3.org/TR/vcard-rdf/#Kind)| <small>Empfohlen</small> | `[*]` |
-| [Verfügbarkeit](#datensatz-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Empfohlen</small> | `[0..1]` |
-| [Datenbereitsteller ID](#datensatz-datenbereitsteller-id) | `dcatde:contributorID` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Optional</small> | `[*]` |
-| [Beschreibung der Abdeckung](#datensatz-beschreibung-abdeckung) | `dcatde:geocodingDescription` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
-| [ID](#datensatz-id) | `dct:identifier` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
-| [Andere ID](#datensatz-andere-id) | `adms:identifier` | [`adms:Identifier`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
-| [Veröffentlichungsdatum](#datensatz-veroffentlichungsdatum) | `dct:issued` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`| <small>Optional</small> | `[0..1]` |
-| [Aktualisierungsdatum](#datensatz-aktualisierungsdatum) | `dct:modified` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`| <small>Optional</small> | `[0..1]` |
-| [Versionsbezeichnung](#datensatz-versionsbezeichnung) | `dcat:version` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
-| [Versionsbezeichnung (DEPRECATED)](#datensatz-versionsbezeichnung-deprecated) | `owl:versionInfo` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[0..1]` |
-| [Versionserläuterung](#datensatz-versionserlauterung) | `adms:versionNotes` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
-| [Rechtsgrundlage](#datensatz-rechtsgrundlage) | `dcatap:applicableLegislation` | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource)| <small>Optional</small> | `[*]` |
-| [Rechtsgrundlage für die Zugangseröffnung (DEPRECATED)](#datensatz-rechtsgrundlage-zugangseroffnung) | `dcatde:legalBasis` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
-| [Verwandte Ressource](#datensatz-verwandte-ressource) | `dct:relation` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Optional</small> | `[*]` |
-| [Ursprüngliche Webseite](#datensatz-ursprungliche-webseite) | `dcat:landingPage` | [`foaf:Document`](http://xmlns.com/foaf/0.1/Document)| <small>Optional</small> | `[*]` |
-| [Dokumentation](#datensatz-dokumentation) | `foaf:page` | [`foaf:Document`](http://xmlns.com/foaf/0.1/Document)| <small>Optional</small> | `[*]` |
-| [Sprache](#datensatz-sprache) | `dct:language` | [`dct:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem)| <small>Optional</small> | `[*]` |
-| [Konform zu Standard](#datensatz-konform-zu-standard) | `dct:conformsTo` | [`dct:Standard`](http://purl.org/dc/terms/Standard)| <small>Optional</small> | `[*]` |
-| [Grad der Zugänglichkeit](#datensatz-grad-zuganglichkeit) | `dct:accessRights` | [`dct:RightsStatement`](http://purl.org/dc/terms/RightsStatement)| <small>Optional</small> | `[0..1]` |
-| [Provenienz](#datensatz-provenienz) | `dct:provenance` | [`dct:ProvenanceStatement`](http://purl.org/dc/terms/ProvenanceStatement)| <small>Optional</small> | `[*]` |
-| [Aktualisierungsfrequenz](#datensatz-aktualisierungsfrequenz) | `dct:accrualPeriodicity` | [`dct:Frequency`](http://purl.org/dc/terms/Frequency)| <small>Optional</small> | `[0..1]` |
-| [Qualitätssicherungsprozess](#datensatz-qualitatssicherungsprozess) | `dcatde:qualityProcessURI` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Optional</small> | `[0..1]` |
-| [Typ des Datensatzes](#datensatz-typ) | `dct:type` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept)| <small>Optional</small> | `[*]` |
-| [Wurde erzeugt von](#datensatz-wurde-erzeugt-von) | `prov:wasGeneratedBy` | [`prov:Activity`](https://www.w3.org/TR/prov-o/#Activity)| <small>Optional</small> | `[*]` |
-| [Räumliche Auflösung in Meter](#datensatz-raumliche-auflosung-in-meter) | `dcat:spatialResolutionInMeters` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als [`xsd:decimal`](https://www.w3.org/TR/xmlschema11-2/#decimal)| <small>Optional</small> | `[*]` |
-| [Zeitliche Auflösung](#datensatz-zeitliche-auflosung) | `dcat:temporalResolution` | [`rdfs:Literal`]([&#x60;rdfs:Literal&#x60;](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als [&#x60;xsd:duration&#x60;](https://www.w3.org/TR/xmlschema11-2/#duration))| <small>Optional</small> | `[*]` |
-| [Rollenzuordnung](#datensatz-rollenzuordnung) | `prov:qualifiedAttribution` | [`prov:Attribution`](https://www.w3.org/TR/prov-o/#Attribution)| <small>Optional</small> | `[*]` |
-| [Qualifizierte Beziehung](#datensatz-qualifizierte-beziehung) | `dcat:qualifiedRelation` | [`dcat:Relationship`](https://www.w3.org/TR/vocab-dcat-2/#Class:Relationship)| <small>Optional</small> | `[*]` |
-| [Wird Referenziert](#datensatz-wird-referenziert) | `dct:isReferencedBy` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Optional</small> | `[*]` |
-| [Referenziert](#datensatz-referenziert) | `dct:references` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Optional</small> | `[*]` |
-| [Räumliche Abdeckung](#datensatz-raumliche-abdeckung) | `dct:spatial` | [`dct:Location`](http://purl.org/dc/terms/Location)| <small>Empfohlen</small> | `[*]` |
-| [Zeitliche Abdeckung](#datensatz-zeitliche-abdeckung) | `dct:temporal` | [`dct:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime)| <small>Empfohlen</small> | `[*]` |
-| [Quelle des Datensatzes](#datensatz-quelle) | `dct:source` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset)| <small>Optional</small> | `[*]` |
-| [Weitere Version](#datensatz-weitere-version) | `dcat:hasVersion` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset)| <small>Optional</small> | `[*]` |
-| [Weitere Version (DEPRECATED)](#datensatz-weitere-version-deprecated) | `dct:hasVersion` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset)| <small>Optional</small> | `[*]` |
-| [Ist Version von (DEPRECATED)](#datensatz-ist-version) | `dct:isVersionOf` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset)| <small>Optional</small> | `[*]` |
-| [Distribution](#datensatz-distribution) | `dcat:distribution` | [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution)| <small>Empfohlen</small> | `[*]` |
-| [Beispieldistribution](#datensatz-beispieldistribution) | `adms:sample` | [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution)| <small>Optional</small> | `[*]` |
-| [Herausgeber](#datensatz-herausgeber) | `dct:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent)| <small>Empfohlen</small> | `[0..1]` |
-| [Autor](#datensatz-autor) | `dct:creator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent)| <small>Optional</small> | `[*]` |
-| [Bearbeiter](#datensatz-bearbeiter) | `dct:contributor` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent)| <small>Optional</small> | `[*]` |
-| [Urheber](#datensatz-urheber) | `dcatde:originator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent)| <small>Optional</small> | `[*]` |
-| [Verwalter](#datensatz-verwalter) | `dcatde:maintainer` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent)| <small>Optional</small> | `[*]` |
+| [Titel](#datensatz-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
+| [Beschreibung](#datensatz-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
+| [Schlagwort](#datensatz-schlagwort) | `dcat:keyword` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[*]` |
+| [Ebene der geopolitischen Abdeckung](#datensatz-ebene-geopolitischen-abdeckung) | `dcatde:politicalGeocodingLevelURI` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[*]` |
+| [Geopolitische Abdeckung](#datensatz-geopolitischen-abdeckung) | `dcatde:politicalGeocodingURI` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[*]` |
+| [Kategorie](#datensatz-kategorie) | `dcat:theme` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Empfohlen</small> | `[*]` |
+| [Kontakt](#datensatz-kontakt) | `dcat:contactPoint` | [`vcard:Kind`](http://www.w3.org/TR/vcard-rdf/#Kind) | <small>Empfohlen</small> | `[*]` |
+| [Verfügbarkeit](#datensatz-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..1]` |
+| [Datenbereitsteller ID](#datensatz-datenbereitsteller-id) | `dcatde:contributorID` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` |
+| [Beschreibung der Abdeckung](#datensatz-beschreibung-abdeckung) | `dcatde:geocodingDescription` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
+| [ID](#datensatz-id) | `dct:identifier` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
+| [Andere ID](#datensatz-andere-id) | `adms:identifier` | [`adms:Identifier`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
+| [Veröffentlichungsdatum](#datensatz-veroffentlichungsdatum) | `dct:issued` | [`rdfs:Literal`]() | <small>Optional</small> | `[0..1]` |
+| [Aktualisierungsdatum](#datensatz-aktualisierungsdatum) | `dct:modified` | [`rdfs:Literal`]() | <small>Optional</small> | `[0..1]` |
+| [Versionsbezeichnung](#datensatz-versionsbezeichnung) | `dcat:version` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
+| [Versionsbezeichnung (DEPRECATED)](#datensatz-versionsbezeichnung-deprecated) | `owl:versionInfo` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..1]` |
+| [Versionserläuterung](#datensatz-versionserlauterung) | `adms:versionNotes` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
+| [Rechtsgrundlage](#datensatz-rechtsgrundlage) | `dcatap:applicableLegislation` | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) | <small>Optional</small> | `[*]` |
+| [Rechtsgrundlage für die Zugangseröffnung (DEPRECATED)](#datensatz-rechtsgrundlage-zugangseroffnung) | `dcatde:legalBasis` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
+| [Verwandte Ressource](#datensatz-verwandte-ressource) | `dct:relation` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` |
+| [Ursprüngliche Webseite](#datensatz-ursprungliche-webseite) | `dcat:landingPage` | [`foaf:Document`](http://xmlns.com/foaf/0.1/Document) | <small>Optional</small> | `[*]` |
+| [Dokumentation](#datensatz-dokumentation) | `foaf:page` | [`foaf:Document`](http://xmlns.com/foaf/0.1/Document) | <small>Optional</small> | `[*]` |
+| [Sprache](#datensatz-sprache) | `dct:language` | [`dct:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) | <small>Optional</small> | `[*]` |
+| [Konform zu Standard](#datensatz-konform-zu-standard) | `dct:conformsTo` | [`dct:Standard`](http://purl.org/dc/terms/Standard) | <small>Optional</small> | `[*]` |
+| [Grad der Zugänglichkeit](#datensatz-grad-zuganglichkeit) | `dct:accessRights` | [`dct:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` |
+| [Provenienz](#datensatz-provenienz) | `dct:provenance` | [`dct:ProvenanceStatement`](http://purl.org/dc/terms/ProvenanceStatement) | <small>Optional</small> | `[*]` |
+| [Aktualisierungsfrequenz](#datensatz-aktualisierungsfrequenz) | `dct:accrualPeriodicity` | [`dct:Frequency`](http://purl.org/dc/terms/Frequency) | <small>Optional</small> | `[0..1]` |
+| [Qualitätssicherungsprozess](#datensatz-qualitatssicherungsprozess) | `dcatde:qualityProcessURI` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[0..1]` |
+| [Typ des Datensatzes](#datensatz-typ) | `dct:type` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Optional</small> | `[*]` |
+| [Wurde erzeugt von](#datensatz-wurde-erzeugt-von) | `prov:wasGeneratedBy` | [`prov:Activity`](https://www.w3.org/TR/prov-o/#Activity) | <small>Optional</small> | `[*]` |
+| [Räumliche Auflösung in Meter](#datensatz-raumliche-auflosung-in-meter) | `dcat:spatialResolutionInMeters` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
+| [Zeitliche Auflösung](#datensatz-zeitliche-auflosung) | `dcat:temporalResolution` | [`rdfs:Literal`]([&#x60;rdfs:Literal&#x60;](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als [&#x60;xsd:duration&#x60;](https://www.w3.org/TR/xmlschema11-2/#duration)) | <small>Optional</small> | `[*]` |
+| [Rollenzuordnung](#datensatz-rollenzuordnung) | `prov:qualifiedAttribution` | [`prov:Attribution`](https://www.w3.org/TR/prov-o/#Attribution) | <small>Optional</small> | `[*]` |
+| [Qualifizierte Beziehung](#datensatz-qualifizierte-beziehung) | `dcat:qualifiedRelation` | [`dcat:Relationship`](https://www.w3.org/TR/vocab-dcat-2/#Class:Relationship) | <small>Optional</small> | `[*]` |
+| [Wird Referenziert](#datensatz-wird-referenziert) | `dct:isReferencedBy` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` |
+| [Referenziert](#datensatz-referenziert) | `dct:references` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` |
+| [Räumliche Abdeckung](#datensatz-raumliche-abdeckung) | `dct:spatial` | [`dct:Location`](http://purl.org/dc/terms/Location) | <small>Empfohlen</small> | `[*]` |
+| [Zeitliche Abdeckung](#datensatz-zeitliche-abdeckung) | `dct:temporal` | [`dct:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime) | <small>Empfohlen</small> | `[*]` |
+| [Quelle des Datensatzes](#datensatz-quelle) | `dct:source` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Optional</small> | `[*]` |
+| [Weitere Version](#datensatz-weitere-version) | `dcat:hasVersion` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Optional</small> | `[*]` |
+| [Weitere Version (DEPRECATED)](#datensatz-weitere-version-deprecated) | `dct:hasVersion` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Optional</small> | `[*]` |
+| [Ist Version von (DEPRECATED)](#datensatz-ist-version) | `dct:isVersionOf` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Optional</small> | `[*]` |
+| [Distribution](#datensatz-distribution) | `dcat:distribution` | [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution) | <small>Empfohlen</small> | `[*]` |
+| [Beispieldistribution](#datensatz-beispieldistribution) | `adms:sample` | [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution) | <small>Optional</small> | `[*]` |
+| [Herausgeber](#datensatz-herausgeber) | `dct:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Empfohlen</small> | `[0..1]` |
+| [Autor](#datensatz-autor) | `dct:creator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` |
+| [Bearbeiter](#datensatz-bearbeiter) | `dct:contributor` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` |
+| [Urheber](#datensatz-urheber) | `dcatde:originator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` |
+| [Verwalter](#datensatz-verwalter) | `dcatde:maintainer` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` |
 
 
 <br> Die folgenden weiteren Eigenschaften wurden von der Superklasse [`dcat:Resource`](#klasse-ressource) geerbt, werden aber nicht genauer betrachtet: [`dct:license`](#distribution-lizenz), [`dct:rights`](#distribution-grad-zuganglichkeit) und [`odrl:hasPolicy`](#distribution-regelwerk).
@@ -889,14 +889,14 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [URL des Endpunktes](#datenservice-url-endpunkt) | `dcat:endpointURL` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Pflicht</small> | `[1..*]` |
-| [Titel](#datenservice-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Pflicht</small> | `[1..*]` |
-| [Beschreibung des Endpunktes](#datenservice-beschreibung-endpunkt) | `dcat:endpointDescription` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Empfohlen</small> | `[*]` |
-| [Verfügbarkeit](#datenservice-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Empfohlen</small> | `[0..1]` |
-| [Beschreibung](#datenservice-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
-| [Lizenz](#datenservice-lizenz) | `dct:license` | [`dct:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument)| <small>Optional</small> | `[0..1]` |
-| [Grad der Zugänglichkeit](#datenservice-grad-zuganglichkeit) | `dct:accessRights` | [`dct:RightsStatement`](http://purl.org/dc/terms/RightsStatement)| <small>Optional</small> | `[0..1]` |
-| [Liefert Datensatz aus](#datenservice-liefert-datensatz-aus) | `dcat:servesDataset` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset)| <small>Empfohlen</small> | `[*]` |
+| [URL des Endpunktes](#datenservice-url-endpunkt) | `dcat:endpointURL` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Pflicht</small> | `[1..*]` |
+| [Titel](#datenservice-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
+| [Beschreibung des Endpunktes](#datenservice-beschreibung-endpunkt) | `dcat:endpointDescription` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[*]` |
+| [Verfügbarkeit](#datenservice-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..1]` |
+| [Beschreibung](#datenservice-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
+| [Lizenz](#datenservice-lizenz) | `dct:license` | [`dct:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) | <small>Optional</small> | `[0..1]` |
+| [Grad der Zugänglichkeit](#datenservice-grad-zuganglichkeit) | `dct:accessRights` | [`dct:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` |
+| [Liefert Datensatz aus](#datenservice-liefert-datensatz-aus) | `dcat:servesDataset` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Empfohlen</small> | `[*]` |
 
 
 <br> Die folgenden weiteren Eigenschaften wurden von der Superklasse [`dcat:Resource`](#klasse-ressource) geerbt, werden aber nicht genauer betrachtet: [`dct:modified`](#datensatz-aktualisierungsdatum), [`dct:creator`](#datensatz-autor), [`dct:publisher`](#datensatz-herausgeber), [`dct:identifier`](#datensatz-id), [`dcat:theme`](#datensatz-kategorie), [`dct:conformsTo`](#datensatz-konform-zu-standard), [`dcat:contactPoint`](#datensatz-kontakt), [`dcat:qualifiedRelation`](#datensatz-qualifizierte-beziehung), [`prov:qualifiedAttribution`](#datensatz-rollenzuordnung), [`dcat:keyword`](#datensatz-schlagwort), [`dct:language`](#datensatz-sprache), [`dct:type`](#datensatz-typ), [`dcat:landingPage`](#datensatz-ursprungliche-webseite), [`dct:issued`](#datensatz-veroffentlichungsdatum), [`dct:relation`](#datensatz-verwandte-ressource), [`dct:rights`](#distribution-grad-zuganglichkeit), [`odrl:hasPolicy`](#distribution-regelwerk) und [`dct:isReferencedBy`](#datensatz-wird-referenziert). Zusätzliche, durch die deutschen Erweiterung von [`dcat:Resource`](#klasse-ressource), geerbte Eigenschaften: [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter), [`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dct:contributor`](#datensatz-bearbeiter) und [`dct:references`](#datensatz-referenziert).
@@ -1015,28 +1015,28 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [Zugangs-URL](#distribution-zugangs-url) | `dcat:accessURL` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Pflicht</small> | `[1..*]` |
-| [Titel](#distribution-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Empfohlen</small> | `[*]` |
-| [Aktualisierungsdatum](#distribution-aktualisierungsdatum) | `dct:modified` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`| <small>Empfohlen</small> | `[0..1]` |
-| [Lizenz](#distribution-lizenz) | `dct:license` | [`dct:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument)| <small>Empfohlen</small> | `[0..1]` |
-| [Format](#distribution-format) | `dct:format` | [`dct:MediaType`](http://purl.org/dc/terms/MediaTypeOrExtent)| <small>Empfohlen</small> | `[0..1]` |
-| [Verfügbarkeit](#distribution-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Empfohlen</small> | `[0..1]` |
-| [Namensnennungstext für By-Clauses](#distribution-namensnennungstext-by-clauses) | `dcatde:licenseAttributionByText` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
-| [Beschreibung](#distribution-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
-| [Größe in Bytes](#distribution-grosse-in-bytes) | `dcat:byteSize` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:nonNegativeInteger`| <small>Optional</small> | `[0..1]` |
-| [Veröffentlichungsdatum](#distribution-veroffentlichungsdatum) | `dct:issued` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`| <small>Optional</small> | `[0..1]` |
-| [Download-URL](#distribution-download-url) | `dcat:downloadURL` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource)| <small>Optional</small> | `[*]` |
-| [Sprache](#distribution-sprache) | `dct:language` | [`dct:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem)| <small>Optional</small> | `[*]` |
-| [Dokumentation](#distribution-dokumentation) | `foaf:page` | [`foaf:Document`](http://xmlns.com/foaf/0.1/Document)| <small>Optional</small> | `[*]` |
-| [Grad der Zugänglichkeit](#distribution-grad-zuganglichkeit) | `dct:rights` | [`dct:RightsStatement`](http://purl.org/dc/terms/RightsStatement)| <small>Optional</small> | `[0..1]` |
-| [Konform zu Standard](#distribution-konform-zu-standard) | `dct:conformsTo` | [`dct:Standard`](http://purl.org/dc/terms/Standard)| <small>Optional</small> | `[*]` |
-| [Medientyp](#distribution-medientyp) | `dcat:mediaType` | [`dct:MediaType`](http://purl.org/dc/terms/MediaType)| <small>Optional</small> | `[0..1]` |
-| [Kompressionsformat](#distribution-kompressionsformat) | `dcat:compressFormat` | [`dct:MediaType`](http://purl.org/dc/terms/MediaType)| <small>Optional</small> | `[0..1]` |
-| [Paketformat](#distribution-paketformat) | `dcat:packageFormat` | [`dct:MediaType`](http://purl.org/dc/terms/MediaType)| <small>Optional</small> | `[0..1]` |
-| [Regelwerk](#distribution-regelwerk) | `odrl:hasPolicy` | [`odrl:Policy`](https://www.w3.org/TR/odrl-vocab/#term-Policy)| <small>Optional</small> | `[0..1]` |
-| [Status](#distribution-status) | `adms:status` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept)| <small>Optional</small> | `[0..1]` |
-| [Ausliefernder Datenservice](#distribution-ausliefernder-datenservice) | `dcat:accessService` | [`dcat:DataService`](http://www.w3.org/ns/dcat#DataService)| <small>Optional</small> | `[*]` |
-| [Prüfsumme](#distribution-prufsumme) | `spdx:checksum` | [`spdx:Checksum`](http://spdx.org/rdf/terms#Checksum)| <small>Optional</small> | `[0..1]` |
+| [Zugangs-URL](#distribution-zugangs-url) | `dcat:accessURL` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Pflicht</small> | `[1..*]` |
+| [Titel](#distribution-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[*]` |
+| [Aktualisierungsdatum](#distribution-aktualisierungsdatum) | `dct:modified` | [`rdfs:Literal`]() | <small>Empfohlen</small> | `[0..1]` |
+| [Lizenz](#distribution-lizenz) | `dct:license` | [`dct:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) | <small>Empfohlen</small> | `[0..1]` |
+| [Format](#distribution-format) | `dct:format` | [`dct:MediaType`](http://purl.org/dc/terms/MediaTypeOrExtent) | <small>Empfohlen</small> | `[0..1]` |
+| [Verfügbarkeit](#distribution-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..1]` |
+| [Namensnennungstext für By-Clauses](#distribution-namensnennungstext-by-clauses) | `dcatde:licenseAttributionByText` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
+| [Beschreibung](#distribution-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
+| [Größe in Bytes](#distribution-grosse-in-bytes) | `dcat:byteSize` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..1]` |
+| [Veröffentlichungsdatum](#distribution-veroffentlichungsdatum) | `dct:issued` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..1]` |
+| [Download-URL](#distribution-download-url) | `dcat:downloadURL` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` |
+| [Sprache](#distribution-sprache) | `dct:language` | [`dct:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) | <small>Optional</small> | `[*]` |
+| [Dokumentation](#distribution-dokumentation) | `foaf:page` | [`foaf:Document`](http://xmlns.com/foaf/0.1/Document) | <small>Optional</small> | `[*]` |
+| [Grad der Zugänglichkeit](#distribution-grad-zuganglichkeit) | `dct:rights` | [`dct:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` |
+| [Konform zu Standard](#distribution-konform-zu-standard) | `dct:conformsTo` | [`dct:Standard`](http://purl.org/dc/terms/Standard) | <small>Optional</small> | `[*]` |
+| [Medientyp](#distribution-medientyp) | `dcat:mediaType` | [`dct:MediaType`](http://purl.org/dc/terms/MediaType) | <small>Optional</small> | `[0..1]` |
+| [Kompressionsformat](#distribution-kompressionsformat) | `dcat:compressFormat` | [`dct:MediaType`](http://purl.org/dc/terms/MediaType) | <small>Optional</small> | `[0..1]` |
+| [Paketformat](#distribution-paketformat) | `dcat:packageFormat` | [`dct:MediaType`](http://purl.org/dc/terms/MediaType) | <small>Optional</small> | `[0..1]` |
+| [Regelwerk](#distribution-regelwerk) | `odrl:hasPolicy` | [`odrl:Policy`](https://www.w3.org/TR/odrl-vocab/#term-Policy) | <small>Optional</small> | `[0..1]` |
+| [Status](#distribution-status) | `adms:status` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Optional</small> | `[0..1]` |
+| [Ausliefernder Datenservice](#distribution-ausliefernder-datenservice) | `dcat:accessService` | [`dcat:DataService`](http://www.w3.org/ns/dcat#DataService) | <small>Optional</small> | `[*]` |
+| [Prüfsumme](#distribution-prufsumme) | `spdx:checksum` | [`spdx:Checksum`](http://spdx.org/rdf/terms#Checksum) | <small>Optional</small> | `[0..1]` |
 
 
 <br>
@@ -1302,10 +1302,10 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [Startzeitpunkt](#zeitraum-startzeitpunkt) | `dcat:startDate` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime`| <small>Empfohlen</small> | `[0..1]` |
-| [Endzeitpunkt](#zeitraum-endzeitpunkt) | `dcat:endDate` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime`| <small>Empfohlen</small> | `[0..1]` |
-| [Anfang](#zeitraum-anfang) | `time:hasBeginning` | [`time:Instant`](https://www.w3.org/TR/owl-time/#time:Instant)| <small>Optional</small> | `[0..1]` |
-| [Ende](#zeitraum-ende) | `time:hasEnd` | [`time:Instant`](https://www.w3.org/TR/owl-time/#time:Instant)| <small>Optional</small> | `[0..1]` |
+| [Startzeitpunkt](#zeitraum-startzeitpunkt) | `dcat:startDate` | [`rdfs:Literal`]() | <small>Empfohlen</small> | `[0..1]` |
+| [Endzeitpunkt](#zeitraum-endzeitpunkt) | `dcat:endDate` | [`rdfs:Literal`]() | <small>Empfohlen</small> | `[0..1]` |
+| [Anfang](#zeitraum-anfang) | `time:hasBeginning` | [`time:Instant`](https://www.w3.org/TR/owl-time/#time:Instant) | <small>Optional</small> | `[0..1]` |
+| [Ende](#zeitraum-ende) | `time:hasEnd` | [`time:Instant`](https://www.w3.org/TR/owl-time/#time:Instant) | <small>Optional</small> | `[0..1]` |
 
 
 <br>
@@ -1374,9 +1374,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [Bounding Box](#standort-bounding-box) | `dcat:bbox` | Bewusst generisch gehalten als [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) z. B. getyped als `geosparql:asWKT`| <small>Empfohlen</small> | `[0..1]` |
-| [Geografischer Mittelpunkt](#standort-geografischer-mittelpunkt) | `dcat:centroid` | Bewusst generisch gehalten als [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) z. B. getyped als `geosparql:asWKT`| <small>Empfohlen</small> | `[0..1]` |
-| [Geometrie](#standort-geometrie) | `locn:geometry` | [`locn:Geometry`](http://www.w3.org/ns/locn#Geometry)| <small>Optional</small> | `[0..1]` |
+| [Bounding Box](#standort-bounding-box) | `dcat:bbox` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[0..1]` |
+| [Geografischer Mittelpunkt](#standort-geografischer-mittelpunkt) | `dcat:centroid` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[0..1]` |
+| [Geometrie](#standort-geometrie) | `locn:geometry` | [`locn:Geometry`](http://www.w3.org/ns/locn#Geometry) | <small>Optional</small> | `[0..1]` |
 
 
 <br>
@@ -1436,8 +1436,8 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [Name](#verantwortliche-stelle-name) | `foaf:name` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Pflicht</small> | `[1..*]` |
-| [Typ](#verantwortliche-stelle-typ) | `dct:type` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept)| <small>Optional</small> | `[0..1]` |
+| [Name](#verantwortliche-stelle-name) | `foaf:name` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
+| [Typ](#verantwortliche-stelle-typ) | `dct:type` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Optional</small> | `[0..1]` |
 
 
 <br>
@@ -1484,7 +1484,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [Notation des Identifier](#identifier-notation) | `skos:notation` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped mit der URI eines [DataCite Resource Identifier Schemes](https://sparontologies.github.io/datacite/current/datacite.html#d4e643)| <small>Pflicht</small> | `[1]` |
+| [Notation des Identifier](#identifier-notation) | `skos:notation` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1]` |
 
 
 <br>
@@ -1523,8 +1523,8 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [Algorithmus](#prufsumme-algorithmus) | `spdx:algorithm` | [`spdx:ChecksumAlgorithm`](http://spdx.org/rdf/terms#ChecksumAlgorithm)| <small>Pflicht</small> | `[1]` |
-| [Prüfsummenwert](#prufsumme-prufsummenwert) | `spdx:checksumValue` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:hexBinary`| <small>Pflicht</small> | `[1]` |
+| [Algorithmus](#prufsumme-algorithmus) | `spdx:algorithm` | [`spdx:ChecksumAlgorithm`](http://spdx.org/rdf/terms#ChecksumAlgorithm) | <small>Pflicht</small> | `[1]` |
+| [Prüfsummenwert](#prufsumme-prufsummenwert) | `spdx:checksumValue` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1]` |
 
 
 <br>
@@ -1575,15 +1575,15 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [Aktualisierungsdatum](#katalogeintrag-aktualisierungsdatum) | `dct:modified` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`| <small>Pflicht</small> | `[1]` |
-| [Application Profile der Metadaten](#katalogeintrag-konform-zu) | `dct:conformsTo` | [`rdfs:Resource`](http://purl.org/dc/terms/Standard)| <small>Empfohlen</small> | `[*]` |
-| [Änderungstyp](#katalogeintrag-anderungstyp) | `adms:status` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept)| <small>Empfohlen</small> | `[0..1]` |
-| [Veröffentlichungsdatum](#katalogeintrag-veroffentlichungsdatum) | `dct:issued` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`| <small>Empfohlen</small> | `[0..1]` |
-| [Titel](#katalogeintrag-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
-| [Beschreibung](#katalogeintrag-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Optional</small> | `[*]` |
-| [Sprache](#katalogeintrag-sprache) | `dct:language` | [`dct:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem)| <small>Optional</small> | `[*]` |
-| [Katalogeintrag](#katalogeintrag-katalogeintrag) | `foaf:primaryTopic` | `dcat:Dataset`, `dcat:DataService`, `dcat:DatasetSeries` oder `dcat:Catalog`| <small>Pflicht</small> | `[1]` |
-| [Original-Metadaten der Ressource](#katalogeintrag-original-metadaten-der-ressource) | `dct:source` | [`dcat:CatalogRecord`]()| <small>Optional</small> | `[0..1]` |
+| [Aktualisierungsdatum](#katalogeintrag-aktualisierungsdatum) | `dct:modified` | [`rdfs:Literal`]() | <small>Pflicht</small> | `[1]` |
+| [Application Profile der Metadaten](#katalogeintrag-konform-zu) | `dct:conformsTo` | [`rdfs:Resource`](http://purl.org/dc/terms/Standard) | <small>Empfohlen</small> | `[*]` |
+| [Änderungstyp](#katalogeintrag-anderungstyp) | `adms:status` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Empfohlen</small> | `[0..1]` |
+| [Veröffentlichungsdatum](#katalogeintrag-veroffentlichungsdatum) | `dct:issued` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[0..1]` |
+| [Titel](#katalogeintrag-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
+| [Beschreibung](#katalogeintrag-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
+| [Sprache](#katalogeintrag-sprache) | `dct:language` | [`dct:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) | <small>Optional</small> | `[*]` |
+| [Katalogeintrag](#katalogeintrag-katalogeintrag) | `foaf:primaryTopic` | [`dcat:Resource`]() | <small>Pflicht</small> | `[1]` |
+| [Original-Metadaten der Ressource](#katalogeintrag-original-metadaten-der-ressource) | `dct:source` | [`dcat:CatalogRecord`]() | <small>Optional</small> | `[0..1]` |
 
 
 <br>
@@ -1713,7 +1713,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [Lizenztyp](#lizenzdokument-lizenztyp) | `dct:type` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Empfohlen</small> | `[*]` |
+| [Lizenztyp](#lizenzdokument-lizenztyp) | `dct:type` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[*]` |
 
 
 <br>
@@ -1749,8 +1749,8 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [Hatte Rolle](#beziehung-rolle) | `dcat:hadRole` | [`dcat:Role`](http://www.w3.org/ns/dcat#Role)| <small>Pflicht</small> | `[1..*]` |
-| [Beziehung](#beziehung-beziehung) | `dct:relation` | [`rdfs:Resource`](rdfs:Resource)| <small>Pflicht</small> | `[1..*]` |
+| [Hatte Rolle](#beziehung-rolle) | `dcat:hadRole` | [`dcat:Role`](http://www.w3.org/ns/dcat#Role) | <small>Pflicht</small> | `[1..*]` |
+| [Beziehung](#beziehung-beziehung) | `dct:relation` | [`rdfs:Resource`](rdfs:Resource) | <small>Pflicht</small> | `[1..*]` |
 
 
 <br>
@@ -1797,8 +1797,8 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [Hatte Rolle](#rollenzuordnung-rolle) | `dcat:hadRole` | [`dcat:Role`](http://www.w3.org/ns/dcat#Role)| <small>Pflicht</small> | `[1..*]` |
-| [Agent](#rollenzuordnung-agent) | `prov:agent` | [`prov:Agent`](https://www.w3.org/TR/prov-o/#Agent)| <small>Pflicht</small> | `[1..*]` |
+| [Hatte Rolle](#rollenzuordnung-rolle) | `dcat:hadRole` | [`dcat:Role`](http://www.w3.org/ns/dcat#Role) | <small>Pflicht</small> | `[1..*]` |
+| [Agent](#rollenzuordnung-agent) | `prov:agent` | [`prov:Agent`](https://www.w3.org/TR/prov-o/#Agent) | <small>Pflicht</small> | `[1..*]` |
 
 
 <br>
@@ -1845,7 +1845,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [Bezeichnung](#kategorie-bezeichnung) | `skos:prefLabel` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Pflicht</small> | `[1..*]` |
+| [Bezeichnung](#kategorie-bezeichnung) | `skos:prefLabel` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
 
 
 <br>
@@ -1881,7 +1881,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [Titel](#kategorienschema-bezeichnung) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal)| <small>Pflicht</small> | `[1..*]` |
+| [Titel](#kategorienschema-bezeichnung) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
 
 
 <br>
