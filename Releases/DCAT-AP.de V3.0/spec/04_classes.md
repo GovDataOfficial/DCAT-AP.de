@@ -1041,6 +1041,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Regelwerk](#distribution-regelwerk) | `odrl:hasPolicy` | [`odrl:Policy`](https://www.w3.org/TR/odrl-vocab/#term-Policy) | <small>Optional</small> | `[0..1]` |
 | [Status](#distribution-status) | `adms:status` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Optional</small> | `[0..1]` |
 | [Räumliche Auflösung in Meter](#distribution-raumliche-auflosung-in-meter) | `dcat:spatialResolutionInMeters` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..*]` |
+| [Zeitliche Auflösung](#distribution-zeitliche-auflosung) | `dcat:temporalResolution` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
 | [Ausliefernder Datenservice](#distribution-ausliefernder-datenservice) | `dcat:accessService` | [`dcat:DataService`](http://www.w3.org/ns/dcat#DataService) | <small>Optional</small> | `[*]` |
 | [Prüfsumme](#distribution-prufsumme) | `spdx:checksum` | [`spdx:Checksum`](http://spdx.org/rdf/terms#Checksum) | <small>Optional</small> | `[0..1]` |
 
@@ -1277,6 +1278,18 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..*]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf den kleinsten räumlichen Abstand, der in der Distribution auflösbar ist, gemessen in Metern.<br>**Verwendungshinweis:** Kann die räumliche Auflösung nicht in Metern beschrieben werden, können stattdessen die spezielleren Eigenschaften verwendet werden, die [GeoDCAT-AP](https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/#spatial-resolution-spatial-resolution-of-the-dataset) hierfür zur Verfügung stellt.  |
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial_resolution  | 
+> | Änderungen zur Vorversion | 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 
+
+<br>
+
+###  Distribution: Zeitliche Auflösung {#distribution-zeitliche-auflosung}
+> | *URI*                    | [`dcat:temporalResolution`](http://www.w3.org/ns/dcat#temporalResolution) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als [`xsd:duration`](https://www.w3.org/TR/xmlschema11-2/#duration) |
+> | Verbindlichkeit          | Optional |
+> | Multiplizität            | `[*]`                    |
+> | Beschreibung             | Diese Eigenschaft bezieht sich auf den kürzesten in der Distribution auflösbaren Zeitraum.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial_resolution  | 
 > | Änderungen zur Vorversion | 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 
 

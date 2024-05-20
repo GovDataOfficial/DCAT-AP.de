@@ -964,7 +964,15 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdf:about       = http://www.w3.org/ns/dcat#spatialResolutionInMeters
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial_resolution
         '@ adms:versionNotes = 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0.
-
+    <<optional>> dcat:temporalResolution ~> rdfs:Literal [*]
+        '@ rdfs:label      = Zeitliche Auflösung
+        '@ _:internalLink  = distribution-zeitliche-auflosung
+        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als [`xsd:duration`](https://www.w3.org/TR/xmlschema11-2/#duration)
+        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf den kürzesten in der Distribution auflösbaren Zeitraum.
+        '@ rdf:about       = http://www.w3.org/ns/dcat#temporalResolution
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial_resolution
+        '@ adms:versionNotes = 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0.
 }
 '@ rdfs:label      = Distribution
 '@ _:internalLink  = #klasse-distribution
