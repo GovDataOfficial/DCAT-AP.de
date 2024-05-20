@@ -1,0 +1,92 @@
+@prefix adms:    <http://www.w3.org/ns/adms#> .                  # Asset Description Metadata Schema
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .                  # DCAT3 Vokabular
+@prefix dcatap:  <http://data.europa.eu/r5r/> .                  # DCAT-AP Vokabular
+@prefix dcatde:  <http://dcat-ap.de/def/dcatde/> .               # DCAT-AP.de Vokabular
+@prefix dcterms: <http://purl.org/dc/terms/> .                   # Dublin Core Vokabular
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .                  # Friend of a Friend Vokabular
+@prefix geo:     <http://www.opengis.net/ont/geosparql#> .       # GeoSPARQL
+@prefix locn:    <http://www.w3.org/ns/locn#> .                  # Location
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . # RDF
+@prefix vcard:   <http://www.w3.org/2006/vcard/ns#> .            # VCard Vokabular
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .           # XSD
+@prefix spdx:    <http://spdx.org/rdf/terms#> .                  # Software Package Data Exchange
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#>          # Simple Knowledge Organization System
+
+_:catalog a dcat:Catalog;
+  dcterms:title "Katalogtitel" ;
+  dcterms:description "Dieser Katalog beinhaltet sowohl direkt Datensätze als auch Datenservices. Sie sind zusätzlich untereinander verknüpft. Zur Übersichtlichkeit wurden die Datensätze minimal modelliert." ;
+  dcterms:publisher _:innenministerium ;
+  dcat:service _:dataservice-00 ;
+  dcat:dataset _:dataset-01, _:dataset-02, _:dataset-03 ;
+.
+
+_:dataservice-00 a dcat:DataService ;
+
+  # ======== Verpflichtende Attribute ========
+
+  dcterms:title "Datenservice für Daten deutscher Polizeidienststellen" ;
+  dcat:endpointURL <https://example.org/api/polizeidienststellen/> ;
+
+  # ======== Empfohlene Attribute ========
+
+  dcat:endpointDescription <https://example.org/api/polizeidienststellen/wfs?service=WFS&amp;request=getcapabilities> ;
+  dcterms:conformsTo <http://www.opengis.net/def/serviceType/ogc/wfs/> ;
+
+  dcat:contactPoint [
+  a vcard:Kind ; 
+  vcard:hasEmail <mailto:inneresicherheit@example.com> ;
+  vcard:hasURL <https://example.org/chatbot/innenministerium> ;
+  ];
+
+  dcat:keyword "polizei", "dienststellen", "geodaten", "sicherheit" ;
+  dcterms:publisher _:innenministerium ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/JUST> ;
+
+  dcat:servesDataset _:dataset-01, _:dataset-02, _:dataset-03 ;
+
+  # ======== Optionale Attribute ========
+
+  dcat:landingPage <https://example.org/about/polizeidienststellen/> ;
+  dcterms:format 
+    <http://publications.europa.eu/resource/authority/file-type/CSV> , 
+    <http://publications.europa.eu/resource/authority/file-type/GEOJSON> , 
+    <http://publications.europa.eu/resource/authority/file-type/TXT> ;
+.
+
+_:dataset-01 a dcat:Dataset ;
+  dcterms:title "Kontaktdaten aller deutschen Polizeidienststellen" ;
+  dcterms:description "Dieser Datensatz beinhaltet die Kontaktdaten aller Polizeidienststellen in Deutschland. (…)" ;
+  dcat:distribution [ 
+    a dcat:Distribution ;
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dcat:accessURL <https://example.org/api/polizeidienststellen/bulk?content=kontaktdaten> ;
+    dcat:accessService _:dataservice-00 ;
+  ] ;
+.
+
+_:dataset-02 a dcat:Dataset ;
+  dcterms:title "Zuständigkeitsbereiche aller deutschen Polizeidienststellen" ;
+  dcterms:description "Dieser Datensatz beinhaltet die Zuständigkeitsbereiche aller Polizeidienststellen in Deutschland. (…)" ;
+  dcat:distribution [ 
+    a dcat:Distribution ;
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/GEOJSON> ;
+    dcat:accessURL <https://example.org/api/polizeidienststellen/bulk?content=zustaendigkeitsbereich> ;
+    dcat:accessService _:dataservice-00 ;
+  ] ;
+.
+
+_:dataset-03 a dcat:Dataset ;
+  dcterms:title "Anzahl der Mitarbeiter aller deutschen Polizeidienststellen" ;
+  dcterms:description "Dieser Datensatz beinhaltet die Anzahl der Mitarbeiter aller Polizeidienststellen in Deutschland. (…)" ;
+  dcat:distribution [ 
+    a dcat:Distribution ;
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/TXT> ;
+    dcat:accessURL <https://example.org/api/polizeidienststellen/bulk?content=mitarbeiteranzahl> ;
+    dcat:accessService _:dataservice-00 ;
+  ] ;
+.
+
+_:innenministerium a foaf:Agent ;
+  foaf:name "Innenministerium " ;
+  dcterms:type <http://purl.org/adms/publishertype/RegionalAuthority> ;
+.

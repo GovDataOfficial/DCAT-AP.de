@@ -1,15 +1,16 @@
-@prefix adms:    <http://www.w3.org/ns/adms#> . 
-@prefix dcat:    <http://www.w3.org/ns/dcat#> .    # DCAT3 Vokabular
-@prefix dcatap:  <http://data.europa.eu/r5r/> .    # DCAT-AP Vokabular
-@prefix dcatde:  <http://dcat-ap.de/def/dcatde/> . # DCAT-AP.de Vokabular
-@prefix dcterms: <http://purl.org/dc/terms/> .     # Dublin Core Vokabular
-@prefix foaf:    <http://xmlns.com/foaf/0.1/> . 
-@prefix geo:     <http://www.opengis.net/ont/geosparql#> .
-@prefix locn:    <http://www.w3.org/ns/locn#> .
-@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix vcard:   <http://www.w3.org/2006/vcard/ns#> .
-@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
-@prefix spdx:    <http://spdx.org/rdf/terms#> .    # Software Package Data Exchange
+@prefix adms:    <http://www.w3.org/ns/adms#> .                  # Asset Description Metadata Schema
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .                  # DCAT3 Vokabular
+@prefix dcatap:  <http://data.europa.eu/r5r/> .                  # DCAT-AP Vokabular
+@prefix dcatde:  <http://dcat-ap.de/def/dcatde/> .               # DCAT-AP.de Vokabular
+@prefix dcterms: <http://purl.org/dc/terms/> .                   # Dublin Core Vokabular
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .                  # Friend of a Friend Vokabular
+@prefix geo:     <http://www.opengis.net/ont/geosparql#> .       # GeoSPARQL
+@prefix locn:    <http://www.w3.org/ns/locn#> .                  # Location
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . # RDF
+@prefix vcard:   <http://www.w3.org/2006/vcard/ns#> .            # VCard Vokabular
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .           # XSD
+@prefix spdx:    <http://spdx.org/rdf/terms#> .                  # Software Package Data Exchange
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#>          # Simple Knowledge Organization System
 
 <http://www.example.org/rdf/dataset/12345678-9abc-4729-9044-f4d4ceaed491> a dcat:Dataset ;
     
@@ -20,21 +21,21 @@
     
     # Konvention 12: Alle Datensätze, die direkt an das GovData Portal geliefert werden, MÜSSEN ihre Herkunft über eine eindeutige Kennzeichnung des Datenbereitstellers über die Datenbereitsteller ID (dcatde:contributorID) ausweisen.
     # Konvention 13: Die eigene Datenbereitsteller ID-Kennung MUSS föderationsweit an bestehende Einträge im Feld dcatde:contributorID angehängt werden. (...)
-    dcatde:contributorID <http://dcat-ap.de/def/contributors/ORGANISATION>;
+    dcatde:contributorID <http://dcat-ap.de/def/contributors/ORGANISATION> ;
     
     # Konvention 40: Werden DCAT-AP.de Metadaten aus ISO-Metadaten erzeugt, MUSS das „technische“ Aktualitätsdatum aus dem Element dateStamp (XPath MD_Metadata/dateStamp) als Wert der Eigenschaft dct:modified des Datasets verwendet werden. 
-    dcterms:modified "2024-02-22T14:28:09.000"^^xsd:dateTime;
+    dcterms:modified "2024-02-22T14:28:09.000"^^xsd:dateTime ;
 
     # Konvention 36: Unter dct:publisher MUSS die Organisation eingetragen werden, die den Datensatz (im rechtlichen, nicht technischen Sinne) veröffentlicht, d.h. die entschieden hat, dass Dritten Nutzungsrechte (hilfsweise Zugang) eingeräumt werden. 
-    dcterms:publisher _:finanzministerium
+    dcterms:publisher _:finanzministerium ;
 
     # ======== Empfohlene Attribute ========
     
     # Konvention 1: dcat:contactPoint ist selbst nicht verpflichtend, wenn er da ist, muss er aber E-Mail oder URL beinhalten.
     dcat:contactPoint [
-        a vcard:Kind; 
-        vcard:hasEmail <mailto:haushalt@example.com>;
-    ];
+        a vcard:Kind ; 
+        vcard:hasEmail <mailto:haushalt@example.com> ;
+    ] ;
 
     dcatde:politicalGeocodingLevelURI <http://dcat-ap.de/def/politicalGeocoding/Level/state> ; 
     dcatde:politicalGeocodingURI <http://dcat-ap.de/def/politicalGeocoding/stateKey/17> ;
@@ -43,7 +44,7 @@
 
     dcterms:spatial <http://dcat-ap.de/def/politicalGeocoding/stateKey/17> ;
 
-    dcat:keyword "Haushalt"@de, "Haushaltsplan"@de; 
+    dcat:keyword "Haushalt"@de, "Haushaltsplan"@de ; 
     
     # Konvention 30: Werden - wie empfohlen - Kategorien verwendet, MÜSSEN die MDR data themes genutzt werden. 
     dcat:theme 
@@ -64,7 +65,7 @@
     dcterms:temporal [ 
        a dcterms:PeriodOfTime ;
        dcat:startDate "2021-01-01"^^xsd:date ;
-       dcat:endDate "2021-12-31"^^xsd:date
+       dcat:endDate "2021-12-31"^^xsd:date ;
     ] ;
     
     
@@ -73,7 +74,7 @@
     adms:identifier 
         [
             a adms:Identifier ;
-            skos:notation "https://doi.org/10.1038/sdata.2016.18"^^xsd:anyURL
+            skos:notation "https://doi.org/10.1038/sdata.2016.18"^^xsd:anyURL ;
         ], 
         [
             a adms:Identifier ;
@@ -111,7 +112,7 @@
         rdf:type dcat:Distribution ;
 
         # ======== Verpflichtende Attribute ========
-        dcat:accessURL <https://example.com/data/haushalt_2021.csv> ;                        # Konvention 39
+        dcat:accessURL <https://example.com/data/haushalt_2021.csv> ;  # Konvention 39
 
         # Konvention 22: Es MÜSSEN Metadaten zu Datensätzen mit Distributionen im adms:status „Completed“, „Deprecated“ oder „Withdrawn“ transportiert werden. 
         adms:status <http://purl.org/adms/status/Completed> ;
@@ -156,7 +157,7 @@
         dcterms:title "Haushalt 2021 als Schmuckausgabe"@de ;
 
         dcterms:format <http://publications.europa.eu/resource/authority/file-type/PDF> ;
-        dcterms:modified "2024-03-10T06:20:06"^^xsd:dateTime ; # +lrinsche
+        dcterms:modified "2024-03-10T06:20:06"^^xsd:dateTime ;
         dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE> ;
 
         # ======== Optionale Attribute ========
