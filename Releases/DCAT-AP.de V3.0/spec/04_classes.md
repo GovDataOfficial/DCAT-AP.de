@@ -67,22 +67,24 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 ###  Katalog: Veröffentlichungsdatum {#katalog-veroffentlichungsdatum}
 > | *URI*                    | [`dct:issued`](http://purl.org/dc/terms/issued) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime` |
+> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime` |
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft enthält das Datum der Herausgabe/Emission (z.B. in Form einer Veröffentlichung) des Kataloges.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_release_date  | 
+> | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 
 <br>
 
 ###  Katalog: Aktualisierungsdatum {#katalog-aktualisierungsdatum}
 > | *URI*                    | [`dct:modified`](http://purl.org/dc/terms/modified) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime` |
+> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime` |
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation des Kataloges.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date  | 
+> | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 
 <br>
 
@@ -459,22 +461,24 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 ###  Datensatz: Veröffentlichungsdatum {#datensatz-veroffentlichungsdatum}
 > | *URI*                    | [`dct:issued`](http://purl.org/dc/terms/issued) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime` |
+> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime` |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft enthält das Datum der Herausgabe/Emission (z.B. in Form einer Veröffentlichung) des Datensatzes.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_release_date  | 
+> | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 
 <br>
 
 ###  Datensatz: Aktualisierungsdatum {#datensatz-aktualisierungsdatum}
 > | *URI*                    | [`dct:modified`](http://purl.org/dc/terms/modified) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime` |
+> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime` |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation des Datensatzes.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#erkennung-von-dubletten) genauer beschrieben.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date  | 
+> | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 
 <br>
 
@@ -1068,11 +1072,12 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 ###  Distribution: Aktualisierungsdatum {#distribution-aktualisierungsdatum}
 > | *URI*                    | [`dct:modified`](http://purl.org/dc/terms/modified) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime` |
+> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime` |
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation der Distribution.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_update_date  | 
+> | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 > | Änderungen durch DCAT-AP.de | Verbindlichkeit wurde von optional auf empfohlen hochgestuft. | 
 <br>
 
@@ -1144,11 +1149,12 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 ###  Distribution: Veröffentlichungsdatum {#distribution-veroffentlichungsdatum}
 > | *URI*                    | [`dct:issued`](http://purl.org/dc/terms/issued) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime` |
+> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime` |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft enthält das Datum der Herausgabe/Emission (z.B. in Form einer Veröffentlichung) der Distribution.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_release_date  | 
+> | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 
 <br>
 
@@ -1320,6 +1326,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft bezeichnet den Beginn des Zeitraumes.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-zeitliche-abdeckung) genauer beschrieben.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:period_start_date  | 
+> | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 
 <br>
 
@@ -1331,6 +1338,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft bezeichnet das Ende des Zeitraumes.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-zeitliche-abdeckung) genauer beschrieben.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:period_end_date  | 
+> | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 
 <br>
 
@@ -1593,11 +1601,12 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 ###  Katalogeintrag: Aktualisierungsdatum {#katalogeintrag-aktualisierungsdatum}
 > | *URI*                    | [`dct:modified`](http://purl.org/dc/terms/modified) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime` |
+> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als  `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime` |
 > | Verbindlichkeit          | Pflicht |
 > | Multiplizität            | `[1]`                    |
 > | Beschreibung             | Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation des Katalogeintrags.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date  | 
+> | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 
 <br>
 
@@ -1627,11 +1636,12 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 ###  Katalogeintrag: Veröffentlichungsdatum {#katalogeintrag-veroffentlichungsdatum}
 > | *URI*                    | [`dct:issued`](http://purl.org/dc/terms/issued) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime` |
+> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime` |
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft enthält das Datum, an dem die Beschreibung der Ressource aufgenommen wurde.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:record_listing_date  | 
+> | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 
 <br>
 

@@ -1,3 +1,16 @@
+### Klasse: Katalog
+
+Auf Ebene der Klasse [Katalog](#klasse-katalog) (`dcat:Catalog`) gibt es 
+keine Änderungen zur Vorversion.
+
+Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
+
+| Eigenschaft           | Änderungen                      |
+|:----------------------|:--------------------------------|
+| [Veröffentlichungsdatum](#katalog-veroffentlichungsdatum) (`dct:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Aktualisierungsdatum](#katalog-aktualisierungsdatum) (`dct:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+
+
 ### Klasse: Datensatz
 
 Auf Ebene der Klasse [Datensatz](#klasse-datensatz) (`dcat:Dataset`) gibt es 
@@ -7,6 +20,8 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
+| [Veröffentlichungsdatum](#datensatz-veroffentlichungsdatum) (`dct:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Aktualisierungsdatum](#datensatz-aktualisierungsdatum) (`dct:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 | [Versionsbezeichnung](#datensatz-versionsbezeichnung) (`dcat:version`) | 3.0: Neu hinzugefügt. | 
 | [Versionsbezeichnung (DEPRECATED)](#datensatz-versionsbezeichnung-deprecated) (`owl:versionInfo`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
 | [Rechtsgrundlage](#datensatz-rechtsgrundlage) (`dcatap:applicableLegislation`) | 3.0: Neu hinzugefügt. | 
@@ -39,7 +54,22 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
+| [Aktualisierungsdatum](#distribution-aktualisierungsdatum) (`dct:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 | [Größe in Bytes](#distribution-grosse-in-bytes) (`dcat:byteSize`) | 3.0: Änderung der Range von xsd:decimal auf xsd:nonNegativeInteger. | 
+| [Veröffentlichungsdatum](#distribution-veroffentlichungsdatum) (`dct:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+
+
+### Klasse: Zeitraum
+
+Auf Ebene der Klasse [Zeitraum](#klasse-zeitraum) (`dct:PeriodOfTime`) gibt es 
+keine Änderungen zur Vorversion.
+
+Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
+
+| Eigenschaft           | Änderungen                      |
+|:----------------------|:--------------------------------|
+| [Startzeitpunkt](#zeitraum-startzeitpunkt) (`dcat:startDate`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Endzeitpunkt](#zeitraum-endzeitpunkt) (`dcat:endDate`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 
 
 ### Klasse: Standort
@@ -75,7 +105,9 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
+| [Aktualisierungsdatum](#katalogeintrag-aktualisierungsdatum) (`dct:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 | [Application Profile der Metadaten](#katalogeintrag-konform-zu) (`dct:conformsTo`) | 3.0: Kardinalität von `0..1` auf `*` geändert. | 
+| [Veröffentlichungsdatum](#katalogeintrag-veroffentlichungsdatum) (`dct:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 | [Katalogeintrag](#katalogeintrag-katalogeintrag) (`foaf:primaryTopic`) | 3.0: Aufnahme der Ressource `dcat:DatasetSeries` | 
 
 

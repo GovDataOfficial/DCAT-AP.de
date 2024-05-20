@@ -35,19 +35,21 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:label      = Veröffentlichungsdatum
         '@ _:internalLink  = katalog-veroffentlichungsdatum
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
-        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime`
         '@ rdfs:comment    = Diese Eigenschaft enthält das Datum der Herausgabe/Emission (z.B. in Form einer Veröffentlichung) des Kataloges.
         '@ rdf:about       = http://purl.org/dc/terms/issued
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_release_date
         '@ sh:shapes       = dcatap:Catalog_Property_dct_issued (erlaubt auch xsd:gYear und xsd:gYearMonth)
+        '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
     <<recommended>> dct:modified ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Aktualisierungsdatum
         '@ _:internalLink  = katalog-aktualisierungsdatum
-        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime`
         '@ rdfs:comment    = Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation des Kataloges.
         '@ rdf:about       = http://purl.org/dc/terms/modified
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date
         '@ sh:shapes       = dcatap:Catalog_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
+        '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
     <<recommended>> dct:language ~> dct:LinguisticSystem [*]
         '@ rdfs:label      = Sprache
         '@ _:internalLink  = katalog-sprache
@@ -319,20 +321,22 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     <<optional>> dct:issued ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Veröffentlichungsdatum
         '@ _:internalLink  = datensatz-veroffentlichungsdatum
-        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime`
         '@ rdfs:comment    = Diese Eigenschaft enthält das Datum der Herausgabe/Emission (z.B. in Form einer Veröffentlichung) des Datensatzes.
         '@ rdf:about       = http://purl.org/dc/terms/issued
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_release_date
         '@ sh:shapes       = dcatap:Dataset_Property_dct_issued (erlaubt auch xsd:gYear und xsd:gYearMonth)
+        '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
     <<optional>> dct:modified ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Aktualisierungsdatum
         '@ _:internalLink  = datensatz-aktualisierungsdatum
-        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime`
         '@ rdfs:comment    = Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation des Datensatzes.
         '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#erkennung-von-dubletten) genauer beschrieben.
         '@ rdf:about       = http://purl.org/dc/terms/modified
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date
         '@ sh:shapes       = dcatap:Dataset_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
+        '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
     <<optional>> dcat:version ~> rdfs:Literal [*]
         '@ rdfs:label      = Versionsbezeichnung
         '@ _:internalLink  = datensatz-versionsbezeichnung
@@ -782,12 +786,13 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
     <<recommended>> dct:modified ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Aktualisierungsdatum
         '@ _:internalLink  = distribution-aktualisierungsdatum
-        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime`
         '@ rdfs:comment    = Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation der Distribution.
         '@ rdf:about       = http://purl.org/dc/terms/modified
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_update_date
         '@ _:deOriginal    = Verbindlichkeit wurde von optional auf empfohlen hochgestuft.
         '@ sh:shapes       = dcatap:Distribution_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
+        '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
     <<recommended>> dct:license ~> dct:LicenseDocument [0..1]
         '@ rdfs:label      = Lizenz
         '@ _:internalLink  = distribution-lizenz
@@ -851,11 +856,12 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:label      = Veröffentlichungsdatum
         '@ _:internalLink  = distribution-veroffentlichungsdatum
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
-        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime`
         '@ rdfs:comment    = Diese Eigenschaft enthält das Datum der Herausgabe/Emission (z.B. in Form einer Veröffentlichung) der Distribution.
         '@ rdf:about       = http://purl.org/dc/terms/issued
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_release_date
         '@ sh:shapes       = dcatap:Distribution_Property_dct_issued (erlaubt auch xsd:gYear und xsd:gYearMonth)
+        '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
     <<optional>> dcat:downloadURL ~> rdfs:Resource [*]
         '@ rdfs:label      = Download-URL
         '@ _:internalLink  = distribution-download-url
@@ -983,6 +989,7 @@ class "dct:PeriodOfTime" <<recommended>> {
         '@ rdf:about       = http://www.w3.org/ns/dcat#startDate
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:period_start_date
         '@ sh:shapes       = dcatap:PeriodOfTime_Property_dcat_startDate
+        '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
     <<recommended>> dcat:endDate ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Endzeitpunkt
         '@ _:internalLink  = zeitraum-endzeitpunkt
@@ -992,6 +999,7 @@ class "dct:PeriodOfTime" <<recommended>> {
         '@ rdf:about       = http://www.w3.org/ns/dcat#endDate
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:period_end_date
         '@ sh:shapes       = dcatap:PeriodOfTime_Property_dcat_endDate
+        '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
 
     <<optional>> time:hasBeginning ~> time:Instant [0..1]
         '@ rdfs:label      = Anfang
@@ -1155,11 +1163,12 @@ class "dcat:CatalogRecord" <<optional>> {
     <<mandatory>> dct:modified ~> rdfs:Literal [1]
         '@ rdfs:label      = Aktualisierungsdatum
         '@ _:internalLink  = katalogeintrag-aktualisierungsdatum
-        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als  `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime`
         '@ rdfs:comment    = Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation des Katalogeintrags.
         '@ rdf:about       = http://purl.org/dc/terms/modified
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date
         '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
+        '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
 
     <<recommended>> dct:conformsTo ~> rdfs:Resource [*]
         '@ rdfs:label      = Application Profile der Metadaten
@@ -1183,11 +1192,12 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ rdfs:label      = Veröffentlichungsdatum
         '@ _:internalLink  = katalogeintrag-veroffentlichungsdatum
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
-        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:date` oder `xsd:dateTime`
+        '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime`
         '@ rdfs:comment    = Diese Eigenschaft enthält das Datum, an dem die Beschreibung der Ressource aufgenommen wurde.
         '@ rdf:about       = http://purl.org/dc/terms/issued
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:record_listing_date
         '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_issued (erlaubt auch xsd:gYear und xsd:gYearMonth)
+        '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
 
     <<optional>> dct:title ~> rdfs:Literal [*]
         '@ rdfs:label      = Titel
