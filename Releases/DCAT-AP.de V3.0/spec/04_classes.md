@@ -304,7 +304,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Typ des Datensatzes](#datensatz-typ) | `dct:type` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Optional</small> | `[*]` |
 | [Wurde erzeugt von](#datensatz-wurde-erzeugt-von) | `prov:wasGeneratedBy` | [`prov:Activity`](https://www.w3.org/TR/prov-o/#Activity) | <small>Optional</small> | `[*]` |
 | [Räumliche Auflösung in Meter](#datensatz-raumliche-auflosung-in-meter) | `dcat:spatialResolutionInMeters` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
-| [Zeitliche Auflösung](#datensatz-zeitliche-auflosung) | `dcat:temporalResolution` | [`rdfs:Literal`]([&#x60;rdfs:Literal&#x60;](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als [&#x60;xsd:duration&#x60;](https://www.w3.org/TR/xmlschema11-2/#duration)) | <small>Optional</small> | `[*]` |
+| [Zeitliche Auflösung](#datensatz-zeitliche-auflosung) | `dcat:temporalResolution` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
 | [Rollenzuordnung](#datensatz-rollenzuordnung) | `prov:qualifiedAttribution` | [`prov:Attribution`](https://www.w3.org/TR/prov-o/#Attribution) | <small>Optional</small> | `[*]` |
 | [Qualifizierte Beziehung](#datensatz-qualifizierte-beziehung) | `dcat:qualifiedRelation` | [`dcat:Relationship`](https://www.w3.org/TR/vocab-dcat-2/#Class:Relationship) | <small>Optional</small> | `[*]` |
 | [Wird Referenziert](#datensatz-wird-referenziert) | `dct:isReferencedBy` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` |
@@ -677,11 +677,12 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 ###  Datensatz: Zeitliche Auflösung {#datensatz-zeitliche-auflosung}
 > | *URI*                    | [`dcat:temporalResolution`](http://www.w3.org/ns/dcat#temporalResolution) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`rdfs:Literal`]([&#x60;rdfs:Literal&#x60;](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als [&#x60;xsd:duration&#x60;](https://www.w3.org/TR/xmlschema11-2/#duration)) |
+> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als [`xsd:duration`](https://www.w3.org/TR/xmlschema11-2/#duration) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf den kürzesten im Datensatz auflösbaren Zeitraum.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial_resolution  | 
+> | Änderungen zur Vorversion | 3.0: Errata: Anzeige des Wertebereichs korrigiert. | 
 
 <br>
 
