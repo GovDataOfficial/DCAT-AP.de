@@ -27,7 +27,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Rechtsgrundlage](#datensatz-rechtsgrundlage) (`dcatap:applicableLegislation`) | 3.0: Neu hinzugefügt. | 
 | [Rechtsgrundlage für die Zugangseröffnung (DEPRECATED)](#datensatz-rechtsgrundlage-zugangseroffnung) (`dcatde:legalBasis`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
 | [Grad der Zugänglichkeit](#datensatz-grad-zuganglichkeit) (`dct:accessRights`) | 3.0: Kontrolliertes Vokabular hinzugefügt. | 
-| [Typ des Datensatzes](#datensatz-typ) (`dct:type`) | 3.0: Kardinalität von `0..1` auf `*` geändert. | 
+| [Typ](#datensatz-typ) (`dct:type`) | 3.0: Kardinalität von `0..1` auf `*` geändert.<br>3.0: Namen vereinfacht.<br>3.0: Optionale Codeliste hinzugefügt. | 
 | [Zeitliche Auflösung](#datensatz-zeitliche-auflosung) (`dcat:temporalResolution`) | 3.0: Errata: Anzeige des Wertebereichs korrigiert. | 
 | [Weitere Version](#datensatz-weitere-version) (`dcat:hasVersion`) | 3.0: Neu hinzugefügt. | 
 | [Weitere Version (DEPRECATED)](#datensatz-weitere-version-deprecated) (`dct:hasVersion`) | 3.0: [DEPRECATED](#glossar-deprecated) | 

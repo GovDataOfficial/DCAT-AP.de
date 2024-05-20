@@ -154,6 +154,16 @@ Weitere Details und Beispiele finden Sie im [Konventionenhandbuch](https://www.d
 > | Beispiele                      | Europa: `<http://publications.europa.eu/resource/authority/continent/EUROPE>` <br> Finnland: `<http://publications.europa.eu/resource/authority/country/FIN>` <br> Würzburg: `<http://publications.europa.eu/resource/authority/place/DEU_WUE>` <br> Deutschland: `<http://sws.geonames.org/2921044/>` |
 
 
+## EU Vokabular "Dataset Type" {#kv-dataset-type}
+> | Betroffene Eigenschaften       | [`dct:type`](#datensatz-typ) |
+> |:-------------------------------|:-------------------------|
+> | Verbindlichkeit Vokabular      | Optional                 |
+> | Verwendung in Klassen          | [`dcat:Dataset`](#datensatz-typ) |
+> | Menschenlesbare Ansicht        | [EU Vocabularies: dataset-type](https://op.europa.eu/de/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/dataset-type) |
+> | Basis-URI                      | `http://publications.europa.eu/resource/authority/dataset-type/` |
+> | Beispiel                       | Statistische Daten: `<http://publications.europa.eu/resource/authority/dataset-type/STATISTICAL>` |
+
+
 ## EU Vokabular "Data Theme" {#kv-data-theme}
 > | Betroffene Eigenschaften       | [`dcat:theme`](#datensatz-kategorie) |
 > |:-------------------------------|:-------------------------|

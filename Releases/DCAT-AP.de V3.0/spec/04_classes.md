@@ -301,7 +301,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Provenienz](#datensatz-provenienz) | `dct:provenance` | [`dct:ProvenanceStatement`](http://purl.org/dc/terms/ProvenanceStatement) | <small>Optional</small> | `[*]` |
 | [Aktualisierungsfrequenz](#datensatz-aktualisierungsfrequenz) | `dct:accrualPeriodicity` | [`dct:Frequency`](http://purl.org/dc/terms/Frequency) | <small>Optional</small> | `[0..1]` |
 | [Qualitätssicherungsprozess](#datensatz-qualitatssicherungsprozess) | `dcatde:qualityProcessURI` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[0..1]` |
-| [Typ des Datensatzes](#datensatz-typ) | `dct:type` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Optional</small> | `[*]` |
+| [Typ](#datensatz-typ) | `dct:type` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Optional</small> | `[*]` |
 | [Wurde erzeugt von](#datensatz-wurde-erzeugt-von) | `prov:wasGeneratedBy` | [`prov:Activity`](https://www.w3.org/TR/prov-o/#Activity) | <small>Optional</small> | `[*]` |
 | [Räumliche Auflösung in Meter](#datensatz-raumliche-auflosung-in-meter) | `dcat:spatialResolutionInMeters` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
 | [Zeitliche Auflösung](#datensatz-zeitliche-auflosung) | `dcat:temporalResolution` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
@@ -640,7 +640,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Änderungen durch DCAT-AP.de | Von dcat-ap.de eingeführte Eigenschaft. | 
 <br>
 
-###  Datensatz: Typ des Datensatzes {#datensatz-typ}
+###  Datensatz: Typ {#datensatz-typ}
 > | *URI*                    | [`dct:type`](http://purl.org/dc/terms/type) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -648,7 +648,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf den Typ des Datensatzes. Es wurde noch kein kontrollierter Vokabular festgelegt. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-dataset-type) |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_type  | 
-> | Änderungen zur Vorversion | 3.0: Kardinalität von `0..1` auf `*` geändert. | 
+> | Änderungen zur Vorversion | 3.0: Kardinalität von `0..1` auf `*` geändert.<br>3.0: Namen vereinfacht.<br>3.0: Optionale Codeliste hinzugefügt. | 
 
 <br>
 
