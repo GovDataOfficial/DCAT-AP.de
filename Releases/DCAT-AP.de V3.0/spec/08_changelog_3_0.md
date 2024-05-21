@@ -44,6 +44,8 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
 | [Grad der Zugänglichkeit](#datenservice-grad-zuganglichkeit) (`dct:accessRights`) | 3.0: Kontrolliertes Vokabular hinzugefügt. | 
+| [Format](#datenservice-format) (`dct:format`) | 3.0: Eigenschaft aufgenommen. | 
+| [Herausgeber](#datenservice-herausgeber) (`dct:publisher`) | 3.0: Eigenschaft aufgenommen. | 
 
 
 ### Klasse: Distribution

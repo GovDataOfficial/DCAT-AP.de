@@ -356,7 +356,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = https://www.w3.org/TR/owl-ref/#versionInfo-def
         '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated)
         '@ sh:shapes       = dcatap:Dataset_Property_owl_versionInfo
-    <<optionale>> adms:versionNotes ~> rdfs:Literal [*]
+    <<optional>> adms:versionNotes ~> rdfs:Literal [*]
         '@ rdfs:label      = Versionserläuterung
         '@ _:internalLink  = datensatz-versionserlauterung
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -744,6 +744,15 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ _:vocabularyLink = #kv-access-right
         '@ adms:versionNotes = 3.0: Kontrolliertes Vokabular hinzugefügt.
         '@ sh:shapes       = dcatap:DataService_Property_dct_accessRights
+    <<optional>> dct:format ~> dct:MediaTypeOrExtent [*]
+        '@ rdfs:label      = Format
+        '@ _:internalLink  = datenservice-format
+        '@ rdfs:range      = http://purl.org/dc/terms/MediaTypeOrExtent
+        '@ rdfs:comment    = Die Datenformate, die beim Abruf der `dcat:endpointURL` zurückgegeben werden können.
+        '@ rdf:about       = http://purl.org/dc/terms/format
+        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_format
+        '@ _:vocabularyLink = #kv-file-type
+        '@ adms:versionNotes = 3.0: Eigenschaft aufgenommen.
 }
 '@ rdfs:label      = Datenservice
 '@ _:internalLink  = #klasse-datenservice
@@ -766,6 +775,15 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
     '@ rdf:about       = http://www.w3.org/ns/dcat#servesdataset
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_serves_dataset
     '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Dataset)
+"dcat:DataService" --> "0..1"  "foaf:Agent"   : <<recommended>> dct:publisher
+    '@ rdfs:label      = Herausgeber
+    '@ _:internalLink  = datenservice-herausgeber
+    '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
+    '@ rdfs:comment    = Diese Eigenschaft verweist auf die Stelle oder Person, die für Bereitstellung des Datenservices verantwortlich ist.
+    '@ rdf:about       = http://purl.org/dc/terms/publisher
+    '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_publisher
+    '@ _:deOriginal    = Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat.
+    '@ adms:versionNotes = 3.0: Eigenschaft aufgenommen.
 
 class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
     <<mandatory>> dcat:accessURL ~> rdfs:Resource [1..*]

@@ -898,10 +898,12 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Titel](#datenservice-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
 | [Beschreibung des Endpunktes](#datenservice-beschreibung-endpunkt) | `dcat:endpointDescription` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[*]` |
 | [Verfügbarkeit](#datenservice-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..1]` |
+| [Liefert Datensatz aus](#datenservice-liefert-datensatz-aus) | `dcat:servesDataset` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Empfohlen</small> | `[*]` |
+| [Herausgeber](#datenservice-herausgeber) | `dct:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Empfohlen</small> | `[0..1]` |
 | [Beschreibung](#datenservice-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
 | [Lizenz](#datenservice-lizenz) | `dct:license` | [`dct:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) | <small>Optional</small> | `[0..1]` |
 | [Grad der Zugänglichkeit](#datenservice-grad-zuganglichkeit) | `dct:accessRights` | [`dct:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` |
-| [Liefert Datensatz aus](#datenservice-liefert-datensatz-aus) | `dcat:servesDataset` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Empfohlen</small> | `[*]` |
+| [Format](#datenservice-format) | `dct:format` | [`dct:MediaTypeOrExtent`](http://purl.org/dc/terms/MediaTypeOrExtent) | <small>Optional</small> | `[*]` |
 
 
 <br> Die folgenden weiteren Eigenschaften wurden von der Superklasse [`dcat:Resource`](#klasse-ressource) geerbt, werden aber nicht genauer betrachtet: [`dct:modified`](#datensatz-aktualisierungsdatum), [`dct:creator`](#datensatz-autor), [`dct:publisher`](#datensatz-herausgeber), [`dct:identifier`](#datensatz-id), [`dcat:theme`](#datensatz-kategorie), [`dct:conformsTo`](#datensatz-konform-zu-standard), [`dcat:contactPoint`](#datensatz-kontakt), [`dcat:qualifiedRelation`](#datensatz-qualifizierte-beziehung), [`prov:qualifiedAttribution`](#datensatz-rollenzuordnung), [`dcat:keyword`](#datensatz-schlagwort), [`dct:language`](#datensatz-sprache), [`dct:type`](#datensatz-typ), [`dcat:landingPage`](#datensatz-ursprungliche-webseite), [`dct:issued`](#datensatz-veroffentlichungsdatum), [`dct:relation`](#datensatz-verwandte-ressource), [`dct:rights`](#distribution-grad-zuganglichkeit), [`odrl:hasPolicy`](#distribution-regelwerk) und [`dct:isReferencedBy`](#datensatz-wird-referenziert). Zusätzliche, durch die deutschen Erweiterung von [`dcat:Resource`](#klasse-ressource), geerbte Eigenschaften: [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter), [`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dct:contributor`](#datensatz-bearbeiter) und [`dct:references`](#datensatz-referenziert).
@@ -954,6 +956,29 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Änderungen durch DCAT-AP.de | DCAT-AP.de ordnet diese Eigenschaft allen DCAT-Ressourcen und Distributionen zu und empfiehlt sie für den `dcat:DataService`. | 
 <br>
 
+###  Datenservice: Liefert Datensatz aus {#datenservice-liefert-datensatz-aus}
+> | *URI*                    | [`dcat:servesDataset`](http://www.w3.org/ns/dcat#servesdataset) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) |
+> | Verbindlichkeit          | Empfohlen |
+> | Multiplizität            | `[*]`                    |
+> | Beschreibung             | Verweist auf einen Datensatz, der vom Datenservice ausgeliefert werden kann.  |
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_serves_dataset  | 
+
+<br>
+
+###  Datenservice: Herausgeber {#datenservice-herausgeber}
+> | *URI*                    | [`dct:publisher`](http://purl.org/dc/terms/publisher) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) |
+> | Verbindlichkeit          | Empfohlen |
+> | Multiplizität            | `[0..1]`                    |
+> | Beschreibung             | Diese Eigenschaft verweist auf die Stelle oder Person, die für Bereitstellung des Datenservices verantwortlich ist.  |
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_publisher  | 
+> | Änderungen zur Vorversion | 3.0: Eigenschaft aufgenommen. | 
+> | Änderungen durch DCAT-AP.de | Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat. | 
+<br>
+
 ###  Datenservice: Beschreibung {#datenservice-beschreibung}
 > | *URI*                    | [`dct:description`](http://purl.org/dc/terms/description) |
 > |:-------------------------|:-------------------------------------------|
@@ -988,14 +1013,15 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 <br>
 
-###  Datenservice: Liefert Datensatz aus {#datenservice-liefert-datensatz-aus}
-> | *URI*                    | [`dcat:servesDataset`](http://www.w3.org/ns/dcat#servesdataset) |
+###  Datenservice: Format {#datenservice-format}
+> | *URI*                    | [`dct:format`](http://purl.org/dc/terms/format) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) |
-> | Verbindlichkeit          | Empfohlen |
+> | Wertebereich             | [`dct:MediaTypeOrExtent`](http://purl.org/dc/terms/MediaTypeOrExtent) |
+> | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[*]`                    |
-> | Beschreibung             | Verweist auf einen Datensatz, der vom Datenservice ausgeliefert werden kann.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_serves_dataset  | 
+> | Beschreibung             | Die Datenformate, die beim Abruf der `dcat:endpointURL` zurückgegeben werden können. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-file-type) |
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_format  | 
+> | Änderungen zur Vorversion | 3.0: Eigenschaft aufgenommen. | 
 
 <br>
 
