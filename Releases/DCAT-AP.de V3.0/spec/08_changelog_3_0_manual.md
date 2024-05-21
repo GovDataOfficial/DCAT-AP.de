@@ -5,14 +5,14 @@ Die folgenden Eigenschaften sind in Version 2.0 als _deprecated_ gekennzeichnet 
 **dcat:Distribution**
  - [dcatde:plannedAvailability](https://www.dcat-ap.de/def/dcatde/2.0/spec/#distribution-verfugbarkeit-deprecated)
 
-**dct:PeriodOfTime**
+**dcterms:PeriodOfTime**
  - [schema:startDate](https://www.dcat-ap.de/def/dcatde/2.0/spec/#zeitraum-startzeitpunkt)
  - [schema:endDate](https://www.dcat-ap.de/def/dcatde/2.0/spec/#zeitraum-endzeitpunkt)
 
 **dcat:Dataset**
  - [dcat:granularity](https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-abgedeckte-zeitliche-granularitat-deprecated)
- - [dct:hasVersion](https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-weitere-version); bleibt als Eigenschaft zwar erhalten, wird aber nicht mehr für Collections verwendet.
- - [dct:type](https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-typ) (mit datasetTypes/collection); bleibt als Eigenschaft zwar erhalten, wird aber nicht mehr für Collections verwendet.
+ - [dcterms:hasVersion](https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-weitere-version); bleibt als Eigenschaft zwar erhalten, wird aber nicht mehr für Collections verwendet.
+ - [dcterms:type](https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-typ) (mit datasetTypes/collection); bleibt als Eigenschaft zwar erhalten, wird aber nicht mehr für Collections verwendet.
 
 **Codelisten**
 Die folgenden Codelisten sind in Version 2.0 als _deprecated_ gekennzeichnet gewesen und werden daher entfernt:
@@ -28,10 +28,14 @@ Die von GovData gepflegte [Liste der Algorithmen](#kv-hash-algorithms-deprecated
 
 ### Kontrolliertes Vokabular für Zugriffsrechte
 
-Das [EU Vokabular "Access Right"](#kv-access-right) wurde zum Standard hinzugefügt. Es wird für die Eigenschaft `dct:accessRights` in [dcat:Dataset](#datensatz-grad-zuganglichkeit) und [dcat:DataService](#datenservice-grad-zuganglichkeit) verwendet.
+Das [EU Vokabular "Access Right"](#kv-access-right) wurde zum Standard hinzugefügt. Es wird für die Eigenschaft `dcterms:accessRights` in [dcat:Dataset](#datensatz-grad-zuganglichkeit) und [dcat:DataService](#datenservice-grad-zuganglichkeit) verwendet.
 
 ### Kontrolliertes Vokabular für den Status einer Distribution
 
 Das [EU Vokabular "Distribution Status"](#kv-distribution-status) wurde zum Standard hinzugefügt. Es ersetzt für die Eigenschaft `adms:status` in [dcat:Distribution](#distribution-status) die nun als _deprecated_ gekennzeichnete [Liste aus der ADMS-Spezifikation](#kv-adms-status).
+
+### Namespaces
+
+Das Namespace-Prefix von DC Terms wurde von `dct` auf `dcterms` geändert.
 
 ---

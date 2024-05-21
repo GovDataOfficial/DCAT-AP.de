@@ -7,8 +7,8 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
-| [Veröffentlichungsdatum](#katalog-veroffentlichungsdatum) (`dct:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
-| [Aktualisierungsdatum](#katalog-aktualisierungsdatum) (`dct:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Veröffentlichungsdatum](#katalog-veroffentlichungsdatum) (`dcterms:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Aktualisierungsdatum](#katalog-aktualisierungsdatum) (`dcterms:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 
 
 ### Klasse: Datensatz
@@ -20,18 +20,18 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
-| [Veröffentlichungsdatum](#datensatz-veroffentlichungsdatum) (`dct:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
-| [Aktualisierungsdatum](#datensatz-aktualisierungsdatum) (`dct:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Veröffentlichungsdatum](#datensatz-veroffentlichungsdatum) (`dcterms:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Aktualisierungsdatum](#datensatz-aktualisierungsdatum) (`dcterms:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 | [Versionsbezeichnung](#datensatz-versionsbezeichnung) (`dcat:version`) | 3.0: Neu hinzugefügt. | 
 | [Versionsbezeichnung (DEPRECATED)](#datensatz-versionsbezeichnung-deprecated) (`owl:versionInfo`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
 | [Rechtsgrundlage](#datensatz-rechtsgrundlage) (`dcatap:applicableLegislation`) | 3.0: Neu hinzugefügt. | 
 | [Rechtsgrundlage für die Zugangseröffnung (DEPRECATED)](#datensatz-rechtsgrundlage-zugangseroffnung) (`dcatde:legalBasis`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
-| [Grad der Zugänglichkeit](#datensatz-grad-zuganglichkeit) (`dct:accessRights`) | 3.0: Kontrolliertes Vokabular hinzugefügt. | 
-| [Typ](#datensatz-typ) (`dct:type`) | 3.0: Kardinalität von `0..1` auf `*` geändert.<br>3.0: Namen vereinfacht.<br>3.0: Optionale Codeliste hinzugefügt. | 
+| [Grad der Zugänglichkeit](#datensatz-grad-zuganglichkeit) (`dcterms:accessRights`) | 3.0: Kontrolliertes Vokabular hinzugefügt. | 
+| [Typ](#datensatz-typ) (`dcterms:type`) | 3.0: Kardinalität von `0..1` auf `*` geändert.<br>3.0: Namen vereinfacht.<br>3.0: Optionale Codeliste hinzugefügt. | 
 | [Zeitliche Auflösung](#datensatz-zeitliche-auflosung) (`dcat:temporalResolution`) | 3.0: Errata: Anzeige des Wertebereichs korrigiert. | 
 | [Weitere Version](#datensatz-weitere-version) (`dcat:hasVersion`) | 3.0: Neu hinzugefügt. | 
-| [Weitere Version (DEPRECATED)](#datensatz-weitere-version-deprecated) (`dct:hasVersion`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
-| [Ist Version von (DEPRECATED)](#datensatz-ist-version) (`dct:isVersionOf`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
+| [Weitere Version (DEPRECATED)](#datensatz-weitere-version-deprecated) (`dcterms:hasVersion`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
+| [Ist Version von (DEPRECATED)](#datensatz-ist-version) (`dcterms:isVersionOf`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
 
 
 ### Klasse: Datenservice
@@ -43,9 +43,9 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
-| [Grad der Zugänglichkeit](#datenservice-grad-zuganglichkeit) (`dct:accessRights`) | 3.0: Kontrolliertes Vokabular hinzugefügt. | 
-| [Format](#datenservice-format) (`dct:format`) | 3.0: Eigenschaft aufgenommen. | 
-| [Herausgeber](#datenservice-herausgeber) (`dct:publisher`) | 3.0: Eigenschaft aufgenommen. | 
+| [Grad der Zugänglichkeit](#datenservice-grad-zuganglichkeit) (`dcterms:accessRights`) | 3.0: Kontrolliertes Vokabular hinzugefügt. | 
+| [Format](#datenservice-format) (`dcterms:format`) | 3.0: Eigenschaft aufgenommen. | 
+| [Herausgeber](#datenservice-herausgeber) (`dcterms:publisher`) | 3.0: Eigenschaft aufgenommen. | 
 
 
 ### Klasse: Distribution
@@ -57,10 +57,10 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
-| [Aktualisierungsdatum](#distribution-aktualisierungsdatum) (`dct:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
-| [Format](#distribution-format) (`dct:format`) | 3.0: Errata: Wertebereichs auf dct:MediaTypeOrExtent geändert. | 
+| [Aktualisierungsdatum](#distribution-aktualisierungsdatum) (`dcterms:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Format](#distribution-format) (`dcterms:format`) | 3.0: Errata: Wertebereichs auf dcterms:MediaTypeOrExtent geändert. | 
 | [Größe in Bytes](#distribution-grosse-in-bytes) (`dcat:byteSize`) | 3.0: Änderung der Range von xsd:decimal auf xsd:nonNegativeInteger. | 
-| [Veröffentlichungsdatum](#distribution-veroffentlichungsdatum) (`dct:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Veröffentlichungsdatum](#distribution-veroffentlichungsdatum) (`dcterms:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 | [Status](#distribution-status) (`adms:status`) | 3.0: Änderung des kontrollierten Vokabulars. | 
 | [Räumliche Auflösung in Meter](#distribution-raumliche-auflosung-in-meter) (`dcat:spatialResolutionInMeters`) | 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 
 | [Zeitliche Auflösung](#distribution-zeitliche-auflosung) (`dcat:temporalResolution`) | 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 
@@ -68,7 +68,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 ### Klasse: Zeitraum
 
-Auf Ebene der Klasse [Zeitraum](#klasse-zeitraum) (`dct:PeriodOfTime`) gibt es 
+Auf Ebene der Klasse [Zeitraum](#klasse-zeitraum) (`dcterms:PeriodOfTime`) gibt es 
 keine Änderungen zur Vorversion.
 
 Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
@@ -81,7 +81,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 ### Klasse: Standort
 
-Auf Ebene der Klasse [Standort](#klasse-standort) (`dct:Location`) gibt es 
+Auf Ebene der Klasse [Standort](#klasse-standort) (`dcterms:Location`) gibt es 
 keine Änderungen zur Vorversion.
 
 Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
@@ -114,15 +114,15 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
-| [Aktualisierungsdatum](#katalogeintrag-aktualisierungsdatum) (`dct:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
-| [Application Profile der Metadaten](#katalogeintrag-konform-zu) (`dct:conformsTo`) | 3.0: Kardinalität von `0..1` auf `*` geändert.<br>3.0: Errata: Anzeige des Wertebereichs korrigiert. | 
-| [Veröffentlichungsdatum](#katalogeintrag-veroffentlichungsdatum) (`dct:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Aktualisierungsdatum](#katalogeintrag-aktualisierungsdatum) (`dcterms:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Application Profile der Metadaten](#katalogeintrag-konform-zu) (`dcterms:conformsTo`) | 3.0: Kardinalität von `0..1` auf `*` geändert.<br>3.0: Errata: Anzeige des Wertebereichs korrigiert. | 
+| [Veröffentlichungsdatum](#katalogeintrag-veroffentlichungsdatum) (`dcterms:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 | [Katalogeintrag](#katalogeintrag-katalogeintrag) (`foaf:primaryTopic`) | 3.0: Aufnahme der Ressource `dcat:DatasetSeries` | 
 
 
 ### Klasse: Lizenzdokument
 
-Auf Ebene der Klasse [Lizenzdokument](#klasse-lizenzdokument) (`dct:LicenseDocument`) gibt es 
+Auf Ebene der Klasse [Lizenzdokument](#klasse-lizenzdokument) (`dcterms:LicenseDocument`) gibt es 
 folgende Änderungen zur Vorversion:
 
 > 3.0: Errata: Label korrigiert.

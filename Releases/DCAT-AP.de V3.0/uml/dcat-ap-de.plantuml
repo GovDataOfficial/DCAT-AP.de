@@ -12,7 +12,7 @@ skinparam BorderColor black
 skinparam linetype ortho
 
 class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
-    <<mandatory>> dct:title ~> rdfs:Literal [1..*]
+    <<mandatory>> dcterms:title ~> rdfs:Literal [1..*]
         '@ rdfs:label      = Titel
         '@ _:internalLink  = katalog-titel
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -21,7 +21,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://purl.org/dc/terms/title
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title
         '@ sh:shapes       = dcatap:Catalog_Property_dct_title
-    <<mandatory>> dct:description ~> rdfs:Literal [1..*]
+    <<mandatory>> dcterms:description ~> rdfs:Literal [1..*]
         '@ rdfs:label      = Beschreibung
         '@ _:internalLink  = katalog-beschreibung
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -31,7 +31,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_description
         '@ sh:shapes       = dcatap:Catalog_Property_dct_description 
 
-    <<recommended>> dct:issued ~> rdfs:Literal [0..1]
+    <<recommended>> dcterms:issued ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Veröffentlichungsdatum
         '@ _:internalLink  = katalog-veroffentlichungsdatum
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -41,7 +41,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_release_date
         '@ sh:shapes       = dcatap:Catalog_Property_dct_issued (erlaubt auch xsd:gYear und xsd:gYearMonth)
         '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
-    <<recommended>> dct:modified ~> rdfs:Literal [0..1]
+    <<recommended>> dcterms:modified ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Aktualisierungsdatum
         '@ _:internalLink  = katalog-aktualisierungsdatum
         '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime`
@@ -50,7 +50,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date
         '@ sh:shapes       = dcatap:Catalog_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
         '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
-    <<recommended>> dct:language ~> dct:LinguisticSystem [*]
+    <<recommended>> dcterms:language ~> dcterms:LinguisticSystem [*]
         '@ rdfs:label      = Sprache
         '@ _:internalLink  = katalog-sprache
         '@ rdfs:range      = http://purl.org/dc/terms/LinguisticSystem
@@ -68,7 +68,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://xmlns.com/foaf/0.1/homepage
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_homepage
         '@ sh:shapes       = dcatap:Catalog_Property_foaf_homepage, ___TBD___(kein Test, ob Ziel eine Ressource)
-    <<recommended>> dct:license ~> dct:LicenseDocument [0..1]
+    <<recommended>> dcterms:license ~> dcterms:LicenseDocument [0..1]
         '@ rdfs:label      = Lizenz
         '@ _:internalLink  = katalog-lizenz
         '@ rdfs:range      = http://purl.org/dc/terms/LicenseDocument
@@ -96,7 +96,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ _:deOriginal    = DCAT-AP.de ordnet diese Eigenschaft allen DCAT-Ressourcen und Distributionen zu.
         '@ sh:shapes       = ___TBD___(deutsche Besonderheit, kein Test des Vokabulars, Maximalzahl 1)
 
-    <<optional>> dct:rights ~> dct:RightsStatement [0..1]
+    <<optional>> dcterms:rights ~> dcterms:RightsStatement [0..1]
         '@ rdfs:label      = Nutzungsbestimmungen
         '@ _:internalLink  = katalog-nutzungsbestimmungen
         '@ rdfs:range      = http://purl.org/dc/terms/RightsStatement
@@ -118,7 +118,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
 '@ rdf:about       = http://www.w3.org/ns/dcat#Catalog
 '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Class:Catalog
 '@ rdfs:comment    = Eine Sammlung oder Quelle, welche die beschriebenen Datensätze, Datenservices oder Kataloge zur Verfügung stellt.
-'@ _:usedBy        = dcat:catalog, dct:hasPart, dct:isPartOf (dcat:Catalog)
+'@ _:usedBy        = dcat:catalog, dcterms:hasPart, dcterms:isPartOf (dcat:Catalog)
 '@ rdfs:subClassOf = dcat:Dataset
 '@ _:resourceHeirloom = [`odrl:hasPolicy`](#distribution-regelwerk).
 
@@ -131,7 +131,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_service
     '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Catalog)
 
-"dcat:Catalog" --> "*" "dct:Location"     : <<recommended>> dct:spatial
+"dcat:Catalog" --> "*" "dcterms:Location"     : <<recommended>> dcterms:spatial
     '@ rdfs:label      = Räumliche Abdeckung
     '@ _:internalLink  = katalog-raumliche-abdeckung
     '@ rdfs:range      = http://purl.org/dc/terms/Location
@@ -139,9 +139,9 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdf:about       = http://purl.org/dc/terms/spatial
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial
     '@ _:vocabularyLink = #kv-spatial
-    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars, schwierig hier, kein Test, ob Ziel dct:Location)
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars, schwierig hier, kein Test, ob Ziel dcterms:Location)
 
-"dcat:Catalog" --> "*"     "dcat:Catalog"       : <<optional>> dct:hasPart
+"dcat:Catalog" --> "*"     "dcat:Catalog"       : <<optional>> dcterms:hasPart
     '@ rdfs:label      = Hat Teilkatalog
     '@ _:internalLink  = katalog-hat-teilkatalog
     '@ rdfs:range      = http://www.w3.org/ns/dcat#Catalog
@@ -151,7 +151,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_has_part
     '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Catalog)
 
-"dcat:Catalog" --> "0..1"  "dcat:Catalog"       : <<optional>> dct:isPartOf
+"dcat:Catalog" --> "0..1"  "dcat:Catalog"       : <<optional>> dcterms:isPartOf
     '@ rdfs:label      = Ist Teilkatalog
     '@ _:internalLink  = katalog-ist-teilkatalog
     '@ rdfs:range      = http://www.w3.org/ns/dcat#Catalog
@@ -180,7 +180,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_dataset
     '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test auf Mindestzahl, lohnt es sich, das wider besseren Wissens zu erzwingen?)
 
-"dcat:Catalog" --> "1"     "foaf:Agent"         : <<mandatory>> dct:publisher
+"dcat:Catalog" --> "1"     "foaf:Agent"         : <<mandatory>> dcterms:publisher
     '@ rdfs:label      = Herausgeber
     '@ _:internalLink  = katalog-herausgeber
     '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
@@ -191,7 +191,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_publisher
     '@ sh:shapes       = dcatap:Catalog_Property_dct_publisher, ___TBD___(kein Test, ob Ziel ein foaf:Agent)
 
-"dcat:Catalog" --> "*"     "foaf:Agent"         : <<optional>> dct:creator
+"dcat:Catalog" --> "*"     "foaf:Agent"         : <<optional>> dcterms:creator
     '@ rdfs:label      = Autor
     '@ _:internalLink  = katalog-autor
     '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
@@ -202,7 +202,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ sh:shapes       =  ___TBD___(Shape ohne Regeln
 
 class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC { 
-    <<mandatory>> dct:title ~> rdfs:Literal [1..*]
+    <<mandatory>> dcterms:title ~> rdfs:Literal [1..*]
         '@ rdfs:label      = Titel
         '@ _:internalLink  = datensatz-titel
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -212,7 +212,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://purl.org/dc/terms/title
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title
         '@ sh:shapes       = dcatap:Dataset_Property_dct_title
-    <<mandatory>> dct:description ~> rdfs:Literal [1..*]
+    <<mandatory>> dcterms:description ~> rdfs:Literal [1..*]
         '@ rdfs:label      = Beschreibung
         '@ _:internalLink  = datensatz-beschreibung
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -300,7 +300,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://dcat-ap.de/def/dcatde/geocodingDescription
         '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft. Beispiele: "Gemeinden des Wasserzweckverbands Straubing-Land" oder "Verband Region Rhein-Neckar".
         '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
-    <<optional>> dct:identifier ~> rdfs:Literal [*]
+    <<optional>> dcterms:identifier ~> rdfs:Literal [*]
         '@ rdfs:label      = ID
         '@ _:internalLink  = datensatz-id
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -318,7 +318,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://purl.org/dc/terms/identifier
         '@ rdfs:seeAlso    = [Beschreibung der Klasse bei DCAT-AP.de](#klasse-identifikator)
         '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein adms:Identifier)
-    <<optional>> dct:issued ~> rdfs:Literal [0..1]
+    <<optional>> dcterms:issued ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Veröffentlichungsdatum
         '@ _:internalLink  = datensatz-veroffentlichungsdatum
         '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime`
@@ -327,7 +327,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_release_date
         '@ sh:shapes       = dcatap:Dataset_Property_dct_issued (erlaubt auch xsd:gYear und xsd:gYearMonth)
         '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
-    <<optional>> dct:modified ~> rdfs:Literal [0..1]
+    <<optional>> dcterms:modified ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Aktualisierungsdatum
         '@ _:internalLink  = datensatz-aktualisierungsdatum
         '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime`
@@ -386,7 +386,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ _:deOriginal    = Beispiele: Public Sector Information Directive (PSI-Direktive), Umweltinformationsgesetz (UIG), deutsche Informationsfreiheits- (IFG) und Transparenzgesetze.
         '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated)
         '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
-    <<optional>> dct:relation ~> rdfs:Resource [*]
+    <<optional>> dcterms:relation ~> rdfs:Resource [*]
         '@ rdfs:label      = Verwandte Ressource
         '@ _:internalLink  = datensatz-verwandte-ressource
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
@@ -412,7 +412,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://xmlns.com/foaf/0.1/page
         '@ rdfs:seeAlso    = http://xmlns.com/foaf/spec/#term_page
         '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource)
-    <<optional>> dct:language ~> dct:LinguisticSystem [*]
+    <<optional>> dcterms:language ~> dcterms:LinguisticSystem [*]
         '@ rdfs:label      = Sprache
         '@ _:internalLink  = datensatz-sprache
         '@ rdfs:range      = http://purl.org/dc/terms/LinguisticSystem
@@ -422,7 +422,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_language
         '@ _:vocabularyLink = #kv-languages
         '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars)
-    <<optional>> dct:conformsTo ~> dct:Standard [*]
+    <<optional>> dcterms:conformsTo ~> dcterms:Standard [*]
         '@ rdfs:label        = Konform zu Standard
         '@ _:internalLink    = datensatz-konform-zu-standard
         '@ rdfs:range        = http://purl.org/dc/terms/Standard
@@ -430,7 +430,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about         = http://purl.org/dc/terms/conformsTo
         '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_conforms_to
         '@ sh:shapes         = ___TBD___(Shape ohne Regeln)
-    <<optional>> dct:accessRights ~> dct:RightsStatement [0..1]
+    <<optional>> dcterms:accessRights ~> dcterms:RightsStatement [0..1]
         '@ rdfs:label      = Grad der Zugänglichkeit
         '@ _:internalLink  = datensatz-grad-zuganglichkeit
         '@ rdfs:range      = http://purl.org/dc/terms/RightsStatement
@@ -440,7 +440,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ _:vocabularyLink = #kv-access-right
         '@ adms:versionNotes = 3.0: Kontrolliertes Vokabular hinzugefügt.
         '@ sh:shapes       = dcatap:Dataset_Property_dct_accessRights, ___TBD___(kein Test, ob Ziel eine Ressource ist?)
-    <<optional>> dct:provenance ~> dct:ProvenanceStatement [*]
+    <<optional>> dcterms:provenance ~> dcterms:ProvenanceStatement [*]
         '@ rdfs:label      = Provenienz
         '@ _:internalLink  = datensatz-provenienz
         '@ rdfs:range      = http://purl.org/dc/terms/ProvenanceStatement
@@ -448,7 +448,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://purl.org/dc/terms/provenance
         '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/provenance
         '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein ProvenanceStatement?)
-    <<optional>> dct:accrualPeriodicity ~> dct:Frequency [0..1]
+    <<optional>> dcterms:accrualPeriodicity ~> dcterms:Frequency [0..1]
         '@ rdfs:label      = Aktualisierungsfrequenz
         '@ _:internalLink  = datensatz-aktualisierungsfrequenz
         '@ rdfs:range      = http://purl.org/dc/terms/Frequency
@@ -466,7 +466,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://dcat-ap.de/def/dcatde/qualityProcessURI
         '@ _:deOriginal    = Von dcat-ap.de eingeführte Eigenschaft.
         '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
-    <<optional>> dct:type ~> skos:Concept [*]
+    <<optional>> dcterms:type ~> skos:Concept [*]
         '@ rdfs:label        = Typ
         '@ _:internalLink    = datensatz-typ
         '@ rdfs:range        = http://www.w3.org/2004/02/skos/core#Concept
@@ -523,7 +523,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://www.w3.org/ns/dcat#qualifiedRelation
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_qualified_relation
         '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine dcat:Relation)
-    <<optional>> dct:isReferencedBy ~> rdfs:Resource [*]
+    <<optional>> dcterms:isReferencedBy ~> rdfs:Resource [*]
         '@ rdfs:label        = Wird Referenziert
         '@ _:internalLink    = datensatz-wird-referenziert
         '@ rdfs:range        = http://www.w3.org/2000/01/rdf-schema#Resource
@@ -531,7 +531,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about         = http://purl.org/dc/terms/isReferencedBy
         '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_is_referenced_by
         '@ sh:shapes         = dcatap:Dataset_Property_dc_isReferencedBy (erlaubt auch BlankNodes)
-    <<optional>> dct:references ~> rdfs:Resource [*]
+    <<optional>> dcterms:references ~> rdfs:Resource [*]
         '@ rdfs:label        = Referenziert
         '@ _:internalLink    = datensatz-referenziert
         '@ rdfs:range        = http://www.w3.org/2000/01/rdf-schema#Resource
@@ -546,11 +546,11 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
 '@ rdf:about       = http://www.w3.org/ns/dcat#Dataset
 '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset
 '@ rdfs:comment    = Eine logische Entität, welche die veröffentlichten Informationen repräsentiert.
-'@ _:usedBy        = dcat:dataset (dcat:Catalog), dct:hasVersion, dct:isVersionOf, dct:source, (dcat:Dataset), dcat:servesDataset (dcat:DataService), foaf:primaryTopic (dcat:CatalogRecord)
-'@ _:resourceHeirloom = [`dct:license`](#distribution-lizenz), [`dct:rights`](#distribution-grad-zuganglichkeit) und [`odrl:hasPolicy`](#distribution-regelwerk).
+'@ _:usedBy        = dcat:dataset (dcat:Catalog), dcterms:hasVersion, dcterms:isVersionOf, dcterms:source, (dcat:Dataset), dcat:servesDataset (dcat:DataService), foaf:primaryTopic (dcat:CatalogRecord)
+'@ _:resourceHeirloom = [`dcterms:license`](#distribution-lizenz), [`dcterms:rights`](#distribution-grad-zuganglichkeit) und [`odrl:hasPolicy`](#distribution-regelwerk).
 '@ rdfs:subClassOf = dcat:Resource
 
-"dcat:Dataset" --> "*" "dct:Location"     : <<recommended>> dct:spatial
+"dcat:Dataset" --> "*" "dcterms:Location"     : <<recommended>> dcterms:spatial
     '@ rdfs:label        = Räumliche Abdeckung
     '@ _:internalLink    = datensatz-raumliche-abdeckung
     '@ rdfs:range        = http://purl.org/dc/terms/Location
@@ -560,18 +560,18 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdf:about         = http://purl.org/dc/terms/spatial
     '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial
     '@ _:vocabularyLink  = #kv-spatial
-    '@ sh:shapes         = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars, schwierig hier, kein Test, ob Ziel dct:Location)
+    '@ sh:shapes         = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars, schwierig hier, kein Test, ob Ziel dcterms:Location)
 
-"dcat:Dataset" --> "*" "dct:PeriodOfTime" : <<recommended>> dct:temporal
+"dcat:Dataset" --> "*" "dcterms:PeriodOfTime" : <<recommended>> dcterms:temporal
     '@ rdfs:label        = Zeitliche Abdeckung
     '@ _:internalLink    = datensatz-zeitliche-abdeckung
     '@ rdfs:range        = http://purl.org/dc/terms/PeriodOfTime
     '@ rdfs:comment      = Ein Zeitintervall, welches durch Start- und Endzeitpunkt bezeichnet bzw. definiert ist.
     '@ rdf:about         = http://purl.org/dc/terms/temporal
     '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_temporal
-    '@ sh:shapes         = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine dct:PeriodOfTime)
+    '@ sh:shapes         = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine dcterms:PeriodOfTime)
 
-"dcat:Dataset" -up-> "*"     "dcat:Dataset"       : <<optional>> dct:source
+"dcat:Dataset" -up-> "*"     "dcat:Dataset"       : <<optional>> dcterms:source
     '@ rdfs:label      = Quelle des Datensatzes
     '@ _:internalLink  = datensatz-quelle
     '@ rdfs:range      = http://www.w3.org/ns/dcat#Dataset
@@ -590,7 +590,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-3/#Property:resource_has_version
     '@ rdfs:seeAlso    = https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.hasversion
     '@ adms:versionNotes = 3.0: Neu hinzugefügt.
-"dcat:Dataset" -up-> "*"     "dcat:Dataset"       : <<optional>> dct:hasVersion
+"dcat:Dataset" -up-> "*"     "dcat:Dataset"       : <<optional>> dcterms:hasVersion
     '@ rdfs:label      = Weitere Version (DEPRECATED)
     '@ _:internalLink  = datensatz-weitere-version-deprecated
     '@ rdfs:range      = http://www.w3.org/ns/dcat#Dataset
@@ -600,7 +600,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated)
     '@ sh:shapes       = ___TBD___(kein Test, ob Ziel ein dcat:Dataset)
 
-"dcat:Dataset" -up-> "*"     "dcat:Dataset"       : <<optional>> dct:isVersionOf
+"dcat:Dataset" -up-> "*"     "dcat:Dataset"       : <<optional>> dcterms:isVersionOf
     '@ rdfs:label      = Ist Version von (DEPRECATED)
     '@ _:internalLink  = datensatz-ist-version
     '@ rdfs:range      = http://www.w3.org/ns/dcat#Dataset
@@ -628,7 +628,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-adms/#adms-sample
     '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine dcat:Distribution)
 
-"dcat:Dataset" --> "0..1"  "foaf:Agent"         : <<recommended>> dct:publisher
+"dcat:Dataset" --> "0..1"  "foaf:Agent"         : <<recommended>> dcterms:publisher
     '@ rdfs:label      = Herausgeber
     '@ _:internalLink  = datensatz-herausgeber
     '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
@@ -639,7 +639,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ _:deOriginal    = Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat.
     '@ sh:shapes       = dcatap:Dataset_Property_dct_publisher (kein Test, ob Ziel ein foaf:Agent)
 
-"dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> dct:creator
+"dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> dcterms:creator
     '@ rdfs:label      = Autor
     '@ _:internalLink  = datensatz-autor
     '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
@@ -650,7 +650,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
     '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel foaf:Agent)
 
-"dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> dct:contributor
+"dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> dcterms:contributor
     '@ rdfs:label      = Bearbeiter
     '@ _:internalLink  = datensatz-bearbeiter
     '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
@@ -691,7 +691,7 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ rdf:about       = http://www.w3.org/ns/dcat#endpointURL
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_endpoint_url
         '@ sh:shapes       = dcatap:DataService_Property_dcat_endpointURL (erlaubt auch BlankNodes)
-    <<mandatory>> dct:title ~> rdfs:Literal [1..*]
+    <<mandatory>> dcterms:title ~> rdfs:Literal [1..*]
         '@ rdfs:label      = Titel
         '@ _:internalLink  = datenservice-titel
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -718,7 +718,7 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ _:deOriginal    = DCAT-AP.de ordnet diese Eigenschaft allen DCAT-Ressourcen und Distributionen zu und empfiehlt sie für den `dcat:DataService`.
         '@ sh:shapes       = ___TBD___(deutsche Besonderheit, kein Test des Vokabulars, Maximalzahl 1)
 
-    <<optional>> dct:description ~> rdfs:Literal [*]
+    <<optional>> dcterms:description ~> rdfs:Literal [*]
         '@ _:internalLink  = datenservice-beschreibung
         '@ rdfs:label      = Beschreibung
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -726,7 +726,7 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ rdf:about       = http://purl.org/dc/terms/description
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_description
         '@ sh:shapes       = dcatap:DataService_Property_dct_description
-    <<optional>> dct:license ~> dct:LicenseDocument [0..1]
+    <<optional>> dcterms:license ~> dcterms:LicenseDocument [0..1]
         '@ rdfs:label      = Lizenz
         '@ _:internalLink  = datenservice-lizenz
         '@ rdfs:range      = http://purl.org/dc/terms/LicenseDocument
@@ -734,7 +734,7 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ rdf:about       = http://purl.org/dc/terms/license
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_license
         '@ sh:shapes       = dcatap:DataService_Property_dct_license, ___TBD___(kein Test des Vokabulars)
-    <<optional>> dct:accessRights ~> dct:RightsStatement [0..1]
+    <<optional>> dcterms:accessRights ~> dcterms:RightsStatement [0..1]
         '@ rdfs:label      = Grad der Zugänglichkeit
         '@ _:internalLink  = datenservice-grad-zuganglichkeit
         '@ rdfs:range      = http://purl.org/dc/terms/RightsStatement
@@ -744,7 +744,7 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ _:vocabularyLink = #kv-access-right
         '@ adms:versionNotes = 3.0: Kontrolliertes Vokabular hinzugefügt.
         '@ sh:shapes       = dcatap:DataService_Property_dct_accessRights
-    <<optional>> dct:format ~> dct:MediaTypeOrExtent [*]
+    <<optional>> dcterms:format ~> dcterms:MediaTypeOrExtent [*]
         '@ rdfs:label      = Format
         '@ _:internalLink  = datenservice-format
         '@ rdfs:range      = http://purl.org/dc/terms/MediaTypeOrExtent
@@ -760,12 +760,12 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
 '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Class:Data_Service
 '@ rdfs:comment    = Ein Datenservice ermöglicht den Zugang zu einem oder mehreren Datensätzen oder stellt Datenverarbeitungsverfahren zur Verfügung.
 '@ rdfs:comment    = **Verwendungshinweis:** DCAT-AP.de empfiehlt zusätzlich die folgenden Eigenschaften zu verwenden, um den Datenservice genauer zu beschreiben: 
-'@ rdfs:comment    = [`dct:spatial`](#datensatz-raumliche-abdeckung), [`dct:temporal`](#datensatz-zeitliche-abdeckung), [`dcat:spatialResolutionInMeters`](#datensatz-raumliche-auflosung-in-meter), [`dcat:temporalResolution`](#datensatz-zeitliche-auflosung), [`dct:accrualPeriodicity`](#datensatz-aktualisierungsfrequenz) und [`prov:wasGeneratedBy`](#datensatz-wurde-erzeugt-von).
+'@ rdfs:comment    = [`dcterms:spatial`](#datensatz-raumliche-abdeckung), [`dcterms:temporal`](#datensatz-zeitliche-abdeckung), [`dcat:spatialResolutionInMeters`](#datensatz-raumliche-auflosung-in-meter), [`dcat:temporalResolution`](#datensatz-zeitliche-auflosung), [`dcterms:accrualPeriodicity`](#datensatz-aktualisierungsfrequenz) und [`prov:wasGeneratedBy`](#datensatz-wurde-erzeugt-von).
 '@ rdfs:comment    = Diese Änderungen werden zur Zeit auf Ebene des W3Cs diskutiert und das weitere Vorgehen von der Entscheidung des W3C und von DCAT-AP abhängig gemacht.
 '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#modellierung-eines-datenservices) genauer beschrieben.
 '@ _:usedBy        = dcat:service (dcat:Catalog), dcat:accessService (dcat:Distribution), foaf:primaryTopic (dcat:CatalogRecord)
 '@ rdfs:subClassOf = dcat:Resource  
-'@ _:resourceHeirloom = [`dct:modified`](#datensatz-aktualisierungsdatum), [`dct:creator`](#datensatz-autor), [`dct:publisher`](#datensatz-herausgeber), [`dct:identifier`](#datensatz-id), [`dcat:theme`](#datensatz-kategorie), [`dct:conformsTo`](#datensatz-konform-zu-standard), [`dcat:contactPoint`](#datensatz-kontakt), [`dcat:qualifiedRelation`](#datensatz-qualifizierte-beziehung), [`prov:qualifiedAttribution`](#datensatz-rollenzuordnung), [`dcat:keyword`](#datensatz-schlagwort), [`dct:language`](#datensatz-sprache), [`dct:type`](#datensatz-typ), [`dcat:landingPage`](#datensatz-ursprungliche-webseite), [`dct:issued`](#datensatz-veroffentlichungsdatum), [`dct:relation`](#datensatz-verwandte-ressource), [`dct:rights`](#distribution-grad-zuganglichkeit), [`odrl:hasPolicy`](#distribution-regelwerk) und [`dct:isReferencedBy`](#datensatz-wird-referenziert). Zusätzliche, durch die deutschen Erweiterung von [`dcat:Resource`](#klasse-ressource), geerbte Eigenschaften: [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter), [`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dct:contributor`](#datensatz-bearbeiter) und [`dct:references`](#datensatz-referenziert).
+'@ _:resourceHeirloom = [`dcterms:modified`](#datensatz-aktualisierungsdatum), [`dcterms:creator`](#datensatz-autor), [`dcterms:publisher`](#datensatz-herausgeber), [`dcterms:identifier`](#datensatz-id), [`dcat:theme`](#datensatz-kategorie), [`dcterms:conformsTo`](#datensatz-konform-zu-standard), [`dcat:contactPoint`](#datensatz-kontakt), [`dcat:qualifiedRelation`](#datensatz-qualifizierte-beziehung), [`prov:qualifiedAttribution`](#datensatz-rollenzuordnung), [`dcat:keyword`](#datensatz-schlagwort), [`dcterms:language`](#datensatz-sprache), [`dcterms:type`](#datensatz-typ), [`dcat:landingPage`](#datensatz-ursprungliche-webseite), [`dcterms:issued`](#datensatz-veroffentlichungsdatum), [`dcterms:relation`](#datensatz-verwandte-ressource), [`dcterms:rights`](#distribution-grad-zuganglichkeit), [`odrl:hasPolicy`](#distribution-regelwerk) und [`dcterms:isReferencedBy`](#datensatz-wird-referenziert). Zusätzliche, durch die deutschen Erweiterung von [`dcat:Resource`](#klasse-ressource), geerbte Eigenschaften: [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter), [`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcterms:contributor`](#datensatz-bearbeiter) und [`dcterms:references`](#datensatz-referenziert).
 
 "dcat:DataService" --> "*" "dcat:Dataset"     : <<recommended>> dcat:servesDataset
     '@ rdfs:label      = Liefert Datensatz aus
@@ -775,7 +775,7 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
     '@ rdf:about       = http://www.w3.org/ns/dcat#servesdataset
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_serves_dataset
     '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Dataset)
-"dcat:DataService" --> "0..1"  "foaf:Agent"   : <<recommended>> dct:publisher
+"dcat:DataService" --> "0..1"  "foaf:Agent"   : <<recommended>> dcterms:publisher
     '@ rdfs:label      = Herausgeber
     '@ _:internalLink  = datenservice-herausgeber
     '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
@@ -796,7 +796,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_url
         '@ sh:shapes       = dcatap:Distribution_Property_dcat_accessURL (erlaubt auch BlankNodes)
 
-    <<recommended>> dct:title ~> rdfs:Literal [*]
+    <<recommended>> dcterms:title ~> rdfs:Literal [*]
         '@ rdfs:label      = Titel
         '@ _:internalLink  = distribution-titel
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -805,7 +805,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_title
         '@ _:deOriginal    = Verbindlichkeit wurde von optional auf empfohlen hochgestuft.
         '@ sh:shapes       = dcatap:Distribution_Property_dct_title
-    <<recommended>> dct:modified ~> rdfs:Literal [0..1]
+    <<recommended>> dcterms:modified ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Aktualisierungsdatum
         '@ _:internalLink  = distribution-aktualisierungsdatum
         '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime`
@@ -815,7 +815,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ _:deOriginal    = Verbindlichkeit wurde von optional auf empfohlen hochgestuft.
         '@ sh:shapes       = dcatap:Distribution_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
         '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
-    <<recommended>> dct:license ~> dct:LicenseDocument [0..1]
+    <<recommended>> dcterms:license ~> dcterms:LicenseDocument [0..1]
         '@ rdfs:label      = Lizenz
         '@ _:internalLink  = distribution-lizenz
         '@ rdfs:range      = http://purl.org/dc/terms/LicenseDocument
@@ -824,7 +824,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_license
         '@ _:vocabularyLink = #kv-licenses
         '@ sh:shapes       = dcatap:Distribution_Property_dct_license, ___TBD___(kein Test des Vokabulars)
-    <<recommended>> dct:format ~> dct:MediaTypeOrExtent [0..1]
+    <<recommended>> dcterms:format ~> dcterms:MediaTypeOrExtent [0..1]
         '@ rdfs:label      = Format
         '@ _:internalLink  = distribution-format
         '@ rdfs:range      = http://purl.org/dc/terms/MediaTypeOrExtent
@@ -834,7 +834,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_format
         '@ _:vocabularyLink = #kv-file-type
         '@ sh:shapes       = dcatap:Distribution_Property_dct_format, ___TBD___(kein Test des Vokabulars)
-        '@ adms:versionNotes = 3.0: Errata: Wertebereichs auf dct:MediaTypeOrExtent geändert.
+        '@ adms:versionNotes = 3.0: Errata: Wertebereichs auf dcterms:MediaTypeOrExtent geändert.
     <<recommended>> dcatap:availability ~> skos:Concept [0..1]
         '@ rdfs:label      = Verfügbarkeit
         '@ _:internalLink  = distribution-verfugbarkeit
@@ -855,7 +855,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdf:about       = http://dcat-ap.de/def/dcatde/licenseAttributionByText
         '@ _:deOriginal    = Hilfskonstrukt bis zur Lösung in DCAT-AP.
         '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test, ob Ziel Literal)
-    <<optional>> dct:description ~> rdfs:Literal [*]
+    <<optional>> dcterms:description ~> rdfs:Literal [*]
         '@ rdfs:label      = Beschreibung
         '@ _:internalLink  = distribution-beschreibung
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -875,7 +875,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_size
         '@ adms:versionNotes = 3.0: Änderung der Range von xsd:decimal auf xsd:nonNegativeInteger.
         '@ sh:shapes       = dcatap:Distribution_Property_dcat_byteSize
-    <<optional>> dct:issued ~> rdfs:Literal [0..1]
+    <<optional>> dcterms:issued ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Veröffentlichungsdatum
         '@ _:internalLink  = distribution-veroffentlichungsdatum
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -894,7 +894,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdf:about       = http://www.w3.org/ns/dcat#downloadURL
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_download_url
         '@ sh:shapes       = dcatap:Distribution_Property_dcat_downloadURL (erlaubt auch BlankNodes)
-    <<optional>> dct:language ~> dct:LinguisticSystem [*]
+    <<optional>> dcterms:language ~> dcterms:LinguisticSystem [*]
         '@ rdfs:label      = Sprache
         '@ _:internalLink  = distribution-sprache
         '@ rdfs:range      = http://purl.org/dc/terms/LinguisticSystem
@@ -912,7 +912,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdf:about       = http://xmlns.com/foaf/0.1/page
         '@ rdfs:seeAlso    = http://xmlns.com/foaf/spec/#term_page
         '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource)
-    <<optional>> dct:rights ~> dct:RightsStatement [0..1]
+    <<optional>> dcterms:rights ~> dcterms:RightsStatement [0..1]
         '@ rdfs:label      = Grad der Zugänglichkeit
         '@ _:internalLink  = distribution-grad-zuganglichkeit
         '@ rdfs:range      = http://purl.org/dc/terms/RightsStatement
@@ -920,7 +920,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdf:about       = http://purl.org/dc/terms/accessRights
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_rights
         '@ sh:shapes       = dcatap:Distribution_Property_dct_rights, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
-    <<optional>> dct:conformsTo ~> dct:Standard [*]
+    <<optional>> dcterms:conformsTo ~> dcterms:Standard [*]
         '@ rdfs:label      = Konform zu Standard
         '@ _:internalLink  = distribution-konform-zu-standard
         '@ rdfs:range      = http://purl.org/dc/terms/Standard
@@ -929,7 +929,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdf:about       = http://purl.org/dc/terms/conformsTo
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_conforms_to
         '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource oder BlankNode)
-    <<optional>> dcat:mediaType ~> dct:MediaType [0..1]
+    <<optional>> dcat:mediaType ~> dcterms:MediaType [0..1]
         '@ rdfs:label      = Medientyp
         '@ _:internalLink  = distribution-medientyp
         '@ rdfs:range      = http://purl.org/dc/terms/MediaType
@@ -939,7 +939,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_media_type
         '@ _:vocabularyLink = #kv-iana-media-types
         '@ sh:shapes       = dcatap:Distribution_Property_dcat_mediaType, ___TBD___(kein Test des Vokabulars)
-    <<optional>> dcat:compressFormat ~> dct:MediaType [0..1]
+    <<optional>> dcat:compressFormat ~> dcterms:MediaType [0..1]
         '@ rdfs:label      = Kompressionsformat
         '@ _:internalLink  = distribution-kompressionsformat
         '@ rdfs:range      = http://purl.org/dc/terms/MediaType
@@ -948,7 +948,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_compression_format
         '@ _:vocabularyLink = #kv-iana-media-types
         '@ sh:shapes       = dcatap:Distribution_Property_dcat_compressFormat, ___TBD___(kein Test des Vokabulars)
-    <<optional>> dcat:packageFormat ~> dct:MediaType [0..1]
+    <<optional>> dcat:packageFormat ~> dcterms:MediaType [0..1]
         '@ rdfs:label      = Paketformat
         '@ _:internalLink  = distribution-paketformat
         '@ rdfs:range      = http://purl.org/dc/terms/MediaType
@@ -1022,7 +1022,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
     '@ _:deOriginal    = DCAT-AP.de stellt ein erweitertes kontrolliertes Vokabular zur Verfügung, dass in der [Klasse Prüfsumme](#klasse-prufsumme) von der [Eigenschaft Algorithmus](#prufsumme-algorithmus) verwendet wird.
     '@ sh:shapes       = dcatap:Distribution_Property_spdx_checksum, ___TBD___(kein Test, ob Ziel eine spdx:Checksum)
 
-class "dct:PeriodOfTime" <<recommended>> {
+class "dcterms:PeriodOfTime" <<recommended>> {
     <<recommended>> dcat:startDate ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Startzeitpunkt
         '@ _:internalLink  = zeitraum-startzeitpunkt
@@ -1067,13 +1067,13 @@ class "dct:PeriodOfTime" <<recommended>> {
 '@ _:internalLink    = #klasse-zeitraum
 '@ rdf:about         = http://purl.org/dc/terms/PeriodOfTime
 '@ rdfs:seeAlso      = https://www.w3.org/TR/vocab-dcat-2/#Class:Period_of_Time
-'@ rdfs:subClassOf   = [dct:LocationPeriodOrJurisdiction](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LocationPeriodOrJurisdiction/)
-'@ _:usedBy          = dct:temporal (dcat:Dataset)
+'@ rdfs:subClassOf   = [dcterms:LocationPeriodOrJurisdiction](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LocationPeriodOrJurisdiction/)
+'@ _:usedBy          = dcterms:temporal (dcat:Dataset)
 '@ rdfs:comment      = Ein Zeitintervall, welches durch Start- und Endzeitpunkt bezeichnet bzw. definiert ist.
 '@ rdfs:comment      = Das Zeitintervall kann auch offen sein, dann hat es lediglich einen Start- oder Endzeitpunkt.
 '@ rdfs:comment      = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-zeitliche-abdeckung) genauer beschrieben.
 
-class "dct:Location" <<optional>> {
+class "dcterms:Location" <<optional>> {
     <<recommended>> dcat:bbox ~> rdfs:Resource [0..1]
         '@ rdfs:label      = Bounding Box
         '@ _:internalLink  = standort-bounding-box
@@ -1112,8 +1112,8 @@ class "dct:Location" <<optional>> {
 '@ _:internalLink  = #klasse-standort
 '@ rdf:about       = http://purl.org/dc/terms/Location
 '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/Location/
-'@ rdfs:subClassOf = [dct:LocationPeriodOrJurisdiction](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LocationPeriodOrJurisdiction/)
-'@ _:usedBy        = dct:spatial (dcat:Dataset)
+'@ rdfs:subClassOf = [dcterms:LocationPeriodOrJurisdiction](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LocationPeriodOrJurisdiction/)
+'@ _:usedBy        = dcterms:spatial (dcat:Dataset)
 '@ rdfs:comment    = Ein räumlicher Bereich oder ein bezeichneter Ort. Er kann durch ein kontrolliertes Vokabular oder mit geographischen Koordinaten repräsentiert werden.
 '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zur-geografischen-abdeckung) genauer beschrieben.
 
@@ -1128,7 +1128,7 @@ class "foaf:Agent" <<mandatory>> {
         '@ rdfs:seeAlso      = http://xmlns.com/foaf/spec/#term_name
         '@ _:vocabularyLink  = #kv-adms-publisher
         '@ sh:shapes         = dcatap:Agent_Property_foaf_name
-    <<optional>> dct:type ~> skos:Concept [0..1]
+    <<optional>> dcterms:type ~> skos:Concept [0..1]
         '@ rdfs:label        = Typ
         '@ _:internalLink    = verantwortliche-stelle-typ
         '@ rdfs:range        = http://www.w3.org/2004/02/skos/core#Concept
@@ -1143,7 +1143,7 @@ class "foaf:Agent" <<mandatory>> {
 '@ rdf:about       = http://xmlns.com/foaf/0.1/Agent
 '@ rdfs:seeAlso    = http://xmlns.com/foaf/spec/#term_Agent
 '@ rdfs:comment    = Eine Stelle oder Person, welche mit Katalogen und Datensätzen in unterschiedlichen Rollenausprägungen assoziiert ist.
-'@ _:usedBy        = dct:publisher (dcat:Catalog), dct:publisher (dcat:Dataset), dct:creator (dcat:Dataset), ...
+'@ _:usedBy        = dcterms:publisher (dcat:Catalog), dcterms:publisher (dcat:Dataset), dcterms:creator (dcat:Dataset), ...
 
 class "adms:Identifier" <<optional>> {
     <<mandatory>> skos:notation ~> rdfs:Literal  [1]
@@ -1204,7 +1204,7 @@ class "spdx:Checksum" <<optional>> {
 '@ _:usedBy        = spdx:checksum (dcat:Distribution)
 
 class "dcat:CatalogRecord" <<optional>> {
-    <<mandatory>> dct:modified ~> rdfs:Literal [1]
+    <<mandatory>> dcterms:modified ~> rdfs:Literal [1]
         '@ rdfs:label      = Aktualisierungsdatum
         '@ _:internalLink  = katalogeintrag-aktualisierungsdatum
         '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als  `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime`
@@ -1214,7 +1214,7 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
         '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
 
-    <<recommended>> dct:conformsTo ~> dct:Standard [*]
+    <<recommended>> dcterms:conformsTo ~> dcterms:Standard [*]
         '@ rdfs:label      = Application Profile der Metadaten
         '@ _:internalLink  = katalogeintrag-konform-zu
         '@ rdfs:range      = http://purl.org/dc/terms/Standard
@@ -1233,7 +1233,7 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-adms/#adms-status
         '@ _:deOriginal    = Diese Eigenschaft wird von DCAT-AP.de nicht unterstützt, unter anderem weil das eigentlich vorgesehene Vokabular nicht vorhanden ist.
         '@ sh:shapes       = dcatap:CatalogRecord_Property_adms_status, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode), ___TBD___(Warnung, dass Feld nicht zu verwenden ist)
-    <<recommended>> dct:issued ~> rdfs:Literal [0..1]
+    <<recommended>> dcterms:issued ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Veröffentlichungsdatum
         '@ _:internalLink  = katalogeintrag-veroffentlichungsdatum
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -1244,7 +1244,7 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_issued (erlaubt auch xsd:gYear und xsd:gYearMonth)
         '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
 
-    <<optional>> dct:title ~> rdfs:Literal [*]
+    <<optional>> dcterms:title ~> rdfs:Literal [*]
         '@ rdfs:label      = Titel
         '@ _:internalLink  = katalogeintrag-titel
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -1253,7 +1253,7 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ rdf:about       = http://purl.org/dc/terms/title
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:record_title
         '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_title
-    <<optional>> dct:description ~> rdfs:Literal [*]
+    <<optional>> dcterms:description ~> rdfs:Literal [*]
         '@ rdfs:label      = Beschreibung
         '@ _:internalLink  = katalogeintrag-beschreibung
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -1262,7 +1262,7 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ rdf:about       = http://purl.org/dc/terms/description
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:record_description
         '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_description
-    <<optional>> dct:language ~> dct:LinguisticSystem [*]
+    <<optional>> dcterms:language ~> dcterms:LinguisticSystem [*]
         '@ rdfs:label      = Sprache
         '@ _:internalLink  = katalogeintrag-sprache
         '@ rdfs:range      = http://purl.org/dc/terms/LinguisticSystem
@@ -1278,7 +1278,7 @@ class "dcat:CatalogRecord" <<optional>> {
 '@ rdf:about       = http://www.w3.org/ns/dcat#CatalogRecord
 '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Class:Catalog_Record
 '@ rdfs:comment    = Die Beschreibung des Eintrags in einem Katalog.
-'@ _:usedBy        = dcat:record (dcat:Catalog), dct:source (dcat:CatalogRecord)
+'@ _:usedBy        = dcat:record (dcat:Catalog), dcterms:source (dcat:CatalogRecord)
 
 "dcat:CatalogRecord" --> "1"     "dcat:Resource"      : <<mandatory>> foaf:primaryTopic
     '@ rdfs:label      = Katalogeintrag
@@ -1289,7 +1289,7 @@ class "dcat:CatalogRecord" <<optional>> {
     '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:record_primary_topic
     '@ sh:shapes       = dcatap:CatalogRecord_Property_foaf_primaryTopic
     '@ adms:versionNotes = 3.0: Aufnahme der Ressource `dcat:DatasetSeries`
-"dcat:CatalogRecord" --> "0..1"  "dcat:CatalogRecord" : <<optional>> dct:source
+"dcat:CatalogRecord" --> "0..1"  "dcat:CatalogRecord" : <<optional>> dcterms:source
     '@ rdfs:label      = Original-Metadaten der Ressource
     '@ _:internalLink  = katalogeintrag-original-metadaten-der-ressource
     '@ rdfs:comment    = Diese Eigenschaft verweist auf die ursprünglichen Metadaten, mit Hilfe derer die Metadaten des Katalogeintrags erstellt wurden.
@@ -1297,8 +1297,8 @@ class "dcat:CatalogRecord" <<optional>> {
     '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source
     '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_source, ___TBD___(kein Test, ob Ziel ein dcat:CatalogRecord)
 
-class "dct:LicenseDocument" <<recommended>> {
-    <<recommended>> dct:type ~> skos:Concept [*]
+class "dcterms:LicenseDocument" <<recommended>> {
+    <<recommended>> dcterms:type ~> skos:Concept [*]
         '@ rdfs:label      = Lizenztyp
         '@ _:internalLink  = lizenzdokument-lizenztyp
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -1314,7 +1314,7 @@ class "dct:LicenseDocument" <<recommended>> {
 '@ rdf:about       = http://purl.org/dc/terms/LicenseDocument
 '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2012-06-14/#terms-LicenseDocument
 '@ rdfs:comment    = Ein rechtlich verbindliches Dokument, welches die Verwendung einer Ressource offiziell erlaubt.
-'@ _:usedBy        = dct:license (dcat:Distribution)
+'@ _:usedBy        = dcterms:license (dcat:Distribution)
 '@ adms:versionNotes = 3.0: Errata: Label korrigiert.
 
 class "dcat:Relationship" <<optional>> {
@@ -1327,7 +1327,7 @@ class "dcat:Relationship" <<optional>> {
         '@ rdf:about       = http://www.w3.org/ns/dcat#hadRole
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:relationship_hadRole
         '@ sh:shapes       = dcatap:Relationship_Property_dcat_hadRole, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
-    <<mandatory>> dct:relation ~> rdfs:Resource [1..*]
+    <<mandatory>> dcterms:relation ~> rdfs:Resource [1..*]
         '@ rdfs:label      = Beziehung
         '@ _:internalLink  = beziehung-beziehung
         '@ rdfs:range      = rdfs:Resource
@@ -1367,7 +1367,7 @@ class "prov:Attribution" <<optional>> {
 '@ rdf:about       = http://www.w3.org/ns/prov#Attribution
 '@ rdfs:seeAlso    = https://www.w3.org/TR/prov-o/#Attribution
 '@ rdfs:comment    = Diese Klasse verknüft eine Ressource mit Agenten und beschreibt, welche Rolle die Agenten im Bezug auf die Ressource eingenommen haben.
-'@ rdfs:comment    = Sie ist insbesondere dann relevant, wenn keine Eigenschaften wie `dcatde:originator`, `dct:creator` oder `dct:publisher` existieren, um die Rolle zu beschreiben.
+'@ rdfs:comment    = Sie ist insbesondere dann relevant, wenn keine Eigenschaften wie `dcatde:originator`, `dcterms:creator` oder `dcterms:publisher` existieren, um die Rolle zu beschreiben.
 '@ _:usedBy        = prov:qualifiedAttribution (dcat:Dataset, dcat:DataService)
 '@ rdfs:subClassOf = [prov:AgentInfluence](https://www.w3.org/TR/prov-o/#AgentInfluence)
 
@@ -1389,7 +1389,7 @@ class "skos:Concept" <<reccommended>> {
 '@ _:usedBy        = dcat:theme (dcat:Dataset)
 
 class "skos:ConceptScheme" <<recommended>> {
-    <<mandatory>> dct:title ~> rdfs:Literal [1..*]
+    <<mandatory>> dcterms:title ~> rdfs:Literal [1..*]
         '@ rdfs:label      = Titel
         '@ _:internalLink  = kategorienschema-bezeichnung
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal

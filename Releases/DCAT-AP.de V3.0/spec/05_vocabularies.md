@@ -17,7 +17,7 @@ Das kontrollierte Vokabular sollte:
 __Vokabulare zur Nutzung (DCAT-AP.de)__
 
 In den folgenden Unterkapiteln findet sich eine Auflistung von kontrollierten Vokabularen, welche zum Erhalt der DCAT-AP.de-Konformität unterstützt werden müssen.
-Ihre Verwendung sichert ein minimales Level an Interoperabilität. Ebenfalls wird aufgeführt, mit welcher Verbindlichkeit das jeweilige Vokabular genutzt werden muss, sofern die entsprechende Eigenschaft (z.B. dct:accrualPeriodicity) verwendet wird.
+Ihre Verwendung sichert ein minimales Level an Interoperabilität. Ebenfalls wird aufgeführt, mit welcher Verbindlichkeit das jeweilige Vokabular genutzt werden muss, sofern die entsprechende Eigenschaft (z.B. dcterms:accrualPeriodicity) verwendet wird.
 
 
 ## Liste der GovData Datenbereitsteller {#kv-contributors}
@@ -33,11 +33,11 @@ Liste der unmittelbar an GovData anliefernden Systeme. Diese Datenbereitsteller 
 
 
 ## Liste der Lizenzen {#kv-licenses}
-Liste der Lizenzen, die im Feld dct:license einer DCAT-AP.de-konformen dcat:distribution für die Zulieferung an GovData erlaubt sind. GovData empfiehlt die Verwendung der Datenlizenz Deutschland 2.0 (Zero oder Namensnennung) sowie der Creative Commons Namensnennung – 4.0 International. Soweit dies nicht möglich sein sollte, wird die Verwendung einer der übrigen zur „freien Nutzung“ ausgewiesenen Lizenzen in der jeweils neuesten Version empfohlen.
+Liste der Lizenzen, die im Feld dcterms:license einer DCAT-AP.de-konformen dcat:distribution für die Zulieferung an GovData erlaubt sind. GovData empfiehlt die Verwendung der Datenlizenz Deutschland 2.0 (Zero oder Namensnennung) sowie der Creative Commons Namensnennung – 4.0 International. Soweit dies nicht möglich sein sollte, wird die Verwendung einer der übrigen zur „freien Nutzung“ ausgewiesenen Lizenzen in der jeweils neuesten Version empfohlen.
 
 Kontaktieren Sie zur Aufnahme neuer Lizenzen bitte die Geschäfts- und Koordinierungsstelle GovData: info@govdata.de.
 
-> | Betroffene Eigenschaften       | [`dct:license`](#distribution-lizenz) |
+> | Betroffene Eigenschaften       | [`dcterms:license`](#distribution-lizenz) |
 > |:-------------------------------|:----------------------------------|
 > | Verbindlichkeit Vokabular      | Empfohlen                         |
 > | Verwendung in Klassen          | [`dcat:Distribution`](#distribution-lizenz), [`dcat:Catalog`](#katalog-lizenz)   |
@@ -119,7 +119,7 @@ Diese Verfügbarkeitsgrade geben an, wie lange geplant ist, das Dokument verfüg
 ## EU Vokabular "Frequency" {#kv-frequency}
 Diese Tabelle enthält die mögliche Aktualisierungsfrequenzen (-häufigkeiten) in den 24 Amtssprachen der Europäischen Union.
 
-> | Betroffene Eigenschaften       | [`dct:accrualPeriodicity`](#datensatz-aktualisierungsfrequenz) |
+> | Betroffene Eigenschaften       | [`dcterms:accrualPeriodicity`](#datensatz-aktualisierungsfrequenz) |
 > |:-------------------------------|:----------------------------------|
 > | Verbindlichkeit Vokabular      | Pflicht                           |
 > | Verwendung in Klassen          | [`dcat:Dataset`](#datensatz-aktualisierungsfrequenz) |
@@ -129,7 +129,7 @@ Diese Tabelle enthält die mögliche Aktualisierungsfrequenzen (-häufigkeiten) 
 
 
 ## EU Vokabular "Languages" {#kv-languages}
-> | Betroffene Eigenschaften       | [`dct:language`](#datensatz-sprache)                  |
+> | Betroffene Eigenschaften       | [`dcterms:language`](#datensatz-sprache)                  |
 > |:-------------------------------|:--------------------------------|
 > | Verbindlichkeit Vokabular      | Pflicht                         |
 > | Verwendung in Klassen          | [`dcat:Dataset`](#datensatz-sprache), [`dcat:Catalog`](#katalog-sprache), [`dcat:CatalogRecord`](#katalogeintrag-sprache), [`dcat:Distribution`](#distribution-sprache) |
@@ -145,7 +145,7 @@ Wenn das abgedeckte Gebiet stattdessen durch eine Geometrie repräsentiert werde
 
 Weitere Details und Beispiele finden Sie im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zur-geografischen-abdeckung).
 
-> | Betroffene Eigenschaften       | [`dct:spatial`](#datensatz-raumliche-abdeckung)                   |
+> | Betroffene Eigenschaften       | [`dcterms:spatial`](#datensatz-raumliche-abdeckung)                   |
 > |:-------------------------------|:--------------------------------|
 > | Verbindlichkeiten Vokabular    | Pflicht                         |
 > | Verwendung in Klassen          | [`dcat:Dataset`](#datensatz-raumliche-abdeckung), [`dcat:Catalog`](#katalog-raumliche-abdeckung), tbd |
@@ -155,7 +155,7 @@ Weitere Details und Beispiele finden Sie im [Konventionenhandbuch](https://www.d
 
 
 ## EU Vokabular "Dataset Type" {#kv-dataset-type}
-> | Betroffene Eigenschaften       | [`dct:type`](#datensatz-typ) |
+> | Betroffene Eigenschaften       | [`dcterms:type`](#datensatz-typ) |
 > |:-------------------------------|:-------------------------|
 > | Verbindlichkeit Vokabular      | Optional                 |
 > | Verwendung in Klassen          | [`dcat:Dataset`](#datensatz-typ) |
@@ -177,7 +177,7 @@ Weitere Details und Beispiele finden Sie im [Konventionenhandbuch](https://www.d
 ## EU Vokabular "Access Right" {#kv-access-right}
 Die Access right authority table ist ein kontrolliertes Vokabular, in dem die Zugriffsrechte oder -beschränkungen auf Ressourcen aufgeführt sind. Sie ist für DCAT-Beschreibungen von Datensätzen gedacht, aber nicht auf diese beschränkt.
 
-> | Betroffene Eigenschaften       | [`dct:accessRights`](#datensatz-grad-zuganglichkeit) |
+> | Betroffene Eigenschaften       | [`dcterms:accessRights`](#datensatz-grad-zuganglichkeit) |
 > |:-------------------------------|:-------------------------|
 > | Verbindlichkeit Vokabular      | Pflicht                  |
 > | Verwendung in Klassen          | [dcat:Dataset](#datensatz-grad-zuganglichkeit),  [dcat:DataService](#datenservice-grad-zuganglichkeit) |
@@ -191,7 +191,7 @@ Die File type authority table ist ein kontrolliertes Vokabular, in dem die versc
 Fehlende Dateitypen können und müssen über die Funktion ["BEITRAGEN" ("CONTRIBUTE")](https://op.europa.eu/de/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type) der Liste hinzugefügt werden.
 Weitere Details und Beispiele finden Sie im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zu-dateiformaten)
 
-> | Betroffene Eigenschaften       | [`dct:format`](#distribution-format) |
+> | Betroffene Eigenschaften       | [`dcterms:format`](#distribution-format) |
 > |:-------------------------------|:-------------------------|
 > | Verbindlichkeit Vokabular      | Pflicht                  |
 > | Verwendung in Klassen          | [dcat:Distribution](#distribution-format) |
@@ -240,7 +240,7 @@ Die ADMS-Spezifikation enthält die Liste von Begriffen im ADMS „Status“-Vok
 ## ADMS Vokabular "Publisher Type" {#kv-adms-publisher}
 Die ADMS Spezifikation enthält die Liste von Begriffen im ADMS „Publisher Type“-Vokabular. Eine Auswahl (local = Kommunalebene, regional = Landesebene, national = Bundesebene und supranational) ist im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zum-herausgeber) angegeben.
 
-> | Betroffene Eigenschaften       | [`dct:type`](#verantwortliche-stelle-typ) |
+> | Betroffene Eigenschaften       | [`dcterms:type`](#verantwortliche-stelle-typ) |
 > |:-------------------------------|:-----------------------------|
 > | Verbindlichkeit Vokabular      | Pflicht                      |
 > | Verwendung in Klassen          | [`foaf:Agent`](#verantwortliche-stelle-typ) |
@@ -254,9 +254,9 @@ DCAT-AP.de Anwendungshinweis: Die ADMS-Taxonomie wird für volle dcat-ap Konform
 
 Weitere Details und Beispiele finden Sie im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zur-lizenz-und-zu-rechten-insb-dct-license).
 
-> | Betroffene Eigenschaften       | [`dct:type`](http://purl.org/dc/terms/type) |
+> | Betroffene Eigenschaften       | [`dcterms:type`](http://purl.org/dc/terms/type) |
 > |:-------------------------------|:-----------------------|
 > | Verbindlichkeit Vokabular      | Optional               |
-> | Verwendung in Klassen          | [`dct:LicenseDocument`](https://dublincore.org/specifications/dublin-core/dcmi-terms/#LicenseDocument) |
+> | Verwendung in Klassen          | [`dcterms:LicenseDocument`](https://dublincore.org/specifications/dublin-core/dcmi-terms/#LicenseDocument) |
 > | Menschenlesbare Ansicht        | -                      |
 > | Basis-URI                      | `http://purl.org/adms/licencetype/` |

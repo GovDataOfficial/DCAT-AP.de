@@ -3,7 +3,7 @@
 > | *URI der Klasse* | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog)      |
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Eine Sammlung oder Quelle, welche die beschriebenen Datensätze, Datenservices oder Kataloge zur Verfügung stellt.     |
-> | eingebunden über | dcat:catalog, dct:hasPart, dct:isPartOf (dcat:Catalog)         | 
+> | eingebunden über | dcat:catalog, dcterms:hasPart, dcterms:isPartOf (dcat:Catalog)         | 
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Class:Catalog |
 
 <br>
@@ -14,25 +14,25 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [Titel](#katalog-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
-| [Beschreibung](#katalog-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
+| [Titel](#katalog-titel) | `dcterms:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
+| [Beschreibung](#katalog-beschreibung) | `dcterms:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
 | [Datensatz](#katalog-datensatz) | `dcat:dataset` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Pflicht</small> | `[1..*]` |
-| [Herausgeber](#katalog-herausgeber) | `dct:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Pflicht</small> | `[1]` |
-| [Veröffentlichungsdatum](#katalog-veroffentlichungsdatum) | `dct:issued` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[0..1]` |
-| [Aktualisierungsdatum](#katalog-aktualisierungsdatum) | `dct:modified` | [`rdfs:Literal`]() | <small>Empfohlen</small> | `[0..1]` |
-| [Sprache](#katalog-sprache) | `dct:language` | [`dct:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) | <small>Empfohlen</small> | `[*]` |
+| [Herausgeber](#katalog-herausgeber) | `dcterms:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Pflicht</small> | `[1]` |
+| [Veröffentlichungsdatum](#katalog-veroffentlichungsdatum) | `dcterms:issued` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[0..1]` |
+| [Aktualisierungsdatum](#katalog-aktualisierungsdatum) | `dcterms:modified` | [`rdfs:Literal`]() | <small>Empfohlen</small> | `[0..1]` |
+| [Sprache](#katalog-sprache) | `dcterms:language` | [`dcterms:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) | <small>Empfohlen</small> | `[*]` |
 | [Homepage](#katalog-homepage) | `foaf:homepage` | [`foaf:Document`](http://xmlns.com/foaf/0.1/Document) | <small>Empfohlen</small> | `[0..1]` |
-| [Lizenz](#katalog-lizenz) | `dct:license` | [`dct:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) | <small>Empfohlen</small> | `[0..1]` |
+| [Lizenz](#katalog-lizenz) | `dcterms:license` | [`dcterms:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) | <small>Empfohlen</small> | `[0..1]` |
 | [Kategorienschema](#katalog-kategorienschema) | `dcat:themeTaxonomy` | [`skos:ConceptScheme`](http://www.w3.org/2004/02/skos/core#ConceptScheme) | <small>Empfohlen</small> | `[*]` |
 | [Verfügbarkeit](#katalog-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..1]` |
-| [Räumliche Abdeckung](#katalog-raumliche-abdeckung) | `dct:spatial` | [`dct:Location`](http://purl.org/dc/terms/Location) | <small>Empfohlen</small> | `[*]` |
-| [Nutzungsbestimmungen](#katalog-nutzungsbestimmungen) | `dct:rights` | [`dct:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` |
+| [Räumliche Abdeckung](#katalog-raumliche-abdeckung) | `dcterms:spatial` | [`dcterms:Location`](http://purl.org/dc/terms/Location) | <small>Empfohlen</small> | `[*]` |
+| [Nutzungsbestimmungen](#katalog-nutzungsbestimmungen) | `dcterms:rights` | [`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` |
 | [Katalog](#katalog-katalog) | `dcat:catalog` | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) | <small>Optional</small> | `[*]` |
 | [Datenservice](#katalog-datenservice) | `dcat:service` | [`dcat:DataService`](http://www.w3.org/ns/dcat#DataService) | <small>Optional</small> | `[*]` |
-| [Hat Teilkatalog](#katalog-hat-teilkatalog) | `dct:hasPart` | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) | <small>Optional</small> | `[*]` |
-| [Ist Teilkatalog](#katalog-ist-teilkatalog) | `dct:isPartOf` | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) | <small>Optional</small> | `[0..1]` |
+| [Hat Teilkatalog](#katalog-hat-teilkatalog) | `dcterms:hasPart` | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) | <small>Optional</small> | `[*]` |
+| [Ist Teilkatalog](#katalog-ist-teilkatalog) | `dcterms:isPartOf` | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) | <small>Optional</small> | `[0..1]` |
 | [Katalogeintrag](#katalog-katalogeintrag) | `dcat:record` | [`dcat:CatalogRecord`](http://www.w3.org/ns/dcat#CatalogRecord) | <small>Optional</small> | `[*]` |
-| [Autor](#katalog-autor) | `dct:creator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` |
+| [Autor](#katalog-autor) | `dcterms:creator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` |
 
 
 <br> Die folgenden weiteren Eigenschaften wurden von der Superklasse [`dcat:Resource`](#klasse-ressource) geerbt, werden aber nicht genauer betrachtet: [`odrl:hasPolicy`](#distribution-regelwerk).
@@ -43,7 +43,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Katalog: Titel {#katalog-titel}
-> | *URI*                    | [`dct:title`](http://purl.org/dc/terms/title) |
+> | *URI*                    | [`dcterms:title`](http://purl.org/dc/terms/title) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
 > | Verbindlichkeit          | Pflicht |
@@ -54,7 +54,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Katalog: Beschreibung {#katalog-beschreibung}
-> | *URI*                    | [`dct:description`](http://purl.org/dc/terms/description) |
+> | *URI*                    | [`dcterms:description`](http://purl.org/dc/terms/description) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
 > | Verbindlichkeit          | Pflicht |
@@ -76,7 +76,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Katalog: Herausgeber {#katalog-herausgeber}
-> | *URI*                    | [`dct:publisher`](http://purl.org/dc/terms/publisher) |
+> | *URI*                    | [`dcterms:publisher`](http://purl.org/dc/terms/publisher) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) |
 > | Verbindlichkeit          | Pflicht |
@@ -87,7 +87,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Katalog: Veröffentlichungsdatum {#katalog-veroffentlichungsdatum}
-> | *URI*                    | [`dct:issued`](http://purl.org/dc/terms/issued) |
+> | *URI*                    | [`dcterms:issued`](http://purl.org/dc/terms/issued) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime` |
 > | Verbindlichkeit          | Empfohlen |
@@ -99,7 +99,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Katalog: Aktualisierungsdatum {#katalog-aktualisierungsdatum}
-> | *URI*                    | [`dct:modified`](http://purl.org/dc/terms/modified) |
+> | *URI*                    | [`dcterms:modified`](http://purl.org/dc/terms/modified) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime` |
 > | Verbindlichkeit          | Empfohlen |
@@ -111,9 +111,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Katalog: Sprache {#katalog-sprache}
-> | *URI*                    | [`dct:language`](http://purl.org/dc/terms/language) |
+> | *URI*                    | [`dcterms:language`](http://purl.org/dc/terms/language) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) |
+> | Wertebereich             | [`dcterms:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) |
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf die Sprache, die in den textuellen Beschreibungen der dem Katalog zugehörigen DCAT-Ressourcen Verwendung findet (z.B. Titel, Beschreibungen usw.). <br>Diese Eigenschaft kann wiederholt werden, falls die Metadaten in verschiedenen Sprachen zur Verfügung stehen. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-languages) |
@@ -133,9 +133,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Katalog: Lizenz {#katalog-lizenz}
-> | *URI*                    | [`dct:license`](http://purl.org/dc/terms/license) |
+> | *URI*                    | [`dcterms:license`](http://purl.org/dc/terms/license) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) |
+> | Wertebereich             | [`dcterms:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) |
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf die Lizenz, mit welcher der Katalog verwendet oder wiederverwendet werden kann. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-licenses) |
@@ -165,9 +165,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Katalog: Räumliche Abdeckung {#katalog-raumliche-abdeckung}
-> | *URI*                    | [`dct:spatial`](http://purl.org/dc/terms/spatial) |
+> | *URI*                    | [`dcterms:spatial`](http://purl.org/dc/terms/spatial) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:Location`](http://purl.org/dc/terms/Location) |
+> | Wertebereich             | [`dcterms:Location`](http://purl.org/dc/terms/Location) |
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf einen vom Katalog abgedeckten geographischen Bereich. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-spatial) |
@@ -176,9 +176,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Katalog: Nutzungsbestimmungen {#katalog-nutzungsbestimmungen}
-> | *URI*                    | [`dct:rights`](http://purl.org/dc/terms/rights) |
+> | *URI*                    | [`dcterms:rights`](http://purl.org/dc/terms/rights) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:RightsStatement`](http://purl.org/dc/terms/RightsStatement) |
+> | Wertebereich             | [`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft verweist auf eine juristische Darlegung, welche die mit dem Katalog assoziierten Nutzungsbestimmungen spezifiziert.  |
@@ -209,7 +209,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Katalog: Hat Teilkatalog {#katalog-hat-teilkatalog}
-> | *URI*                    | [`dct:hasPart`](http://purl.org/dc/terms/hasPart) |
+> | *URI*                    | [`dcterms:hasPart`](http://purl.org/dc/terms/hasPart) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) |
 > | Verbindlichkeit          | Optional |
@@ -220,7 +220,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Katalog: Ist Teilkatalog {#katalog-ist-teilkatalog}
-> | *URI*                    | [`dct:isPartOf`](http://purl.org/dc/terms/isPartOf) |
+> | *URI*                    | [`dcterms:isPartOf`](http://purl.org/dc/terms/isPartOf) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) |
 > | Verbindlichkeit          | Optional |
@@ -242,7 +242,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Katalog: Autor {#katalog-autor}
-> | *URI*                    | [`dct:creator`](http://purl.org/dc/terms/creator) |
+> | *URI*                    | [`dcterms:creator`](http://purl.org/dc/terms/creator) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) |
 > | Verbindlichkeit          | Optional |
@@ -262,69 +262,69 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | *URI der Klasse* | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset)      |
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Eine logische Entität, welche die veröffentlichten Informationen repräsentiert.     |
-> | eingebunden über | dcat:dataset (dcat:Catalog), dct:hasVersion, dct:isVersionOf, dct:source, (dcat:Dataset), dcat:servesDataset (dcat:DataService), foaf:primaryTopic (dcat:CatalogRecord)         | 
+> | eingebunden über | dcat:dataset (dcat:Catalog), dcterms:hasVersion, dcterms:isVersionOf, dcterms:source, (dcat:Dataset), dcat:servesDataset (dcat:DataService), foaf:primaryTopic (dcat:CatalogRecord)         | 
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset |
 
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatap:availability`](#datensatz-verfugbarkeit), [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dct:references`](#datensatz-referenziert), [`dct:publisher`](#datensatz-herausgeber), [`dct:creator`](#datensatz-autor), [`dct:contributor`](#datensatz-bearbeiter), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter).<br>
+[`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatap:availability`](#datensatz-verfugbarkeit), [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dcterms:references`](#datensatz-referenziert), [`dcterms:publisher`](#datensatz-herausgeber), [`dcterms:creator`](#datensatz-autor), [`dcterms:contributor`](#datensatz-bearbeiter), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [Titel](#datensatz-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
-| [Beschreibung](#datensatz-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
+| [Titel](#datensatz-titel) | `dcterms:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
+| [Beschreibung](#datensatz-beschreibung) | `dcterms:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
 | [Schlagwort](#datensatz-schlagwort) | `dcat:keyword` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[*]` |
 | [Ebene der geopolitischen Abdeckung](#datensatz-ebene-geopolitischen-abdeckung) | `dcatde:politicalGeocodingLevelURI` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[*]` |
 | [Geopolitische Abdeckung](#datensatz-geopolitischen-abdeckung) | `dcatde:politicalGeocodingURI` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[*]` |
 | [Kategorie](#datensatz-kategorie) | `dcat:theme` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Empfohlen</small> | `[*]` |
 | [Kontakt](#datensatz-kontakt) | `dcat:contactPoint` | [`vcard:Kind`](http://www.w3.org/TR/vcard-rdf/#Kind) | <small>Empfohlen</small> | `[*]` |
 | [Verfügbarkeit](#datensatz-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..1]` |
-| [Räumliche Abdeckung](#datensatz-raumliche-abdeckung) | `dct:spatial` | [`dct:Location`](http://purl.org/dc/terms/Location) | <small>Empfohlen</small> | `[*]` |
-| [Zeitliche Abdeckung](#datensatz-zeitliche-abdeckung) | `dct:temporal` | [`dct:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime) | <small>Empfohlen</small> | `[*]` |
+| [Räumliche Abdeckung](#datensatz-raumliche-abdeckung) | `dcterms:spatial` | [`dcterms:Location`](http://purl.org/dc/terms/Location) | <small>Empfohlen</small> | `[*]` |
+| [Zeitliche Abdeckung](#datensatz-zeitliche-abdeckung) | `dcterms:temporal` | [`dcterms:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime) | <small>Empfohlen</small> | `[*]` |
 | [Distribution](#datensatz-distribution) | `dcat:distribution` | [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution) | <small>Empfohlen</small> | `[*]` |
-| [Herausgeber](#datensatz-herausgeber) | `dct:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Empfohlen</small> | `[0..1]` |
+| [Herausgeber](#datensatz-herausgeber) | `dcterms:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Empfohlen</small> | `[0..1]` |
 | [Datenbereitsteller ID](#datensatz-datenbereitsteller-id) | `dcatde:contributorID` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` |
 | [Beschreibung der Abdeckung](#datensatz-beschreibung-abdeckung) | `dcatde:geocodingDescription` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
-| [ID](#datensatz-id) | `dct:identifier` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
+| [ID](#datensatz-id) | `dcterms:identifier` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
 | [Andere ID](#datensatz-andere-id) | `adms:identifier` | [`adms:Identifier`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
-| [Veröffentlichungsdatum](#datensatz-veroffentlichungsdatum) | `dct:issued` | [`rdfs:Literal`]() | <small>Optional</small> | `[0..1]` |
-| [Aktualisierungsdatum](#datensatz-aktualisierungsdatum) | `dct:modified` | [`rdfs:Literal`]() | <small>Optional</small> | `[0..1]` |
+| [Veröffentlichungsdatum](#datensatz-veroffentlichungsdatum) | `dcterms:issued` | [`rdfs:Literal`]() | <small>Optional</small> | `[0..1]` |
+| [Aktualisierungsdatum](#datensatz-aktualisierungsdatum) | `dcterms:modified` | [`rdfs:Literal`]() | <small>Optional</small> | `[0..1]` |
 | [Versionsbezeichnung](#datensatz-versionsbezeichnung) | `dcat:version` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
 | [Versionsbezeichnung (DEPRECATED)](#datensatz-versionsbezeichnung-deprecated) | `owl:versionInfo` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..1]` |
 | [Versionserläuterung](#datensatz-versionserlauterung) | `adms:versionNotes` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
 | [Rechtsgrundlage](#datensatz-rechtsgrundlage) | `dcatap:applicableLegislation` | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) | <small>Optional</small> | `[*]` |
 | [Rechtsgrundlage für die Zugangseröffnung (DEPRECATED)](#datensatz-rechtsgrundlage-zugangseroffnung) | `dcatde:legalBasis` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
-| [Verwandte Ressource](#datensatz-verwandte-ressource) | `dct:relation` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` |
+| [Verwandte Ressource](#datensatz-verwandte-ressource) | `dcterms:relation` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` |
 | [Ursprüngliche Webseite](#datensatz-ursprungliche-webseite) | `dcat:landingPage` | [`foaf:Document`](http://xmlns.com/foaf/0.1/Document) | <small>Optional</small> | `[*]` |
 | [Dokumentation](#datensatz-dokumentation) | `foaf:page` | [`foaf:Document`](http://xmlns.com/foaf/0.1/Document) | <small>Optional</small> | `[*]` |
-| [Sprache](#datensatz-sprache) | `dct:language` | [`dct:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) | <small>Optional</small> | `[*]` |
-| [Konform zu Standard](#datensatz-konform-zu-standard) | `dct:conformsTo` | [`dct:Standard`](http://purl.org/dc/terms/Standard) | <small>Optional</small> | `[*]` |
-| [Grad der Zugänglichkeit](#datensatz-grad-zuganglichkeit) | `dct:accessRights` | [`dct:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` |
-| [Provenienz](#datensatz-provenienz) | `dct:provenance` | [`dct:ProvenanceStatement`](http://purl.org/dc/terms/ProvenanceStatement) | <small>Optional</small> | `[*]` |
-| [Aktualisierungsfrequenz](#datensatz-aktualisierungsfrequenz) | `dct:accrualPeriodicity` | [`dct:Frequency`](http://purl.org/dc/terms/Frequency) | <small>Optional</small> | `[0..1]` |
+| [Sprache](#datensatz-sprache) | `dcterms:language` | [`dcterms:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) | <small>Optional</small> | `[*]` |
+| [Konform zu Standard](#datensatz-konform-zu-standard) | `dcterms:conformsTo` | [`dcterms:Standard`](http://purl.org/dc/terms/Standard) | <small>Optional</small> | `[*]` |
+| [Grad der Zugänglichkeit](#datensatz-grad-zuganglichkeit) | `dcterms:accessRights` | [`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` |
+| [Provenienz](#datensatz-provenienz) | `dcterms:provenance` | [`dcterms:ProvenanceStatement`](http://purl.org/dc/terms/ProvenanceStatement) | <small>Optional</small> | `[*]` |
+| [Aktualisierungsfrequenz](#datensatz-aktualisierungsfrequenz) | `dcterms:accrualPeriodicity` | [`dcterms:Frequency`](http://purl.org/dc/terms/Frequency) | <small>Optional</small> | `[0..1]` |
 | [Qualitätssicherungsprozess](#datensatz-qualitatssicherungsprozess) | `dcatde:qualityProcessURI` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[0..1]` |
-| [Typ](#datensatz-typ) | `dct:type` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Optional</small> | `[*]` |
+| [Typ](#datensatz-typ) | `dcterms:type` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Optional</small> | `[*]` |
 | [Wurde erzeugt von](#datensatz-wurde-erzeugt-von) | `prov:wasGeneratedBy` | [`prov:Activity`](https://www.w3.org/TR/prov-o/#Activity) | <small>Optional</small> | `[*]` |
 | [Räumliche Auflösung in Meter](#datensatz-raumliche-auflosung-in-meter) | `dcat:spatialResolutionInMeters` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
 | [Zeitliche Auflösung](#datensatz-zeitliche-auflosung) | `dcat:temporalResolution` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
 | [Rollenzuordnung](#datensatz-rollenzuordnung) | `prov:qualifiedAttribution` | [`prov:Attribution`](https://www.w3.org/TR/prov-o/#Attribution) | <small>Optional</small> | `[*]` |
 | [Qualifizierte Beziehung](#datensatz-qualifizierte-beziehung) | `dcat:qualifiedRelation` | [`dcat:Relationship`](https://www.w3.org/TR/vocab-dcat-2/#Class:Relationship) | <small>Optional</small> | `[*]` |
-| [Wird Referenziert](#datensatz-wird-referenziert) | `dct:isReferencedBy` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` |
-| [Referenziert](#datensatz-referenziert) | `dct:references` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` |
-| [Quelle des Datensatzes](#datensatz-quelle) | `dct:source` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Optional</small> | `[*]` |
+| [Wird Referenziert](#datensatz-wird-referenziert) | `dcterms:isReferencedBy` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` |
+| [Referenziert](#datensatz-referenziert) | `dcterms:references` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` |
+| [Quelle des Datensatzes](#datensatz-quelle) | `dcterms:source` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Optional</small> | `[*]` |
 | [Weitere Version](#datensatz-weitere-version) | `dcat:hasVersion` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Optional</small> | `[*]` |
-| [Weitere Version (DEPRECATED)](#datensatz-weitere-version-deprecated) | `dct:hasVersion` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Optional</small> | `[*]` |
-| [Ist Version von (DEPRECATED)](#datensatz-ist-version) | `dct:isVersionOf` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Optional</small> | `[*]` |
+| [Weitere Version (DEPRECATED)](#datensatz-weitere-version-deprecated) | `dcterms:hasVersion` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Optional</small> | `[*]` |
+| [Ist Version von (DEPRECATED)](#datensatz-ist-version) | `dcterms:isVersionOf` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Optional</small> | `[*]` |
 | [Beispieldistribution](#datensatz-beispieldistribution) | `adms:sample` | [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution) | <small>Optional</small> | `[*]` |
-| [Autor](#datensatz-autor) | `dct:creator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` |
-| [Bearbeiter](#datensatz-bearbeiter) | `dct:contributor` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` |
+| [Autor](#datensatz-autor) | `dcterms:creator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` |
+| [Bearbeiter](#datensatz-bearbeiter) | `dcterms:contributor` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` |
 | [Urheber](#datensatz-urheber) | `dcatde:originator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` |
 | [Verwalter](#datensatz-verwalter) | `dcatde:maintainer` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` |
 
 
-<br> Die folgenden weiteren Eigenschaften wurden von der Superklasse [`dcat:Resource`](#klasse-ressource) geerbt, werden aber nicht genauer betrachtet: [`dct:license`](#distribution-lizenz), [`dct:rights`](#distribution-grad-zuganglichkeit) und [`odrl:hasPolicy`](#distribution-regelwerk).
+<br> Die folgenden weiteren Eigenschaften wurden von der Superklasse [`dcat:Resource`](#klasse-ressource) geerbt, werden aber nicht genauer betrachtet: [`dcterms:license`](#distribution-lizenz), [`dcterms:rights`](#distribution-grad-zuganglichkeit) und [`odrl:hasPolicy`](#distribution-regelwerk).
 
 
 <br>
@@ -332,7 +332,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Titel {#datensatz-titel}
-> | *URI*                    | [`dct:title`](http://purl.org/dc/terms/title) |
+> | *URI*                    | [`dcterms:title`](http://purl.org/dc/terms/title) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
 > | Verbindlichkeit          | Pflicht |
@@ -343,7 +343,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Beschreibung {#datensatz-beschreibung}
-> | *URI*                    | [`dct:description`](http://purl.org/dc/terms/description) |
+> | *URI*                    | [`dcterms:description`](http://purl.org/dc/terms/description) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
 > | Verbindlichkeit          | Pflicht |
@@ -417,9 +417,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Räumliche Abdeckung {#datensatz-raumliche-abdeckung}
-> | *URI*                    | [`dct:spatial`](http://purl.org/dc/terms/spatial) |
+> | *URI*                    | [`dcterms:spatial`](http://purl.org/dc/terms/spatial) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:Location`](http://purl.org/dc/terms/Location) |
+> | Wertebereich             | [`dcterms:Location`](http://purl.org/dc/terms/Location) |
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Ein räumlicher Bereich oder ein bezeichneter Ort. Er kann durch ein kontrolliertes Vokabular oder mit geographischen Koordinaten repräsentiert werden.<br>Im letzteren Fall wird die Verwendung des Core Location Vocabulary empfohlen, wie in der GeoDCAT-AP-Spezifikation beschrieben.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zur-geografischen-abdeckung) genauer beschrieben. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-spatial) |
@@ -428,9 +428,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Zeitliche Abdeckung {#datensatz-zeitliche-abdeckung}
-> | *URI*                    | [`dct:temporal`](http://purl.org/dc/terms/temporal) |
+> | *URI*                    | [`dcterms:temporal`](http://purl.org/dc/terms/temporal) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime) |
+> | Wertebereich             | [`dcterms:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime) |
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Ein Zeitintervall, welches durch Start- und Endzeitpunkt bezeichnet bzw. definiert ist.  |
@@ -450,7 +450,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Herausgeber {#datensatz-herausgeber}
-> | *URI*                    | [`dct:publisher`](http://purl.org/dc/terms/publisher) |
+> | *URI*                    | [`dcterms:publisher`](http://purl.org/dc/terms/publisher) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) |
 > | Verbindlichkeit          | Empfohlen |
@@ -481,7 +481,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: ID {#datensatz-id}
-> | *URI*                    | [`dct:identifier`](http://purl.org/dc/terms/identifier) |
+> | *URI*                    | [`dcterms:identifier`](http://purl.org/dc/terms/identifier) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
 > | Verbindlichkeit          | Optional |
@@ -503,7 +503,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Veröffentlichungsdatum {#datensatz-veroffentlichungsdatum}
-> | *URI*                    | [`dct:issued`](http://purl.org/dc/terms/issued) |
+> | *URI*                    | [`dcterms:issued`](http://purl.org/dc/terms/issued) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime` |
 > | Verbindlichkeit          | Optional |
@@ -515,7 +515,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Aktualisierungsdatum {#datensatz-aktualisierungsdatum}
-> | *URI*                    | [`dct:modified`](http://purl.org/dc/terms/modified) |
+> | *URI*                    | [`dcterms:modified`](http://purl.org/dc/terms/modified) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime` |
 > | Verbindlichkeit          | Optional |
@@ -586,7 +586,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Verwandte Ressource {#datensatz-verwandte-ressource}
-> | *URI*                    | [`dct:relation`](http://purl.org/dc/terms/relation) |
+> | *URI*                    | [`dcterms:relation`](http://purl.org/dc/terms/relation) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) |
 > | Verbindlichkeit          | Optional |
@@ -619,9 +619,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Sprache {#datensatz-sprache}
-> | *URI*                    | [`dct:language`](http://purl.org/dc/terms/language) |
+> | *URI*                    | [`dcterms:language`](http://purl.org/dc/terms/language) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) |
+> | Wertebereich             | [`dcterms:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf die innerhalb des Datensatzes verwendete Sprache.<br>Diese Eigenschaft kann wiederholt werden, falls mehrere Sprachen im Datensatz Verwendung finden. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-languages) |
@@ -630,9 +630,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Konform zu Standard {#datensatz-konform-zu-standard}
-> | *URI*                    | [`dct:conformsTo`](http://purl.org/dc/terms/conformsTo) |
+> | *URI*                    | [`dcterms:conformsTo`](http://purl.org/dc/terms/conformsTo) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:Standard`](http://purl.org/dc/terms/Standard) |
+> | Wertebereich             | [`dcterms:Standard`](http://purl.org/dc/terms/Standard) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft verweist auf eine Implementierungsregel oder eine andere Spezifikation, zu welcher der Datensatz konform ist.  |
@@ -641,9 +641,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Grad der Zugänglichkeit {#datensatz-grad-zuganglichkeit}
-> | *URI*                    | [`dct:accessRights`](http://purl.org/dc/terms/accessRights) |
+> | *URI*                    | [`dcterms:accessRights`](http://purl.org/dc/terms/accessRights) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:RightsStatement`](http://purl.org/dc/terms/RightsStatement) |
+> | Wertebereich             | [`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft verweist auf Informationen, die darlegen, ob der Datensatz öffentlich zugänglich ist, Zugriffseinschränkungen existieren oder er nicht-öffentlich ist. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-access-right) |
@@ -653,9 +653,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Provenienz {#datensatz-provenienz}
-> | *URI*                    | [`dct:provenance`](http://purl.org/dc/terms/provenance) |
+> | *URI*                    | [`dcterms:provenance`](http://purl.org/dc/terms/provenance) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:ProvenanceStatement`](http://purl.org/dc/terms/ProvenanceStatement) |
+> | Wertebereich             | [`dcterms:ProvenanceStatement`](http://purl.org/dc/terms/ProvenanceStatement) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft umfasst eine Angabe zur Entwicklungsgeschichte des Datensatzes, insbesondere in wessen Besitz oder Obhut die Ressource sich bislang befunden hat, soweit die Wechsel signifikanten Einfluss auf die Authentizität, Integrität und Interpretierbarkeit dieser Ressource hat.  |
@@ -664,9 +664,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Aktualisierungsfrequenz {#datensatz-aktualisierungsfrequenz}
-> | *URI*                    | [`dct:accrualPeriodicity`](http://purl.org/dc/terms/accrualPeriodicity) |
+> | *URI*                    | [`dcterms:accrualPeriodicity`](http://purl.org/dc/terms/accrualPeriodicity) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:Frequency`](http://purl.org/dc/terms/Frequency) |
+> | Wertebereich             | [`dcterms:Frequency`](http://purl.org/dc/terms/Frequency) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft beschreibt die Aktualisierungsfrequenz des Datensatzes. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-frequency) |
@@ -685,7 +685,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Typ {#datensatz-typ}
-> | *URI*                    | [`dct:type`](http://purl.org/dc/terms/type) |
+> | *URI*                    | [`dcterms:type`](http://purl.org/dc/terms/type) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
 > | Verbindlichkeit          | Optional |
@@ -753,7 +753,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Wird Referenziert {#datensatz-wird-referenziert}
-> | *URI*                    | [`dct:isReferencedBy`](http://purl.org/dc/terms/isReferencedBy) |
+> | *URI*                    | [`dcterms:isReferencedBy`](http://purl.org/dc/terms/isReferencedBy) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) |
 > | Verbindlichkeit          | Optional |
@@ -764,7 +764,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Referenziert {#datensatz-referenziert}
-> | *URI*                    | [`dct:references`](http://purl.org/dc/terms/references) |
+> | *URI*                    | [`dcterms:references`](http://purl.org/dc/terms/references) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) |
 > | Verbindlichkeit          | Optional |
@@ -774,7 +774,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Quelle des Datensatzes {#datensatz-quelle}
-> | *URI*                    | [`dct:source`](http://purl.org/dc/terms/source) |
+> | *URI*                    | [`dcterms:source`](http://purl.org/dc/terms/source) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) |
 > | Verbindlichkeit          | Optional |
@@ -797,7 +797,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Weitere Version (DEPRECATED) {#datensatz-weitere-version-deprecated}
-> | *URI*                    | [`dct:hasVersion`](http://purl.org/dc/terms/hasVersion) |
+> | *URI*                    | [`dcterms:hasVersion`](http://purl.org/dc/terms/hasVersion) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) |
 > | Verbindlichkeit          | Optional |
@@ -809,7 +809,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Ist Version von (DEPRECATED) {#datensatz-ist-version}
-> | *URI*                    | [`dct:isVersionOf`](http://purl.org/dc/terms/isVersion) |
+> | *URI*                    | [`dcterms:isVersionOf`](http://purl.org/dc/terms/isVersion) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) |
 > | Verbindlichkeit          | Optional |
@@ -832,7 +832,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Autor {#datensatz-autor}
-> | *URI*                    | [`dct:creator`](http://purl.org/dc/terms/creator) |
+> | *URI*                    | [`dcterms:creator`](http://purl.org/dc/terms/creator) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) |
 > | Verbindlichkeit          | Optional |
@@ -843,7 +843,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datensatz: Bearbeiter {#datensatz-bearbeiter}
-> | *URI*                    | [`dct:contributor`](http://purl.org/dc/terms/contributor) |
+> | *URI*                    | [`dcterms:contributor`](http://purl.org/dc/terms/contributor) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) |
 > | Verbindlichkeit          | Optional |
@@ -882,31 +882,31 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 > | *URI der Klasse* | [`dcat:DataService`](http://www.w3.org/ns/dcat#DataService)      |
 > |:-----------------|:-----------------------------------------------------|
-> | Beschreibung     | Ein Datenservice ermöglicht den Zugang zu einem oder mehreren Datensätzen oder stellt Datenverarbeitungsverfahren zur Verfügung.<br>**Verwendungshinweis:** DCAT-AP.de empfiehlt zusätzlich die folgenden Eigenschaften zu verwenden, um den Datenservice genauer zu beschreiben: <br>[`dct:spatial`](#datensatz-raumliche-abdeckung), [`dct:temporal`](#datensatz-zeitliche-abdeckung), [`dcat:spatialResolutionInMeters`](#datensatz-raumliche-auflosung-in-meter), [`dcat:temporalResolution`](#datensatz-zeitliche-auflosung), [`dct:accrualPeriodicity`](#datensatz-aktualisierungsfrequenz) und [`prov:wasGeneratedBy`](#datensatz-wurde-erzeugt-von).<br>Diese Änderungen werden zur Zeit auf Ebene des W3Cs diskutiert und das weitere Vorgehen von der Entscheidung des W3C und von DCAT-AP abhängig gemacht.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#modellierung-eines-datenservices) genauer beschrieben.     |
+> | Beschreibung     | Ein Datenservice ermöglicht den Zugang zu einem oder mehreren Datensätzen oder stellt Datenverarbeitungsverfahren zur Verfügung.<br>**Verwendungshinweis:** DCAT-AP.de empfiehlt zusätzlich die folgenden Eigenschaften zu verwenden, um den Datenservice genauer zu beschreiben: <br>[`dcterms:spatial`](#datensatz-raumliche-abdeckung), [`dcterms:temporal`](#datensatz-zeitliche-abdeckung), [`dcat:spatialResolutionInMeters`](#datensatz-raumliche-auflosung-in-meter), [`dcat:temporalResolution`](#datensatz-zeitliche-auflosung), [`dcterms:accrualPeriodicity`](#datensatz-aktualisierungsfrequenz) und [`prov:wasGeneratedBy`](#datensatz-wurde-erzeugt-von).<br>Diese Änderungen werden zur Zeit auf Ebene des W3Cs diskutiert und das weitere Vorgehen von der Entscheidung des W3C und von DCAT-AP abhängig gemacht.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#modellierung-eines-datenservices) genauer beschrieben.     |
 > | eingebunden über | dcat:service (dcat:Catalog), dcat:accessService (dcat:Distribution), foaf:primaryTopic (dcat:CatalogRecord)         | 
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Class:Data_Service |
 
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dcatap:availability`](#datenservice-verfugbarkeit), [`dct:publisher`](#datenservice-herausgeber).<br>
+[`dcatap:availability`](#datenservice-verfugbarkeit), [`dcterms:publisher`](#datenservice-herausgeber).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
 | [URL des Endpunktes](#datenservice-url-endpunkt) | `dcat:endpointURL` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Pflicht</small> | `[1..*]` |
-| [Titel](#datenservice-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
+| [Titel](#datenservice-titel) | `dcterms:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
 | [Beschreibung des Endpunktes](#datenservice-beschreibung-endpunkt) | `dcat:endpointDescription` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[*]` |
 | [Verfügbarkeit](#datenservice-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..1]` |
 | [Liefert Datensatz aus](#datenservice-liefert-datensatz-aus) | `dcat:servesDataset` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Empfohlen</small> | `[*]` |
-| [Herausgeber](#datenservice-herausgeber) | `dct:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Empfohlen</small> | `[0..1]` |
-| [Beschreibung](#datenservice-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
-| [Lizenz](#datenservice-lizenz) | `dct:license` | [`dct:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) | <small>Optional</small> | `[0..1]` |
-| [Grad der Zugänglichkeit](#datenservice-grad-zuganglichkeit) | `dct:accessRights` | [`dct:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` |
-| [Format](#datenservice-format) | `dct:format` | [`dct:MediaTypeOrExtent`](http://purl.org/dc/terms/MediaTypeOrExtent) | <small>Optional</small> | `[*]` |
+| [Herausgeber](#datenservice-herausgeber) | `dcterms:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Empfohlen</small> | `[0..1]` |
+| [Beschreibung](#datenservice-beschreibung) | `dcterms:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
+| [Lizenz](#datenservice-lizenz) | `dcterms:license` | [`dcterms:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) | <small>Optional</small> | `[0..1]` |
+| [Grad der Zugänglichkeit](#datenservice-grad-zuganglichkeit) | `dcterms:accessRights` | [`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` |
+| [Format](#datenservice-format) | `dcterms:format` | [`dcterms:MediaTypeOrExtent`](http://purl.org/dc/terms/MediaTypeOrExtent) | <small>Optional</small> | `[*]` |
 
 
-<br> Die folgenden weiteren Eigenschaften wurden von der Superklasse [`dcat:Resource`](#klasse-ressource) geerbt, werden aber nicht genauer betrachtet: [`dct:modified`](#datensatz-aktualisierungsdatum), [`dct:creator`](#datensatz-autor), [`dct:publisher`](#datensatz-herausgeber), [`dct:identifier`](#datensatz-id), [`dcat:theme`](#datensatz-kategorie), [`dct:conformsTo`](#datensatz-konform-zu-standard), [`dcat:contactPoint`](#datensatz-kontakt), [`dcat:qualifiedRelation`](#datensatz-qualifizierte-beziehung), [`prov:qualifiedAttribution`](#datensatz-rollenzuordnung), [`dcat:keyword`](#datensatz-schlagwort), [`dct:language`](#datensatz-sprache), [`dct:type`](#datensatz-typ), [`dcat:landingPage`](#datensatz-ursprungliche-webseite), [`dct:issued`](#datensatz-veroffentlichungsdatum), [`dct:relation`](#datensatz-verwandte-ressource), [`dct:rights`](#distribution-grad-zuganglichkeit), [`odrl:hasPolicy`](#distribution-regelwerk) und [`dct:isReferencedBy`](#datensatz-wird-referenziert). Zusätzliche, durch die deutschen Erweiterung von [`dcat:Resource`](#klasse-ressource), geerbte Eigenschaften: [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter), [`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dct:contributor`](#datensatz-bearbeiter) und [`dct:references`](#datensatz-referenziert).
+<br> Die folgenden weiteren Eigenschaften wurden von der Superklasse [`dcat:Resource`](#klasse-ressource) geerbt, werden aber nicht genauer betrachtet: [`dcterms:modified`](#datensatz-aktualisierungsdatum), [`dcterms:creator`](#datensatz-autor), [`dcterms:publisher`](#datensatz-herausgeber), [`dcterms:identifier`](#datensatz-id), [`dcat:theme`](#datensatz-kategorie), [`dcterms:conformsTo`](#datensatz-konform-zu-standard), [`dcat:contactPoint`](#datensatz-kontakt), [`dcat:qualifiedRelation`](#datensatz-qualifizierte-beziehung), [`prov:qualifiedAttribution`](#datensatz-rollenzuordnung), [`dcat:keyword`](#datensatz-schlagwort), [`dcterms:language`](#datensatz-sprache), [`dcterms:type`](#datensatz-typ), [`dcat:landingPage`](#datensatz-ursprungliche-webseite), [`dcterms:issued`](#datensatz-veroffentlichungsdatum), [`dcterms:relation`](#datensatz-verwandte-ressource), [`dcterms:rights`](#distribution-grad-zuganglichkeit), [`odrl:hasPolicy`](#distribution-regelwerk) und [`dcterms:isReferencedBy`](#datensatz-wird-referenziert). Zusätzliche, durch die deutschen Erweiterung von [`dcat:Resource`](#klasse-ressource), geerbte Eigenschaften: [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter), [`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcterms:contributor`](#datensatz-bearbeiter) und [`dcterms:references`](#datensatz-referenziert).
 
 
 <br>
@@ -925,7 +925,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datenservice: Titel {#datenservice-titel}
-> | *URI*                    | [`dct:title`](http://purl.org/dc/terms/title) |
+> | *URI*                    | [`dcterms:title`](http://purl.org/dc/terms/title) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
 > | Verbindlichkeit          | Pflicht |
@@ -968,7 +968,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datenservice: Herausgeber {#datenservice-herausgeber}
-> | *URI*                    | [`dct:publisher`](http://purl.org/dc/terms/publisher) |
+> | *URI*                    | [`dcterms:publisher`](http://purl.org/dc/terms/publisher) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) |
 > | Verbindlichkeit          | Empfohlen |
@@ -980,7 +980,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datenservice: Beschreibung {#datenservice-beschreibung}
-> | *URI*                    | [`dct:description`](http://purl.org/dc/terms/description) |
+> | *URI*                    | [`dcterms:description`](http://purl.org/dc/terms/description) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
 > | Verbindlichkeit          | Optional |
@@ -991,9 +991,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datenservice: Lizenz {#datenservice-lizenz}
-> | *URI*                    | [`dct:license`](http://purl.org/dc/terms/license) |
+> | *URI*                    | [`dcterms:license`](http://purl.org/dc/terms/license) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) |
+> | Wertebereich             | [`dcterms:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf die Lizenz, mit welcher der Datenservice verwendet oder seine Inhalte wiederverwendet werden können.  |
@@ -1002,9 +1002,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datenservice: Grad der Zugänglichkeit {#datenservice-grad-zuganglichkeit}
-> | *URI*                    | [`dct:accessRights`](http://purl.org/dc/terms/accessRights) |
+> | *URI*                    | [`dcterms:accessRights`](http://purl.org/dc/terms/accessRights) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:RightsStatement`](http://purl.org/dc/terms/RightsStatement) |
+> | Wertebereich             | [`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft verweist auf Informationen, die darlegen, ob der Datenservice öffentlich zugänglich ist, Zugriffseinschränkungen existieren oder er nicht-öffentlich ist. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-access-right) |
@@ -1014,9 +1014,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Datenservice: Format {#datenservice-format}
-> | *URI*                    | [`dct:format`](http://purl.org/dc/terms/format) |
+> | *URI*                    | [`dcterms:format`](http://purl.org/dc/terms/format) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:MediaTypeOrExtent`](http://purl.org/dc/terms/MediaTypeOrExtent) |
+> | Wertebereich             | [`dcterms:MediaTypeOrExtent`](http://purl.org/dc/terms/MediaTypeOrExtent) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Die Datenformate, die beim Abruf der `dcat:endpointURL` zurückgegeben werden können. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-file-type) |
@@ -1041,29 +1041,29 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dct:title`](#distribution-titel), [`dct:modified`](#distribution-aktualisierungsdatum), [`dcatde:licenseAttributionByText`](#distribution-namensnennungstext-by-clauses), [`dct:description`](#distribution-beschreibung), [`spdx:checksum`](#distribution-prufsumme).<br>
+[`dcterms:title`](#distribution-titel), [`dcterms:modified`](#distribution-aktualisierungsdatum), [`dcatde:licenseAttributionByText`](#distribution-namensnennungstext-by-clauses), [`dcterms:description`](#distribution-beschreibung), [`spdx:checksum`](#distribution-prufsumme).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
 | [Zugangs-URL](#distribution-zugangs-url) | `dcat:accessURL` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Pflicht</small> | `[1..*]` |
-| [Titel](#distribution-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[*]` |
-| [Aktualisierungsdatum](#distribution-aktualisierungsdatum) | `dct:modified` | [`rdfs:Literal`]() | <small>Empfohlen</small> | `[0..1]` |
-| [Lizenz](#distribution-lizenz) | `dct:license` | [`dct:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) | <small>Empfohlen</small> | `[0..1]` |
-| [Format](#distribution-format) | `dct:format` | [`dct:MediaTypeOrExtent`](http://purl.org/dc/terms/MediaTypeOrExtent) | <small>Empfohlen</small> | `[0..1]` |
+| [Titel](#distribution-titel) | `dcterms:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[*]` |
+| [Aktualisierungsdatum](#distribution-aktualisierungsdatum) | `dcterms:modified` | [`rdfs:Literal`]() | <small>Empfohlen</small> | `[0..1]` |
+| [Lizenz](#distribution-lizenz) | `dcterms:license` | [`dcterms:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) | <small>Empfohlen</small> | `[0..1]` |
+| [Format](#distribution-format) | `dcterms:format` | [`dcterms:MediaTypeOrExtent`](http://purl.org/dc/terms/MediaTypeOrExtent) | <small>Empfohlen</small> | `[0..1]` |
 | [Verfügbarkeit](#distribution-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..1]` |
 | [Namensnennungstext für By-Clauses](#distribution-namensnennungstext-by-clauses) | `dcatde:licenseAttributionByText` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
-| [Beschreibung](#distribution-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
+| [Beschreibung](#distribution-beschreibung) | `dcterms:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
 | [Größe in Bytes](#distribution-grosse-in-bytes) | `dcat:byteSize` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..1]` |
-| [Veröffentlichungsdatum](#distribution-veroffentlichungsdatum) | `dct:issued` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..1]` |
+| [Veröffentlichungsdatum](#distribution-veroffentlichungsdatum) | `dcterms:issued` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..1]` |
 | [Download-URL](#distribution-download-url) | `dcat:downloadURL` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` |
-| [Sprache](#distribution-sprache) | `dct:language` | [`dct:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) | <small>Optional</small> | `[*]` |
+| [Sprache](#distribution-sprache) | `dcterms:language` | [`dcterms:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) | <small>Optional</small> | `[*]` |
 | [Dokumentation](#distribution-dokumentation) | `foaf:page` | [`foaf:Document`](http://xmlns.com/foaf/0.1/Document) | <small>Optional</small> | `[*]` |
-| [Grad der Zugänglichkeit](#distribution-grad-zuganglichkeit) | `dct:rights` | [`dct:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` |
-| [Konform zu Standard](#distribution-konform-zu-standard) | `dct:conformsTo` | [`dct:Standard`](http://purl.org/dc/terms/Standard) | <small>Optional</small> | `[*]` |
-| [Medientyp](#distribution-medientyp) | `dcat:mediaType` | [`dct:MediaType`](http://purl.org/dc/terms/MediaType) | <small>Optional</small> | `[0..1]` |
-| [Kompressionsformat](#distribution-kompressionsformat) | `dcat:compressFormat` | [`dct:MediaType`](http://purl.org/dc/terms/MediaType) | <small>Optional</small> | `[0..1]` |
-| [Paketformat](#distribution-paketformat) | `dcat:packageFormat` | [`dct:MediaType`](http://purl.org/dc/terms/MediaType) | <small>Optional</small> | `[0..1]` |
+| [Grad der Zugänglichkeit](#distribution-grad-zuganglichkeit) | `dcterms:rights` | [`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` |
+| [Konform zu Standard](#distribution-konform-zu-standard) | `dcterms:conformsTo` | [`dcterms:Standard`](http://purl.org/dc/terms/Standard) | <small>Optional</small> | `[*]` |
+| [Medientyp](#distribution-medientyp) | `dcat:mediaType` | [`dcterms:MediaType`](http://purl.org/dc/terms/MediaType) | <small>Optional</small> | `[0..1]` |
+| [Kompressionsformat](#distribution-kompressionsformat) | `dcat:compressFormat` | [`dcterms:MediaType`](http://purl.org/dc/terms/MediaType) | <small>Optional</small> | `[0..1]` |
+| [Paketformat](#distribution-paketformat) | `dcat:packageFormat` | [`dcterms:MediaType`](http://purl.org/dc/terms/MediaType) | <small>Optional</small> | `[0..1]` |
 | [Regelwerk](#distribution-regelwerk) | `odrl:hasPolicy` | [`odrl:Policy`](https://www.w3.org/TR/odrl-vocab/#term-Policy) | <small>Optional</small> | `[0..1]` |
 | [Status](#distribution-status) | `adms:status` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Optional</small> | `[0..1]` |
 | [Räumliche Auflösung in Meter](#distribution-raumliche-auflosung-in-meter) | `dcat:spatialResolutionInMeters` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..*]` |
@@ -1088,7 +1088,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Distribution: Titel {#distribution-titel}
-> | *URI*                    | [`dct:title`](http://purl.org/dc/terms/title) |
+> | *URI*                    | [`dcterms:title`](http://purl.org/dc/terms/title) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
 > | Verbindlichkeit          | Empfohlen |
@@ -1099,7 +1099,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Distribution: Aktualisierungsdatum {#distribution-aktualisierungsdatum}
-> | *URI*                    | [`dct:modified`](http://purl.org/dc/terms/modified) |
+> | *URI*                    | [`dcterms:modified`](http://purl.org/dc/terms/modified) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime` |
 > | Verbindlichkeit          | Empfohlen |
@@ -1111,9 +1111,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Distribution: Lizenz {#distribution-lizenz}
-> | *URI*                    | [`dct:license`](http://purl.org/dc/terms/license) |
+> | *URI*                    | [`dcterms:license`](http://purl.org/dc/terms/license) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) |
+> | Wertebereich             | [`dcterms:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) |
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf die Lizenz, unter welcher die Distribution zur Verfügung gestellt wird. Es bestehen weitergehende Einschränkungen für die Kooperation GovData, welche im entsprechenden Konventionenhandbuch geklärt sind. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-licenses) |
@@ -1122,14 +1122,14 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Distribution: Format {#distribution-format}
-> | *URI*                    | [`dct:format`](http://purl.org/dc/terms/format) |
+> | *URI*                    | [`dcterms:format`](http://purl.org/dc/terms/format) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:MediaTypeOrExtent`](http://purl.org/dc/terms/MediaTypeOrExtent) |
+> | Wertebereich             | [`dcterms:MediaTypeOrExtent`](http://purl.org/dc/terms/MediaTypeOrExtent) |
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft verweist auf das Datenformat der Distribution.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zu-dateiformaten) genauer beschrieben. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-file-type) |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_format  | 
-> | Änderungen zur Vorversion | 3.0: Errata: Wertebereichs auf dct:MediaTypeOrExtent geändert. | 
+> | Änderungen zur Vorversion | 3.0: Errata: Wertebereichs auf dcterms:MediaTypeOrExtent geändert. | 
 
 <br>
 
@@ -1154,7 +1154,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Distribution: Beschreibung {#distribution-beschreibung}
-> | *URI*                    | [`dct:description`](http://purl.org/dc/terms/description) |
+> | *URI*                    | [`dcterms:description`](http://purl.org/dc/terms/description) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
 > | Verbindlichkeit          | Optional |
@@ -1177,7 +1177,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Distribution: Veröffentlichungsdatum {#distribution-veroffentlichungsdatum}
-> | *URI*                    | [`dct:issued`](http://purl.org/dc/terms/issued) |
+> | *URI*                    | [`dcterms:issued`](http://purl.org/dc/terms/issued) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime` |
 > | Verbindlichkeit          | Optional |
@@ -1200,9 +1200,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Distribution: Sprache {#distribution-sprache}
-> | *URI*                    | [`dct:language`](http://purl.org/dc/terms/language) |
+> | *URI*                    | [`dcterms:language`](http://purl.org/dc/terms/language) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) |
+> | Wertebereich             | [`dcterms:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf die in der Distribution verwendete Sprache.<br>Diese Eigenschaft kann wiederholt werden, sofern die Distribution in mehreren Sprachen vorliegt. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-languages) |
@@ -1222,9 +1222,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Distribution: Grad der Zugänglichkeit {#distribution-grad-zuganglichkeit}
-> | *URI*                    | [`dct:rights`](http://purl.org/dc/terms/accessRights) |
+> | *URI*                    | [`dcterms:rights`](http://purl.org/dc/terms/accessRights) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:RightsStatement`](http://purl.org/dc/terms/RightsStatement) |
+> | Wertebereich             | [`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft verweist auf eine juristische Quelle, welche die mit der Distribution assoziierten Rechte spezifiziert.  |
@@ -1233,9 +1233,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Distribution: Konform zu Standard {#distribution-konform-zu-standard}
-> | *URI*                    | [`dct:conformsTo`](http://purl.org/dc/terms/conformsTo) |
+> | *URI*                    | [`dcterms:conformsTo`](http://purl.org/dc/terms/conformsTo) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:Standard`](http://purl.org/dc/terms/Standard) |
+> | Wertebereich             | [`dcterms:Standard`](http://purl.org/dc/terms/Standard) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft verweist auf ein etabliertes Schema, zu dem die Distribution konform ist.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#konformitat-zu-bestehenden-standards) genauer beschrieben.  |
@@ -1246,7 +1246,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 ###  Distribution: Medientyp {#distribution-medientyp}
 > | *URI*                    | [`dcat:mediaType`](http://www.w3.org/ns/dcat#mediaType) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:MediaType`](http://purl.org/dc/terms/MediaType) |
+> | Wertebereich             | [`dcterms:MediaType`](http://purl.org/dc/terms/MediaType) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf den Medientyp der Distribution.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zu-dateiformaten) genauer beschrieben. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-iana-media-types) |
@@ -1257,7 +1257,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 ###  Distribution: Kompressionsformat {#distribution-kompressionsformat}
 > | *URI*                    | [`dcat:compressFormat`](http://www.w3.org/ns/dcat#mediaType) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:MediaType`](http://purl.org/dc/terms/MediaType) |
+> | Wertebereich             | [`dcterms:MediaType`](http://purl.org/dc/terms/MediaType) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf das Dateiformat, in dem die Daten der Distribution in komprimierter Form, z.B. um die Größe zu reduzieren, zum Download angeboten werden. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-iana-media-types) |
@@ -1268,7 +1268,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 ###  Distribution: Paketformat {#distribution-paketformat}
 > | *URI*                    | [`dcat:packageFormat`](http://www.w3.org/ns/dcat#mediaType) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:MediaType`](http://purl.org/dc/terms/MediaType) |
+> | Wertebereich             | [`dcterms:MediaType`](http://purl.org/dc/terms/MediaType) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf das Dateiformat, in dem die Daten der Distribution zusammengeschnürt zum Download angeboten werden. Zum Beispiel, um den Download zu erleichtern. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-iana-media-types) |
@@ -1352,10 +1352,10 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 ## Klasse: Zeitraum
 
-> | *URI der Klasse* | [`dct:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime)      |
+> | *URI der Klasse* | [`dcterms:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime)      |
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Ein Zeitintervall, welches durch Start- und Endzeitpunkt bezeichnet bzw. definiert ist.<br>Das Zeitintervall kann auch offen sein, dann hat es lediglich einen Start- oder Endzeitpunkt.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-zeitliche-abdeckung) genauer beschrieben.     |
-> | eingebunden über | dct:temporal (dcat:Dataset)         | 
+> | eingebunden über | dcterms:temporal (dcat:Dataset)         | 
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Class:Period_of_Time |
 
 <br>
@@ -1426,10 +1426,10 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 ## Klasse: Standort
 
-> | *URI der Klasse* | [`dct:Location`](http://purl.org/dc/terms/Location)      |
+> | *URI der Klasse* | [`dcterms:Location`](http://purl.org/dc/terms/Location)      |
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Ein räumlicher Bereich oder ein bezeichneter Ort. Er kann durch ein kontrolliertes Vokabular oder mit geographischen Koordinaten repräsentiert werden.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zur-geografischen-abdeckung) genauer beschrieben.     |
-> | eingebunden über | dct:spatial (dcat:Dataset)         | 
+> | eingebunden über | dcterms:spatial (dcat:Dataset)         | 
 > | Weiterführende Dokumentationen | https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/Location/ |
 
 <br>
@@ -1493,7 +1493,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | *URI der Klasse* | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent)      |
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Eine Stelle oder Person, welche mit Katalogen und Datensätzen in unterschiedlichen Rollenausprägungen assoziiert ist.     |
-> | eingebunden über | dct:publisher (dcat:Catalog), dct:publisher (dcat:Dataset), dct:creator (dcat:Dataset), ...         | 
+> | eingebunden über | dcterms:publisher (dcat:Catalog), dcterms:publisher (dcat:Dataset), dcterms:creator (dcat:Dataset), ...         | 
 > | Weiterführende Dokumentationen | http://xmlns.com/foaf/spec/#term_Agent |
 
 <br>
@@ -1502,7 +1502,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
 | [Name](#verantwortliche-stelle-name) | `foaf:name` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
-| [Typ](#verantwortliche-stelle-typ) | `dct:type` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Optional</small> | `[0..1]` |
+| [Typ](#verantwortliche-stelle-typ) | `dcterms:type` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Optional</small> | `[0..1]` |
 
 
 <br>
@@ -1521,7 +1521,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Verantwortliche Stelle: Typ {#verantwortliche-stelle-typ}
-> | *URI*                    | [`dct:type`](http://purl.org/dc/terms/type) |
+> | *URI*                    | [`dcterms:type`](http://purl.org/dc/terms/type) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
 > | Verbindlichkeit          | Optional |
@@ -1629,7 +1629,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | *URI der Klasse* | [`dcat:CatalogRecord`](http://www.w3.org/ns/dcat#CatalogRecord)      |
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Die Beschreibung des Eintrags in einem Katalog.     |
-> | eingebunden über | dcat:record (dcat:Catalog), dct:source (dcat:CatalogRecord)         | 
+> | eingebunden über | dcat:record (dcat:Catalog), dcterms:source (dcat:CatalogRecord)         | 
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Class:Catalog_Record |
 
 <br>
@@ -1640,15 +1640,15 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [Aktualisierungsdatum](#katalogeintrag-aktualisierungsdatum) | `dct:modified` | [`rdfs:Literal`]() | <small>Pflicht</small> | `[1]` |
+| [Aktualisierungsdatum](#katalogeintrag-aktualisierungsdatum) | `dcterms:modified` | [`rdfs:Literal`]() | <small>Pflicht</small> | `[1]` |
 | [Katalogeintrag](#katalogeintrag-katalogeintrag) | `foaf:primaryTopic` | [`dcat:Resource`]() | <small>Pflicht</small> | `[1]` |
-| [Application Profile der Metadaten](#katalogeintrag-konform-zu) | `dct:conformsTo` | [`dct:Standard`](http://purl.org/dc/terms/Standard) | <small>Empfohlen</small> | `[*]` |
+| [Application Profile der Metadaten](#katalogeintrag-konform-zu) | `dcterms:conformsTo` | [`dcterms:Standard`](http://purl.org/dc/terms/Standard) | <small>Empfohlen</small> | `[*]` |
 | [Änderungstyp](#katalogeintrag-anderungstyp) | `adms:status` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Empfohlen</small> | `[0..1]` |
-| [Veröffentlichungsdatum](#katalogeintrag-veroffentlichungsdatum) | `dct:issued` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[0..1]` |
-| [Titel](#katalogeintrag-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
-| [Beschreibung](#katalogeintrag-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
-| [Sprache](#katalogeintrag-sprache) | `dct:language` | [`dct:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) | <small>Optional</small> | `[*]` |
-| [Original-Metadaten der Ressource](#katalogeintrag-original-metadaten-der-ressource) | `dct:source` | [`dcat:CatalogRecord`]() | <small>Optional</small> | `[0..1]` |
+| [Veröffentlichungsdatum](#katalogeintrag-veroffentlichungsdatum) | `dcterms:issued` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[0..1]` |
+| [Titel](#katalogeintrag-titel) | `dcterms:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
+| [Beschreibung](#katalogeintrag-beschreibung) | `dcterms:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
+| [Sprache](#katalogeintrag-sprache) | `dcterms:language` | [`dcterms:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) | <small>Optional</small> | `[*]` |
+| [Original-Metadaten der Ressource](#katalogeintrag-original-metadaten-der-ressource) | `dcterms:source` | [`dcat:CatalogRecord`]() | <small>Optional</small> | `[0..1]` |
 
 
 <br>
@@ -1656,7 +1656,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Katalogeintrag: Aktualisierungsdatum {#katalogeintrag-aktualisierungsdatum}
-> | *URI*                    | [`dct:modified`](http://purl.org/dc/terms/modified) |
+> | *URI*                    | [`dcterms:modified`](http://purl.org/dc/terms/modified) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als  `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime` |
 > | Verbindlichkeit          | Pflicht |
@@ -1680,9 +1680,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Katalogeintrag: Application Profile der Metadaten {#katalogeintrag-konform-zu}
-> | *URI*                    | [`dct:conformsTo`](http://purl.org/dc/terms/conformsTo) |
+> | *URI*                    | [`dcterms:conformsTo`](http://purl.org/dc/terms/conformsTo) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:Standard`](http://purl.org/dc/terms/Standard) |
+> | Wertebereich             | [`dcterms:Standard`](http://purl.org/dc/terms/Standard) |
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf das Application Profile zu dem die Metadaten im Katalog konform sind.  |
@@ -1703,7 +1703,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Katalogeintrag: Veröffentlichungsdatum {#katalogeintrag-veroffentlichungsdatum}
-> | *URI*                    | [`dct:issued`](http://purl.org/dc/terms/issued) |
+> | *URI*                    | [`dcterms:issued`](http://purl.org/dc/terms/issued) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime` |
 > | Verbindlichkeit          | Empfohlen |
@@ -1715,7 +1715,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Katalogeintrag: Titel {#katalogeintrag-titel}
-> | *URI*                    | [`dct:title`](http://purl.org/dc/terms/title) |
+> | *URI*                    | [`dcterms:title`](http://purl.org/dc/terms/title) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
 > | Verbindlichkeit          | Optional |
@@ -1726,7 +1726,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Katalogeintrag: Beschreibung {#katalogeintrag-beschreibung}
-> | *URI*                    | [`dct:description`](http://purl.org/dc/terms/description) |
+> | *URI*                    | [`dcterms:description`](http://purl.org/dc/terms/description) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
 > | Verbindlichkeit          | Optional |
@@ -1737,9 +1737,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Katalogeintrag: Sprache {#katalogeintrag-sprache}
-> | *URI*                    | [`dct:language`](http://purl.org/dc/terms/language) |
+> | *URI*                    | [`dcterms:language`](http://purl.org/dc/terms/language) |
 > |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) |
+> | Wertebereich             | [`dcterms:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf die Sprache der Metadatenbeschreibung für die zum Katalogeintrag gehörenden Eigenschaften (z.B. Titel, Beschreibungen usw.).<br>Diese Eigenschaft kann wiederholt werden, falls die Metadaten in verschiedenen Sprachen zur Verfügung stehen. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-languages) |
@@ -1748,7 +1748,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Katalogeintrag: Original-Metadaten der Ressource {#katalogeintrag-original-metadaten-der-ressource}
-> | *URI*                    | [`dct:source`](http://purl.org/dc/terms/source) |
+> | *URI*                    | [`dcterms:source`](http://purl.org/dc/terms/source) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`dcat:CatalogRecord`]() |
 > | Verbindlichkeit          | Optional |
@@ -1765,22 +1765,22 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 ## Klasse: Lizenzdokument
 
-> | *URI der Klasse* | [`dct:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument)      |
+> | *URI der Klasse* | [`dcterms:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument)      |
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Ein rechtlich verbindliches Dokument, welches die Verwendung einer Ressource offiziell erlaubt.     |
-> | eingebunden über | dct:license (dcat:Distribution)         | 
+> | eingebunden über | dcterms:license (dcat:Distribution)         | 
 > | Weiterführende Dokumentationen | https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2012-06-14/#terms-LicenseDocument |
 > | Änderungen zur Vorversion | 3.0: Errata: Label korrigiert. |
 
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dct:type`](#lizenzdokument-lizenztyp).<br>
+[`dcterms:type`](#lizenzdokument-lizenztyp).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [Lizenztyp](#lizenzdokument-lizenztyp) | `dct:type` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[*]` |
+| [Lizenztyp](#lizenzdokument-lizenztyp) | `dcterms:type` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[*]` |
 
 
 <br>
@@ -1788,7 +1788,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Lizenzdokument: Lizenztyp {#lizenzdokument-lizenztyp}
-> | *URI*                    | [`dct:type`](http://purl.org/dc/terms/type) |
+> | *URI*                    | [`dcterms:type`](http://purl.org/dc/terms/type) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Literal) |
 > | Verbindlichkeit          | Empfohlen |
@@ -1817,7 +1817,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
 | [Hatte Rolle](#beziehung-rolle) | `dcat:hadRole` | [`dcat:Role`](http://www.w3.org/ns/dcat#Role) | <small>Pflicht</small> | `[1..*]` |
-| [Beziehung](#beziehung-beziehung) | `dct:relation` | [`rdfs:Resource`](rdfs:Resource) | <small>Pflicht</small> | `[1..*]` |
+| [Beziehung](#beziehung-beziehung) | `dcterms:relation` | [`rdfs:Resource`](rdfs:Resource) | <small>Pflicht</small> | `[1..*]` |
 
 
 <br>
@@ -1836,7 +1836,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Beziehung: Beziehung {#beziehung-beziehung}
-> | *URI*                    | [`dct:relation`](http://purl.org/dc/terms/relation) |
+> | *URI*                    | [`dcterms:relation`](http://purl.org/dc/terms/relation) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Resource`](rdfs:Resource) |
 > | Verbindlichkeit          | Pflicht |
@@ -1855,7 +1855,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 > | *URI der Klasse* | [`prov:Attribution`](http://www.w3.org/ns/prov#Attribution)      |
 > |:-----------------|:-----------------------------------------------------|
-> | Beschreibung     | Diese Klasse verknüft eine Ressource mit Agenten und beschreibt, welche Rolle die Agenten im Bezug auf die Ressource eingenommen haben.<br>Sie ist insbesondere dann relevant, wenn keine Eigenschaften wie `dcatde:originator`, `dct:creator` oder `dct:publisher` existieren, um die Rolle zu beschreiben.     |
+> | Beschreibung     | Diese Klasse verknüft eine Ressource mit Agenten und beschreibt, welche Rolle die Agenten im Bezug auf die Ressource eingenommen haben.<br>Sie ist insbesondere dann relevant, wenn keine Eigenschaften wie `dcatde:originator`, `dcterms:creator` oder `dcterms:publisher` existieren, um die Rolle zu beschreiben.     |
 > | eingebunden über | prov:qualifiedAttribution (dcat:Dataset, dcat:DataService)         | 
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/prov-o/#Attribution |
 
@@ -1948,7 +1948,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
-| [Titel](#kategorienschema-bezeichnung) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
+| [Titel](#kategorienschema-bezeichnung) | `dcterms:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
 
 
 <br>
@@ -1956,7 +1956,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 ###  Kategorienschema: Titel {#kategorienschema-bezeichnung}
-> | *URI*                    | [`dct:title`](http://purl.org/dc/terms/title) |
+> | *URI*                    | [`dcterms:title`](http://purl.org/dc/terms/title) |
 > |:-------------------------|:-------------------------------------------|
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
 > | Verbindlichkeit          | Pflicht |
