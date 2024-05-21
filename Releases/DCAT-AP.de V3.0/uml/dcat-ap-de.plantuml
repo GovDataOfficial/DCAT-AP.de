@@ -973,8 +973,9 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#status-und-erwartete-verfugbarkeit) genauer beschrieben.
         '@ rdf:about       = http://www.w3.org/ns/adms#status
         '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-adms/#adms-status
-        '@ _:vocabularyLink = #kv-adms-status
+        '@ _:vocabularyLink = #kv-distribution-status
         '@ sh:shapes       = dcatap:Distribution_Property_adms_status, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
+        '@ adms:versionNotes = 3.0: Änderung des kontrollierten Vokabulars.
     <<optional>> dcat:spatialResolutionInMeters ~> rdfs:Literal [0..*]
         '@ rdfs:label      = Räumliche Auflösung in Meter
         '@ _:internalLink  = distribution-raumliche-auflosung-in-meter

@@ -213,7 +213,19 @@ Auch hier können fehlende Einträge bei Bedarf eingetragen werden: https://www.
 > | Beispiel                       | ZIP: `<https://www.iana.org/assignments/media-types/application/pdf>` |
 
 
-## ADMS Vokabular "Status Type" {#kv-adms-status}
+## EU Vokabular "Distribution Status" {#kv-distribution-status}
+Die Liste der möglichen Status wurde aus der ADMS-Spezifikation herausgelöste und ins Publication Office überführte.
+
+> | Betroffene Eigenschaften       | [`adms:status` ](#distribution-status) |
+> |:-------------------------------|:---------------------------------------|
+> | Verbindlichkeit Vokabular      | Pflicht                                |
+> | Verwendung in Klassen          | [`dcat:Distribution`](#distribution-status) |
+> | Menschenlesbare Ansicht        | [EU Vocabularies: distribution-status](https://op.europa.eu/de/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/distribution-status) |
+> | Basis-URI                      | `http://publications.europa.eu/resource/authority/distribution-status/` |
+> | Beispiel                       | Vollständig:  `http://publications.europa.eu/resource/authority/distribution-status/COMPLETED` |
+
+
+## ADMS Vokabular "Status Type" (DEPRECATED) {#kv-adms-status}
 Die ADMS-Spezifikation enthält die Liste von Begriffen im ADMS „Status“-Vokabular.
 
 > | Betroffene Eigenschaften       | [`adms:status` ](#distribution-status) |

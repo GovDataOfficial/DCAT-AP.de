@@ -1293,8 +1293,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Wertebereich             | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
-> | Beschreibung             | Diese Eigenschaft bezieht sich auf den Status bzw. Reifegrad der Distribution.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#status-und-erwartete-verfugbarkeit) genauer beschrieben. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-adms-status) |
+> | Beschreibung             | Diese Eigenschaft bezieht sich auf den Status bzw. Reifegrad der Distribution.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#status-und-erwartete-verfugbarkeit) genauer beschrieben. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-distribution-status) |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-adms/#adms-status  | 
+> | Änderungen zur Vorversion | 3.0: Änderung des kontrollierten Vokabulars. | 
 
 <br>
 

@@ -30,4 +30,8 @@ Die von GovData gepflegte [Liste der Algorithmen](#kv-hash-algorithms-deprecated
 
 Das [EU Vokabular "Access Right"](#kv-access-right) wurde zum Standard hinzugefügt. Es wird für die Eigenschaft `dct:accessRights` in [dcat:Dataset](#datensatz-grad-zuganglichkeit) und [dcat:DataService](#datenservice-grad-zuganglichkeit) verwendet.
 
+### Kontrolliertes Vokabular für den Status einer Distribution
+
+Das [EU Vokabular "Distribution Status"](#kv-distribution-status) wurde zum Standard hinzugefügt. Es ersetzt für die Eigenschaft `adms:status` in [dcat:Distribution](#distribution-status) die nun als _deprecated_ gekennzeichnete [Liste aus der ADMS-Spezifikation](#kv-adms-status).
+
 ---
