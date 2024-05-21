@@ -322,6 +322,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Bearbeiter](#datensatz-bearbeiter) | `dcterms:contributor` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` |
 | [Urheber](#datensatz-urheber) | `dcatde:originator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` |
 | [Verwalter](#datensatz-verwalter) | `dcatde:maintainer` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` |
+| [In Serie](#datensatz-in-serie) | `dcat:inSeries` | [`dcat:DatasetSeries`](http://www.w3.org/ns/dcat#DatasetSeries) | <small>Optional</small> | `[*]` |
 
 
 <br> Die folgenden weiteren Eigenschaften wurden von der Superklasse [`dcat:Resource`](#klasse-ressource) geerbt, werden aber nicht genauer betrachtet: [`dcterms:license`](#distribution-lizenz), [`dcterms:rights`](#distribution-grad-zuganglichkeit) und [`odrl:hasPolicy`](#distribution-regelwerk).
@@ -873,6 +874,18 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
 
+###  Datensatz: In Serie {#datensatz-in-serie}
+> | *URI*                    | [`dcat:inSeries`](http://www.w3.org/ns/dcat#inSeries) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`dcat:DatasetSeries`](http://www.w3.org/ns/dcat#DatasetSeries) |
+> | Verbindlichkeit          | Optional |
+> | Multiplizität            | `[*]`                    |
+> | Beschreibung             | Diese Eigenschaft verweist auf die Datensatzserie zu der der Datensatz gehört.  |
+> | Verwendungshinweis       | Pflichteigenschaft, wenn es sich um einen Datensatz handelt, der zu einer Datensatzserie gehören soll. | 
+> | Änderungen zur Vorversion | 3.0: Im Zuge der Einführung von `dcat:DatasetSeries` hinzugefügt. | 
+
+<br>
+
 
 
 ***
@@ -1022,6 +1035,172 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung             | Die Datenformate, die beim Abruf der `dcat:endpointURL` zurückgegeben werden können. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-file-type) |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_format  | 
 > | Änderungen zur Vorversion | 3.0: Eigenschaft aufgenommen. | 
+
+<br>
+
+
+
+***
+
+
+## Klasse: Datensatzserie
+
+> | *URI der Klasse* | [`dcat:DatasetSeries`](http://www.w3.org/ns/dcat#DatasetSeries)      |
+> |:-----------------|:-----------------------------------------------------|
+> | Beschreibung     | Eine Sammlung von Datasätzen, die zwar separat veröffentlicht werden aber, eine gemeinsame Merkmale aufweisen, die sie zusammenfassen.<br>Es wird empfohlen, Datensatzserien ohne einen Datensatz in der Sammlung zu vermeiden. Es sollte mindestens ein Datensatz über die Eigenschaft `dcat:inSeries` auf eine Datensatzserie verweisen.      |
+> | eingebunden über | dcat:inSeries (dcat:Dataset)         | 
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series |
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. |
+
+<br>
+
+Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
+[`dcterms:publisher`](#datensatzserie-herausgeber).<br>
+
+
+|                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
+|:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
+| [Titel](#datensatzserie-titel) | `dcterms:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
+| [Kontakt](#datensatzserie-kontakt) | `dcat:contactPoint` | [`vcard:Kind`](http://www.w3.org/TR/vcard-rdf/#Kind) | <small>Empfohlen</small> | `[*]` |
+| [Räumliche Abdeckung](#datensatzserie-raumliche-abdeckung) | `dcterms:spatial` | [`dcterms:Location`](http://purl.org/dc/terms/Location) | <small>Empfohlen</small> | `[*]` |
+| [Herausgeber](#datensatzserie-herausgeber) | `dcterms:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Empfohlen</small> | `[0..1]` |
+| [Zeitliche Abdeckung](#datensatzserie-zeitliche-abdeckung) | `dcterms:temporal` | [`dcterms:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime) | <small>Empfohlen</small> | `[*]` |
+| [Beschreibung](#datensatzserie-beschreibung) | `dcterms:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
+| [Rechtsgrundlage](#datensatzserie-rechtsgrundlage) | `dcatap:applicableLegislation` | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) | <small>Optional</small> | `[*]` |
+| [Aktualisierungsfrequenz](#datensatzserie-aktualisierungsfrequenz) | `dcterms:accrualPeriodicity` | [`dcterms:Frequency`](http://purl.org/dc/terms/Frequency) | <small>Optional</small> | `[0..1]` |
+| [Veröffentlichungsdatum](#datensatzserie-veroffentlichungsdatum) | `dcterms:issued` | [`rdfs:Literal`]() | <small>Optional</small> | `[0..1]` |
+| [Aktualisierungsdatum](#datensatzserie-aktualisierungsdatum) | `dcterms:modified` | [`rdfs:Literal`]() | <small>Optional</small> | `[0..1]` |
+
+
+<br>
+<hr>
+<br>
+
+###  Datensatzserie: Titel {#datensatzserie-titel}
+> | *URI*                    | [`dcterms:title`](http://purl.org/dc/terms/title) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
+> | Verbindlichkeit          | Pflicht |
+> | Multiplizität            | `[1..*]`                    |
+> | Beschreibung             | Diese Eigenschaft bezeichnet den einer Datensatzserie zugewiesenen Titel.<br>Diese Eigenschaft kann für parallele Sprachversionen des Datensatztitels wiederholt werden.  |
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.title)  | 
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+
+<br>
+
+###  Datensatzserie: Kontakt {#datensatzserie-kontakt}
+> | *URI*                    | [`dcat:contactPoint`](http://www.w3.org/ns/dcat#contactPoint) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`vcard:Kind`](http://www.w3.org/TR/vcard-rdf/#Kind) |
+> | Verbindlichkeit          | Empfohlen |
+> | Multiplizität            | `[*]`                    |
+> | Beschreibung             | Diese Eigenschaft umfasst Kontaktinformationen, welche für das Zusenden von Kommentaren zur jeweiligen Datensatzserie verwendet werden können.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#ansprechstelle) genauer beschrieben.  |
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_contact_point  | 
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+
+<br>
+
+###  Datensatzserie: Räumliche Abdeckung {#datensatzserie-raumliche-abdeckung}
+> | *URI*                    | [`dcterms:spatial`](http://purl.org/dc/terms/spatial) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`dcterms:Location`](http://purl.org/dc/terms/Location) |
+> | Verbindlichkeit          | Empfohlen |
+> | Multiplizität            | `[*]`                    |
+> | Beschreibung             | Ein räumlicher Bereich der durch die Datensatzserie abgedeckt wird. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-spatial) |
+> | Verwendungshinweis       | Wenn die räumliche Abdeckung eine Dimension der Datensatzserie ist, sollte die räumliche Abdeckung jedes Datensatzes in der Serie Teil der räumlichen Abdeckung sein.<br>In diesem Fall wird ein unspezifischer Wert empfohlen, z. B. die EU oder eine große Bounding Box, die die erwarteten Werte abdeckt.  | 
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial  | 
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+
+<br>
+
+###  Datensatzserie: Herausgeber {#datensatzserie-herausgeber}
+> | *URI*                    | [`dcterms:publisher`](http://purl.org/dc/terms/publisher) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) |
+> | Verbindlichkeit          | Empfohlen |
+> | Multiplizität            | `[0..1]`                    |
+> | Beschreibung             | Diese Eigenschaft verweist auf die Stelle oder Person, die für Bereitstellung der Datensatzserie verantwortlich ist.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zum-herausgeber) genauer beschrieben.  |
+> | Verwendungshinweis       | Der Herausgeber der Datensatzserie ist möglicherweise nicht der Herausgeber aller Datensätze.  So könnte z. B. ein digitales Archiv die Veröffentlichung älterer Datensätze der Reihe übernehmen.   | 
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_publisher  | 
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+> | Änderungen durch DCAT-AP.de | Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat. | 
+<br>
+
+###  Datensatzserie: Zeitliche Abdeckung {#datensatzserie-zeitliche-abdeckung}
+> | *URI*                    | [`dcterms:temporal`](http://purl.org/dc/terms/temporal) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`dcterms:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime) |
+> | Verbindlichkeit          | Empfohlen |
+> | Multiplizität            | `[*]`                    |
+> | Beschreibung             | Ein Zeitintervall, welches durch Start- und Endzeitpunkt bezeichnet bzw. definiert ist.  |
+> | Verwendungshinweis       | Wenn die zeitliche Abdeckung eine Dimension in der Datensatzserie ist, sollte die zeitliche Abdeckung jedes enthaltenen Datensatzes Teil der zeitlichen Abdeckung sein der Serie. In diesem Fall wird ein offener Wert empfohlen, z. B. nach 2012.  | 
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_temporal  | 
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+
+<br>
+
+###  Datensatzserie: Beschreibung {#datensatzserie-beschreibung}
+> | *URI*                    | [`dcterms:description`](http://purl.org/dc/terms/description) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
+> | Verbindlichkeit          | Optional |
+> | Multiplizität            | `[*]`                    |
+> | Beschreibung             | Diese Eigenschaft enthält eine Beschreibung der Datensatzserie als Freitext.  |
+> | Verwendungshinweis       | Diese Eigenschaft kann für parallel existierende Sprachversionen der Beschreibung wiederholt werden.<br>Es wird empfohlen, eine Angabe zu den Dimensionen zu machen, über die sich die Datensatzserie erstreckt. | 
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_description  | 
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+
+<br>
+
+###  Datensatzserie: Rechtsgrundlage {#datensatzserie-rechtsgrundlage}
+> | *URI*                    | [`dcatap:applicableLegislation`](http://data.europa.eu/r5r/applicableLegislation) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) |
+> | Verbindlichkeit          | Optional |
+> | Multiplizität            | `[*]`                    |
+> | Beschreibung             | Die Rechtsvorschriften, die die Erstellung oder Verwaltung der Datensatzserie vorschreiben.  |
+> | Verwendungshinweis       | Handelt es sich um ein High Value Dataset, muss `http://data.europa.eu/eli/reg_impl/2023/138/oj` angegeben werden.<br>Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden. | 
+> | Weiterführende Dokumentationen | https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation  | 
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+
+<br>
+
+###  Datensatzserie: Aktualisierungsfrequenz {#datensatzserie-aktualisierungsfrequenz}
+> | *URI*                    | [`dcterms:accrualPeriodicity`](http://purl.org/dc/terms/accrualPeriodicity) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`dcterms:Frequency`](http://purl.org/dc/terms/Frequency) |
+> | Verbindlichkeit          | Optional |
+> | Multiplizität            | `[0..1]`                    |
+> | Beschreibung             | Diese Eigenschaft beschreibt die Aktualisierungsfrequenz der Datensatzserie. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-frequency) |
+> | Verwendungshinweis       | Die Aktualisierungsfrequenz der Datensatzserie ist nicht identisch zur Aktualisierungsfrequenz enthaltener Datensätze. | 
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_frequency  | 
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+
+<br>
+
+###  Datensatzserie: Veröffentlichungsdatum {#datensatzserie-veroffentlichungsdatum}
+> | *URI*                    | [`dcterms:issued`](http://purl.org/dc/terms/issued) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime` |
+> | Verbindlichkeit          | Optional |
+> | Multiplizität            | `[0..1]`                    |
+> | Beschreibung             | Diese Eigenschaft enthält das Datum der Herausgabe/Emission (z.B. in Form einer Veröffentlichung) der Datensatzserie.  |
+> | Verwendungshinweis       | Der Zeitpunkt, zu dem die Datensatzserie als verwaltete Ressource eingerichtet wurde. Dies ist nicht gleich dem Veröffentlichungsdatum des ältesten Datensatzes in der Serie.  | 
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_release_date  | 
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+
+<br>
+
+###  Datensatzserie: Aktualisierungsdatum {#datensatzserie-aktualisierungsdatum}
+> | *URI*                    | [`dcterms:modified`](http://purl.org/dc/terms/modified) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime` |
+> | Verbindlichkeit          | Optional |
+> | Multiplizität            | `[0..1]`                    |
+> | Beschreibung             | Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation der Datensatzserie.  |
+> | Verwendungshinweis       | Dies ist nicht identisch mit dem zuletzt modifizierten Datensatz der Serie. | 
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date  | 
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
 
 <br>
 

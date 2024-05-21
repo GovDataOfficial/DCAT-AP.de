@@ -32,6 +32,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Weitere Version](#datensatz-weitere-version) (`dcat:hasVersion`) | 3.0: Neu hinzugefügt. | 
 | [Weitere Version (DEPRECATED)](#datensatz-weitere-version-deprecated) (`dcterms:hasVersion`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
 | [Ist Version von (DEPRECATED)](#datensatz-ist-version) (`dcterms:isVersionOf`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
+| [In Serie](#datensatz-in-serie) (`dcat:inSeries`) | 3.0: Im Zuge der Einführung von `dcat:DatasetSeries` hinzugefügt. | 
 
 
 ### Klasse: Datenservice
@@ -46,6 +47,29 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Grad der Zugänglichkeit](#datenservice-grad-zuganglichkeit) (`dcterms:accessRights`) | 3.0: Kontrolliertes Vokabular hinzugefügt. | 
 | [Format](#datenservice-format) (`dcterms:format`) | 3.0: Eigenschaft aufgenommen. | 
 | [Herausgeber](#datenservice-herausgeber) (`dcterms:publisher`) | 3.0: Eigenschaft aufgenommen. | 
+
+
+### Klasse: Datensatzserie
+
+Auf Ebene der Klasse [Datensatzserie](#klasse-datensatzserie) (`dcat:DatasetSeries`) gibt es 
+folgende Änderungen zur Vorversion:
+
+> 3.0: Neu hinzugefügt.
+
+Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
+
+| Eigenschaft           | Änderungen                      |
+|:----------------------|:--------------------------------|
+| [Titel](#datensatzserie-titel) (`dcterms:title`) | 3.0: Neu hinzugefügt. | 
+| [Kontakt](#datensatzserie-kontakt) (`dcat:contactPoint`) | 3.0: Neu hinzugefügt. | 
+| [Beschreibung](#datensatzserie-beschreibung) (`dcterms:description`) | 3.0: Neu hinzugefügt. | 
+| [Rechtsgrundlage](#datensatzserie-rechtsgrundlage) (`dcatap:applicableLegislation`) | 3.0: Neu hinzugefügt. | 
+| [Aktualisierungsfrequenz](#datensatzserie-aktualisierungsfrequenz) (`dcterms:accrualPeriodicity`) | 3.0: Neu hinzugefügt. | 
+| [Veröffentlichungsdatum](#datensatzserie-veroffentlichungsdatum) (`dcterms:issued`) | 3.0: Neu hinzugefügt. | 
+| [Aktualisierungsdatum](#datensatzserie-aktualisierungsdatum) (`dcterms:modified`) | 3.0: Neu hinzugefügt. | 
+| [Räumliche Abdeckung](#datensatzserie-raumliche-abdeckung) (`dcterms:spatial`) | 3.0: Neu hinzugefügt. | 
+| [Herausgeber](#datensatzserie-herausgeber) (`dcterms:publisher`) | 3.0: Neu hinzugefügt. | 
+| [Zeitliche Abdeckung](#datensatzserie-zeitliche-abdeckung) (`dcterms:temporal`) | 3.0: Neu hinzugefügt. | 
 
 
 ### Klasse: Distribution
