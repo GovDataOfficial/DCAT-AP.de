@@ -16,6 +16,8 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
 | [Titel](#katalog-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
 | [Beschreibung](#katalog-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` |
+| [Datensatz](#katalog-datensatz) | `dcat:dataset` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Pflicht</small> | `[1..*]` |
+| [Herausgeber](#katalog-herausgeber) | `dct:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Pflicht</small> | `[1]` |
 | [Veröffentlichungsdatum](#katalog-veroffentlichungsdatum) | `dct:issued` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[0..1]` |
 | [Aktualisierungsdatum](#katalog-aktualisierungsdatum) | `dct:modified` | [`rdfs:Literal`]() | <small>Empfohlen</small> | `[0..1]` |
 | [Sprache](#katalog-sprache) | `dct:language` | [`dct:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) | <small>Empfohlen</small> | `[*]` |
@@ -23,15 +25,13 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Lizenz](#katalog-lizenz) | `dct:license` | [`dct:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) | <small>Empfohlen</small> | `[0..1]` |
 | [Kategorienschema](#katalog-kategorienschema) | `dcat:themeTaxonomy` | [`skos:ConceptScheme`](http://www.w3.org/2004/02/skos/core#ConceptScheme) | <small>Empfohlen</small> | `[*]` |
 | [Verfügbarkeit](#katalog-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..1]` |
+| [Räumliche Abdeckung](#katalog-raumliche-abdeckung) | `dct:spatial` | [`dct:Location`](http://purl.org/dc/terms/Location) | <small>Empfohlen</small> | `[*]` |
 | [Nutzungsbestimmungen](#katalog-nutzungsbestimmungen) | `dct:rights` | [`dct:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` |
 | [Katalog](#katalog-katalog) | `dcat:catalog` | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) | <small>Optional</small> | `[*]` |
 | [Datenservice](#katalog-datenservice) | `dcat:service` | [`dcat:DataService`](http://www.w3.org/ns/dcat#DataService) | <small>Optional</small> | `[*]` |
-| [Räumliche Abdeckung](#katalog-raumliche-abdeckung) | `dct:spatial` | [`dct:Location`](http://purl.org/dc/terms/Location) | <small>Empfohlen</small> | `[*]` |
 | [Hat Teilkatalog](#katalog-hat-teilkatalog) | `dct:hasPart` | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) | <small>Optional</small> | `[*]` |
 | [Ist Teilkatalog](#katalog-ist-teilkatalog) | `dct:isPartOf` | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) | <small>Optional</small> | `[0..1]` |
 | [Katalogeintrag](#katalog-katalogeintrag) | `dcat:record` | [`dcat:CatalogRecord`](http://www.w3.org/ns/dcat#CatalogRecord) | <small>Optional</small> | `[*]` |
-| [Datensatz](#katalog-datensatz) | `dcat:dataset` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Pflicht</small> | `[1..*]` |
-| [Herausgeber](#katalog-herausgeber) | `dct:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Pflicht</small> | `[1]` |
 | [Autor](#katalog-autor) | `dct:creator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` |
 
 
@@ -61,6 +61,28 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität            | `[1..*]`                    |
 > | Beschreibung             | Diese Eigenschaft enthält eine Beschreibung des Kataloges als Freitext.<br>Diese Eigenschaft kann für parallel existierende Sprachversionen der Katalogbeschreibung wiederholt werden.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_description  | 
+
+<br>
+
+###  Katalog: Datensatz {#katalog-datensatz}
+> | *URI*                    | [`dcat:dataset`](http://www.w3.org/ns/dcat#dataset) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) |
+> | Verbindlichkeit          | Pflicht |
+> | Multiplizität            | `[1..*]`                    |
+> | Beschreibung             | Diese Eigenschaft verknüpft den Katalog mit einem Datensatz, welcher somit Teil des Kataloges wird.  |
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_dataset  | 
+
+<br>
+
+###  Katalog: Herausgeber {#katalog-herausgeber}
+> | *URI*                    | [`dct:publisher`](http://purl.org/dc/terms/publisher) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) |
+> | Verbindlichkeit          | Pflicht |
+> | Multiplizität            | `[1]`                    |
+> | Beschreibung             | Diese Eigenschaft bezieht sich auf die Stelle oder Person, die verantwortlich für Bereitstellung des Kataloges ist.<br>Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zum-herausgeber) genauer beschrieben.  |
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_publisher  | 
 
 <br>
 
@@ -142,6 +164,17 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Änderungen durch DCAT-AP.de | DCAT-AP.de ordnet diese Eigenschaft allen DCAT-Ressourcen und Distributionen zu. | 
 <br>
 
+###  Katalog: Räumliche Abdeckung {#katalog-raumliche-abdeckung}
+> | *URI*                    | [`dct:spatial`](http://purl.org/dc/terms/spatial) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`dct:Location`](http://purl.org/dc/terms/Location) |
+> | Verbindlichkeit          | Empfohlen |
+> | Multiplizität            | `[*]`                    |
+> | Beschreibung             | Diese Eigenschaft bezieht sich auf einen vom Katalog abgedeckten geographischen Bereich. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-spatial) |
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial  | 
+
+<br>
+
 ###  Katalog: Nutzungsbestimmungen {#katalog-nutzungsbestimmungen}
 > | *URI*                    | [`dct:rights`](http://purl.org/dc/terms/rights) |
 > |:-------------------------|:-------------------------------------------|
@@ -175,17 +208,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 <br>
 
-###  Katalog: Räumliche Abdeckung {#katalog-raumliche-abdeckung}
-> | *URI*                    | [`dct:spatial`](http://purl.org/dc/terms/spatial) |
-> |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:Location`](http://purl.org/dc/terms/Location) |
-> | Verbindlichkeit          | Empfohlen |
-> | Multiplizität            | `[*]`                    |
-> | Beschreibung             | Diese Eigenschaft bezieht sich auf einen vom Katalog abgedeckten geographischen Bereich. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-spatial) |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial  | 
-
-<br>
-
 ###  Katalog: Hat Teilkatalog {#katalog-hat-teilkatalog}
 > | *URI*                    | [`dct:hasPart`](http://purl.org/dc/terms/hasPart) |
 > |:-------------------------|:-------------------------------------------|
@@ -216,28 +238,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf den Katalogeintrag, welcher Teil des Kataloges ist.<br>Diese Eigenschaft darf nur mit der besonderen Klasse [`dcat:CatalogRecord`](#klasse-katalogeintrag) verwendet werden. Es handelt sich dabei nicht um einen gewöhnlichen Datensatz.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_catalog_record  | 
-
-<br>
-
-###  Katalog: Datensatz {#katalog-datensatz}
-> | *URI*                    | [`dcat:dataset`](http://www.w3.org/ns/dcat#dataset) |
-> |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) |
-> | Verbindlichkeit          | Pflicht |
-> | Multiplizität            | `[1..*]`                    |
-> | Beschreibung             | Diese Eigenschaft verknüpft den Katalog mit einem Datensatz, welcher somit Teil des Kataloges wird.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_dataset  | 
-
-<br>
-
-###  Katalog: Herausgeber {#katalog-herausgeber}
-> | *URI*                    | [`dct:publisher`](http://purl.org/dc/terms/publisher) |
-> |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) |
-> | Verbindlichkeit          | Pflicht |
-> | Multiplizität            | `[1]`                    |
-> | Beschreibung             | Diese Eigenschaft bezieht sich auf die Stelle oder Person, die verantwortlich für Bereitstellung des Kataloges ist.<br>Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zum-herausgeber) genauer beschrieben.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_publisher  | 
 
 <br>
 
@@ -281,6 +281,10 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Kategorie](#datensatz-kategorie) | `dcat:theme` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Empfohlen</small> | `[*]` |
 | [Kontakt](#datensatz-kontakt) | `dcat:contactPoint` | [`vcard:Kind`](http://www.w3.org/TR/vcard-rdf/#Kind) | <small>Empfohlen</small> | `[*]` |
 | [Verfügbarkeit](#datensatz-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..1]` |
+| [Räumliche Abdeckung](#datensatz-raumliche-abdeckung) | `dct:spatial` | [`dct:Location`](http://purl.org/dc/terms/Location) | <small>Empfohlen</small> | `[*]` |
+| [Zeitliche Abdeckung](#datensatz-zeitliche-abdeckung) | `dct:temporal` | [`dct:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime) | <small>Empfohlen</small> | `[*]` |
+| [Distribution](#datensatz-distribution) | `dcat:distribution` | [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution) | <small>Empfohlen</small> | `[*]` |
+| [Herausgeber](#datensatz-herausgeber) | `dct:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Empfohlen</small> | `[0..1]` |
 | [Datenbereitsteller ID](#datensatz-datenbereitsteller-id) | `dcatde:contributorID` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` |
 | [Beschreibung der Abdeckung](#datensatz-beschreibung-abdeckung) | `dcatde:geocodingDescription` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
 | [ID](#datensatz-id) | `dct:identifier` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
@@ -309,15 +313,11 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Qualifizierte Beziehung](#datensatz-qualifizierte-beziehung) | `dcat:qualifiedRelation` | [`dcat:Relationship`](https://www.w3.org/TR/vocab-dcat-2/#Class:Relationship) | <small>Optional</small> | `[*]` |
 | [Wird Referenziert](#datensatz-wird-referenziert) | `dct:isReferencedBy` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` |
 | [Referenziert](#datensatz-referenziert) | `dct:references` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` |
-| [Räumliche Abdeckung](#datensatz-raumliche-abdeckung) | `dct:spatial` | [`dct:Location`](http://purl.org/dc/terms/Location) | <small>Empfohlen</small> | `[*]` |
-| [Zeitliche Abdeckung](#datensatz-zeitliche-abdeckung) | `dct:temporal` | [`dct:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime) | <small>Empfohlen</small> | `[*]` |
 | [Quelle des Datensatzes](#datensatz-quelle) | `dct:source` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Optional</small> | `[*]` |
 | [Weitere Version](#datensatz-weitere-version) | `dcat:hasVersion` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Optional</small> | `[*]` |
 | [Weitere Version (DEPRECATED)](#datensatz-weitere-version-deprecated) | `dct:hasVersion` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Optional</small> | `[*]` |
 | [Ist Version von (DEPRECATED)](#datensatz-ist-version) | `dct:isVersionOf` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Optional</small> | `[*]` |
-| [Distribution](#datensatz-distribution) | `dcat:distribution` | [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution) | <small>Empfohlen</small> | `[*]` |
 | [Beispieldistribution](#datensatz-beispieldistribution) | `adms:sample` | [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution) | <small>Optional</small> | `[*]` |
-| [Herausgeber](#datensatz-herausgeber) | `dct:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Empfohlen</small> | `[0..1]` |
 | [Autor](#datensatz-autor) | `dct:creator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` |
 | [Bearbeiter](#datensatz-bearbeiter) | `dct:contributor` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` |
 | [Urheber](#datensatz-urheber) | `dcatde:originator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` |
@@ -414,6 +414,50 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Geplante Verfügbarkeit des Datensatzes als Auswahl aus einer festen Liste von Werten via DCAT-AP URIs. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-availability) |
 > | Änderungen durch DCAT-AP.de | DCAT-AP.de ordnet diese Eigenschaft allen DCAT-Ressourcen und Distributionen zu. | 
+<br>
+
+###  Datensatz: Räumliche Abdeckung {#datensatz-raumliche-abdeckung}
+> | *URI*                    | [`dct:spatial`](http://purl.org/dc/terms/spatial) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`dct:Location`](http://purl.org/dc/terms/Location) |
+> | Verbindlichkeit          | Empfohlen |
+> | Multiplizität            | `[*]`                    |
+> | Beschreibung             | Ein räumlicher Bereich oder ein bezeichneter Ort. Er kann durch ein kontrolliertes Vokabular oder mit geographischen Koordinaten repräsentiert werden.<br>Im letzteren Fall wird die Verwendung des Core Location Vocabulary empfohlen, wie in der GeoDCAT-AP-Spezifikation beschrieben.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zur-geografischen-abdeckung) genauer beschrieben. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-spatial) |
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial  | 
+
+<br>
+
+###  Datensatz: Zeitliche Abdeckung {#datensatz-zeitliche-abdeckung}
+> | *URI*                    | [`dct:temporal`](http://purl.org/dc/terms/temporal) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`dct:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime) |
+> | Verbindlichkeit          | Empfohlen |
+> | Multiplizität            | `[*]`                    |
+> | Beschreibung             | Ein Zeitintervall, welches durch Start- und Endzeitpunkt bezeichnet bzw. definiert ist.  |
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_temporal  | 
+
+<br>
+
+###  Datensatz: Distribution {#datensatz-distribution}
+> | *URI*                    | [`dcat:distribution`](http://www.w3.org/ns/dcat#distribution) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution) |
+> | Verbindlichkeit          | Empfohlen |
+> | Multiplizität            | `[*]`                    |
+> | Beschreibung             | Diese Eigenschaft verknüpft den Datensatz mit einer verfügbaren Distribution.  |
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_distribution  | 
+
+<br>
+
+###  Datensatz: Herausgeber {#datensatz-herausgeber}
+> | *URI*                    | [`dct:publisher`](http://purl.org/dc/terms/publisher) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) |
+> | Verbindlichkeit          | Empfohlen |
+> | Multiplizität            | `[0..1]`                    |
+> | Beschreibung             | Diese Eigenschaft verweist auf die Stelle oder Person, die für Bereitstellung des Datensatzes verantwortlich ist.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zum-herausgeber) genauer beschrieben.  |
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_publisher  | 
+> | Änderungen durch DCAT-AP.de | Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat. | 
 <br>
 
 ###  Datensatz: Datenbereitsteller ID {#datensatz-datenbereitsteller-id}
@@ -729,28 +773,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
 
-###  Datensatz: Räumliche Abdeckung {#datensatz-raumliche-abdeckung}
-> | *URI*                    | [`dct:spatial`](http://purl.org/dc/terms/spatial) |
-> |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:Location`](http://purl.org/dc/terms/Location) |
-> | Verbindlichkeit          | Empfohlen |
-> | Multiplizität            | `[*]`                    |
-> | Beschreibung             | Ein räumlicher Bereich oder ein bezeichneter Ort. Er kann durch ein kontrolliertes Vokabular oder mit geographischen Koordinaten repräsentiert werden.<br>Im letzteren Fall wird die Verwendung des Core Location Vocabulary empfohlen, wie in der GeoDCAT-AP-Spezifikation beschrieben.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zur-geografischen-abdeckung) genauer beschrieben. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-spatial) |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial  | 
-
-<br>
-
-###  Datensatz: Zeitliche Abdeckung {#datensatz-zeitliche-abdeckung}
-> | *URI*                    | [`dct:temporal`](http://purl.org/dc/terms/temporal) |
-> |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dct:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime) |
-> | Verbindlichkeit          | Empfohlen |
-> | Multiplizität            | `[*]`                    |
-> | Beschreibung             | Ein Zeitintervall, welches durch Start- und Endzeitpunkt bezeichnet bzw. definiert ist.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_temporal  | 
-
-<br>
-
 ###  Datensatz: Quelle des Datensatzes {#datensatz-quelle}
 > | *URI*                    | [`dct:source`](http://purl.org/dc/terms/source) |
 > |:-------------------------|:-------------------------------------------|
@@ -798,17 +820,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 <br>
 
-###  Datensatz: Distribution {#datensatz-distribution}
-> | *URI*                    | [`dcat:distribution`](http://www.w3.org/ns/dcat#distribution) |
-> |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution) |
-> | Verbindlichkeit          | Empfohlen |
-> | Multiplizität            | `[*]`                    |
-> | Beschreibung             | Diese Eigenschaft verknüpft den Datensatz mit einer verfügbaren Distribution.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_distribution  | 
-
-<br>
-
 ###  Datensatz: Beispieldistribution {#datensatz-beispieldistribution}
 > | *URI*                    | [`adms:sample`](http://www.w3.org/ns/adms#sample) |
 > |:-------------------------|:-------------------------------------------|
@@ -818,17 +829,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung             | Diese Eigenschaft verweist auf eine Beispieldistribution des Datensatzes.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-adms/#adms-sample  | 
 
-<br>
-
-###  Datensatz: Herausgeber {#datensatz-herausgeber}
-> | *URI*                    | [`dct:publisher`](http://purl.org/dc/terms/publisher) |
-> |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) |
-> | Verbindlichkeit          | Empfohlen |
-> | Multiplizität            | `[0..1]`                    |
-> | Beschreibung             | Diese Eigenschaft verweist auf die Stelle oder Person, die für Bereitstellung des Datensatzes verantwortlich ist.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zum-herausgeber) genauer beschrieben.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_publisher  | 
-> | Änderungen durch DCAT-AP.de | Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat. | 
 <br>
 
 ###  Datensatz: Autor {#datensatz-autor}
@@ -889,7 +889,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dcatap:availability`](#datenservice-verfugbarkeit).<br>
+[`dcatap:availability`](#datenservice-verfugbarkeit), [`dct:publisher`](#datenservice-herausgeber).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
@@ -1640,13 +1640,13 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|
 | [Aktualisierungsdatum](#katalogeintrag-aktualisierungsdatum) | `dct:modified` | [`rdfs:Literal`]() | <small>Pflicht</small> | `[1]` |
+| [Katalogeintrag](#katalogeintrag-katalogeintrag) | `foaf:primaryTopic` | [`dcat:Resource`]() | <small>Pflicht</small> | `[1]` |
 | [Application Profile der Metadaten](#katalogeintrag-konform-zu) | `dct:conformsTo` | [`dct:Standard`](http://purl.org/dc/terms/Standard) | <small>Empfohlen</small> | `[*]` |
 | [Änderungstyp](#katalogeintrag-anderungstyp) | `adms:status` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Empfohlen</small> | `[0..1]` |
 | [Veröffentlichungsdatum](#katalogeintrag-veroffentlichungsdatum) | `dct:issued` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[0..1]` |
 | [Titel](#katalogeintrag-titel) | `dct:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
 | [Beschreibung](#katalogeintrag-beschreibung) | `dct:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` |
 | [Sprache](#katalogeintrag-sprache) | `dct:language` | [`dct:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) | <small>Optional</small> | `[*]` |
-| [Katalogeintrag](#katalogeintrag-katalogeintrag) | `foaf:primaryTopic` | [`dcat:Resource`]() | <small>Pflicht</small> | `[1]` |
 | [Original-Metadaten der Ressource](#katalogeintrag-original-metadaten-der-ressource) | `dct:source` | [`dcat:CatalogRecord`]() | <small>Optional</small> | `[0..1]` |
 
 
@@ -1663,6 +1663,18 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung             | Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation des Katalogeintrags.  |
 > | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date  | 
 > | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+
+<br>
+
+###  Katalogeintrag: Katalogeintrag {#katalogeintrag-katalogeintrag}
+> | *URI*                    | [`foaf:primaryTopic`](http://xmlns.com/foaf/0.1/primaryTopic) |
+> |:-------------------------|:-------------------------------------------|
+> | Wertebereich             | `dcat:Dataset`, `dcat:DataService`, `dcat:DatasetSeries` oder `dcat:Catalog` |
+> | Verbindlichkeit          | Pflicht |
+> | Multiplizität            | `[1]`                    |
+> | Beschreibung             | Diese Eigenschaft verknüpft den Katalogeintrag mit der im Eintrag beschriebenen `dcat:Resource`.  |
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:record_primary_topic  | 
+> | Änderungen zur Vorversion | 3.0: Aufnahme der Ressource `dcat:DatasetSeries` | 
 
 <br>
 
@@ -1731,18 +1743,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf die Sprache der Metadatenbeschreibung für die zum Katalogeintrag gehörenden Eigenschaften (z.B. Titel, Beschreibungen usw.).<br>Diese Eigenschaft kann wiederholt werden, falls die Metadaten in verschiedenen Sprachen zur Verfügung stehen. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-languages) |
 > | Weiterführende Dokumentationen | https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/language  | 
-
-<br>
-
-###  Katalogeintrag: Katalogeintrag {#katalogeintrag-katalogeintrag}
-> | *URI*                    | [`foaf:primaryTopic`](http://xmlns.com/foaf/0.1/primaryTopic) |
-> |:-------------------------|:-------------------------------------------|
-> | Wertebereich             | `dcat:Dataset`, `dcat:DataService`, `dcat:DatasetSeries` oder `dcat:Catalog` |
-> | Verbindlichkeit          | Pflicht |
-> | Multiplizität            | `[1]`                    |
-> | Beschreibung             | Diese Eigenschaft verknüpft den Katalogeintrag mit der im Eintrag beschriebenen `dcat:Resource`.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:record_primary_topic  | 
-> | Änderungen zur Vorversion | 3.0: Aufnahme der Ressource `dcat:DatasetSeries` | 
 
 <br>
 
