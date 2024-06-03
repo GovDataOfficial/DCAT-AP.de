@@ -6,11 +6,12 @@
 @prefix foaf:    <http://xmlns.com/foaf/0.1/> .                  # Friend of a Friend Vokabular
 @prefix geo:     <http://www.opengis.net/ont/geosparql#> .       # GeoSPARQL
 @prefix locn:    <http://www.w3.org/ns/locn#> .                  # Location
+@prefix prov:    <http://www.w3.org/ns/prov#> .                  # Provenance
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . # RDF
-@prefix vcard:   <http://www.w3.org/2006/vcard/ns#> .            # VCard Vokabular
-@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .           # XSD
 @prefix spdx:    <http://spdx.org/rdf/terms#> .                  # Software Package Data Exchange
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#>          # Simple Knowledge Organization System
+@prefix vcard:   <http://www.w3.org/2006/vcard/ns#> .            # VCard Vokabular
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .           # XSD
 
 _:catalog a dcat:Catalog;
   dcterms:title "Katalogtitel" ;
@@ -21,23 +22,18 @@ _:catalog a dcat:Catalog;
 .
 
 _:dataservice-00 a dcat:DataService ;
-
   # ======== Verpflichtende Attribute ========
-
   dcterms:title "Datenservice für Daten deutscher Polizeidienststellen" ;
   dcat:endpointURL <https://example.org/api/polizeidienststellen/> ;
 
   # ======== Empfohlene Attribute ========
-
   dcat:endpointDescription <https://example.org/api/polizeidienststellen/wfs?service=WFS&amp;request=getcapabilities> ;
   dcterms:conformsTo <http://www.opengis.net/def/serviceType/ogc/wfs/> ;
-
   dcat:contactPoint [
-  a vcard:Kind ; 
-  vcard:hasEmail <mailto:inneresicherheit@example.com> ;
-  vcard:hasURL <https://example.org/chatbot/innenministerium> ;
+    a vcard:Kind ; 
+    vcard:hasEmail <mailto:inneresicherheit@example.com> ;
+    vcard:hasURL <https://example.org/chatbot/innenministerium> ;
   ];
-
   dcat:keyword "polizei", "dienststellen", "geodaten", "sicherheit" ;
   dcterms:publisher _:innenministerium ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/JUST> ;
@@ -45,12 +41,27 @@ _:dataservice-00 a dcat:DataService ;
   dcat:servesDataset _:dataset-01, _:dataset-02, _:dataset-03 ;
 
   # ======== Optionale Attribute ========
-
   dcat:landingPage <https://example.org/about/polizeidienststellen/> ;
   dcterms:format 
     <http://publications.europa.eu/resource/authority/file-type/CSV> , 
     <http://publications.europa.eu/resource/authority/file-type/GEOJSON> , 
     <http://publications.europa.eu/resource/authority/file-type/TXT> ;
+
+  # ======== Beispiel für zusätzliche Rollen via prov:qualifiedAttribution ========
+  # Hier wird ausgedrückt, dass der Datenservice vom ITZ Bienenland gehostet wird:
+
+  prov:qualifiedAttribution [
+    a prov:Attribution ;
+    # Host institution: An organization hosting the event, exhibit, conference, etc., 
+    # which gave rise to a resource, but having little or no responsibility for the 
+    # content of the resource.  -->  https://id.loc.gov/vocabulary/relators/his.html
+    dcat:hadRole <http://id.loc.gov/vocabulary/relators/his> ;
+    prov:agent [
+      a prov:Agent ;
+      foaf:name "ITZ Bienenland" ;
+      foaf:page <http://itzbienenland.example.org> ;
+    ] ;
+  ] ;
 .
 
 _:dataset-01 a dcat:Dataset ;
