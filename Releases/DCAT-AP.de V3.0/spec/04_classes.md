@@ -534,7 +534,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft enthält eine Versionsnummer oder anderweitige Versionskennzeichnung des Datensatzes.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version<br>https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.version  | 
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version, https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.version  | 
 > | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
 
 <br>
@@ -792,7 +792,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf einen verwandten Datensatz in Form einer weiteren/nachfolgenden Version, Edition oder Adaption des beschriebenen Datensatzes.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-3/#Property:resource_has_version<br>https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.hasversion  | 
+> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-3/#Property:resource_has_version, https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.hasversion  | 
 > | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
 
 <br>
@@ -1657,7 +1657,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft beschreibt die Geometrie einer Ressource.  |
 > | Verwendungshinweis       | Der Wertebereich dieser Eigenschaft lässt jede Art von Geometriespezifikation zu.<br>Empfohlen wird z.B. die Angabe als WKT-Literal (`rdfs:Literal` getyped als `geo:wktLiteral`). | 
-> | Weiterführende Dokumentationen | https://semiceu.github.io/Core-Location-Vocabulary/releases/w3c/#locn:geometry<br>https://www.w3.org/ns/locn#locn:geometry  | 
+> | Weiterführende Dokumentationen | https://semiceu.github.io/Core-Location-Vocabulary/releases/w3c/#locn:geometry, https://www.w3.org/ns/locn#locn:geometry  | 
 > | Änderungen zur Vorversion | 3.0: Wertebereich auf locn:Geometry geändert.<br>3.0: Verwendungshinweis und weiterführende Dokumentation hinzugefügt. | 
 
 <br>
@@ -1782,7 +1782,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit          | Pflicht |
 > | Multiplizität            | `[1]`                    |
 > | Beschreibung             | Diese Eigenschaft identifiziert den verwendeten Algorithmus zur Erzeugung der Prüfsumme. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-hash-algorithms) |
-> | Weiterführende Dokumentationen | https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Checksum.algorithm<br>https://www.w3.org/TR/vocab-dcat-3/#Property:checksum_algorithm<br>https://spdx.org/rdf/terms/#d4e46  | 
+> | Weiterführende Dokumentationen | https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Checksum.algorithm, https://www.w3.org/TR/vocab-dcat-3/#Property:checksum_algorithm, https://spdx.org/rdf/terms/#d4e46  | 
 > | Änderungen zur Vorversion | 3.0: Range von `rdfs:Resource` auf `spdx:ChecksumAlgorithm` geändert. | 
 > | Änderungen durch DCAT-AP.de | dcat-ap.de führt eine eigene Liste an unterstützten Hashalgorithmen. | 
 <br>
@@ -1794,7 +1794,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit          | Pflicht |
 > | Multiplizität            | `[1]`                    |
 > | Beschreibung             | Diese Eigenschaft stellt einen hexadezimal kodierten Übersichtswert in Kleinbuchstaben zur Verfügung, welcher mittels eines spezifischen Algorithmus erzeugt wurde.  |
-> | Weiterführende Dokumentationen | https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Checksum.checksumvalue<br>https://www.w3.org/TR/vocab-dcat-3/#Property:checksum_checksum_value<br>https://spdx.org/rdf/terms/#d4e1053  | 
+> | Weiterführende Dokumentationen | https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Checksum.checksumvalue, https://www.w3.org/TR/vocab-dcat-3/#Property:checksum_checksum_value, https://spdx.org/rdf/terms/#d4e1053  | 
 
 <br>
 
