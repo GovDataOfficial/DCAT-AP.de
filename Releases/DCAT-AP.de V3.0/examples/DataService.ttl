@@ -16,36 +16,45 @@
 _:catalog a dcat:Catalog;
   dcterms:title "Katalogtitel" ;
   dcterms:description "Dieser Katalog beinhaltet sowohl direkt Datensätze als auch Datenservices. Sie sind zusätzlich untereinander verknüpft. Zur Übersichtlichkeit wurden die Datensätze minimal modelliert." ;
-  dcterms:publisher _:innenministerium ;
+  dcterms:publisher _:honigministerium ;
   dcat:service _:dataservice-00 ;
   dcat:dataset _:dataset-01, _:dataset-02, _:dataset-03 ;
 .
 
 _:dataservice-00 a dcat:DataService ;
   # ======== Verpflichtende Attribute ========
-  dcterms:title "Datenservice für Daten deutscher Polizeidienststellen" ;
-  dcat:endpointURL <https://example.org/api/polizeidienststellen/> ;
+  dcterms:title "Datenservice für Daten bienenländischer Imkereien" ;
+  dcat:endpointURL <https://bienenland.example.org/api/imker/> ;
 
   # ======== Empfohlene Attribute ========
-  dcat:endpointDescription <https://example.org/api/polizeidienststellen/wfs?service=WFS&amp;request=getcapabilities> ;
+  dcat:endpointDescription <https://bienenland.example.org/api/imker/wfs?service=WFS&amp;request=getcapabilities> ;
   dcterms:conformsTo <http://www.opengis.net/def/serviceType/ogc/wfs/> ;
   dcat:contactPoint [
     a vcard:Kind ; 
-    vcard:hasEmail <mailto:inneresicherheit@example.com> ;
-    vcard:hasURL <https://example.org/chatbot/innenministerium> ;
+    vcard:hasEmail <mailto:honig@bienenland.example.com> ;
+    vcard:hasURL <https://bienenland.example.org/chatbot/honigministerium> ;
   ];
-  dcat:keyword "polizei", "dienststellen", "geodaten", "sicherheit" ;
-  dcterms:publisher _:innenministerium ;
-  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/JUST> ;
+  dcat:keyword "honig", "imker", "imkereien", "geodaten" ;
+  dcterms:publisher _:honigministerium ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/AGRI> ;
 
+  dcatde:politicalGeocodingLevelURI <http://dcat-ap.de/def/politicalGeocoding/Level/state> ; 
+  dcatde:politicalGeocodingURI <http://dcat-ap.de/def/politicalGeocoding/stateKey/17> ;
+  
   dcat:servesDataset _:dataset-01, _:dataset-02, _:dataset-03 ;
 
   # ======== Optionale Attribute ========
-  dcat:landingPage <https://example.org/about/polizeidienststellen/> ;
+  dcatap:applicableLegislation <https://bienenland.example.org/eli/imkerveroeffentlichungsgesetz/> ;
+  dcat:landingPage <https://bienenland.example.org/about/imker/> ;
   dcterms:format 
     <http://publications.europa.eu/resource/authority/file-type/CSV> , 
     <http://publications.europa.eu/resource/authority/file-type/GEOJSON> , 
     <http://publications.europa.eu/resource/authority/file-type/TXT> ;
+
+  dcatde:contributorID <http://dcat-ap.de/def/contributors/bienenland> ;
+  
+  # ======== Fiktives Beispiel für die Kennzeichnung des Datenservices als Musterdatensatz ========
+  dcterms:references <https://musterdatenkatalog.de/def/musterdatensatz/floraUndFauna/imkereien> ;
 
   # ======== Beispiel für zusätzliche Rollen via prov:qualifiedAttribution ========
   # Hier wird ausgedrückt, dass der Datenservice vom ITZ Bienenland gehostet wird:
@@ -59,45 +68,45 @@ _:dataservice-00 a dcat:DataService ;
     prov:agent [
       a prov:Agent ;
       foaf:name "ITZ Bienenland" ;
-      foaf:page <http://itzbienenland.example.org> ;
+      foaf:page <http://itzbienenland.bienenland.example.org> ;
     ] ;
   ] ;
 .
 
 _:dataset-01 a dcat:Dataset ;
-  dcterms:title "Kontaktdaten aller deutschen Polizeidienststellen" ;
-  dcterms:description "Dieser Datensatz beinhaltet die Kontaktdaten aller Polizeidienststellen in Deutschland. (…)" ;
+  dcterms:title "Kontaktdaten aller bienenländischer Imkereien" ;
+  dcterms:description "Dieser Datensatz beinhaltet die Kontaktdaten bienenländischer Imkereien in Deutschland. (…)" ;
   dcat:distribution [ 
     a dcat:Distribution ;
     dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
-    dcat:accessURL <https://example.org/api/polizeidienststellen/bulk?content=kontaktdaten> ;
+    dcat:accessURL <https://bienenland.example.org/api/imker/bulk?content=kontaktdaten> ;
     dcat:accessService _:dataservice-00 ;
   ] ;
 .
 
 _:dataset-02 a dcat:Dataset ;
-  dcterms:title "Zuständigkeitsbereiche aller deutschen Polizeidienststellen" ;
-  dcterms:description "Dieser Datensatz beinhaltet die Zuständigkeitsbereiche aller Polizeidienststellen in Deutschland. (…)" ;
+  dcterms:title "Zuständigkeitsbereiche aller bienenländischer Imkereien" ;
+  dcterms:description "Dieser Datensatz beinhaltet die Zuständigkeitsbereiche bienenländischer Imkereien in Deutschland. (…)" ;
   dcat:distribution [ 
     a dcat:Distribution ;
     dcterms:format <http://publications.europa.eu/resource/authority/file-type/GEOJSON> ;
-    dcat:accessURL <https://example.org/api/polizeidienststellen/bulk?content=zustaendigkeitsbereich> ;
+    dcat:accessURL <https://bienenland.example.org/api/imker/bulk?content=zustaendigkeitsbereich> ;
     dcat:accessService _:dataservice-00 ;
   ] ;
 .
 
 _:dataset-03 a dcat:Dataset ;
-  dcterms:title "Anzahl der Mitarbeiter aller deutschen Polizeidienststellen" ;
-  dcterms:description "Dieser Datensatz beinhaltet die Anzahl der Mitarbeiter aller Polizeidienststellen in Deutschland. (…)" ;
+  dcterms:title "Anzahl der Mitarbeiter aller bienenländischer Imkereien" ;
+  dcterms:description "Dieser Datensatz beinhaltet die Anzahl der Mitarbeiter bienenländischer Imkereien in Deutschland. (…)" ;
   dcat:distribution [ 
     a dcat:Distribution ;
     dcterms:format <http://publications.europa.eu/resource/authority/file-type/TXT> ;
-    dcat:accessURL <https://example.org/api/polizeidienststellen/bulk?content=mitarbeiteranzahl> ;
+    dcat:accessURL <https://bienenland.example.org/api/imker/bulk?content=mitarbeiteranzahl> ;
     dcat:accessService _:dataservice-00 ;
   ] ;
 .
 
-_:innenministerium a foaf:Agent ;
-  foaf:name "Innenministerium " ;
+_:honigministerium a foaf:Agent ;
+  foaf:name "honigministerium " ;
   dcterms:type <http://purl.org/adms/publishertype/RegionalAuthority> ;
 .

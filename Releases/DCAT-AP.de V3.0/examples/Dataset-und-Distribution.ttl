@@ -7,12 +7,19 @@
 @prefix geo:     <http://www.opengis.net/ont/geosparql#> .       # GeoSPARQL
 @prefix locn:    <http://www.w3.org/ns/locn#> .                  # Location
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . # RDF
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .        # Simple Knowledge Organization System
+@prefix spdx:    <http://spdx.org/rdf/terms#> .                  # Software Package Data Exchange
 @prefix vcard:   <http://www.w3.org/2006/vcard/ns#> .            # VCard Vokabular
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .           # XSD
-@prefix spdx:    <http://spdx.org/rdf/terms#> .                  # Software Package Data Exchange
-@prefix skos:    <http://www.w3.org/2004/02/skos/core#>          # Simple Knowledge Organization System
 
-<http://www.example.org/rdf/dataset/12345678-9abc-4729-9044-f4d4ceaed491> a dcat:Dataset ;
+_:catalog a dcat:Catalog;
+  dcterms:title "Katalogtitel" ;
+  dcterms:description "Katalogbeschreibung." ;
+  dcterms:publisher _:finanzministerium ;
+  dcat:dataset <http://bienenland.example.org/rdf/dataset/12345678-9abc-4729-9044-f4d4ceaed491> ;
+.
+
+<http://bienenland.example.org/rdf/dataset/12345678-9abc-4729-9044-f4d4ceaed491> a dcat:Dataset ;
     
     # ======== Verpflichtende Attribute ========
     
@@ -21,7 +28,7 @@
     
     # Konvention 12: Alle Datensätze, die direkt an das GovData Portal geliefert werden, MÜSSEN ihre Herkunft über eine eindeutige Kennzeichnung des Datenbereitstellers über die Datenbereitsteller ID (dcatde:contributorID) ausweisen.
     # Konvention 13: Die eigene Datenbereitsteller ID-Kennung MUSS föderationsweit an bestehende Einträge im Feld dcatde:contributorID angehängt werden. (...)
-    dcatde:contributorID <http://dcat-ap.de/def/contributors/ORGANISATION> ;
+    dcatde:contributorID <http://dcat-ap.de/def/contributors/bienenland> ;
     
     # Konvention 40: Werden DCAT-AP.de Metadaten aus ISO-Metadaten erzeugt, MUSS das „technische“ Aktualitätsdatum aus dem Element dateStamp (XPath MD_Metadata/dateStamp) als Wert der Eigenschaft dct:modified des Datasets verwendet werden. 
     dcterms:modified "2024-02-22T14:28:09.000"^^xsd:dateTime ;
@@ -81,7 +88,7 @@
             skos:notation "https://data.europa.eu/data/datasets/60007bfb10632c47538583d8"^^xsd:anyURL ;
         ] ;
         
-    dcterms:issued "2024-02-14T13:45:00.000Z"^^xsd:dateTime ;
+    dcterms:issued "2022-02-14T13:45:00.000Z"^^xsd:dateTime ;
     
     # Konventionenhandbuch Abschnitt "1.10.1 Verwendung des Musterdatenkatalogs für Kommunen"
     dcterms:references <https://musterdatenkatalog.de/def/musterdatensatz/haushalt/finanzplan> ;
@@ -136,6 +143,7 @@
 
         dcat:byteSize "289845"^^xsd:nonNegativeInteger ;
         spdx:checksum [
+            a spdx:Checksum ;
             spdx:checksumValue "4e1243bd22c66e76c2ba9eddc1f91394e57f9f83"^^xsd:hexBinary ;
             spdx:algorithm <http://spdx.org/rdf/terms#checksumAlgorithm_sha1> ;
         ] ;
@@ -169,6 +177,7 @@
 
         dcat:byteSize "3289845"^^xsd:nonNegativeInteger ;
         spdx:checksum [
+            a spdx:Checksum ;
             spdx:checksumValue "91e6dc7866974ec6e089dd8d862a47a0139fb7538efc73189d161cc57a98bc5a"^^xsd:hexBinary ;
             spdx:algorithm <http://spdx.org/rdf/terms#checksumAlgorithm_sha256> ;
         ] ;
