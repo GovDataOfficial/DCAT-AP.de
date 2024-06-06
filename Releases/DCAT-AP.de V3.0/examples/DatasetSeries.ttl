@@ -1,0 +1,164 @@
+@prefix adms:    <http://www.w3.org/ns/adms#> .                  # Asset Description Metadata Schema
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .                  # DCAT3 Vokabular
+@prefix dcatap:  <http://data.europa.eu/r5r/> .                  # DCAT-AP Vokabular
+@prefix dcatde:  <http://dcat-ap.de/def/dcatde/> .               # DCAT-AP.de Vokabular
+@prefix dcterms: <http://purl.org/dc/terms/> .                   # Dublin Core Vokabular
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .                  # Friend of a Friend Vokabular
+@prefix geo:     <http://www.opengis.net/ont/geosparql#> .       # GeoSPARQL
+@prefix locn:    <http://www.w3.org/ns/locn#> .                  # Location
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . # RDF
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .        # Simple Knowledge Organization System
+@prefix spdx:    <http://spdx.org/rdf/terms#> .                  # Software Package Data Exchange
+@prefix vcard:   <http://www.w3.org/2006/vcard/ns#> .            # VCard Vokabular
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .           # XSD
+
+_:catalog a dcat:Catalog;
+  dcterms:title "Katalogtitel" ;
+  dcterms:description "Dieser Katalog beinhaltet sowohl die DatasetSeries als auch deren Datensätze. Zur Übersichtlichkeit wurden die Datensätze minimal modelliert. Ein besserer Eindruck für Datansätze wird im Beispiel 'Dataset-und-Distribution' vermittelt." ;
+  dcterms:publisher _:finanzministerium ;
+  dcat:sedatasetrvice _:dataservice-00 ;
+  dcat:dataset <http://bienenland.example.org/rdf/series/87654321-0xyz-8472-0815-db732bcf6912> ,
+    <http://bienenland.example.org/rdf/dataset/12345678-9abc-4729-9044-f4d4ceaed491> ,
+    <http://bienenland.example.org/rdf/dataset/22345678-9abc-4729-9044-f4d4ceaed491> ,
+    <http://bienenland.example.org/rdf/dataset/32345678-9abc-4729-9044-f4d4ceaed491> ;
+.
+
+<http://bienenland.example.org/rdf/series/87654321-0xyz-8472-0815-db732bcf6912> a dcat:DatasetSeries ;
+    # ======== Verpflichtende Attribute ========
+    dcterms:title "Haushaltspläne Bienenland"@de ;
+
+    # ======== Empfohlene Attribute ========
+    # Es handelt sich um eine temporär gegliederte Datensatzserie.
+    dcterms:temporal [ 
+       a dcterms:PeriodOfTime ;
+       dcat:startDate "2021-01-01"^^xsd:date ;
+    ] ;
+
+    dcat:contactPoint [
+        a vcard:Kind ; 
+        vcard:hasEmail <mailto:haushalt@example.com> ;
+    ] ;
+    dcterms:spatial [
+       a dcterms:Location ;
+       locn:geometry "POLYGON((7.278 52.567,7.278 52.582,7.31 52.582,7.31 52.567,7.278 52.567))"^^geo:wktLiteral ; 
+    ] ;
+    dcterms:publisher _:finanzministerium ;
+
+    # ======== Optionale Attribute ========
+    # Es handelt sich um eine temporär gegliederte Datensatzserie, daher ist diese Angabe besonders hervorzuheben:
+    dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
+
+    dcatap:applicableLegislation <https://www.recht.bund.de/eli/bund/bgbl-1/2023/411> ;
+    dcterms:description "Diese Datensatzserie umfasst die jährlich veröffentlichten Haushaltspläne aus Bienenland."@de ;
+
+    # Modified und Issued beziehen sich auf die Datensatzserie und sind nicht identisch mit der letzten Änderung oder dem ältesten enthaltenen Datensatz.
+    dcterms:modified "2023-07-21"^^xsd:date ;
+    dcterms:issued "2021-01-01"^^xsd:date ;
+.
+
+<http://bienenland.example.org/rdf/dataset/12345678-9abc-4729-9044-f4d4ceaed491> a dcat:Dataset ;
+
+    dcat:inSeries <http://bienenland.example.org/rdf/series/87654321-0xyz-8472-0815-db732bcf6912> ;
+
+    # ======== Verpflichtende Attribute ========
+    dcterms:title "Haushaltsplan 2021"@de ;
+    dcterms:description "Bitte bedenken Sie: Ein Haushaltsplan unterscheidet sich stark von Bilanzen und Konten, die viele aus der doppelten Buchführung gewohnt sind. Es erfordert eine gewisse Übung, die verwendete Systematik zu lesen."@de ;
+    
+    # ======== Empfohlene Attribute ========
+    dcterms:temporal [ 
+       a dcterms:PeriodOfTime ;
+       dcat:startDate "2021-01-01"^^xsd:date ;
+       dcat:endDate "2021-12-31"^^xsd:date ;
+    ] ;
+    
+    # ======== Optionale Attribute ========
+    dcterms:issued "2022-02-14T13:45:00.000Z"^^xsd:dateTime ;
+    
+    # Konventionenhandbuch Abschnitt "1.10.1 Verwendung des Musterdatenkatalogs für Kommunen"
+    dcterms:references <https://musterdatenkatalog.de/def/musterdatensatz/haushalt/finanzplan> ;
+        
+    dcat:distribution [ a dcat:Distribution ;
+        # ======== Verpflichtende Attribute ========
+        dcat:accessURL <https://example.com/data/haushalt_2021.csv> ;  # Konvention 39
+
+        # ======== Empfohlene Attribute ========
+        dcterms:license <http://dcat-ap.de/def/licenses/officialWork> ;
+        dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;     
+
+        # ======== Optionale Attribute ========
+        dcat:downloadURL <https://example.com/data/haushalt_2021.csv> ;
+    ] ;
+.
+
+<http://bienenland.example.org/rdf/dataset/22345678-9abc-4729-9044-f4d4ceaed491> a dcat:Dataset ;
+
+    dcat:inSeries <http://bienenland.example.org/rdf/series/87654321-0xyz-8472-0815-db732bcf6912> ;
+
+    # ======== Verpflichtende Attribute ========
+    dcterms:title "Haushaltsplan 2022"@de ;
+    dcterms:description "Bitte bedenken Sie: Ein Haushaltsplan unterscheidet sich stark von Bilanzen und Konten, die viele aus der doppelten Buchführung gewohnt sind. Es erfordert eine gewisse Übung, die verwendete Systematik zu lesen."@de ;
+    
+    # ======== Empfohlene Attribute ========
+    dcterms:temporal [ 
+       a dcterms:PeriodOfTime ;
+       dcat:startDate "2022-01-01"^^xsd:date ;
+       dcat:endDate "2022-12-31"^^xsd:date ;
+    ] ;
+    
+    # ======== Optionale Attribute ========
+    dcterms:issued "2023-02-14T11:45:00.000Z"^^xsd:dateTime ;
+    
+    # Konventionenhandbuch Abschnitt "1.10.1 Verwendung des Musterdatenkatalogs für Kommunen"
+    dcterms:references <https://musterdatenkatalog.de/def/musterdatensatz/haushalt/finanzplan> ;
+        
+    dcat:distribution [ a dcat:Distribution ;
+        # ======== Verpflichtende Attribute ========
+        dcat:accessURL <https://example.com/data/haushalt_2022.csv> ;  # Konvention 39
+
+        # ======== Empfohlene Attribute ========
+        dcterms:license <http://dcat-ap.de/def/licenses/officialWork> ;
+        dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;     
+
+        # ======== Optionale Attribute ========
+        dcat:downloadURL <https://example.com/data/haushalt_2022.csv> ;
+    ] ;
+.
+
+<http://bienenland.example.org/rdf/dataset/32345678-9abc-4729-9044-f4d4ceaed491> a dcat:Dataset ;
+
+    dcat:inSeries <http://bienenland.example.org/rdf/series/87654321-0xyz-8472-0815-db732bcf6912> ;
+
+    # ======== Verpflichtende Attribute ========
+    dcterms:title "Haushaltsplan 2023"@de ;
+    dcterms:description "Bitte bedenken Sie: Ein Haushaltsplan unterscheidet sich stark von Bilanzen und Konten, die viele aus der doppelten Buchführung gewohnt sind. Es erfordert eine gewisse Übung, die verwendete Systematik zu lesen."@de ;
+    
+    # ======== Empfohlene Attribute ========
+    dcterms:temporal [ 
+       a dcterms:PeriodOfTime ;
+       dcat:startDate "2023-01-01"^^xsd:date ;
+       dcat:endDate "2023-12-31"^^xsd:date ;
+    ] ;
+    
+    # ======== Optionale Attribute ========
+    dcterms:issued "2024-01-19T16:23:00.000Z"^^xsd:dateTime ;
+    
+    # Konventionenhandbuch Abschnitt "1.10.1 Verwendung des Musterdatenkatalogs für Kommunen"
+    dcterms:references <https://musterdatenkatalog.de/def/musterdatensatz/haushalt/finanzplan> ;
+        
+    dcat:distribution [ a dcat:Distribution ;
+        # ======== Verpflichtende Attribute ========
+        dcat:accessURL <https://example.com/data/haushalt_2023.csv> ;  # Konvention 39
+
+        # ======== Empfohlene Attribute ========
+        dcterms:license <http://dcat-ap.de/def/licenses/officialWork> ;
+        dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;     
+
+        # ======== Optionale Attribute ========
+        dcat:downloadURL <https://example.com/data/haushalt_2023.csv> ;
+    ] ;
+.
+
+_:finanzministerium a foaf:Agent ;
+    foaf:name "Finanzministerium" ;
+    dcterms:type <http://purl.org/adms/publishertype/RegionalAuthority> ;
+. 
