@@ -5,7 +5,7 @@ Sie ist neben dem [URI-Konzept für DCAT-AP.de](#dcat-apde-uri-konzept) und dem 
 
 Das deutsche Schema DCAT-AP.de übernimmt die Regeln des europäischen Metadatenaustauschschemas DCAT-AP mit zusätzlichen Einschränkungen und Erweiterungen.
 DCAT-AP wiederum basiert auf der [„Data Catalog Vocabulary“ (DCAT) Spezifikation](https://www.w3.org/TR/vocab-dcat-2/), welche von der [Dataset Exchange Working Group](https://www.w3.org/2017/dxwg/) weiterentwickelt wird.
-DCAT ist ein RDF-Vokabular mit dem Ziel, die Interoperabilität zwischen Online-Datenkatalogen zu verbessern. Die Spezifikation „Data Catalog Vocabulary“ (DCAT) wurde am 16. Januar 2014 vom W3C als „W3C Recommendation“ veröffentlicht und liegt inzwischen in der Version 2.0 vor.
+DCAT ist ein RDF-Vokabular mit dem Ziel, die Interoperabilität zwischen Online-Datenkatalogen zu verbessern. Die Spezifikation „Data Catalog Vocabulary“ (DCAT) wurde am 16. Januar 2014 vom W3C als „W3C Recommendation“ veröffentlicht und liegt inzwischen in der Version 3.0 vor.
 In DCAT werden Klassen und Eigenschaften weiterer etablierter Vokabulare (ADMS, FOAF) wiederverwendet. DCAT setzt auf ein bewährtes Set aus gemeinsamen Metadaten namens „Dublin Core“ auf, welches im Jahr 2009 als ISO 15836 Standard veröffentlicht wurde.
 
 
@@ -23,7 +23,7 @@ Anlass und Zweck der Erstellung von DCAT-AP.de ist der Austausch von Metadaten o
 ### Bedarfsbeschreibung „Metadatenstruktur für offene Verwaltungsdaten“
 
 Grundlage für die Erstellung dieser Spezifikation ist der Beschluss der Fachgruppe GovData vom 21. November 2016, eine standardkonforme deutsche Ableitung von DCAT-AP als Metadatenstandard zu vereinbaren.
-DCAT-AP.de wurde als Lösung des 2013 angemeldeten und 2017 formalisiert beschriebenen Standardisierungsbedarfs „Metadatenstruktur zum Austausch von Metadaten über offene Verwaltungsdaten“ im Jahr 2018 beim IT-Planungsrat eingereicht. DCAT-AP.de fungiert nach dem Beschluss des IT-Planungsrates vom 28.06.2018 seit 2019 als gemeinsame verbindliche Grundlage für den Metadatenaustausch zwischen deutschen Open Data-Portalen. Die vorliegende Version 2.0 wurde von der Fachgruppe GovData beschlossen.
+DCAT-AP.de wurde als Lösung des 2013 angemeldeten und 2017 formalisiert beschriebenen Standardisierungsbedarfs „Metadatenstruktur zum Austausch von Metadaten über offene Verwaltungsdaten“ im Jahr 2018 beim IT-Planungsrat eingereicht. DCAT-AP.de fungiert nach dem Beschluss des IT-Planungsrates vom 28.06.2018 seit 2019 als gemeinsame verbindliche Grundlage für den Metadatenaustausch zwischen deutschen Open Data-Portalen. Die vorliegende Version 3.0 wurde von der Fachgruppe GovData beschlossen.
 DCAT-AP und damit die deutsche Ableitung DCAT-AP.de ist ein RDF-Vokabular.
 
 > Das **Resource Description Framework** (RDF, engl. sinngemäß „System zur Beschreibung von Ressourcen“) bezeichnet eine technische abgestimmte Gruppe von Spezifikationen, die vom [World Wide Web Consortium](https://de.wikipedia.org/wiki/World_Wide_Web_Consortium) (W3C) als Standard zur Beschreibung von [Metadaten](https://de.wikipedia.org/wiki/Metadaten) entwickelt wurde. Mittlerweile gilt RDF als ein grundlegender Baustein des [Semantischen Webs](https://de.wikipedia.org/wiki/Semantic_Web). 

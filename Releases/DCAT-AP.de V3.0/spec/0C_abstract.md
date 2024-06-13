@@ -6,4 +6,6 @@ Seit dem wird DCAT-AP.de sowie die dazugehörige Spezifikation von der Geschäft
 
 Die DCAT-AP Spezifikation wurde von einer Arbeitsgruppe unter Federführung von Mitarbeitern des Generaldirektorates CONNECT, des Amtes für Veröffentlichungen der Europäischen Union [OPOCE](https://op.europa.eu/de/home) und des [ISA Programmes](https://ec.europa.eu/isa2/home_en) des Generaldirektorates Informatik [DIGIT](https://ec.europa.eu/info/departments/informatics_de) entwickelt. (https://joinup.ec.europa.eu/asset/dcat_application_profile)
 
+_Der folgende Absatz ist in der Entwurfsfassung noch nicht überarbeitet._
+
 Die vorliegende Version 2.0 wurde von der Fachgruppe GovData beschlossen. Die Beschlussvorlage erarbeitete die Unterarbeitsgruppe DCAT-AP.de in mehreren Online-Abstimmungsrunden. Dabei wurden auch zahlreiche Änderungsanträge aus https://github.com/GovDataOfficial/DCAT-AP.de begutachtet.
