@@ -1,5 +1,7 @@
 # Überblick über das DCAT-AP.de Modell
 
+_Dieses Kapitel ist im Entwurf noch nicht vollständig überarbeitet._ 
+
 In diesem Abschnitt findet sich eine Übersicht über die Verbindlichkeit der Klassen von DCAT-AP.de. <br>
 Als Austauschstandard für allgemeine offene Verwaltungsdaten ist der Hauptanwendungsfall von DCAT-AP.de der Austausch von Metadaten zwischen Datenportalen. Wie im UML Diagramm unter 3.1 dargestellt, gibt es dabei Klassen, die aufgrund Ihrer Bedeutung als zentrale fachliche Konzepte hervorgehoben sind. <br>
 Beim Austausch von Metadaten wird in der Regel ein Katalog (dcat:Catalog) bereitstellt, der mehrere Datensätze (dcat:Dataset) beinhaltet. Die Datensätze wiederum beinhalten Distributionen(dcat:Distribution) und Datenservices (dcat:DataService), die den Zugang zu den eigentlichen Daten herstellen.   

@@ -1,4 +1,7 @@
 # Terminologie und Definitionen
+
+_Dieses Kapitel ist im Entwurf noch nicht vollständig überarbeitet._ 
+
 Ein Application Profile ist eine Spezifikation, die Begrifflichkeiten bzw. Konzepte eines oder mehrerer grundlegender Standards weiterverwendet. Eine größere Bestimmtheit wird erreicht, indem für eine bestimmte Anwendung Klassen und Klassenattribute (Eigenschaften) als obligatorisch, empfohlen oder optional eingeordnet werden. Zusätzlich werden Empfehlungen für die Verwendung von kontrollierten Vokabularen gegeben.
 
 Ein **Datenportal** ist ein webbasiertes System, welches einen Datenkatalog enthält, in dem Datensätze mittels Metadaten beschrieben werden. Des Weiteren stellt ein Datenportal Dienste zur Recherche und Wiederverwendung von Datensätzen bereit.

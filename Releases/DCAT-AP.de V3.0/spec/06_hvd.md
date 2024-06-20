@@ -1,6 +1,6 @@
 # Hochwertige Datensätze {#hvd}
 
-_Dieses Kapitel ist vorerst ein Platzhalter._ 
+_Dieses Kapitel ist im Entwurf vorerst ein Platzhalter._ 
 
 Häufig gestellte Fragen werden auf [GovData](https://www.govdata.de/web/guest/hochwertige-datensaetze) beantwortet.
 DCAT-AP.de wird eine eigenständige Übersetzung von [DCAT-AP High Value Datasets](https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd/) zur Verfügung stellen.

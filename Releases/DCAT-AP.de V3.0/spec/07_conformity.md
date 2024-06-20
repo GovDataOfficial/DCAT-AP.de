@@ -1,6 +1,6 @@
 # Konformität zu DCAT-AP 2.0
 
-_Dieses Kapitel ist in der Entwurfsfassung noch nicht überarbeitet und wird künftig die Konformität zu DCAT-AP 3.0 beschreiben._ 
+_Dieses Kapitel ist im Entwurf noch nicht vollständig überarbeitet._ 
 
 Der Anwendungsbereich von DCAT-AP ist grenz- und domänenüberschreitend. Nationale oder domänenspezifische Anwendungen unterliegen verschiedenen Anforderungen und definieren Erweiterungen zum DCAT-AP-Basisprofil. 
 Die folgenden Regeln erlauben es dem Erweiterungsprofil DCAT-AP.de, die gegebenen deutschlandspezifischen Anforderungen umzusetzen und dabei gleichzeitig Interoperabilität im europaweiten Kontext sicherzustellen.
