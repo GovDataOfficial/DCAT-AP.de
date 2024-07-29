@@ -1,0 +1,95 @@
+@prefix ex:      <http://example.org/>
+@prefix dcat:    <http://www.w3.org/ns/dcat#> . #DCAT3 Vokabular
+@prefix dcatap:  <http://data.europa.eu/r5r/> . #DCAT-AP Vokabular
+@prefix dcatde:  <http://dcat-ap.de/def/dcatde/> . #DCAT-AP.de Vokabular
+@prefix dcterms: <http://purl.org/dc/terms/> . #Dublin Core Vokabular
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+ex:haushalt a dcat:DatasetSeries ;
+  dcterms:title "Haushalt"@de ;
+  dcat:first ex:haushalt-2020 ;
+  dcat:last ex:haushalt-2024 ;
+  .
+  
+ex:haushalt-2020 a dcat:Dataset ;
+  dcterms:title "Haushalt 2020"@de ;
+  dcat:distribution ex:haushalt-2020-csv, ex:haushalt-2020-xlsx ;
+  dcat:inSeries ex:haushalt ;
+  dcterms:issued "2019-12-01"^^xsd:date ;
+  dcat:next ex:haushalt-2020 ;
+  .
+
+ex:haushalt-2020-csv a dcat:Distribution ;
+  dcterms:title "haushalt_2020.csv" ;
+  dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+.
+
+ex:haushalt-2020-xlsx a dcat:Distribution ;
+  dcterms:title "haushalt_2020.xlsx" ;
+  dcterms:format <http://publications.europa.eu/resource/authority/file-type/XLSX> ;
+.
+
+ex:haushalt-2021 a dcat:Dataset ;
+  dcterms:title "Haushalt 2021"@de ;
+  dcat:distribution ex:haushalt-2021-csv, ex:haushalt-2021-xlsx ;
+  dcat:inSeries ex:haushalt ;
+  dcterms:issued "2020-12-01"^^xsd:date ;
+  dcat:prev ex:haushalt-2020 ;
+  dcat:next ex:haushalt-2022 ;
+  .
+
+ex:haushalt-2021-csv a dcat:Distribution ;
+  dcterms:title "haushalt_2021.csv" ;
+  dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+.
+
+ex:haushalt-2021-xlsx a dcat:Distribution ;
+  dcterms:title "haushalt_2021.xlsx" ;
+  dcterms:format <http://publications.europa.eu/resource/authority/file-type/XLSX> ;
+.
+  
+ex:haushalt-2022 a dcat:Dataset ;
+  dcterms:title "Haushalt 2022"@de ;
+  dcat:distribution ex:haushalt-2022-csv, ex:haushalt-2022-xlsx ;
+  dcat:inSeries ex:haushalt ;
+  dcterms:issued "2021-12-01"^^xsd:date ;
+  dcat:prev ex:haushalt-2021 ;
+  dcat:next ex:haushalt-2023 ;
+  .
+
+ex:haushalt-2022-csv a dcat:Distribution ;
+  dcterms:title "haushalt_2022.csv" ;
+  dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+.
+
+ex:haushalt-2022-xlsx a dcat:Distribution ;
+  dcterms:title "haushalt_2022.xlsx" ;
+  dcterms:format <http://publications.europa.eu/resource/authority/file-type/XLSX> ;
+.
+
+ex:haushalt-2023 a dcat:Dataset ;
+  dcterms:title "Haushalt 2023"@de ;
+  dcat:distribution ex:haushalt-2023-csv ;
+  dcat:inSeries ex:haushalt ;
+  dcterms:issued "2022-12-01"^^xsd:date ;
+  dcat:prev ex:haushalt-2022 ;
+  dcat:next ex:haushalt-2024 ;
+  .
+
+ex:haushalt-2023-csv a dcat:Distribution ;
+  dcterms:title "haushalt_2023.csv" ;
+  dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+.
+
+ex:haushalt-2024 a dcat:Dataset ;
+  dcterms:title "Haushalt 2024"@de ;
+  dcat:distribution ex:haushalt-2024-csv ;
+  dcat:inSeries ex:haushalt ;
+  dcterms:issued "2023-12-01"^^xsd:date ;
+  dcat:prev ex:haushalt-2023 ;
+  .
+  
+ex:haushalt-2024-csv a dcat:Distribution ;
+  dcterms:title "haushalt_2024.csv" ;
+  dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+.
