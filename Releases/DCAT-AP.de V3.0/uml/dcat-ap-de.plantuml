@@ -17,20 +17,23 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ _:internalLink  = katalog-titel
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
         '@ rdfs:comment    = Diese Eigenschaft bezeichnet den einem Katalog zugewiesenen Titel.
-        '@ rdfs:comment    = Diese Eigenschaft kann für parallele Sprachversionen des Katalogtitels wiederholt werden.
+        '@ skos:scopeNote  = Diese Eigenschaft kann für parallele Sprachversionen des Katalogtitels wiederholt werden.
         '@ rdf:about       = http://purl.org/dc/terms/title
-        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title
+        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.title)
+        '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title)
+        '@ adms:interoperabilityLevel  = A
         '@ sh:shapes       = dcatap:Catalog_Property_dct_title
     <<mandatory>> dcterms:description ~> rdfs:Literal [1..*]
         '@ rdfs:label      = Beschreibung
         '@ _:internalLink  = katalog-beschreibung
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
         '@ rdfs:comment    = Diese Eigenschaft enthält eine Beschreibung des Kataloges als Freitext.
-        '@ rdfs:comment    = Diese Eigenschaft kann für parallel existierende Sprachversionen der Katalogbeschreibung wiederholt werden.
+        '@ skos:scopeNote  = Diese Eigenschaft kann für parallel existierende Sprachversionen der Katalogbeschreibung wiederholt werden.
         '@ rdf:about       = http://purl.org/dc/terms/description
-        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_description
+        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.description)
+        '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description)
+        '@ adms:interoperabilityLevel  = A
         '@ sh:shapes       = dcatap:Catalog_Property_dct_description 
-
     <<recommended>> dcterms:issued ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Veröffentlichungsdatum
         '@ _:internalLink  = katalog-veroffentlichungsdatum
@@ -38,7 +41,9 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime`
         '@ rdfs:comment    = Diese Eigenschaft enthält das Datum der Herausgabe/Emission (z.B. in Form einer Veröffentlichung) des Kataloges.
         '@ rdf:about       = http://purl.org/dc/terms/issued
-        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_release_date
+        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.releasedate)
+        '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_release_date)
+        '@ adms:interoperabilityLevel  = A
         '@ sh:shapes       = dcatap:Catalog_Property_dct_issued (erlaubt auch xsd:gYear und xsd:gYearMonth)
         '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
     <<recommended>> dcterms:modified ~> rdfs:Literal [0..1]
@@ -47,7 +52,9 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ _:rangeOverride = [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als `xsd:gYear`, `xsd:gYearMonth`, `xsd:date` oder `xsd:dateTime`
         '@ rdfs:comment    = Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation des Kataloges.
         '@ rdf:about       = http://purl.org/dc/terms/modified
-        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date
+        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.modificationdate)
+        '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_update_date)
+        '@ adms:interoperabilityLevel  = A
         '@ sh:shapes       = dcatap:Catalog_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
         '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
     <<recommended>> dcterms:language ~> dcterms:LinguisticSystem [*]
@@ -55,9 +62,11 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ _:internalLink  = katalog-sprache
         '@ rdfs:range      = http://purl.org/dc/terms/LinguisticSystem
         '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf die Sprache, die in den textuellen Beschreibungen der dem Katalog zugehörigen DCAT-Ressourcen Verwendung findet (z.B. Titel, Beschreibungen usw.). 
-        '@ rdfs:comment    = Diese Eigenschaft kann wiederholt werden, falls die Metadaten in verschiedenen Sprachen zur Verfügung stehen.
+        '@ skos:scopeNote  = Diese Eigenschaft kann wiederholt werden, falls die Metadaten in verschiedenen Sprachen zur Verfügung stehen.
         '@ rdf:about       = http://purl.org/dc/terms/language
-        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_language
+        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.language)
+        '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_language)
+        '@ adms:interoperabilityLevel  = A
         '@ _:vocabularyLink = #kv-languages
         '@ sh:shapes       = ___TBD___(kein Test des Vokabulars)
     <<recommended>> foaf:homepage ~> foaf:Document [0..1]
@@ -66,7 +75,9 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:range      = http://xmlns.com/foaf/0.1/Document
         '@ rdfs:comment    = Diese Eigenschaft verweist auf eine Homepage, welche die zentrale Homepage des Kataloges ist.
         '@ rdf:about       = http://xmlns.com/foaf/0.1/homepage
-        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_homepage
+        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.homepage)
+        '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_homepage)
+        '@ adms:interoperabilityLevel  = A
         '@ sh:shapes       = dcatap:Catalog_Property_foaf_homepage, ___TBD___(kein Test, ob Ziel eine Ressource)
     <<recommended>> dcterms:license ~> dcterms:LicenseDocument [0..1]
         '@ rdfs:label      = Lizenz
@@ -74,7 +85,9 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:range      = http://purl.org/dc/terms/LicenseDocument
         '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf die Lizenz, mit welcher der Katalog verwendet oder wiederverwendet werden kann.
         '@ rdf:about       = http://purl.org/dc/terms/license
-        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_license
+        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.licence)
+        '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_license)
+        '@ adms:interoperabilityLevel  = A
         '@ _:vocabularyLink = #kv-licenses
         '@ sh:shapes       = dcatap:Catalog_Property_dct_license, ___TBD___(kein Test des Vokabulars)
     <<recommended>> dcat:themeTaxonomy ~> skos:ConceptScheme [*]
@@ -83,7 +96,9 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:range      = http://www.w3.org/2004/02/skos/core#ConceptScheme
         '@ rdfs:comment    = Diese Eigenschaft verweist auf das eingesetzte Schema zur Klassifizierung der dem Katalog zugewiesenen DCAT-Ressourcen in Form von Kategorien.
         '@ rdf:about       = http://www.w3.org/ns/dcat#themeTaxonomy
-        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_themes
+        '@ rdfs:seeAlso    = [DCAT](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.themes)
+        '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_themes)
+        '@ adms:interoperabilityLevel  = E
         '@ _:deOriginal    = Für DCAT-AP.de muss dieser Wert immer mindestens http://publications.europa.eu/resource/authority/data-theme sein.
         '@ sh:shapes       = dcatap:Catalog_Property_dcat_themeTaxonomy, ___TBD___(kein Test, ob mindestens einmal auf o.a. verlinkt, kein Test, ob Ziel eine Ressource)
     <<recommended>> dcatap:availability ~> skos:Concept [0..1]
@@ -93,6 +108,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:comment    = Geplante Verfügbarkeit des Katalogs als Auswahl aus einer festen Liste von Werten via DCAT-AP URIs.
         '@ rdf:about       = http://data.europa.eu/r5r/availability
         '@ _:vocabularyLink = #kv-availability
+        '@ adms:interoperabilityLevel  = E
         '@ _:deOriginal    = DCAT-AP.de ordnet diese Eigenschaft allen DCAT-Ressourcen und Distributionen zu.
         '@ sh:shapes       = ___TBD___(deutsche Besonderheit, kein Test des Vokabulars, Maximalzahl 1)
 
@@ -102,7 +118,9 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:range      = http://purl.org/dc/terms/RightsStatement
         '@ rdfs:comment    = Diese Eigenschaft verweist auf eine juristische Darlegung, welche die mit dem Katalog assoziierten Nutzungsbestimmungen spezifiziert.
         '@ rdf:about       = http://purl.org/dc/terms/rights
-        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:resource_rights
+        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.rights)
+        '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_rights)
+        '@ adms:interoperabilityLevel  = A
         '@ sh:shapes       = dcatap:Catalog_Property_dct_rights, ___TBD___(kein Test, ob Ziel eine Ressource ist?)
     <<optional>> dcat:catalog ~> dcat:Catalog [*]
         '@ rdfs:label      = Katalog
@@ -110,13 +128,15 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:range      = http://www.w3.org/ns/dcat#Catalog
         '@ rdfs:comment    = Ein Katalog, dessen Inhalt im Kontext dieses Katalogs von Interesse ist.
         '@ rdf:about       = http://www.w3.org/ns/dcat#catalog
-        '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_catalog
+        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.catalogue)
+        '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_catalog)
+        '@ adms:interoperabilityLevel  = A
         '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Catalog)
 }
 '@ rdfs:label      = Katalog
 '@ _:internalLink  = #klasse-katalog
 '@ rdf:about       = http://www.w3.org/ns/dcat#Catalog
-'@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Class:Catalog
+'@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog)
 '@ rdfs:comment    = Eine Sammlung oder Quelle, welche die beschriebenen Datensätze, Datenservices oder Kataloge zur Verfügung stellt.
 '@ _:usedBy        = dcat:catalog, dcterms:hasPart, dcterms:isPartOf (dcat:Catalog)
 '@ rdfs:subClassOf = dcat:Dataset
@@ -128,7 +148,10 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:range      = http://www.w3.org/ns/dcat#DataService
     '@ rdfs:comment    = Diese Eigenschaft verknüpft den Katalog mit einem Datenservice, welcher somit Teil des Kataloges wird.
     '@ rdf:about       = http://www.w3.org/ns/dcat#service
-    '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_service
+    '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.service)
+    '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_service)
+    '@ adms:interoperabilityLevel  = E
+    '@ _:deOriginal    = ___TBD___
     '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Catalog)
 
 "dcat:Catalog" --> "*" "dcterms:Location"     : <<recommended>> dcterms:spatial
@@ -137,7 +160,9 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:range      = http://purl.org/dc/terms/Location
     '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf einen vom Katalog abgedeckten geographischen Bereich.
     '@ rdf:about       = http://purl.org/dc/terms/spatial
-    '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial
+    '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.geographicalcoverage)
+    '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial)
+    '@ adms:interoperabilityLevel  = A
     '@ _:vocabularyLink = #kv-spatial
     '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars, schwierig hier, kein Test, ob Ziel dcterms:Location)
 
@@ -146,9 +171,12 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ _:internalLink  = katalog-hat-teilkatalog
     '@ rdfs:range      = http://www.w3.org/ns/dcat#Catalog
     '@ rdfs:comment    = Diese Eigenschaft verweist auf einen in Beziehung stehenden Unterkatalog, der Teil des beschriebenen Kataloges ist.
-    '@ rdfs:comment    = Hinweis: Range von W3C-DCAT ist dcat:Resource, nicht nur dcat:Catalog, wurde von DCAT-AP geändert.
+    '@ skos:scopeNote  = Die Range von W3C-DCAT ist dcat:Resource, nicht nur dcat:Catalog, das wurde von DCAT-AP geändert.
     '@ rdf:about       = http://purl.org/dc/terms/hasPart
-    '@ rdfs:seeAlso    = https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_has_part
+    '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.haspart)
+    '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_has_part)
+    '@ adms:interoperabilityLevel  = E
+    '@ _:deOriginal    = DCAT-AP.de bindet einen zusätzlichen Verwendungshinweis ein.
     '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Catalog)
 
 "dcat:Catalog" --> "0..1"  "dcat:Catalog"       : <<optional>> dcterms:isPartOf
@@ -159,6 +187,8 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:comment    = Hinweis: Nicht Teil von W3C-DCAT, von DCAT-AP hinzugefügt.
     '@ rdf:about       = http://purl.org/dc/terms/isPartOf
     '@ rdfs:seeAlso    = https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isPartOf
+    '@ adms:interoperabilityLevel  = E
+    '@ _:deOriginal    = DCAT-AP.de fügt diese Eigenschaft für Kataloge hinzu.
     '@ sh:shapes       = dcatap:Catalog_Property_dct_isPartOf, ___TBD___(kein Test, ob Ziel ein dcat:Catalog)
 
 "dcat:Catalog" --> "*"     "dcat:CatalogRecord" : <<optional>> dcat:record

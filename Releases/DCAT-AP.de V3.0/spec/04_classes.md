@@ -4,12 +4,12 @@
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Eine Sammlung oder Quelle, welche die beschriebenen Datensätze, Datenservices oder Kataloge zur Verfügung stellt.     |
 > | eingebunden über | dcat:catalog, dcterms:hasPart, dcterms:isPartOf (dcat:Catalog)         | 
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Class:Catalog |
+> | Weiterführende Dokumentationen | [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog) |
 
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dcat:themeTaxonomy`](#katalog-kategorienschema), [`dcatap:availability`](#katalog-verfugbarkeit).<br>
+[`dcat:themeTaxonomy`](#katalog-kategorienschema), [`dcatap:availability`](#katalog-verfugbarkeit), [`dcat:service`](#katalog-datenservice), [`dcterms:hasPart`](#katalog-hat-teilkatalog), [`dcterms:isPartOf`](#katalog-ist-teilkatalog).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
@@ -48,8 +48,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
 > | Verbindlichkeit          | Pflicht |
 > | Multiplizität            | `[1..*]`                    |
-> | Beschreibung             | Diese Eigenschaft bezeichnet den einem Katalog zugewiesenen Titel.<br>Diese Eigenschaft kann für parallele Sprachversionen des Katalogtitels wiederholt werden.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title  | 
+> | Beschreibung             | Diese Eigenschaft bezeichnet den einem Katalog zugewiesenen Titel.  |
+> | Verwendungshinweis       | Diese Eigenschaft kann für parallele Sprachversionen des Katalogtitels wiederholt werden. | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.title), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title)  | 
 
 <br>
 
@@ -59,8 +60,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Wertebereich             | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
 > | Verbindlichkeit          | Pflicht |
 > | Multiplizität            | `[1..*]`                    |
-> | Beschreibung             | Diese Eigenschaft enthält eine Beschreibung des Kataloges als Freitext.<br>Diese Eigenschaft kann für parallel existierende Sprachversionen der Katalogbeschreibung wiederholt werden.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_description  | 
+> | Beschreibung             | Diese Eigenschaft enthält eine Beschreibung des Kataloges als Freitext.  |
+> | Verwendungshinweis       | Diese Eigenschaft kann für parallel existierende Sprachversionen der Katalogbeschreibung wiederholt werden. | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.description), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description)  | 
 
 <br>
 
@@ -93,7 +95,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft enthält das Datum der Herausgabe/Emission (z.B. in Form einer Veröffentlichung) des Kataloges.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_release_date  | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.releasedate), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_release_date)  | 
 > | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 
 <br>
@@ -105,7 +107,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation des Kataloges.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date  | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.modificationdate), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_update_date)  | 
 > | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 
 <br>
@@ -116,8 +118,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Wertebereich             | [`dcterms:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) |
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[*]`                    |
-> | Beschreibung             | Diese Eigenschaft bezieht sich auf die Sprache, die in den textuellen Beschreibungen der dem Katalog zugehörigen DCAT-Ressourcen Verwendung findet (z.B. Titel, Beschreibungen usw.). <br>Diese Eigenschaft kann wiederholt werden, falls die Metadaten in verschiedenen Sprachen zur Verfügung stehen. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-languages) |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_language  | 
+> | Beschreibung             | Diese Eigenschaft bezieht sich auf die Sprache, die in den textuellen Beschreibungen der dem Katalog zugehörigen DCAT-Ressourcen Verwendung findet (z.B. Titel, Beschreibungen usw.).  <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-languages) |
+> | Verwendungshinweis       | Diese Eigenschaft kann wiederholt werden, falls die Metadaten in verschiedenen Sprachen zur Verfügung stehen. | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.language), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_language)  | 
 
 <br>
 
@@ -128,7 +131,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft verweist auf eine Homepage, welche die zentrale Homepage des Kataloges ist.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_homepage  | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.homepage), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_homepage)  | 
 
 <br>
 
@@ -139,7 +142,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf die Lizenz, mit welcher der Katalog verwendet oder wiederverwendet werden kann. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-licenses) |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_license  | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.licence), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_license)  | 
 
 <br>
 
@@ -150,7 +153,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft verweist auf das eingesetzte Schema zur Klassifizierung der dem Katalog zugewiesenen DCAT-Ressourcen in Form von Kategorien.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_themes  | 
+> | Weiterführende Dokumentationen | [DCAT](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.themes), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_themes)  | 
 > | Änderungen durch DCAT-AP.de | Für DCAT-AP.de muss dieser Wert immer mindestens http://publications.europa.eu/resource/authority/data-theme sein. | 
 <br>
 
@@ -171,7 +174,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit          | Empfohlen |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft bezieht sich auf einen vom Katalog abgedeckten geographischen Bereich. <br> [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-spatial) |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial  | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.geographicalcoverage), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial)  | 
 
 <br>
 
@@ -182,7 +185,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft verweist auf eine juristische Darlegung, welche die mit dem Katalog assoziierten Nutzungsbestimmungen spezifiziert.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_rights  | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.rights), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_rights)  | 
 
 <br>
 
@@ -193,7 +196,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Ein Katalog, dessen Inhalt im Kontext dieses Katalogs von Interesse ist.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_catalog  | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.catalogue), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_catalog)  | 
 
 <br>
 
@@ -204,8 +207,8 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft verknüpft den Katalog mit einem Datenservice, welcher somit Teil des Kataloges wird.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_service  | 
-
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.service), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_service)  | 
+> | Änderungen durch DCAT-AP.de | ___TBD___ | 
 <br>
 
 ###  Katalog: Hat Teilkatalog {#katalog-hat-teilkatalog}
@@ -214,9 +217,10 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Wertebereich             | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[*]`                    |
-> | Beschreibung             | Diese Eigenschaft verweist auf einen in Beziehung stehenden Unterkatalog, der Teil des beschriebenen Kataloges ist.<br>Hinweis: Range von W3C-DCAT ist dcat:Resource, nicht nur dcat:Catalog, wurde von DCAT-AP geändert.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_has_part  | 
-
+> | Beschreibung             | Diese Eigenschaft verweist auf einen in Beziehung stehenden Unterkatalog, der Teil des beschriebenen Kataloges ist.  |
+> | Verwendungshinweis       | Die Range von W3C-DCAT ist dcat:Resource, nicht nur dcat:Catalog, das wurde von DCAT-AP geändert. | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.haspart), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_has_part)  | 
+> | Änderungen durch DCAT-AP.de | DCAT-AP.de bindet einen zusätzlichen Verwendungshinweis ein. | 
 <br>
 
 ###  Katalog: Ist Teilkatalog {#katalog-ist-teilkatalog}
@@ -227,7 +231,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität            | `[0..1]`                    |
 > | Beschreibung             | Diese Eigenschaft verweist auf einen in Beziehung stehenden Hauptkatalog, in welchem der beschriebene Katalog physikalisch oder logisch eingebunden ist.<br>Hinweis: Nicht Teil von W3C-DCAT, von DCAT-AP hinzugefügt.  |
 > | Weiterführende Dokumentationen | https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isPartOf  | 
-
+> | Änderungen durch DCAT-AP.de | DCAT-AP.de fügt diese Eigenschaft für Kataloge hinzu. | 
 <br>
 
 ###  Katalog: Katalogeintrag {#katalog-katalogeintrag}
