@@ -9,7 +9,7 @@
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dcat:themeTaxonomy`](#katalog-kategorienschema), [`dcatap:availability`](#katalog-verfugbarkeit), [`dcat:service`](#katalog-datenservice), [`dcterms:hasPart`](#katalog-hat-teilkatalog), [`dcterms:isPartOf`](#katalog-ist-teilkatalog).<br>
+[`dcat:themeTaxonomy`](#katalog-kategorienschema), [`dcatap:availability`](#katalog-verfugbarkeit), [`dcterms:hasPart`](#katalog-hat-teilkatalog), [`dcterms:isPartOf`](#katalog-ist-teilkatalog), [`dcat:record`](#katalog-katalogeintrag), [`dcat:dataset`](#katalog-datensatz), [`dcterms:publisher`](#katalog-herausgeber).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. |
@@ -73,8 +73,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit          | Pflicht |
 > | Multiplizität            | `[1..*]`                    |
 > | Beschreibung             | Diese Eigenschaft verknüpft den Katalog mit einem Datensatz, welcher somit Teil des Kataloges wird.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_dataset  | 
-
+> | Verwendungshinweis       | Da leere Kataloge in der Regel auf Probleme hinweisen, sollte diese Eigenschaft mit der Eigenschaft "Datenservice" kombiniert werden, um eine Überprüfung auf leere Kataloge zu implementieren. | 
+> | Weiterführende Dokumentationen | [DCAT-AP] (https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.dataset), [DCAT] (https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_dataset)  | 
+> | Änderungen durch DCAT-AP.de | DCAT-AP.de definiert, dass ein Katalog mindestens einen Datensatz enthalten muss. | 
 <br>
 
 ###  Katalog: Herausgeber {#katalog-herausgeber}
@@ -83,9 +84,10 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Wertebereich             | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) |
 > | Verbindlichkeit          | Pflicht |
 > | Multiplizität            | `[1]`                    |
-> | Beschreibung             | Diese Eigenschaft bezieht sich auf die Stelle oder Person, die verantwortlich für Bereitstellung des Kataloges ist.<br>Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zum-herausgeber) genauer beschrieben.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_publisher  | 
-
+> | Beschreibung             | Diese Eigenschaft bezieht sich auf die Stelle oder Person, die verantwortlich für Bereitstellung des Kataloges ist.<br>Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat.  |
+> | Verwendungshinweis       | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zum-herausgeber) genauer beschrieben. | 
+> | Weiterführende Dokumentationen | [DCAT-AP] (https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.publisher), [DCAT] (https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher)  | 
+> | Änderungen durch DCAT-AP.de | DCAT-AP.de konkretisiert die Beschreibung der Eigenschaft. | 
 <br>
 
 ###  Katalog: Veröffentlichungsdatum {#katalog-veroffentlichungsdatum}
@@ -207,8 +209,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[*]`                    |
 > | Beschreibung             | Diese Eigenschaft verknüpft den Katalog mit einem Datenservice, welcher somit Teil des Kataloges wird.  |
+> | Verwendungshinweis       | Da leere Kataloge in der Regel auf Probleme hinweisen, sollte diese Eigenschaft mit der Eigenschaft "Datensatz" kombiniert werden, um eine Überprüfung auf leere Kataloge zu implementieren. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.service), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_service)  | 
-> | Änderungen durch DCAT-AP.de | ___TBD___ | 
+
 <br>
 
 ###  Katalog: Hat Teilkatalog {#katalog-hat-teilkatalog}
@@ -229,9 +232,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Wertebereich             | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[0..1]`                    |
-> | Beschreibung             | Diese Eigenschaft verweist auf einen in Beziehung stehenden Hauptkatalog, in welchem der beschriebene Katalog physikalisch oder logisch eingebunden ist.<br>Hinweis: Nicht Teil von W3C-DCAT, von DCAT-AP hinzugefügt.  |
-> | Weiterführende Dokumentationen | https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isPartOf  | 
-> | Änderungen durch DCAT-AP.de | DCAT-AP.de fügt diese Eigenschaft für Kataloge hinzu. | 
+> | Beschreibung             | Diese Eigenschaft verweist auf einen in Beziehung stehenden Hauptkatalog, in welchem der beschriebene Katalog physikalisch oder logisch eingebunden ist.<br>Hinweis: Nicht Teil von W3C-DCAT, wurde ursprünglich von DCAT-AP hinzugefügt und mit der Version 3.0 wieder entfernt.  |
+> | Weiterführende Dokumentationen | [DCMI Metadata Terms] (https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isPartOf)  | 
+> | Änderungen durch DCAT-AP.de | DCAT-AP.de behält diese Eigenschaft für Kataloge bei. | 
 <br>
 
 ###  Katalog: Katalogeintrag {#katalog-katalogeintrag}
@@ -240,9 +243,10 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Wertebereich             | [`dcat:CatalogRecord`](http://www.w3.org/ns/dcat#CatalogRecord) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[*]`                    |
-> | Beschreibung             | Diese Eigenschaft bezieht sich auf den Katalogeintrag, welcher Teil des Kataloges ist.<br>Diese Eigenschaft darf nur mit der besonderen Klasse [`dcat:CatalogRecord`](#klasse-katalogeintrag) verwendet werden. Es handelt sich dabei nicht um einen gewöhnlichen Datensatz.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_catalog_record  | 
-
+> | Beschreibung             | Diese Eigenschaft bezieht sich auf den Katalogeintrag, welcher Teil des Kataloges ist.  |
+> | Verwendungshinweis       | Diese Eigenschaft darf nur mit der besonderen Klasse [`dcat:CatalogRecord`](#klasse-katalogeintrag) verwendet werden. Es handelt sich dabei nicht um einen gewöhnlichen Datensatz. | 
+> | Weiterführende Dokumentationen | [DCAT-AP] (https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.record), [DCAT] https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_catalog_record  | 
+> | Änderungen durch DCAT-AP.de | DCAT-AP.de bindet einen zusätzlichen Verwendungshinweis ein. | 
 <br>
 
 ###  Katalog: Autor {#katalog-autor}
@@ -251,8 +255,8 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Wertebereich             | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) |
 > | Verbindlichkeit          | Optional |
 > | Multiplizität            | `[*]`                    |
-> | Beschreibung             | Diese Eigenschaft verweist auf Stellen oder Personen, die den Katalog erstellt hat.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#weitere-wichtige-rollen) genauer beschrieben.  |
-> | Weiterführende Dokumentationen | https://www.w3.org/TR/vocab-dcat-2/#Property:resource_creator  | 
+> | Beschreibung             | Diese Eigenschaft verweist auf Stellen oder Personen, die den Katalog erstellt haben.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#weitere-wichtige-rollen) genauer beschrieben.  |
+> | Weiterführende Dokumentationen | [DCAT-AP] (https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.creator), [DCAT] (https://www.w3.org/TR/vocab-dcat-3/#Property:resource_creator)  | 
 
 <br>
 
