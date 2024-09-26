@@ -38,4 +38,10 @@ Das [EU Vokabular "Distribution Status"](#kv-distribution-status) wurde zum Stan
 
 Das Namespace-Prefix von DC Terms wurde von `dct` auf `dcterms` geändert.
 
+### Strukturelle Anpassungen an DCAT-AP 3.0
+
+DCAT-AP 3.0 beschreibt Eigenschaften über "Definition" und "Usage". DCAT-AP.de folgt diesem Vorgehen und splittet die bisherigen "Beschreibung" in "Beschreibung" und "Verwendungshinweis" auf.
+
+Darüber hinaus wird für jede Eigenschaft nun ein "Interoperabilitätslevel" angegeben.
+
 ---
