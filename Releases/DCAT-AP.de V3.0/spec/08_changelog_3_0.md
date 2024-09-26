@@ -20,6 +20,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
+| [Andere ID](#datensatz-andere-id) (`adms:identifier`) | 3.0: Errata: Link der Range korrigiert und Verwendungshinweis überarbeitet. | 
 | [Veröffentlichungsdatum](#datensatz-veroffentlichungsdatum) (`dcterms:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 | [Aktualisierungsdatum](#datensatz-aktualisierungsdatum) (`dcterms:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 | [Versionsbezeichnung](#datensatz-versionsbezeichnung) (`dcat:version`) | 3.0: Neu hinzugefügt. | 
@@ -32,6 +33,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Weitere Version](#datensatz-weitere-version) (`dcat:hasVersion`) | 3.0: Neu hinzugefügt. | 
 | [Weitere Version (DEPRECATED)](#datensatz-weitere-version-deprecated) (`dcterms:hasVersion`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
 | [Ist Version von (DEPRECATED)](#datensatz-ist-version) (`dcterms:isVersionOf`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
+| [Autor](#datensatz-autor) (`dcterms:creator`) | 3.0: Errata: War fälschlicherweise als Ergänzung durch DCAT-AP.de angegeben. | 
 | [In Serie](#datensatz-in-serie) (`dcat:inSeries`) | 3.0: Im Zuge der Einführung von `dcat:DatasetSeries` hinzugefügt. | 
 
 

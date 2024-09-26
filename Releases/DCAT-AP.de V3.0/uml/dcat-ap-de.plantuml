@@ -275,8 +275,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://www.w3.org/ns/dcat#keyword
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.keyword)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_keyword)
-        '@ adms:interoperabilityLevel = E
-        '@ _:deOriginal    = DCAT-AP.de bindet einen zusätzlichen Verwendungshinweis ein.
+        '@ adms:interoperabilityLevel = A
         '@ sh:shapes       = dcatap:Dataset_Property_dcat_keyword
     <<recommended>> dcatde:politicalGeocodingLevelURI ~> rdfs:Resource [*]
         '@ rdfs:label      = Ebene der geopolitischen Abdeckung
@@ -332,8 +331,8 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://data.europa.eu/r5r/availability
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.availability)
         '@ _:vocabularyLink = #kv-availability
-        '@ adms:interoperabilityLevel = E
-        '@ _:deOriginal    = DCAT-AP.de ordnet diese Eigenschaft nicht nur Distributionen, sondern allen DCAT-Ressourcen zu.
+        '@ adms:interoperabilityLevel = P
+        '@ _:deOriginal    = DCAT-AP.de ordnet diese Eigenschaft allen DCAT-Ressourcen und Distributionen zu.
         '@ sh:shapes       = ___TBD___(deutsche Besonderheit, kein Test des Vokabulars, Maximalzahl 1)
 
     <<optional>> dcatde:contributorID ~> rdfs:Resource [*]
@@ -353,10 +352,11 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
         '@ rdfs:comment    = Diese Eigenschaft enthält die geografische Abdeckung eines Datensatzes, repräsentiert durch die Bezeichnung eines administrativen Gebiets oder eines fachlichen Bezugs als Freitext.
         '@ skos:scopeNote  = Ergänzend als Text bzw. alleinstehend für alle Fälle bei denen die geopolitische Abdeckung nicht durch eine URI angegeben werden kann (z.B. bei komplexeren Bund-Länder-Kooperationen oder auf kommunaler Ebene). 
+        '@ skos:scopeNote  = Beispiele: "Gemeinden des Wasserzweckverbands Straubing-Land" oder "Verband Region Rhein-Neckar".
         '@ skos:scopeNote  = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#geobezug-als-beschreibender-text) genauer beschrieben. Sie kann für parallele Sprachversionen wiederholt werden.
         '@ rdf:about       = http://dcat-ap.de/def/dcatde/geocodingDescription
         '@ adms:interoperabilityLevel = P
-        '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft. Beispiele: "Gemeinden des Wasserzweckverbands Straubing-Land" oder "Verband Region Rhein-Neckar".
+        '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
         '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
     <<optional>> dcterms:identifier ~> rdfs:Literal [*]
         '@ rdfs:label      = ID
@@ -374,13 +374,14 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ _:internalLink  = datensatz-andere-id
         '@ rdfs:range      = http://www.w3.org/ns/adms#Identifier
         '@ rdfs:comment    = Diese Eigenschaft verweist auf sekundäre IDs des Datensatzes.
-        '@ skos:scopeNote  = Beispiele dafür sind [DataCite](http://www.datacite.org/), [DOI (Digital Object Identifier)](http://www.doi.org/), [EZID](https://ezid.cdlib.org/), [W3ID](W3C Permanent Identifiers for the Web: https://w3id.org/) oder andere fachspezifische Identifier.
+        '@ skos:scopeNote  = Beispiele dafür sind [DataCite](http://www.datacite.org/), [DOI (Digital Object Identifier)](http://www.doi.org/), [EZID](https://ezid.cdlib.org/), [W3ID: Permanent Identifiers for the Web](https://w3id.org/) oder andere fachspezifische Identifier.
         '@ skos:scopeNote  = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#identifier) genauer beschrieben.
         '@ rdf:about       = http://purl.org/dc/terms/identifier
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.otheridentifier)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#dereferenceable-identifiers)
         '@ adms:interoperabilityLevel = A
         '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein adms:Identifier)
+        '@ adms:versionNotes = 3.0: Errata: Link der Range korrigiert und Verwendungshinweis überarbeitet.
     <<optional>> dcterms:issued ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Veröffentlichungsdatum
         '@ _:internalLink  = datensatz-veroffentlichungsdatum
@@ -413,7 +414,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.version)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version)
         '@ adms:interoperabilityLevel = E
-        '@ _:deOriginal    = DCAT-AP.de gibt eine Kardinalität von `*` an.
+        '@ _:deOriginal    = TBD: DCAT-AP.de gibt eine Kardinalität von `*` statt `0..1` an.
         '@ adms:versionNotes = 3.0: Neu hinzugefügt.
     <<optional>> owl:versionInfo ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Versionsbezeichnung (DEPRECATED)
@@ -446,7 +447,8 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ skos:scopeNote  = Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden.
         '@ rdf:about       = http://data.europa.eu/r5r/applicableLegislation
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation)
-        '@ adms:interoperabilityLevel = A
+        '@ adms:interoperabilityLevel = E
+        '@ _:deOriginal    = Verwendungshinweis ergänzt.
         '@ adms:versionNotes = 3.0: Neu hinzugefügt.
     <<optional>> dcatde:legalBasis ~> rdfs:Literal [*]
         '@ rdfs:label      = Rechtsgrundlage für die Zugangseröffnung (DEPRECATED)
@@ -454,9 +456,10 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
         '@ rdfs:comment    = Dieses Feld dokumentiert als Freitext optional die Rechtsgrundlage für den Zugang zu den Informationen (die Zugangseröffnung), d.h. die originäre Rechtsgrundlage für den Zugang zu Daten der Verwaltung.
         '@ skos:scopeNote  = Diese Eigenschaft kann für parallele Sprachversionen wiederholt werden.
+        '@ skos:scopeNote  = Beispiele: Public Sector Information Directive (PSI-Direktive), Umweltinformationsgesetz (UIG), deutsche Informationsfreiheits- (IFG) und Transparenzgesetze.
         '@ rdf:about       = http://dcat-ap.de/def/dcatde/legalBasis
         '@ adms:interoperabilityLevel = P
-        '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft. Beispiele: Public Sector Information Directive (PSI-Direktive), Umweltinformationsgesetz (UIG), deutsche Informationsfreiheits- (IFG) und Transparenzgesetze.
+        '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
         '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated)
         '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
     <<optional>> dcterms:relation ~> rdfs:Resource [*]
@@ -529,12 +532,13 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:label      = Provenienz
         '@ _:internalLink  = datensatz-provenienz
         '@ rdfs:range      = http://purl.org/dc/terms/ProvenanceStatement
-        '@ rdfs:comment    = Diese Eigenschaft umfasst eine Angabe zur Entwicklungsgeschichte des Datensatzes, insbesondere in wessen Besitz oder Obhut die Ressource sich bislang befunden hat, soweit die Wechsel signifikanten Einfluss auf die Authentizität, Integrität und Interpretierbarkeit dieser Ressource hat.
+        '@ rdfs:comment    = Diese Eigenschaft umfasst eine Angabe zur Entwicklungsgeschichte des Datensatzes. 
+        '@ skos:scopeNote  = Insbesondere ist relevant, in wessen Besitz oder Obhut die Ressource sich bislang befunden hat, soweit die Wechsel signifikanten Einfluss auf die Authentizität, Integrität und Interpretierbarkeit dieser Ressource hat.
         '@ rdf:about       = http://purl.org/dc/terms/provenance
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.provenance)
         '@ rdfs:seeAlso    = [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/provenance)
         '@ adms:interoperabilityLevel = E
-        '@ _:deOriginal    = DCAT-AP.de erweitert die Beschreibung der Eigenschaft.
+        '@ _:deOriginal    = Ergänzung eines Verwendungshinweises.
         '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein ProvenanceStatement?)
     <<optional>> dcterms:accrualPeriodicity ~> dcterms:Frequency [0..1]
         '@ rdfs:label      = Aktualisierungsfrequenz
@@ -576,12 +580,12 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ _:internalLink    = datensatz-wurde-erzeugt-von
         '@ rdfs:range        = https://www.w3.org/TR/prov-o/#Activity
         '@ rdfs:comment      = Diese Eigenschaft verweist auf die Aktivität, die zur Erstellung des Datensatzes geführt hat.
-        '@ rdfs:comment      = Eine Aktivität ist typischer Weise eine Initiative, ein Projekt, eine Umfrage oder dauerhafte Handlung ("business as usual").
+        '@ skos:scopeNote    = Eine Aktivität ist typischer Weise eine Initiative, ein Projekt, eine Umfrage oder dauerhafte Handlung ("business as usual").
         '@ rdf:about         = https://www.w3.org/TR/prov-o/#wasGeneratedBy
         '@ rdfs:seeAlso      = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.wasgeneratedby)
         '@ rdfs:seeAlso      = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_was_generated_by)
         '@ adms:interoperabilityLevel = E
-        '@ _:deOriginal    = DCAT-AP.de erweitert die Beschreibung der Eigenschaft.
+        '@ _:deOriginal      = Ergänzung eines Verwendungshinweises.
         '@ sh:shapes         = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource?)
     <<optional>> dcat:spatialResolutionInMeters ~> rdfs:Literal [*]
         '@ rdfs:label      = Räumliche Auflösung in Meter
@@ -760,12 +764,13 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ _:internalLink  = datensatz-herausgeber
     '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
     '@ rdfs:comment    = Diese Eigenschaft verweist auf die Stelle oder Person, die für Bereitstellung des Datensatzes verantwortlich ist.
+    '@ skos:scopeNote  = Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat.
     '@ skos:scopeNote  = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zum-herausgeber) genauer beschrieben.
     '@ rdf:about       = http://purl.org/dc/terms/publisher
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.publisher)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher)
     '@ adms:interoperabilityLevel = E
-    '@ _:deOriginal    = Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat.
+    '@ _:deOriginal    = Erweiterung des Verwendungshinweises.
     '@ sh:shapes       = dcatap:Dataset_Property_dct_publisher (kein Test, ob Ziel ein foaf:Agent)
 
 "dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> dcterms:creator
@@ -777,8 +782,8 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdf:about       = http://purl.org/dc/terms/creator
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.creator)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_creator)
-    '@ adms:interoperabilityLevel = P
-    '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
+    '@ adms:interoperabilityLevel = A
+    '@ adms:versionNotes = 3.0: Errata: War fälschlicherweise als Ergänzung durch DCAT-AP.de angegeben.
     '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel foaf:Agent)
 
 "dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> dcterms:contributor

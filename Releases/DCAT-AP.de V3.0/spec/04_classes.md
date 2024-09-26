@@ -302,19 +302,19 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dcat:keyword`](#datensatz-schlagwort), [`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatap:availability`](#datensatz-verfugbarkeit), [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcat:version`](#datensatz-versionsbezeichnung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcterms:provenance`](#datensatz-provenienz), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`prov:wasGeneratedBy`](#datensatz-wurde-erzeugt-von), [`dcat:spatialResolutionInMeters`](#datensatz-raumliche-auflosung-in-meter), [`dcat:temporalResolution`](#datensatz-zeitliche-auflosung), [`dcterms:references`](#datensatz-referenziert), [`dcterms:spatial`](#datensatz-raumliche-abdeckung), [`dcterms:publisher`](#datensatz-herausgeber), [`dcterms:creator`](#datensatz-autor), [`dcterms:contributor`](#datensatz-bearbeiter), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter).<br>
+[`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatap:availability`](#datensatz-verfugbarkeit), [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcat:version`](#datensatz-versionsbezeichnung), [`dcatap:applicableLegislation`](#datensatz-rechtsgrundlage), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcterms:provenance`](#datensatz-provenienz), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`prov:wasGeneratedBy`](#datensatz-wurde-erzeugt-von), [`dcat:spatialResolutionInMeters`](#datensatz-raumliche-auflosung-in-meter), [`dcat:temporalResolution`](#datensatz-zeitliche-auflosung), [`dcterms:references`](#datensatz-referenziert), [`dcterms:spatial`](#datensatz-raumliche-abdeckung), [`dcterms:publisher`](#datensatz-herausgeber), [`dcterms:contributor`](#datensatz-bearbeiter), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. | Interop. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|:--------:|
 | [Titel](#datensatz-titel) | `dcterms:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Beschreibung](#datensatz-beschreibung) | `dcterms:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Schlagwort](#datensatz-schlagwort) | `dcat:keyword` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[*]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
+| [Schlagwort](#datensatz-schlagwort) | `dcat:keyword` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Ebene der geopolitischen Abdeckung](#datensatz-ebene-geopolitischen-abdeckung) | `dcatde:politicalGeocodingLevelURI` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [Geopolitische Abdeckung](#datensatz-geopolitischen-abdeckung) | `dcatde:politicalGeocodingURI` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [Kategorie](#datensatz-kategorie) | `dcat:theme` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Kontakt](#datensatz-kontakt) | `dcat:contactPoint` | [`vcard:Kind`](http://www.w3.org/TR/vcard-rdf/#Kind) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Verfügbarkeit](#datensatz-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..1]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
+| [Verfügbarkeit](#datensatz-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..1]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [Räumliche Abdeckung](#datensatz-raumliche-abdeckung) | `dcterms:spatial` | [`dcterms:Location`](http://purl.org/dc/terms/Location) | <small>Empfohlen</small> | `[*]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
 | [Zeitliche Abdeckung](#datensatz-zeitliche-abdeckung) | `dcterms:temporal` | [`dcterms:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Distribution](#datensatz-distribution) | `dcat:distribution` | [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
@@ -328,7 +328,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Versionsbezeichnung](#datensatz-versionsbezeichnung) | `dcat:version` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
 | [Versionsbezeichnung (DEPRECATED)](#datensatz-versionsbezeichnung-deprecated) | `owl:versionInfo` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Versionserläuterung](#datensatz-versionserlauterung) | `adms:versionNotes` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Rechtsgrundlage](#datensatz-rechtsgrundlage) | `dcatap:applicableLegislation` | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
+| [Rechtsgrundlage](#datensatz-rechtsgrundlage) | `dcatap:applicableLegislation` | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) | <small>Optional</small> | `[*]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
 | [Rechtsgrundlage für die Zugangseröffnung (DEPRECATED)](#datensatz-rechtsgrundlage-zugangseroffnung) | `dcatde:legalBasis` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [Verwandte Ressource](#datensatz-verwandte-ressource) | `dcterms:relation` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Ursprüngliche Webseite](#datensatz-ursprungliche-webseite) | `dcat:landingPage` | [`foaf:Document`](http://xmlns.com/foaf/0.1/Document) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
@@ -352,7 +352,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Weitere Version (DEPRECATED)](#datensatz-weitere-version-deprecated) | `dcterms:hasVersion` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Ist Version von (DEPRECATED)](#datensatz-ist-version) | `dcterms:isVersionOf` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Beispieldistribution](#datensatz-beispieldistribution) | `adms:sample` | [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Autor](#datensatz-autor) | `dcterms:creator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
+| [Autor](#datensatz-autor) | `dcterms:creator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Bearbeiter](#datensatz-bearbeiter) | `dcterms:contributor` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [Urheber](#datensatz-urheber) | `dcatde:originator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [Verwalter](#datensatz-verwalter) | `dcatde:maintainer` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
@@ -401,8 +401,8 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft enthält ein Schlagwort oder Schlüsselbegriff zur Beschreibung des Datensatzes.  |
 > | Verwendungshinweis | Diese Eigenschaft kann für unterschiedliche Schlagworte und parallel existierende Sprachversionen wiederholt werden. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.keyword), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_keyword)  | 
-> | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
-> | Änderungen durch DCAT-AP.de | DCAT-AP.de bindet einen zusätzlichen Verwendungshinweis ein. | 
+> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
+
 <br>
 
 ###  Datensatz: Ebene der geopolitischen Abdeckung {#datensatz-ebene-geopolitischen-abdeckung}
@@ -467,8 +467,8 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Geplante Verfügbarkeit des Datensatzes als Auswahl aus einer festen Liste von Werten via DCAT-AP URIs. |
 > | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-availability) |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.availability)  | 
-> | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
-> | Änderungen durch DCAT-AP.de | DCAT-AP.de ordnet diese Eigenschaft nicht nur Distributionen, sondern allen DCAT-Ressourcen zu. | 
+> | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
+> | Änderungen durch DCAT-AP.de | DCAT-AP.de ordnet diese Eigenschaft allen DCAT-Ressourcen und Distributionen zu. | 
 <br>
 
 ###  Datensatz: Räumliche Abdeckung {#datensatz-raumliche-abdeckung}
@@ -516,10 +516,10 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit            | Empfohlen |
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft verweist auf die Stelle oder Person, die für Bereitstellung des Datensatzes verantwortlich ist. |
-> | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zum-herausgeber) genauer beschrieben. | 
+> | Verwendungshinweis | Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zum-herausgeber) genauer beschrieben. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.publisher), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher)  | 
 > | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
-> | Änderungen durch DCAT-AP.de | Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat. | 
+> | Änderungen durch DCAT-AP.de | Erweiterung des Verwendungshinweises. | 
 <br>
 
 ###  Datensatz: Datenbereitsteller ID {#datensatz-datenbereitsteller-id}
@@ -542,9 +542,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit            | Optional |
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | Diese Eigenschaft enthält die geografische Abdeckung eines Datensatzes, repräsentiert durch die Bezeichnung eines administrativen Gebiets oder eines fachlichen Bezugs als Freitext. |
-> | Verwendungshinweis | Ergänzend als Text bzw. alleinstehend für alle Fälle bei denen die geopolitische Abdeckung nicht durch eine URI angegeben werden kann (z.B. bei komplexeren Bund-Länder-Kooperationen oder auf kommunaler Ebene). <br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#geobezug-als-beschreibender-text) genauer beschrieben. Sie kann für parallele Sprachversionen wiederholt werden. | 
+> | Verwendungshinweis | Ergänzend als Text bzw. alleinstehend für alle Fälle bei denen die geopolitische Abdeckung nicht durch eine URI angegeben werden kann (z.B. bei komplexeren Bund-Länder-Kooperationen oder auf kommunaler Ebene). <br>Beispiele: "Gemeinden des Wasserzweckverbands Straubing-Land" oder "Verband Region Rhein-Neckar".<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#geobezug-als-beschreibender-text) genauer beschrieben. Sie kann für parallele Sprachversionen wiederholt werden. | 
 > | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
-> | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. Beispiele: "Gemeinden des Wasserzweckverbands Straubing-Land" oder "Verband Region Rhein-Neckar". | 
+> | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
 
 ###  Datensatz: ID {#datensatz-id}
@@ -567,8 +567,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit            | Optional |
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | Diese Eigenschaft verweist auf sekundäre IDs des Datensatzes. |
-> | Verwendungshinweis | Beispiele dafür sind [DataCite](http://www.datacite.org/), [DOI (Digital Object Identifier)](http://www.doi.org/), [EZID](https://ezid.cdlib.org/), [W3ID](W3C Permanent Identifiers for the Web: https://w3id.org/) oder andere fachspezifische Identifier.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#identifier) genauer beschrieben. | 
+> | Verwendungshinweis | Beispiele dafür sind [DataCite](http://www.datacite.org/), [DOI (Digital Object Identifier)](http://www.doi.org/), [EZID](https://ezid.cdlib.org/), [W3ID: Permanent Identifiers for the Web](https://w3id.org/) oder andere fachspezifische Identifier.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#identifier) genauer beschrieben. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.otheridentifier), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#dereferenceable-identifiers)  | 
+> | Änderungen zur Vorversion | 3.0: Errata: Link der Range korrigiert und Verwendungshinweis überarbeitet. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -610,7 +611,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.version), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version)  | 
 > | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
-> | Änderungen durch DCAT-AP.de | DCAT-AP.de gibt eine Kardinalität von `*` an. | 
+> | Änderungen durch DCAT-AP.de | TBD: DCAT-AP.de gibt eine Kardinalität von `*` statt `0..1` an. | 
 <br>
 
 ###  Datensatz: Versionsbezeichnung (DEPRECATED) {#datensatz-versionsbezeichnung-deprecated}
@@ -650,8 +651,8 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verwendungshinweis | Handelt es sich um ein High Value Dataset, muss `http://data.europa.eu/eli/reg_impl/2023/138/oj` angegeben werden.<br>Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation)  | 
 > | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
-> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
-
+> | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
+> | Änderungen durch DCAT-AP.de | Verwendungshinweis ergänzt. | 
 <br>
 
 ###  Datensatz: Rechtsgrundlage für die Zugangseröffnung (DEPRECATED) {#datensatz-rechtsgrundlage-zugangseroffnung}
@@ -661,10 +662,10 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit            | Optional |
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | Dieses Feld dokumentiert als Freitext optional die Rechtsgrundlage für den Zugang zu den Informationen (die Zugangseröffnung), d.h. die originäre Rechtsgrundlage für den Zugang zu Daten der Verwaltung. |
-> | Verwendungshinweis | Diese Eigenschaft kann für parallele Sprachversionen wiederholt werden. | 
+> | Verwendungshinweis | Diese Eigenschaft kann für parallele Sprachversionen wiederholt werden.<br>Beispiele: Public Sector Information Directive (PSI-Direktive), Umweltinformationsgesetz (UIG), deutsche Informationsfreiheits- (IFG) und Transparenzgesetze. | 
 > | Änderungen zur Vorversion | 3.0: [DEPRECATED](#glossar-deprecated) | 
 > | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
-> | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. Beispiele: Public Sector Information Directive (PSI-Direktive), Umweltinformationsgesetz (UIG), deutsche Informationsfreiheits- (IFG) und Transparenzgesetze. | 
+> | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
 
 ###  Datensatz: Verwandte Ressource {#datensatz-verwandte-ressource}
@@ -751,10 +752,11 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Wertebereich               | [`dcterms:ProvenanceStatement`](http://purl.org/dc/terms/ProvenanceStatement) |
 > | Verbindlichkeit            | Optional |
 > | Multiplizität              | `[*]`                   |
-> | Beschreibung               | Diese Eigenschaft umfasst eine Angabe zur Entwicklungsgeschichte des Datensatzes, insbesondere in wessen Besitz oder Obhut die Ressource sich bislang befunden hat, soweit die Wechsel signifikanten Einfluss auf die Authentizität, Integrität und Interpretierbarkeit dieser Ressource hat. |
+> | Beschreibung               | Diese Eigenschaft umfasst eine Angabe zur Entwicklungsgeschichte des Datensatzes.  |
+> | Verwendungshinweis | Insbesondere ist relevant, in wessen Besitz oder Obhut die Ressource sich bislang befunden hat, soweit die Wechsel signifikanten Einfluss auf die Authentizität, Integrität und Interpretierbarkeit dieser Ressource hat. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.provenance), [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/provenance)  | 
 > | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
-> | Änderungen durch DCAT-AP.de | DCAT-AP.de erweitert die Beschreibung der Eigenschaft. | 
+> | Änderungen durch DCAT-AP.de | Ergänzung eines Verwendungshinweises. | 
 <br>
 
 ###  Datensatz: Aktualisierungsfrequenz {#datensatz-aktualisierungsfrequenz}
@@ -802,10 +804,11 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Wertebereich               | [`prov:Activity`](https://www.w3.org/TR/prov-o/#Activity) |
 > | Verbindlichkeit            | Optional |
 > | Multiplizität              | `[*]`                   |
-> | Beschreibung               | Diese Eigenschaft verweist auf die Aktivität, die zur Erstellung des Datensatzes geführt hat.<br>Eine Aktivität ist typischer Weise eine Initiative, ein Projekt, eine Umfrage oder dauerhafte Handlung ("business as usual"). |
+> | Beschreibung               | Diese Eigenschaft verweist auf die Aktivität, die zur Erstellung des Datensatzes geführt hat. |
+> | Verwendungshinweis | Eine Aktivität ist typischer Weise eine Initiative, ein Projekt, eine Umfrage oder dauerhafte Handlung ("business as usual"). | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.wasgeneratedby), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_was_generated_by)  | 
 > | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
-> | Änderungen durch DCAT-AP.de | DCAT-AP.de erweitert die Beschreibung der Eigenschaft. | 
+> | Änderungen durch DCAT-AP.de | Ergänzung eines Verwendungshinweises. | 
 <br>
 
 ###  Datensatz: Räumliche Auflösung in Meter {#datensatz-raumliche-auflosung-in-meter}
@@ -955,8 +958,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft verweist auf Stellen oder Personen, die die Daten erstellt haben. Die Autorenschaft umfasst für gewöhnlich das Recht am geistigen Eigentum |
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#weitere-wichtige-rollen) genauer beschrieben. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.creator), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_creator)  | 
-> | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
-> | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
+> | Änderungen zur Vorversion | 3.0: Errata: War fälschlicherweise als Ergänzung durch DCAT-AP.de angegeben. | 
+> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
+
 <br>
 
 ###  Datensatz: Bearbeiter {#datensatz-bearbeiter}
