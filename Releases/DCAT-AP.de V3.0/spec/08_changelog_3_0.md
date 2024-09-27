@@ -30,7 +30,8 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Rechtsgrundlage für die Zugangseröffnung (DEPRECATED)](#datensatz-rechtsgrundlage-zugangseroffnung) (`dcatde:legalBasis`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
 | [Grad der Zugänglichkeit](#datensatz-grad-zuganglichkeit) (`dcterms:accessRights`) | 3.0: Kontrolliertes Vokabular hinzugefügt. | 
 | [Typ](#datensatz-typ) (`dcterms:type`) | 3.0: Kardinalität von `0..1` auf `*` geändert.<br>3.0: Namen vereinfacht.<br>3.0: Optionale Codeliste hinzugefügt. | 
-| [Zeitliche Auflösung](#datensatz-zeitliche-auflosung) (`dcat:temporalResolution`) | 3.0: Errata: Anzeige des Wertebereichs korrigiert.<br>3.0: Errata: Weiterführende Dokumentation zu DCAT korrigiert. | 
+| [Räumliche Auflösung in Meter](#datensatz-raumliche-auflosung-in-meter) (`dcat:spatialResolutionInMeters`) | 3.0: Errata: Kardinalität von `[*]` wie bei DCAT-AP auf `[0..1]` angepasst. | 
+| [Zeitliche Auflösung](#datensatz-zeitliche-auflosung) (`dcat:temporalResolution`) | 3.0: Errata: Kardinalität von `[*]` wie bei DCAT-AP auf `[0..1]` angepasst.<br>3.0: Errata: Anzeige des Wertebereichs korrigiert und weiterführende Dokumentation zu DCAT korrigiert. | 
 | [Weitere Version](#datensatz-weitere-version) (`dcat:hasVersion`) | 3.0: Neu hinzugefügt. | 
 | [Weitere Version (DEPRECATED)](#datensatz-weitere-version-deprecated) (`dcterms:hasVersion`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
 | [Ist Version von (DEPRECATED)](#datensatz-ist-version) (`dcterms:isVersionOf`) | 3.0: [DEPRECATED](#glossar-deprecated) | 

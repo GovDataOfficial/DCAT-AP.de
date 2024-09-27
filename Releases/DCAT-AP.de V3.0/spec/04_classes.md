@@ -304,7 +304,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatap:availability`](#datensatz-verfugbarkeit), [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcat:version`](#datensatz-versionsbezeichnung), [`dcatap:applicableLegislation`](#datensatz-rechtsgrundlage), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcterms:provenance`](#datensatz-provenienz), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`prov:wasGeneratedBy`](#datensatz-wurde-erzeugt-von), [`dcat:spatialResolutionInMeters`](#datensatz-raumliche-auflosung-in-meter), [`dcat:temporalResolution`](#datensatz-zeitliche-auflosung), [`dcterms:references`](#datensatz-referenziert), [`dcterms:spatial`](#datensatz-raumliche-abdeckung), [`dcterms:publisher`](#datensatz-herausgeber), [`dcterms:contributor`](#datensatz-bearbeiter), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter).<br>
+[`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatap:availability`](#datensatz-verfugbarkeit), [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcat:version`](#datensatz-versionsbezeichnung), [`dcatap:applicableLegislation`](#datensatz-rechtsgrundlage), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcterms:provenance`](#datensatz-provenienz), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`prov:wasGeneratedBy`](#datensatz-wurde-erzeugt-von), [`dcat:spatialResolutionInMeters`](#datensatz-raumliche-auflosung-in-meter), [`dcterms:references`](#datensatz-referenziert), [`dcterms:spatial`](#datensatz-raumliche-abdeckung), [`dcterms:publisher`](#datensatz-herausgeber), [`dcterms:contributor`](#datensatz-bearbeiter), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. | Interop. |
@@ -343,8 +343,8 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Qualitätssicherungsprozess](#datensatz-qualitatssicherungsprozess) | `dcatde:qualityProcessURI` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[0..1]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [Typ](#datensatz-typ) | `dcterms:type` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Wurde erzeugt von](#datensatz-wurde-erzeugt-von) | `prov:wasGeneratedBy` | [`prov:Activity`](https://www.w3.org/TR/prov-o/#Activity) | <small>Optional</small> | `[*]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
-| [Räumliche Auflösung in Meter](#datensatz-raumliche-auflosung-in-meter) | `dcat:spatialResolutionInMeters` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
-| [Zeitliche Auflösung](#datensatz-zeitliche-auflosung) | `dcat:temporalResolution` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
+| [Räumliche Auflösung in Meter](#datensatz-raumliche-auflosung-in-meter) | `dcat:spatialResolutionInMeters` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..1]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
+| [Zeitliche Auflösung](#datensatz-zeitliche-auflosung) | `dcat:temporalResolution` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Rollenzuordnung](#datensatz-rollenzuordnung) | `prov:qualifiedAttribution` | [`prov:Attribution`](https://www.w3.org/TR/prov-o/#Attribution) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Qualifizierte Beziehung](#datensatz-qualifizierte-beziehung) | `dcat:qualifiedRelation` | [`dcat:Relationship`](https://www.w3.org/TR/vocab-dcat-3/#Class:Relationship) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Wird Referenziert](#datensatz-wird-referenziert) | `dcterms:isReferencedBy` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
@@ -818,12 +818,13 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:---------------------------|:-------------------------------------------|
 > | Wertebereich               | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als [`xsd:decimal`](https://www.w3.org/TR/xmlschema11-2/#decimal) |
 > | Verbindlichkeit            | Optional |
-> | Multiplizität              | `[*]`                   |
+> | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft bezieht sich auf den kleinstmöglichen räumlichen Abstand, der in einem Datensatz auflösbar ist, gemessen in Metern. |
 > | Verwendungshinweis | Kann die räumliche Auflösung nicht in Metern beschrieben werden, können stattdessen die spezielleren Eigenschaften verwendet werden, die [GeoDCAT-AP](https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/#spatial-resolution-spatial-resolution-of-the-dataset) hierfür zur Verfügung stellt. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.spatialresolution), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial_resolution)  | 
+> | Änderungen zur Vorversion | 3.0: Errata: Kardinalität von `[*]` wie bei DCAT-AP auf `[0..1]` angepasst. | 
 > | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
-> | Änderungen durch DCAT-AP.de | DCAT-AP.de bindet einen zusätzlichen Verwendungshinweis ein und gibt eine Kardinalität von `*` an. | 
+> | Änderungen durch DCAT-AP.de | Verwendungshinweis hinzugefügt. | 
 <br>
 
 ###  Datensatz: Zeitliche Auflösung {#datensatz-zeitliche-auflosung}
@@ -834,9 +835,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | Diese Eigenschaft bezieht sich auf den kürzesten im Datensatz auflösbaren Zeitraum. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.temporalresolution), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal_resolution)  | 
-> | Änderungen zur Vorversion | 3.0: Errata: Anzeige des Wertebereichs korrigiert.<br>3.0: Errata: Weiterführende Dokumentation zu DCAT korrigiert. | 
-> | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
-> | Änderungen durch DCAT-AP.de | DCAT-AP.de gibt eine Kardinalität von `*` an. | 
+> | Änderungen zur Vorversion | 3.0: Errata: Kardinalität von `[*]` wie bei DCAT-AP auf `[0..1]` angepasst.<br>3.0: Errata: Anzeige des Wertebereichs korrigiert und weiterführende Dokumentation zu DCAT korrigiert. | 
+> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
+
 <br>
 
 ###  Datensatz: Rollenzuordnung {#datensatz-rollenzuordnung}
@@ -1379,7 +1380,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dcterms:title`](#distribution-titel), [`dcterms:modified`](#distribution-aktualisierungsdatum), [`dcatde:licenseAttributionByText`](#distribution-namensnennungstext-by-clauses), [`dcterms:description`](#distribution-beschreibung), [`dcat:temporalResolution`](#distribution-zeitliche-auflosung), [`spdx:checksum`](#distribution-prufsumme).<br>
+[`dcterms:title`](#distribution-titel), [`dcterms:modified`](#distribution-aktualisierungsdatum), [`dcatde:licenseAttributionByText`](#distribution-namensnennungstext-by-clauses), [`dcterms:description`](#distribution-beschreibung), [`dcat:spatialResolutionInMeters`](#distribution-raumliche-auflosung-in-meter), [`spdx:checksum`](#distribution-prufsumme).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. | Interop. |
@@ -1404,8 +1405,8 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Paketformat](#distribution-paketformat) | `dcat:packageFormat` | [`dcterms:MediaType`](http://purl.org/dc/terms/MediaType) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Regelwerk](#distribution-regelwerk) | `odrl:hasPolicy` | [`odrl:Policy`](https://www.w3.org/TR/odrl-vocab/#term-Policy) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Status](#distribution-status) | `adms:status` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Räumliche Auflösung in Meter](#distribution-raumliche-auflosung-in-meter) | `dcat:spatialResolutionInMeters` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Zeitliche Auflösung](#distribution-zeitliche-auflosung) | `dcat:temporalResolution` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
+| [Räumliche Auflösung in Meter](#distribution-raumliche-auflosung-in-meter) | `dcat:spatialResolutionInMeters` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..1]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
+| [Zeitliche Auflösung](#distribution-zeitliche-auflosung) | `dcat:temporalResolution` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Ausliefernder Datenservice](#distribution-ausliefernder-datenservice) | `dcat:accessService` | [`dcat:DataService`](http://www.w3.org/ns/dcat#DataService) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Prüfsumme](#distribution-prufsumme) | `spdx:checksum` | [`spdx:Checksum`](http://spdx.org/rdf/terms#Checksum) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 
@@ -1685,13 +1686,13 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:---------------------------|:-------------------------------------------|
 > | Wertebereich               | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als [`xsd:decimal`](https://www.w3.org/TR/xmlschema11-2/#decimal) |
 > | Verbindlichkeit            | Optional |
-> | Multiplizität              | `[0..*]`                   |
+> | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft bezieht sich auf den kleinsten räumlichen Abstand, der in der Distribution auflösbar ist, gemessen in Metern. |
 > | Verwendungshinweis | Kann die räumliche Auflösung nicht in Metern beschrieben werden, können stattdessen die spezielleren Eigenschaften verwendet werden, die [GeoDCAT-AP](https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/#spatial-resolution-spatial-resolution-of-the-dataset) hierfür zur Verfügung stellt. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.spatialresolution), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial_resolution)  | 
 > | Änderungen zur Vorversion | 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 
-> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
-
+> | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
+> | Änderungen durch DCAT-AP.de | Verwendungshinweis hinzugefügt. | 
 <br>
 
 ###  Distribution: Zeitliche Auflösung {#distribution-zeitliche-auflosung}
@@ -1699,12 +1700,12 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:---------------------------|:-------------------------------------------|
 > | Wertebereich               | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) getyped als [`xsd:duration`](https://www.w3.org/TR/xmlschema11-2/#duration) |
 > | Verbindlichkeit            | Optional |
-> | Multiplizität              | `[*]`                   |
+> | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft bezieht sich auf den kürzesten in der Distribution auflösbaren Zeitraum. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.temporalresolution), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial_resolution)  | 
 > | Änderungen zur Vorversion | 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 
-> | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
-> | Änderungen durch DCAT-AP.de | DCAT-AP.de gibt eine Kardinalität von `*` an. | 
+> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
+
 <br>
 
 ###  Distribution: Ausliefernder Datenservice {#distribution-ausliefernder-datenservice}

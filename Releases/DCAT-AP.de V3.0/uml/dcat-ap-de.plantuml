@@ -589,7 +589,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ adms:interoperabilityLevel = E
         '@ _:deOriginal      = Ergänzung eines Verwendungshinweises.
         '@ sh:shapes         = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource?)
-    <<optional>> dcat:spatialResolutionInMeters ~> rdfs:Literal [*]
+    <<optional>> dcat:spatialResolutionInMeters ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Räumliche Auflösung in Meter
         '@ _:internalLink  = datensatz-raumliche-auflosung-in-meter
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -600,7 +600,8 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.spatialresolution)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial_resolution)
         '@ adms:interoperabilityLevel = E
-        '@ _:deOriginal    = DCAT-AP.de bindet einen zusätzlichen Verwendungshinweis ein und gibt eine Kardinalität von `*` an.
+        '@ _:deOriginal    = Verwendungshinweis hinzugefügt.
+        '@ adms:versionNotes = 3.0: Errata: Kardinalität von `[*]` wie bei DCAT-AP auf `[0..1]` angepasst.
         '@ sh:shapes       = dcatap:Dataset_Property_dcat_spatialResolutionInMeters, ___TBD___(Kard ändert sich bei DCAT-AP 2.1 von [*] auf  [0..1])
     <<optional>> dcat:temporalResolution ~> rdfs:Literal [*]
         '@ rdfs:label      = Zeitliche Auflösung
@@ -611,11 +612,10 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://www.w3.org/ns/dcat#temporalResolution
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.temporalresolution)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal_resolution)
-        '@ adms:interoperabilityLevel = E
-        '@ _:deOriginal    = DCAT-AP.de gibt eine Kardinalität von `*` an.
+        '@ adms:interoperabilityLevel = A
         '@ sh:shapes       = dcatap:Dataset_Property_dcat_temporalResolution, ___TBD___(Kard ändert sich bei DCAT-AP 2.1 von [*] auf  [0..1])
-        '@ adms:versionNotes = 3.0: Errata: Anzeige des Wertebereichs korrigiert.
-        '@ adms:versionNotes = 3.0: Errata: Weiterführende Dokumentation zu DCAT korrigiert.
+        '@ adms:versionNotes = 3.0: Errata: Kardinalität von `[*]` wie bei DCAT-AP auf `[0..1]` angepasst.
+        '@ adms:versionNotes = 3.0: Errata: Anzeige des Wertebereichs korrigiert und weiterführende Dokumentation zu DCAT korrigiert.
     <<optional>> prov:qualifiedAttribution ~> prov:Attribution [*]
         '@ rdfs:label      = Rollenzuordnung
         '@ _:internalLink  = datensatz-rollenzuordnung
@@ -1329,7 +1329,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ _:vocabularyLink = #kv-distribution-status
         '@ sh:shapes       = dcatap:Distribution_Property_adms_status, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
         '@ adms:versionNotes = 3.0: Änderung des kontrollierten Vokabulars.
-    <<optional>> dcat:spatialResolutionInMeters ~> rdfs:Literal [0..*]
+    <<optional>> dcat:spatialResolutionInMeters ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Räumliche Auflösung in Meter
         '@ _:internalLink  = distribution-raumliche-auflosung-in-meter
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -1339,9 +1339,10 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdf:about       = http://www.w3.org/ns/dcat#spatialResolutionInMeters
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.spatialresolution)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial_resolution)
-        '@ adms:interoperabilityLevel = A
+        '@ adms:interoperabilityLevel = E
+        '@ _:deOriginal    = Verwendungshinweis hinzugefügt.
         '@ adms:versionNotes = 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0.
-    <<optional>> dcat:temporalResolution ~> rdfs:Literal [*]
+    <<optional>> dcat:temporalResolution ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Zeitliche Auflösung
         '@ _:internalLink  = distribution-zeitliche-auflosung
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -1350,8 +1351,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdf:about       = http://www.w3.org/ns/dcat#temporalResolution
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.temporalresolution)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial_resolution)
-        '@ adms:interoperabilityLevel = E
-        '@ _:deOriginal    = DCAT-AP.de gibt eine Kardinalität von `*` an.
+        '@ adms:interoperabilityLevel = A
         '@ adms:versionNotes = 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0.
 }
 '@ rdfs:label      = Distribution
