@@ -26,7 +26,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Kategorienschema](#katalog-kategorienschema) | `dcat:themeTaxonomy` | [`skos:ConceptScheme`](http://www.w3.org/2004/02/skos/core#ConceptScheme) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Verfügbarkeit](#katalog-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..1]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [Räumliche Abdeckung](#katalog-raumliche-abdeckung) | `dcterms:spatial` | [`dcterms:Location`](http://purl.org/dc/terms/Location) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Nutzungsbestimmungen](#katalog-nutzungsbestimmungen) | `dcterms:rights` | [`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
+| [Rechte](#katalog-rechte) | `dcterms:rights` | [`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Katalog](#katalog-katalog) | `dcat:catalog` | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Datenservice](#katalog-datenservice) | `dcat:service` | [`dcat:DataService`](http://www.w3.org/ns/dcat#DataService) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Hat Teilkatalog](#katalog-hat-teilkatalog) | `dcterms:hasPart` | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
@@ -198,14 +198,16 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 <br>
 
-###  Katalog: Nutzungsbestimmungen {#katalog-nutzungsbestimmungen}
+###  Katalog: Rechte {#katalog-rechte}
 > | *URI*                      | [`dcterms:rights`](http://purl.org/dc/terms/rights) |
 > |:---------------------------|:-------------------------------------------|
 > | Wertebereich               | [`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement) |
 > | Verbindlichkeit            | Optional |
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft verweist auf eine juristische Darlegung, welche die mit dem Katalog assoziierten Nutzungsbestimmungen spezifiziert. |
+> | Verwendungshinweis | Gemeint ist damit zum Beispiel ein Link zu Nutzungsbedingungen, wie "Terms of Use", die zusätzlich zu oder statt einer Lizenz bestehen. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.rights), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_rights)  | 
+> | Änderungen zur Vorversion | 3.0: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1395,7 +1397,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Download-URL](#distribution-download-url) | `dcat:downloadURL` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Sprache](#distribution-sprache) | `dcterms:language` | [`dcterms:LinguisticSystem`](http://purl.org/dc/terms/LinguisticSystem) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Dokumentation](#distribution-dokumentation) | `foaf:page` | [`foaf:Document`](http://xmlns.com/foaf/0.1/Document) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Grad der Zugänglichkeit](#distribution-grad-zuganglichkeit) | `dcterms:rights` | [`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
+| [Rechte](#distribution-rechte) | `dcterms:rights` | [`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Konform zu Standard](#distribution-konform-zu-standard) | `dcterms:conformsTo` | [`dcterms:Standard`](http://purl.org/dc/terms/Standard) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Medientyp](#distribution-medientyp) | `dcat:mediaType` | [`dcterms:MediaType`](http://purl.org/dc/terms/MediaType) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Kompressionsformat](#distribution-kompressionsformat) | `dcat:compressFormat` | [`dcterms:MediaType`](http://purl.org/dc/terms/MediaType) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
@@ -1584,14 +1586,16 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 <br>
 
-###  Distribution: Grad der Zugänglichkeit {#distribution-grad-zuganglichkeit}
+###  Distribution: Rechte {#distribution-rechte}
 > | *URI*                      | [`dcterms:rights`](http://purl.org/dc/terms/accessRights) |
 > |:---------------------------|:-------------------------------------------|
 > | Wertebereich               | [`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement) |
 > | Verbindlichkeit            | Optional |
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft verweist auf eine juristische Quelle, welche die mit der Distribution assoziierten Rechte spezifiziert. |
+> | Verwendungshinweis | Gemeint ist damit zum Beispiel ein Link zu Nutzungsbedingungen, wie "Terms of Use", die zusätzlich zu oder statt einer Lizenz bestehen. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.rights), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_rights)  | 
+> | Änderungen zur Vorversion | 3.0: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>

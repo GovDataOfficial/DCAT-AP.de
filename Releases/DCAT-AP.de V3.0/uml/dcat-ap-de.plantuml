@@ -113,14 +113,16 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ _:deOriginal    = DCAT-AP.de ordnet diese Eigenschaft allen DCAT-Ressourcen und Distributionen zu.
         '@ sh:shapes       = ___TBD___(deutsche Besonderheit, kein Test des Vokabulars, Maximalzahl 1)
     <<optional>> dcterms:rights ~> dcterms:RightsStatement [0..1]
-        '@ rdfs:label      = Nutzungsbestimmungen
-        '@ _:internalLink  = katalog-nutzungsbestimmungen
+        '@ rdfs:label      = Rechte
+        '@ _:internalLink  = katalog-rechte
         '@ rdfs:range      = http://purl.org/dc/terms/RightsStatement
         '@ rdfs:comment    = Diese Eigenschaft verweist auf eine juristische Darlegung, welche die mit dem Katalog assoziierten Nutzungsbestimmungen spezifiziert.
+        '@ skos:scopeNote  = Gemeint ist damit zum Beispiel ein Link zu Nutzungsbedingungen, wie "Terms of Use", die zusätzlich zu oder statt einer Lizenz bestehen.
         '@ rdf:about       = http://purl.org/dc/terms/rights
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.rights)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_rights)
         '@ adms:interoperabilityLevel = A
+        '@ adms:versionNotes = 3.0: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt.
         '@ sh:shapes       = dcatap:Catalog_Property_dct_rights, ___TBD___(kein Test, ob Ziel eine Ressource ist?)
     <<optional>> dcat:catalog ~> dcat:Catalog [*]
         '@ rdfs:label      = Katalog
@@ -1248,14 +1250,16 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ adms:interoperabilityLevel = A
         '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource)
     <<optional>> dcterms:rights ~> dcterms:RightsStatement [0..1]
-        '@ rdfs:label      = Grad der Zugänglichkeit
-        '@ _:internalLink  = distribution-grad-zuganglichkeit
+        '@ rdfs:label      = Rechte
+        '@ _:internalLink  = distribution-rechte
         '@ rdfs:range      = http://purl.org/dc/terms/RightsStatement
         '@ rdfs:comment    = Diese Eigenschaft verweist auf eine juristische Quelle, welche die mit der Distribution assoziierten Rechte spezifiziert.
+        '@ skos:scopeNote  = Gemeint ist damit zum Beispiel ein Link zu Nutzungsbedingungen, wie "Terms of Use", die zusätzlich zu oder statt einer Lizenz bestehen.
         '@ rdf:about       = http://purl.org/dc/terms/accessRights
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.rights)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_rights)
         '@ adms:interoperabilityLevel = A
+        '@ adms:versionNotes = 3.0: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt.
         '@ sh:shapes       = dcatap:Distribution_Property_dct_rights, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
     <<optional>> dcterms:conformsTo ~> dcterms:Standard [*]
         '@ rdfs:label      = Konform zu Standard

@@ -9,6 +9,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 |:----------------------|:--------------------------------|
 | [Veröffentlichungsdatum](#katalog-veroffentlichungsdatum) (`dcterms:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 | [Aktualisierungsdatum](#katalog-aktualisierungsdatum) (`dcterms:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Rechte](#katalog-rechte) (`dcterms:rights`) | 3.0: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt. | 
 
 
 ### Klasse: Datensatz
@@ -89,6 +90,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Verfügbarkeit](#distribution-verfugbarkeit) (`dcatap:availability`) | 3.0: Errata: Hinterlegte URL für den Wertebereichs auf skos:Concept geändert. | 
 | [Größe in Bytes](#distribution-grosse-in-bytes) (`dcat:byteSize`) | 3.0: Änderung der Range von xsd:decimal auf xsd:nonNegativeInteger. | 
 | [Veröffentlichungsdatum](#distribution-veroffentlichungsdatum) (`dcterms:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Rechte](#distribution-rechte) (`dcterms:rights`) | 3.0: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt. | 
 | [Status](#distribution-status) (`adms:status`) | 3.0: Änderung des kontrollierten Vokabulars. | 
 | [Räumliche Auflösung in Meter](#distribution-raumliche-auflosung-in-meter) (`dcat:spatialResolutionInMeters`) | 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 
 | [Zeitliche Auflösung](#distribution-zeitliche-auflosung) (`dcat:temporalResolution`) | 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 
