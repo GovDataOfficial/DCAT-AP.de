@@ -4,7 +4,7 @@
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Eine Sammlung oder Quelle, welche die beschriebenen Datensätze, Datenservices oder Kataloge zur Verfügung stellt.     |
 > | eingebunden über | dcat:catalog, dcterms:hasPart, dcterms:isPartOf (dcat:Catalog)         | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue)<br>[DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog) |
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog) |
 
 <br>
 
@@ -297,7 +297,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Eine logische Entität, welche die veröffentlichten Informationen repräsentiert.     |
 > | eingebunden über | dcat:dataset (dcat:Catalog), dcterms:hasVersion, dcterms:isVersionOf, dcterms:source, (dcat:Dataset), dcat:servesDataset (dcat:DataService), foaf:primaryTopic (dcat:CatalogRecord)         | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset)<br>[DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset) |
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset) |
 
 <br>
 
@@ -1025,7 +1025,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Ein Datenservice ermöglicht den Zugang zu einem oder mehreren Datensätzen oder stellt Datenverarbeitungsverfahren zur Verfügung.     |
 > | eingebunden über | dcat:service (dcat:Catalog), dcat:accessService (dcat:Distribution), foaf:primaryTopic (dcat:CatalogRecord)         | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService)<br>[DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service) |
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service) |
 
 <br>
 
@@ -1038,9 +1038,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [URL des Endpunktes](#datenservice-url-endpunkt) | `dcat:endpointURL` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Pflicht</small> | `[1..*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Titel](#datenservice-titel) | `dcterms:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Beschreibung des Endpunktes](#datenservice-beschreibung-endpunkt) | `dcat:endpointDescription` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Verfügbarkeit](#datenservice-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..1]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
+| [Verfügbarkeit](#datenservice-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Liefert Datensatz aus](#datenservice-liefert-datensatz-aus) | `dcat:servesDataset` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Herausgeber](#datenservice-herausgeber) | `dcterms:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Empfohlen</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
+| [Herausgeber](#datenservice-herausgeber) | `dcterms:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Empfohlen</small> | `[0..1]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
 | [Beschreibung](#datenservice-beschreibung) | `dcterms:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Lizenz](#datenservice-lizenz) | `dcterms:license` | [`dcterms:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Grad der Zugänglichkeit](#datenservice-grad-zuganglichkeit) | `dcterms:accessRights` | [`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
@@ -1101,8 +1101,8 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Geplante Verfügbarkeit des Datenservices als Auswahl aus einer festen Liste von Werten via DCAT-AP URIs. |
 > | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-availability) |
-> | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
-> | Änderungen durch DCAT-AP.de | DCAT-AP.de ordnet diese Eigenschaft allen DCAT-Ressourcen und Distributionen zu und empfiehlt sie für den `dcat:DataService`. | 
+> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
+> | Änderungen durch DCAT-AP.de | DCAT-AP.de ordnet diese Eigenschaft allen DCAT-Ressourcen und Distributionen zu. | 
 <br>
 
 ###  Datenservice: Liefert Datensatz aus {#datenservice-liefert-datensatz-aus}
@@ -1124,10 +1124,11 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit            | Empfohlen |
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft verweist auf die Stelle oder Person, die für Bereitstellung des Datenservices verantwortlich ist. |
+> | Verwendungshinweis | Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService.publisher), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher)  | 
 > | Änderungen zur Vorversion | 3.0: Eigenschaft aufgenommen. | 
-> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
-> | Änderungen durch DCAT-AP.de | Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat. | 
+> | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
+> | Änderungen durch DCAT-AP.de | Erweiterung des Verwendungshinweises. | 
 <br>
 
 ###  Datenservice: Beschreibung {#datenservice-beschreibung}
@@ -1138,7 +1139,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | Diese Eigenschaft enthält eine Beschreibung des Datenservices als Freitext.  |
 > | Verwendungshinweis | Sie kann für parallel existierende Sprachversionen wiederholt werden. | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService.description=, [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description)  | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService.description), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description)  | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1194,13 +1195,10 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Eine Sammlung von Datasätzen, die zwar separat veröffentlicht werden aber, eine gemeinsame Merkmale aufweisen, die sie zusammenfassen.     |
 > | eingebunden über | dcat:inSeries (dcat:Dataset)         | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries)<br>[DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series) |
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series) |
 > | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. |
 
 <br>
-
-Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dcterms:publisher`](#datensatzserie-herausgeber).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. | Interop. |
@@ -1275,7 +1273,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.publisher), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher)  | 
 > | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
-> | Änderungen durch DCAT-AP.de | Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat. | 
+
 <br>
 
 ###  Datensatzserie: Zeitliche Abdeckung {#datensatzserie-zeitliche-abdeckung}
@@ -1374,7 +1372,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Eine physische Verkörperung/Repräsentanz des Datensatzes in einem spezifischen Format.     |
 > | eingebunden über | dcat:distribution, adms:sample (dcat:Distribution)         | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution)<br>[DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution) |
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution) |
 
 <br>
 
@@ -1385,13 +1383,13 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. | Interop. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|:--------:|
 | [Zugangs-URL](#distribution-zugangs-url) | `dcat:accessURL` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Pflicht</small> | `[1..*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Titel](#distribution-titel) | `dcterms:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Aktualisierungsdatum](#distribution-aktualisierungsdatum) | `dcterms:modified` | [`rdfs:Literal`]() | <small>Empfohlen</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Lizenz](#distribution-lizenz) | `dcterms:license` | [`dcterms:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) | <small>Empfohlen</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
+| [Titel](#distribution-titel) | `dcterms:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[*]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
+| [Aktualisierungsdatum](#distribution-aktualisierungsdatum) | `dcterms:modified` | [`rdfs:Literal`]() | <small>Empfohlen</small> | `[0..1]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
+| [Lizenz](#distribution-lizenz) | `dcterms:license` | [`dcterms:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) | <small>Empfohlen</small> | `[0..1]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
 | [Format](#distribution-format) | `dcterms:format` | [`dcterms:MediaTypeOrExtent`](http://purl.org/dc/terms/MediaTypeOrExtent) | <small>Empfohlen</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Verfügbarkeit](#distribution-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](https://www.w3.org/2009/08/skos-reference/skos.html#Concept) | <small>Empfohlen</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Namensnennungstext für By-Clauses](#distribution-namensnennungstext-by-clauses) | `dcatde:licenseAttributionByText` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
-| [Beschreibung](#distribution-beschreibung) | `dcterms:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
+| [Beschreibung](#distribution-beschreibung) | `dcterms:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
 | [Größe in Bytes](#distribution-grosse-in-bytes) | `dcat:byteSize` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Veröffentlichungsdatum](#distribution-veroffentlichungsdatum) | `dcterms:issued` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Download-URL](#distribution-download-url) | `dcat:downloadURL` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
@@ -1435,7 +1433,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | Diese Eigenschaft bezeichnet den einer Distribution zugewiesenen Titel. Diese Eigenschaft kann für parallele Sprachversionen des Distributionstitels wiederholt werden. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.title), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_title)  | 
-> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
+> | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
 > | Änderungen durch DCAT-AP.de | Verbindlichkeit wurde von optional auf empfohlen hochgestuft. | 
 <br>
 
@@ -1448,7 +1446,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation der Distribution. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.modificationdate), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_update_date)  | 
 > | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
-> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
+> | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
 > | Änderungen durch DCAT-AP.de | Verbindlichkeit wurde von optional auf empfohlen hochgestuft. | 
 <br>
 
@@ -1462,7 +1460,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verwendungshinweis | Es bestehen weitergehende Einschränkungen für die Kooperation GovData, welche im entsprechenden Konventionenhandbuch geklärt sind. | 
 > | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-licenses) |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.licence), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_license)  | 
-> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
+> | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
 
 <br>
 
@@ -1517,7 +1515,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft enthält eine Freitextbeschreibung der Distribution. |
 > | Verwendungshinweis | Diese Eigenschaft kann für unterschiedliche Sprachversionen wiederholt werden. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.description), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_description)  | 
-> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
+> | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
 > | Änderungen durch DCAT-AP.de | Verbindlichkeit wurde von empfohlen auf optional gesenkt. | 
 <br>
 
@@ -1581,7 +1579,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit            | Optional |
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | Diese Eigenschaft verweist auf eine Webseite oder ein Dokument (enthält eine URL-Adresse) mit Informationen über die Distribution. |
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.documentation), http://xmlns.com/foaf/spec/#term_page  | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.documentation), [FOAF](http://xmlns.com/foaf/spec/#term_page)  | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1724,7 +1722,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit            | Optional |
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft stellt einen Mechanismus zur Verfügung, mit dem sichergestellt werden kann, dass die Inhalte der Distribution sich nicht verändert haben. |
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.checksum), https://spdx.org/rdf/terms/#d4e165  | 
+> | Verwendungshinweis | Die Prüfsumme bezieht sich auf die Datei, die über `dcat:downloadURL` erreicht wird. | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.checksum), [SPDX](https://spdx.org/rdf/terms/#d4e165)  | 
+> | Änderungen zur Vorversion | 3.0: Harmonisierung: Verwendungshinweis hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 > | Änderungen durch DCAT-AP.de | DCAT-AP.de stellt ein erweitertes kontrolliertes Vokabular zur Verfügung, dass in der [Klasse Prüfsumme](#klasse-prufsumme) von der [Eigenschaft Algorithmus](#prufsumme-algorithmus) verwendet wird. | 
 <br>
@@ -1740,7 +1740,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Ein Zeitintervall, welches durch Start- und Endzeitpunkt bezeichnet bzw. definiert ist.<br>Das Zeitintervall kann auch offen sein, dann hat es lediglich einen Start- oder Endzeitpunkt.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-zeitliche-abdeckung) genauer beschrieben.     |
 > | eingebunden über | dcterms:temporal (dcat:Dataset)         | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Periodoftime)<br>[DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Period_of_Time) |
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Periodoftime), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Period_of_Time) |
 
 <br>
 
@@ -1822,7 +1822,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Ein räumlicher Bereich oder ein bezeichneter Ort. Er kann durch ein kontrolliertes Vokabular oder mit geographischen Koordinaten repräsentiert werden.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zur-geografischen-abdeckung) genauer beschrieben.     |
 > | eingebunden über | dcterms:spatial (dcat:Dataset)         | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Location)<br>[DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/Location/) |
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Location), [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/Location/) |
 
 <br>
 
@@ -1872,8 +1872,8 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft beschreibt die Geometrie einer Ressource. |
 > | Verwendungshinweis | Der Wertebereich dieser Eigenschaft lässt jede Art von Geometriespezifikation zu.<br>Empfohlen wird z.B. die Angabe als WKT-Literal (`rdfs:Literal` getyped als `geo:wktLiteral`). | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Location.geometry), [locn](https://www.w3.org/ns/locn#locn:geometry)  | 
-> | Änderungen zur Vorversion | 3.0: Wertebereich auf locn:Geometry geändert.<br>3.0: Verwendungshinweis und weiterführende Dokumentation hinzugefügt. | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Location.geometry), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:location_geometry), [locn](https://www.w3.org/ns/locn#locn:geometry)  | 
+> | Änderungen zur Vorversion | 3.0: Wertebereich auf locn:Geometry geändert.<br>3.0: Verwendungshinweis von DCAT hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1889,7 +1889,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Eine Stelle oder Person, welche mit Katalogen und Datensätzen in unterschiedlichen Rollenausprägungen assoziiert ist.     |
 > | eingebunden über | dcterms:publisher (dcat:Catalog), dcterms:publisher (dcat:Dataset), dcterms:creator (dcat:Dataset), ...         | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Agent)<br>[FOAF Vocabulary](http://xmlns.com/foaf/spec/#term_Agent) |
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Agent), [FOAF Vocabulary](http://xmlns.com/foaf/spec/#term_Agent) |
 
 <br>
 
@@ -1941,7 +1941,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Die Klasse "Identifier" besteht je nach spezifischen Kontext aus einem String, welcher<br>- die ID ist, <br>- eine optionale ID für das ID-Schema ist,<br>- eine optionale ID für die Version des ID-Schemas ist oder<br>- eine optionale ID für die das ID-Schema pflegende verantwortliche Stelle ist.     |
 > | eingebunden über | adms:identifier (dcat:Dataset)         | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Identifier)<br>[ADMS](https://www.w3.org/TR/vocab-adms/#dt_identifier) |
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Identifier), [ADMS](https://www.w3.org/TR/vocab-adms/#dt_identifier) |
 
 <br>
 
@@ -1978,7 +1978,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Ein Wert, der es ermöglicht, die Inhalte einer Datei zu verifizieren (für korrekt zu erklären). <br>Diese Klasse ermöglicht es, die Ergebnisse einer Vielzahl von Prüfsummen- und Kryptoalgorithmen zu repräsentieren.     |
 > | eingebunden über | spdx:checksum (dcat:Distribution)         | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Checksum)<br>[DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Checksum)<br>[SPDX](https://spdx.org/rdf/terms/#d4e2091) |
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Checksum), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Checksum), [SPDX](https://spdx.org/rdf/terms/#d4e2091) |
 
 <br>
 
@@ -2033,7 +2033,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Die Beschreibung des Eintrags in einem Katalog.     |
 > | eingebunden über | dcat:record (dcat:Catalog), dcterms:source (dcat:CatalogRecord)         | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#CatalogueRecord)<br>[DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog_Record) |
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#CatalogueRecord), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog_Record) |
 
 <br>
 
@@ -2185,7 +2185,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Ein rechtlich verbindliches Dokument, welches die Verwendung einer Ressource offiziell erlaubt.     |
 > | eingebunden über | dcterms:license (dcat:Distribution)         | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#LicenceDocument)<br>[DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2012-06-14/#terms-LicenseDocument) |
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#LicenceDocument), [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2012-06-14/#terms-LicenseDocument) |
 > | Änderungen zur Vorversion | 3.0: Errata: Label korrigiert. |
 
 <br>
@@ -2227,7 +2227,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Eine Klasse, um eine Beziehung zwischen mehreren DCAT Ressourcen genauer zu beschreiben.     |
 > | eingebunden über | dcat:qualifiedRelation (dcat:Dataset)         | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Relationship)<br>[DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Relationship) |
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Relationship), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Relationship) |
 
 <br>
 
@@ -2278,7 +2278,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Diese Klasse verknüft eine Ressource mit Agenten und beschreibt, welche Rolle die Agenten im Bezug auf die Ressource eingenommen haben.<br>Sie ist insbesondere dann relevant, wenn keine Eigenschaften wie `dcatde:originator`, `dcterms:creator` oder `dcterms:publisher` existieren, um die Rolle zu beschreiben.     |
 > | eingebunden über | prov:qualifiedAttribution (dcat:Dataset, dcat:DataService)         | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Attribution)<br>[PROV-O](https://www.w3.org/TR/prov-o/#Attribution) |
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Attribution), [PROV-O](https://www.w3.org/TR/prov-o/#Attribution) |
 
 <br>
 
@@ -2331,7 +2331,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Das Thema bzw. die Kategorie eines Datensatzes.     |
 > | eingebunden über | dcat:theme (dcat:Dataset)         | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Concept)<br>[DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Concept) |
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Concept), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Concept) |
 
 <br>
 
@@ -2370,7 +2370,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Eine Sammlung von Konzepten/Begrifflichkeiten (z.B. in Form eines kontrollierten Vokabulars) durch welche die Kategorie definiert ist.     |
 > | eingebunden über | dcat:themeTaxonomy (dcat:Catalog)         | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#ConceptScheme)<br>[DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Concept_Scheme) |
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#ConceptScheme), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Concept_Scheme) |
 
 <br>
 

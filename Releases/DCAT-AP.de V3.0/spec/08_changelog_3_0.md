@@ -92,6 +92,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Status](#distribution-status) (`adms:status`) | 3.0: Änderung des kontrollierten Vokabulars. | 
 | [Räumliche Auflösung in Meter](#distribution-raumliche-auflosung-in-meter) (`dcat:spatialResolutionInMeters`) | 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 
 | [Zeitliche Auflösung](#distribution-zeitliche-auflosung) (`dcat:temporalResolution`) | 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 
+| [Prüfsumme](#distribution-prufsumme) (`spdx:checksum`) | 3.0: Harmonisierung: Verwendungshinweis hinzugefügt. | 
 
 
 ### Klasse: Zeitraum
@@ -118,7 +119,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 |:----------------------|:--------------------------------|
 | [Bounding Box](#standort-bounding-box) (`dcat:bbox`) | 3.0: Errata: Korrektur des zu verwendenden Types. | 
 | [Geografischer Mittelpunkt](#standort-geografischer-mittelpunkt) (`dcat:centroid`) | 3.0: Errata: Korrektur des zu verwendenden Types. | 
-| [Geometrie](#standort-geometrie) (`locn:geometry`) | 3.0: Wertebereich auf locn:Geometry geändert.<br>3.0: Verwendungshinweis und weiterführende Dokumentation hinzugefügt. | 
+| [Geometrie](#standort-geometrie) (`locn:geometry`) | 3.0: Wertebereich auf locn:Geometry geändert.<br>3.0: Verwendungshinweis von DCAT hinzugefügt. | 
 
 
 ### Klasse: Prüfsumme
