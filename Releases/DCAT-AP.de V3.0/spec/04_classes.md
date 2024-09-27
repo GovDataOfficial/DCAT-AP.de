@@ -1380,15 +1380,15 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dcterms:title`](#distribution-titel), [`dcterms:modified`](#distribution-aktualisierungsdatum), [`dcatde:licenseAttributionByText`](#distribution-namensnennungstext-by-clauses), [`dcterms:description`](#distribution-beschreibung), [`dcat:spatialResolutionInMeters`](#distribution-raumliche-auflosung-in-meter), [`spdx:checksum`](#distribution-prufsumme).<br>
+[`dcterms:license`](#distribution-lizenz), [`dcterms:title`](#distribution-titel), [`dcterms:modified`](#distribution-aktualisierungsdatum), [`dcatde:licenseAttributionByText`](#distribution-namensnennungstext-by-clauses), [`dcterms:description`](#distribution-beschreibung), [`dcat:spatialResolutionInMeters`](#distribution-raumliche-auflosung-in-meter), [`spdx:checksum`](#distribution-prufsumme).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. | Interop. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|:--------:|
 | [Zugangs-URL](#distribution-zugangs-url) | `dcat:accessURL` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Pflicht</small> | `[1..*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
+| [Lizenz](#distribution-lizenz) | `dcterms:license` | [`dcterms:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) | <small>Pflicht</small> | `[1]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
 | [Titel](#distribution-titel) | `dcterms:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[*]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
 | [Aktualisierungsdatum](#distribution-aktualisierungsdatum) | `dcterms:modified` | [`rdfs:Literal`]() | <small>Empfohlen</small> | `[0..1]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
-| [Lizenz](#distribution-lizenz) | `dcterms:license` | [`dcterms:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) | <small>Empfohlen</small> | `[0..1]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
 | [Format](#distribution-format) | `dcterms:format` | [`dcterms:MediaTypeOrExtent`](http://purl.org/dc/terms/MediaTypeOrExtent) | <small>Empfohlen</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Verfügbarkeit](#distribution-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](https://www.w3.org/2009/08/skos-reference/skos.html#Concept) | <small>Empfohlen</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Namensnennungstext für By-Clauses](#distribution-namensnennungstext-by-clauses) | `dcatde:licenseAttributionByText` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
@@ -1428,6 +1428,20 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 <br>
 
+###  Distribution: Lizenz {#distribution-lizenz}
+> | *URI*                      | [`dcterms:license`](http://purl.org/dc/terms/license) |
+> |:---------------------------|:-------------------------------------------|
+> | Wertebereich               | [`dcterms:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) |
+> | Verbindlichkeit            | Pflicht |
+> | Multiplizität              | `[1]`                   |
+> | Beschreibung               | Diese Eigenschaft bezieht sich auf die Lizenz, unter welcher die Distribution zur Verfügung gestellt wird. |
+> | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-licenses) |
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.licence), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_license)  | 
+> | Änderungen zur Vorversion | 3.0: Kardinalität von `[0..1]` auf `[1]` geändert und die Eigenschaft damit verpflichtend gemacht. | 
+> | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
+> | Änderungen durch DCAT-AP.de | Kardinalität von `[0..1]` auf `[1]` geändert und die Eigenschaft damit verpflichtend gemacht. | 
+<br>
+
 ###  Distribution: Titel {#distribution-titel}
 > | *URI*                      | [`dcterms:title`](http://purl.org/dc/terms/title) |
 > |:---------------------------|:-------------------------------------------|
@@ -1451,20 +1465,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
 > | Änderungen durch DCAT-AP.de | Verbindlichkeit wurde von optional auf empfohlen hochgestuft. | 
-<br>
-
-###  Distribution: Lizenz {#distribution-lizenz}
-> | *URI*                      | [`dcterms:license`](http://purl.org/dc/terms/license) |
-> |:---------------------------|:-------------------------------------------|
-> | Wertebereich               | [`dcterms:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) |
-> | Verbindlichkeit            | Empfohlen |
-> | Multiplizität              | `[0..1]`                   |
-> | Beschreibung               | Diese Eigenschaft bezieht sich auf die Lizenz, unter welcher die Distribution zur Verfügung gestellt wird.  |
-> | Verwendungshinweis | Es bestehen weitergehende Einschränkungen für die Kooperation GovData, welche im entsprechenden Konventionenhandbuch geklärt sind. | 
-> | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-licenses) |
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.licence), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_license)  | 
-> | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
-
 <br>
 
 ###  Distribution: Format {#distribution-format}

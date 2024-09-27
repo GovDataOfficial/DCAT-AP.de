@@ -1108,7 +1108,19 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_access_url)
         '@ adms:interoperabilityLevel = A
         '@ sh:shapes       = dcatap:Distribution_Property_dcat_accessURL (erlaubt auch BlankNodes)
-
+    <<mandatory>> dcterms:license ~> dcterms:LicenseDocument [1]
+        '@ rdfs:label      = Lizenz
+        '@ _:internalLink  = distribution-lizenz
+        '@ rdfs:range      = http://purl.org/dc/terms/LicenseDocument
+        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf die Lizenz, unter welcher die Distribution zur Verfügung gestellt wird.
+        '@ rdf:about       = http://purl.org/dc/terms/license
+        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.licence)
+        '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_license)
+        '@ adms:interoperabilityLevel = E
+        '@ _:deOriginal    = Kardinalität von `[0..1]` auf `[1]` geändert und die Eigenschaft damit verpflichtend gemacht.
+        '@ _:vocabularyLink = #kv-licenses
+        '@ adms:versionNotes = 3.0: Kardinalität von `[0..1]` auf `[1]` geändert und die Eigenschaft damit verpflichtend gemacht.
+        '@ sh:shapes       = dcatap:Distribution_Property_dct_license, ___TBD___(kein Test des Vokabulars)
     <<recommended>> dcterms:title ~> rdfs:Literal [*]
         '@ rdfs:label      = Titel
         '@ _:internalLink  = distribution-titel
@@ -1132,18 +1144,6 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ _:deOriginal    = Verbindlichkeit wurde von optional auf empfohlen hochgestuft.
         '@ sh:shapes       = dcatap:Distribution_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
         '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
-    <<recommended>> dcterms:license ~> dcterms:LicenseDocument [0..1]
-        '@ rdfs:label      = Lizenz
-        '@ _:internalLink  = distribution-lizenz
-        '@ rdfs:range      = http://purl.org/dc/terms/LicenseDocument
-        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf die Lizenz, unter welcher die Distribution zur Verfügung gestellt wird. 
-        '@ skos:scopeNote  = Es bestehen weitergehende Einschränkungen für die Kooperation GovData, welche im entsprechenden Konventionenhandbuch geklärt sind.
-        '@ rdf:about       = http://purl.org/dc/terms/license
-        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.licence)
-        '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_license)
-        '@ adms:interoperabilityLevel = E
-        '@ _:vocabularyLink = #kv-licenses
-        '@ sh:shapes       = dcatap:Distribution_Property_dct_license, ___TBD___(kein Test des Vokabulars)
     <<recommended>> dcterms:format ~> dcterms:MediaTypeOrExtent [0..1]
         '@ rdfs:label      = Format
         '@ _:internalLink  = distribution-format
