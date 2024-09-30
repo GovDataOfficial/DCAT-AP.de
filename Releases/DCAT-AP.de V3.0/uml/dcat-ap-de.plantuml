@@ -761,7 +761,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ adms:interoperabilityLevel = A
     '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine dcat:Distribution)
 
-"dcat:Dataset" --> "0..1"  "foaf:Agent"         : <<recommended>> dcterms:publisher
+"dcat:Dataset" --> "1"     "foaf:Agent"         : <<mandatory>> dcterms:publisher
     '@ rdfs:label      = Herausgeber
     '@ _:internalLink  = datensatz-herausgeber
     '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
@@ -771,8 +771,9 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdf:about       = http://purl.org/dc/terms/publisher
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.publisher)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher)
+    '@ adms:versionNotes = 3.0: Anforderung: Nutzung verpflichtend gemacht.
     '@ adms:interoperabilityLevel = E
-    '@ _:deOriginal    = Erweiterung des Verwendungshinweises.
+    '@ _:deOriginal    = Erweiterung des Verwendungshinweises. Nutzung verpflichtend gemacht.
     '@ sh:shapes       = dcatap:Dataset_Property_dct_publisher (kein Test, ob Ziel ein foaf:Agent)
 
 "dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> dcterms:creator
@@ -949,7 +950,7 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:data_service_serves_dataset)
     '@ adms:interoperabilityLevel = A
     '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Dataset)
-"dcat:DataService" --> "0..1"  "foaf:Agent"   : <<recommended>> dcterms:publisher
+"dcat:DataService" --> "1"  "foaf:Agent"   : <<mandatory>> dcterms:publisher
     '@ rdfs:label      = Herausgeber
     '@ _:internalLink  = datenservice-herausgeber
     '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
@@ -958,9 +959,10 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
     '@ rdf:about       = http://purl.org/dc/terms/publisher
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService.publisher)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher)
-    '@ _:deOriginal    = Erweiterung des Verwendungshinweises.
+    '@ _:deOriginal    = Erweiterung des Verwendungshinweises. Nutzung verpflichtend gemacht.
     '@ adms:interoperabilityLevel = E
     '@ adms:versionNotes = 3.0: Eigenschaft aufgenommen.
+    '@ adms:versionNotes = 3.0: Anforderung: Nutzung verpflichtend gemacht.
 
 class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
     <<mandatory>> dcterms:title ~> rdfs:Literal [1..*]
@@ -1072,7 +1074,7 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
     '@ adms:interoperabilityLevel = A
     '@ _:vocabularyLink  = #kv-spatial
     '@ adms:versionNotes = 3.0: Neu hinzugefügt.
-"dcat:DatasetSeries" --> "0..1"  "foaf:Agent"         : <<recommended>> dcterms:publisher
+"dcat:DatasetSeries" --> "1"  "foaf:Agent"         : <<mandatory>> dcterms:publisher
     '@ rdfs:label      = Herausgeber
     '@ _:internalLink  = datensatzserie-herausgeber
     '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
@@ -1082,8 +1084,10 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
     '@ rdf:about       = http://purl.org/dc/terms/publisher
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.publisher)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher)
-    '@ adms:interoperabilityLevel = A
     '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+    '@ adms:versionNotes = 3.0: Anforderung: Nutzung verpflichtend gemacht.
+    '@ adms:interoperabilityLevel = E
+    '@ _:deOriginal    = Nutzung verpflichtend gemacht.
 "dcat:DatasetSeries" --> "*" "dcterms:PeriodOfTime" : <<recommended>> dcterms:temporal
     '@ rdfs:label        = Zeitliche Abdeckung
     '@ _:internalLink    = datensatzserie-zeitliche-abdeckung
