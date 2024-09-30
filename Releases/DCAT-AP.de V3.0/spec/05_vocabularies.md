@@ -246,17 +246,3 @@ Die ADMS Spezifikation enthält die Liste von Begriffen im ADMS „Publisher Typ
 > | Verwendung in Klassen          | [`foaf:Agent`](#verantwortliche-stelle-typ) |
 > | Menschenlesbare Ansicht        | -                            |
 > | Basis-URI                      | `http://purl.org/adms/publishertype/` |
-
-
-## ADMS Vokabular "Licence Type" {#kv-adms-licencetype}
-Die Liste von Begriffen des ADMS „Licence Type“-Vokabulars ist in der ADMS Spezifikation angegeben. 
-DCAT-AP.de Anwendungshinweis: Die ADMS-Taxonomie wird für volle dcat-ap Konformität unterstützt. Für die Kommunikation im GovData Verbund dürfen jedoch keine selbst modellierten Lizenzen verwendet werden. Stattdessen ist [das entsprechende kontrollierte Vokabular](#kv-licenses) zu verwenden. 
-
-Weitere Details und Beispiele finden Sie im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zur-lizenz-und-zu-rechten-insb-dct-license).
-
-> | Betroffene Eigenschaften       | [`dcterms:type`](http://purl.org/dc/terms/type) |
-> |:-------------------------------|:-----------------------|
-> | Verbindlichkeit Vokabular      | Optional               |
-> | Verwendung in Klassen          | [`dcterms:LicenseDocument`](https://dublincore.org/specifications/dublin-core/dcmi-terms/#LicenseDocument) |
-> | Menschenlesbare Ansicht        | -                      |
-> | Basis-URI                      | `http://purl.org/adms/licencetype/` |
