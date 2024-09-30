@@ -805,26 +805,28 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test, ob Ziel foaf:Agent)
 
 "dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> dcatde:originator
-    '@ rdfs:label      = Urheber
+    '@ rdfs:label      = Urheber (DEPRECATED)
     '@ _:internalLink  = datensatz-urheber
     '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
-    '@ rdfs:comment    = Diese Eigenschaft verweist auf die Personen, die Urheberrechte am Datensatz haben. Geschützt ist laut Urheberrecht ein Werk, das einer persönlichen geistigen Schöpfung seines Urhebers entspringt.
+    '@ rdfs:comment    = DEPRECATED: Diese Eigenschaft verweist auf die Personen, die Urheberrechte am Datensatz haben. Geschützt ist laut Urheberrecht ein Werk, das einer persönlichen geistigen Schöpfung seines Urhebers entspringt.
     '@ rdfs:comment    = Vgl.: https://de.wikipedia.org/wiki/Urheberrecht_(Deutschland).
     '@ skos:scopeNote  = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#weitere-wichtige-rollen) genauer beschrieben.
     '@ rdf:about       = http://dcat-ap.de/def/dcatde/originator
     '@ adms:interoperabilityLevel = P
     '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
+    '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcat:originator`](#datensatz-geodcat-urheber).
     '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test, ob Ziel foaf:Agent)
 
 "dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> dcatde:maintainer
-    '@ rdfs:label      = Verwalter
+    '@ rdfs:label      = Verwalter (DEPRECATED)
     '@ _:internalLink  = datensatz-verwalter
     '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
-    '@ rdfs:comment    = Diese Eigenschaft verweist auf die Stellen oder Personen, die Verantwortung und Rechenschaftspflicht für die Daten und ihre angemessene Pflege übernehmen.
+    '@ rdfs:comment    = DEPRECATED: Diese Eigenschaft verweist auf die Stellen oder Personen, die Verantwortung und Rechenschaftspflicht für die Daten und ihre angemessene Pflege übernehmen.
     '@ skos:scopeNote  = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#weitere-wichtige-rollen) genauer beschrieben.
     '@ rdf:about       = http://dcat-ap.de/def/dcatde/maintainer
     '@ adms:interoperabilityLevel = P
     '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
+    '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcat:custodian`](#datensatz-geodcat-verwalter).
     '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test, ob Ziel foaf:Agent)
 "dcat:Dataset" --> "*"     "dcat:DatasetSeries"         : <<optional>> dcat:inSeries
     '@ rdfs:label      = In Serie
@@ -1775,7 +1777,7 @@ class "prov:Attribution" <<optional>> {
 '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Attribution)
 '@ rdfs:seeAlso    = [PROV-O](https://www.w3.org/TR/prov-o/#Attribution)
 '@ rdfs:comment    = Diese Klasse verknüft eine Ressource mit Agenten und beschreibt, welche Rolle die Agenten im Bezug auf die Ressource eingenommen haben.
-'@ rdfs:comment    = Sie ist insbesondere dann relevant, wenn keine Eigenschaften wie `dcatde:originator`, `dcterms:creator` oder `dcterms:publisher` existieren, um die Rolle zu beschreiben.
+'@ rdfs:comment    = Sie ist insbesondere dann relevant, wenn keine Eigenschaften wie `geodcat:originator`, `dcterms:creator` oder `dcterms:publisher` existieren, um die Rolle zu beschreiben.
 '@ _:usedBy        = prov:qualifiedAttribution (dcat:Dataset, dcat:DataService)
 '@ rdfs:subClassOf = [prov:AgentInfluence](https://www.w3.org/TR/prov-o/#AgentInfluence)
 

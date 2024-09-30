@@ -357,8 +357,8 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Beispieldistribution](#datensatz-beispieldistribution) | `adms:sample` | [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Autor](#datensatz-autor) | `dcterms:creator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Bearbeiter](#datensatz-bearbeiter) | `dcterms:contributor` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
-| [Urheber](#datensatz-urheber) | `dcatde:originator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
-| [Verwalter](#datensatz-verwalter) | `dcatde:maintainer` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
+| [Urheber (DEPRECATED)](#datensatz-urheber) | `dcatde:originator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
+| [Verwalter (DEPRECATED)](#datensatz-verwalter) | `dcatde:maintainer` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [In Serie](#datensatz-in-serie) | `dcat:inSeries` | [`dcat:DatasetSeries`](http://www.w3.org/ns/dcat#DatasetSeries) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 
@@ -984,26 +984,28 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
 
-###  Datensatz: Urheber {#datensatz-urheber}
+###  Datensatz: Urheber (DEPRECATED) {#datensatz-urheber}
 > | *URI*                      | [`dcatde:originator`](http://dcat-ap.de/def/dcatde/originator) |
 > |:---------------------------|:-------------------------------------------|
 > | Wertebereich               | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) |
 > | Verbindlichkeit            | Optional |
 > | Multiplizität              | `[*]`                   |
-> | Beschreibung               | Diese Eigenschaft verweist auf die Personen, die Urheberrechte am Datensatz haben. Geschützt ist laut Urheberrecht ein Werk, das einer persönlichen geistigen Schöpfung seines Urhebers entspringt.<br>Vgl.: https://de.wikipedia.org/wiki/Urheberrecht_(Deutschland). |
+> | Beschreibung               | DEPRECATED: Diese Eigenschaft verweist auf die Personen, die Urheberrechte am Datensatz haben. Geschützt ist laut Urheberrecht ein Werk, das einer persönlichen geistigen Schöpfung seines Urhebers entspringt.<br>Vgl.: https://de.wikipedia.org/wiki/Urheberrecht_(Deutschland). |
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#weitere-wichtige-rollen) genauer beschrieben. | 
+> | Änderungen zur Vorversion | 3.0: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcat:originator`](#datensatz-geodcat-urheber). | 
 > | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
 
-###  Datensatz: Verwalter {#datensatz-verwalter}
+###  Datensatz: Verwalter (DEPRECATED) {#datensatz-verwalter}
 > | *URI*                      | [`dcatde:maintainer`](http://dcat-ap.de/def/dcatde/maintainer) |
 > |:---------------------------|:-------------------------------------------|
 > | Wertebereich               | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) |
 > | Verbindlichkeit            | Optional |
 > | Multiplizität              | `[*]`                   |
-> | Beschreibung               | Diese Eigenschaft verweist auf die Stellen oder Personen, die Verantwortung und Rechenschaftspflicht für die Daten und ihre angemessene Pflege übernehmen. |
+> | Beschreibung               | DEPRECATED: Diese Eigenschaft verweist auf die Stellen oder Personen, die Verantwortung und Rechenschaftspflicht für die Daten und ihre angemessene Pflege übernehmen. |
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#weitere-wichtige-rollen) genauer beschrieben. | 
+> | Änderungen zur Vorversion | 3.0: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcat:custodian`](#datensatz-geodcat-verwalter). | 
 > | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
@@ -2248,7 +2250,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 > | *URI der Klasse* | [`prov:Attribution`](http://www.w3.org/ns/prov#Attribution)      |
 > |:-----------------|:-----------------------------------------------------|
-> | Beschreibung     | Diese Klasse verknüft eine Ressource mit Agenten und beschreibt, welche Rolle die Agenten im Bezug auf die Ressource eingenommen haben.<br>Sie ist insbesondere dann relevant, wenn keine Eigenschaften wie `dcatde:originator`, `dcterms:creator` oder `dcterms:publisher` existieren, um die Rolle zu beschreiben.     |
+> | Beschreibung     | Diese Klasse verknüft eine Ressource mit Agenten und beschreibt, welche Rolle die Agenten im Bezug auf die Ressource eingenommen haben.<br>Sie ist insbesondere dann relevant, wenn keine Eigenschaften wie `geodcat:originator`, `dcterms:creator` oder `dcterms:publisher` existieren, um die Rolle zu beschreiben.     |
 > | eingebunden über | prov:qualifiedAttribution (dcat:Dataset, dcat:DataService)         | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Attribution), [PROV-O](https://www.w3.org/TR/prov-o/#Attribution) |
 
