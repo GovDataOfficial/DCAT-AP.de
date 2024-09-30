@@ -48,6 +48,8 @@ Darüber hinaus wird für jede Eigenschaft nun ein "Interoperabilitätslevel" an
 
 Die Klassen "Kategorie" (`skos:Concept`) und "Kategorienschema" (`skos:ConceptScheme`) werden nicht mehr beschrieben, da sie exklusiv mit einem EU Vokabular verwendet werden sollen. Zudem ist die Nutzung von (`skos:Concept`) nur als "Kategorie" verwirrend/falsch, da auch andere Eigenschaften als Wertebereich `skos:Concept` haben.
 
+Auch die Klasse "Lizenzdokument" (`dcterms:LicenceType`) soll immer mit einem kontrollierten Vokabular verwendet werden und wird daher nicht weiter beschrieben.
+
 Details beschreibt das Kapitel [Überblick über das DCAT-AP.de Modell](#ueberblick-datenmodell).
 
 ---

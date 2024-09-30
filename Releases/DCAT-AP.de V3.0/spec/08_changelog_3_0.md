@@ -155,13 +155,3 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Katalogeintrag](#katalogeintrag-katalogeintrag) (`foaf:primaryTopic`) | 3.0: Aufnahme der Ressource `dcat:DatasetSeries` | 
 
 
-### Klasse: Lizenzdokument
-
-Auf Ebene der Klasse [Lizenzdokument](#klasse-lizenzdokument) (`dcterms:LicenseDocument`) gibt es 
-folgende Änderungen zur Vorversion:
-
-> 3.0: Errata: Label korrigiert.
-
-Bei ihren Eigenschaften gibt es keine Änderungen zur Vorversion.
-
-

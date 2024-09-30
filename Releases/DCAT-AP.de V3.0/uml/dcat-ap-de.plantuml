@@ -1711,29 +1711,6 @@ class "dcat:CatalogRecord" <<optional>> {
     '@ adms:interoperabilityLevel = A
     '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_source, ___TBD___(kein Test, ob Ziel ein dcat:CatalogRecord)
 
-class "dcterms:LicenseDocument" <<recommended>> {
-    <<recommended>> dcterms:type ~> skos:Concept [*]
-        '@ rdfs:label      = Lizenztyp
-        '@ _:internalLink  = lizenzdokument-lizenztyp
-        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
-        '@ rdfs:comment    = Diese Eigenschaft bezieht sich auf den Typ einer Lizenz, z.B. "public domain" oder "royalties required".
-        '@ _:deOriginal    = Es wird empfohlen, die Eigenschaft Lizenztyp (und die ganze Klasse Lizenzdokument) nicht innerhalb des Schemas zu transportieren sondern als eine Frage der Klassifikation von Lizenzen zu sehen u.a. weil das von DCAT-AP.de vorgegebene ADMS Vokabular "LicenceType" mangels Trennschärfe mit überlappenden Einträgen ungeeignet für die Zwecke von GovData ist.
-        '@ rdf:about       = http://purl.org/dc/terms/type
-        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#LicenceDocument.type)
-        '@ rdfs:seeAlso    = [DCMI Metadata Terms](https://dublincore.org/specifications/dublin-core/dcmi-terms/#type)
-        '@ adms:interoperabilityLevel = A
-        '@ _:vocabularyLink = #kv-adms-licencetype
-        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars, Wird nicht getestet, da CV zu verwenden ist)
-}
-'@ rdfs:label      = Lizenzdokument
-'@ _:internalLink  = #klasse-lizenzdokument
-'@ rdf:about       = http://purl.org/dc/terms/LicenseDocument
-'@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#LicenceDocument)
-'@ rdfs:seeAlso    = [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2012-06-14/#terms-LicenseDocument)
-'@ rdfs:comment    = Ein rechtlich verbindliches Dokument, welches die Verwendung einer Ressource offiziell erlaubt.
-'@ _:usedBy        = dcterms:license (dcat:Distribution)
-'@ adms:versionNotes = 3.0: Errata: Label korrigiert.
-
 class "dcat:Relationship" <<optional>> {
     <<mandatory>> dcat:hadRole ~> dcat:Role [1..*]
         '@ rdfs:label      = Hatte Rolle

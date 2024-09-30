@@ -11,6 +11,5 @@
 | [Identifier](#klasse-identifier)<br>(`adms:Identifier`) |[`skos:notation`](#identifier-notation)<br> |  |  |
 | [Prüfsumme](#klasse-prufsumme)<br>(`spdx:Checksum`) |[`spdx:algorithm`](#prufsumme-algorithmus)<br>[`spdx:checksumValue`](#prufsumme-prufsummenwert)<br> |  |  |
 | [Katalogeintrag](#klasse-katalogeintrag)<br>(`dcat:CatalogRecord`) |[`dcterms:modified`](#katalogeintrag-aktualisierungsdatum)<br>[`foaf:primaryTopic`](#katalogeintrag-katalogeintrag)<br> | [`dcterms:conformsTo`](#katalogeintrag-konform-zu)<br>[`adms:status`](#katalogeintrag-anderungstyp)<br>[`dcterms:issued`](#katalogeintrag-veroffentlichungsdatum)<br> | [`dcterms:title`](#katalogeintrag-titel)<br>[`dcterms:description`](#katalogeintrag-beschreibung)<br>[`dcterms:language`](#katalogeintrag-sprache)<br>[`dcterms:source`](#katalogeintrag-original-metadaten-der-ressource)<br> |
-| [Lizenzdokument](#klasse-lizenzdokument)<br>(`dcterms:LicenseDocument`) | | [`dcterms:type`](#lizenzdokument-lizenztyp)<br> |  |
 | [Beziehung](#klasse-beziehung)<br>(`dcat:Relationship`) |[`dcat:hadRole`](#beziehung-rolle)<br>[`dcterms:relation`](#beziehung-beziehung)<br> |  |  |
 | [Rollenzuordnung](#klasse-rollenzuordnung)<br>(`prov:Attribution`) |[`dcat:hadRole`](#rollenzuordnung-rolle)<br>[`prov:agent`](#rollenzuordnung-agent)<br> |  |  |

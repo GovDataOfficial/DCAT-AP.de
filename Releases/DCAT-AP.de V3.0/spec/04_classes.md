@@ -2189,48 +2189,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 ***
 
 
-## Klasse: Lizenzdokument
-
-> | *URI der Klasse* | [`dcterms:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument)      |
-> |:-----------------|:-----------------------------------------------------|
-> | Beschreibung     | Ein rechtlich verbindliches Dokument, welches die Verwendung einer Ressource offiziell erlaubt.     |
-> | eingebunden über | dcterms:license (dcat:Distribution)         | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#LicenceDocument), [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2012-06-14/#terms-LicenseDocument) |
-> | Änderungen zur Vorversion | 3.0: Errata: Label korrigiert. |
-
-<br>
-
-Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dcterms:type`](#lizenzdokument-lizenztyp).<br>
-
-
-|                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. | Interop. |
-|:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|:--------:|
-| [Lizenztyp](#lizenzdokument-lizenztyp) | `dcterms:type` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-
-
-<br>
-<hr>
-<br>
-
-###  Lizenzdokument: Lizenztyp {#lizenzdokument-lizenztyp}
-> | *URI*                      | [`dcterms:type`](http://purl.org/dc/terms/type) |
-> |:---------------------------|:-------------------------------------------|
-> | Wertebereich               | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Literal) |
-> | Verbindlichkeit            | Empfohlen |
-> | Multiplizität              | `[*]`                   |
-> | Beschreibung               | Diese Eigenschaft bezieht sich auf den Typ einer Lizenz, z.B. "public domain" oder "royalties required". |
-> | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-adms-licencetype) |
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#LicenceDocument.type), [DCMI Metadata Terms](https://dublincore.org/specifications/dublin-core/dcmi-terms/#type)  | 
-> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
-> | Änderungen durch DCAT-AP.de | Es wird empfohlen, die Eigenschaft Lizenztyp (und die ganze Klasse Lizenzdokument) nicht innerhalb des Schemas zu transportieren sondern als eine Frage der Klassifikation von Lizenzen zu sehen u.a. weil das von DCAT-AP.de vorgegebene ADMS Vokabular "LicenceType" mangels Trennschärfe mit überlappenden Einträgen ungeeignet für die Zwecke von GovData ist. | 
-<br>
-
-
-
-***
-
-
 ## Klasse: Beziehung
 
 > | *URI der Klasse* | [`dcat:Relationship`](http://www.w3.org/ns/dcat#Relationship)      |
