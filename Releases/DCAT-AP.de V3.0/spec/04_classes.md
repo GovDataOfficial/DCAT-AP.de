@@ -1922,7 +1922,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[1..*]`                   |
 > | Beschreibung               | Diese Eigenschaft enthält den Namen der verantwortlichen Stelle.  |
 > | Verwendungshinweis | Sie kann für unterschiedliche Ausprägungen des Namens (z.B. der Name in unterschiedlichen Sprachen) wiederholt werden. | 
-> | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-adms-publisher) |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Agent.name), [FOAF Vocabulary](http://xmlns.com/foaf/spec/#term_name)  | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
@@ -1935,7 +1934,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit            | Optional |
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft bezieht sich auf den Typ der verantwortlichen Stelle, die die Ressource bereitstellt. |
+> | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-adms-publisher) |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Agent.type), [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type)  | 
+> | Änderungen zur Vorversion | 3.0: Errata: Link zur zu verwendenden Codeliste hinzugefügt, war zuvor bei `foaf:name` angegeben. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>

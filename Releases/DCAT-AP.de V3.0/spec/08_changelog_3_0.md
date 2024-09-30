@@ -128,6 +128,18 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Geometrie](#standort-geometrie) (`locn:geometry`) | 3.0: Wertebereich auf locn:Geometry geändert.<br>3.0: Verwendungshinweis von DCAT hinzugefügt. | 
 
 
+### Klasse: Verantwortliche Stelle
+
+Auf Ebene der Klasse [Verantwortliche Stelle](#klasse-verantwortliche-stelle) (`foaf:Agent`) gibt es 
+keine Änderungen zur Vorversion.
+
+Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
+
+| Eigenschaft           | Änderungen                      |
+|:----------------------|:--------------------------------|
+| [Typ](#verantwortliche-stelle-typ) (`dcterms:type`) | 3.0: Errata: Link zur zu verwendenden Codeliste hinzugefügt, war zuvor bei `foaf:name` angegeben. | 
+
+
 ### Klasse: Prüfsumme
 
 Auf Ebene der Klasse [Prüfsumme](#klasse-prufsumme) (`spdx:Checksum`) gibt es 

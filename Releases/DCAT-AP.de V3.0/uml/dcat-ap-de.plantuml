@@ -1513,7 +1513,6 @@ class "foaf:Agent" <<mandatory>> {
         '@ rdfs:seeAlso      = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Agent.name)
         '@ rdfs:seeAlso      = [FOAF Vocabulary](http://xmlns.com/foaf/spec/#term_name)
         '@ adms:interoperabilityLevel = A
-        '@ _:vocabularyLink  = #kv-adms-publisher
         '@ sh:shapes         = dcatap:Agent_Property_foaf_name
     <<optional>> dcterms:type ~> skos:Concept [0..1]
         '@ rdfs:label        = Typ
@@ -1524,7 +1523,9 @@ class "foaf:Agent" <<mandatory>> {
         '@ rdf:about         = http://purl.org/dc/terms/type
         '@ rdfs:seeAlso      = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Agent.type)
         '@ rdfs:seeAlso      = [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type)
+        '@ _:vocabularyLink  = #kv-adms-publisher
         '@ adms:interoperabilityLevel = A
+        '@ adms:versionNotes = 3.0: Errata: Link zur zu verwendenden Codeliste hinzugefügt, war zuvor bei `foaf:name` angegeben.
         '@ sh:shapes         = dcatap:Agent_Property_dct_type, ___TBD___(kein Test des Vokabulars)
 }
 '@ rdfs:label      = Verantwortliche Stelle
