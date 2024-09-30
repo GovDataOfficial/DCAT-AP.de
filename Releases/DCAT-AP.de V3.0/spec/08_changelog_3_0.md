@@ -42,7 +42,9 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Herausgeber](#datensatz-herausgeber) (`dcterms:publisher`) | 3.0: Anforderung: Nutzung verpflichtend gemacht. | 
 | [Autor](#datensatz-autor) (`dcterms:creator`) | 3.0: Errata: War fälschlicherweise als Ergänzung durch DCAT-AP.de angegeben. | 
 | [Urheber (DEPRECATED)](#datensatz-urheber) (`dcatde:originator`) | 3.0: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcat:originator`](#datensatz-geodcat-urheber). | 
+| [Urheber (GeoDCAT-AP)](#datensatz-geodcat-urheber) (`geodcat:originator`) | 3.0: Neu hinzugefügt. Ersetzt `dcatde:originator`. | 
 | [Verwalter (DEPRECATED)](#datensatz-verwalter) (`dcatde:maintainer`) | 3.0: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcat:custodian`](#datensatz-geodcat-verwalter). | 
+| [Verwalter (GeoDCAT-AP)](#datensatz-geodcat-verwalter) (`geodcat:custodian`) | 3.0: Neu hinzugefügt. Ersetzt `dcatde:maintainer`. | 
 | [In Serie](#datensatz-in-serie) (`dcat:inSeries`) | 3.0: Im Zuge der Einführung von `dcat:DatasetSeries` hinzugefügt. | 
 
 

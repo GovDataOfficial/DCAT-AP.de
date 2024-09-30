@@ -305,7 +305,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatap:availability`](#datensatz-verfugbarkeit), [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcat:version`](#datensatz-versionsbezeichnung), [`dcatap:applicableLegislation`](#datensatz-rechtsgrundlage), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcterms:provenance`](#datensatz-provenienz), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`prov:wasGeneratedBy`](#datensatz-wurde-erzeugt-von), [`dcat:spatialResolutionInMeters`](#datensatz-raumliche-auflosung-in-meter), [`dcterms:references`](#datensatz-referenziert), [`dcterms:spatial`](#datensatz-raumliche-abdeckung), [`dcterms:publisher`](#datensatz-herausgeber), [`dcterms:contributor`](#datensatz-bearbeiter), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter).<br>
+[`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatap:availability`](#datensatz-verfugbarkeit), [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcat:version`](#datensatz-versionsbezeichnung), [`dcatap:applicableLegislation`](#datensatz-rechtsgrundlage), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcterms:provenance`](#datensatz-provenienz), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`prov:wasGeneratedBy`](#datensatz-wurde-erzeugt-von), [`dcat:spatialResolutionInMeters`](#datensatz-raumliche-auflosung-in-meter), [`dcterms:references`](#datensatz-referenziert), [`dcterms:spatial`](#datensatz-raumliche-abdeckung), [`dcterms:publisher`](#datensatz-herausgeber), [`dcterms:contributor`](#datensatz-bearbeiter), [`dcatde:originator`](#datensatz-urheber), [`geodcat:originator`](#datensatz-geodcat-urheber), [`dcatde:maintainer`](#datensatz-verwalter), [`geodcat:custodian`](#datensatz-geodcat-verwalter).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. | Interop. |
@@ -358,7 +358,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Autor](#datensatz-autor) | `dcterms:creator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Bearbeiter](#datensatz-bearbeiter) | `dcterms:contributor` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [Urheber (DEPRECATED)](#datensatz-urheber) | `dcatde:originator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
+| [Urheber (GeoDCAT-AP)](#datensatz-geodcat-urheber) | `geodcat:originator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [Verwalter (DEPRECATED)](#datensatz-verwalter) | `dcatde:maintainer` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
+| [Verwalter (GeoDCAT-AP)](#datensatz-geodcat-verwalter) | `geodcat:custodian` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [In Serie](#datensatz-in-serie) | `dcat:inSeries` | [`dcat:DatasetSeries`](http://www.w3.org/ns/dcat#DatasetSeries) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 
@@ -997,6 +999,20 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
 
+###  Datensatz: Urheber (GeoDCAT-AP) {#datensatz-geodcat-urheber}
+> | *URI*                      | [`geodcat:originator`](http://data.europa.eu/930/originator) |
+> |:---------------------------|:-------------------------------------------|
+> | Wertebereich               | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) |
+> | Verbindlichkeit            | Optional |
+> | Multiplizität              | `[*]`                   |
+> | Beschreibung               | Diese Eigenschaft verweist auf die Personen, die die Ressource erstellt haben. |
+> | Verwendungshinweis | Gemeint ist dabei die Person, die Urheberrechte an der Ressource haben. Geschützt ist laut Urheberrecht ein Werk, das einer persönlichen geistigen Schöpfung seines Urhebers entspringt.<br>Vgl.: https://de.wikipedia.org/wiki/Urheberrecht_(Deutschland). | 
+> | Weiterführende Dokumentationen | [GeoDCAT-AP](https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/#originator)  | 
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. Ersetzt `dcatde:originator`. | 
+> | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
+> | Änderungen durch DCAT-AP.de | Von GeoDCAT-AP übernommene Eigenschaft. Verwendungshinweis angepasst. | 
+<br>
+
 ###  Datensatz: Verwalter (DEPRECATED) {#datensatz-verwalter}
 > | *URI*                      | [`dcatde:maintainer`](http://dcat-ap.de/def/dcatde/maintainer) |
 > |:---------------------------|:-------------------------------------------|
@@ -1008,6 +1024,19 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Änderungen zur Vorversion | 3.0: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcat:custodian`](#datensatz-geodcat-verwalter). | 
 > | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
+<br>
+
+###  Datensatz: Verwalter (GeoDCAT-AP) {#datensatz-geodcat-verwalter}
+> | *URI*                      | [`geodcat:custodian`](http://data.europa.eu/930/custodian) |
+> |:---------------------------|:-------------------------------------------|
+> | Wertebereich               | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) |
+> | Verbindlichkeit            | Optional |
+> | Multiplizität              | `[*]`                   |
+> | Beschreibung               | Diese Eigenschaft verweist auf die Stellen oder Personen, die Verantwortung und Rechenschaftspflicht für die Daten und ihre angemessene Pflege übernehmen. |
+> | Weiterführende Dokumentationen | [GeoDCAT-AP](https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/#custodian)  | 
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. Ersetzt `dcatde:maintainer`. | 
+> | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
+> | Änderungen durch DCAT-AP.de | Von GeoDCAT-AP übernommene Eigenschaft. | 
 <br>
 
 ###  Datensatz: In Serie {#datensatz-in-serie}

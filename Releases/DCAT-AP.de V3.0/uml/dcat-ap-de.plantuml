@@ -817,6 +817,19 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcat:originator`](#datensatz-geodcat-urheber).
     '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test, ob Ziel foaf:Agent)
 
+"dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> geodcat:originator
+    '@ rdfs:label      = Urheber (GeoDCAT-AP)
+    '@ _:internalLink  = datensatz-geodcat-urheber
+    '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
+    '@ rdfs:comment    = Diese Eigenschaft verweist auf die Personen, die die Ressource erstellt haben.
+    '@ skos:scopeNote  = Gemeint ist dabei die Person, die Urheberrechte an der Ressource haben. Geschützt ist laut Urheberrecht ein Werk, das einer persönlichen geistigen Schöpfung seines Urhebers entspringt.
+    '@ skos:scopeNote  = Vgl.: https://de.wikipedia.org/wiki/Urheberrecht_(Deutschland).
+    '@ rdf:about       = http://data.europa.eu/930/originator
+    '@ rdfs:seeAlso      = [GeoDCAT-AP](https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/#originator)
+    '@ adms:interoperabilityLevel = P
+    '@ _:deOriginal    = Von GeoDCAT-AP übernommene Eigenschaft. Verwendungshinweis angepasst.
+    '@ adms:versionNotes = 3.0: Neu hinzugefügt. Ersetzt `dcatde:originator`.
+
 "dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> dcatde:maintainer
     '@ rdfs:label      = Verwalter (DEPRECATED)
     '@ _:internalLink  = datensatz-verwalter
@@ -828,6 +841,18 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
     '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcat:custodian`](#datensatz-geodcat-verwalter).
     '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test, ob Ziel foaf:Agent)
+
+"dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> geodcat:custodian
+    '@ rdfs:label      = Verwalter (GeoDCAT-AP)
+    '@ _:internalLink  = datensatz-geodcat-verwalter
+    '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
+    '@ rdfs:comment    = Diese Eigenschaft verweist auf die Stellen oder Personen, die Verantwortung und Rechenschaftspflicht für die Daten und ihre angemessene Pflege übernehmen.
+    '@ rdf:about       = http://data.europa.eu/930/custodian
+    '@ rdfs:seeAlso    = [GeoDCAT-AP](https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/#custodian)
+    '@ adms:interoperabilityLevel = P
+    '@ _:deOriginal    = Von GeoDCAT-AP übernommene Eigenschaft.
+    '@ adms:versionNotes = 3.0: Neu hinzugefügt. Ersetzt `dcatde:maintainer`.
+
 "dcat:Dataset" --> "*"     "dcat:DatasetSeries"         : <<optional>> dcat:inSeries
     '@ rdfs:label      = In Serie
     '@ _:internalLink  = datensatz-in-serie
