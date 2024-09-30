@@ -14,5 +14,3 @@
 | [Lizenzdokument](#klasse-lizenzdokument)<br>(`dcterms:LicenseDocument`) | | [`dcterms:type`](#lizenzdokument-lizenztyp)<br> |  |
 | [Beziehung](#klasse-beziehung)<br>(`dcat:Relationship`) |[`dcat:hadRole`](#beziehung-rolle)<br>[`dcterms:relation`](#beziehung-beziehung)<br> |  |  |
 | [Rollenzuordnung](#klasse-rollenzuordnung)<br>(`prov:Attribution`) |[`dcat:hadRole`](#rollenzuordnung-rolle)<br>[`prov:agent`](#rollenzuordnung-agent)<br> |  |  |
-| [Kategorie](#klasse-kategorie)<br>(`skos:Concept`) |[`skos:prefLabel`](#kategorie-bezeichnung)<br> |  |  |
-| [Kategorienschema](#klasse-kategorienschema)<br>(`skos:ConceptScheme`) |[`dcterms:title`](#kategorienschema-bezeichnung)<br> |  |  |

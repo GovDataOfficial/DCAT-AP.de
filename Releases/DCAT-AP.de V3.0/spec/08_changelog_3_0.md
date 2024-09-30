@@ -165,15 +165,3 @@ folgende Änderungen zur Vorversion:
 Bei ihren Eigenschaften gibt es keine Änderungen zur Vorversion.
 
 
-### Klasse: Kategorie
-
-Auf Ebene der Klasse [Kategorie](#klasse-kategorie) (`skos:Concept`) gibt es 
-keine Änderungen zur Vorversion.
-
-Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
-
-| Eigenschaft           | Änderungen                      |
-|:----------------------|:--------------------------------|
-| [Bezeichnung](#kategorie-bezeichnung) (`skos:prefLabel`) | 3.0: Verwendungshinweis hinzugefügt. | 
-
-

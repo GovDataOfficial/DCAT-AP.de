@@ -1798,48 +1798,6 @@ class "prov:Attribution" <<optional>> {
 '@ _:usedBy        = prov:qualifiedAttribution (dcat:Dataset, dcat:DataService)
 '@ rdfs:subClassOf = [prov:AgentInfluence](https://www.w3.org/TR/prov-o/#AgentInfluence)
 
-class "skos:Concept" <<recommended>> {
-    <<mandatory>> skos:prefLabel ~> rdfs:Literal [1..*]
-        '@ rdfs:label      = Bezeichnung
-        '@ _:internalLink  = kategorie-bezeichnung
-        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
-        '@ rdfs:comment    = Präferierte Bezeichnung der Kategorie.
-        '@ skos:scopeNote  = Diese Eigenschaft kann für parallele Sprachversionen der Bezeichnung der Kategorie wiederholt werden.
-        '@ rdf:about       = http://www.w3.org/2004/02/skos/core#prefLabel
-        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Concept.preferredlabel)
-        '@ rdfs:seeAlso    = [SKOS](http://www.w3.org/2004/02/skos/core#prefLabel)
-        '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Category_Property_skos_prefLabel <-- DEAKTIVIEREN, ___TBD___(Keine Tests geplant, da Kategorien als CV abgebildet werden.)
-        '@ adms:versionNotes = 3.0: Verwendungshinweis hinzugefügt.
-}
-'@ rdfs:label      = Kategorie
-'@ _:internalLink  = #klasse-kategorie
-'@ rdf:about       = http://www.w3.org/2004/02/skos/core#Concept
-'@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Concept)
-'@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Concept)
-'@ rdfs:comment    = Das Thema bzw. die Kategorie eines Datensatzes.
-'@ _:usedBy        = dcat:theme (dcat:Dataset)
-
-class "skos:ConceptScheme" <<recommended>> {
-    <<mandatory>> dcterms:title ~> rdfs:Literal [1..*]
-        '@ rdfs:label      = Titel
-        '@ _:internalLink  = kategorienschema-bezeichnung
-        '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
-        '@ rdfs:comment    = Titel des Kategorienschemas.
-        '@ rdf:about       = http://purl.org/dc/terms/title
-        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#ConceptScheme.title)
-        '@ rdfs:seeAlso    = [DCMI Metadata Terms](http://purl.org/dc/terms/title)
-        '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:CategoryScheme_Property_dct_title <-- DEAKTIVIEREN, ___TBD___(Keine Tests geplant, da Kategorienschemata als CV abgebildet werden.)
-}
-'@ rdfs:label      = Kategorienschema
-'@ _:internalLink  = #klasse-kategorienschema
-'@ rdf:about       = http://www.w3.org/2004/02/skos/core#ConceptScheme
-'@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#ConceptScheme)
-'@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Concept_Scheme)
-'@ rdfs:comment    = Eine Sammlung von Konzepten/Begrifflichkeiten (z.B. in Form eines kontrollierten Vokabulars) durch welche die Kategorie definiert ist.
-'@ _:usedBy        = dcat:themeTaxonomy (dcat:Catalog)
-
 class "dcat:Resource" #F8978D|FCFFFC
 
 "dcat:Catalog"       --|> "dcat:Dataset"
