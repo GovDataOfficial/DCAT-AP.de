@@ -315,7 +315,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Herausgeber](#datensatz-herausgeber) | `dcterms:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Pflicht</small> | `[1]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
 | [Schlagwort](#datensatz-schlagwort) | `dcat:keyword` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Ebene der geopolitischen Abdeckung](#datensatz-ebene-geopolitischen-abdeckung) | `dcatde:politicalGeocodingLevelURI` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
-| [Geopolitische Abdeckung](#datensatz-geopolitischen-abdeckung) | `dcatde:politicalGeocodingURI` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
+| [Geopolitische Abdeckung (DEPRECATED)](#datensatz-geopolitischen-abdeckung) | `dcatde:politicalGeocodingURI` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [Kategorie](#datensatz-kategorie) | `dcat:theme` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Kontakt](#datensatz-kontakt) | `dcat:contactPoint` | [`vcard:Kind`](http://www.w3.org/TR/vcard-rdf/#Kind) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Verfügbarkeit](#datensatz-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..1]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
@@ -323,7 +323,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Zeitliche Abdeckung](#datensatz-zeitliche-abdeckung) | `dcterms:temporal` | [`dcterms:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Distribution](#datensatz-distribution) | `dcat:distribution` | [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Datenbereitsteller ID](#datensatz-datenbereitsteller-id) | `dcatde:contributorID` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
-| [Beschreibung der Abdeckung](#datensatz-beschreibung-abdeckung) | `dcatde:geocodingDescription` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
+| [Beschreibung der Abdeckung (DEPRECATED)](#datensatz-beschreibung-abdeckung) | `dcatde:geocodingDescription` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [ID](#datensatz-id) | `dcterms:identifier` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Andere ID](#datensatz-andere-id) | `adms:identifier` | [`adms:Identifier`](http://www.w3.org/ns/adms#Identifier) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Veröffentlichungsdatum](#datensatz-veroffentlichungsdatum) | `dcterms:issued` | [`rdfs:Literal`]() | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
@@ -341,7 +341,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Grad der Zugänglichkeit](#datensatz-grad-zuganglichkeit) | `dcterms:accessRights` | [`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Provenienz](#datensatz-provenienz) | `dcterms:provenance` | [`dcterms:ProvenanceStatement`](http://purl.org/dc/terms/ProvenanceStatement) | <small>Optional</small> | `[*]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
 | [Aktualisierungsfrequenz](#datensatz-aktualisierungsfrequenz) | `dcterms:accrualPeriodicity` | [`dcterms:Frequency`](http://purl.org/dc/terms/Frequency) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Qualitätssicherungsprozess](#datensatz-qualitatssicherungsprozess) | `dcatde:qualityProcessURI` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[0..1]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
+| [Qualitätssicherungsprozess (DEPRECATED)](#datensatz-qualitatssicherungsprozess) | `dcatde:qualityProcessURI` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[0..1]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [Typ](#datensatz-typ) | `dcterms:type` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Wurde erzeugt von](#datensatz-wurde-erzeugt-von) | `prov:wasGeneratedBy` | [`prov:Activity`](https://www.w3.org/TR/prov-o/#Activity) | <small>Optional</small> | `[*]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
 | [Räumliche Auflösung in Meter](#datensatz-raumliche-auflosung-in-meter) | `dcat:spatialResolutionInMeters` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..1]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
@@ -435,15 +435,16 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
 
-###  Datensatz: Geopolitische Abdeckung {#datensatz-geopolitischen-abdeckung}
+###  Datensatz: Geopolitische Abdeckung (DEPRECATED) {#datensatz-geopolitischen-abdeckung}
 > | *URI*                      | [`dcatde:politicalGeocodingURI`](http://dcat-ap.de/def/dcatde/politicalGeocodingLevelURI) |
 > |:---------------------------|:-------------------------------------------|
 > | Wertebereich               | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) |
 > | Verbindlichkeit            | Empfohlen |
 > | Multiplizität              | `[*]`                   |
-> | Beschreibung               | Diese Eigenschaft verknüpft einen Datensatz mit dem von ihm abgedeckten administrativen Gebiet der Bundesrepublik Deutschland, etwa ein konkretes Bundesland, eine Kommune oder ein Landkreis repräsentiert durch eine URI. |
+> | Beschreibung               | DEPRECATED: Diese Eigenschaft verknüpft einen Datensatz mit dem von ihm abgedeckten administrativen Gebiet der Bundesrepublik Deutschland, etwa ein konkretes Bundesland, eine Kommune oder ein Landkreis repräsentiert durch eine URI. |
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#verwaltungspolitischer-geobezug-als-uri) genauer beschrieben. | 
 > | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-political-geocoding-uri) |
+> | Änderungen zur Vorversion | 3.0: [DEPRECATED](#glossar-deprecated) | 
 > | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
@@ -539,14 +540,15 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
 
-###  Datensatz: Beschreibung der Abdeckung {#datensatz-beschreibung-abdeckung}
+###  Datensatz: Beschreibung der Abdeckung (DEPRECATED) {#datensatz-beschreibung-abdeckung}
 > | *URI*                      | [`dcatde:geocodingDescription`](http://dcat-ap.de/def/dcatde/geocodingDescription) |
 > |:---------------------------|:-------------------------------------------|
 > | Wertebereich               | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
 > | Verbindlichkeit            | Optional |
 > | Multiplizität              | `[*]`                   |
-> | Beschreibung               | Diese Eigenschaft enthält die geografische Abdeckung eines Datensatzes, repräsentiert durch die Bezeichnung eines administrativen Gebiets oder eines fachlichen Bezugs als Freitext. |
+> | Beschreibung               | DEPRECATED: Diese Eigenschaft enthält die geografische Abdeckung eines Datensatzes, repräsentiert durch die Bezeichnung eines administrativen Gebiets oder eines fachlichen Bezugs als Freitext. |
 > | Verwendungshinweis | Ergänzend als Text bzw. alleinstehend für alle Fälle bei denen die geopolitische Abdeckung nicht durch eine URI angegeben werden kann (z.B. bei komplexeren Bund-Länder-Kooperationen oder auf kommunaler Ebene). <br>Beispiele: "Gemeinden des Wasserzweckverbands Straubing-Land" oder "Verband Region Rhein-Neckar".<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#geobezug-als-beschreibender-text) genauer beschrieben. Sie kann für parallele Sprachversionen wiederholt werden. | 
+> | Änderungen zur Vorversion | 3.0: [DEPRECATED](#glossar-deprecated) | 
 > | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
@@ -776,14 +778,15 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 <br>
 
-###  Datensatz: Qualitätssicherungsprozess {#datensatz-qualitatssicherungsprozess}
+###  Datensatz: Qualitätssicherungsprozess (DEPRECATED) {#datensatz-qualitatssicherungsprozess}
 > | *URI*                      | [`dcatde:qualityProcessURI`](http://dcat-ap.de/def/dcatde/qualityProcessURI) |
 > |:---------------------------|:-------------------------------------------|
 > | Wertebereich               | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) |
 > | Verbindlichkeit            | Optional |
 > | Multiplizität              | `[0..1]`                   |
-> | Beschreibung               | Eine URI, die auf den Prozess zur Qualitätssicherung des Datensatzes verweist. Es handelt sich idealerweise um die URL einer Webseite. |
+> | Beschreibung               | DEPRECATED: Eine URI, die auf den Prozess zur Qualitätssicherung des Datensatzes verweist. Es handelt sich idealerweise um die URL einer Webseite. |
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#webseite-mit-beschreibung-des-qualitatssicherungsprozesses) genauer beschrieben. | 
+> | Änderungen zur Vorversion | 3.0: [DEPRECATED](#glossar-deprecated) | 
 > | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>

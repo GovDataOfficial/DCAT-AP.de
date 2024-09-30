@@ -22,6 +22,8 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
+| [Geopolitische Abdeckung (DEPRECATED)](#datensatz-geopolitischen-abdeckung) (`dcatde:politicalGeocodingURI`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
+| [Beschreibung der Abdeckung (DEPRECATED)](#datensatz-beschreibung-abdeckung) (`dcatde:geocodingDescription`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
 | [Andere ID](#datensatz-andere-id) (`adms:identifier`) | 3.0: Errata: Link der Range korrigiert und Verwendungshinweis überarbeitet. | 
 | [Veröffentlichungsdatum](#datensatz-veroffentlichungsdatum) (`dcterms:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 | [Aktualisierungsdatum](#datensatz-aktualisierungsdatum) (`dcterms:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
@@ -30,6 +32,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Rechtsgrundlage](#datensatz-rechtsgrundlage) (`dcatap:applicableLegislation`) | 3.0: Neu hinzugefügt. | 
 | [Rechtsgrundlage für die Zugangseröffnung (DEPRECATED)](#datensatz-rechtsgrundlage-zugangseroffnung) (`dcatde:legalBasis`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
 | [Grad der Zugänglichkeit](#datensatz-grad-zuganglichkeit) (`dcterms:accessRights`) | 3.0: Kontrolliertes Vokabular hinzugefügt. | 
+| [Qualitätssicherungsprozess (DEPRECATED)](#datensatz-qualitatssicherungsprozess) (`dcatde:qualityProcessURI`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
 | [Typ](#datensatz-typ) (`dcterms:type`) | 3.0: Kardinalität von `0..1` auf `*` geändert.<br>3.0: Namen vereinfacht.<br>3.0: Optionale Codeliste hinzugefügt. | 
 | [Räumliche Auflösung in Meter](#datensatz-raumliche-auflosung-in-meter) (`dcat:spatialResolutionInMeters`) | 3.0: Errata: Kardinalität von `[*]` wie bei DCAT-AP auf `[0..1]` angepasst. | 
 | [Zeitliche Auflösung](#datensatz-zeitliche-auflosung) (`dcat:temporalResolution`) | 3.0: Errata: Kardinalität von `[*]` wie bei DCAT-AP auf `[0..1]` angepasst.<br>3.0: Errata: Anzeige des Wertebereichs korrigiert und weiterführende Dokumentation zu DCAT korrigiert. | 
