@@ -10,6 +10,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Veröffentlichungsdatum](#katalog-veroffentlichungsdatum) (`dcterms:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 | [Aktualisierungsdatum](#katalog-aktualisierungsdatum) (`dcterms:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 | [Rechte](#katalog-rechte) (`dcterms:rights`) | 3.0: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt. | 
+| [Datensatz](#katalog-datensatz) (`dcat:dataset`) | 3.0: Harmonisierung: Kardinalität von `1..*` auf `*` geändert. Verbindlichkeit auf "Empfohlen" gesenkt. | 
 
 
 ### Klasse: Datensatz

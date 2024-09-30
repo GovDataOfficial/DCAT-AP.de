@@ -9,14 +9,13 @@
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dcatap:availability`](#katalog-verfugbarkeit), [`dcterms:isPartOf`](#katalog-ist-teilkatalog), [`dcat:record`](#katalog-katalogeintrag), [`dcat:dataset`](#katalog-datensatz), [`dcterms:publisher`](#katalog-herausgeber).<br>
+[`dcatap:availability`](#katalog-verfugbarkeit), [`dcterms:isPartOf`](#katalog-ist-teilkatalog), [`dcat:record`](#katalog-katalogeintrag), [`dcterms:publisher`](#katalog-herausgeber).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. | Interop. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|:--------:|
 | [Titel](#katalog-titel) | `dcterms:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Beschreibung](#katalog-beschreibung) | `dcterms:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Datensatz](#katalog-datensatz) | `dcat:dataset` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Pflicht</small> | `[1..*]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
 | [Herausgeber](#katalog-herausgeber) | `dcterms:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Pflicht</small> | `[1]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
 | [Veröffentlichungsdatum](#katalog-veroffentlichungsdatum) | `dcterms:issued` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Aktualisierungsdatum](#katalog-aktualisierungsdatum) | `dcterms:modified` | [`rdfs:Literal`]() | <small>Empfohlen</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
@@ -26,6 +25,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Kategorienschema](#katalog-kategorienschema) | `dcat:themeTaxonomy` | [`skos:ConceptScheme`](http://www.w3.org/2004/02/skos/core#ConceptScheme) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Verfügbarkeit](#katalog-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..1]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [Räumliche Abdeckung](#katalog-raumliche-abdeckung) | `dcterms:spatial` | [`dcterms:Location`](http://purl.org/dc/terms/Location) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
+| [Datensatz](#katalog-datensatz) | `dcat:dataset` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Rechte](#katalog-rechte) | `dcterms:rights` | [`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Katalog](#katalog-katalog) | `dcat:catalog` | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Datenservice](#katalog-datenservice) | `dcat:service` | [`dcat:DataService`](http://www.w3.org/ns/dcat#DataService) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
@@ -66,19 +66,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.description), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description)  | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
-<br>
-
-###  Katalog: Datensatz {#katalog-datensatz}
-> | *URI*                      | [`dcat:dataset`](http://www.w3.org/ns/dcat#dataset) |
-> |:---------------------------|:-------------------------------------------|
-> | Wertebereich               | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) |
-> | Verbindlichkeit            | Pflicht |
-> | Multiplizität              | `[1..*]`                   |
-> | Beschreibung               | Diese Eigenschaft verknüpft den Katalog mit einem Datensatz, welcher somit Teil des Kataloges wird. |
-> | Verwendungshinweis | Da leere Kataloge in der Regel auf Probleme hinweisen, sollte diese Eigenschaft mit der Eigenschaft "Datenservice" kombiniert werden, um eine Überprüfung auf leere Kataloge zu implementieren. | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.dataset), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_dataset)  | 
-> | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
-> | Änderungen durch DCAT-AP.de | DCAT-AP.de gibt eine Kardinalität von `1..*` an. | 
 <br>
 
 ###  Katalog: Herausgeber {#katalog-herausgeber}
@@ -194,6 +181,20 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft bezieht sich auf einen vom Katalog abgedeckten geographischen Bereich. |
 > | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-spatial) |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.geographicalcoverage), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial)  | 
+> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
+
+<br>
+
+###  Katalog: Datensatz {#katalog-datensatz}
+> | *URI*                      | [`dcat:dataset`](http://www.w3.org/ns/dcat#dataset) |
+> |:---------------------------|:-------------------------------------------|
+> | Wertebereich               | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) |
+> | Verbindlichkeit            | Empfohlen |
+> | Multiplizität              | `[*]`                   |
+> | Beschreibung               | Diese Eigenschaft verknüpft den Katalog mit einem Datensatz, welcher somit Teil des Kataloges wird. |
+> | Verwendungshinweis | Da leere Kataloge in der Regel auf Probleme hinweisen, sollte diese Eigenschaft mit der Eigenschaft "Datenservice" kombiniert werden, um eine Überprüfung auf leere Kataloge zu implementieren. | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.dataset), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_dataset)  | 
+> | Änderungen zur Vorversion | 3.0: Harmonisierung: Kardinalität von `1..*` auf `*` geändert. Verbindlichkeit auf "Empfohlen" gesenkt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>

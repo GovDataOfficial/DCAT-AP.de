@@ -205,7 +205,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ _:deOriginal    = DCAT-AP.de bindet einen zusätzlichen Verwendungshinweis ein.
     '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:CatalogRecord)
 
-"dcat:Catalog" --> "1..*"  "dcat:Dataset"       : <<mandatory>> dcat:dataset
+"dcat:Catalog" --> "*"  "dcat:Dataset"       : <<recommended>> dcat:dataset
     '@ rdfs:label      = Datensatz
     '@ _:internalLink  = katalog-datensatz
     '@ rdfs:range      = http://www.w3.org/ns/dcat#Dataset
@@ -214,8 +214,8 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdf:about       = http://www.w3.org/ns/dcat#dataset
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.dataset)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_dataset)
-    '@ adms:interoperabilityLevel = E
-    '@ _:deOriginal    = DCAT-AP.de gibt eine Kardinalität von `1..*` an.
+    '@ adms:interoperabilityLevel = A
+    '@ adms:versionNotes = 3.0: Harmonisierung: Kardinalität von `1..*` auf `*` geändert. Verbindlichkeit auf "Empfohlen" gesenkt.
     '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test auf Mindestzahl, lohnt es sich, das wider besseren Wissens zu erzwingen?)
 
 "dcat:Catalog" --> "1"     "foaf:Agent"         : <<mandatory>> dcterms:publisher
