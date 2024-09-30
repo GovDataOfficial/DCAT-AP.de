@@ -23,11 +23,11 @@
       addSectionLinks: true,
       
       currentVersion: "3.0 (Entwurf)",
-      publishDate: "2024-06-21",
-      modificationDate: "2024-06-20",
+      publishDate: "2024-10-02",
+      modificationDate: "2024-09-30",
       copyrightStart: 2017,
-      license: "cc-by",
-      additionalCopyrightHolders: "",
+      license: "cc0",
+      copyright: "GovData <start-end>, lizensiert unter <a rel='license' href='https://creativecommons.org/publicdomain/zero/1.0/' title='Creative Commons 0 Public Domain Dedication'>CC0</a>.",
 
       postProcess: [doPostProcessing],
 
@@ -193,8 +193,7 @@
       document.getElementsByTagName("dl")[0].innerHTML = addDetails + dliH;
 
       // passe Copyright an
-      document.getElementsByClassName("copyright")[0].innerText = document.getElementsByClassName("copyright")[0].innerText.substr(0,22) + respecConfig.additionalCopyrightHolders;
-
+      document.getElementsByClassName("copyright")[0].innerHTML = respecConfig.copyright.replace("<start-end>", document.getElementsByClassName("copyright")[0].innerText.substr(12,9));
     }
   </script>
 
