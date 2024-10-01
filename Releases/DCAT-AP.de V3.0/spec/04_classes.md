@@ -317,11 +317,11 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Ebene der geopolitischen Abdeckung](#datensatz-ebene-geopolitischen-abdeckung) | `dcatde:politicalGeocodingLevelURI` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [Geopolitische Abdeckung (DEPRECATED)](#datensatz-geopolitischen-abdeckung) | `dcatde:politicalGeocodingURI` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [Kategorie](#datensatz-kategorie) | `dcat:theme` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Kontakt](#datensatz-kontakt) | `dcat:contactPoint` | [`vcard:Kind`](http://www.w3.org/TR/vcard-rdf/#Kind) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Verfügbarkeit](#datensatz-verfugbarkeit) | `dcatap:availability` | [`skos:Concept`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..1]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [Räumliche Abdeckung](#datensatz-raumliche-abdeckung) | `dcterms:spatial` | [`dcterms:Location`](http://purl.org/dc/terms/Location) | <small>Empfohlen</small> | `[*]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
 | [Zeitliche Abdeckung](#datensatz-zeitliche-abdeckung) | `dcterms:temporal` | [`dcterms:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Distribution](#datensatz-distribution) | `dcat:distribution` | [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
+| [Kontakt](#datensatz-kontakt) | `dcat:contactPoint` | [`vcard:Kind`](http://www.w3.org/TR/vcard-rdf/#Kind) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Datenbereitsteller ID](#datensatz-datenbereitsteller-id) | `dcatde:contributorID` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [Beschreibung der Abdeckung (DEPRECATED)](#datensatz-beschreibung-abdeckung) | `dcatde:geocodingDescription` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [ID](#datensatz-id) | `dcterms:identifier` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
@@ -465,19 +465,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 <br>
 
-###  Datensatz: Kontakt {#datensatz-kontakt}
-> | *URI*                      | [`dcat:contactPoint`](http://www.w3.org/ns/dcat#contactPoint) |
-> |:---------------------------|:-------------------------------------------|
-> | Wertebereich               | [`vcard:Kind`](http://www.w3.org/TR/vcard-rdf/#Kind) |
-> | Verbindlichkeit            | Empfohlen |
-> | Multiplizität              | `[*]`                   |
-> | Beschreibung               | Diese Eigenschaft umfasst Kontaktinformationen, welche für das Zusenden von Kommentaren zum jeweiligen Datensatz verwendet werden können. |
-> | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#ansprechstelle) genauer beschrieben. | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.contactpoint), [DCAT](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_contact_point)  | 
-> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
-
-<br>
-
 ###  Datensatz: Verfügbarkeit {#datensatz-verfugbarkeit}
 > | *URI*                      | [`dcatap:availability`](http://data.europa.eu/r5r/availability) |
 > |:---------------------------|:-------------------------------------------|
@@ -525,6 +512,19 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | Diese Eigenschaft verknüpft den Datensatz mit einer verfügbaren Distribution. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.datasetdistribution), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_distribution)  | 
+> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
+
+<br>
+
+###  Datensatz: Kontakt {#datensatz-kontakt}
+> | *URI*                      | [`dcat:contactPoint`](http://www.w3.org/ns/dcat#contactPoint) |
+> |:---------------------------|:-------------------------------------------|
+> | Wertebereich               | [`vcard:Kind`](http://www.w3.org/TR/vcard-rdf/#Kind) |
+> | Verbindlichkeit            | Empfohlen |
+> | Multiplizität              | `[*]`                   |
+> | Beschreibung               | Diese Eigenschaft umfasst Kontaktinformationen, welche für das Zusenden von Kommentaren zum jeweiligen Datensatz verwendet werden können. |
+> | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#ansprechstelle) genauer beschrieben. | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.contactpoint), [DCAT](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_contact_point)  | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1247,9 +1247,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|:--------:|
 | [Titel](#datensatzserie-titel) | `dcterms:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Herausgeber](#datensatzserie-herausgeber) | `dcterms:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Pflicht</small> | `[1]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
-| [Kontakt](#datensatzserie-kontakt) | `dcat:contactPoint` | [`vcard:Kind`](http://www.w3.org/TR/vcard-rdf/#Kind) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Räumliche Abdeckung](#datensatzserie-raumliche-abdeckung) | `dcterms:spatial` | [`dcterms:Location`](http://purl.org/dc/terms/Location) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Zeitliche Abdeckung](#datensatzserie-zeitliche-abdeckung) | `dcterms:temporal` | [`dcterms:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
+| [Kontakt](#datensatzserie-kontakt) | `dcat:contactPoint` | [`vcard:Kind`](http://www.w3.org/TR/vcard-rdf/#Kind) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Beschreibung](#datensatzserie-beschreibung) | `dcterms:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Rechtsgrundlage](#datensatzserie-rechtsgrundlage) | `dcatap:applicableLegislation` | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Aktualisierungsfrequenz](#datensatzserie-aktualisierungsfrequenz) | `dcterms:accrualPeriodicity` | [`dcterms:Frequency`](http://purl.org/dc/terms/Frequency) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
@@ -1289,20 +1289,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Änderungen durch DCAT-AP.de | Nutzung verpflichtend gemacht. | 
 <br>
 
-###  Datensatzserie: Kontakt {#datensatzserie-kontakt}
-> | *URI*                      | [`dcat:contactPoint`](http://www.w3.org/ns/dcat#contactPoint) |
-> |:---------------------------|:-------------------------------------------|
-> | Wertebereich               | [`vcard:Kind`](http://www.w3.org/TR/vcard-rdf/#Kind) |
-> | Verbindlichkeit            | Empfohlen |
-> | Multiplizität              | `[*]`                   |
-> | Beschreibung               | Diese Eigenschaft umfasst Kontaktinformationen, welche für das Zusenden von Kommentaren zur jeweiligen Datensatzserie verwendet werden können. |
-> | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#ansprechstelle) genauer beschrieben. | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.contactpoint), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
-> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
-
-<br>
-
 ###  Datensatzserie: Räumliche Abdeckung {#datensatzserie-raumliche-abdeckung}
 > | *URI*                      | [`dcterms:spatial`](http://purl.org/dc/terms/spatial) |
 > |:---------------------------|:-------------------------------------------|
@@ -1327,6 +1313,20 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Ein Zeitintervall, welches durch Start- und Endzeitpunkt bezeichnet bzw. definiert ist. |
 > | Verwendungshinweis | Wenn die zeitliche Abdeckung eine Dimension in der Datensatzserie ist, sollte die zeitliche Abdeckung jedes enthaltenen Datensatzes Teil der zeitlichen Abdeckung sein der Serie. In diesem Fall wird ein offener Wert empfohlen, z. B. nach 2012.  | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.temporalcoverage), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal)  | 
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
+
+<br>
+
+###  Datensatzserie: Kontakt {#datensatzserie-kontakt}
+> | *URI*                      | [`dcat:contactPoint`](http://www.w3.org/ns/dcat#contactPoint) |
+> |:---------------------------|:-------------------------------------------|
+> | Wertebereich               | [`vcard:Kind`](http://www.w3.org/TR/vcard-rdf/#Kind) |
+> | Verbindlichkeit            | Empfohlen |
+> | Multiplizität              | `[*]`                   |
+> | Beschreibung               | Diese Eigenschaft umfasst Kontaktinformationen, welche für das Zusenden von Kommentaren zur jeweiligen Datensatzserie verwendet werden können. |
+> | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#ansprechstelle) genauer beschrieben. | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.contactpoint), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point)  | 
 > | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
@@ -1973,6 +1973,93 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Änderungen zur Vorversion | 3.0: Errata: Link zur zu verwendenden Codeliste hinzugefügt, war zuvor bei `foaf:name` angegeben. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
+<br>
+
+
+
+***
+
+
+## Klasse: Kontaktinformationen
+
+> | *URI der Klasse* | [`vcard:Kind`](http://www.w3.org/2006/vcard/ns#Kind)      |
+> |:-----------------|:-----------------------------------------------------|
+> | Beschreibung     | Die Klasse wird genutzt, um Kontaktinformationen zu bündeln.     |
+> | eingebunden über | dcat:contactPoint (dcat:Dataset, dcat:DatasetSeries)         | 
+> | Weiterführende Dokumentationen | [VCard](https://www.w3.org/TR/vcard-rdf/#d4e1819) |
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. |
+
+<br>
+
+Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
+[`vcard:fn`](#kontaktinformationen-name), [`vcard:hasEmail`](#kontaktinformationen-email), [`vcard:hasURL`](#kontaktinformationen-url), [`vcard:hasTelephone`](#kontaktinformationen-telefon).<br>
+
+
+|                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. | Interop. |
+|:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|:--------:|
+| [Name](#kontaktinformationen-name) | `vcard:fn` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Empfohlen</small> | `[0..1]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
+| [E-Mail](#kontaktinformationen-email) | `vcard:hasEmail` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
+| [Kontaktformular/Chatbot](#kontaktinformationen-url) | `vcard:hasURL` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Empfohlen</small> | `[0..*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
+| [Telefon](#kontaktinformationen-telefon) | `vcard:hasTelephone` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[0..*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
+
+
+<br>
+<hr>
+<br>
+
+###  Kontaktinformationen: Name {#kontaktinformationen-name}
+> | *URI*                      | [`vcard:fn`](http://www.w3.org/2006/vcard/ns#fn) |
+> |:---------------------------|:-------------------------------------------|
+> | Wertebereich               | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
+> | Verbindlichkeit            | Empfohlen |
+> | Multiplizität              | `[0..1]`                   |
+> | Beschreibung               | Der vollständige Name. |
+> | Weiterführende Dokumentationen | [VCard](https://www.w3.org/TR/vcard-rdf/#d4e891)  | 
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+> | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
+> | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
+<br>
+
+###  Kontaktinformationen: E-Mail {#kontaktinformationen-email}
+> | *URI*                      | [`vcard:hasEmail`](http://www.w3.org/2006/vcard/ns#hasEmail) |
+> |:---------------------------|:-------------------------------------------|
+> | Wertebereich               | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) |
+> | Verbindlichkeit            | Empfohlen |
+> | Multiplizität              | `[0..*]`                   |
+> | Beschreibung               | Die E-Mail-Adresse. |
+> | Verwendungshinweis | Es wird empfohlen, die E-Mail-Adresse direkt unter Verwendung des `mailto:`-Protokolls anzugeben.<br>Es muss entwerde eine E-Mail, URL oder Telefonnummer angegeben werden. | 
+> | Weiterführende Dokumentationen | [VCard](https://www.w3.org/TR/vcard-rdf/#d4e183)  | 
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+> | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
+> | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. Verwendungshinweis ergänzt. | 
+<br>
+
+###  Kontaktinformationen: Kontaktformular/Chatbot {#kontaktinformationen-url}
+> | *URI*                      | [`vcard:hasURL`](http://www.w3.org/2006/vcard/ns#hasURL) |
+> |:---------------------------|:-------------------------------------------|
+> | Wertebereich               | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) |
+> | Verbindlichkeit            | Empfohlen |
+> | Multiplizität              | `[0..*]`                   |
+> | Beschreibung               | Eine URL über die Kontakt aufgenommen werden kann. |
+> | Verwendungshinweis | Hier wird insbesondere der Link zu einem Kontaktformular oder Chatbot erwartet.<br>Es muss entwerde eine E-Mail, URL oder Telefonnummer angegeben werden. | 
+> | Weiterführende Dokumentationen | [VCard](https://www.w3.org/TR/vcard-rdf/#d4e605)  | 
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+> | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
+> | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. Verwendungshinweis ergänzt. | 
+<br>
+
+###  Kontaktinformationen: Telefon {#kontaktinformationen-telefon}
+> | *URI*                      | [`vcard:hasTelephone`](http://www.w3.org/2006/vcard/ns#hasTelephone) |
+> |:---------------------------|:-------------------------------------------|
+> | Wertebereich               | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) |
+> | Verbindlichkeit            | Optional |
+> | Multiplizität              | `[0..*]`                   |
+> | Beschreibung               | Die Telefonnummer. |
+> | Verwendungshinweis | Es wird empfohlen, die Telefonnummer direkt unter Verwendung des `tel:`-Protokolls anzugeben.<br>Es muss entwerde eine E-Mail, URL oder Telefonnummer angegeben werden. | 
+> | Weiterführende Dokumentationen | [VCard](https://www.w3.org/TR/vcard-rdf/#d4e563)  | 
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+> | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
+> | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
 
 

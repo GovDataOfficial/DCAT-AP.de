@@ -75,7 +75,6 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
 | [Titel](#datensatzserie-titel) (`dcterms:title`) | 3.0: Neu hinzugefügt. | 
-| [Kontakt](#datensatzserie-kontakt) (`dcat:contactPoint`) | 3.0: Neu hinzugefügt. | 
 | [Beschreibung](#datensatzserie-beschreibung) (`dcterms:description`) | 3.0: Neu hinzugefügt. | 
 | [Rechtsgrundlage](#datensatzserie-rechtsgrundlage) (`dcatap:applicableLegislation`) | 3.0: Neu hinzugefügt. | 
 | [Aktualisierungsfrequenz](#datensatzserie-aktualisierungsfrequenz) (`dcterms:accrualPeriodicity`) | 3.0: Neu hinzugefügt. | 
@@ -84,6 +83,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Räumliche Abdeckung](#datensatzserie-raumliche-abdeckung) (`dcterms:spatial`) | 3.0: Neu hinzugefügt. | 
 | [Herausgeber](#datensatzserie-herausgeber) (`dcterms:publisher`) | 3.0: Neu hinzugefügt.<br>3.0: Anforderung: Nutzung verpflichtend gemacht. | 
 | [Zeitliche Abdeckung](#datensatzserie-zeitliche-abdeckung) (`dcterms:temporal`) | 3.0: Neu hinzugefügt. | 
+| [Kontakt](#datensatzserie-kontakt) (`dcat:contactPoint`) | 3.0: Neu hinzugefügt. | 
 
 
 ### Klasse: Distribution
@@ -145,6 +145,23 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
 | [Typ](#verantwortliche-stelle-typ) (`dcterms:type`) | 3.0: Errata: Link zur zu verwendenden Codeliste hinzugefügt, war zuvor bei `foaf:name` angegeben. | 
+
+
+### Klasse: Kontaktinformationen
+
+Auf Ebene der Klasse [Kontaktinformationen](#klasse-kontaktinformationen) (`vcard:Kind`) gibt es 
+folgende Änderungen zur Vorversion:
+
+> 3.0: Neu hinzugefügt.
+
+Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
+
+| Eigenschaft           | Änderungen                      |
+|:----------------------|:--------------------------------|
+| [Name](#kontaktinformationen-name) (`vcard:fn`) | 3.0: Neu hinzugefügt. | 
+| [E-Mail](#kontaktinformationen-email) (`vcard:hasEmail`) | 3.0: Neu hinzugefügt. | 
+| [Kontaktformular/Chatbot](#kontaktinformationen-url) (`vcard:hasURL`) | 3.0: Neu hinzugefügt. | 
+| [Telefon](#kontaktinformationen-telefon) (`vcard:hasTelephone`) | 3.0: Neu hinzugefügt. | 
 
 
 ### Klasse: Prüfsumme

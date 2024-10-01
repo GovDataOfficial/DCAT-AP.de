@@ -315,17 +315,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ adms:interoperabilityLevel = A
         '@ _:vocabularyLink = #kv-data-theme
         '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars)
-    <<recommended>> dcat:contactPoint ~> vcard:Kind [*]
-        '@ rdfs:label      = Kontakt
-        '@ _:internalLink  = datensatz-kontakt
-        '@ rdfs:range      = http://www.w3.org/TR/vcard-rdf/#Kind
-        '@ rdfs:comment    = Diese Eigenschaft umfasst Kontaktinformationen, welche für das Zusenden von Kommentaren zum jeweiligen Datensatz verwendet werden können.
-        '@ skos:scopeNote  = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#ansprechstelle) genauer beschrieben.
-        '@ rdf:about       = http://www.w3.org/ns/dcat#contactPoint
-        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.contactpoint)
-        '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_contact_point)
-        '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein vcard:Kind)
+
     <<recommended>> dcatap:availability ~> skos:Concept [0..1]
         '@ rdfs:label      = Verfügbarkeit
         '@ _:internalLink  = datensatz-verfugbarkeit
@@ -853,6 +843,18 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ _:deOriginal    = Von GeoDCAT-AP übernommene Eigenschaft.
     '@ adms:versionNotes = 3.0: Neu hinzugefügt. Ersetzt `dcatde:maintainer`.
 
+"dcat:Dataset" --> "*"     "vcard:Kind"         : <<recommended>> dcat:contactPoint
+    '@ rdfs:label      = Kontakt
+    '@ _:internalLink  = datensatz-kontakt
+    '@ rdfs:range      = http://www.w3.org/TR/vcard-rdf/#Kind
+    '@ rdfs:comment    = Diese Eigenschaft umfasst Kontaktinformationen, welche für das Zusenden von Kommentaren zum jeweiligen Datensatz verwendet werden können.
+    '@ skos:scopeNote  = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#ansprechstelle) genauer beschrieben.
+    '@ rdf:about       = http://www.w3.org/ns/dcat#contactPoint
+    '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.contactpoint)
+    '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_contact_point)
+    '@ adms:interoperabilityLevel = A
+    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein vcard:Kind)
+    
 "dcat:Dataset" --> "*"     "dcat:DatasetSeries"         : <<optional>> dcat:inSeries
     '@ rdfs:label      = In Serie
     '@ _:internalLink  = datensatz-in-serie
@@ -1007,18 +1009,6 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
         '@ adms:interoperabilityLevel = A
         '@ adms:versionNotes = 3.0: Neu hinzugefügt.
 
-    <<recommended>> dcat:contactPoint ~> vcard:Kind [*]
-        '@ rdfs:label      = Kontakt
-        '@ _:internalLink  = datensatzserie-kontakt
-        '@ rdfs:range      = http://www.w3.org/TR/vcard-rdf/#Kind
-        '@ rdfs:comment    = Diese Eigenschaft umfasst Kontaktinformationen, welche für das Zusenden von Kommentaren zur jeweiligen Datensatzserie verwendet werden können.
-        '@ skos:scopeNote  = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#ansprechstelle) genauer beschrieben.
-        '@ rdf:about       = http://www.w3.org/ns/dcat#contactPoint
-        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.contactpoint)
-        '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point)
-        '@ adms:interoperabilityLevel = A
-        '@ adms:versionNotes = 3.0: Neu hinzugefügt.
-
     <<optional>> dcterms:description ~> rdfs:Literal [*]
         '@ rdfs:label      = Beschreibung
         '@ _:internalLink  = datensatzserie-beschreibung
@@ -1127,6 +1117,17 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
     '@ rdf:about         = http://purl.org/dc/terms/temporal
     '@ rdfs:seeAlso      = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.temporalcoverage)
     '@ rdfs:seeAlso      = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal)
+    '@ adms:interoperabilityLevel = A
+    '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+"dcat:DatasetSeries" --> "*" "vcard:Kind" : <<recommended>> dcat:contactPoint
+    '@ rdfs:label      = Kontakt
+    '@ _:internalLink  = datensatzserie-kontakt
+    '@ rdfs:range      = http://www.w3.org/TR/vcard-rdf/#Kind
+    '@ rdfs:comment    = Diese Eigenschaft umfasst Kontaktinformationen, welche für das Zusenden von Kommentaren zur jeweiligen Datensatzserie verwendet werden können.
+    '@ skos:scopeNote  = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#ansprechstelle) genauer beschrieben.
+    '@ rdf:about       = http://www.w3.org/ns/dcat#contactPoint
+    '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.contactpoint)
+    '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point)
     '@ adms:interoperabilityLevel = A
     '@ adms:versionNotes = 3.0: Neu hinzugefügt.
 
@@ -1566,6 +1567,62 @@ class "foaf:Agent" <<mandatory>> {
 '@ rdfs:comment    = Eine Stelle oder Person, welche mit Katalogen und Datensätzen in unterschiedlichen Rollenausprägungen assoziiert ist.
 '@ _:usedBy        = dcterms:publisher (dcat:Catalog), dcterms:publisher (dcat:Dataset), dcterms:creator (dcat:Dataset), ...
 
+class "vcard:Kind" <<recommended>> {
+    <<recommended>> vcard:fn ~> rdfs:Literal [0..1]
+        '@ rdfs:label        = Name
+        '@ _:internalLink    = kontaktinformationen-name
+        '@ rdfs:range        = http://www.w3.org/2000/01/rdf-schema#Literal
+        '@ rdfs:comment      = Der vollständige Name.
+        '@ rdf:about         = http://www.w3.org/2006/vcard/ns#fn
+        '@ rdfs:seeAlso      = [VCard](https://www.w3.org/TR/vcard-rdf/#d4e891)
+        '@ adms:interoperabilityLevel = P
+        '@ _:deOriginal      = Von DCAT-AP.de eingeführte Eigenschaft.
+        '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+    <<recommended>> vcard:hasEmail ~> rdfs:Resource [0..*]
+        '@ rdfs:label        = E-Mail
+        '@ _:internalLink    = kontaktinformationen-email
+        '@ rdfs:range        = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:comment      = Die E-Mail-Adresse.
+        '@ skos:scopeNote    = Es wird empfohlen, die E-Mail-Adresse direkt unter Verwendung des `mailto:`-Protokolls anzugeben.
+        '@ skos:scopeNote    = Es muss entwerde eine E-Mail, URL oder Telefonnummer angegeben werden.
+        '@ rdf:about         = http://www.w3.org/2006/vcard/ns#hasEmail
+        '@ rdfs:seeAlso      = [VCard](https://www.w3.org/TR/vcard-rdf/#d4e183)
+        '@ adms:interoperabilityLevel = P
+        '@ _:deOriginal      = Von DCAT-AP.de eingeführte Eigenschaft. Verwendungshinweis ergänzt.
+        '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+    <<recommended>> vcard:hasURL ~> rdfs:Resource [0..*]
+        '@ rdfs:label        = Kontaktformular/Chatbot
+        '@ _:internalLink    = kontaktinformationen-url
+        '@ rdfs:range        = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:comment      = Eine URL über die Kontakt aufgenommen werden kann.
+        '@ skos:scopeNote    = Hier wird insbesondere der Link zu einem Kontaktformular oder Chatbot erwartet.
+        '@ skos:scopeNote    = Es muss entwerde eine E-Mail, URL oder Telefonnummer angegeben werden.
+        '@ rdf:about         = http://www.w3.org/2006/vcard/ns#hasURL
+        '@ rdfs:seeAlso      = [VCard](https://www.w3.org/TR/vcard-rdf/#d4e605)
+        '@ adms:interoperabilityLevel = P
+        '@ _:deOriginal      = Von DCAT-AP.de eingeführte Eigenschaft. Verwendungshinweis ergänzt.
+        '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+    <<optional>> vcard:hasTelephone ~> rdfs:Resource [0..*]
+        '@ rdfs:label        = Telefon
+        '@ _:internalLink    = kontaktinformationen-telefon
+        '@ rdfs:range        = http://www.w3.org/2000/01/rdf-schema#Resource
+        '@ rdfs:comment      = Die Telefonnummer.
+        '@ skos:scopeNote    = Es wird empfohlen, die Telefonnummer direkt unter Verwendung des `tel:`-Protokolls anzugeben.
+        '@ skos:scopeNote    = Es muss entwerde eine E-Mail, URL oder Telefonnummer angegeben werden.
+        '@ rdf:about         = http://www.w3.org/2006/vcard/ns#hasTelephone
+        '@ rdfs:seeAlso      = [VCard](https://www.w3.org/TR/vcard-rdf/#d4e563)
+        '@ adms:interoperabilityLevel = P
+        '@ _:deOriginal      = Von DCAT-AP.de eingeführte Eigenschaft.
+        '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+}
+'@ rdfs:label      = Kontaktinformationen
+'@ _:internalLink  = #klasse-kontaktinformationen
+'@ rdf:about       = http://www.w3.org/2006/vcard/ns#Kind
+'@ rdfs:seeAlso    = [VCard](https://www.w3.org/TR/vcard-rdf/#d4e1819)
+'@ rdfs:comment    = Die Klasse wird genutzt, um Kontaktinformationen zu bündeln.
+'@ _:usedBy        = dcat:contactPoint (dcat:Dataset, dcat:DatasetSeries)
+'@ adms:versionNotes = 3.0: Neu hinzugefügt.
+
 class "adms:Identifier" <<optional>> {
     <<mandatory>> skos:notation ~> rdfs:Literal  [1]
         '@ rdfs:label      = Notation des Identifier
@@ -1783,7 +1840,7 @@ class "prov:Attribution" <<optional>> {
         '@ rdf:about       = http://www.w3.org/ns/dcat#hadRole
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:relationship_hadRole)
         '@ adms:interoperabilityLevel = P
-        '@ _:deOriginal      = Von DCAT-AP.de eingeführte Eigenschaft.
+        '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
         '@ sh:shapes       = ___TBD___(kein Test auf minCount, kein Test, ob Ziel eine Ressource oder BlankNode)
     <<mandatory>> prov:agent ~> prov:Agent [1..*]
         '@ rdfs:label      = Agent
