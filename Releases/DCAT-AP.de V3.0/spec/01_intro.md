@@ -37,7 +37,7 @@ DCAT-AP und damit die deutsche Ableitung DCAT-AP.de ist ein RDF-Vokabular.
 
 ## Weitere Dokumente des DCAT-AP.de Standards
 
-Neben dieser Spezifikation machen zwei weitere Bausteine Vorgaben auf organisatorischer, technischer und semantischer Ebene für den Austausch im GovData-Portalverbund: Das [URI-Konzept](#dcat-ap-de-uri-konzept) und das [Konventionenhandbuch](#dcat-ap-de-konventionenhandbuch).
+Neben dieser Spezifikation machen weitere Bausteine Vorgaben auf organisatorischer, technischer und semantischer Ebene für den Austausch im GovData-Portalverbund: Das [URI-Konzept](#dcat-ap-de-uri-konzept), das [Konventionenhandbuch](#dcat-ap-de-konventionenhandbuch)  bzw. [Guidelines](#dcat-ap-de-guidelines) und [Validierungsartefakte](#dcat-ap-de-validierungsartefakte).
 
 <figure id="standardisierungsrahmen-dcat-ap-de">
   <img src="./img/standardisierungsrahmen-dcat-ap-de.png" alt="Standardisierungsrahmen DCAT-AP.de">
@@ -62,6 +62,35 @@ Das URI-Konzept kann derzeit nur als [PDF-Download](https://www.dcat-ap.de/def/u
 
 ### DCAT-AP.de Konventionenhandbuch {#dcat-apde-konventionenhandbuch}
 
-Für GovData wurde zur weiteren Steigerung der Interoperabilität das DCAT-AP.de-Konventionenhandbuch erstellt, welches die Kommunikation mit GovData durch Regeln weiter vereinheitlicht. Hier sind z.B. Regelungen sowie zusätzliche Wertelisten und URIs definiert, die für die Anlieferung von Metadaten an das GovData Portal gelten. Diese wurden aus der DCAT-AP.de-Spezifikation herausgelöst, welche zugunsten der Kompatibilität mit DCAT-AP Datentypen mit größerem Freiheitsgrad vorsieht. Dort wo DCAT-AP bewusst Freiräume lässt, um unterschiedliche Verfahrensweisen in den europäischen Staaten zu berücksichtigen, wird – sofern möglich – für den Austausch von offenen Verwaltungsdaten in  Deutschland eine verbindliche Handhabung vereinbart.
+Das  Konventionenhandbuch ist in der Version 2.0 als [Web-Version](https://www.dcat-ap.de/def/dcatde/2.0/implRules/) verfügbar. Es wird keine geschlossene Aktualisierung auf Version 3.0 geben. Stattdessen werden die Konventionen
+ - in die Spezifikation aufgenommen,
+ - in eine Guideline überführt oder
+ - gestrichen.
 
-Das Konventionenhandbuch ist als [Web-Version](https://www.dcat-ap.de/def/dcatde/2.0/implRules/) verfügbar.
+Beispiele für Konventionen, die in die Spezifikation aufgenommen wurden, sind die aufgenommenen Eigenschaften in der Klasse `vcard:Kind` oder dass die Angabe einer Lizenz für Distributionen nun verpflichtend ist.
+
+Da aktuell noch keine Guidelines existieren, soll an dieser Stelle explizit darauf hingewiesen werden, dass folgende Konventionen weiterhin Bestand haben:
+ - [12: Datenbereitsteller ID](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#konvention-12)
+ - [13: Dubletten: Föderationsweite ID](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#konvention-13)
+ - [25: Dubletten: Identifier](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#konvention-25)
+ - [26: Dubletten: Eigene Identifier](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#konvention-26)
+ - [40: Dubletten: Aktualitätsdatum](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#konvention402)
+
+Auch nicht genannte Konventionen und Inhalte des Konventionenhandbuchs bleiben als Empfehlung bestehen, so lange sie nicht durch eine neue Guideline/Best Practice überholt werden.
+
+<p class="note" title="Bisheriger Inhalt des Kapitels">
+  Für GovData wurde zur weiteren Steigerung der Interoperabilität das DCAT-AP.de-Konventionenhandbuch erstellt, welches die Kommunikation mit GovData durch Regeln weiter vereinheitlicht. Hier sind z.B. Regelungen sowie zusätzliche Wertelisten und URIs definiert, die für die Anlieferung von Metadaten an das GovData Portal gelten. Diese wurden aus der DCAT-AP.de-Spezifikation herausgelöst, welche zugunsten der Kompatibilität mit DCAT-AP Datentypen mit größerem Freiheitsgrad vorsieht. Dort wo DCAT-AP bewusst Freiräume lässt, um unterschiedliche Verfahrensweisen in den europäischen Staaten zu berücksichtigen, wird – sofern möglich – für den Austausch von offenen Verwaltungsdaten in  Deutschland eine verbindliche Handhabung vereinbart.
+</p>
+
+### DCAT-AP.de Guidelines {#dcat-apde-guidelines}
+
+GovData wird in der Zukunft Best Practices und Guidelines veröffentlichen, die das bisherige Konventionenhandbuch ersetzen. Sie werden hier dann verlinkt.
+
+### DCAT-AP.de Validierungsartefakte {#dcat-apde-validierungsartefakte}
+
+GovData stellt Validierungsartefakte in der Form von SHACL-Regeln und einem Online-Validator zur Verfügung. Aktuell liegen nur SHACL-Regeln für DCAT-AP.de 2.0 vor, ihre Überarbeitung wird voraussichtlich noch in Q4 2024 erfolgen.
+
+- [SHACL-Regeln im DCAT-AP.de OpenCode-Repository](https://gitlab.opencode.de/fitko/govdata/dcat-ap.de/-/tree/master/Releases/DCAT-AP.de%20V2.0/)
+- [Validator](https://www.itb.ec.europa.eu/shacl/dcat-ap.de/upload) 
+- [GitHub-Repository des Validators](https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/)
+- [Gespiegeltes OpenCode-Repository des Validators](https://gitlab.opencode.de/fitko/govdata/dcat-ap.de-shacl-validation)
