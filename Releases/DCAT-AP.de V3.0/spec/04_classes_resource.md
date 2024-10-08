@@ -8,17 +8,20 @@
 
 <br>
 
-Die Klasse `dcat:Resource`, die in der Version 2.0 von DCAT eingeführt wurde, ist die Super-Klasse von [`dcat:Dataset`](#klasse-datensatz) und [`dcat:DataService`](#klasse-datenservice).
+![DCAT-AP.de Logo](./img/sub-sup-klassen.png)
 
-`dcat:Resource` ist ebenfalls die Super-Klasse von [`dcat:Catalog`](#klasse-katalog) und [`dcat:DatasetSeries`](#klasse-datensatzserie), da diese beiden Klassen ihrerseits Sub-Klassen von [`dcat:Dataset`](#klasse-datensatz) sind. Die Eigenschaften von `dcat:Resource` vererben sich also auch auf `dcat:Catalog` und `dcat:DatasetSeries`.
+Die Klasse `dcat:Resource` wurde in der Version 2.0 von DCAT eingeführt. Sie ist die Super-Klasse von [`dcat:Dataset`](#klasse-datensatz), [`dcat:DatasetSeries`](#klasse-datensatzserie) und [`dcat:DataService`](#klasse-datenservice), was durch die schwarzen Pfeile symbolisiert wird.
 
-DCAT-AP.de 1.1 erweiterte das `dcat:Dataset` um die Eigenschaften [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter), [`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung) und [`dcterms:contributor`](#datensatz-bearbeiter).​
-<br>Für die Version 2.0 wurde entschieden, diese Eigenschaften künftig der `dcat:Resource` zuzuordnen.
+Die roten, gestrichelten Pfeile zeigen, dass der `dcat:Catalog` und die `dcat:DatasetSeries` gemäß des W3C-DCAT auch Sub-Klassen vom `dcat:Dataset` sind. Diese Beziehung wird in DCAT-AP nicht weiter hervorgehoben, aber in DCAT-AP.de berücksichtigt.
+
+Auch wenn im Zusammenhang von RDF grundsätzlich nicht von "Vererbung" gesprochen wird, geht DCAT-AP.de davon aus, dass jede Eigenschaft einer Klasse auch sinnvoll mit der Sub-Klasse verwendet werden kann. Auf diese "Nachnutzbarkeit" der Eigenschaften ihrer Super-Klassen wird in der jeweiligen Klassenbeschreibung gesondert hingewiesen.
+
+DCAT-AP.de 1.1 erweiterte das `dcat:Dataset` um die Eigenschaften [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter), [`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung) und [`dcterms:contributor`](#datensatz-bearbeiter). Für die Version 2.0 wurde entschieden, diese Eigenschaften künftig der `dcat:Resource` zuzuordnen.
 
 Abweichend von DCAT-AP wurde entschieden, die Eigenschaft [`dcatap:availability`](#datensatz-verfugbarkeit) der `dcat:Resource` zuzuordnen.
 Darüber hinaus wurde die Eigenschaft [`dcterms:references`](#datensatz-referenziert) in DCAT-AP.de 2.0 neu hinzugefügt.
 
-Daraus ergibt sich die folgende Übersicht:
+Daraus ergibt sich die folgende Übersicht an Eigenschaften für die Super-Klasse `dcat:Resource`:
 
 <small>
 

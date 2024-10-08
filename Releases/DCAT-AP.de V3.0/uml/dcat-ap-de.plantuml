@@ -142,8 +142,9 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
 '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog)
 '@ rdfs:comment    = Eine Sammlung oder Quelle, welche die beschriebenen Datensätze, Datenservices oder Kataloge zur Verfügung stellt.
 '@ _:usedBy        = dcat:catalog, dcterms:hasPart, dcterms:isPartOf (dcat:Catalog)
-'@ rdfs:subClassOf = dcat:Dataset
+'@ rdfs:subClassOf = dcat:Dataset, dcat:Resource
 '@ _:resourceHeirloom = [`odrl:hasPolicy`](#distribution-regelwerk).
+'@ _:datasetHeirloom = [`adms:identifier`](#datensatz-andere-id), [`adms:sample`](#datensatz-beispieldistribution), [`adms:versionNotes`](#datensatz-versionserlauterung), [`dcat:contactPoint`](#datensatz-kontakt), [`dcat:distribution`](#datensatz-distribution), [`dcat:granularity`](#datensatz-abgedeckte-zeitliche-granularitat-deprecated), [`dcat:keyword`](#datensatz-schlagwort), [`dcat:landingPage`](#datensatz-ursprungliche-webseite), [`dcat:qualifiedRelation`](#datensatz-qualifizierte-beziehung), [`dcat:spatialResolutionInMeters`](#datensatz-raumliche-auflosung-in-meter), [`dcat:temporalResolution`](#datensatz-zeitliche-auflosung), [`dcat:theme`](#datensatz-kategorie), [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcatde:maintainer`](#datensatz-verwalter), [`dcatde:originator`](#datensatz-urheber), [`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dct:accessRights`](#datensatz-grad-zuganglichkeit), [`dct:accrualPeriodicity`](#datensatz-aktualisierungsfrequenz), [`dct:conformsTo`](#datensatz-konform-zu-standard), [`dct:contributor`](#datensatz-bearbeiter), [`dct:hasVersion`](#datensatz-weitere-version), [`dct:identifier`](#datensatz-id), [`dct:isReferencedBy`](#datensatz-wird-referenziert), [`dct:isVersionOf`](#datensatz-ist-version), [`dct:provenance`](#datensatz-provenienz), [`dct:references`](#datensatz-referenziert), [`dct:relation`](#datensatz-verwandte-ressource), [`dct:source`](#datensatz-quelle), [`dct:temporal`](#datensatz-zeitliche-abdeckung), [`dct:type`](#datensatz-typ), [`foaf:page`](#datensatz-dokumentation), [`owl:versionInfo`](#datensatz-versionsbezeichnung), [`prov:qualifiedAttribution`](#datensatz-rollenzuordnung) und [`prov:wasGeneratedBy`](#datensatz-wurde-erzeugt-von).
 
 "dcat:Catalog" --> "*" "dcat:DataService" : <<optional>> dcat:service
     '@ rdfs:label      = Datenservice
@@ -969,7 +970,7 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
 '@ skos:scopeNote  = Diese Änderungen werden zur Zeit auf Ebene des W3Cs diskutiert und das weitere Vorgehen von der Entscheidung des W3C und von DCAT-AP abhängig gemacht.
 '@ skos:scopeNote  = Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#modellierung-eines-datenservices) genauer beschrieben.
 '@ _:usedBy        = dcat:service (dcat:Catalog), dcat:accessService (dcat:Distribution), foaf:primaryTopic (dcat:CatalogRecord)
-'@ rdfs:subClassOf = dcat:Resource  
+'@ rdfs:subClassOf = dcat:Resource
 '@ _:resourceHeirloom = [`dcterms:modified`](#datensatz-aktualisierungsdatum), [`dcterms:creator`](#datensatz-autor), [`dcterms:publisher`](#datensatz-herausgeber), [`dcterms:identifier`](#datensatz-id), [`dcat:theme`](#datensatz-kategorie), [`dcterms:conformsTo`](#datensatz-konform-zu-standard), [`dcat:contactPoint`](#datensatz-kontakt), [`dcat:qualifiedRelation`](#datensatz-qualifizierte-beziehung), [`prov:qualifiedAttribution`](#datensatz-rollenzuordnung), [`dcat:keyword`](#datensatz-schlagwort), [`dcterms:language`](#datensatz-sprache), [`dcterms:type`](#datensatz-typ), [`dcat:landingPage`](#datensatz-ursprungliche-webseite), [`dcterms:issued`](#datensatz-veroffentlichungsdatum), [`dcterms:relation`](#datensatz-verwandte-ressource), [`dcterms:rights`](#distribution-grad-zuganglichkeit), [`odrl:hasPolicy`](#distribution-regelwerk) und [`dcterms:isReferencedBy`](#datensatz-wird-referenziert). Zusätzliche, durch die deutschen Erweiterung von [`dcat:Resource`](#klasse-ressource), geerbte Eigenschaften: [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter), [`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcterms:contributor`](#datensatz-bearbeiter) und [`dcterms:references`](#datensatz-referenziert).
 
 "dcat:DataService" --> "*" "dcat:Dataset"     : <<recommended>> dcat:servesDataset
@@ -1078,7 +1079,12 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
 '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series)
 '@ rdfs:comment    = Eine Sammlung von Datasätzen, die zwar separat veröffentlicht werden aber, eine gemeinsame Merkmale aufweisen, die sie zusammenfassen.
 '@ skos:scopeNote  = Es wird empfohlen, Datensatzserien ohne einen Datensatz in der Sammlung zu vermeiden. Es sollte mindestens ein Datensatz über die Eigenschaft `dcat:inSeries` auf eine Datensatzserie verweisen. 
+'@ _:deOriginal    = DCAT-AP besagt, dass die Datensatzserie lediglich eine Subklasse von `dcat:Resource` ist. DCAT jedoch sagt, dass es eine Subklasse von `dcat:Dataset` ist. 
+'@ _:deOriginal    = Bis dieser Widerspruch aufgelöst wird, wird die Klasse in der [UML-Darstellung](#uml-diagramm) als Subklasse von `dcat:Resource` geführt, es wird aber dennoch auf die mögliche Verwendung von Eigenschaften von `dcat:Dataset` verwiesen.
 '@ _:usedBy        = dcat:inSeries (dcat:Dataset)
+'@ rdfs:subClassOf = dcat:Dataset, dcat:Resource
+'@ _:resourceHeirloom = TBD
+'@ _:datasetHeirloom = TBD
 '@ adms:versionNotes = 3.0: Neu hinzugefügt.
 
 "dcat:DatasetSeries" --> "*" "dcterms:Location"     : <<recommended>> dcterms:spatial
@@ -1094,7 +1100,7 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
     '@ adms:interoperabilityLevel = A
     '@ _:vocabularyLink  = #kv-spatial
     '@ adms:versionNotes = 3.0: Neu hinzugefügt.
-"dcat:DatasetSeries" --> "1"  "foaf:Agent"         : <<mandatory>> dcterms:publisher
+"dcat:DatasetSeries" --> "1"  "foaf:Agent"          : <<mandatory>> dcterms:publisher
     '@ rdfs:label      = Herausgeber
     '@ _:internalLink  = datensatzserie-herausgeber
     '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent

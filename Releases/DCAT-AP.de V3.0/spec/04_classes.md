@@ -34,10 +34,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Katalogeintrag](#katalog-katalogeintrag) | `dcat:record` | [`dcat:CatalogRecord`](http://www.w3.org/ns/dcat#CatalogRecord) | <small>Optional</small> | `[*]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
 | [Autor](#katalog-autor) | `dcterms:creator` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 
+<br> Da es sich um eine Sub-Klasse von [`dcat:Resource`](#klasse-ressource) handelt, werden ihr auch alle Eigenschaften von [`dcat:Resource`](#klasse-ressource) zugeordnet, aber nicht genauer betrachtet.
 
-<br> Die folgenden weiteren Eigenschaften wurden von der Superklasse [`dcat:Resource`](#klasse-ressource) geerbt, werden aber nicht genauer betrachtet: [`odrl:hasPolicy`](#distribution-regelwerk).
-
-
+<br> Da es sich um eine Sub-Klasse von [`dcat:Dataset`](#klasse-datensatz) handelt, werden ihr auch alle Eigenschaften von [`dcat:Dataset`](#klasse-datensatz) zugeordnet, aber nicht genauer betrachtet.
 <br>
 <hr>
 <br>
@@ -363,9 +362,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Verwalter (GeoDCAT-AP)](#datensatz-geodcat-verwalter) | `geodcat:custodian` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [In Serie](#datensatz-in-serie) | `dcat:inSeries` | [`dcat:DatasetSeries`](http://www.w3.org/ns/dcat#DatasetSeries) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 
-
-<br> Die folgenden weiteren Eigenschaften wurden von der Superklasse [`dcat:Resource`](#klasse-ressource) geerbt, werden aber nicht genauer betrachtet: [`dcterms:license`](#distribution-lizenz), [`dcterms:rights`](#distribution-grad-zuganglichkeit) und [`odrl:hasPolicy`](#distribution-regelwerk).
-
+<br> Da es sich um eine Sub-Klasse von [`dcat:Resource`](#klasse-ressource) handelt, werden ihr auch alle Eigenschaften von [`dcat:Resource`](#klasse-ressource) zugeordnet, aber nicht genauer betrachtet.
 
 <br>
 <hr>
@@ -1063,6 +1060,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | *URI der Klasse* | [`dcat:DataService`](http://www.w3.org/ns/dcat#DataService)      |
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Ein Datenservice ermöglicht den Zugang zu einem oder mehreren Datensätzen oder stellt Datenverarbeitungsverfahren zur Verfügung.     |
+> | Verwendungshinweis | DCAT-AP.de empfiehlt zusätzlich die folgenden Eigenschaften zu verwenden, um den Datenservice genauer zu beschreiben: <br>[`dcterms:spatial`](#datensatz-raumliche-abdeckung), [`dcterms:temporal`](#datensatz-zeitliche-abdeckung), [`dcat:spatialResolutionInMeters`](#datensatz-raumliche-auflosung-in-meter), [`dcat:temporalResolution`](#datensatz-zeitliche-auflosung), [`dcterms:accrualPeriodicity`](#datensatz-aktualisierungsfrequenz) und [`prov:wasGeneratedBy`](#datensatz-wurde-erzeugt-von).<br>Diese Änderungen werden zur Zeit auf Ebene des W3Cs diskutiert und das weitere Vorgehen von der Entscheidung des W3C und von DCAT-AP abhängig gemacht.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#modellierung-eines-datenservices) genauer beschrieben. |
 > | eingebunden über | dcat:service (dcat:Catalog), dcat:accessService (dcat:Distribution), foaf:primaryTopic (dcat:CatalogRecord)         | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service) |
 
@@ -1085,9 +1083,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Grad der Zugänglichkeit](#datenservice-grad-zuganglichkeit) | `dcterms:accessRights` | [`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Format](#datenservice-format) | `dcterms:format` | [`dcterms:MediaTypeOrExtent`](http://purl.org/dc/terms/MediaTypeOrExtent) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 
-
-<br> Die folgenden weiteren Eigenschaften wurden von der Superklasse [`dcat:Resource`](#klasse-ressource) geerbt, werden aber nicht genauer betrachtet: [`dcterms:modified`](#datensatz-aktualisierungsdatum), [`dcterms:creator`](#datensatz-autor), [`dcterms:publisher`](#datensatz-herausgeber), [`dcterms:identifier`](#datensatz-id), [`dcat:theme`](#datensatz-kategorie), [`dcterms:conformsTo`](#datensatz-konform-zu-standard), [`dcat:contactPoint`](#datensatz-kontakt), [`dcat:qualifiedRelation`](#datensatz-qualifizierte-beziehung), [`prov:qualifiedAttribution`](#datensatz-rollenzuordnung), [`dcat:keyword`](#datensatz-schlagwort), [`dcterms:language`](#datensatz-sprache), [`dcterms:type`](#datensatz-typ), [`dcat:landingPage`](#datensatz-ursprungliche-webseite), [`dcterms:issued`](#datensatz-veroffentlichungsdatum), [`dcterms:relation`](#datensatz-verwandte-ressource), [`dcterms:rights`](#distribution-grad-zuganglichkeit), [`odrl:hasPolicy`](#distribution-regelwerk) und [`dcterms:isReferencedBy`](#datensatz-wird-referenziert). Zusätzliche, durch die deutschen Erweiterung von [`dcat:Resource`](#klasse-ressource), geerbte Eigenschaften: [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dcatde:originator`](#datensatz-urheber), [`dcatde:maintainer`](#datensatz-verwalter), [`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcterms:contributor`](#datensatz-bearbeiter) und [`dcterms:references`](#datensatz-referenziert).
-
+<br> Da es sich um eine Sub-Klasse von [`dcat:Resource`](#klasse-ressource) handelt, werden ihr auch alle Eigenschaften von [`dcat:Resource`](#klasse-ressource) zugeordnet, aber nicht genauer betrachtet.
 
 <br>
 <hr>
@@ -1233,10 +1229,11 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | *URI der Klasse* | [`dcat:DatasetSeries`](http://www.w3.org/ns/dcat#DatasetSeries)      |
 > |:-----------------|:-----------------------------------------------------|
 > | Beschreibung     | Eine Sammlung von Datasätzen, die zwar separat veröffentlicht werden aber, eine gemeinsame Merkmale aufweisen, die sie zusammenfassen.     |
+> | Verwendungshinweis | Es wird empfohlen, Datensatzserien ohne einen Datensatz in der Sammlung zu vermeiden. Es sollte mindestens ein Datensatz über die Eigenschaft `dcat:inSeries` auf eine Datensatzserie verweisen.  |
 > | eingebunden über | dcat:inSeries (dcat:Dataset)         | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series) |
 > | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. |
-
+> | Änderungen durch DCAT-AP.de | DCAT-AP besagt, dass die Datensatzserie lediglich eine Subklasse von `dcat:Resource` ist. DCAT jedoch sagt, dass es eine Subklasse von `dcat:Dataset` ist. <br>Bis dieser Widerspruch aufgelöst wird, wird die Klasse in der [UML-Darstellung](#uml-diagramm) als Subklasse von `dcat:Resource` geführt, es wird aber dennoch auf die mögliche Verwendung von Eigenschaften von `dcat:Dataset` verwiesen.    |
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
@@ -1256,7 +1253,9 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Veröffentlichungsdatum](#datensatzserie-veroffentlichungsdatum) | `dcterms:issued` | [`rdfs:Literal`]() | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Aktualisierungsdatum](#datensatzserie-aktualisierungsdatum) | `dcterms:modified` | [`rdfs:Literal`]() | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 
+<br> Da es sich um eine Sub-Klasse von [`dcat:Resource`](#klasse-ressource) handelt, werden ihr auch alle Eigenschaften von [`dcat:Resource`](#klasse-ressource) zugeordnet, aber nicht genauer betrachtet.
 
+<br> Da es sich um eine Sub-Klasse von [`dcat:Dataset`](#klasse-datensatz) handelt, werden ihr auch alle Eigenschaften von [`dcat:Dataset`](#klasse-datensatz) zugeordnet, aber nicht genauer betrachtet.
 <br>
 <hr>
 <br>

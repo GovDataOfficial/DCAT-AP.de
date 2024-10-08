@@ -1,0 +1,26 @@
+@startuml
+
+remove @unlinked
+
+hide class circle
+' hide fields
+
+skinparam ClassBackgroundColor #C1C0C5|FDFEFD 
+skinparam ClassBorderColor black
+skinparam ArrowColor black
+skinparam BorderColor black 
+skinparam linetype ortho
+
+class "dcat:Resource"
+class "dcat:Dataset"
+class "dcat:DatasetSeries"
+class "dcat:DataService"
+class "dcat:Catalog"
+
+"dcat:Dataset"       -up-|> "dcat:Resource"
+"dcat:DataService"   -up-|> "dcat:Resource"
+"dcat:DatasetSeries" -up-|> "dcat:Resource"
+"dcat:Catalog"       .up.|> "dcat:Dataset"   #FF0000
+"dcat:DatasetSeries" .left.|> "dcat:Dataset" #FF0000
+
+@enduml
