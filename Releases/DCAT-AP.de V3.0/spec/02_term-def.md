@@ -1,26 +1,39 @@
 # Terminologie und Definitionen
 
-_Dieses Kapitel ist im Entwurf noch nicht vollständig überarbeitet._ 
+## Verwendetete Begriffe
 
-Ein Application Profile ist eine Spezifikation, die Begrifflichkeiten bzw. Konzepte eines oder mehrerer grundlegender Standards weiterverwendet. Eine größere Bestimmtheit wird erreicht, indem für eine bestimmte Anwendung Klassen und Klassenattribute (Eigenschaften) als obligatorisch, empfohlen oder optional eingeordnet werden. Zusätzlich werden Empfehlungen für die Verwendung von kontrollierten Vokabularen gegeben.
+#### Allgemeine Begriffe
+
+Ein **Application Profile** ist eine Spezifikation, die Begrifflichkeiten bzw. Konzepte eines oder mehrerer grundlegender Standards weiterverwendet. Eine größere Bestimmtheit wird erreicht, indem für eine bestimmte Anwendung Klassenattribute (Eigenschaften) als verpflichtend, empfohlen oder optional eingeordnet werden. Zusätzlich werden Empfehlungen für die Verwendung von kontrollierten Vokabularen gegeben.
 
 Ein **Datenportal** ist ein webbasiertes System, welches einen Datenkatalog enthält, in dem Datensätze mittels Metadaten beschrieben werden. Des Weiteren stellt ein Datenportal Dienste zur Recherche und Wiederverwendung von Datensätzen bereit.
 Ein **Datensatz (Dataset)** ist eine sinnvolle Sammlung von zusammenhängenden Daten, die von einer einzelnen Quelle veröffentlicht oder kuratiert wird und in einem oder mehreren Formaten erreichbar ist oder als Download zur Verfügung steht.
 Ein **Sender** ist ein Bereitsteller von Daten (z.B. ein Datenportal, das Metadaten zur Verfügung stellt).
 Ein **Empfänger** ist ein Nutzer von Daten (z.B. eine Anwendung, welche Metadaten eines Datenportals verarbeitet).
 
-Verbindlichkeitsstufen (verpflichtend/empfohlen/optional) gelten allein für die Sender. Empfänger MÜSSEN immer in der Lage sein, Informationen über alle Instanzen aller Klassen sowie alle ihre Eigenschaften zu verarbeiten (nicht aber notwendigerweise zu parsen, zu konvertieren, zu speichern, suchbar zu machen oder anzuzeigen, etc.).</mark>
-In den folgenden Abschnitten werden Klassen und Eigenschaften als „verpflichtend“, „empfohlen“ oder „optional“ bezeichnet. Diese Ausdrücke haben die folgende Bedeutung:
-- **Verpflichtende Klasse:** Sender MÜSSEN Informationen über Instanzen dieser Klasse zur Verfügung stellen. Empfänger MÜSSEN Informationen über Instanzen dieser Klasse verarbeiten können.
-- **Empfohlene Klasse:** Sender SOLLEN Informationen über Instanzen dieser Klasse zur Verfügung stellen. Sender MÜSSEN Informationen über Instanzen dieser Klasse zur Verfügung stellen, falls solche Informationen verfügbar sind. Empfänger MÜSSEN Informationen über Instanzen dieser Klasse verarbeiten können.
-- **Optionale Klasse:** Sender KÖNNEN Informationen über Instanzen dieser Klasse zur Verfügung stellen, sind jedoch nicht dazu verpflichtet.
-- **Verpflichtende Eigenschaft:** Sender MÜSSEN Informationen über diese Eigenschaft zur Verfügung stellen.
-- **Empfohlene Eigenschaft:** Sender SOLLEN Informationen über diese Eigenschaft zur Verfügung stellen, falls diese verfügbar sind.
-- **Optionale Eigenschaft:** Sender KÖNNEN Informationen über diese Eigenschaft zur Verfügung stellen, sind jedoch nicht dazu verpflichtet.
+Im gegebenen Kontext bedeutet der Begriff **"verarbeiten"**, dass Empfänger eingehende Daten akzeptieren und transparent für Anwendungen und Dienste zur Verfügung stellen müssen. Dadurch wird nicht vorgeschrieben oder impliziert, welche Art der Datenverarbeitung durch die jeweiligen Anwendungen und Dienste letztendlich ausgeführt wird.
 
-Im gegebenen Kontext bedeutet der Begriff „verarbeiten”, dass Empfänger eingehende Daten akzeptieren und transparent für Anwendungen und Dienste zur Verfügung stellen müssen. Dadurch wird nicht vorgeschrieben oder impliziert, welche Art der Datenverarbeitung durch die jeweiligen Anwendungen und Dienste letztendlich ausgeführt wird.
+#### Verbindlichkeitsstufen {#verbindlichkeitsstufen}
 
-Die Begriffe MUSS, SOLL und KANN werden in diesem Dokument entsprechend ihren in [RFC2119](https://www.rfc-editor.org/rfc/rfc2119) definierten Bedeutungen verwendet, wenn sie wie hier gezeigt durchgehend groß geschrieben wurden. 
+Verbindlichkeitsstufen (*verpflichtend*/*empfohlen*/*optional*) gelten allein für die Sender. Empfänger MÜSSEN immer in der Lage sein, Informationen über alle Instanzen aller Klassen sowie alle ihre Eigenschaften zu verarbeiten (nicht aber notwendigerweise zu parsen, zu konvertieren, zu speichern, suchbar zu machen oder anzuzeigen, etc.). In den folgenden Abschnitten werden Eigenschaften als *"verpflichtend"*, *"empfohlen"* oder *"optional"* bezeichnet. Diese Ausdrücke haben die folgende Bedeutung:
+
+- **Verpflichtende Eigenschaft:** Sender *MÜSSEN* Informationen über diese Eigenschaft zur Verfügung stellen.
+- **Empfohlene Eigenschaft:** Sender *SOLLEN* Informationen über diese Eigenschaft zur Verfügung stellen, falls diese verfügbar sind.
+- **Optionale Eigenschaft:** Sender *KÖNNEN* Informationen über diese Eigenschaft zur Verfügung stellen, sind jedoch nicht dazu verpflichtet.
+
+Die Begriffe **MUSS**, **SOLL** und **KANN** werden in diesem Dokument entsprechend ihren in [RFC2119](https://www.rfc-editor.org/rfc/rfc2119) definierten Bedeutungen verwendet, wenn sie wie hier gezeigt durchgehend groß geschrieben wurden. 
+
+#### Haupt- und Unterstützungsklassen
+
+W3C-DCAT und DCAT-AP teilen beide die Klassen in **Haupt- und Unterstützungsklassen** ein, verwenden dafür allerdings unterschiedliche (bzw. keine klaren) Definitionen. DCAT-AP.de definiert **Hauptklassen** als alle Klassen, die entweder im DCAT-Namensraum definiert werden oder der Wertebereich einer verpflichtenden Eigenschaft sind. **Unterstützungsklassen** sind dementsprechend alle Klassen, die für DCAT-AP.de relevant sind keine Hauptklassen sind.
+
+#### Art der Nachnutzung {#nachnutzungsarten}
+
+Da DCAT-AP.de auf DCAT-AP aufbaut, wird für alle Klassen und Eigenschaften angegeben, in welcher Form die Nachnutzung erfolgt. Dabei wird die von [DCAT-AP definierte Klassifikation](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#main-entities) verwendet:
+
+- **A:** Alles unverändert (wenn auch übersetzt) von DCAT-AP übernommen. 
+- **E:** Eigene Abwandlungen ergänzt. Dabei kann es sich um eigene Anwendungshinweise oder zusätzliche Restriktionen handeln.
+- **P:** Profilspezifisch hinzugefügt. Die ganze Eigenschaft oder Klasse wurde von DCAT-AP.de ergänzt.
 
 Neben den explizit als nicht-normativ gekennzeichneten Abschnitten sind auch alle Diagramme, Beispiele und Hinweise in diesem Dokument nicht normativ. Alle anderen Angaben sind normativ.
 
@@ -49,9 +62,11 @@ Das Application Profile verwendet Begriffe von verschiedenen existierenden Spezi
 | `vcard`   | `http://www.w3.org/2006/vcard/ns#`      | File format standard for electronic business cards                                                         |
 | `xsd`     | `http://www.w3.org/2001/XMLSchema#`     | XML Schema Part 2: Datatypes Second Edition                                                                |
 
+Im Rahmen der Offene Welt-Annahme (OWA) und dem Grundsatz "Jeder kann Alles über Alles sagen" (AAA) [LINKEDDATA_TUM], steht es Nutzern von DCAT-AP.de frei, Eigenschaften und Klassen aus anderen Ontologien für die Beschreibung ihrer Metadaten zu verwenden. Die in dieser Spezifikatione beschriebenen Klassen und Eigenschaften DÜRFEN dabei jedoch nicht zu einem anderen Zweck erneut benutzt werden.
 
 ## Bekannte Nutzungen von DCAT-AP und DCAT-AP.de
-Im Rahmen der Verwendung von DCAT-AP entstanden durch Arbeiten der Europäischen Kommission und der Mitgliedsländer weitere Profilierungen. Zusätzlich zur horizontalen Verbreitung in den Mitgliedstaaten (u.a. Italien, Schweden und Spanien) fand eine fachliche Vertiefung durch Ergänzungen in den Application Profiles „GeoDCAT-AP“ und „StatDCAT-AP“ statt.
+
+Im Rahmen der Verwendung von DCAT-AP entstanden durch Arbeiten der Europäischen Kommission und der Mitgliedsländer weitere Profilierungen. Zusätzlich zur horizontalen Verbreitung in den Mitgliedstaaten (u.a. Italien, Schweden und Spanien) fand eine fachliche Vertiefung durch Ergänzungen in den Application Profiles "GeoDCAT-AP" und "StatDCAT-AP" statt.
 
 Diese Arbeiten flossen unter Berücksichtigung weiterer [Best Practices](https://www.w3.org/2013/share-psi/bp/) und [Hinweisen](https://joinup.ec.europa.eu/asset/ogd2_0/issue/dcat-ap) aus [Beteiligungsverfahren](https://joinup.ec.europa.eu/asset/dcat-ap_implementation_guidelines/issue/all) der Plattformen [Github](https://github.com/GovDataOfficial/DCAT-AP.de) und [Joinup](https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/all) in die Erarbeitung der deutschen Erweiterung DCAT-AP.de und damit in dieses Dokument ein.
 

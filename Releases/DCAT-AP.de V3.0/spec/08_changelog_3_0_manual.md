@@ -1,3 +1,7 @@
+### Überarbeitung der einleitenden Kapitel
+
+Die Kapitel [Einführung](#einfuhrung), [Terminologie und Definitionen](#terminologie-und-definitionen) und [Überblick über das DCAT-AP.de Datenmodell](#ueberblick-datenmodell) wurden inhaltlich überarbeitet und erweitert.
+
 ### Deprecated Elemente entfernen
 
 Die folgenden Eigenschaften sind in Version 2.0 als _deprecated_ gekennzeichnet gewesen und werden daher entfernt:
