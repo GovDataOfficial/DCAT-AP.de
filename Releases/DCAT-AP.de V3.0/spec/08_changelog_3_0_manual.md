@@ -1,6 +1,6 @@
 ### Überarbeitung der einleitenden Kapitel
 
-Die Kapitel [Einführung](#einfuhrung), [Terminologie und Definitionen](#terminologie-und-definitionen) und [Überblick über das DCAT-AP.de Datenmodell](#ueberblick-datenmodell) wurden inhaltlich überarbeitet und erweitert.
+Die Kapitel [Einführung](#einfuhrung), [Terminologie und Definitionen](#terminologie-und-definitionen) und [Überblick über das DCAT-AP.de Datenmodell](#ueberblick-datenmodell) wurden inhaltlich überarbeitet und erweitert. Gleiches gilt für das Kapitel der [Klasse Ressource](#klasse-ressource).
 
 ### Deprecated Elemente entfernen
 

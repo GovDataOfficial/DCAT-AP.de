@@ -17,20 +17,22 @@ Daraus ergibt sich die folgende Übersicht an Eigenschaften für die Super-Klass
 
 <small>
 
-| Eigenschaften             | vom W3C-DCAT             |                             |  Eigenschaften von DCAT-AP.de       |
-| ------------------------- | ------------------------ | --------------------------- | ----------------------------------- |
-| `adms:status`*            | `dcat:qualifiedRelation` | `dcterms:issued`            | `dcatap:availability`               |
-| `adms:versionNotes`*      | `dcat:theme`             | `dcterms:language`          | `dcatde:contributorID`              |
-| `dcat:contactPoint`       | `dcat:version`*          | `dcterms:license`           | `dcatde:geocodingDescription`       |
-| `dcat:first`*             | `dcterms::replaces`*     | `dcterms:modified`          | `dcatde:maintainer`                 |
-| `dcat:hasCurrentVersion`* | `dcterms:accessRights`   | `dcterms:publisher`         | `dcatde:originator`                 |
-| `dcat:hasVersion`*        | `dcterms:conformsTo`     | `dcterms:relation`          | `dcatde:politicalGeocodingLevelURI` |
-| `dcat:keyword`            | `dcterms:creator`        | `dcterms:rights`            | `dcatde:politicalGeocodingURI`      |
-| `dcat:landingPage`        | `dcterms:description`    | `dcterms:title`             | `dcatde:qualityProcessURI`          |
-| `dcat:last`*              | `dcterms:hasPart`*       | `dcterms:type`              | `dcterms:contributor`               |
-| `dcat:prev`*              | `dcterms:identifier`     | `odrl:hasPolicy`            | `dcterms:references`                |
-| `dcat:previousVersion`*   | `dcterms:isReferencedBy` | `prov:qualifiedAttribution` |                                     |
+| Eigenschaften                   | vom W3C-DCAT              |                              | Eigenschaften von DCAT-AP.de          |
+| ------------------------------- | ------------------------- | ---------------------------- | ------------------------------------- |
+| `adms:status`&nbsp;+            | `dcat:qualifiedRelation`  | `dcterms:language`           | `dcatap:availability`                 |
+| `adms:versionNotes`&nbsp;+      | `dcat:theme`              | `dcterms:license`            | `dcatde:contributorID`                |
+| `dcat:contactPoint`             | `dcat:version`&nbsp;+     | `dcterms:modified`           | `dcatde:geocodingDescription`&nbsp;-  |
+| `dcat:first`&nbsp;+             | `dcterms:accessRights`    | `dcterms:publisher`          | `dcatde:legalBasis`&nbsp;-            |
+| `dcat:hasCurrentVersion`&nbsp;+ | `dcterms:conformsTo`      | `dcterms:relation`           | `dcatde:maintainer`&nbsp;-            |
+| `dcat:hasVersion`&nbsp;+        | `dcterms:creator`         | `dcterms:replaces`&nbsp;+    | `dcatde:originator`&nbsp;-            |
+| `dcat:keyword`                  | `dcterms:description`     | `dcterms:rights`             | `dcatde:politicalGeocodingLevelURI`   |
+| `dcat:landingPage`              | `dcterms:hasPart`&nbsp;+  | `dcterms:title`              | `dcatde:politicalGeocodingURI`&nbsp;- |
+| `dcat:last`&nbsp;+              | `dcterms:identifier`      | `dcterms:type`               | `dcatde:qualityProcessURI`&nbsp;-     |
+| `dcat:prev`&nbsp;+              | `dcterms:isReferencedBy`  | `odrl:hasPolicy`             | `dcterms:contributor`                 |
+| `dcat:previousVersion`&nbsp;+   | `dcterms:issued`          | `prov:qualifiedAttribution`  | `dcterms:references`                  |
+|                                 |                           |                              | `geodcat:custodian`&nbsp;+            |
+|                                 |                           |                              | `geodcat:originator`&nbsp;+           |
 
-*(\* = Wurde in DCAT3 hinzugefügt.)*
+*(+ = Wurde in DCAT-AP.de 3.0 hinzugefügt; - = Wurde in DCAT-AP.de 3.0 deprecated.)*
 
 </small>
