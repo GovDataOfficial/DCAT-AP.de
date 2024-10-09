@@ -42,25 +42,26 @@ Neben den explizit als nicht-normativ gekennzeichneten Abschnitten sind auch all
 
 Das Application Profile verwendet Begriffe von verschiedenen existierenden Spezifikationen. Klassen und Eigenschaften, die in den nachfolgenden Abschnitten spezifiziert werden, entstammen den folgenden Namensräumen.
 
-| Namespace | URI des Namespace                       | Name der Spezifikation                                                                                     |
-| :-------- | :-------------------------------------- | :--------------------------------------------------------------------------------------------------------- |
-| `adms`    | `http://www.w3.org/ns/adms#`            | Asset Description Metadata Schema                                                                          |
-| `dcat`    | `http://www.w3.org/ns/dcat#`            | Data Catalog Vocabulary                                                                                    |
-| `dcatap`  | `http://data.europa.eu/r5r/`            | DCAT Application profile for data portals in Europe (DCAT-AP)                                              |
-| `dcatde`  | `http://dcat-ap.de/def/dcatde/`         | German Adaptation of DCAT-AP                                                                               |
-| `dcterms` | `http://purl.org/dc/terms/`             | DCMI (Dublin Core Metadata Initiative) Metadata Terms                                                      |
-| `foaf`    | `http://xmlns.com/foaf/0.1/`            | FOAF (Friend of a friend) Vocabulary                                                                       |
-| `geo`     | `http://www.opengis.net/ont/geosparql#` | GeoSPARQL Ontology                                                                                         |
-| `locn`    | `http://www.w3.org/ns/locn#`            | ISA Programme Location Core Vocabulary                                                                     |
-| `odrl`    | `http://www.w3.org/ns/odrl/2/`          | Open Digital Rights Language (ODRL)                                                                        |
-| `owl`     | `http://www.w3.org/2002/07/owl#`        | OWL Web Ontology Language                                                                                  |
-| `rdfs`    | `http://www.w3.org/2000/01/rdf-schema#` | RDF (Resource Description Framework) Vocabulary Description Language 1.0: RDF Schema                       |
-| `schema`  | `http://schema.org/`                    | Vocabulary for structured data on the Internet                                                             |
-| `skos`    | `http://www.w3.org/2004/02/skos/core#`  | SKOS Simple Knowledge Organization System – Reference                                                      |
-| `spdx`    | `http://spdx.org/rdf/terms#`            | Software Package Data Exchange                                                                             |
-| `time`    | `http://www.w3.org/2006/time#`          | OWL-Time is an OWL-2 DL ontology of temporal concepts, for describing the temporal properties of resources |
-| `vcard`   | `http://www.w3.org/2006/vcard/ns#`      | File format standard for electronic business cards                                                         |
-| `xsd`     | `http://www.w3.org/2001/XMLSchema#`     | XML Schema Part 2: Datatypes Second Edition                                                                |
+| Namespace    | URI des Namespace                       | Name der Spezifikation                                                                                     |
+| :----------- | :-------------------------------------- | :--------------------------------------------------------------------------------------------------------- |
+| `adms`       | `http://www.w3.org/ns/adms#`            | Asset Description Metadata Schema                                                                          |
+| `dcat`       | `http://www.w3.org/ns/dcat#`            | Data Catalog Vocabulary                                                                                    |
+| `dcatap`     | `http://data.europa.eu/r5r/`            | DCAT Application profile for data portals in Europe (DCAT-AP)                                              |
+| **`dcatde`** | **`http://dcat-ap.de/def/dcatde/`**     | **German Adaptation of DCAT-AP**                                                                           |
+| `dcterms`    | `http://purl.org/dc/terms/`             | DCMI (Dublin Core Metadata Initiative) Metadata Terms                                                      |
+| `foaf`       | `http://xmlns.com/foaf/0.1/`            | FOAF (Friend of a friend) Vocabulary                                                                       |
+| `geo`        | `http://www.opengis.net/ont/geosparql#` | GeoSPARQL Ontology                                                                                         |
+| `geodcatap`  | `http://data.europa.eu/930/`            | GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe                      |
+| `locn`       | `http://www.w3.org/ns/locn#`            | ISA Programme Location Core Vocabulary                                                                     |
+| `odrl`       | `http://www.w3.org/ns/odrl/2/`          | Open Digital Rights Language (ODRL)                                                                        |
+| `owl`        | `http://www.w3.org/2002/07/owl#`        | OWL Web Ontology Language                                                                                  |
+| `rdfs`       | `http://www.w3.org/2000/01/rdf-schema#` | RDF (Resource Description Framework) Vocabulary Description Language 1.0: RDF Schema                       |
+| `schema`     | `http://schema.org/`                    | Vocabulary for structured data on the Internet                                                             |
+| `skos`       | `http://www.w3.org/2004/02/skos/core#`  | SKOS Simple Knowledge Organization System – Reference                                                      |
+| `spdx`       | `http://spdx.org/rdf/terms#`            | Software Package Data Exchange                                                                             |
+| `time`       | `http://www.w3.org/2006/time#`          | OWL-Time is an OWL-2 DL ontology of temporal concepts, for describing the temporal properties of resources |
+| `vcard`      | `http://www.w3.org/2006/vcard/ns#`      | File format standard for electronic business cards                                                         |
+| `xsd`        | `http://www.w3.org/2001/XMLSchema#`     | XML Schema Part 2: Datatypes Second Edition                                                                |
 
 Im Rahmen der Offene Welt-Annahme (OWA) und dem Grundsatz "Jeder kann Alles über Alles sagen" (AAA) [LINKEDDATA_TUM], steht es Nutzern von DCAT-AP.de frei, Eigenschaften und Klassen aus anderen Ontologien für die Beschreibung ihrer Metadaten zu verwenden. Die in dieser Spezifikatione beschriebenen Klassen und Eigenschaften DÜRFEN dabei jedoch nicht zu einem anderen Zweck erneut benutzt werden.
 

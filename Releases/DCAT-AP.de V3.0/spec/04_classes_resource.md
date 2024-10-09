@@ -30,8 +30,8 @@ Daraus ergibt sich die folgende Übersicht an Eigenschaften für die Super-Klass
 | `dcat:last`&nbsp;+              | `dcterms:identifier`      | `dcterms:type`               | `dcatde:qualityProcessURI`&nbsp;-     |
 | `dcat:prev`&nbsp;+              | `dcterms:isReferencedBy`  | `odrl:hasPolicy`             | `dcterms:contributor`                 |
 | `dcat:previousVersion`&nbsp;+   | `dcterms:issued`          | `prov:qualifiedAttribution`  | `dcterms:references`                  |
-|                                 |                           |                              | `geodcat:custodian`&nbsp;+            |
-|                                 |                           |                              | `geodcat:originator`&nbsp;+           |
+|                                 |                           |                              | `geodcatap:custodian`&nbsp;+          |
+|                                 |                           |                              | `geodcatap:originator`&nbsp;+         |
 
 *(+ = Wurde in DCAT-AP.de 3.0 hinzugefügt; - = Wurde in DCAT-AP.de 3.0 deprecated.)*
 

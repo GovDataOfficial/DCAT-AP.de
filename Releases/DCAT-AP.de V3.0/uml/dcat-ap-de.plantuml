@@ -805,12 +805,12 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdf:about       = http://dcat-ap.de/def/dcatde/originator
     '@ adms:interoperabilityLevel = P
     '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
-    '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcat:originator`](#datensatz-geodcat-urheber).
+    '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcatap:originator`](#datensatz-geodcatap-urheber).
     '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test, ob Ziel foaf:Agent)
 
-"dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> geodcat:originator
+"dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> geodcatap:originator
     '@ rdfs:label      = Urheber (GeoDCAT-AP)
-    '@ _:internalLink  = datensatz-geodcat-urheber
+    '@ _:internalLink  = datensatz-geodcatap-urheber
     '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
     '@ rdfs:comment    = Diese Eigenschaft verweist auf die Personen, die die Ressource erstellt haben.
     '@ skos:scopeNote  = Gemeint ist dabei die Person, die Urheberrechte an der Ressource haben. Geschützt ist laut Urheberrecht ein Werk, das einer persönlichen geistigen Schöpfung seines Urhebers entspringt.
@@ -830,12 +830,12 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdf:about       = http://dcat-ap.de/def/dcatde/maintainer
     '@ adms:interoperabilityLevel = P
     '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
-    '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcat:custodian`](#datensatz-geodcat-verwalter).
+    '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcatap:custodian`](#datensatz-geodcatap-verwalter).
     '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test, ob Ziel foaf:Agent)
 
-"dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> geodcat:custodian
+"dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> geodcatap:custodian
     '@ rdfs:label      = Verwalter (GeoDCAT-AP)
-    '@ _:internalLink  = datensatz-geodcat-verwalter
+    '@ _:internalLink  = datensatz-geodcatap-verwalter
     '@ rdfs:range      = http://xmlns.com/foaf/0.1/Agent
     '@ rdfs:comment    = Diese Eigenschaft verweist auf die Stellen oder Personen, die Verantwortung und Rechenschaftspflicht für die Daten und ihre angemessene Pflege übernehmen.
     '@ rdf:about       = http://data.europa.eu/930/custodian
@@ -1865,7 +1865,7 @@ class "prov:Attribution" <<optional>> {
 '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Attribution)
 '@ rdfs:seeAlso    = [PROV-O](https://www.w3.org/TR/prov-o/#Attribution)
 '@ rdfs:comment    = Diese Klasse verknüft eine Ressource mit Agenten und beschreibt, welche Rolle die Agenten im Bezug auf die Ressource eingenommen haben.
-'@ rdfs:comment    = Sie ist insbesondere dann relevant, wenn keine Eigenschaften wie `geodcat:originator`, `dcterms:creator` oder `dcterms:publisher` existieren, um die Rolle zu beschreiben.
+'@ rdfs:comment    = Sie ist insbesondere dann relevant, wenn keine Eigenschaften wie `geodcatap:originator`, `dcterms:creator` oder `dcterms:publisher` existieren, um die Rolle zu beschreiben.
 '@ _:usedBy        = prov:qualifiedAttribution (dcat:Dataset, dcat:DataService)
 '@ rdfs:subClassOf = [prov:AgentInfluence](https://www.w3.org/TR/prov-o/#AgentInfluence)
 
