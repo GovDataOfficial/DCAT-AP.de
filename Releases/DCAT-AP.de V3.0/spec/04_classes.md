@@ -1243,11 +1243,11 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. | Interop. |
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|:--------:|
 | [Titel](#datensatzserie-titel) | `dcterms:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
+| [Beschreibung](#datensatzserie-beschreibung) | `dcterms:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Herausgeber](#datensatzserie-herausgeber) | `dcterms:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Pflicht</small> | `[1]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
 | [Räumliche Abdeckung](#datensatzserie-raumliche-abdeckung) | `dcterms:spatial` | [`dcterms:Location`](http://purl.org/dc/terms/Location) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Zeitliche Abdeckung](#datensatzserie-zeitliche-abdeckung) | `dcterms:temporal` | [`dcterms:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Kontakt](#datensatzserie-kontakt) | `dcat:contactPoint` | [`vcard:Kind`](http://www.w3.org/TR/vcard-rdf/#Kind) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Beschreibung](#datensatzserie-beschreibung) | `dcterms:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Rechtsgrundlage](#datensatzserie-rechtsgrundlage) | `dcatap:applicableLegislation` | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Aktualisierungsfrequenz](#datensatzserie-aktualisierungsfrequenz) | `dcterms:accrualPeriodicity` | [`dcterms:Frequency`](http://purl.org/dc/terms/Frequency) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Veröffentlichungsdatum](#datensatzserie-veroffentlichungsdatum) | `dcterms:issued` | [`rdfs:Literal`]() | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
@@ -1269,6 +1269,20 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft bezeichnet den einer Datensatzserie zugewiesenen Titel. |
 > | Verwendungshinweis | Diese Eigenschaft kann für parallele Sprachversionen des Datensatztitels wiederholt werden. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.title), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series)  | 
+> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
+
+<br>
+
+###  Datensatzserie: Beschreibung {#datensatzserie-beschreibung}
+> | *URI*                      | [`dcterms:description`](http://purl.org/dc/terms/description) |
+> |:---------------------------|:-------------------------------------------|
+> | Wertebereich               | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
+> | Verbindlichkeit            | Pflicht |
+> | Multiplizität              | `[1..*]`                   |
+> | Beschreibung               | Diese Eigenschaft enthält eine Beschreibung der Datensatzserie als Freitext. |
+> | Verwendungshinweis | Diese Eigenschaft kann für parallel existierende Sprachversionen der Beschreibung wiederholt werden.<br>Es wird empfohlen, eine Angabe zu den Dimensionen zu machen, über die sich die Datensatzserie erstreckt. | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.description), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description)  | 
 > | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
@@ -1326,20 +1340,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft umfasst Kontaktinformationen, welche für das Zusenden von Kommentaren zur jeweiligen Datensatzserie verwendet werden können. |
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#ansprechstelle) genauer beschrieben. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.contactpoint), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
-> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
-
-<br>
-
-###  Datensatzserie: Beschreibung {#datensatzserie-beschreibung}
-> | *URI*                      | [`dcterms:description`](http://purl.org/dc/terms/description) |
-> |:---------------------------|:-------------------------------------------|
-> | Wertebereich               | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
-> | Verbindlichkeit            | Optional |
-> | Multiplizität              | `[*]`                   |
-> | Beschreibung               | Diese Eigenschaft enthält eine Beschreibung der Datensatzserie als Freitext. |
-> | Verwendungshinweis | Diese Eigenschaft kann für parallel existierende Sprachversionen der Beschreibung wiederholt werden.<br>Es wird empfohlen, eine Angabe zu den Dimensionen zu machen, über die sich die Datensatzserie erstreckt. | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.description), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description)  | 
 > | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 

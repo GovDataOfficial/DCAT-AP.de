@@ -1010,7 +1010,7 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
         '@ adms:interoperabilityLevel = A
         '@ adms:versionNotes = 3.0: Neu hinzugefügt.
 
-    <<optional>> dcterms:description ~> rdfs:Literal [*]
+    <<mandatory>> dcterms:description ~> rdfs:Literal [1..*]
         '@ rdfs:label      = Beschreibung
         '@ _:internalLink  = datensatzserie-beschreibung
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
