@@ -26,9 +26,9 @@ Die roten, gestrichelten Pfeile zeigen, dass der `dcat:Catalog` und die `dcat:Da
 Auch wenn im Zusammenhang von RDF grundsätzlich nicht von "Vererbung" gesprochen wird, geht DCAT-AP.de davon aus, dass jede Eigenschaft einer Klasse auch sinnvoll mit der Sub-Klasse verwendet werden kann. Auf diese "Nachnutzbarkeit" der Eigenschaften ihrer Super-Klassen wird in der jeweiligen Klassenbeschreibung gesondert hingewiesen.
 
 
-## UML-Diagramm
+## Diagramm
 
-<figure id="img-uml-diagramm">
-  <a href="../uml/dcat-ap-de.svg" target="_blank"><img src="../uml/dcat-ap-de.svg" alt="UML-Diagramm aller DCAT-AP-Klassen einschließlich der DCAT-AP.de Erweiterungen "></a>
-  <figcaption>UML-Diagramm aller DCAT-AP-Klassen einschließlich der DCAT-AP.de Erweiterungen</figcaption>
+<figure id="img-diagramm">
+  <a href="../uml/dcat-ap-de.svg" target="_blank"><img src="../uml/dcat-ap-de.svg" alt="Diagramm aller DCAT-AP-Klassen einschließlich der DCAT-AP.de Erweiterungen "></a>
+  <figcaption>Diagramm aller DCAT-AP-Klassen einschließlich der DCAT-AP.de Erweiterungen</figcaption>
 </figure>

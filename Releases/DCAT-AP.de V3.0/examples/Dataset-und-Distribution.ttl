@@ -115,76 +115,76 @@ _:catalog a dcat:Catalog;
         dcterms:type <http://purl.org/adms/publishertype/RegionalAuthority> ;
     ] ; 
     
-    dcat:distribution [
-        rdf:type dcat:Distribution ;
+    dcat:distribution <http://bienenland.example.org/rdf/dataset/12345678-9abc-4729-9044-f4d4ceaed491/distribution-1>, <http://bienenland.example.org/rdf/dataset/12345678-9abc-4729-9044-f4d4ceaed491/distribution-2> ;
+.
 
-        # ======== Verpflichtende Attribute ========
-        dcat:accessURL <https://example.com/data/haushalt_2021.csv> ;  # Konvention 39
+<http://bienenland.example.org/rdf/dataset/12345678-9abc-4729-9044-f4d4ceaed491/distribution-1> a dcat:Distribution ;
 
-        # Konvention 22: Es MÜSSEN Metadaten zu Datensätzen mit Distributionen im adms:status „Completed“, „Deprecated“ oder „Withdrawn“ transportiert werden. 
-        adms:status <http://purl.org/adms/status/Completed> ;
-        
-        # ======== Empfohlene Attribute ========
-        #  Konvention 32: Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. (...)
-        dcterms:license <http://dcat-ap.de/def/licenses/officialWork> ;
+    # ======== Verpflichtende Attribute ========
+    dcat:accessURL <https://example.com/data/haushalt_2021.csv> ;  # Konvention 39
 
-        dcterms:title "haushalt_2021.csv" ;
+    # Konvention 22: Es MÜSSEN Metadaten zu Datensätzen mit Distributionen im adms:status „Completed“, „Deprecated“ oder „Withdrawn“ transportiert werden. 
+    adms:status <http://purl.org/adms/status/Completed> ;
+    
+    # ======== Empfohlene Attribute ========
+    #  Konvention 32: Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. (...)
+    dcterms:license <http://dcat-ap.de/def/licenses/officialWork> ;
 
-        dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;     
-        dcterms:modified "2024-03-10T06:20:06"^^xsd:dateTime ;      
-        dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE> ;
+    dcterms:title "haushalt_2021.csv" ;
 
-        # ======== Optionale Attribute ========
-        # Konvention 39: Werden die Daten nur als direkter Download veröffentlicht, so wird der URL der Datei sowohl als dcat:downloadURL als auch als dcat:accessURL angegeben. 
-        dcat:downloadURL <https://example.com/data/haushalt_2021.csv> ;
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;     
+    dcterms:modified "2024-03-10T06:20:06"^^xsd:dateTime ;      
+    dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE> ;
 
-        dcterms:mediaType <https://www.iana.org/assignments/media-types/text/csv> ;
-        dcterms:issued "2024-03-10T06:20:06"^^xsd:dateTime ;
+    # ======== Optionale Attribute ========
+    # Konvention 39: Werden die Daten nur als direkter Download veröffentlicht, so wird der URL der Datei sowohl als dcat:downloadURL als auch als dcat:accessURL angegeben. 
+    dcat:downloadURL <https://example.com/data/haushalt_2021.csv> ;
 
-        dcat:byteSize "289845"^^xsd:nonNegativeInteger ;
-        spdx:checksum [
-            a spdx:Checksum ;
-            spdx:checksumValue "4e1243bd22c66e76c2ba9eddc1f91394e57f9f83"^^xsd:hexBinary ;
-            spdx:algorithm <http://spdx.org/rdf/terms#checksumAlgorithm_sha1> ;
-        ] ;
+    dcterms:mediaType <https://www.iana.org/assignments/media-types/text/csv> ;
+    dcterms:issued "2024-03-10T06:20:06"^^xsd:dateTime ;
+
+    dcat:byteSize "289845"^^xsd:nonNegativeInteger ;
+    spdx:checksum [
+        a spdx:Checksum ;
+        spdx:checksumValue "4e1243bd22c66e76c2ba9eddc1f91394e57f9f83"^^xsd:hexBinary ;
+        spdx:algorithm <http://spdx.org/rdf/terms#checksumAlgorithm_sha1> ;
+    ] ;
+.
+
+<http://bienenland.example.org/rdf/dataset/12345678-9abc-4729-9044-f4d4ceaed491/distribution-2> a dcat:Distribution ;
+
+    # ======== Verpflichtende Attribute ========
+    dcat:accessURL  <https://example.com/data/haushalt_2021.pdf> ;
+
+    # Konvention 22: Es MÜSSEN Metadaten zu Datensätzen mit Distributionen im adms:status „Completed“, „Deprecated“ oder „Withdrawn“ transportiert werden. 
+    adms:status <http://purl.org/adms/status/Completed> ;
+
+    # ======== Empfohlene Attribute ========
+    #  Konvention 32: Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. (...)
+    dcterms:license <http://dcat-ap.de/def/licenses/cc-by-nd/4.0> ;
+
+    dcterms:title "Haushalt 2021 als Schmuckausgabe"@de ;
+
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/PDF> ;
+    dcterms:modified "2024-03-10T06:20:06"^^xsd:dateTime ;
+    dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE> ;
+
+    # ======== Optionale Attribute ========
+    # Konvention 39: Werden die Daten nur als direkter Download veröffentlicht, so wird der URL der Datei sowohl als dcat:downloadURL als auch als dcat:accessURL angegeben. 
+    dcat:downloadURL <https://example.com/data/haushalt_2021.pdf> ;
+
+    dcterms:mediaType <https://www.iana.org/assignments/media-types/application/pdf> ;
+    dcterms:issued "2024-03-10T06:20:06"^^xsd:dateTime ;
+
+    dcat:byteSize "3289845"^^xsd:nonNegativeInteger ;
+    spdx:checksum [
+        a spdx:Checksum ;
+        spdx:checksumValue "91e6dc7866974ec6e089dd8d862a47a0139fb7538efc73189d161cc57a98bc5a"^^xsd:hexBinary ;
+        spdx:algorithm <http://spdx.org/rdf/terms#checksumAlgorithm_sha256> ;
     ] ;
 
-    dcat:distribution [  
-        a dcat:Distribution ;
-
-        # ======== Verpflichtende Attribute ========
-        dcat:accessURL  <https://example.com/data/haushalt_2021.pdf> ;
-
-        # Konvention 22: Es MÜSSEN Metadaten zu Datensätzen mit Distributionen im adms:status „Completed“, „Deprecated“ oder „Withdrawn“ transportiert werden. 
-        adms:status <http://purl.org/adms/status/Completed> ;
-
-        # ======== Empfohlene Attribute ========
-        #  Konvention 32: Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. (...)
-        dcterms:license <http://dcat-ap.de/def/licenses/cc-by-nd/4.0> ;
-
-        dcterms:title "Haushalt 2021 als Schmuckausgabe"@de ;
-
-        dcterms:format <http://publications.europa.eu/resource/authority/file-type/PDF> ;
-        dcterms:modified "2024-03-10T06:20:06"^^xsd:dateTime ;
-        dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE> ;
-
-        # ======== Optionale Attribute ========
-        # Konvention 39: Werden die Daten nur als direkter Download veröffentlicht, so wird der URL der Datei sowohl als dcat:downloadURL als auch als dcat:accessURL angegeben. 
-        dcat:downloadURL <https://example.com/data/haushalt_2021.pdf> ;
-
-        dcterms:mediaType <https://www.iana.org/assignments/media-types/application/pdf> ;
-        dcterms:issued "2024-03-10T06:20:06"^^xsd:dateTime ;
-
-        dcat:byteSize "3289845"^^xsd:nonNegativeInteger ;
-        spdx:checksum [
-            a spdx:Checksum ;
-            spdx:checksumValue "91e6dc7866974ec6e089dd8d862a47a0139fb7538efc73189d161cc57a98bc5a"^^xsd:hexBinary ;
-            spdx:algorithm <http://spdx.org/rdf/terms#checksumAlgorithm_sha256> ;
-        ] ;
-
-        #  Konvention 35: Wird bei der Verwendung der Lizenz die Angabe des Herausgebers gefordert, so MUSS der Namensnennungstext im Feld dcatde:licenseAttributionByText hinterlegt werden. 
-        dcatde:licenseAttributionByText "Finanzministerium Musterland" ;
-    ] ;
+    #  Konvention 35: Wird bei der Verwendung der Lizenz die Angabe des Herausgebers gefordert, so MUSS der Namensnennungstext im Feld dcatde:licenseAttributionByText hinterlegt werden. 
+    dcatde:licenseAttributionByText "Finanzministerium Musterland" ;
 .
 
 _:finanzministerium a foaf:Agent ;
