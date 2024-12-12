@@ -7,11 +7,11 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
-| [Veröffentlichungsdatum](#katalog-veroffentlichungsdatum) (`dcterms:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
-| [Aktualisierungsdatum](#katalog-aktualisierungsdatum) (`dcterms:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
-| [Rechte](#katalog-rechte) (`dcterms:rights`) | 3.0: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt. | 
+| [Veröffentlichungsdatum](#katalog-veroffentlichungsdatum) (`dcterms:issued`) | Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Aktualisierungsdatum](#katalog-aktualisierungsdatum) (`dcterms:modified`) | Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Rechte](#katalog-rechte) (`dcterms:rights`) | Weiterentwicklung: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt. | 
 | [Rechtsgrundlage](#katalog-rechtsgrundlage) (`dcatap:applicableLegislation`) | Harmonisierung: Neu hinzugefügt. | 
-| [Datensatz](#katalog-datensatz) (`dcat:dataset`) | 3.0: Harmonisierung: Kardinalität von `1..*` auf `*` geändert. Verbindlichkeit auf "Empfohlen" gesenkt. | 
+| [Datensatz](#katalog-datensatz) (`dcat:dataset`) | Harmonisierung: Kardinalität von `1..*` auf `*` geändert. Verbindlichkeit auf "Empfohlen" gesenkt. | 
 
 
 ### Klasse: Datensatz
@@ -23,30 +23,30 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
-| [Geopolitische Abdeckung (DEPRECATED)](#datensatz-geopolitischen-abdeckung) (`dcatde:politicalGeocodingURI`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
-| [Beschreibung der Abdeckung (DEPRECATED)](#datensatz-beschreibung-abdeckung) (`dcatde:geocodingDescription`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
-| [Andere ID](#datensatz-andere-id) (`adms:identifier`) | 3.0: Errata: Link der Range korrigiert und Verwendungshinweis überarbeitet. | 
-| [Veröffentlichungsdatum](#datensatz-veroffentlichungsdatum) (`dcterms:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
-| [Aktualisierungsdatum](#datensatz-aktualisierungsdatum) (`dcterms:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
-| [Versionsbezeichnung](#datensatz-versionsbezeichnung) (`dcat:version`) | 3.0: Neu hinzugefügt. | 
-| [Versionsbezeichnung (DEPRECATED)](#datensatz-versionsbezeichnung-deprecated) (`owl:versionInfo`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
+| [Geopolitische Abdeckung (DEPRECATED)](#datensatz-geopolitischen-abdeckung) (`dcatde:politicalGeocodingURI`) | Weiterentwicklung: [DEPRECATED](#glossar-deprecated) | 
+| [Beschreibung der Abdeckung (DEPRECATED)](#datensatz-beschreibung-abdeckung) (`dcatde:geocodingDescription`) | Weiterentwicklung: [DEPRECATED](#glossar-deprecated) | 
+| [Andere ID](#datensatz-andere-id) (`adms:identifier`) | Errata: Link der Range korrigiert und Verwendungshinweis überarbeitet. | 
+| [Veröffentlichungsdatum](#datensatz-veroffentlichungsdatum) (`dcterms:issued`) | Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Aktualisierungsdatum](#datensatz-aktualisierungsdatum) (`dcterms:modified`) | Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Versionsbezeichnung](#datensatz-versionsbezeichnung) (`dcat:version`) | Harmonisierung: Neu hinzugefügt. | 
+| [Versionsbezeichnung (DEPRECATED)](#datensatz-versionsbezeichnung-deprecated) (`owl:versionInfo`) | Harmonisierung: [DEPRECATED](#glossar-deprecated) | 
 | [Rechtsgrundlage](#datensatz-rechtsgrundlage) (`dcatap:applicableLegislation`) | Harmonisierung: Neu hinzugefügt. | 
-| [Rechtsgrundlage für die Zugangseröffnung (DEPRECATED)](#datensatz-rechtsgrundlage-zugangseroffnung) (`dcatde:legalBasis`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
-| [Grad der Zugänglichkeit](#datensatz-grad-zuganglichkeit) (`dcterms:accessRights`) | 3.0: Kontrolliertes Vokabular hinzugefügt. | 
-| [Qualitätssicherungsprozess (DEPRECATED)](#datensatz-qualitatssicherungsprozess) (`dcatde:qualityProcessURI`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
-| [Typ](#datensatz-typ) (`dcterms:type`) | 3.0: Kardinalität von `0..1` auf `*` geändert.<br>3.0: Namen vereinfacht.<br>3.0: Optionale Codeliste hinzugefügt. | 
-| [Räumliche Auflösung in Meter](#datensatz-raumliche-auflosung-in-meter) (`dcat:spatialResolutionInMeters`) | 3.0: Errata: Kardinalität von `[*]` wie bei DCAT-AP auf `[0..1]` angepasst. | 
-| [Zeitliche Auflösung](#datensatz-zeitliche-auflosung) (`dcat:temporalResolution`) | 3.0: Errata: Kardinalität von `[*]` wie bei DCAT-AP auf `[0..1]` angepasst.<br>3.0: Errata: Anzeige des Wertebereichs korrigiert und weiterführende Dokumentation zu DCAT korrigiert. | 
-| [Weitere Version](#datensatz-weitere-version) (`dcat:hasVersion`) | 3.0: Neu hinzugefügt. | 
-| [Weitere Version (DEPRECATED)](#datensatz-weitere-version-deprecated) (`dcterms:hasVersion`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
-| [Ist Version von (DEPRECATED)](#datensatz-ist-version) (`dcterms:isVersionOf`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
-| [Herausgeber](#datensatz-herausgeber) (`dcterms:publisher`) | 3.0: Anforderung: Nutzung verpflichtend gemacht. | 
-| [Autor](#datensatz-autor) (`dcterms:creator`) | 3.0: Errata: War fälschlicherweise als Ergänzung durch DCAT-AP.de angegeben. | 
-| [Urheber (DEPRECATED)](#datensatz-urheber) (`dcatde:originator`) | 3.0: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcatap:originator`](#datensatz-geodcatap-urheber). | 
-| [Urheber (GeoDCAT-AP)](#datensatz-geodcatap-urheber) (`geodcatap:originator`) | 3.0: Neu hinzugefügt. Ersetzt `dcatde:originator`. | 
-| [Verwalter (DEPRECATED)](#datensatz-verwalter) (`dcatde:maintainer`) | 3.0: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcatap:custodian`](#datensatz-geodcatap-verwalter). | 
-| [Verwalter (GeoDCAT-AP)](#datensatz-geodcatap-verwalter) (`geodcatap:custodian`) | 3.0: Neu hinzugefügt. Ersetzt `dcatde:maintainer`. | 
-| [In Serie](#datensatz-in-serie) (`dcat:inSeries`) | 3.0: Im Zuge der Einführung von `dcat:DatasetSeries` hinzugefügt. | 
+| [Rechtsgrundlage für die Zugangseröffnung (DEPRECATED)](#datensatz-rechtsgrundlage-zugangseroffnung) (`dcatde:legalBasis`) | Weiterentwicklung: [DEPRECATED](#glossar-deprecated) | 
+| [Grad der Zugänglichkeit](#datensatz-grad-zuganglichkeit) (`dcterms:accessRights`) | Harmonisierung: Kontrolliertes Vokabular hinzugefügt. | 
+| [Qualitätssicherungsprozess (DEPRECATED)](#datensatz-qualitatssicherungsprozess) (`dcatde:qualityProcessURI`) | Weiterentwicklung: [DEPRECATED](#glossar-deprecated) | 
+| [Typ](#datensatz-typ) (`dcterms:type`) | Harmonisierung: Kardinalität von `0..1` auf `*` geändert.<br>Harmonisierung: Optionale Codeliste hinzugefügt.<br>Weiterentwicklung: Namen vereinfacht. | 
+| [Räumliche Auflösung in Meter](#datensatz-raumliche-auflosung-in-meter) (`dcat:spatialResolutionInMeters`) | Errata: Kardinalität von `[*]` wie bei DCAT-AP auf `[0..1]` angepasst. | 
+| [Zeitliche Auflösung](#datensatz-zeitliche-auflosung) (`dcat:temporalResolution`) | Errata: Kardinalität von `[*]` wie bei DCAT-AP auf `[0..1]` angepasst.<br>Errata: Anzeige des Wertebereichs korrigiert und weiterführende Dokumentation zu DCAT korrigiert. | 
+| [Weitere Version](#datensatz-weitere-version) (`dcat:hasVersion`) | Harmonisierung: Neu hinzugefügt. | 
+| [Weitere Version (DEPRECATED)](#datensatz-weitere-version-deprecated) (`dcterms:hasVersion`) | Harmonisierung: [DEPRECATED](#glossar-deprecated) | 
+| [Ist Version von (DEPRECATED)](#datensatz-ist-version) (`dcterms:isVersionOf`) | Harmonisierung: [DEPRECATED](#glossar-deprecated) | 
+| [Herausgeber](#datensatz-herausgeber) (`dcterms:publisher`) | Weiterentwicklung: Nutzung verpflichtend gemacht. | 
+| [Autor](#datensatz-autor) (`dcterms:creator`) | Errata: War fälschlicherweise als Ergänzung durch DCAT-AP.de angegeben. | 
+| [Urheber (DEPRECATED)](#datensatz-urheber) (`dcatde:originator`) | Weiterentwicklung: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcatap:originator`](#datensatz-geodcatap-urheber). | 
+| [Urheber (GeoDCAT-AP)](#datensatz-geodcatap-urheber) (`geodcatap:originator`) | Weiterentwicklung: Neu hinzugefügt. Ersetzt `dcatde:originator`. | 
+| [Verwalter (DEPRECATED)](#datensatz-verwalter) (`dcatde:maintainer`) | Weiterentwicklung: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcatap:custodian`](#datensatz-geodcatap-verwalter). | 
+| [Verwalter (GeoDCAT-AP)](#datensatz-geodcatap-verwalter) (`geodcatap:custodian`) | Weiterentwicklung: Neu hinzugefügt. Ersetzt `dcatde:maintainer`. | 
+| [In Serie](#datensatz-in-serie) (`dcat:inSeries`) | Harmonisierung: Im Zuge der Einführung von `dcat:DatasetSeries` hinzugefügt. | 
 
 
 ### Klasse: Datenservice
@@ -58,11 +58,10 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
-| [Beschreibung des Endpunktes](#datenservice-beschreibung-endpunkt) (`dcat:endpointDescription`) | 3.0: In Anlehnung an DCAT-AP 3.0 wurde ein neuer Verwendungshinweis aufgenommen. | 
-| [Grad der Zugänglichkeit](#datenservice-grad-zuganglichkeit) (`dcterms:accessRights`) | 3.0: Kontrolliertes Vokabular hinzugefügt. | 
-| [Format](#datenservice-format) (`dcterms:format`) | 3.0: Eigenschaft aufgenommen. | 
+| [Grad der Zugänglichkeit](#datenservice-grad-zuganglichkeit) (`dcterms:accessRights`) | Harmonisierung: Kontrolliertes Vokabular hinzugefügt. | 
+| [Format](#datenservice-format) (`dcterms:format`) | Harmonisierung: Eigenschaft aufgenommen. | 
 | [Rechtsgrundlage](#datenservice-rechtsgrundlage) (`dcatap:applicableLegislation`) | Harmonisierung: Neu hinzugefügt. | 
-| [Herausgeber](#datenservice-herausgeber) (`dcterms:publisher`) | 3.0: Eigenschaft aufgenommen.<br>3.0: Anforderung: Nutzung verpflichtend gemacht. | 
+| [Herausgeber](#datenservice-herausgeber) (`dcterms:publisher`) | Harmonisierung: Eigenschaft aufgenommen.<br>Weiterentwicklung: Nutzung verpflichtend gemacht. | 
 
 
 ### Klasse: Datensatzserie
@@ -70,22 +69,22 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 Auf Ebene der Klasse [Datensatzserie](#klasse-datensatzserie) (`dcat:DatasetSeries`) gibt es 
 folgende Änderungen zur Vorversion:
 
-> 3.0: Neu hinzugefügt.
+> Harmonisierung: Neu hinzugefügt.
 
 Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
-| [Titel](#datensatzserie-titel) (`dcterms:title`) | 3.0: Neu hinzugefügt. | 
-| [Beschreibung](#datensatzserie-beschreibung) (`dcterms:description`) | 3.0: Neu hinzugefügt. | 
-| [Aktualisierungsfrequenz](#datensatzserie-aktualisierungsfrequenz) (`dcterms:accrualPeriodicity`) | 3.0: Neu hinzugefügt. | 
-| [Veröffentlichungsdatum](#datensatzserie-veroffentlichungsdatum) (`dcterms:issued`) | 3.0: Neu hinzugefügt. | 
-| [Aktualisierungsdatum](#datensatzserie-aktualisierungsdatum) (`dcterms:modified`) | 3.0: Neu hinzugefügt. | 
+| [Titel](#datensatzserie-titel) (`dcterms:title`) | Harmonisierung: Neu hinzugefügt. | 
+| [Beschreibung](#datensatzserie-beschreibung) (`dcterms:description`) | Harmonisierung: Neu hinzugefügt. | 
+| [Aktualisierungsfrequenz](#datensatzserie-aktualisierungsfrequenz) (`dcterms:accrualPeriodicity`) | Harmonisierung: Neu hinzugefügt. | 
+| [Veröffentlichungsdatum](#datensatzserie-veroffentlichungsdatum) (`dcterms:issued`) | Harmonisierung: Neu hinzugefügt. | 
+| [Aktualisierungsdatum](#datensatzserie-aktualisierungsdatum) (`dcterms:modified`) | Harmonisierung: Neu hinzugefügt. | 
 | [Rechtsgrundlage](#datensatzserie-rechtsgrundlage) (`dcatap:applicableLegislation`) | Harmonisierung: Neu hinzugefügt. | 
-| [Räumliche Abdeckung](#datensatzserie-raumliche-abdeckung) (`dcterms:spatial`) | 3.0: Neu hinzugefügt. | 
-| [Herausgeber](#datensatzserie-herausgeber) (`dcterms:publisher`) | 3.0: Neu hinzugefügt.<br>3.0: Anforderung: Nutzung verpflichtend gemacht. | 
-| [Zeitliche Abdeckung](#datensatzserie-zeitliche-abdeckung) (`dcterms:temporal`) | 3.0: Neu hinzugefügt. | 
-| [Kontakt](#datensatzserie-kontakt) (`dcat:contactPoint`) | 3.0: Neu hinzugefügt. | 
+| [Räumliche Abdeckung](#datensatzserie-raumliche-abdeckung) (`dcterms:spatial`) | Harmonisierung: Neu hinzugefügt. | 
+| [Herausgeber](#datensatzserie-herausgeber) (`dcterms:publisher`) | Harmonisierung: Neu hinzugefügt.<br>Weiterentwicklung: Nutzung verpflichtend gemacht. | 
+| [Zeitliche Abdeckung](#datensatzserie-zeitliche-abdeckung) (`dcterms:temporal`) | Harmonisierung: Neu hinzugefügt. | 
+| [Kontakt](#datensatzserie-kontakt) (`dcat:contactPoint`) | Harmonisierung: Neu hinzugefügt. | 
 
 
 ### Klasse: Distribution
@@ -97,18 +96,18 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
-| [Lizenz](#distribution-lizenz) (`dcterms:license`) | 3.0: Kardinalität von `[0..1]` auf `[1]` geändert und die Eigenschaft damit verpflichtend gemacht. | 
-| [Aktualisierungsdatum](#distribution-aktualisierungsdatum) (`dcterms:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
-| [Format](#distribution-format) (`dcterms:format`) | 3.0: Errata: Wertebereichs auf dcterms:MediaTypeOrExtent geändert. | 
-| [Verfügbarkeit](#distribution-verfugbarkeit) (`dcatap:availability`) | 3.0: Errata: Hinterlegte URL für den Wertebereichs auf skos:Concept geändert. | 
-| [Größe in Bytes](#distribution-grosse-in-bytes) (`dcat:byteSize`) | 3.0: Änderung der Range von xsd:decimal auf xsd:nonNegativeInteger. | 
-| [Veröffentlichungsdatum](#distribution-veroffentlichungsdatum) (`dcterms:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
-| [Rechte](#distribution-rechte) (`dcterms:rights`) | 3.0: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt. | 
-| [Status](#distribution-status) (`adms:status`) | 3.0: Änderung des kontrollierten Vokabulars. | 
-| [Räumliche Auflösung in Meter](#distribution-raumliche-auflosung-in-meter) (`dcat:spatialResolutionInMeters`) | 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 
+| [Lizenz](#distribution-lizenz) (`dcterms:license`) | Weiterentwicklung: Kardinalität von `[0..1]` auf `[1]` geändert und die Eigenschaft damit verpflichtend gemacht. | 
+| [Aktualisierungsdatum](#distribution-aktualisierungsdatum) (`dcterms:modified`) | Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Format](#distribution-format) (`dcterms:format`) | Errata: Wertebereichs auf dcterms:MediaTypeOrExtent geändert. | 
+| [Verfügbarkeit](#distribution-verfugbarkeit) (`dcatap:availability`) | Errata: Hinterlegte URL für den Wertebereichs auf skos:Concept geändert. | 
+| [Größe in Bytes](#distribution-grosse-in-bytes) (`dcat:byteSize`) | Harmonisierung: Änderung der Range von xsd:decimal auf xsd:nonNegativeInteger. | 
+| [Veröffentlichungsdatum](#distribution-veroffentlichungsdatum) (`dcterms:issued`) | Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Rechte](#distribution-rechte) (`dcterms:rights`) | Weiterentwicklung: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt. | 
+| [Status](#distribution-status) (`adms:status`) | Harmonisierung: Änderung des kontrollierten Vokabulars. | 
+| [Räumliche Auflösung in Meter](#distribution-raumliche-auflosung-in-meter) (`dcat:spatialResolutionInMeters`) | Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 
 | [Zeitliche Auflösung](#distribution-zeitliche-auflosung) (`dcat:temporalResolution`) | Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 
 | [Rechtsgrundlage](#distribution-rechtsgrundlage) (`dcatap:applicableLegislation`) | Harmonisierung: Neu hinzugefügt. | 
-| [Prüfsumme](#distribution-prufsumme) (`spdx:checksum`) | 3.0: Harmonisierung: Verwendungshinweis hinzugefügt. | 
+| [Prüfsumme](#distribution-prufsumme) (`spdx:checksum`) | Harmonisierung: Verwendungshinweis hinzugefügt. | 
 
 
 ### Klasse: Zeitraum
@@ -120,8 +119,8 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
-| [Startzeitpunkt](#zeitraum-startzeitpunkt) (`dcat:startDate`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
-| [Endzeitpunkt](#zeitraum-endzeitpunkt) (`dcat:endDate`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Startzeitpunkt](#zeitraum-startzeitpunkt) (`dcat:startDate`) | Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Endzeitpunkt](#zeitraum-endzeitpunkt) (`dcat:endDate`) | Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 
 
 ### Klasse: Standort
@@ -133,9 +132,9 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
-| [Bounding Box](#standort-bounding-box) (`dcat:bbox`) | 3.0: Errata: Korrektur des zu verwendenden Types. | 
-| [Geografischer Mittelpunkt](#standort-geografischer-mittelpunkt) (`dcat:centroid`) | 3.0: Errata: Korrektur des zu verwendenden Types. | 
-| [Geometrie](#standort-geometrie) (`locn:geometry`) | 3.0: Wertebereich auf locn:Geometry geändert.<br>3.0: Verwendungshinweis von DCAT hinzugefügt. | 
+| [Bounding Box](#standort-bounding-box) (`dcat:bbox`) | Errata: Korrektur des zu verwendenden Types. | 
+| [Geografischer Mittelpunkt](#standort-geografischer-mittelpunkt) (`dcat:centroid`) | Errata: Korrektur des zu verwendenden Types. | 
+| [Geometrie](#standort-geometrie) (`locn:geometry`) | Harmonisierung: Wertebereich auf locn:Geometry geändert.<br>Harmonisierung: Verwendungshinweis von DCAT hinzugefügt. | 
 
 
 ### Klasse: Verantwortliche Stelle
@@ -147,7 +146,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
-| [Typ](#verantwortliche-stelle-typ) (`dcterms:type`) | 3.0: Errata: Link zur zu verwendenden Codeliste hinzugefügt, war zuvor bei `foaf:name` angegeben. | 
+| [Typ](#verantwortliche-stelle-typ) (`dcterms:type`) | Errata: Link zur zu verwendenden Codeliste hinzugefügt, war zuvor bei `foaf:name` angegeben. | 
 
 
 ### Klasse: Kontaktinformationen
@@ -155,16 +154,16 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 Auf Ebene der Klasse [Kontaktinformationen](#klasse-kontaktinformationen) (`vcard:Kind`) gibt es 
 folgende Änderungen zur Vorversion:
 
-> 3.0: Neu hinzugefügt.
+> Weiterentwicklung: Neu hinzugefügt.
 
 Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
-| [Name](#kontaktinformationen-name) (`vcard:fn`) | 3.0: Neu hinzugefügt. | 
-| [E-Mail](#kontaktinformationen-email) (`vcard:hasEmail`) | 3.0: Neu hinzugefügt. | 
-| [Kontaktformular/Chatbot](#kontaktinformationen-url) (`vcard:hasURL`) | 3.0: Neu hinzugefügt. | 
-| [Telefon](#kontaktinformationen-telefon) (`vcard:hasTelephone`) | 3.0: Neu hinzugefügt. | 
+| [Name](#kontaktinformationen-name) (`vcard:fn`) | Weiterentwicklung: Neu hinzugefügt. | 
+| [E-Mail](#kontaktinformationen-email) (`vcard:hasEmail`) | Weiterentwicklung: Neu hinzugefügt. | 
+| [Kontaktformular/Chatbot](#kontaktinformationen-url) (`vcard:hasURL`) | Weiterentwicklung: Neu hinzugefügt. | 
+| [Telefon](#kontaktinformationen-telefon) (`vcard:hasTelephone`) | Weiterentwicklung: Neu hinzugefügt. | 
 
 
 ### Klasse: Prüfsumme
@@ -176,7 +175,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
-| [Algorithmus](#prufsumme-algorithmus) (`spdx:algorithm`) | 3.0: Range von `rdfs:Resource` auf `spdx:ChecksumAlgorithm` geändert. | 
+| [Algorithmus](#prufsumme-algorithmus) (`spdx:algorithm`) | Errata: Range von `rdfs:Resource` auf `spdx:ChecksumAlgorithm` geändert. | 
 
 
 ### Klasse: Katalogeintrag
@@ -188,9 +187,9 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 
 | Eigenschaft           | Änderungen                      |
 |:----------------------|:--------------------------------|
-| [Aktualisierungsdatum](#katalogeintrag-aktualisierungsdatum) (`dcterms:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
-| [Application Profile der Metadaten](#katalogeintrag-konform-zu) (`dcterms:conformsTo`) | 3.0: Kardinalität von `0..1` auf `*` geändert.<br>3.0: Errata: Anzeige des Wertebereichs korrigiert. | 
-| [Veröffentlichungsdatum](#katalogeintrag-veroffentlichungsdatum) (`dcterms:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
-| [Katalogeintrag](#katalogeintrag-katalogeintrag) (`foaf:primaryTopic`) | 3.0: Aufnahme der Ressource `dcat:DatasetSeries` | 
+| [Aktualisierungsdatum](#katalogeintrag-aktualisierungsdatum) (`dcterms:modified`) | Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Application Profile der Metadaten](#katalogeintrag-konform-zu) (`dcterms:conformsTo`) | Harmonisierung: Kardinalität von `0..1` auf `*` geändert.<br>Errata: Anzeige des Wertebereichs korrigiert. | 
+| [Veröffentlichungsdatum](#katalogeintrag-veroffentlichungsdatum) (`dcterms:issued`) | Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+| [Katalogeintrag](#katalogeintrag-katalogeintrag) (`foaf:primaryTopic`) | Harmonisierung: Aufnahme der Ressource `dcat:DatasetSeries` | 
 
 

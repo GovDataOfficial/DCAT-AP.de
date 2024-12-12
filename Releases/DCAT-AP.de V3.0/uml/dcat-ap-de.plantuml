@@ -22,7 +22,6 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.title)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Catalog_Property_dct_title
     <<mandatory>> dcterms:description ~> rdfs:Literal [1..*]
         '@ rdfs:label      = Beschreibung
         '@ _:internalLink  = katalog-beschreibung
@@ -33,7 +32,6 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.description)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Catalog_Property_dct_description 
     <<recommended>> dcterms:issued ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Veröffentlichungsdatum
         '@ _:internalLink  = katalog-veroffentlichungsdatum
@@ -44,8 +42,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.releasedate)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_release_date)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Catalog_Property_dct_issued (erlaubt auch xsd:gYear und xsd:gYearMonth)
-        '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
+        '@ adms:versionNotes = Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
     <<recommended>> dcterms:modified ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Aktualisierungsdatum
         '@ _:internalLink  = katalog-aktualisierungsdatum
@@ -55,8 +52,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.modificationdate)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_update_date)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Catalog_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
-        '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
+        '@ adms:versionNotes = Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
     <<recommended>> dcterms:language ~> dcterms:LinguisticSystem [*]
         '@ rdfs:label      = Sprache
         '@ _:internalLink  = katalog-sprache
@@ -68,7 +64,6 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_language)
         '@ adms:interoperabilityLevel = A
         '@ _:vocabularyLink = #kv-languages
-        '@ sh:shapes       = ___TBD___(kein Test des Vokabulars)
     <<recommended>> foaf:homepage ~> foaf:Document [0..1]
         '@ rdfs:label      = Homepage
         '@ _:internalLink  = katalog-homepage
@@ -78,7 +73,6 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.homepage)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_homepage)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Catalog_Property_foaf_homepage, ___TBD___(kein Test, ob Ziel eine Ressource)
     <<recommended>> dcterms:license ~> dcterms:LicenseDocument [0..1]
         '@ rdfs:label      = Lizenz
         '@ _:internalLink  = katalog-lizenz
@@ -89,7 +83,6 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_license)
         '@ adms:interoperabilityLevel = A
         '@ _:vocabularyLink = #kv-licenses
-        '@ sh:shapes       = dcatap:Catalog_Property_dct_license, ___TBD___(kein Test des Vokabulars)
     <<recommended>> dcat:themeTaxonomy ~> skos:ConceptScheme [*]
         '@ rdfs:label      = Kategorienschema
         '@ _:internalLink  = katalog-kategorienschema
@@ -100,7 +93,6 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.themes)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_themes)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Catalog_Property_dcat_themeTaxonomy, ___TBD___(kein Test, ob mindestens einmal auf o.a. verlinkt, kein Test, ob Ziel eine Ressource)
     <<recommended>> dcatap:availability ~> skos:Concept [0..1]
         '@ rdfs:label      = Verfügbarkeit
         '@ _:internalLink  = katalog-verfugbarkeit
@@ -111,7 +103,6 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ _:vocabularyLink = #kv-availability
         '@ adms:interoperabilityLevel = P
         '@ _:deOriginal    = DCAT-AP.de ordnet diese Eigenschaft allen DCAT-Ressourcen und Distributionen zu.
-        '@ sh:shapes       = ___TBD___(deutsche Besonderheit, kein Test des Vokabulars, Maximalzahl 1)
     <<optional>> dcterms:rights ~> dcterms:RightsStatement [0..1]
         '@ rdfs:label      = Rechte
         '@ _:internalLink  = katalog-rechte
@@ -122,8 +113,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.rights)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_rights)
         '@ adms:interoperabilityLevel = A
-        '@ adms:versionNotes = 3.0: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt.
-        '@ sh:shapes       = dcatap:Catalog_Property_dct_rights, ___TBD___(kein Test, ob Ziel eine Ressource ist?)
+        '@ adms:versionNotes = Weiterentwicklung: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt.
     <<optional>> dcat:catalog ~> dcat:Catalog [*]
         '@ rdfs:label      = Katalog
         '@ _:internalLink  = katalog-katalog
@@ -133,7 +123,6 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.catalogue)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_catalog)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Catalog)
     <<optional>> dcatap:applicableLegislation ~> eli:LegalResource [*]
         '@ rdfs:label      = Rechtsgrundlage
         '@ _:internalLink  = katalog-rechtsgrundlage
@@ -168,7 +157,6 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.service)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_service)
     '@ adms:interoperabilityLevel = A
-    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Catalog)
 
 "dcat:Catalog" --> "*" "dcterms:Location"     : <<recommended>> dcterms:spatial
     '@ rdfs:label      = Räumliche Abdeckung
@@ -180,7 +168,6 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial)
     '@ adms:interoperabilityLevel = A
     '@ _:vocabularyLink = #kv-spatial
-    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars, schwierig hier, kein Test, ob Ziel dcterms:Location)
 
 "dcat:Catalog" --> "*"     "dcat:Catalog"       : <<optional>> dcterms:hasPart
     '@ rdfs:label      = Hat Teilkatalog
@@ -191,7 +178,6 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.haspart)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_has_part)
     '@ adms:interoperabilityLevel = A
-    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Catalog)
 
 "dcat:Catalog" --> "0..1"  "dcat:Catalog"       : <<optional>> dcterms:isPartOf
     '@ rdfs:label      = Ist Teilkatalog
@@ -203,7 +189,6 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isPartOf)
     '@ adms:interoperabilityLevel = P
     '@ _:deOriginal    = Eigenschaft wird für Kataloge beibehalten.
-    '@ sh:shapes       = dcatap:Catalog_Property_dct_isPartOf, ___TBD___(kein Test, ob Ziel ein dcat:Catalog)
 
 "dcat:Catalog" --> "*"     "dcat:CatalogRecord" : <<optional>> dcat:record
     '@ rdfs:label      = Katalogeintrag
@@ -216,7 +201,6 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_catalog_record)
     '@ adms:interoperabilityLevel = E
     '@ _:deOriginal    = DCAT-AP.de bindet einen zusätzlichen Verwendungshinweis ein.
-    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:CatalogRecord)
 
 "dcat:Catalog" --> "*"  "dcat:Dataset"       : <<recommended>> dcat:dataset
     '@ rdfs:label      = Datensatz
@@ -228,8 +212,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.dataset)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_dataset)
     '@ adms:interoperabilityLevel = A
-    '@ adms:versionNotes = 3.0: Harmonisierung: Kardinalität von `1..*` auf `*` geändert. Verbindlichkeit auf "Empfohlen" gesenkt.
-    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test auf Mindestzahl, lohnt es sich, das wider besseren Wissens zu erzwingen?)
+    '@ adms:versionNotes = Harmonisierung: Kardinalität von `1..*` auf `*` geändert. Verbindlichkeit auf "Empfohlen" gesenkt.
 
 "dcat:Catalog" --> "1"     "foaf:Agent"         : <<mandatory>> dcterms:publisher
     '@ rdfs:label      = Herausgeber
@@ -243,7 +226,6 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher)
     '@ adms:interoperabilityLevel = E
     '@ _:deOriginal    = Erweiterung des Verwendungshinweises.
-    '@ sh:shapes       = dcatap:Catalog_Property_dct_publisher, ___TBD___(kein Test, ob Ziel ein foaf:Agent)
 
 "dcat:Catalog" --> "*"     "foaf:Agent"         : <<optional>> dcterms:creator
     '@ rdfs:label      = Autor
@@ -255,7 +237,6 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.creator)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_creator)
     '@ adms:interoperabilityLevel = A
-    '@ sh:shapes       =  ___TBD___(Shape ohne Regeln
 
 class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC { 
     <<mandatory>> dcterms:title ~> rdfs:Literal [1..*]
@@ -269,7 +250,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.title)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Dataset_Property_dct_title
     <<mandatory>> dcterms:description ~> rdfs:Literal [1..*]
         '@ rdfs:label      = Beschreibung
         '@ _:internalLink  = datensatz-beschreibung
@@ -280,7 +260,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.description)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Dataset_Property_dct_title
     <<recommended>> dcat:keyword ~> rdfs:Literal [*]
         '@ rdfs:label      = Schlagwort
         '@ _:internalLink  = datensatz-schlagwort
@@ -291,7 +270,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.keyword)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_keyword)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Dataset_Property_dcat_keyword
     <<recommended>> dcatde:politicalGeocodingLevelURI ~> rdfs:Resource [*]
         '@ rdfs:label      = Ebene der geopolitischen Abdeckung
         '@ _:internalLink  = datensatz-ebene-geopolitischen-abdeckung
@@ -302,7 +280,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ adms:interoperabilityLevel = P
         '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
         '@ _:vocabularyLink = #kv-political-geocoding-level
-        '@ sh:shapes       = ___TBD___(deutsche Eigenschaft)
     <<recommended>> dcatde:politicalGeocodingURI ~> rdfs:Resource [*]
         '@ rdfs:label      = Geopolitische Abdeckung (DEPRECATED)
         '@ _:internalLink  = datensatz-geopolitischen-abdeckung
@@ -313,8 +290,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ adms:interoperabilityLevel = P
         '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
         '@ _:vocabularyLink = #kv-political-geocoding-uri
-        '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated)
-        '@ sh:shapes       = ___TBD___(deutsche Eigenschaft)
+        '@ adms:versionNotes = Weiterentwicklung: [DEPRECATED](#glossar-deprecated)
     <<recommended>> dcat:theme ~> skos:Concept [*]
         '@ rdfs:label      = Kategorie
         '@ _:internalLink  = datensatz-kategorie
@@ -327,7 +303,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_theme)
         '@ adms:interoperabilityLevel = A
         '@ _:vocabularyLink = #kv-data-theme
-        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars)
 
     <<recommended>> dcatap:availability ~> skos:Concept [0..1]
         '@ rdfs:label      = Verfügbarkeit
@@ -339,7 +314,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ _:vocabularyLink = #kv-availability
         '@ adms:interoperabilityLevel = P
         '@ _:deOriginal    = DCAT-AP.de ordnet diese Eigenschaft allen DCAT-Ressourcen und Distributionen zu.
-        '@ sh:shapes       = ___TBD___(deutsche Besonderheit, kein Test des Vokabulars, Maximalzahl 1)
 
     <<optional>> dcatde:contributorID ~> rdfs:Resource [*]
         '@ rdfs:label        = Datenbereitsteller ID
@@ -351,7 +325,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ adms:interoperabilityLevel = P
         '@ _:deOriginal      = Von DCAT-AP.de eingeführte Eigenschaft.
         '@ _:vocabularyLink = #kv-contributors
-        '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
     <<optional>> dcatde:geocodingDescription ~> rdfs:Literal [*]
         '@ rdfs:label      = Beschreibung der Abdeckung (DEPRECATED)
         '@ _:internalLink  = datensatz-beschreibung-abdeckung
@@ -363,8 +336,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://dcat-ap.de/def/dcatde/geocodingDescription
         '@ adms:interoperabilityLevel = P
         '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
-        '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated)
-        '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
+        '@ adms:versionNotes = Weiterentwicklung: [DEPRECATED](#glossar-deprecated)
     <<optional>> dcterms:identifier ~> rdfs:Literal [*]
         '@ rdfs:label      = ID
         '@ _:internalLink  = datensatz-id
@@ -375,7 +347,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.identifier)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_identifier)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Dataset_Property_dct_identifier
     <<optional>> adms:identifier ~> adms:Identifier [*]
         '@ rdfs:label      = Andere ID
         '@ _:internalLink  = datensatz-andere-id
@@ -387,8 +358,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.otheridentifier)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#dereferenceable-identifiers)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein adms:Identifier)
-        '@ adms:versionNotes = 3.0: Errata: Link der Range korrigiert und Verwendungshinweis überarbeitet.
+        '@ adms:versionNotes = Errata: Link der Range korrigiert und Verwendungshinweis überarbeitet.
     <<optional>> dcterms:issued ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Veröffentlichungsdatum
         '@ _:internalLink  = datensatz-veroffentlichungsdatum
@@ -397,9 +367,8 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://purl.org/dc/terms/issued
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.releasedate)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_release_date)
-        '@ sh:shapes       = dcatap:Dataset_Property_dct_issued (erlaubt auch xsd:gYear und xsd:gYearMonth)
         '@ adms:interoperabilityLevel = A
-        '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
+        '@ adms:versionNotes = Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
     <<optional>> dcterms:modified ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Aktualisierungsdatum
         '@ _:internalLink  = datensatz-aktualisierungsdatum
@@ -409,10 +378,9 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://purl.org/dc/terms/modified
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.modificationdate)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_update_date)
-        '@ sh:shapes       = dcatap:Dataset_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
         '@ adms:interoperabilityLevel = A
-        '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
-    <<optional>> dcat:version ~> rdfs:Literal [*]
+        '@ adms:versionNotes = Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
+    <<optional>> dcat:version ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Versionsbezeichnung
         '@ _:internalLink  = datensatz-versionsbezeichnung
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Literal
@@ -420,9 +388,8 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://www.w3.org/ns/dcat#version
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.version)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version)
-        '@ adms:interoperabilityLevel = E
-        '@ _:deOriginal    = TBD: DCAT-AP.de gibt eine Kardinalität von `*` statt `0..1` an.
-        '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+        '@ adms:interoperabilityLevel = A
+        '@ adms:versionNotes = Harmonisierung: Neu hinzugefügt.
     <<optional>> owl:versionInfo ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Versionsbezeichnung (DEPRECATED)
         '@ _:internalLink  = datensatz-versionsbezeichnung-deprecated
@@ -432,8 +399,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://www.w3.org/2002/07/owl#versionInfo
         '@ rdfs:seeAlso    = [OWL](https://www.w3.org/TR/owl-ref/#versionInfo-def)
         '@ adms:interoperabilityLevel = A
-        '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated)
-        '@ sh:shapes       = dcatap:Dataset_Property_owl_versionInfo
+        '@ adms:versionNotes = Harmonisierung: [DEPRECATED](#glossar-deprecated)
     <<optional>> adms:versionNotes ~> rdfs:Literal [*]
         '@ rdfs:label      = Versionserläuterung
         '@ _:internalLink  = datensatz-versionserlauterung
@@ -444,7 +410,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://www.w3.org/ns/adms#versionNotes
         '@ rdfs:seeAlso    = [ADMS](https://www.w3.org/TR/vocab-adms/#adms-versionnotes)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Dataset_Property_adms_versionNotes
     <<optional>> dcatap:applicableLegislation ~> eli:LegalResource [*]
         '@ rdfs:label      = Rechtsgrundlage
         '@ _:internalLink  = datensatz-rechtsgrundlage
@@ -467,8 +432,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://dcat-ap.de/def/dcatde/legalBasis
         '@ adms:interoperabilityLevel = P
         '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
-        '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated)
-        '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
+        '@ adms:versionNotes = Weiterentwicklung: [DEPRECATED](#glossar-deprecated)
     <<optional>> dcterms:relation ~> rdfs:Resource [*]
         '@ rdfs:label      = Verwandte Ressource
         '@ _:internalLink  = datensatz-verwandte-ressource
@@ -479,7 +443,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.relatedresource)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_relation)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Dataset_Property_dct_relation (erlaubt auch BlankNodes)
     <<optional>> dcat:landingPage ~> foaf:Document [*]
         '@ rdfs:label      = Ursprüngliche Webseite
         '@ _:internalLink  = datensatz-ursprungliche-webseite
@@ -490,7 +453,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.landingpage)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_landing_page)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource)
     <<optional>> foaf:page ~> foaf:Document [*]
         '@ rdfs:label      = Dokumentation
         '@ _:internalLink  = datensatz-dokumentation
@@ -500,7 +462,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.documentation)
         '@ rdfs:seeAlso    = [FOAF](http://xmlns.com/foaf/spec/#term_page)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource)
     <<optional>> dcterms:language ~> dcterms:LinguisticSystem [*]
         '@ rdfs:label      = Sprache
         '@ _:internalLink  = datensatz-sprache
@@ -512,7 +473,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_language)
         '@ adms:interoperabilityLevel = A
         '@ _:vocabularyLink = #kv-languages
-        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars)
     <<optional>> dcterms:conformsTo ~> dcterms:Standard [*]
         '@ rdfs:label        = Konform zu Standard
         '@ _:internalLink    = datensatz-konform-zu-standard
@@ -522,7 +482,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso      = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.conformsto)
         '@ rdfs:seeAlso      = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_conforms_to)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes         = ___TBD___(Shape ohne Regeln)
     <<optional>> dcterms:accessRights ~> dcterms:RightsStatement [0..1]
         '@ rdfs:label      = Grad der Zugänglichkeit
         '@ _:internalLink  = datensatz-grad-zuganglichkeit
@@ -533,8 +492,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_access_rights)
         '@ adms:interoperabilityLevel = A
         '@ _:vocabularyLink = #kv-access-right
-        '@ adms:versionNotes = 3.0: Kontrolliertes Vokabular hinzugefügt.
-        '@ sh:shapes       = dcatap:Dataset_Property_dct_accessRights, ___TBD___(kein Test, ob Ziel eine Ressource ist?)
+        '@ adms:versionNotes = Harmonisierung: Kontrolliertes Vokabular hinzugefügt.
     <<optional>> dcterms:provenance ~> dcterms:ProvenanceStatement [*]
         '@ rdfs:label      = Provenienz
         '@ _:internalLink  = datensatz-provenienz
@@ -546,7 +504,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/provenance)
         '@ adms:interoperabilityLevel = E
         '@ _:deOriginal    = Ergänzung eines Verwendungshinweises.
-        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein ProvenanceStatement?)
     <<optional>> dcterms:accrualPeriodicity ~> dcterms:Frequency [0..1]
         '@ rdfs:label      = Aktualisierungsfrequenz
         '@ _:internalLink  = datensatz-aktualisierungsfrequenz
@@ -557,7 +514,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_frequency)
         '@ adms:interoperabilityLevel = A
         '@ _:vocabularyLink = #kv-frequency
-        '@ sh:shapes       = dcatap:Dataset_Property_dct_accrualPeriodicity, ___TBD___(kein Test des Vokabulars)
     <<optional>> dcatde:qualityProcessURI ~> rdfs:Resource [0..1]
         '@ rdfs:label      = Qualitätssicherungsprozess (DEPRECATED)
         '@ _:internalLink  = datensatz-qualitatssicherungsprozess
@@ -567,8 +523,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about       = http://dcat-ap.de/def/dcatde/qualityProcessURI
         '@ adms:interoperabilityLevel = P
         '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
-        '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated)
-        '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
+        '@ adms:versionNotes = Weiterentwicklung: [DEPRECATED](#glossar-deprecated)
     <<optional>> dcterms:type ~> skos:Concept [*]
         '@ rdfs:label        = Typ
         '@ _:internalLink    = datensatz-typ
@@ -578,11 +533,10 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso      = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.type)
         '@ rdfs:seeAlso      = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_type)
         '@ adms:interoperabilityLevel = A
-        '@ adms:versionNotes = 3.0: Kardinalität von `0..1` auf `*` geändert.
-        '@ adms:versionNotes = 3.0: Namen vereinfacht.
-        '@ adms:versionNotes = 3.0: Optionale Codeliste hinzugefügt.
+        '@ adms:versionNotes = Harmonisierung: Kardinalität von `0..1` auf `*` geändert.
+        '@ adms:versionNotes = Harmonisierung: Optionale Codeliste hinzugefügt.
+        '@ adms:versionNotes = Weiterentwicklung: Namen vereinfacht.
         '@ _:vocabularyLink  = #kv-dataset-type
-        '@ sh:shapes         = dcatap:Dataset_Property_dct_type, ___TBD___(kein Test des Vokabulars)
     <<optional>> prov:wasGeneratedBy ~> prov:Activity [*]
         '@ rdfs:label        = Wurde erzeugt von
         '@ _:internalLink    = datensatz-wurde-erzeugt-von
@@ -594,7 +548,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso      = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_was_generated_by)
         '@ adms:interoperabilityLevel = E
         '@ _:deOriginal      = Ergänzung eines Verwendungshinweises.
-        '@ sh:shapes         = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource?)
     <<optional>> dcat:spatialResolutionInMeters ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Räumliche Auflösung in Meter
         '@ _:internalLink  = datensatz-raumliche-auflosung-in-meter
@@ -607,8 +560,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial_resolution)
         '@ adms:interoperabilityLevel = E
         '@ _:deOriginal    = Verwendungshinweis hinzugefügt.
-        '@ adms:versionNotes = 3.0: Errata: Kardinalität von `[*]` wie bei DCAT-AP auf `[0..1]` angepasst.
-        '@ sh:shapes       = dcatap:Dataset_Property_dcat_spatialResolutionInMeters, ___TBD___(Kard ändert sich bei DCAT-AP 2.1 von [*] auf  [0..1])
+        '@ adms:versionNotes = Errata: Kardinalität von `[*]` wie bei DCAT-AP auf `[0..1]` angepasst.
     <<optional>> dcat:temporalResolution ~> rdfs:Literal [*]
         '@ rdfs:label      = Zeitliche Auflösung
         '@ _:internalLink  = datensatz-zeitliche-auflosung
@@ -619,9 +571,8 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.temporalresolution)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal_resolution)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Dataset_Property_dcat_temporalResolution, ___TBD___(Kard ändert sich bei DCAT-AP 2.1 von [*] auf  [0..1])
-        '@ adms:versionNotes = 3.0: Errata: Kardinalität von `[*]` wie bei DCAT-AP auf `[0..1]` angepasst.
-        '@ adms:versionNotes = 3.0: Errata: Anzeige des Wertebereichs korrigiert und weiterführende Dokumentation zu DCAT korrigiert.
+        '@ adms:versionNotes = Errata: Kardinalität von `[*]` wie bei DCAT-AP auf `[0..1]` angepasst.
+        '@ adms:versionNotes = Errata: Anzeige des Wertebereichs korrigiert und weiterführende Dokumentation zu DCAT korrigiert.
     <<optional>> prov:qualifiedAttribution ~> prov:Attribution [*]
         '@ rdfs:label      = Rollenzuordnung
         '@ _:internalLink  = datensatz-rollenzuordnung
@@ -631,7 +582,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.qualifiedattribution)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_qualified_attribution)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine prov:Attribution)
     <<optional>> dcat:qualifiedRelation ~> dcat:Relationship [*]
         '@ rdfs:label      = Qualifizierte Beziehung
         '@ _:internalLink  = datensatz-qualifizierte-beziehung
@@ -641,7 +591,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.qualifiedrelation)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_qualified_relation)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine dcat:Relation)
     <<optional>> dcterms:isReferencedBy ~> rdfs:Resource [*]
         '@ rdfs:label        = Wird Referenziert
         '@ _:internalLink    = datensatz-wird-referenziert
@@ -651,7 +600,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso      = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.isreferencedby)
         '@ rdfs:seeAlso      = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_is_referenced_by)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes         = dcatap:Dataset_Property_dc_isReferencedBy (erlaubt auch BlankNodes)
     <<optional>> dcterms:references ~> rdfs:Resource [*]
         '@ rdfs:label        = Referenziert
         '@ _:internalLink    = datensatz-referenziert
@@ -661,7 +609,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ rdf:about         = http://purl.org/dc/terms/references
         '@ adms:interoperabilityLevel = P
         '@ _:deOriginal      = Von DCAT-AP.de eingeführte Eigenschaft.
-        '@ sh:shapes         = ___TBD___(deutsche Eigenschaft)
 }   
 '@ rdfs:label      = Datensatz
 '@ _:internalLink  = #klasse-datensatz
@@ -686,7 +633,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ adms:interoperabilityLevel = E
     '@ _:deOriginal    = DCAT-AP.de bindet einen zusätzlichen Verwendungshinweis ein
     '@ _:vocabularyLink  = #kv-spatial
-    '@ sh:shapes         = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars, schwierig hier, kein Test, ob Ziel dcterms:Location)
 
 "dcat:Dataset" --> "*" "dcterms:PeriodOfTime" : <<recommended>> dcterms:temporal
     '@ rdfs:label        = Zeitliche Abdeckung
@@ -697,7 +643,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso      = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.temporalcoverage)
     '@ rdfs:seeAlso      = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal)
     '@ adms:interoperabilityLevel = A
-    '@ sh:shapes         = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine dcterms:PeriodOfTime)
 
 "dcat:Dataset" -up-> "*"     "dcat:Dataset"       : <<optional>> dcterms:source
     '@ rdfs:label      = Quelle des Datensatzes
@@ -709,7 +654,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.source)
     '@ rdfs:seeAlso    = [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source)
     '@ adms:interoperabilityLevel = A
-    '@ sh:shapes       = ___TBD___(kein Test, ob Ziel ein dcat:Dataset)
 
 "dcat:Dataset" -up-> "*"     "dcat:Dataset"       : <<optional>> dcat:hasVersion
     '@ rdfs:label      = Weitere Version
@@ -720,7 +664,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.hasversion)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_has_version)
     '@ adms:interoperabilityLevel = A
-    '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+    '@ adms:versionNotes = Harmonisierung: Neu hinzugefügt.
 "dcat:Dataset" -up-> "*"     "dcat:Dataset"       : <<optional>> dcterms:hasVersion
     '@ rdfs:label      = Weitere Version (DEPRECATED)
     '@ _:internalLink  = datensatz-weitere-version-deprecated
@@ -730,8 +674,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#deprecated-properties-and-classes)
     '@ rdfs:seeAlso    = [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/hasVersion)
     '@ adms:interoperabilityLevel = A
-    '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated)
-    '@ sh:shapes       = ___TBD___(kein Test, ob Ziel ein dcat:Dataset)
+    '@ adms:versionNotes = Harmonisierung: [DEPRECATED](#glossar-deprecated)
 
 "dcat:Dataset" -up-> "*"     "dcat:Dataset"       : <<optional>> dcterms:isVersionOf
     '@ rdfs:label      = Ist Version von (DEPRECATED)
@@ -742,8 +685,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#deprecated-properties-and-classes)
     '@ rdfs:seeAlso    = [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isVersion)
     '@ adms:interoperabilityLevel = A
-    '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated)
-    '@ sh:shapes       = ___TBD___(kein Test, ob Ziel ein dcat:Dataset)
+    '@ adms:versionNotes = Harmonisierung: [DEPRECATED](#glossar-deprecated)
 
 "dcat:Dataset" --> "*"     "dcat:Distribution"  : <<recommended>> dcat:distribution
     '@ rdfs:label      = Distribution
@@ -754,7 +696,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.datasetdistribution)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_distribution)
     '@ adms:interoperabilityLevel = A
-    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine dcat:Distribution)
 
 "dcat:Dataset" --> "*"     "dcat:Distribution"  : <<optional>> adms:sample
     '@ rdfs:label      = Beispieldistribution
@@ -765,7 +706,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.sample)
     '@ rdfs:seeAlso    = [ADMS](https://www.w3.org/TR/vocab-adms/#adms-sample)
     '@ adms:interoperabilityLevel = A
-    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine dcat:Distribution)
 
 "dcat:Dataset" --> "1"     "foaf:Agent"         : <<mandatory>> dcterms:publisher
     '@ rdfs:label      = Herausgeber
@@ -777,10 +717,9 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdf:about       = http://purl.org/dc/terms/publisher
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.publisher)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher)
-    '@ adms:versionNotes = 3.0: Anforderung: Nutzung verpflichtend gemacht.
+    '@ adms:versionNotes = Weiterentwicklung: Nutzung verpflichtend gemacht.
     '@ adms:interoperabilityLevel = E
     '@ _:deOriginal    = Erweiterung des Verwendungshinweises. Nutzung verpflichtend gemacht.
-    '@ sh:shapes       = dcatap:Dataset_Property_dct_publisher (kein Test, ob Ziel ein foaf:Agent)
 
 "dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> dcterms:creator
     '@ rdfs:label      = Autor
@@ -792,8 +731,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.creator)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_creator)
     '@ adms:interoperabilityLevel = A
-    '@ adms:versionNotes = 3.0: Errata: War fälschlicherweise als Ergänzung durch DCAT-AP.de angegeben.
-    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel foaf:Agent)
+    '@ adms:versionNotes = Errata: War fälschlicherweise als Ergänzung durch DCAT-AP.de angegeben.
 
 "dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> dcterms:contributor
     '@ rdfs:label      = Bearbeiter
@@ -805,7 +743,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor)
     '@ adms:interoperabilityLevel = P
     '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
-    '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test, ob Ziel foaf:Agent)
 
 "dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> dcatde:originator
     '@ rdfs:label      = Urheber (DEPRECATED)
@@ -817,8 +754,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdf:about       = http://dcat-ap.de/def/dcatde/originator
     '@ adms:interoperabilityLevel = P
     '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
-    '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcatap:originator`](#datensatz-geodcatap-urheber).
-    '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test, ob Ziel foaf:Agent)
+    '@ adms:versionNotes = Weiterentwicklung: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcatap:originator`](#datensatz-geodcatap-urheber).
 
 "dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> geodcatap:originator
     '@ rdfs:label      = Urheber (GeoDCAT-AP)
@@ -831,7 +767,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso      = [GeoDCAT-AP](https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/#originator)
     '@ adms:interoperabilityLevel = P
     '@ _:deOriginal    = Von GeoDCAT-AP übernommene Eigenschaft. Verwendungshinweis angepasst.
-    '@ adms:versionNotes = 3.0: Neu hinzugefügt. Ersetzt `dcatde:originator`.
+    '@ adms:versionNotes = Weiterentwicklung: Neu hinzugefügt. Ersetzt `dcatde:originator`.
 
 "dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> dcatde:maintainer
     '@ rdfs:label      = Verwalter (DEPRECATED)
@@ -842,8 +778,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdf:about       = http://dcat-ap.de/def/dcatde/maintainer
     '@ adms:interoperabilityLevel = P
     '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
-    '@ adms:versionNotes = 3.0: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcatap:custodian`](#datensatz-geodcatap-verwalter).
-    '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test, ob Ziel foaf:Agent)
+    '@ adms:versionNotes = Weiterentwicklung: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcatap:custodian`](#datensatz-geodcatap-verwalter).
 
 "dcat:Dataset" --> "*"     "foaf:Agent"         : <<optional>> geodcatap:custodian
     '@ rdfs:label      = Verwalter (GeoDCAT-AP)
@@ -854,7 +789,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [GeoDCAT-AP](https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/#custodian)
     '@ adms:interoperabilityLevel = P
     '@ _:deOriginal    = Von GeoDCAT-AP übernommene Eigenschaft.
-    '@ adms:versionNotes = 3.0: Neu hinzugefügt. Ersetzt `dcatde:maintainer`.
+    '@ adms:versionNotes = Weiterentwicklung: Neu hinzugefügt. Ersetzt `dcatde:maintainer`.
 
 "dcat:Dataset" --> "*"     "vcard:Kind"         : <<recommended>> dcat:contactPoint
     '@ rdfs:label      = Kontakt
@@ -866,7 +801,6 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.contactpoint)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_contact_point)
     '@ adms:interoperabilityLevel = A
-    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein vcard:Kind)
     
 "dcat:Dataset" --> "*"     "dcat:DatasetSeries"         : <<optional>> dcat:inSeries
     '@ rdfs:label      = In Serie
@@ -878,7 +812,7 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.inseries)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_in_series)
     '@ adms:interoperabilityLevel = A
-    '@ adms:versionNotes = 3.0: Im Zuge der Einführung von `dcat:DatasetSeries` hinzugefügt.
+    '@ adms:versionNotes = Harmonisierung: Im Zuge der Einführung von `dcat:DatasetSeries` hinzugefügt.
 
 class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
     <<mandatory>> dcat:endpointURL ~> rdfs:Resource [1..*]
@@ -890,7 +824,6 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService.endpointURL)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_endpoint_url)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:DataService_Property_dcat_endpointURL (erlaubt auch BlankNodes)
     <<mandatory>> dcterms:title ~> rdfs:Literal [1..*]
         '@ rdfs:label      = Titel
         '@ _:internalLink  = datenservice-titel
@@ -901,7 +834,6 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService.title)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:DataService_Property_dct_title
 
     <<recommended>> dcat:endpointDescription ~> rdfs:Resource [*]
         '@ rdfs:label      = Beschreibung des Endpunktes
@@ -913,8 +845,6 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService.endpointdescription)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:data_service_endpoint_description)
         '@ adms:interoperabilityLevel = A
-        '@ adms:versionNotes = 3.0: In Anlehnung an DCAT-AP 3.0 wurde ein neuer Verwendungshinweis aufgenommen.
-        '@ sh:shapes       = dcatap:DataService_Property_dcat_endpointDescription (erlaubt auch BlankNodes)
     <<recommended>> dcatap:availability ~> skos:Concept [0..1]
         '@ rdfs:label      = Verfügbarkeit
         '@ _:internalLink  = datenservice-verfugbarkeit
@@ -924,7 +854,6 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ _:vocabularyLink = #kv-availability
         '@ adms:interoperabilityLevel = A
         '@ _:deOriginal    = DCAT-AP.de ordnet diese Eigenschaft allen DCAT-Ressourcen und Distributionen zu.
-        '@ sh:shapes       = ___TBD___(deutsche Besonderheit, kein Test des Vokabulars, Maximalzahl 1)
 
     <<optional>> dcterms:description ~> rdfs:Literal [*]
         '@ _:internalLink  = datenservice-beschreibung
@@ -936,7 +865,6 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService.description)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:DataService_Property_dct_description
     <<optional>> dcterms:license ~> dcterms:LicenseDocument [0..1]
         '@ rdfs:label      = Lizenz
         '@ _:internalLink  = datenservice-lizenz
@@ -947,7 +875,6 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_license)
         '@ _:vocabularyLink = #kv-licenses
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:DataService_Property_dct_license, ___TBD___(kein Test des Vokabulars)
     <<optional>> dcterms:accessRights ~> dcterms:RightsStatement [0..1]
         '@ rdfs:label      = Grad der Zugänglichkeit
         '@ _:internalLink  = datenservice-grad-zuganglichkeit
@@ -958,8 +885,7 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_access_rights)
         '@ adms:interoperabilityLevel = A
         '@ _:vocabularyLink = #kv-access-right
-        '@ adms:versionNotes = 3.0: Kontrolliertes Vokabular hinzugefügt.
-        '@ sh:shapes       = dcatap:DataService_Property_dct_accessRights
+        '@ adms:versionNotes = Harmonisierung: Kontrolliertes Vokabular hinzugefügt.
     <<optional>> dcterms:format ~> dcterms:MediaTypeOrExtent [*]
         '@ rdfs:label      = Format
         '@ _:internalLink  = datenservice-format
@@ -970,7 +896,7 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_format)
         '@ adms:interoperabilityLevel = A
         '@ _:vocabularyLink = #kv-file-type
-        '@ adms:versionNotes = 3.0: Eigenschaft aufgenommen.
+        '@ adms:versionNotes = Harmonisierung: Eigenschaft aufgenommen.
     <<optional>> dcatap:applicableLegislation ~> eli:LegalResource [*]
         '@ rdfs:label      = Rechtsgrundlage
         '@ _:internalLink  = datenservice-rechtsgrundlage
@@ -1007,7 +933,6 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService.servesdataset)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:data_service_serves_dataset)
     '@ adms:interoperabilityLevel = A
-    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Dataset)
 "dcat:DataService" --> "1"  "foaf:Agent"   : <<mandatory>> dcterms:publisher
     '@ rdfs:label      = Herausgeber
     '@ _:internalLink  = datenservice-herausgeber
@@ -1019,8 +944,8 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher)
     '@ _:deOriginal    = Erweiterung des Verwendungshinweises. Nutzung verpflichtend gemacht.
     '@ adms:interoperabilityLevel = E
-    '@ adms:versionNotes = 3.0: Eigenschaft aufgenommen.
-    '@ adms:versionNotes = 3.0: Anforderung: Nutzung verpflichtend gemacht.
+    '@ adms:versionNotes = Harmonisierung: Eigenschaft aufgenommen.
+    '@ adms:versionNotes = Weiterentwicklung: Nutzung verpflichtend gemacht.
 
 class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
     <<mandatory>> dcterms:title ~> rdfs:Literal [1..*]
@@ -1033,7 +958,7 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.title)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series)
         '@ adms:interoperabilityLevel = A
-        '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+        '@ adms:versionNotes = Harmonisierung: Neu hinzugefügt.
     <<mandatory>> dcterms:description ~> rdfs:Literal [1..*]
         '@ rdfs:label      = Beschreibung
         '@ _:internalLink  = datensatzserie-beschreibung
@@ -1045,7 +970,7 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.description)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description)
         '@ adms:interoperabilityLevel = A
-        '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+        '@ adms:versionNotes = Harmonisierung: Neu hinzugefügt.
     <<optional>> dcterms:accrualPeriodicity ~> dcterms:Frequency [0..1]
         '@ rdfs:label      = Aktualisierungsfrequenz
         '@ _:internalLink  = datensatzserie-aktualisierungsfrequenz
@@ -1057,7 +982,7 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_frequency)
         '@ adms:interoperabilityLevel = A
         '@ _:vocabularyLink = #kv-frequency
-        '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+        '@ adms:versionNotes = Harmonisierung: Neu hinzugefügt.
     <<optional>> dcterms:issued ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Veröffentlichungsdatum
         '@ _:internalLink  = datensatzserie-veroffentlichungsdatum
@@ -1068,7 +993,7 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.releasedate)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_release_date)
         '@ adms:interoperabilityLevel = A
-        '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+        '@ adms:versionNotes = Harmonisierung: Neu hinzugefügt.
     <<optional>> dcterms:modified ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Aktualisierungsdatum
         '@ _:internalLink  = datensatzserie-aktualisierungsdatum
@@ -1079,7 +1004,7 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.modificationdate)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_update_date)
         '@ adms:interoperabilityLevel = A
-        '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+        '@ adms:versionNotes = Harmonisierung: Neu hinzugefügt.
     <<optional>> dcatap:applicableLegislation ~> eli:LegalResource [*]
         '@ rdfs:label      = Rechtsgrundlage
         '@ _:internalLink  = datensatzserie-rechtsgrundlage
@@ -1105,7 +1030,7 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
 '@ rdfs:subClassOf = dcat:Dataset, dcat:Resource
 '@ _:resourceHeirloom = TBD
 '@ _:datasetHeirloom = TBD
-'@ adms:versionNotes = 3.0: Neu hinzugefügt.
+'@ adms:versionNotes = Harmonisierung: Neu hinzugefügt.
 
 "dcat:DatasetSeries" --> "*" "dcterms:Location"     : <<recommended>> dcterms:spatial
     '@ rdfs:label        = Räumliche Abdeckung
@@ -1119,7 +1044,7 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso      = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial)
     '@ adms:interoperabilityLevel = A
     '@ _:vocabularyLink  = #kv-spatial
-    '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+    '@ adms:versionNotes = Harmonisierung: Neu hinzugefügt.
 "dcat:DatasetSeries" --> "1"  "foaf:Agent"          : <<mandatory>> dcterms:publisher
     '@ rdfs:label      = Herausgeber
     '@ _:internalLink  = datensatzserie-herausgeber
@@ -1130,8 +1055,8 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
     '@ rdf:about       = http://purl.org/dc/terms/publisher
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.publisher)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher)
-    '@ adms:versionNotes = 3.0: Neu hinzugefügt.
-    '@ adms:versionNotes = 3.0: Anforderung: Nutzung verpflichtend gemacht.
+    '@ adms:versionNotes = Harmonisierung: Neu hinzugefügt.
+    '@ adms:versionNotes = Weiterentwicklung: Nutzung verpflichtend gemacht.
     '@ adms:interoperabilityLevel = A
     '@ _:deOriginal    = Nutzung verpflichtend gemacht.
 "dcat:DatasetSeries" --> "*" "dcterms:PeriodOfTime" : <<recommended>> dcterms:temporal
@@ -1144,7 +1069,7 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso      = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.temporalcoverage)
     '@ rdfs:seeAlso      = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal)
     '@ adms:interoperabilityLevel = A
-    '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+    '@ adms:versionNotes = Harmonisierung: Neu hinzugefügt.
 "dcat:DatasetSeries" --> "*" "vcard:Kind" : <<recommended>> dcat:contactPoint
     '@ rdfs:label      = Kontakt
     '@ _:internalLink  = datensatzserie-kontakt
@@ -1155,7 +1080,7 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.contactpoint)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point)
     '@ adms:interoperabilityLevel = A
-    '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+    '@ adms:versionNotes = Harmonisierung: Neu hinzugefügt.
 
 class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
     <<mandatory>> dcat:accessURL ~> rdfs:Resource [1..*]
@@ -1168,7 +1093,6 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.accessURL)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_access_url)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Distribution_Property_dcat_accessURL (erlaubt auch BlankNodes)
     <<mandatory>> dcterms:license ~> dcterms:LicenseDocument [1]
         '@ rdfs:label      = Lizenz
         '@ _:internalLink  = distribution-lizenz
@@ -1180,8 +1104,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ adms:interoperabilityLevel = E
         '@ _:deOriginal    = Kardinalität von `[0..1]` auf `[1]` geändert und die Eigenschaft damit verpflichtend gemacht.
         '@ _:vocabularyLink = #kv-licenses
-        '@ adms:versionNotes = 3.0: Kardinalität von `[0..1]` auf `[1]` geändert und die Eigenschaft damit verpflichtend gemacht.
-        '@ sh:shapes       = dcatap:Distribution_Property_dct_license, ___TBD___(kein Test des Vokabulars)
+        '@ adms:versionNotes = Weiterentwicklung: Kardinalität von `[0..1]` auf `[1]` geändert und die Eigenschaft damit verpflichtend gemacht.
     <<recommended>> dcterms:title ~> rdfs:Literal [*]
         '@ rdfs:label      = Titel
         '@ _:internalLink  = distribution-titel
@@ -1192,7 +1115,6 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_title)
         '@ adms:interoperabilityLevel = E
         '@ _:deOriginal    = Verbindlichkeit wurde von optional auf empfohlen hochgestuft.
-        '@ sh:shapes       = dcatap:Distribution_Property_dct_title
     <<recommended>> dcterms:modified ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Aktualisierungsdatum
         '@ _:internalLink  = distribution-aktualisierungsdatum
@@ -1203,8 +1125,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_update_date)
         '@ adms:interoperabilityLevel = E
         '@ _:deOriginal    = Verbindlichkeit wurde von optional auf empfohlen hochgestuft.
-        '@ sh:shapes       = dcatap:Distribution_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
-        '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
+        '@ adms:versionNotes = Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
     <<recommended>> dcterms:format ~> dcterms:MediaTypeOrExtent [0..1]
         '@ rdfs:label      = Format
         '@ _:internalLink  = distribution-format
@@ -1216,8 +1137,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_format)
         '@ adms:interoperabilityLevel = A
         '@ _:vocabularyLink = #kv-file-type
-        '@ sh:shapes       = dcatap:Distribution_Property_dct_format, ___TBD___(kein Test des Vokabulars)
-        '@ adms:versionNotes = 3.0: Errata: Wertebereichs auf dcterms:MediaTypeOrExtent geändert.
+        '@ adms:versionNotes = Errata: Wertebereichs auf dcterms:MediaTypeOrExtent geändert.
     <<recommended>> dcatap:availability ~> skos:Concept [0..1]
         '@ rdfs:label      = Verfügbarkeit
         '@ _:internalLink  = distribution-verfugbarkeit
@@ -1228,8 +1148,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.availability)
         '@ adms:interoperabilityLevel = A
         '@ _:vocabularyLink = #kv-availability
-        '@ sh:shapes       = dcatap:Distribution_Property_dcatap_availability, ___TBD___(kein Test des Vokabulars)
-        '@ adms:versionNotes = 3.0: Errata: Hinterlegte URL für den Wertebereichs auf skos:Concept geändert.
+        '@ adms:versionNotes = Errata: Hinterlegte URL für den Wertebereichs auf skos:Concept geändert.
 
     <<optional>> dcatde:licenseAttributionByText ~> rdfs:Literal [*]
         '@ rdfs:label      = Namensnennungstext für By-Clauses
@@ -1241,7 +1160,6 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdf:about       = http://dcat-ap.de/def/dcatde/licenseAttributionByText
         '@ adms:interoperabilityLevel = P
         '@ _:deOriginal    = Hilfskonstrukt bis zur Lösung in DCAT-AP.
-        '@ sh:shapes       = ___TBD___(deutsche Eigenschaft, kein Test, ob Ziel Literal)
     <<optional>> dcterms:description ~> rdfs:Literal [*]
         '@ rdfs:label      = Beschreibung
         '@ _:internalLink  = distribution-beschreibung
@@ -1253,7 +1171,6 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_description)
         '@ adms:interoperabilityLevel = E
         '@ _:deOriginal    = Verbindlichkeit wurde von empfohlen auf optional gesenkt.
-        '@ sh:shapes       = dcatap:Distribution_Property_dct_description
     <<optional>> dcat:byteSize ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Größe in Bytes
         '@ _:internalLink  = distribution-grosse-in-bytes
@@ -1264,8 +1181,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.bytesize)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_size)
         '@ adms:interoperabilityLevel = A
-        '@ adms:versionNotes = 3.0: Änderung der Range von xsd:decimal auf xsd:nonNegativeInteger.
-        '@ sh:shapes       = dcatap:Distribution_Property_dcat_byteSize
+        '@ adms:versionNotes = Harmonisierung: Änderung der Range von xsd:decimal auf xsd:nonNegativeInteger.
     <<optional>> dcterms:issued ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Veröffentlichungsdatum
         '@ _:internalLink  = distribution-veroffentlichungsdatum
@@ -1276,8 +1192,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.releasedate)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_release_date)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Distribution_Property_dct_issued (erlaubt auch xsd:gYear und xsd:gYearMonth)
-        '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
+        '@ adms:versionNotes = Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
     <<optional>> dcat:downloadURL ~> rdfs:Resource [*]
         '@ rdfs:label      = Download-URL
         '@ _:internalLink  = distribution-download-url
@@ -1288,7 +1203,6 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.downloadURL)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_download_url)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Distribution_Property_dcat_downloadURL (erlaubt auch BlankNodes)
     <<optional>> dcterms:language ~> dcterms:LinguisticSystem [*]
         '@ rdfs:label      = Sprache
         '@ _:internalLink  = distribution-sprache
@@ -1299,7 +1213,6 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.language)
         '@ adms:interoperabilityLevel = A
         '@ _:vocabularyLink = #kv-languages
-        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars)
     <<optional>> foaf:page ~> foaf:Document [*]
         '@ rdfs:label      = Dokumentation
         '@ _:internalLink  = distribution-dokumentation
@@ -1309,7 +1222,6 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.documentation)
         '@ rdfs:seeAlso    = [FOAF](http://xmlns.com/foaf/spec/#term_page)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource)
     <<optional>> dcterms:rights ~> dcterms:RightsStatement [0..1]
         '@ rdfs:label      = Rechte
         '@ _:internalLink  = distribution-rechte
@@ -1320,8 +1232,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.rights)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_rights)
         '@ adms:interoperabilityLevel = A
-        '@ adms:versionNotes = 3.0: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt.
-        '@ sh:shapes       = dcatap:Distribution_Property_dct_rights, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
+        '@ adms:versionNotes = Weiterentwicklung: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt.
     <<optional>> dcterms:conformsTo ~> dcterms:Standard [*]
         '@ rdfs:label      = Konform zu Standard
         '@ _:internalLink  = distribution-konform-zu-standard
@@ -1332,7 +1243,6 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.linkedschemas)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_conforms_to)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource oder BlankNode)
     <<optional>> dcat:mediaType ~> dcterms:MediaType [0..1]
         '@ rdfs:label      = Medientyp
         '@ _:internalLink  = distribution-medientyp
@@ -1344,7 +1254,6 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_media_type)
         '@ adms:interoperabilityLevel = A
         '@ _:vocabularyLink = #kv-iana-media-types
-        '@ sh:shapes       = dcatap:Distribution_Property_dcat_mediaType, ___TBD___(kein Test des Vokabulars)
     <<optional>> dcat:compressFormat ~> dcterms:MediaType [0..1]
         '@ rdfs:label      = Kompressionsformat
         '@ _:internalLink  = distribution-kompressionsformat
@@ -1355,7 +1264,6 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_compression_format)
         '@ adms:interoperabilityLevel = A
         '@ _:vocabularyLink = #kv-iana-media-types
-        '@ sh:shapes       = dcatap:Distribution_Property_dcat_compressFormat, ___TBD___(kein Test des Vokabulars)
     <<optional>> dcat:packageFormat ~> dcterms:MediaType [0..1]
         '@ rdfs:label      = Paketformat
         '@ _:internalLink  = distribution-paketformat
@@ -1366,7 +1274,6 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_packaging_format)
         '@ adms:interoperabilityLevel = A
         '@ _:vocabularyLink = #kv-iana-media-types
-        '@ sh:shapes       = dcatap:Distribution_Property_dcat_packageFormat, ___TBD___(kein Test des Vokabulars)
     <<optional>> odrl:hasPolicy ~> odrl:Policy [0..1]
         '@ rdfs:label      = Regelwerk
         '@ _:internalLink  = distribution-regelwerk
@@ -1376,7 +1283,6 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.haspolicy)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_has_policy)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Distribution_Property_odrl_hasPolicy, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
     <<optional>> adms:status ~> skos:Concept [0..1]
         '@ rdfs:label      = Status
         '@ _:internalLink  = distribution-status
@@ -1388,8 +1294,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [ADMS](https://www.w3.org/TR/vocab-adms/#adms-status)
         '@ adms:interoperabilityLevel = A
         '@ _:vocabularyLink = #kv-distribution-status
-        '@ sh:shapes       = dcatap:Distribution_Property_adms_status, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
-        '@ adms:versionNotes = 3.0: Änderung des kontrollierten Vokabulars.
+        '@ adms:versionNotes = Harmonisierung: Änderung des kontrollierten Vokabulars.
     <<optional>> dcat:spatialResolutionInMeters ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Räumliche Auflösung in Meter
         '@ _:internalLink  = distribution-raumliche-auflosung-in-meter
@@ -1402,7 +1307,7 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial_resolution)
         '@ adms:interoperabilityLevel = E
         '@ _:deOriginal    = Verwendungshinweis hinzugefügt.
-        '@ adms:versionNotes = 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0.
+        '@ adms:versionNotes = Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0.
     <<optional>> dcat:temporalResolution ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Zeitliche Auflösung
         '@ _:internalLink  = distribution-zeitliche-auflosung
@@ -1444,7 +1349,6 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.accessservice)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_access_service)
     '@ adms:interoperabilityLevel = A
-    '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel eine Ressource oder BlankNode)
 
 "dcat:Distribution"    --> "0..1"  "spdx:Checksum" : <<optional>> spdx:checksum
     '@ rdfs:label      = Prüfsumme
@@ -1455,10 +1359,9 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
     '@ rdf:about       = http://spdx.org/rdf/terms#checksum
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.checksum)
     '@ rdfs:seeAlso    = [SPDX](https://spdx.org/rdf/terms/#d4e165)
-    '@ adms:versionNotes = 3.0: Harmonisierung: Verwendungshinweis hinzugefügt.
+    '@ adms:versionNotes = Harmonisierung: Verwendungshinweis hinzugefügt.
     '@ adms:interoperabilityLevel = A
     '@ _:deOriginal    = DCAT-AP.de stellt ein erweitertes kontrolliertes Vokabular zur Verfügung, dass in der [Klasse Prüfsumme](#klasse-prufsumme) von der [Eigenschaft Algorithmus](#prufsumme-algorithmus) verwendet wird.
-    '@ sh:shapes       = dcatap:Distribution_Property_spdx_checksum, ___TBD___(kein Test, ob Ziel eine spdx:Checksum)
 
 class "dcterms:PeriodOfTime" <<recommended>> {
     <<recommended>> dcat:startDate ~> rdfs:Literal [0..1]
@@ -1471,8 +1374,7 @@ class "dcterms:PeriodOfTime" <<recommended>> {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Periodoftime.startdate)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:period_start_date)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:PeriodOfTime_Property_dcat_startDate
-        '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
+        '@ adms:versionNotes = Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
     <<recommended>> dcat:endDate ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Endzeitpunkt
         '@ _:internalLink  = zeitraum-endzeitpunkt
@@ -1483,8 +1385,7 @@ class "dcterms:PeriodOfTime" <<recommended>> {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Periodoftime.enddate)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:period_end_date)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:PeriodOfTime_Property_dcat_endDate
-        '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
+        '@ adms:versionNotes = Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
 
     <<optional>> time:hasBeginning ~> time:Instant [0..1]
         '@ rdfs:label      = Anfang
@@ -1496,7 +1397,6 @@ class "dcterms:PeriodOfTime" <<recommended>> {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Periodoftime.beginning)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:period_has_beginning)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:PeriodOfTime_Property_time_hasBeginning, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
     <<optional>> time:hasEnd ~> time:Instant [0..1]
         '@ rdfs:label      = Ende
         '@ _:internalLink  = zeitraum-ende
@@ -1507,7 +1407,6 @@ class "dcterms:PeriodOfTime" <<recommended>> {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Periodoftime.end)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:period_has_end)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:PeriodOfTime_Property_time_hasEnd, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
 }
 '@ rdfs:label        = Zeitraum
 '@ _:internalLink    = #klasse-zeitraum
@@ -1531,8 +1430,7 @@ class "dcterms:Location" <<optional>> {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Location.bbox)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:location_bbox)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Location_Shape_Property_dcat_bbox
-        '@ adms:versionNotes = 3.0: Errata: Korrektur des zu verwendenden Types.
+        '@ adms:versionNotes = Errata: Korrektur des zu verwendenden Types.
     <<recommended>> dcat:centroid ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Geografischer Mittelpunkt
         '@ _:internalLink  = standort-geografischer-mittelpunkt
@@ -1543,8 +1441,7 @@ class "dcterms:Location" <<optional>> {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Location.centroid)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:location_centroid)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Location_Shape_Property_dcat_centroid
-        '@ adms:versionNotes = 3.0: Errata: Korrektur des zu verwendenden Types.
+        '@ adms:versionNotes = Errata: Korrektur des zu verwendenden Types.
     <<optional>> locn:geometry ~> locn:Geometry [0..1]
         '@ rdfs:label      = Geometrie
         '@ _:internalLink  = standort-geometrie
@@ -1557,9 +1454,8 @@ class "dcterms:Location" <<optional>> {
         '@ adms:interoperabilityLevel = A
         '@ skos:scopeNote  = Der Wertebereich dieser Eigenschaft lässt jede Art von Geometriespezifikation zu.
         '@ skos:scopeNote  = Empfohlen wird z.B. die Angabe als WKT-Literal (`rdfs:Literal` getyped als `geo:wktLiteral`).
-        '@ adms:versionNotes = 3.0: Wertebereich auf locn:Geometry geändert.
-        '@ adms:versionNotes = 3.0: Verwendungshinweis von DCAT hinzugefügt.
-        '@ sh:shapes       = dcatap:Location_Shape_Property_locn_geometry
+        '@ adms:versionNotes = Harmonisierung: Wertebereich auf locn:Geometry geändert.
+        '@ adms:versionNotes = Harmonisierung: Verwendungshinweis von DCAT hinzugefügt.
 }
 '@ rdfs:label      = Standort
 '@ _:internalLink  = #klasse-standort
@@ -1582,7 +1478,6 @@ class "foaf:Agent" <<mandatory>> {
         '@ rdfs:seeAlso      = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Agent.name)
         '@ rdfs:seeAlso      = [FOAF Vocabulary](http://xmlns.com/foaf/spec/#term_name)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes         = dcatap:Agent_Property_foaf_name
     <<optional>> dcterms:type ~> skos:Concept [0..1]
         '@ rdfs:label        = Typ
         '@ _:internalLink    = verantwortliche-stelle-typ
@@ -1594,8 +1489,7 @@ class "foaf:Agent" <<mandatory>> {
         '@ rdfs:seeAlso      = [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type)
         '@ _:vocabularyLink  = #kv-adms-publisher
         '@ adms:interoperabilityLevel = A
-        '@ adms:versionNotes = 3.0: Errata: Link zur zu verwendenden Codeliste hinzugefügt, war zuvor bei `foaf:name` angegeben.
-        '@ sh:shapes         = dcatap:Agent_Property_dct_type, ___TBD___(kein Test des Vokabulars)
+        '@ adms:versionNotes = Errata: Link zur zu verwendenden Codeliste hinzugefügt, war zuvor bei `foaf:name` angegeben.
 }
 '@ rdfs:label      = Verantwortliche Stelle
 '@ _:internalLink  = #klasse-verantwortliche-stelle
@@ -1615,7 +1509,7 @@ class "vcard:Kind" <<recommended>> {
         '@ rdfs:seeAlso      = [VCard](https://www.w3.org/TR/vcard-rdf/#d4e891)
         '@ adms:interoperabilityLevel = P
         '@ _:deOriginal      = Von DCAT-AP.de eingeführte Eigenschaft.
-        '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+        '@ adms:versionNotes = Weiterentwicklung: Neu hinzugefügt.
     <<recommended>> vcard:hasEmail ~> rdfs:Resource [0..*]
         '@ rdfs:label        = E-Mail
         '@ _:internalLink    = kontaktinformationen-email
@@ -1627,7 +1521,7 @@ class "vcard:Kind" <<recommended>> {
         '@ rdfs:seeAlso      = [VCard](https://www.w3.org/TR/vcard-rdf/#d4e183)
         '@ adms:interoperabilityLevel = P
         '@ _:deOriginal      = Von DCAT-AP.de eingeführte Eigenschaft. Verwendungshinweis ergänzt.
-        '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+        '@ adms:versionNotes = Weiterentwicklung: Neu hinzugefügt.
     <<recommended>> vcard:hasURL ~> rdfs:Resource [0..*]
         '@ rdfs:label        = Kontaktformular/Chatbot
         '@ _:internalLink    = kontaktinformationen-url
@@ -1639,7 +1533,7 @@ class "vcard:Kind" <<recommended>> {
         '@ rdfs:seeAlso      = [VCard](https://www.w3.org/TR/vcard-rdf/#d4e605)
         '@ adms:interoperabilityLevel = P
         '@ _:deOriginal      = Von DCAT-AP.de eingeführte Eigenschaft. Verwendungshinweis ergänzt.
-        '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+        '@ adms:versionNotes = Weiterentwicklung: Neu hinzugefügt.
     <<optional>> vcard:hasTelephone ~> rdfs:Resource [0..*]
         '@ rdfs:label        = Telefon
         '@ _:internalLink    = kontaktinformationen-telefon
@@ -1651,7 +1545,7 @@ class "vcard:Kind" <<recommended>> {
         '@ rdfs:seeAlso      = [VCard](https://www.w3.org/TR/vcard-rdf/#d4e563)
         '@ adms:interoperabilityLevel = P
         '@ _:deOriginal      = Von DCAT-AP.de eingeführte Eigenschaft.
-        '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+        '@ adms:versionNotes = Weiterentwicklung: Neu hinzugefügt.
 }
 '@ rdfs:label      = Kontaktinformationen
 '@ _:internalLink  = #klasse-kontaktinformationen
@@ -1659,7 +1553,7 @@ class "vcard:Kind" <<recommended>> {
 '@ rdfs:seeAlso    = [VCard](https://www.w3.org/TR/vcard-rdf/#d4e1819)
 '@ rdfs:comment    = Die Klasse wird genutzt, um Kontaktinformationen zu bündeln.
 '@ _:usedBy        = dcat:contactPoint (dcat:Dataset, dcat:DatasetSeries)
-'@ adms:versionNotes = 3.0: Neu hinzugefügt.
+'@ adms:versionNotes = Weiterentwicklung: Neu hinzugefügt.
 
 class "adms:Identifier" <<optional>> {
     <<mandatory>> skos:notation ~> rdfs:Literal  [1]
@@ -1672,7 +1566,6 @@ class "adms:Identifier" <<optional>> {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Identifier.notation)
         '@ rdfs:seeAlso    = [ADMS](https://www.w3.org/TR/vocab-adms/#skos_notation)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes         = dcatap:Identifier_Property_skos_notation, ___TBD___(kein Test auf minCount)
 }
 '@ rdfs:label      = Identifier
 '@ _:internalLink  = #klasse-identifier
@@ -1699,8 +1592,7 @@ class "spdx:Checksum" <<optional>> {
         '@ adms:interoperabilityLevel = A
         '@ _:deOriginal    = dcat-ap.de führt eine eigene Liste an unterstützten Hashalgorithmen.
         '@ _:vocabularyLink = #kv-hash-algorithms
-        '@ adms:versionNotes = 3.0: Range von `rdfs:Resource` auf `spdx:ChecksumAlgorithm` geändert.
-        '@ sh:shapes       = dcatap:Checksum_Property_spdx_algorithm <-- DEAKTIVIEREN DA SHA1 ERZWUNGEN!, ___TBD___(kein Test des Vokabulars, minCount, maxCount)
+        '@ adms:versionNotes = Errata: Range von `rdfs:Resource` auf `spdx:ChecksumAlgorithm` geändert.
     <<mandatory>> spdx:checksumValue ~> rdfs:Literal [1]
         '@ rdfs:label      = Prüfsummenwert
         '@ _:internalLink  = prufsumme-prufsummenwert
@@ -1712,7 +1604,6 @@ class "spdx:Checksum" <<optional>> {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:checksum_checksum_value)
         '@ rdfs:seeAlso    = [SPDX](https://spdx.org/rdf/terms/#d4e1053)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Checksum_Property_spdx_checksumValue
 }
 '@ rdfs:label      = Prüfsumme
 '@ _:internalLink  = #klasse-prufsumme
@@ -1734,8 +1625,7 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#CatalogueRecord.modificationdate)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_update_date)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_modified (erlaubt auch xsd:gYear und xsd:gYearMonth)
-        '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
+        '@ adms:versionNotes = Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
 
     <<recommended>> dcterms:conformsTo ~> dcterms:Standard [*]
         '@ rdfs:label      = Application Profile der Metadaten
@@ -1746,9 +1636,8 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#CatalogueRecord.applicationprofile)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:record_conforms_to)
         '@ adms:interoperabilityLevel = A
-        '@ adms:versionNotes = 3.0: Kardinalität von `0..1` auf `*` geändert.
-        '@ adms:versionNotes = 3.0: Errata: Anzeige des Wertebereichs korrigiert.
-        '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_conformsTo, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
+        '@ adms:versionNotes = Harmonisierung: Kardinalität von `0..1` auf `*` geändert.
+        '@ adms:versionNotes = Errata: Anzeige des Wertebereichs korrigiert.
     <<recommended>> adms:status ~> skos:Concept [0..1]
         '@ rdfs:label      = Änderungstyp
         '@ _:internalLink  = katalogeintrag-anderungstyp
@@ -1759,7 +1648,6 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ rdfs:seeAlso    = [ADMS](https://www.w3.org/TR/vocab-adms/#adms-status)
         '@ adms:interoperabilityLevel = A
         '@ _:deOriginal    = Diese Eigenschaft wird von DCAT-AP.de nicht unterstützt, unter anderem weil das eigentlich vorgesehene Vokabular nicht vorhanden ist.
-        '@ sh:shapes       = dcatap:CatalogRecord_Property_adms_status, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode), ___TBD___(Warnung, dass Feld nicht zu verwenden ist)
     <<recommended>> dcterms:issued ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Veröffentlichungsdatum
         '@ _:internalLink  = katalogeintrag-veroffentlichungsdatum
@@ -1770,8 +1658,7 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#CatalogueRecord.listingdate)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:record_listing_date)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_issued (erlaubt auch xsd:gYear und xsd:gYearMonth)
-        '@ adms:versionNotes = 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
+        '@ adms:versionNotes = Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt.
 
     <<optional>> dcterms:title ~> rdfs:Literal [*]
         '@ rdfs:label      = Titel
@@ -1783,7 +1670,6 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#CatalogueRecord.title)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:record_title)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_title
     <<optional>> dcterms:description ~> rdfs:Literal [*]
         '@ rdfs:label      = Beschreibung
         '@ _:internalLink  = katalogeintrag-beschreibung
@@ -1794,7 +1680,6 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#CatalogueRecord.description)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:record_description)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_description
     <<optional>> dcterms:language ~> dcterms:LinguisticSystem [*]
         '@ rdfs:label      = Sprache
         '@ _:internalLink  = katalogeintrag-sprache
@@ -1806,7 +1691,6 @@ class "dcat:CatalogRecord" <<optional>> {
         '@ rdfs:seeAlso    = [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/language)
         '@ adms:interoperabilityLevel = A
         '@ _:vocabularyLink = #kv-languages
-        '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test des Vokabulars)
 }
 '@ rdfs:label      = Katalogeintrag
 '@ _:internalLink  = #klasse-katalogeintrag
@@ -1825,8 +1709,7 @@ class "dcat:CatalogRecord" <<optional>> {
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#CatalogueRecord.primarytopic)
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:record_primary_topic)
     '@ adms:interoperabilityLevel = A
-    '@ sh:shapes       = dcatap:CatalogRecord_Property_foaf_primaryTopic
-    '@ adms:versionNotes = 3.0: Aufnahme der Ressource `dcat:DatasetSeries`
+    '@ adms:versionNotes = Harmonisierung: Aufnahme der Ressource `dcat:DatasetSeries`
 "dcat:CatalogRecord" --> "0..1"  "dcat:CatalogRecord" : <<optional>> dcterms:source
     '@ rdfs:label      = Original-Metadaten der Ressource
     '@ _:internalLink  = katalogeintrag-original-metadaten-der-ressource
@@ -1835,7 +1718,6 @@ class "dcat:CatalogRecord" <<optional>> {
     '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#CatalogueRecord.sourcemetadata)
     '@ rdfs:seeAlso    = [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source)
     '@ adms:interoperabilityLevel = A
-    '@ sh:shapes       = dcatap:CatalogRecord_Property_dct_source, ___TBD___(kein Test, ob Ziel ein dcat:CatalogRecord)
 
 class "dcat:Relationship" <<optional>> {
     <<mandatory>> dcat:hadRole ~> dcat:Role [1..*]
@@ -1848,7 +1730,6 @@ class "dcat:Relationship" <<optional>> {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Relationship.hadrole)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:relationship_hadRole)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Relationship_Property_dcat_hadRole, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
     <<mandatory>> dcterms:relation ~> rdfs:Resource [1..*]
         '@ rdfs:label      = Beziehung
         '@ _:internalLink  = beziehung-beziehung
@@ -1858,7 +1739,6 @@ class "dcat:Relationship" <<optional>> {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Relationship.relation)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:relationship_relation)
         '@ adms:interoperabilityLevel = A
-        '@ sh:shapes       = dcatap:Relationship_Property_dct_relation, ___TBD___(kein Test, ob Ziel eine Ressource oder BlankNode)
 }
 '@ rdfs:label      = Beziehung
 '@ _:internalLink  = #klasse-beziehung
@@ -1879,7 +1759,6 @@ class "prov:Attribution" <<optional>> {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:relationship_hadRole)
         '@ adms:interoperabilityLevel = P
         '@ _:deOriginal    = Von DCAT-AP.de eingeführte Eigenschaft.
-        '@ sh:shapes       = ___TBD___(kein Test auf minCount, kein Test, ob Ziel eine Ressource oder BlankNode)
     <<mandatory>> prov:agent ~> prov:Agent [1..*]
         '@ rdfs:label      = Agent
         '@ _:internalLink  = rollenzuordnung-agent
@@ -1889,7 +1768,6 @@ class "prov:Attribution" <<optional>> {
         '@ rdfs:seeAlso    = [PROV-O](https://www.w3.org/TR/prov-o/#p_agent)
         '@ adms:interoperabilityLevel = P
         '@ _:deOriginal      = Von DCAT-AP.de eingeführte Eigenschaft.
-        '@ sh:shapes       = ___TBD___(kein Test auf minCount, kein Test, ob Ziel eine Ressource oder BlankNode)
 }
 '@ rdfs:label      = Rollenzuordnung
 '@ _:internalLink  = #klasse-rollenzuordnung

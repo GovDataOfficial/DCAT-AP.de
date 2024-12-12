@@ -89,7 +89,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft enthält das Datum der Herausgabe/Emission (z.B. in Form einer Veröffentlichung) des Kataloges. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.releasedate), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_release_date)  | 
-> | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+> | Änderungen zur Vorversion | Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -102,7 +102,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation des Kataloges. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.modificationdate), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_update_date)  | 
-> | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+> | Änderungen zur Vorversion | Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -194,7 +194,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft verknüpft den Katalog mit einem Datensatz, welcher somit Teil des Kataloges wird. |
 > | Verwendungshinweis | Da leere Kataloge in der Regel auf Probleme hinweisen, sollte diese Eigenschaft mit der Eigenschaft "Datenservice" kombiniert werden, um eine Überprüfung auf leere Kataloge zu implementieren. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.dataset), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_dataset)  | 
-> | Änderungen zur Vorversion | 3.0: Harmonisierung: Kardinalität von `1..*` auf `*` geändert. Verbindlichkeit auf "Empfohlen" gesenkt. | 
+> | Änderungen zur Vorversion | Harmonisierung: Kardinalität von `1..*` auf `*` geändert. Verbindlichkeit auf "Empfohlen" gesenkt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -208,7 +208,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft verweist auf eine juristische Darlegung, welche die mit dem Katalog assoziierten Nutzungsbestimmungen spezifiziert. |
 > | Verwendungshinweis | Gemeint ist damit zum Beispiel ein Link zu Nutzungsbedingungen, wie "Terms of Use", die zusätzlich zu oder statt einer Lizenz bestehen. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.rights), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_rights)  | 
-> | Änderungen zur Vorversion | 3.0: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt. | 
+> | Änderungen zur Vorversion | Weiterentwicklung: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -319,7 +319,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatap:availability`](#datensatz-verfugbarkeit), [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcat:version`](#datensatz-versionsbezeichnung), [`dcatap:applicableLegislation`](#datensatz-rechtsgrundlage), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcterms:provenance`](#datensatz-provenienz), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`prov:wasGeneratedBy`](#datensatz-wurde-erzeugt-von), [`dcat:spatialResolutionInMeters`](#datensatz-raumliche-auflosung-in-meter), [`dcterms:references`](#datensatz-referenziert), [`dcterms:spatial`](#datensatz-raumliche-abdeckung), [`dcterms:publisher`](#datensatz-herausgeber), [`dcterms:contributor`](#datensatz-bearbeiter), [`dcatde:originator`](#datensatz-urheber), [`geodcatap:originator`](#datensatz-geodcatap-urheber), [`dcatde:maintainer`](#datensatz-verwalter), [`geodcatap:custodian`](#datensatz-geodcatap-verwalter).<br>
+[`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatap:availability`](#datensatz-verfugbarkeit), [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatap:applicableLegislation`](#datensatz-rechtsgrundlage), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcterms:provenance`](#datensatz-provenienz), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`prov:wasGeneratedBy`](#datensatz-wurde-erzeugt-von), [`dcat:spatialResolutionInMeters`](#datensatz-raumliche-auflosung-in-meter), [`dcterms:references`](#datensatz-referenziert), [`dcterms:spatial`](#datensatz-raumliche-abdeckung), [`dcterms:publisher`](#datensatz-herausgeber), [`dcterms:contributor`](#datensatz-bearbeiter), [`dcatde:originator`](#datensatz-urheber), [`geodcatap:originator`](#datensatz-geodcatap-urheber), [`dcatde:maintainer`](#datensatz-verwalter), [`geodcatap:custodian`](#datensatz-geodcatap-verwalter).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. | Interop. |
@@ -342,7 +342,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Andere ID](#datensatz-andere-id) | `adms:identifier` | [`adms:Identifier`](http://www.w3.org/ns/adms#Identifier) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Veröffentlichungsdatum](#datensatz-veroffentlichungsdatum) | `dcterms:issued` | [`rdfs:Literal`]() | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Aktualisierungsdatum](#datensatz-aktualisierungsdatum) | `dcterms:modified` | [`rdfs:Literal`]() | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Versionsbezeichnung](#datensatz-versionsbezeichnung) | `dcat:version` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
+| [Versionsbezeichnung](#datensatz-versionsbezeichnung) | `dcat:version` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Versionsbezeichnung (DEPRECATED)](#datensatz-versionsbezeichnung-deprecated) | `owl:versionInfo` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Versionserläuterung](#datensatz-versionserlauterung) | `adms:versionNotes` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Rechtsgrundlage](#datensatz-rechtsgrundlage) | `dcatap:applicableLegislation` | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
@@ -418,7 +418,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft verweist auf die Stelle oder Person, die für Bereitstellung des Datensatzes verantwortlich ist. |
 > | Verwendungshinweis | Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zum-herausgeber) genauer beschrieben. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.publisher), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher)  | 
-> | Änderungen zur Vorversion | 3.0: Anforderung: Nutzung verpflichtend gemacht. | 
+> | Änderungen zur Vorversion | Weiterentwicklung: Nutzung verpflichtend gemacht. | 
 > | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
 > | Änderungen durch DCAT-AP.de | Erweiterung des Verwendungshinweises. Nutzung verpflichtend gemacht. | 
 <br>
@@ -458,7 +458,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | DEPRECATED: Diese Eigenschaft verknüpft einen Datensatz mit dem von ihm abgedeckten administrativen Gebiet der Bundesrepublik Deutschland, etwa ein konkretes Bundesland, eine Kommune oder ein Landkreis repräsentiert durch eine URI. |
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#verwaltungspolitischer-geobezug-als-uri) genauer beschrieben. | 
 > | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-political-geocoding-uri) |
-> | Änderungen zur Vorversion | 3.0: [DEPRECATED](#glossar-deprecated) | 
+> | Änderungen zur Vorversion | Weiterentwicklung: [DEPRECATED](#glossar-deprecated) | 
 > | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
@@ -562,7 +562,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | DEPRECATED: Diese Eigenschaft enthält die geografische Abdeckung eines Datensatzes, repräsentiert durch die Bezeichnung eines administrativen Gebiets oder eines fachlichen Bezugs als Freitext. |
 > | Verwendungshinweis | Ergänzend als Text bzw. alleinstehend für alle Fälle bei denen die geopolitische Abdeckung nicht durch eine URI angegeben werden kann (z.B. bei komplexeren Bund-Länder-Kooperationen oder auf kommunaler Ebene). <br>Beispiele: "Gemeinden des Wasserzweckverbands Straubing-Land" oder "Verband Region Rhein-Neckar".<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#geobezug-als-beschreibender-text) genauer beschrieben. Sie kann für parallele Sprachversionen wiederholt werden. | 
-> | Änderungen zur Vorversion | 3.0: [DEPRECATED](#glossar-deprecated) | 
+> | Änderungen zur Vorversion | Weiterentwicklung: [DEPRECATED](#glossar-deprecated) | 
 > | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
@@ -589,7 +589,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft verweist auf sekundäre IDs des Datensatzes. |
 > | Verwendungshinweis | Beispiele dafür sind [DataCite](http://www.datacite.org/), [DOI (Digital Object Identifier)](http://www.doi.org/), [EZID](https://ezid.cdlib.org/), [W3ID: Permanent Identifiers for the Web](https://w3id.org/) oder andere fachspezifische Identifier.<br>Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#identifier) genauer beschrieben. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.otheridentifier), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#dereferenceable-identifiers)  | 
-> | Änderungen zur Vorversion | 3.0: Errata: Link der Range korrigiert und Verwendungshinweis überarbeitet. | 
+> | Änderungen zur Vorversion | Errata: Link der Range korrigiert und Verwendungshinweis überarbeitet. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -602,7 +602,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft enthält das Datum der Herausgabe/Emission (z.B. in Form einer Veröffentlichung) des Datensatzes. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.releasedate), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_release_date)  | 
-> | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+> | Änderungen zur Vorversion | Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -616,7 +616,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation des Datensatzes. |
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#erkennung-von-dubletten) genauer beschrieben. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.modificationdate), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_update_date)  | 
-> | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+> | Änderungen zur Vorversion | Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -626,12 +626,12 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > |:---------------------------|:-------------------------------------------|
 > | Wertebereich               | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) |
 > | Verbindlichkeit            | Optional |
-> | Multiplizität              | `[*]`                   |
+> | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft enthält eine Versionsnummer oder anderweitige Versionskennzeichnung des Datensatzes. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.version), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
-> | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
-> | Änderungen durch DCAT-AP.de | TBD: DCAT-AP.de gibt eine Kardinalität von `*` statt `0..1` an. | 
+> | Änderungen zur Vorversion | Harmonisierung: Neu hinzugefügt. | 
+> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
+
 <br>
 
 ###  Datensatz: Versionsbezeichnung (DEPRECATED) {#datensatz-versionsbezeichnung-deprecated}
@@ -643,7 +643,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft enthält eine Versionsnummer oder anderweitige Versionskennzeichnung des Datensatzes. |
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zur-versionierung) genauer beschrieben. | 
 > | Weiterführende Dokumentationen | [OWL](https://www.w3.org/TR/owl-ref/#versionInfo-def)  | 
-> | Änderungen zur Vorversion | 3.0: [DEPRECATED](#glossar-deprecated) | 
+> | Änderungen zur Vorversion | Harmonisierung: [DEPRECATED](#glossar-deprecated) | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -683,7 +683,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | Dieses Feld dokumentiert als Freitext optional die Rechtsgrundlage für den Zugang zu den Informationen (die Zugangseröffnung), d.h. die originäre Rechtsgrundlage für den Zugang zu Daten der Verwaltung. |
 > | Verwendungshinweis | Diese Eigenschaft kann für parallele Sprachversionen wiederholt werden.<br>Beispiele: Public Sector Information Directive (PSI-Direktive), Umweltinformationsgesetz (UIG), deutsche Informationsfreiheits- (IFG) und Transparenzgesetze. | 
-> | Änderungen zur Vorversion | 3.0: [DEPRECATED](#glossar-deprecated) | 
+> | Änderungen zur Vorversion | Weiterentwicklung: [DEPRECATED](#glossar-deprecated) | 
 > | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
@@ -761,7 +761,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft verweist auf Informationen, die darlegen, ob der Datensatz öffentlich zugänglich ist, Zugriffseinschränkungen existieren oder er nicht-öffentlich ist. |
 > | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-access-right) |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.accessrights), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_access_rights)  | 
-> | Änderungen zur Vorversion | 3.0: Kontrolliertes Vokabular hinzugefügt. | 
+> | Änderungen zur Vorversion | Harmonisierung: Kontrolliertes Vokabular hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -800,7 +800,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | DEPRECATED: Eine URI, die auf den Prozess zur Qualitätssicherung des Datensatzes verweist. Es handelt sich idealerweise um die URL einer Webseite. |
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#webseite-mit-beschreibung-des-qualitatssicherungsprozesses) genauer beschrieben. | 
-> | Änderungen zur Vorversion | 3.0: [DEPRECATED](#glossar-deprecated) | 
+> | Änderungen zur Vorversion | Weiterentwicklung: [DEPRECATED](#glossar-deprecated) | 
 > | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
@@ -814,7 +814,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft bezieht sich auf den Typ des Datensatzes. |
 > | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-dataset-type) |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.type), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_type)  | 
-> | Änderungen zur Vorversion | 3.0: Kardinalität von `0..1` auf `*` geändert.<br>3.0: Namen vereinfacht.<br>3.0: Optionale Codeliste hinzugefügt. | 
+> | Änderungen zur Vorversion | Harmonisierung: Kardinalität von `0..1` auf `*` geändert.<br>Harmonisierung: Optionale Codeliste hinzugefügt.<br>Weiterentwicklung: Namen vereinfacht. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -841,7 +841,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft bezieht sich auf den kleinstmöglichen räumlichen Abstand, der in einem Datensatz auflösbar ist, gemessen in Metern. |
 > | Verwendungshinweis | Kann die räumliche Auflösung nicht in Metern beschrieben werden, können stattdessen die spezielleren Eigenschaften verwendet werden, die [GeoDCAT-AP](https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/#spatial-resolution-spatial-resolution-of-the-dataset) hierfür zur Verfügung stellt. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.spatialresolution), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial_resolution)  | 
-> | Änderungen zur Vorversion | 3.0: Errata: Kardinalität von `[*]` wie bei DCAT-AP auf `[0..1]` angepasst. | 
+> | Änderungen zur Vorversion | Errata: Kardinalität von `[*]` wie bei DCAT-AP auf `[0..1]` angepasst. | 
 > | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
 > | Änderungen durch DCAT-AP.de | Verwendungshinweis hinzugefügt. | 
 <br>
@@ -854,7 +854,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | Diese Eigenschaft bezieht sich auf den kürzesten im Datensatz auflösbaren Zeitraum. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.temporalresolution), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal_resolution)  | 
-> | Änderungen zur Vorversion | 3.0: Errata: Kardinalität von `[*]` wie bei DCAT-AP auf `[0..1]` angepasst.<br>3.0: Errata: Anzeige des Wertebereichs korrigiert und weiterführende Dokumentation zu DCAT korrigiert. | 
+> | Änderungen zur Vorversion | Errata: Kardinalität von `[*]` wie bei DCAT-AP auf `[0..1]` angepasst.<br>Errata: Anzeige des Wertebereichs korrigiert und weiterführende Dokumentation zu DCAT korrigiert. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -928,7 +928,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | Diese Eigenschaft bezieht sich auf einen verwandten Datensatz in Form einer weiteren/nachfolgenden Version, Edition oder Adaption des beschriebenen Datensatzes. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.hasversion), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_has_version)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+> | Änderungen zur Vorversion | Harmonisierung: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -941,7 +941,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | Diese Eigenschaft bezieht sich auf einen verwandten Datensatz in Form einer weiteren/nachfolgenden Version, Edition oder Adaption des beschriebenen Datensatzes. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#deprecated-properties-and-classes), [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/hasVersion)  | 
-> | Änderungen zur Vorversion | 3.0: [DEPRECATED](#glossar-deprecated) | 
+> | Änderungen zur Vorversion | Harmonisierung: [DEPRECATED](#glossar-deprecated) | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -954,7 +954,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | Diese Eigenschaft bezieht sich auf einen verwandten Datensatz, der vom beschriebenen Datensatz eine vorherige Version, Edition oder Adaption ist. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#deprecated-properties-and-classes), [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isVersion)  | 
-> | Änderungen zur Vorversion | 3.0: [DEPRECATED](#glossar-deprecated) | 
+> | Änderungen zur Vorversion | Harmonisierung: [DEPRECATED](#glossar-deprecated) | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -980,7 +980,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft verweist auf Stellen oder Personen, die die Daten erstellt haben. Die Autorenschaft umfasst für gewöhnlich das Recht am geistigen Eigentum |
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#weitere-wichtige-rollen) genauer beschrieben. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.creator), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_creator)  | 
-> | Änderungen zur Vorversion | 3.0: Errata: War fälschlicherweise als Ergänzung durch DCAT-AP.de angegeben. | 
+> | Änderungen zur Vorversion | Errata: War fälschlicherweise als Ergänzung durch DCAT-AP.de angegeben. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1006,7 +1006,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | DEPRECATED: Diese Eigenschaft verweist auf die Personen, die Urheberrechte am Datensatz haben. Geschützt ist laut Urheberrecht ein Werk, das einer persönlichen geistigen Schöpfung seines Urhebers entspringt.<br>Vgl.: https://de.wikipedia.org/wiki/Urheberrecht_(Deutschland). |
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#weitere-wichtige-rollen) genauer beschrieben. | 
-> | Änderungen zur Vorversion | 3.0: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcatap:originator`](#datensatz-geodcatap-urheber). | 
+> | Änderungen zur Vorversion | Weiterentwicklung: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcatap:originator`](#datensatz-geodcatap-urheber). | 
 > | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
@@ -1020,7 +1020,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft verweist auf die Personen, die die Ressource erstellt haben. |
 > | Verwendungshinweis | Gemeint ist dabei die Person, die Urheberrechte an der Ressource haben. Geschützt ist laut Urheberrecht ein Werk, das einer persönlichen geistigen Schöpfung seines Urhebers entspringt.<br>Vgl.: https://de.wikipedia.org/wiki/Urheberrecht_(Deutschland). | 
 > | Weiterführende Dokumentationen | [GeoDCAT-AP](https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/#originator)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. Ersetzt `dcatde:originator`. | 
+> | Änderungen zur Vorversion | Weiterentwicklung: Neu hinzugefügt. Ersetzt `dcatde:originator`. | 
 > | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 > | Änderungen durch DCAT-AP.de | Von GeoDCAT-AP übernommene Eigenschaft. Verwendungshinweis angepasst. | 
 <br>
@@ -1033,7 +1033,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | DEPRECATED: Diese Eigenschaft verweist auf die Stellen oder Personen, die Verantwortung und Rechenschaftspflicht für die Daten und ihre angemessene Pflege übernehmen. |
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#weitere-wichtige-rollen) genauer beschrieben. | 
-> | Änderungen zur Vorversion | 3.0: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcatap:custodian`](#datensatz-geodcatap-verwalter). | 
+> | Änderungen zur Vorversion | Weiterentwicklung: [DEPRECATED](#glossar-deprecated). Wird ersetzt durch [`geodcatap:custodian`](#datensatz-geodcatap-verwalter). | 
 > | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
@@ -1046,7 +1046,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | Diese Eigenschaft verweist auf die Stellen oder Personen, die Verantwortung und Rechenschaftspflicht für die Daten und ihre angemessene Pflege übernehmen. |
 > | Weiterführende Dokumentationen | [GeoDCAT-AP](https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/#custodian)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. Ersetzt `dcatde:maintainer`. | 
+> | Änderungen zur Vorversion | Weiterentwicklung: Neu hinzugefügt. Ersetzt `dcatde:maintainer`. | 
 > | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 > | Änderungen durch DCAT-AP.de | Von GeoDCAT-AP übernommene Eigenschaft. | 
 <br>
@@ -1060,7 +1060,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft verweist auf die Datensatzserie zu der der Datensatz gehört. |
 > | Verwendungshinweis | Pflichteigenschaft, wenn es sich um einen Datensatz handelt, der zu einer Datensatzserie gehören soll. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.inseries), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_in_series)  | 
-> | Änderungen zur Vorversion | 3.0: Im Zuge der Einführung von `dcat:DatasetSeries` hinzugefügt. | 
+> | Änderungen zur Vorversion | Harmonisierung: Im Zuge der Einführung von `dcat:DatasetSeries` hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1139,7 +1139,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft verweist auf die Stelle oder Person, die für Bereitstellung des Datenservices verantwortlich ist. |
 > | Verwendungshinweis | Es ist zugleich die Stelle oder Person, die über die Einräumung von Zugang und Nutzungsrechten für Dritte entschieden hat. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService.publisher), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher)  | 
-> | Änderungen zur Vorversion | 3.0: Eigenschaft aufgenommen.<br>3.0: Anforderung: Nutzung verpflichtend gemacht. | 
+> | Änderungen zur Vorversion | Harmonisierung: Eigenschaft aufgenommen.<br>Weiterentwicklung: Nutzung verpflichtend gemacht. | 
 > | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
 > | Änderungen durch DCAT-AP.de | Erweiterung des Verwendungshinweises. Nutzung verpflichtend gemacht. | 
 <br>
@@ -1153,7 +1153,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Die Beschreibung der Services, die unter den angebenen Endpunkten erreicht werden können. |
 > | Verwendungshinweis | Diese Eigenschaft gibt spezifische Details zu den Endpunkten an, während die Eigenschaft dcterms:conformsTo verwendet wird, um den allgemeinen Standard oder die Spezifikation anzugeben, den die Endpunkte anwenden. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService.endpointdescription), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:data_service_endpoint_description)  | 
-> | Änderungen zur Vorversion | 3.0: In Anlehnung an DCAT-AP 3.0 wurde ein neuer Verwendungshinweis aufgenommen. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1217,7 +1216,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft verweist auf Informationen, die darlegen, ob der Datenservice öffentlich zugänglich ist, Zugriffseinschränkungen existieren oder er nicht-öffentlich ist. |
 > | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-access-right) |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService.accessrights), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_access_rights)  | 
-> | Änderungen zur Vorversion | 3.0: Kontrolliertes Vokabular hinzugefügt. | 
+> | Änderungen zur Vorversion | Harmonisierung: Kontrolliertes Vokabular hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1231,7 +1230,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Die Datenformate, die beim Abruf der `dcat:endpointURL` zurückgegeben werden können. |
 > | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-file-type) |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService.format), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_format)  | 
-> | Änderungen zur Vorversion | 3.0: Eigenschaft aufgenommen. | 
+> | Änderungen zur Vorversion | Harmonisierung: Eigenschaft aufgenommen. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1263,7 +1262,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verwendungshinweis | Es wird empfohlen, Datensatzserien ohne einen Datensatz in der Sammlung zu vermeiden. Es sollte mindestens ein Datensatz über die Eigenschaft `dcat:inSeries` auf eine Datensatzserie verweisen.  |
 > | eingebunden über | dcat:inSeries (dcat:Dataset)         | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series) |
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. |
+> | Änderungen zur Vorversion | Harmonisierung: Neu hinzugefügt. |
 > | Änderungen durch DCAT-AP.de | DCAT-AP besagt, dass die Datensatzserie lediglich eine Subklasse von `dcat:Resource` ist. DCAT jedoch sagt, dass es eine Subklasse von `dcat:Dataset` ist. <br>Bis dieser Widerspruch aufgelöst wird, wird die Klasse in der [UML-Darstellung](#uml-diagramm) als Subklasse von `dcat:Resource` geführt, es wird aber dennoch auf die mögliche Verwendung von Eigenschaften von `dcat:Dataset` verwiesen.    |
 <br>
 
@@ -1300,7 +1299,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft bezeichnet den einer Datensatzserie zugewiesenen Titel. |
 > | Verwendungshinweis | Diese Eigenschaft kann für parallele Sprachversionen des Datensatztitels wiederholt werden. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.title), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+> | Änderungen zur Vorversion | Harmonisierung: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1314,7 +1313,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft enthält eine Beschreibung der Datensatzserie als Freitext. |
 > | Verwendungshinweis | Diese Eigenschaft kann für parallel existierende Sprachversionen der Beschreibung wiederholt werden.<br>Es wird empfohlen, eine Angabe zu den Dimensionen zu machen, über die sich die Datensatzserie erstreckt. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.description), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+> | Änderungen zur Vorversion | Harmonisierung: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1328,7 +1327,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft verweist auf die Stelle oder Person, die für Bereitstellung der Datensatzserie verantwortlich ist. |
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zum-herausgeber) genauer beschrieben.<br>Der Herausgeber der Datensatzserie ist möglicherweise nicht der Herausgeber aller Datensätze.  So könnte z. B. ein digitales Archiv die Veröffentlichung älterer Datensätze der Reihe übernehmen.   | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.publisher), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt.<br>3.0: Anforderung: Nutzung verpflichtend gemacht. | 
+> | Änderungen zur Vorversion | Harmonisierung: Neu hinzugefügt.<br>Weiterentwicklung: Nutzung verpflichtend gemacht. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 > | Änderungen durch DCAT-AP.de | Nutzung verpflichtend gemacht. | 
 <br>
@@ -1343,7 +1342,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verwendungshinweis | Wenn die räumliche Abdeckung eine Dimension der Datensatzserie ist, sollte die räumliche Abdeckung jedes Datensatzes in der Serie Teil der räumlichen Abdeckung sein.<br>In diesem Fall wird ein unspezifischer Wert empfohlen, z. B. die EU oder eine große Bounding Box, die die erwarteten Werte abdeckt.  | 
 > | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-spatial) |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.geographicalcoverage), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+> | Änderungen zur Vorversion | Harmonisierung: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1357,7 +1356,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Ein Zeitintervall, welches durch Start- und Endzeitpunkt bezeichnet bzw. definiert ist. |
 > | Verwendungshinweis | Wenn die zeitliche Abdeckung eine Dimension in der Datensatzserie ist, sollte die zeitliche Abdeckung jedes enthaltenen Datensatzes Teil der zeitlichen Abdeckung sein der Serie. In diesem Fall wird ein offener Wert empfohlen, z. B. nach 2012.  | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.temporalcoverage), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+> | Änderungen zur Vorversion | Harmonisierung: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1371,7 +1370,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft umfasst Kontaktinformationen, welche für das Zusenden von Kommentaren zur jeweiligen Datensatzserie verwendet werden können. |
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#ansprechstelle) genauer beschrieben. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.contactpoint), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+> | Änderungen zur Vorversion | Harmonisierung: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1386,7 +1385,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verwendungshinweis | Die Aktualisierungsfrequenz der Datensatzserie ist nicht identisch zur Aktualisierungsfrequenz enthaltener Datensätze. | 
 > | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-frequency) |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.frequency), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_frequency)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+> | Änderungen zur Vorversion | Harmonisierung: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1400,7 +1399,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft enthält das Datum der Herausgabe/Emission (z.B. in Form einer Veröffentlichung) der Datensatzserie. |
 > | Verwendungshinweis | Der Zeitpunkt, zu dem die Datensatzserie als verwaltete Ressource eingerichtet wurde. Dies ist nicht gleich dem Veröffentlichungsdatum des ältesten Datensatzes in der Serie.  | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.releasedate), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_release_date)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+> | Änderungen zur Vorversion | Harmonisierung: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1414,7 +1413,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation der Datensatzserie. |
 > | Verwendungshinweis | Dies ist nicht identisch mit dem zuletzt modifizierten Datensatz der Serie. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.modificationdate), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_update_date)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+> | Änderungen zur Vorversion | Harmonisierung: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1507,7 +1506,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft bezieht sich auf die Lizenz, unter welcher die Distribution zur Verfügung gestellt wird. |
 > | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-licenses) |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.licence), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_license)  | 
-> | Änderungen zur Vorversion | 3.0: Kardinalität von `[0..1]` auf `[1]` geändert und die Eigenschaft damit verpflichtend gemacht. | 
+> | Änderungen zur Vorversion | Weiterentwicklung: Kardinalität von `[0..1]` auf `[1]` geändert und die Eigenschaft damit verpflichtend gemacht. | 
 > | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
 > | Änderungen durch DCAT-AP.de | Kardinalität von `[0..1]` auf `[1]` geändert und die Eigenschaft damit verpflichtend gemacht. | 
 <br>
@@ -1532,7 +1531,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation der Distribution. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.modificationdate), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_update_date)  | 
-> | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+> | Änderungen zur Vorversion | Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
 > | Änderungen durch DCAT-AP.de | Verbindlichkeit wurde von optional auf empfohlen hochgestuft. | 
 <br>
@@ -1547,7 +1546,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zu-dateiformaten) genauer beschrieben. | 
 > | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-file-type) |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.format), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_format)  | 
-> | Änderungen zur Vorversion | 3.0: Errata: Wertebereichs auf dcterms:MediaTypeOrExtent geändert. | 
+> | Änderungen zur Vorversion | Errata: Wertebereichs auf dcterms:MediaTypeOrExtent geändert. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1562,7 +1561,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#status-und-erwartete-verfugbarkeit) genauer beschrieben. | 
 > | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-availability) |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.availability)  | 
-> | Änderungen zur Vorversion | 3.0: Errata: Hinterlegte URL für den Wertebereichs auf skos:Concept geändert. | 
+> | Änderungen zur Vorversion | Errata: Hinterlegte URL für den Wertebereichs auf skos:Concept geändert. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1600,7 +1599,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft enthält die Größe der Distribution in Bytes. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.bytesize), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_size)  | 
-> | Änderungen zur Vorversion | 3.0: Änderung der Range von xsd:decimal auf xsd:nonNegativeInteger. | 
+> | Änderungen zur Vorversion | Harmonisierung: Änderung der Range von xsd:decimal auf xsd:nonNegativeInteger. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1613,7 +1612,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft enthält das Datum der Herausgabe/Emission (z.B. in Form einer Veröffentlichung) der Distribution. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.releasedate), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_release_date)  | 
-> | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+> | Änderungen zur Vorversion | Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1666,7 +1665,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft verweist auf eine juristische Quelle, welche die mit der Distribution assoziierten Rechte spezifiziert. |
 > | Verwendungshinweis | Gemeint ist damit zum Beispiel ein Link zu Nutzungsbedingungen, wie "Terms of Use", die zusätzlich zu oder statt einer Lizenz bestehen. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.rights), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_rights)  | 
-> | Änderungen zur Vorversion | 3.0: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt. | 
+> | Änderungen zur Vorversion | Weiterentwicklung: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1746,7 +1745,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#status-und-erwartete-verfugbarkeit) genauer beschrieben. | 
 > | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-distribution-status) |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.status), [ADMS](https://www.w3.org/TR/vocab-adms/#adms-status)  | 
-> | Änderungen zur Vorversion | 3.0: Änderung des kontrollierten Vokabulars. | 
+> | Änderungen zur Vorversion | Harmonisierung: Änderung des kontrollierten Vokabulars. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1760,7 +1759,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft bezieht sich auf den kleinsten räumlichen Abstand, der in der Distribution auflösbar ist, gemessen in Metern. |
 > | Verwendungshinweis | Kann die räumliche Auflösung nicht in Metern beschrieben werden, können stattdessen die spezielleren Eigenschaften verwendet werden, die [GeoDCAT-AP](https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/#spatial-resolution-spatial-resolution-of-the-dataset) hierfür zur Verfügung stellt. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.spatialresolution), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial_resolution)  | 
-> | Änderungen zur Vorversion | 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 
+> | Änderungen zur Vorversion | Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 
 > | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
 > | Änderungen durch DCAT-AP.de | Verwendungshinweis hinzugefügt. | 
 <br>
@@ -1813,7 +1812,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft stellt einen Mechanismus zur Verfügung, mit dem sichergestellt werden kann, dass die Inhalte der Distribution sich nicht verändert haben. |
 > | Verwendungshinweis | Die Prüfsumme bezieht sich auf die Datei, die über `dcat:downloadURL` erreicht wird. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.checksum), [SPDX](https://spdx.org/rdf/terms/#d4e165)  | 
-> | Änderungen zur Vorversion | 3.0: Harmonisierung: Verwendungshinweis hinzugefügt. | 
+> | Änderungen zur Vorversion | Harmonisierung: Verwendungshinweis hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 > | Änderungen durch DCAT-AP.de | DCAT-AP.de stellt ein erweitertes kontrolliertes Vokabular zur Verfügung, dass in der [Klasse Prüfsumme](#klasse-prufsumme) von der [Eigenschaft Algorithmus](#prufsumme-algorithmus) verwendet wird. | 
 <br>
@@ -1855,7 +1854,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft bezeichnet den Beginn des Zeitraumes. |
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-zeitliche-abdeckung) genauer beschrieben. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Periodoftime.startdate), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:period_start_date)  | 
-> | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+> | Änderungen zur Vorversion | Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1869,7 +1868,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft bezeichnet das Ende des Zeitraumes. |
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-zeitliche-abdeckung) genauer beschrieben. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Periodoftime.enddate), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:period_end_date)  | 
-> | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+> | Änderungen zur Vorversion | Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1935,7 +1934,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft beschreibt die Bounding Box einer Ressource. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Location.bbox), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:location_bbox)  | 
-> | Änderungen zur Vorversion | 3.0: Errata: Korrektur des zu verwendenden Types. | 
+> | Änderungen zur Vorversion | Errata: Korrektur des zu verwendenden Types. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1948,7 +1947,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft beschreibt den geografischen Mittelpunkt einer Ressource. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Location.centroid), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:location_centroid)  | 
-> | Änderungen zur Vorversion | 3.0: Errata: Korrektur des zu verwendenden Types. | 
+> | Änderungen zur Vorversion | Errata: Korrektur des zu verwendenden Types. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -1962,7 +1961,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft beschreibt die Geometrie einer Ressource. |
 > | Verwendungshinweis | Der Wertebereich dieser Eigenschaft lässt jede Art von Geometriespezifikation zu.<br>Empfohlen wird z.B. die Angabe als WKT-Literal (`rdfs:Literal` getyped als `geo:wktLiteral`). | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Location.geometry), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:location_geometry), [locn](https://www.w3.org/ns/locn#locn:geometry)  | 
-> | Änderungen zur Vorversion | 3.0: Wertebereich auf locn:Geometry geändert.<br>3.0: Verwendungshinweis von DCAT hinzugefügt. | 
+> | Änderungen zur Vorversion | Harmonisierung: Wertebereich auf locn:Geometry geändert.<br>Harmonisierung: Verwendungshinweis von DCAT hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -2015,7 +2014,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft bezieht sich auf den Typ der verantwortlichen Stelle, die die Ressource bereitstellt. |
 > | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-adms-publisher) |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Agent.type), [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type)  | 
-> | Änderungen zur Vorversion | 3.0: Errata: Link zur zu verwendenden Codeliste hinzugefügt, war zuvor bei `foaf:name` angegeben. | 
+> | Änderungen zur Vorversion | Errata: Link zur zu verwendenden Codeliste hinzugefügt, war zuvor bei `foaf:name` angegeben. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -2032,7 +2031,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung     | Die Klasse wird genutzt, um Kontaktinformationen zu bündeln.     |
 > | eingebunden über | dcat:contactPoint (dcat:Dataset, dcat:DatasetSeries)         | 
 > | Weiterführende Dokumentationen | [VCard](https://www.w3.org/TR/vcard-rdf/#d4e1819) |
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. |
+> | Änderungen zur Vorversion | Weiterentwicklung: Neu hinzugefügt. |
 
 <br>
 
@@ -2060,7 +2059,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Der vollständige Name. |
 > | Weiterführende Dokumentationen | [VCard](https://www.w3.org/TR/vcard-rdf/#d4e891)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+> | Änderungen zur Vorversion | Weiterentwicklung: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
@@ -2074,7 +2073,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Die E-Mail-Adresse. |
 > | Verwendungshinweis | Es wird empfohlen, die E-Mail-Adresse direkt unter Verwendung des `mailto:`-Protokolls anzugeben.<br>Es muss entwerde eine E-Mail, URL oder Telefonnummer angegeben werden. | 
 > | Weiterführende Dokumentationen | [VCard](https://www.w3.org/TR/vcard-rdf/#d4e183)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+> | Änderungen zur Vorversion | Weiterentwicklung: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. Verwendungshinweis ergänzt. | 
 <br>
@@ -2088,7 +2087,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Eine URL über die Kontakt aufgenommen werden kann. |
 > | Verwendungshinweis | Hier wird insbesondere der Link zu einem Kontaktformular oder Chatbot erwartet.<br>Es muss entwerde eine E-Mail, URL oder Telefonnummer angegeben werden. | 
 > | Weiterführende Dokumentationen | [VCard](https://www.w3.org/TR/vcard-rdf/#d4e605)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+> | Änderungen zur Vorversion | Weiterentwicklung: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. Verwendungshinweis ergänzt. | 
 <br>
@@ -2102,7 +2101,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Die Telefonnummer. |
 > | Verwendungshinweis | Es wird empfohlen, die Telefonnummer direkt unter Verwendung des `tel:`-Protokolls anzugeben.<br>Es muss entwerde eine E-Mail, URL oder Telefonnummer angegeben werden. | 
 > | Weiterführende Dokumentationen | [VCard](https://www.w3.org/TR/vcard-rdf/#d4e563)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
+> | Änderungen zur Vorversion | Weiterentwicklung: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 > | Änderungen durch DCAT-AP.de | Von DCAT-AP.de eingeführte Eigenschaft. | 
 <br>
@@ -2182,7 +2181,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft identifiziert den verwendeten Algorithmus zur Erzeugung der Prüfsumme. |
 > | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-hash-algorithms) |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Checksum.algorithm), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:checksum_algorithm), [SPDX](https://spdx.org/rdf/terms/#d4e46)  | 
-> | Änderungen zur Vorversion | 3.0: Range von `rdfs:Resource` auf `spdx:ChecksumAlgorithm` geändert. | 
+> | Änderungen zur Vorversion | Errata: Range von `rdfs:Resource` auf `spdx:ChecksumAlgorithm` geändert. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 > | Änderungen durch DCAT-AP.de | dcat-ap.de führt eine eigene Liste an unterstützten Hashalgorithmen. | 
 <br>
@@ -2243,7 +2242,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[1]`                   |
 > | Beschreibung               | Diese Eigenschaft erfasst das Datum der letzten Aktualisierung bzw. Modifikation des Katalogeintrags. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#CatalogueRecord.modificationdate), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_update_date)  | 
-> | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+> | Änderungen zur Vorversion | Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -2256,7 +2255,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[1]`                   |
 > | Beschreibung               | Diese Eigenschaft verknüpft den Katalogeintrag mit der im Eintrag beschriebenen `dcat:Resource`. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#CatalogueRecord.primarytopic), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:record_primary_topic)  | 
-> | Änderungen zur Vorversion | 3.0: Aufnahme der Ressource `dcat:DatasetSeries` | 
+> | Änderungen zur Vorversion | Harmonisierung: Aufnahme der Ressource `dcat:DatasetSeries` | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -2269,7 +2268,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | Diese Eigenschaft bezieht sich auf das Application Profile zu dem die Metadaten im Katalog konform sind. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#CatalogueRecord.applicationprofile), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:record_conforms_to)  | 
-> | Änderungen zur Vorversion | 3.0: Kardinalität von `0..1` auf `*` geändert.<br>3.0: Errata: Anzeige des Wertebereichs korrigiert. | 
+> | Änderungen zur Vorversion | Harmonisierung: Kardinalität von `0..1` auf `*` geändert.<br>Errata: Anzeige des Wertebereichs korrigiert. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
@@ -2294,7 +2293,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft enthält das Datum, an dem die Beschreibung der Ressource aufgenommen wurde. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#CatalogueRecord.listingdate), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:record_listing_date)  | 
-> | Änderungen zur Vorversion | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
+> | Änderungen zur Vorversion | Errata: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br>
