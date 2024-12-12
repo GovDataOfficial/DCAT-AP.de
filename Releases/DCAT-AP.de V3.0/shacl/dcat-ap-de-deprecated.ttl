@@ -1,0 +1,142 @@
+# CC0 GovData
+#
+# Diese Datei prüft, ob in DCAT-AP.de 3.0 als deprecated gekennzeichnete Eigenschaften genutzt werden.
+
+@prefix :        <http://dcat-ap.de/def/dcatde/3.0/shacl/> .
+@prefix adms:    <http://www.w3.org/ns/adms#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcatap:  <http://data.europa.eu/r5r#> .
+@prefix dcatde:  <http://dcat-ap.de/def/dcatde/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix locn:    <http://www.w3.org/ns/locn#> .
+@prefix odrl:    <http://www.w3.org/ns/odrl/2/> .
+@prefix org:     <http://www.w3.org/ns/org#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:  <http://schema.org/> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl:  <http://www.w3.org/2008/05/skos-xl#> .
+@prefix spdx:    <http://spdx.org/rdf/terms#> .
+@prefix time:    <http://www.w3.org/2006/time#> .
+@prefix vcard:   <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml:     <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+:Deprecated_dcatde_politicalGeocodingURI
+  a sh:NodeShape ;
+  sh:targetSubjectsOf dcatde:politicalGeocodingURI ;
+  sh:property [
+    sh:message  "Deprecated: dcatde:politicalGeocodingURI soll nicht mehr verwendet werden." ;
+    sh:severity sh:Warning ;
+    sh:path     dcatde:politicalGeocodingURI ;
+    sh:maxCount 0 ;
+  ] .
+
+:Deprecated_dcatde_geocodingDescription
+  a sh:NodeShape ;
+  sh:targetSubjectsOf dcatde:geocodingDescription ;
+  sh:property [
+    sh:message  "Deprecated: dcatde:geocodingDescription soll nicht mehr verwendet werden." ;
+    sh:severity sh:Warning ;
+    sh:path     dcatde:geocodingDescription ;
+    sh:maxCount 0 ;
+  ] .
+
+:Deprecated_owl_versionInfo
+  a sh:NodeShape ;
+  sh:targetClass dcat:Dataset ;
+  sh:property [
+    sh:message  "Deprecated: owl:versionInfo soll nicht mehr verwendet werden." ;
+    sh:severity sh:Warning ;
+    sh:path     owl:versionInfo ;
+    sh:maxCount 0 ;
+  ] .
+
+:Deprecated_dcatde_legalBasis
+  a sh:NodeShape ;
+  sh:targetSubjectsOf dcatde:legalBasis ;
+  sh:property [
+    sh:message  "Deprecated: dcatde:legalBasis soll nicht mehr verwendet werden." ;
+    sh:severity sh:Warning ;
+    sh:path     dcatde:legalBasis ;
+    sh:maxCount 0 ;
+  ] .
+
+:Deprecated_dcatde_qualityProcessURI
+  a sh:NodeShape ;
+  sh:targetSubjectsOf dcatde:qualityProcessURI ;
+  sh:property [
+    sh:message  "Deprecated: dcatde:qualityProcessURI soll nicht mehr verwendet werden." ;
+    sh:severity sh:Warning ;
+    sh:path     dcatde:qualityProcessURI ;
+    sh:maxCount 0 ;
+  ] .
+
+:Deprecated_dcterms_hasVersion
+  a sh:NodeShape ;
+  sh:targetSubjectsOf dcterms:hasVersion ;
+  sh:property [
+    sh:message  "Deprecated: dcterms:hasVersion soll nicht mehr verwendet werden." ;
+    sh:severity sh:Warning ;
+    sh:path     dcterms:hasVersion ;
+    sh:maxCount 0 ;
+  ] .
+
+:Deprecated_dcterms_isVersionOf
+  a sh:NodeShape ;
+  sh:targetSubjectsOf dcterms:isVersionOf ;
+  sh:property [
+    sh:message  "Deprecated: dcterms:isVersionOf soll nicht mehr verwendet werden." ;
+    sh:severity sh:Warning ;
+    sh:path     dcterms:isVersionOf ;
+    sh:maxCount 0 ;
+  ] .
+
+:Deprecated_dcatde_originator
+  a sh:NodeShape ;
+  sh:targetSubjectsOf dcatde:originator ;
+  sh:property [
+    sh:message  "Deprecated: dcatde:originator soll nicht mehr verwendet werden." ;
+    sh:severity sh:Warning ;
+    sh:path     dcatde:originator ;
+    sh:maxCount 0 ;
+  ] .
+
+:Deprecated_dcatde_maintainer
+  a sh:NodeShape ;
+  sh:targetSubjectsOf dcatde:maintainer ;
+  sh:property [
+    sh:message  "Deprecated: dcatde:maintainer soll nicht mehr verwendet werden." ;
+    sh:severity sh:Warning ;
+    sh:path     dcatde:maintainer ;
+    sh:maxCount 0 ;
+  ] .
+
+:Deprecated_hashAlgorithms
+  a sh:NodeShape ;
+  sh:targetSubjectsOf spdx:algorithm ;
+  sh:property [
+    sh:message  "Deprecated: Die Codeliste 'http://dcat-ap.de/def/hashAlgorithms/' soll nicht mehr verwendet werden." ;
+    sh:severity sh:Warning ;
+    sh:path     spdx:algorithm ;
+    sh:not [ 
+      sh:pattern  "dcat" ; 
+    ] ;
+  ] .
+
+:Deprecated_adms_status
+  a sh:NodeShape ;
+  sh:targetSubjectsOf adms:status ;
+  sh:property [
+    sh:message  "Deprecated: Die Codeliste 'http://purl.org/adms/status/' soll nicht mehr verwendet werden." ;
+    sh:severity sh:Warning ;
+    sh:path     adms:status ;
+    sh:not [
+      sh:pattern  "purl" ;
+    ] ;
+  ] .

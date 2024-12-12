@@ -1,0 +1,43 @@
+# GovData - CC0
+# Based on the SHACL-imports for DCAT-AP: https://github.com/SEMICeu/DCAT-AP
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://dcat-ap.de/def/dcatde/3.0/shacl/imports>
+  rdf:type owl:Ontology ;
+  owl:imports <https://raw.githubusercontent.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/master/validator/resources/mirror/foaf_0_1.rdf> ; # mirror for <http://xmlns.com/foaf/spec/index.rdf> ;
+  owl:imports <https://raw.githubusercontent.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/master/validator/resources/mirror/vcard.ttl> ;    # mirror for <http://www.w3.org/2006/vcard/ns.ttl> ;
+  owl:imports <https://raw.githubusercontent.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/master/validator/resources/mirror/org.ttl> ;      # mirror for <http://www.w3.org/ns/org.ttl> ;
+
+  owl:imports <http://publications.europa.eu/resource/authority/language> ;
+  owl:imports <http://publications.europa.eu/resource/authority/planned-availability> ;
+  owl:imports <http://publications.europa.eu/resource/authority/frequency> ;
+  owl:imports <http://publications.europa.eu/resource/authority/dataset-type> ;
+  owl:imports <http://publications.europa.eu/resource/authority/data-theme> ;
+  owl:imports <http://publications.europa.eu/resource/authority/access-right> ;
+  owl:imports <http://publications.europa.eu/resource/authority/file-type> ;
+  owl:imports <http://publications.europa.eu/resource/authority/distribution-status> ;
+
+  owl:imports <https://www.dcat-ap.de/def/contributors/20240606.rdf> ;                                  # wird nur für GovData-Anlieferung benötigt
+  owl:imports <https://www.dcat-ap.de/def/licenses/20210721.rdf> ;
+  owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/Level/1_0.rdf> ;                           # dcatde:politicalGeocodingLevel
+
+  owl:imports <https://spdx.org/rdf/terms/spdx-ontology.owl.xml> ;                                      # Hash Algorithmen
+  owl:imports <https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf>   # Publisher Type
+
+
+  # owl:imports <https://www.dcat-ap.de/def/hashAlgorithms/20200729.rdf> ;                                # deprecated
+  # owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/districtKey/20210731.rdf> ;                # Kreis
+  # owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/governmentDistrictKey/20190731.rdf> ;      # Bezirk
+  # owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/municipalAssociationKey/20231130.rdf> ;    # Gemeindeverbände
+  # owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/municipalityKey/20231130.rdf> ;            # Gemeindeschlüssel
+  # owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/regionalKey/20231130.rdf> ;                # Regionalschlüssel
+  # owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/stateKey/20100401.rdf> ;                   # Bundesland
+
+  # owl:imports <http://dublincore.org/2020/01/20/dublin_core_terms.ttl> ;                              # kein Anwendunsfall
+  # owl:imports <https://www.w3.org/ns/locn.ttl> ;                                                      # kein Anwendunsfall
+  # owl:imports <http://www.w3.org/ns/prov-o.ttl> ;                                                     # kein Anwendunsfall
+  # owl:imports <http://www.w3.org/2006/time.ttl> ;                                                     # kein Anwendunsfall
+  # owl:imports <http://www.w3.org/ns/adms.ttl> ;                                                       # kein Anwendunsfall
+.

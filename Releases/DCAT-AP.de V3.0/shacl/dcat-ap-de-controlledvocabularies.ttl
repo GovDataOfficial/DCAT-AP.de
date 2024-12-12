@@ -1,0 +1,411 @@
+@prefix : <http://dcat-ap.de/def/dcatde/3.0/shacl/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geodcatap: <http://data.europa.eu/930/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Klasse: Katalog
+:Catalog_List_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:Catalog ;
+    sh:name "dcat:Catalog Vokabulare gemäß DCAT-AP.de Spezifikation 3.0"@de ;
+
+    sh:property :katalog-sprache_Violation_List ;
+    sh:property :katalog-lizenz_Warning_List ;
+    sh:property :katalog-verfugbarkeit_Violation_List ;
+.
+
+# dcterms:language:
+:katalog-sprache_Violation_List
+    sh:path dcterms:language ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message  "dcat:Catalog: dcterms:language MUSS folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-languages"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/language> ;
+    ] ; 
+.
+
+# dcterms:license:
+:katalog-lizenz_Warning_List
+    sh:path dcterms:license ;
+    sh:property [
+        sh:severity sh:Warning ;
+        sh:message  "dcat:Catalog: dcterms:license SOLL folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-licenses"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://dcat-ap.de/def/licenses> ;
+    ] ;
+.
+
+# dcatap:availability:
+:katalog-verfugbarkeit_Violation_List
+    sh:path dcatap:availability ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message  "dcat:Catalog: dcatap:availability MUSS folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-availability"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/planned-availability> ;
+    ] ;
+.
+
+# Klasse: Datensatz
+
+:Dataset_List_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:name "dcat:Dataset Vokabulare gemäß DCAT-AP.de Spezifikation 3.0"@de ;
+
+    sh:property :datensatz-sprache_Violation_List ;
+    sh:property :datensatz-datenbereitsteller-id_Warning_List ;
+    sh:property :datensatz-ebene-geopolitischen-abdeckung_Warning_List ;
+    sh:property :datensatz-verfugbarkeit_Violation_List ;
+    sh:property :datensatz-aktualisierungsfrequenz_Violation_List ;
+    sh:property :datensatz-typ_Warning_List ;
+    sh:property :datensatz-kategorie_Violation_List ;
+    sh:property :datensatz-grad-zuganglichkeit_Violation_List
+.
+
+# dcterms:language:
+:datensatz-sprache_Violation_List
+    sh:path dcterms:language ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message  "dcat:Dataset: dcterms:language MUSS folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-languages"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/language> ;
+    ] ;
+.
+
+# dcatde:contributorID:
+:datensatz-datenbereitsteller-id_Warning_List
+    sh:path dcatde:contributorID ;
+    sh:property [
+        sh:severity sh:Warning ;
+        sh:message  "dcat:Dataset: dcatde:contributorID SOLL, wenn passend, folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-contributors"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://dcat-ap.de/def/contributors> ;
+    ] ;
+.
+
+# dcatde:politicalGeocodingLevelURI:
+:datensatz-ebene-geopolitischen-abdeckung_Warning_List
+    sh:path dcatde:politicalGeocodingLevelURI ;
+    sh:property [
+        sh:severity sh:Warning ;
+        sh:message  "dcat:Dataset: dcatde:politicalGeocodingLevelURI SOLL folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-political-geocoding-level"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://dcat-ap.de/def/politicalGeocoding/Level> ;
+    ] ;
+.
+
+# dcatap:availability:
+:datensatz-verfugbarkeit_Violation_List
+    sh:path dcatap:availability ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message  "dcat:Dataset: dcatap:availability MUSS folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-availability"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/planned-availability> ;
+    ] ;
+.
+
+# dcterms:accrualPeriodicity:
+:datensatz-aktualisierungsfrequenz_Violation_List
+    sh:path dcterms:accrualPeriodicity ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message  "dcat:Dataset: dcterms:accrualPeriodicity MUSS folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-frequency"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/frequency> ;
+    ] ;
+.
+
+# dcterms:type:
+:datensatz-typ_Warning_List
+    sh:path dcterms:type ;
+    sh:property [
+        sh:severity sh:Warning ;
+        sh:message  "dcat:Dataset: dcterms:type SOLL folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-dataset-type"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/dataset-type> ;
+    ] ;
+.
+
+# dcat:theme:
+:datensatz-kategorie_Violation_List
+    sh:path dcat:theme ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message  "dcat:Dataset: dcat:theme MUSS folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-data-theme"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/data-theme> ;
+    ] ;
+.
+
+# dcterms:accessRights:
+:datensatz-grad-zuganglichkeit_Violation_List
+    sh:path dcterms:accessRights ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message  "dcat:Dataset: dcterms:accessRights MUSS folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-access-right"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/access-right> ;
+    ] ;
+.
+
+# Klasse: Datenservice
+
+:DataService_List_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:DataService ;
+    sh:name "dcat:DataService Vokabulare gemäß DCAT-AP.de Spezifikation 3.0"@de ;
+
+    sh:property :datenservice-lizenz_Warning_List ;
+    sh:property :datenservice-verfugbarkeit_Violation_List ;
+    sh:property :datenservice-grad-zuganglichkeit_Violation_List ;
+    sh:property :datenservice-format_Violation_List ;
+.
+
+# dcterms:license
+:datenservice-lizenz_Warning_List
+    sh:path dcterms:license ;
+    sh:property [
+        sh:severity sh:Warning ;
+        sh:message  "dcat:DataService: dcterms:license SOLL folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-licenses"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://dcat-ap.de/def/licenses> ;
+    ] ;
+.
+
+# dcatap:availability:
+:datenservice-verfugbarkeit_Violation_List
+    sh:path dcatap:availability ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message  "dcat:DataService: dcatap:availability MUSS folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-availability"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/planned-availability> ;
+    ] ;
+.
+
+# dcterms:accessRights:
+:datenservice-grad-zuganglichkeit_Violation_List
+    sh:path dcterms:accessRights ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message  "dcat:DataService: dcterms:accessRights MUSS folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-access-right"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/access-right> ;
+    ] ;
+.
+
+# dcterms:format:
+:datenservice-format_Violation_List
+    sh:path dcterms:format ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message  "dcat:DataService: dcterms:format MUSS folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-file-type"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/file-type> ;
+    ] ;
+.
+
+# Klasse: Datensatzserie
+
+:DatasetSeries_List_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:DatasetSeries ;
+    sh:name "dcat:DatasetSeries Vokabulare gemäß DCAT-AP.de Spezifikation 3.0"@de ;
+
+    sh:property :datensatzserie-aktualisierungsfrequenz_Violation_List ;
+.
+
+# dcterms:accrualPeriodicity:
+:datensatzserie-aktualisierungsfrequenz_Violation_List
+    sh:path dcterms:accrualPeriodicity ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message  "dcat:DatasetSeries: dcterms:accrualPeriodicity MUSS folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-frequency"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/frequency> ;
+    ] ;
+.
+
+# Klasse: Distribution
+
+:Distribution_List_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:Distribution ;
+    sh:name "dcat:Distribution Vokabulare gemäß DCAT-AP.de Spezifikation 3.0"@de ;
+
+    sh:property :distribution-sprache_Violation_List ;
+    sh:property :distribution-lizenz_Warning_List ;
+    sh:property :distribution-verfugbarkeit_Violation_List ;
+    sh:property :distribution-format_Violation_List ;
+    sh:property :distribution-medientyp_Violation_List ;
+    sh:property :distribution-kompressionsformat_Violation_List ;
+    sh:property :distribution-paketformat_Violation_List ;
+    sh:property :distribution-status_Violation_List ;
+.
+
+# dcterms:language:
+:distribution-sprache_Violation_List
+    sh:path dcterms:language ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message  "dcat:Distribution: dcterms:language MUSS folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-languages"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/language> ;
+    ] ;
+.
+
+# dcterms:license:
+:distribution-lizenz_Warning_List
+    sh:path dcterms:license ;
+    sh:property [
+        sh:severity sh:Warning ;
+        sh:message  "dcat:Distribution: dcterms:license SOLL folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-licenses"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://dcat-ap.de/def/licenses> ;
+    ] ;
+.
+
+# dcatap:availability:
+:distribution-verfugbarkeit_Violation_List
+    sh:path dcatap:availability ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message  "dcat:Distribution: dcatap:availability MUSS folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-availability"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/planned-availability> ;
+    ] ;
+.
+
+# dcterms:format:
+:distribution-format_Violation_List
+    sh:path dcterms:format ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message  "dcat:Distribution: dcterms:format MUSS folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-file-type"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/file-type> ;
+    ] ;
+.
+
+# dcat:mediaType:
+:distribution-medientyp_Violation_List
+    sh:severity sh:Violation ;
+    sh:path dcat:mediaType ;
+    sh:pattern "^https?://www.iana.org/assignments/media-types/" ;
+    sh:flags "i" ; 
+    sh:message "dcat:Distribution: dcat:mediaType MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-iana-media-types (Getestet wird in diesem Fall lediglich, ob die verwendete IRI mit https://www.iana.org/assignments/media-types/ beginnt.)"@de ;
+.
+
+# dcat:compressFormat:
+:distribution-kompressionsformat_Violation_List
+    sh:severity sh:Violation ;
+    sh:path dcat:compressFormat ;
+    sh:pattern "^https?://www.iana.org/assignments/media-types/" ;
+    sh:flags "i" ; 
+    sh:message "dcat:Distribution: dcat:compressFormat MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-iana-media-types (Getestet wird in diesem Fall lediglich, ob die verwendete IRI mit https://www.iana.org/assignments/media-types/ beginnt.)"@de ;
+.
+
+# dcat:packageFormat:
+:distribution-paketformat_Violation_List
+    sh:severity sh:Violation ;
+    sh:path dcat:packageFormat ;
+    sh:pattern "^https?://www.iana.org/assignments/media-types/" ;
+    sh:flags "i" ; 
+    sh:message "dcat:Distribution: dcat:packageFormat MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-iana-media-types (Getestet wird in diesem Fall lediglich, ob die verwendete IRI mit https://www.iana.org/assignments/media-types/ beginnt.)"@de ;
+.
+
+# adms:status:
+:distribution-status_Violation_List
+    sh:path adms:status ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message  "dcat:Distribution: adms:status MUSS folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-distribution-status"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/distribution-status> ;
+    ] ;
+.
+
+# Klasse: Verantwortliche Stelle
+
+:Agent_List_Shape 
+    a sh:NodeShape ;
+    sh:targetClass foaf:Agent ;
+    sh:name "foaf:Agent Vokabulare gemäß DCAT-AP.de Spezifikation 3.0"@de ;
+
+    sh:property :verantwortliche-stelle-typ_Violation_List ;
+.
+
+# dcterms:type:
+:verantwortliche-stelle-typ_Violation_List
+    sh:path dcterms:type ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message  "foaf:Agent: dcterms:type MUSS folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-adms-publisher"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://purl.org/adms/publishertype/1.0> ;
+    ] ;
+.
+
+# Klasse: Prüfsumme
+
+:Checksum_List_Shape 
+    a sh:NodeShape ;
+    sh:targetClass spdx:Checksum ;
+    sh:name "spdx:Checksum Vokabulare gemäß DCAT-AP.de Spezifikation 3.0"@de ;
+
+    sh:property :prufsumme-algorithmus_Warning_List ;
+.
+
+# spdx:algorithm:
+:prufsumme-algorithmus_Warning_List
+    sh:path spdx:algorithm ;
+    sh:class spdx:ChecksumAlgorithm ;
+    sh:severity sh:Warning ;
+    sh:message  "spdx:Checksum: spdx:algorithm SOLL folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-hash-algorithms"@de ;
+.
+
+# Klasse: Katalogeintrag
+
+:CatalogRecord_List_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:CatalogRecord ;
+    sh:name "dcat:CatalogRecord Vokabulare gemäß DCAT-AP.de Spezifikation 3.0"@de ;
+
+    sh:property :katalogeintrag-sprache_Violation_List ;
+.
+
+# dcterms:language:
+:katalogeintrag-sprache_Violation_List
+    sh:path dcterms:language ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message  "dcat:CatalogRecord: dcterms:language MUSS folgendes Vokabular benutzen: https://www.dcat-ap.de/def/dcatde/3.0/spec/#kv-languages"@de ;
+        sh:path     skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/language> ;
+    ] ;
+.

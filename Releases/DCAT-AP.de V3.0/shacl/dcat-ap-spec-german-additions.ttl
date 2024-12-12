@@ -1,0 +1,331 @@
+# CC0 GovData
+#
+# Diese Datei beinhaltet alle Ergänzungen, die in der Spezifikation als "Änderungen durch DCAT-AP.de" markiert sind.
+# Außerdem wird geprüft, dass dcterms:PeriodOfTime über mindestens eine Zeitangabe verfügt.
+
+@prefix : <http://dcat-ap.de/def/dcatde/3.0/shacl/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geodcatap: <http://data.europa.eu/930/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# dcat:Catalog
+
+:Catalog_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:Catalog ;
+    sh:name "dcat:Catalog gemäß DCAT-AP.de Spezifikation 3.0"@de ;
+
+    sh:property :DE_Catalog_dcatap_availability_v_Max ;
+    sh:property :DE_Catalog_dcterms_isPartOf_w_Class ;
+    sh:property :DE_Catalog_dcterms_isPartOf_v_Max ;
+.
+
+
+
+:DE_Catalog_dcatap_availability_v_Max
+    sh:maxCount 1 ;
+    sh:path     dcatap:availability ;
+    sh:severity sh:Violation ;
+    sh:message  "DE: dcat:Catalog: DARF maximal eine dcatap:availability haben."@de ;
+.
+
+:DE_Catalog_dcterms_isPartOf_w_Class
+    sh:path     dcterms:isPartOf ;
+    sh:class    dcat:Catalog ;
+    sh:severity sh:Warning ;
+    sh:message  "DE: dcat:Catalog: dct:isPartOf MUSS auf einen dcat:Catalog verweisen. (Löst auch aus, wenn nur eine IRI angegeben wird, die verlinkte Ressource aber nicht mit validiert wird.)"@de ;
+.
+
+:DE_Catalog_dcterms_isPartOf_v_Max
+    sh:maxCount 1 ;
+    sh:path     dcterms:isPartOf ;
+    sh:severity sh:Violation ;
+    sh:message  "DE: dcat:Catalog: DARF maximal ein dcterms:isPartOf haben."@de ;
+.
+
+# dcat:Dataset
+
+:Dataset_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:name "dcat:Dataset gemäß DCAT-AP.de Spezifikation 3.0"@de ;
+
+    sh:property :DE_Dataset_dcterms_publisher_v_Min ;
+    sh:property :DE_Dataset_dcatde_politicalGeocodingLevelURI_v_IRI ;
+    sh:property :DE_Dataset_dcatap_availability_v_Max ;
+    sh:property :DE_Dataset_dcatde_contributorID_v_IRI ;
+    sh:property :DE_Dataset_dcterms_references_v_IRI ;
+    sh:property :DE_Dataset_dcterms_contributor_v_Class ;
+    sh:property :DE_Dataset_geodcatap_originator_v_Class ;
+    sh:property :DE_Dataset_geodcatap_custodian_v_Class ;
+.
+
+:DE_Dataset_dcterms_publisher_v_Min
+    sh:minCount 1 ;
+    sh:path     dcterms:publisher ;
+    sh:severity sh:Violation ;
+    sh:message  "DE: dcat:DataService: MUSS einen dcterms:publisher haben."@de ;
+.
+
+:DE_Dataset_dcatde_politicalGeocodingLevelURI_v_IRI
+    sh:path     dcatde:politicalGeocodingLevelURI ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message  "DE: dcat:Dataset: dcatde:politicalGeocodingLevelURI MUSS eine IRI sein."@de ;
+.
+
+:DE_Dataset_dcatap_availability_v_Max
+    sh:maxCount 1 ;
+    sh:path     dcatap:availability ;
+    sh:severity sh:Violation ;
+    sh:message  "DE: dcat:Dataset: DARF maximal eine dcatap:availability haben."@de ;
+.
+
+:DE_Dataset_dcatde_contributorID_v_IRI
+    sh:path dcatde:contributorID ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dcatde:contributorID MUSS eine IRI sein."@de ;
+.
+
+:DE_Dataset_dcterms_references_v_IRI
+    sh:path dcterms:references ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dct:references MUSS eine IRI sein."@de ;
+.
+
+:DE_Dataset_dcterms_contributor_v_Class
+    sh:path dcterms:contributor ;
+    sh:class foaf:Agent ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dct:contributor MUSS auf einen foaf:Agent verweisen."@de ;
+.
+
+:DE_Dataset_geodcatap_originator_v_Class
+    sh:path geodcatap:originator ;
+    sh:class foaf:Agent ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: geodcatap:originator MUSS auf einen foaf:Agent verweisen."@de ;
+.
+
+:DE_Dataset_geodcatap_custodian_v_Class
+    sh:path geodcatap:custodian ;
+    sh:class foaf:Agent ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: geodcatap:custodian MUSS auf einen foaf:Agent verweisen."@de ;
+.
+
+# dcat:DataService
+
+:DataService_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:DataService ;
+    sh:name "dcat:DataService gemäß DCAT-AP.de Spezifikation 3.0"@de ;
+
+    sh:property :DE_DataService_dcterms_publisher_v_Min ;
+    sh:property :DE_DataService_dcatap_availability_v_Max ;
+.
+
+:DE_DataService_dcterms_publisher_v_Min
+    sh:minCount 1 ;
+    sh:path     dcterms:publisher ;
+    sh:severity sh:Violation ;
+    sh:message  "DE: dcat:DataService: MUSS einen dcterms:publisher haben."@de ;
+.
+
+:DE_DataService_dcatap_availability_v_Max
+    sh:maxCount 1 ;
+    sh:path dcatap:availability ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:DataService: DARF maximal eine dcatap:availability haben."@de ;
+.
+
+# dcat:DatasetSeries
+
+:DE_DatasetSeries_dcterms_publisher_v_Min
+    sh:minCount 1 ;
+    sh:path     dcterms:publisher ;
+    sh:severity sh:Violation ;
+    sh:message  "DE: dcat:DatasetSeries: MUSS einen dcterms:publisher haben."@de ;
+.
+
+# dcat:Distribution
+
+:Distribution_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:Distribution ;
+    sh:name "dcat:Distribution gemäß DCAT-AP.de Spezifikation 3.0"@de ;
+
+    sh:property :DE_Distribution_dcterms_license_v_Min ;
+    sh:property :DE_Distribution_dcatde_licenseAttributionByText_v_Literal ;
+.
+
+:DE_Distribution_dcterms_license_v_Min
+    sh:minCount 1 ;
+    sh:path     dcterms:license ;
+    sh:severity sh:Violation ;
+    sh:message  "DE: dcat:Distribution: MUSS eine dcterms:license haben."@de ;
+.
+
+:DE_Distribution_dcatde_licenseAttributionByText_v_Literal
+    sh:path     dcatde:licenseAttributionByText ;
+    sh:nodeKind sh:Literal ;
+    sh:severity sh:Violation ;
+    sh:message  "DE: dcat:Distribution: dcatde:licenseAttributionByText MUSS ein Literal sein."@de ;
+.
+
+# dcterms:PeriodOfTime
+:PeriodOfTime_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcterms:PeriodOfTime ;
+    sh:name "dcterms:PeriodOfTime gemäß DCAT-AP.de Spezifikation 3.0"@de ;
+
+    sh:property :DE_PeriodOfTime_periodPoints_v_Min ;
+.
+:DE_PeriodOfTime_periodPoints_v_Min
+    sh:message "dcterms:PeriodOfTime: MUSS mindestens eine der folgenden Eigenschaften besitzen: Empfohlen: dcat:startDate, dcat:endDate. Andere Möglichkeiten: time:hasBeginning, time:hasEnd."@de ;
+    sh:severity sh:Violation ;
+
+    sh:minCount 1 ;
+    sh:path [ sh:alternativePath ( 
+        dcat:startDate 
+        dcat:endDate 
+        time:hasBeginning 
+        time:hasEnd 
+    ) ] ;
+.
+
+# dcterms:Location
+# nothing
+
+# vcard:Kind
+:Kind_Shape 
+    a sh:NodeShape ;
+    sh:targetClass vcard:Kind ;
+    sh:name "vcard:Kind gemäß DCAT-AP.de Spezifikation 3.0"@de ;
+
+    sh:property :DE_Kind_vcard_fn_v_Max ;
+    sh:property :DE_Kind_vcard_fn_v_Literal ;
+    sh:property :DE_Kind_vcard_hasEmail_v_IRI ;
+    sh:property :DE_Kind_vcard_hasURL_v_IRI ;
+    sh:property :DE_Kind_vcard_hasTelephone_v_IRI ;
+    sh:property :DE_Kind_vcard_hasEmail_hasURL_hasTelephone_v_Min ;
+.
+
+:DE_Kind_vcard_fn_v_Max
+    sh:maxCount 1 ;
+    sh:path     vcard:fn ;
+    sh:severity sh:Violation ;
+    sh:message  "DE: vcard:Kind: DARF maximal einen vcard:fn haben."@de ;
+.
+
+:DE_Kind_vcard_fn_v_Literal
+    sh:path     vcard:fn ;
+    sh:nodeKind sh:Literal ;
+    sh:severity sh:Violation ;
+    sh:message  "DE: vcard:Kind: vcard:fn MUSS ein Literal sein."@de ;
+.
+
+:DE_Kind_vcard_hasEmail_v_IRI
+    sh:path     vcard:hasEmail ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message  "DE: vcard:Kind: vcard:hasEmail MUSS eine IRI sein."@de ;
+.
+
+:DE_Kind_vcard_hasURL_v_IRI
+    sh:path     vcard:hasURL ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message  "DE: vcard:Kind: vcard:hasURL MUSS eine IRI sein."@de ;
+.
+
+:DE_Kind_vcard_hasTelephone_v_IRI
+    sh:path     vcard:hasTelephone ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message  "DE: vcard:Kind: vcard:hasTelephone MUSS eine IRI sein."@de ;
+.
+
+:DE_Kind_vcard_hasEmail_hasURL_hasTelephone_v_Min
+    sh:message "DE: vcard:Kind: MUSS über vcard:hasEmail, vcard:hasURL oder vcard:hasTelephone verfügen."@de ;
+    sh:severity sh:Violation ;
+    sh:minCount 1 ;
+    sh:path [ sh:alternativePath ( 
+        vcard:hasEmail 
+        vcard:hasURL 
+        vcard:hasTelephone
+    ) ] ;
+.
+
+# spdx:Checksum
+# nothing
+
+# dcat:CatalogRecord
+# nothing
+
+# dcat:Relationship
+# nothing
+
+# prov:Attribution
+
+:Attribution_Shape 
+    a sh:NodeShape ;
+    sh:targetClass prov:Attribution ;
+    sh:name "prov:Attribution gemäß DCAT-AP.de Spezifikation 3.0"@de ;
+
+    sh:property :DE_Attribution_dcat_hadRole_v_Min ;
+    sh:property :DE_Attribution_dcat_hadRole_v_IRI ;
+    sh:property :DE_Attribution_prov_agent_v_Min ;
+    sh:property :DE_Attribution_prov_agent_v_IRI ;
+.
+
+:DE_Attribution_dcat_hadRole_v_Min
+    sh:minCount 1 ;
+    sh:path     dcat:hadRole ;
+    sh:severity sh:Violation ;
+    sh:message  "DE: prov:Attribution: MUSS mindestens einmal dcat:hadRole haben."
+.
+
+:DE_Attribution_dcat_hadRole_v_IRI
+    sh:path     dcat:hadRole ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message  "DE: prov:Attribution: dcat:hadRole MUSS eine IRI sein."@de ;
+.
+
+:DE_Attribution_prov_agent_v_Min
+    sh:minCount 1 ;
+    sh:path     prov:agent ;
+    sh:severity sh:Violation ;
+    sh:message  "DE: prov:Attribution: MUSS mindestens einmal prov:agent haben."
+.
+:DE_Attribution_prov_agent_v_IRI
+    sh:path     prov:agent ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message  "DE: prov:Attribution: prov:agent MUSS eine IRI sein."@de ;
+.
