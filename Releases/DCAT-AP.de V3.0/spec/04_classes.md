@@ -1243,7 +1243,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit            | Optional |
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | Die Rechtsvorschriften, die die Erstellung oder Verwaltung des Datenservices vorschreiben. |
-> | Verwendungshinweis | Für Datenservices mit Bezug zur HVD-Verordnung wird empfohlen, `http://data.europa.eu/eli/reg_impl/2023/138/oj` anzugeben.<br>Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden. | 
+> | Verwendungshinweis | Für Datenservices mit Bezug zur HVD-Verordnung muss `http://data.europa.eu/eli/reg_impl/2023/138/oj` angegeben werden.<br>Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService.applicablelegislation)  | 
 > | Änderungen zur Vorversion | Harmonisierung: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
@@ -1426,7 +1426,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit            | Optional |
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | Die Rechtsvorschriften, die die Erstellung oder Verwaltung der Datensatzserie vorschreiben. |
-> | Verwendungshinweis | Für Datensatzserien mit Bezug zur HVD-Verordnung wird empfohlen, `http://data.europa.eu/eli/reg_impl/2023/138/oj` anzugeben.<br>Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden. | 
+> | Verwendungshinweis | Für Datensatzserien mit Bezug zur HVD-Verordnung muss `http://data.europa.eu/eli/reg_impl/2023/138/oj` angegeben werden.<br>Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.applicablelegislation)  | 
 > | Änderungen zur Vorversion | Harmonisierung: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
@@ -1785,7 +1785,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit            | Optional |
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | Die Rechtsvorschriften, die die Erstellung oder Verwaltung der Distribution vorschreiben. |
-> | Verwendungshinweis | Für Distributionen mit Bezug zur HVD-Verordnung wird empfohlen, `http://data.europa.eu/eli/reg_impl/2023/138/oj` anzugeben.<br>Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden. | 
+> | Verwendungshinweis | Für Distributionen mit Bezug zur HVD-Verordnung muss `http://data.europa.eu/eli/reg_impl/2023/138/oj` angegeben werden.<br>Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.applicablelegislation)  | 
 > | Änderungen zur Vorversion | Harmonisierung: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
