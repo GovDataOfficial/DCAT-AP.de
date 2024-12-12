@@ -12,7 +12,7 @@ In DCAT werden Klassen und Eigenschaften weiterer etablierter Vokabulare (ADMS, 
 ## Standardisierungsbedarf
 
 Die vorliegende Spezifikation ist eine weitere standardkonforme und daher kompatible Anpassung von DCAT und DCAT-AP für den deutschen Nutzungskontext (DCAT-AP.de).
-Anlass und Zweck der Erstellung von DCAT-AP.de ist der Austausch von Metadaten offener Verwaltungsdaten für deutsche Open Data-Portale, deren Daten in GovData für Bundes-, Landes- und kommunale Ebene zentral bereitgestellt werden. Daher verantwortet die Geschäfts- und Koordinierungsstelle GovData die Fortschreibung des Standards DCAT-AP.de.
+Anlass und Zweck der Erstellung von DCAT-AP.de ist der Austausch von Metadaten offener Verwaltungsdaten für deutsche Open Data-Portale, deren Daten in GovData für Bundes-, Landes- und kommunale Ebene zentral bereitgestellt werden. Daher verantwortet das Produktmanagement GovData der FITKO die Fortschreibung des Standards DCAT-AP.de.
 
 <figure id="img-standardisierungsbedarf-metadatenfoderation-govdata">
   <img src="./img/standardisierungsbedarf-metadatenfoderation.png" alt="Standardisierungsbedarf der Metadatenföderation GovData">

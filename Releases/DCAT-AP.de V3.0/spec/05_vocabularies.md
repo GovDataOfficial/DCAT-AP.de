@@ -35,12 +35,12 @@ Liste der unmittelbar an GovData anliefernden Systeme. Diese Datenbereitsteller 
 ## Liste der Lizenzen {#kv-licenses}
 Liste der Lizenzen, die im Feld dcterms:license einer DCAT-AP.de-konformen dcat:distribution für die Zulieferung an GovData erlaubt sind. GovData empfiehlt die Verwendung der Datenlizenz Deutschland 2.0 (Zero oder Namensnennung) sowie der Creative Commons Namensnennung – 4.0 International. Soweit dies nicht möglich sein sollte, wird die Verwendung einer der übrigen zur „freien Nutzung“ ausgewiesenen Lizenzen in der jeweils neuesten Version empfohlen.
 
-Kontaktieren Sie zur Aufnahme neuer Lizenzen bitte die Geschäfts- und Koordinierungsstelle GovData: info@govdata.de.
+Kontaktieren Sie zur Aufnahme neuer Lizenzen bitte das Produktmanagement GovData der FITKO: info@govdata.de.
 
 > | Betroffene Eigenschaften       | [`dcterms:license`](#distribution-lizenz) |
 > |:-------------------------------|:----------------------------------|
 > | Verbindlichkeit Vokabular      | Empfohlen                         |
-> | Verwendung in Klassen          | [`dcat:Distribution`](#distribution-lizenz), [`dcat:Catalog`](#katalog-lizenz)   |
+> | Verwendung in Klassen          | [`dcat:Distribution`](#distribution-lizenz), [`dcat:Catalog`](#katalog-lizenz), [`dcat:DataService`](#datenservice-lizenz)   |
 > | Menschenlesbare Ansicht        | http://dcat-ap.de/def/licenses/   |
 > | Basis-URI                      | `http://dcat-ap.de/def/licenses/` |
 > | Beispiel                       | `<http://dcat-ap.de/def/licenses/dl-by-de/2.0/>` |
@@ -122,7 +122,7 @@ Diese Tabelle enthält die mögliche Aktualisierungsfrequenzen (-häufigkeiten) 
 > | Betroffene Eigenschaften       | [`dcterms:accrualPeriodicity`](#datensatz-aktualisierungsfrequenz) |
 > |:-------------------------------|:----------------------------------|
 > | Verbindlichkeit Vokabular      | Pflicht                           |
-> | Verwendung in Klassen          | [`dcat:Dataset`](#datensatz-aktualisierungsfrequenz) |
+> | Verwendung in Klassen          | [`dcat:Dataset`](#datensatz-aktualisierungsfrequenz), [`dcat:DatasetSeries`](#datensatzserie-aktualisierungsfrequenz) |
 > | Menschenlesbare Ansicht        | [EU Vocabularies: frequency](https://op.europa.eu/de/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/frequency) |
 > | Basis-URI                      | `http://publications.europa.eu/resource/authority/frequency/`            |
 > | Beispiel                       | `<http://publications.europa.eu/resource/authority/frequency/BIMONTHLY>` |
@@ -180,7 +180,7 @@ Die Access right authority table ist ein kontrolliertes Vokabular, in dem die Zu
 > | Betroffene Eigenschaften       | [`dcterms:accessRights`](#datensatz-grad-zuganglichkeit) |
 > |:-------------------------------|:-------------------------|
 > | Verbindlichkeit Vokabular      | Pflicht                  |
-> | Verwendung in Klassen          | [dcat:Dataset](#datensatz-grad-zuganglichkeit),  [dcat:DataService](#datenservice-grad-zuganglichkeit) |
+> | Verwendung in Klassen          | [`dcat:Dataset`](#datensatz-grad-zuganglichkeit),  [`dcat:DataService`](#datenservice-grad-zuganglichkeit) |
 > | Menschenlesbare Ansicht        | [EU Vocabularies: access-right](https://op.europa.eu/de/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/access-right) |
 > | Basis-URI                      | `http://publications.europa.eu/resource/authority/access-right/`                    |
 > | Beispiel                       | Öffentlich:  `http://publications.europa.eu/resource/authority/access-right/PUBLIC` |
@@ -194,7 +194,7 @@ Weitere Details und Beispiele finden Sie im [Konventionenhandbuch](https://www.d
 > | Betroffene Eigenschaften       | [`dcterms:format`](#distribution-format) |
 > |:-------------------------------|:-------------------------|
 > | Verbindlichkeit Vokabular      | Pflicht                  |
-> | Verwendung in Klassen          | [dcat:Distribution](#distribution-format) |
+> | Verwendung in Klassen          | [`dcat:Distribution`](#distribution-format), [`dcat:DataService`](#datenservice-format) |
 > | Menschenlesbare Ansicht        | [EU Vocabularies: file-type](https://op.europa.eu/de/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type) |
 > | Basis-URI                      | `http://publications.europa.eu/resource/authority/file-type/`            |
 > | Beispiel                       | CSV:  `http://publications.europa.eu/resource/authority/file-type/CSV` |
@@ -210,7 +210,7 @@ Auch hier können fehlende Einträge bei Bedarf eingetragen werden: https://www.
 > | Verwendung in Klassen          | [`dcat:Distribution`](#distribution-medientyp) |
 > | Menschenlesbare Ansicht        | https://www.iana.org/assignments/media-types/media-types.xhtml        |
 > | Basis-URI                      | `https://www.iana.org/assignments/media-types/`                       |
-> | Beispiel                       | ZIP: `<https://www.iana.org/assignments/media-types/application/pdf>` |
+> | Beispiel                       | ZIP: `<https://www.iana.org/assignments/media-types/application/zip>` |
 
 
 ## EU Vokabular "Distribution Status" {#kv-distribution-status}
