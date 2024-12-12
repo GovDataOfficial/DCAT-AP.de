@@ -134,6 +134,18 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_catalog)
         '@ adms:interoperabilityLevel = A
         '@ sh:shapes       = ___TBD___(Shape ohne Regeln, kein Test, ob Ziel ein dcat:Catalog)
+    <<optional>> dcatap:applicableLegislation ~> eli:LegalResource [*]
+        '@ rdfs:label      = Rechtsgrundlage
+        '@ _:internalLink  = katalog-rechtsgrundlage
+        '@ rdfs:range      = http://data.europa.eu/eli/ontology#LegalResource
+        '@ rdfs:comment    = Die Rechtsvorschriften, die die Erstellung oder Verwaltung des Katalogs vorschreiben.
+        '@ skos:scopeNote  = Für Kataloge mit Bezug zur HVD-Verordnung wird empfohlen, `http://data.europa.eu/eli/reg_impl/2023/138/oj` anzugeben.
+        '@ skos:scopeNote  = Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden.
+        '@ rdf:about       = http://data.europa.eu/r5r/applicableLegislation
+        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.applicablelegislation)
+        '@ adms:interoperabilityLevel = A
+        '@ _:deOriginal    = Verwendungshinweis ergänzt.
+        '@ adms:versionNotes = Harmonisierung: Neu hinzugefügt.
 }
 '@ rdfs:label      = Katalog
 '@ _:internalLink  = #klasse-katalog
@@ -144,7 +156,7 @@ class "dcat:Catalog" <<mandatory>> #F8978D|FCFFFC {
 '@ _:usedBy        = dcat:catalog, dcterms:hasPart, dcterms:isPartOf (dcat:Catalog)
 '@ rdfs:subClassOf = dcat:Dataset, dcat:Resource
 '@ _:resourceHeirloom = [`odrl:hasPolicy`](#distribution-regelwerk).
-'@ _:datasetHeirloom = [`adms:identifier`](#datensatz-andere-id), [`adms:sample`](#datensatz-beispieldistribution), [`adms:versionNotes`](#datensatz-versionserlauterung), [`dcat:contactPoint`](#datensatz-kontakt), [`dcat:distribution`](#datensatz-distribution), [`dcat:granularity`](#datensatz-abgedeckte-zeitliche-granularitat-deprecated), [`dcat:keyword`](#datensatz-schlagwort), [`dcat:landingPage`](#datensatz-ursprungliche-webseite), [`dcat:qualifiedRelation`](#datensatz-qualifizierte-beziehung), [`dcat:spatialResolutionInMeters`](#datensatz-raumliche-auflosung-in-meter), [`dcat:temporalResolution`](#datensatz-zeitliche-auflosung), [`dcat:theme`](#datensatz-kategorie), [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcatde:maintainer`](#datensatz-verwalter), [`dcatde:originator`](#datensatz-urheber), [`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dct:accessRights`](#datensatz-grad-zuganglichkeit), [`dct:accrualPeriodicity`](#datensatz-aktualisierungsfrequenz), [`dct:conformsTo`](#datensatz-konform-zu-standard), [`dct:contributor`](#datensatz-bearbeiter), [`dct:hasVersion`](#datensatz-weitere-version), [`dct:identifier`](#datensatz-id), [`dct:isReferencedBy`](#datensatz-wird-referenziert), [`dct:isVersionOf`](#datensatz-ist-version), [`dct:provenance`](#datensatz-provenienz), [`dct:references`](#datensatz-referenziert), [`dct:relation`](#datensatz-verwandte-ressource), [`dct:source`](#datensatz-quelle), [`dct:temporal`](#datensatz-zeitliche-abdeckung), [`dct:type`](#datensatz-typ), [`foaf:page`](#datensatz-dokumentation), [`owl:versionInfo`](#datensatz-versionsbezeichnung), [`prov:qualifiedAttribution`](#datensatz-rollenzuordnung) und [`prov:wasGeneratedBy`](#datensatz-wurde-erzeugt-von).
+'@ _:datasetHeirloom = [`adms:identifier`](#datensatz-andere-id), [`adms:sample`](#datensatz-beispieldistribution), [`adms:versionNotes`](#datensatz-versionserlauterung), [`dcat:contactPoint`](#datensatz-kontakt), [`dcat:distribution`](#datensatz-distribution), [`dcat:granularity`](#datensatz-abgedeckte-zeitliche-granularitat-deprecated), [`dcat:keyword`](#datensatz-schlagwort), [`dcat:landingPage`](#datensatz-ursprungliche-webseite), [`dcat:qualifiedRelation`](#datensatz-qualifizierte-beziehung), [`dcat:spatialResolutionInMeters`](#datensatz-raumliche-auflosung-in-meter), [`dcat:temporalResolution`](#datensatz-zeitliche-auflosung), [`dcat:theme`](#datensatz-kategorie), [`dcatde:contributorID`](#datensatz-datenbereitsteller-id), [`dcatde:geocodingDescription`](#datensatz-beschreibung-abdeckung), [`dcatde:legalBasis`](#datensatz-rechtsgrundlage-zugangseroffnung), [`dcatde:maintainer`](#datensatz-verwalter), [`dcatde:originator`](#datensatz-urheber), [`dcatde:politicalGeocodingLevelURI`](#datensatz-ebene-geopolitischen-abdeckung), [`dcatde:politicalGeocodingURI`](#datensatz-geopolitischen-abdeckung), [`dcatde:qualityProcessURI`](#datensatz-qualitatssicherungsprozess), [`dct:accessRights`](#datensatz-grad-zuganglichkeit), [`dct:accrualPeriodicity`](#datensatz-aktualisierungsfrequenz), [`dcterms:conformsTo`](#datensatz-konform-zu-standard), [`dct:contributor`](#datensatz-bearbeiter), [`dct:hasVersion`](#datensatz-weitere-version), [`dct:identifier`](#datensatz-id), [`dct:isReferencedBy`](#datensatz-wird-referenziert), [`dct:isVersionOf`](#datensatz-ist-version), [`dct:provenance`](#datensatz-provenienz), [`dct:references`](#datensatz-referenziert), [`dct:relation`](#datensatz-verwandte-ressource), [`dct:source`](#datensatz-quelle), [`dct:temporal`](#datensatz-zeitliche-abdeckung), [`dct:type`](#datensatz-typ), [`foaf:page`](#datensatz-dokumentation), [`owl:versionInfo`](#datensatz-versionsbezeichnung), [`prov:qualifiedAttribution`](#datensatz-rollenzuordnung) und [`prov:wasGeneratedBy`](#datensatz-wurde-erzeugt-von).
 
 "dcat:Catalog" --> "*" "dcat:DataService" : <<optional>> dcat:service
     '@ rdfs:label      = Datenservice
@@ -442,9 +454,9 @@ class "dcat:Dataset" <<mandatory>> #F8978D|FCFFFC {
         '@ skos:scopeNote  = Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden.
         '@ rdf:about       = http://data.europa.eu/r5r/applicableLegislation
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation)
-        '@ adms:interoperabilityLevel = E
+        '@ adms:interoperabilityLevel = A
         '@ _:deOriginal    = Verwendungshinweis ergänzt.
-        '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+        '@ adms:versionNotes = Harmonisierung: Neu hinzugefügt.
     <<optional>> dcatde:legalBasis ~> rdfs:Literal [*]
         '@ rdfs:label      = Rechtsgrundlage für die Zugangseröffnung (DEPRECATED)
         '@ _:internalLink  = datensatz-rechtsgrundlage-zugangseroffnung
@@ -896,7 +908,7 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ _:internalLink  = datenservice-beschreibung-endpunkt
         '@ rdfs:range      = http://www.w3.org/2000/01/rdf-schema#Resource
         '@ rdfs:comment    = Die Beschreibung der Services, die unter den angebenen Endpunkten erreicht werden können.
-        '@ skos:scopeNote  = Diese Eigenschaft gibt spezifische Details zu den Endpunkten an, während die Eigenschaft "Katalogeintrag: Application Profile der Metadaten (dct:conformsTo)" verwendet wird, um den allgemeinen Standard oder die Spezifikation anzugeben, den die Endpunkte anwenden.
+        '@ skos:scopeNote  = Diese Eigenschaft gibt spezifische Details zu den Endpunkten an, während die Eigenschaft dcterms:conformsTo verwendet wird, um den allgemeinen Standard oder die Spezifikation anzugeben, den die Endpunkte anwenden.
         '@ rdf:about       = http://www.w3.org/ns/dcat#endpointDescription
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService.endpointdescription)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:data_service_endpoint_description)
@@ -933,6 +945,7 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ rdf:about       = http://purl.org/dc/terms/license
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService.licence)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_license)
+        '@ _:vocabularyLink = #kv-licenses
         '@ adms:interoperabilityLevel = A
         '@ sh:shapes       = dcatap:DataService_Property_dct_license, ___TBD___(kein Test des Vokabulars)
     <<optional>> dcterms:accessRights ~> dcterms:RightsStatement [0..1]
@@ -958,6 +971,18 @@ class "dcat:DataService" <<optional>> #F8978D|FCFFFC {
         '@ adms:interoperabilityLevel = A
         '@ _:vocabularyLink = #kv-file-type
         '@ adms:versionNotes = 3.0: Eigenschaft aufgenommen.
+    <<optional>> dcatap:applicableLegislation ~> eli:LegalResource [*]
+        '@ rdfs:label      = Rechtsgrundlage
+        '@ _:internalLink  = datenservice-rechtsgrundlage
+        '@ rdfs:range      = http://data.europa.eu/eli/ontology#LegalResource
+        '@ rdfs:comment    = Die Rechtsvorschriften, die die Erstellung oder Verwaltung des Datenservices vorschreiben.
+        '@ skos:scopeNote  = Für Datenservices mit Bezug zur HVD-Verordnung wird empfohlen, `http://data.europa.eu/eli/reg_impl/2023/138/oj` anzugeben.
+        '@ skos:scopeNote  = Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden.
+        '@ rdf:about       = http://data.europa.eu/r5r/applicableLegislation
+        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService.applicablelegislation)
+        '@ adms:interoperabilityLevel = A
+        '@ _:deOriginal    = Verwendungshinweis ergänzt.
+        '@ adms:versionNotes = Harmonisierung: Neu hinzugefügt.
 }
 '@ rdfs:label      = Datenservice
 '@ _:internalLink  = #klasse-datenservice
@@ -1009,7 +1034,6 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series)
         '@ adms:interoperabilityLevel = A
         '@ adms:versionNotes = 3.0: Neu hinzugefügt.
-
     <<mandatory>> dcterms:description ~> rdfs:Literal [1..*]
         '@ rdfs:label      = Beschreibung
         '@ _:internalLink  = datensatzserie-beschreibung
@@ -1022,19 +1046,6 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description)
         '@ adms:interoperabilityLevel = A
         '@ adms:versionNotes = 3.0: Neu hinzugefügt.
-
-    <<optional>> dcatap:applicableLegislation ~> eli:LegalResource [*]
-        '@ rdfs:label      = Rechtsgrundlage
-        '@ _:internalLink  = datensatzserie-rechtsgrundlage
-        '@ rdfs:range      = http://data.europa.eu/eli/ontology#LegalResource
-        '@ rdfs:comment    = Die Rechtsvorschriften, die die Erstellung oder Verwaltung der Datensatzserie vorschreiben.
-        '@ skos:scopeNote  = Handelt es sich um ein High Value Dataset, muss `http://data.europa.eu/eli/reg_impl/2023/138/oj` angegeben werden.
-        '@ skos:scopeNote  = Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden.
-        '@ rdf:about       = http://data.europa.eu/r5r/applicableLegislation
-        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.applicablelegislation)
-        '@ adms:interoperabilityLevel = A
-        '@ adms:versionNotes = 3.0: Neu hinzugefügt.
-
     <<optional>> dcterms:accrualPeriodicity ~> dcterms:Frequency [0..1]
         '@ rdfs:label      = Aktualisierungsfrequenz
         '@ _:internalLink  = datensatzserie-aktualisierungsfrequenz
@@ -1047,7 +1058,6 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
         '@ adms:interoperabilityLevel = A
         '@ _:vocabularyLink = #kv-frequency
         '@ adms:versionNotes = 3.0: Neu hinzugefügt.
-
     <<optional>> dcterms:issued ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Veröffentlichungsdatum
         '@ _:internalLink  = datensatzserie-veroffentlichungsdatum
@@ -1059,7 +1069,6 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_release_date)
         '@ adms:interoperabilityLevel = A
         '@ adms:versionNotes = 3.0: Neu hinzugefügt.
-
     <<optional>> dcterms:modified ~> rdfs:Literal [0..1]
         '@ rdfs:label      = Aktualisierungsdatum
         '@ _:internalLink  = datensatzserie-aktualisierungsdatum
@@ -1071,6 +1080,17 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_update_date)
         '@ adms:interoperabilityLevel = A
         '@ adms:versionNotes = 3.0: Neu hinzugefügt.
+    <<optional>> dcatap:applicableLegislation ~> eli:LegalResource [*]
+        '@ rdfs:label      = Rechtsgrundlage
+        '@ _:internalLink  = datensatzserie-rechtsgrundlage
+        '@ rdfs:range      = http://data.europa.eu/eli/ontology#LegalResource
+        '@ rdfs:comment    = Die Rechtsvorschriften, die die Erstellung oder Verwaltung der Datensatzserie vorschreiben.
+        '@ skos:scopeNote  = Für Datensatzserien mit Bezug zur HVD-Verordnung wird empfohlen, `http://data.europa.eu/eli/reg_impl/2023/138/oj` anzugeben.
+        '@ skos:scopeNote  = Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden.
+        '@ rdf:about       = http://data.europa.eu/r5r/applicableLegislation
+        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.applicablelegislation)
+        '@ adms:interoperabilityLevel = A
+        '@ adms:versionNotes = Harmonisierung: Neu hinzugefügt.
 }
 '@ rdfs:label      = Datensatzserie
 '@ _:internalLink  = #klasse-datensatzserie
@@ -1112,7 +1132,7 @@ class "dcat:DatasetSeries" <<reccommended>> #F8978D|FCFFFC {
     '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher)
     '@ adms:versionNotes = 3.0: Neu hinzugefügt.
     '@ adms:versionNotes = 3.0: Anforderung: Nutzung verpflichtend gemacht.
-    '@ adms:interoperabilityLevel = E
+    '@ adms:interoperabilityLevel = A
     '@ _:deOriginal    = Nutzung verpflichtend gemacht.
 "dcat:DatasetSeries" --> "*" "dcterms:PeriodOfTime" : <<recommended>> dcterms:temporal
     '@ rdfs:label        = Zeitliche Abdeckung
@@ -1393,7 +1413,19 @@ class "dcat:Distribution" <<recommended>> #F8978D|FCFFFC {
         '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.temporalresolution)
         '@ rdfs:seeAlso    = [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial_resolution)
         '@ adms:interoperabilityLevel = A
-        '@ adms:versionNotes = 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0.
+        '@ adms:versionNotes = Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0.
+    <<optional>> dcatap:applicableLegislation ~> eli:LegalResource [*]
+        '@ rdfs:label      = Rechtsgrundlage
+        '@ _:internalLink  = distribution-rechtsgrundlage
+        '@ rdfs:range      = http://data.europa.eu/eli/ontology#LegalResource
+        '@ rdfs:comment    = Die Rechtsvorschriften, die die Erstellung oder Verwaltung der Distribution vorschreiben.
+        '@ skos:scopeNote  = Für Distributionen mit Bezug zur HVD-Verordnung wird empfohlen, `http://data.europa.eu/eli/reg_impl/2023/138/oj` anzugeben.
+        '@ skos:scopeNote  = Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden.
+        '@ rdf:about       = http://data.europa.eu/r5r/applicableLegislation
+        '@ rdfs:seeAlso    = [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.applicablelegislation)
+        '@ adms:interoperabilityLevel = A
+        '@ _:deOriginal    = Verwendungshinweis ergänzt.
+        '@ adms:versionNotes = Harmonisierung: Neu hinzugefügt.
 }
 '@ rdfs:label      = Distribution
 '@ _:internalLink  = #klasse-distribution

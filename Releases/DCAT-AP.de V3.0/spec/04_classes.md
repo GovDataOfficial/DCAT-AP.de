@@ -9,7 +9,7 @@
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dcatap:availability`](#katalog-verfugbarkeit), [`dcterms:isPartOf`](#katalog-ist-teilkatalog), [`dcat:record`](#katalog-katalogeintrag), [`dcterms:publisher`](#katalog-herausgeber).<br>
+[`dcatap:availability`](#katalog-verfugbarkeit), [`dcatap:applicableLegislation`](#katalog-rechtsgrundlage), [`dcterms:isPartOf`](#katalog-ist-teilkatalog), [`dcat:record`](#katalog-katalogeintrag), [`dcterms:publisher`](#katalog-herausgeber).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. | Interop. |
@@ -28,6 +28,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Datensatz](#katalog-datensatz) | `dcat:dataset` | [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Rechte](#katalog-rechte) | `dcterms:rights` | [`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Katalog](#katalog-katalog) | `dcat:catalog` | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
+| [Rechtsgrundlage](#katalog-rechtsgrundlage) | `dcatap:applicableLegislation` | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Datenservice](#katalog-datenservice) | `dcat:service` | [`dcat:DataService`](http://www.w3.org/ns/dcat#DataService) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Hat Teilkatalog](#katalog-hat-teilkatalog) | `dcterms:hasPart` | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Ist Teilkatalog](#katalog-ist-teilkatalog) | `dcterms:isPartOf` | [`dcat:Catalog`](http://www.w3.org/ns/dcat#Catalog) | <small>Optional</small> | `[0..1]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
@@ -224,6 +225,20 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 <br>
 
+###  Katalog: Rechtsgrundlage {#katalog-rechtsgrundlage}
+> | *URI*                      | [`dcatap:applicableLegislation`](http://data.europa.eu/r5r/applicableLegislation) |
+> |:---------------------------|:-------------------------------------------|
+> | Wertebereich               | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) |
+> | Verbindlichkeit            | Optional |
+> | Multiplizität              | `[*]`                   |
+> | Beschreibung               | Die Rechtsvorschriften, die die Erstellung oder Verwaltung des Katalogs vorschreiben. |
+> | Verwendungshinweis | Für Kataloge mit Bezug zur HVD-Verordnung wird empfohlen, `http://data.europa.eu/eli/reg_impl/2023/138/oj` anzugeben.<br>Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden. | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.applicablelegislation)  | 
+> | Änderungen zur Vorversion | Harmonisierung: Neu hinzugefügt. | 
+> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
+> | Änderungen durch DCAT-AP.de | Verwendungshinweis ergänzt. | 
+<br>
+
 ###  Katalog: Datenservice {#katalog-datenservice}
 > | *URI*                      | [`dcat:service`](http://www.w3.org/ns/dcat#service) |
 > |:---------------------------|:-------------------------------------------|
@@ -330,7 +345,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Versionsbezeichnung](#datensatz-versionsbezeichnung) | `dcat:version` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
 | [Versionsbezeichnung (DEPRECATED)](#datensatz-versionsbezeichnung-deprecated) | `owl:versionInfo` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Versionserläuterung](#datensatz-versionserlauterung) | `adms:versionNotes` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Rechtsgrundlage](#datensatz-rechtsgrundlage) | `dcatap:applicableLegislation` | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) | <small>Optional</small> | `[*]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
+| [Rechtsgrundlage](#datensatz-rechtsgrundlage) | `dcatap:applicableLegislation` | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Rechtsgrundlage für die Zugangseröffnung (DEPRECATED)](#datensatz-rechtsgrundlage-zugangseroffnung) | `dcatde:legalBasis` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[*]` | <abbr title='Profilspezifisch hinzugefügt.'>P</abbr> |
 | [Verwandte Ressource](#datensatz-verwandte-ressource) | `dcterms:relation` | [`rdfs:Resource`](http://www.w3.org/2000/01/rdf-schema#Resource) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Ursprüngliche Webseite](#datensatz-ursprungliche-webseite) | `dcat:landingPage` | [`foaf:Document`](http://xmlns.com/foaf/0.1/Document) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
@@ -655,8 +670,8 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Die Rechtsvorschriften, die die Erstellung oder Verwaltung des Datensatzes vorschreiben. |
 > | Verwendungshinweis | Handelt es sich um ein High Value Dataset, muss `http://data.europa.eu/eli/reg_impl/2023/138/oj` angegeben werden.<br>Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
-> | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
+> | Änderungen zur Vorversion | Harmonisierung: Neu hinzugefügt. | 
+> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 > | Änderungen durch DCAT-AP.de | Verwendungshinweis ergänzt. | 
 <br>
 
@@ -1067,7 +1082,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dcatap:availability`](#datenservice-verfugbarkeit), [`dcterms:publisher`](#datenservice-herausgeber).<br>
+[`dcatap:availability`](#datenservice-verfugbarkeit), [`dcatap:applicableLegislation`](#datenservice-rechtsgrundlage), [`dcterms:publisher`](#datenservice-herausgeber).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. | Interop. |
@@ -1082,6 +1097,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Lizenz](#datenservice-lizenz) | `dcterms:license` | [`dcterms:LicenseDocument`](http://purl.org/dc/terms/LicenseDocument) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Grad der Zugänglichkeit](#datenservice-grad-zuganglichkeit) | `dcterms:accessRights` | [`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Format](#datenservice-format) | `dcterms:format` | [`dcterms:MediaTypeOrExtent`](http://purl.org/dc/terms/MediaTypeOrExtent) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
+| [Rechtsgrundlage](#datenservice-rechtsgrundlage) | `dcatap:applicableLegislation` | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br> Da es sich um eine Sub-Klasse von [`dcat:Resource`](#klasse-ressource) handelt, werden ihr auch alle Eigenschaften von [`dcat:Resource`](#klasse-ressource) zugeordnet, aber nicht genauer betrachtet.
 
@@ -1135,7 +1151,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit            | Empfohlen |
 > | Multiplizität              | `[*]`                   |
 > | Beschreibung               | Die Beschreibung der Services, die unter den angebenen Endpunkten erreicht werden können. |
-> | Verwendungshinweis | Diese Eigenschaft gibt spezifische Details zu den Endpunkten an, während die Eigenschaft "Katalogeintrag: Application Profile der Metadaten (dct:conformsTo)" verwendet wird, um den allgemeinen Standard oder die Spezifikation anzugeben, den die Endpunkte anwenden. | 
+> | Verwendungshinweis | Diese Eigenschaft gibt spezifische Details zu den Endpunkten an, während die Eigenschaft dcterms:conformsTo verwendet wird, um den allgemeinen Standard oder die Spezifikation anzugeben, den die Endpunkte anwenden. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService.endpointdescription), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:data_service_endpoint_description)  | 
 > | Änderungen zur Vorversion | 3.0: In Anlehnung an DCAT-AP 3.0 wurde ein neuer Verwendungshinweis aufgenommen. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
@@ -1186,6 +1202,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verbindlichkeit            | Optional |
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft bezieht sich auf die Lizenz, mit welcher der Datenservice verwendet oder seine Inhalte wiederverwendet werden können. |
+> | Codeliste | [DCAT-AP.de macht Vorgaben zur zu verwendenden Codeliste.](#kv-licenses) |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService.licence), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_license)  | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
@@ -1219,6 +1236,20 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 <br>
 
+###  Datenservice: Rechtsgrundlage {#datenservice-rechtsgrundlage}
+> | *URI*                      | [`dcatap:applicableLegislation`](http://data.europa.eu/r5r/applicableLegislation) |
+> |:---------------------------|:-------------------------------------------|
+> | Wertebereich               | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) |
+> | Verbindlichkeit            | Optional |
+> | Multiplizität              | `[*]`                   |
+> | Beschreibung               | Die Rechtsvorschriften, die die Erstellung oder Verwaltung des Datenservices vorschreiben. |
+> | Verwendungshinweis | Für Datenservices mit Bezug zur HVD-Verordnung wird empfohlen, `http://data.europa.eu/eli/reg_impl/2023/138/oj` anzugeben.<br>Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden. | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DataService.applicablelegislation)  | 
+> | Änderungen zur Vorversion | Harmonisierung: Neu hinzugefügt. | 
+> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
+> | Änderungen durch DCAT-AP.de | Verwendungshinweis ergänzt. | 
+<br>
+
 
 
 ***
@@ -1244,14 +1275,14 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 |:--------------------------------|:-------------|:------------------|:------------------------------------|:-----:|:--------:|
 | [Titel](#datensatzserie-titel) | `dcterms:title` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Beschreibung](#datensatzserie-beschreibung) | `dcterms:description` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Pflicht</small> | `[1..*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Herausgeber](#datensatzserie-herausgeber) | `dcterms:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Pflicht</small> | `[1]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
+| [Herausgeber](#datensatzserie-herausgeber) | `dcterms:publisher` | [`foaf:Agent`](http://xmlns.com/foaf/0.1/Agent) | <small>Pflicht</small> | `[1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Räumliche Abdeckung](#datensatzserie-raumliche-abdeckung) | `dcterms:spatial` | [`dcterms:Location`](http://purl.org/dc/terms/Location) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Zeitliche Abdeckung](#datensatzserie-zeitliche-abdeckung) | `dcterms:temporal` | [`dcterms:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Kontakt](#datensatzserie-kontakt) | `dcat:contactPoint` | [`vcard:Kind`](http://www.w3.org/TR/vcard-rdf/#Kind) | <small>Empfohlen</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
-| [Rechtsgrundlage](#datensatzserie-rechtsgrundlage) | `dcatap:applicableLegislation` | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Aktualisierungsfrequenz](#datensatzserie-aktualisierungsfrequenz) | `dcterms:accrualPeriodicity` | [`dcterms:Frequency`](http://purl.org/dc/terms/Frequency) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Veröffentlichungsdatum](#datensatzserie-veroffentlichungsdatum) | `dcterms:issued` | [`rdfs:Literal`]() | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Aktualisierungsdatum](#datensatzserie-aktualisierungsdatum) | `dcterms:modified` | [`rdfs:Literal`]() | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
+| [Rechtsgrundlage](#datensatzserie-rechtsgrundlage) | `dcatap:applicableLegislation` | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 
 <br> Da es sich um eine Sub-Klasse von [`dcat:Resource`](#klasse-ressource) handelt, werden ihr auch alle Eigenschaften von [`dcat:Resource`](#klasse-ressource) zugeordnet, aber nicht genauer betrachtet.
 
@@ -1298,7 +1329,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#angaben-zum-herausgeber) genauer beschrieben.<br>Der Herausgeber der Datensatzserie ist möglicherweise nicht der Herausgeber aller Datensätze.  So könnte z. B. ein digitales Archiv die Veröffentlichung älterer Datensätze der Reihe übernehmen.   | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.publisher), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher)  | 
 > | Änderungen zur Vorversion | 3.0: Neu hinzugefügt.<br>3.0: Anforderung: Nutzung verpflichtend gemacht. | 
-> | Interoperabilitätslevel    | <abbr title='Eigenes ergänzt.'>E</abbr> |
+> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 > | Änderungen durch DCAT-AP.de | Nutzung verpflichtend gemacht. | 
 <br>
 
@@ -1340,20 +1371,6 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Beschreibung               | Diese Eigenschaft umfasst Kontaktinformationen, welche für das Zusenden von Kommentaren zur jeweiligen Datensatzserie verwendet werden können. |
 > | Verwendungshinweis | Die Verwendung wird im [Konventionenhandbuch](https://www.dcat-ap.de/def/dcatde/2.0/implRules/#ansprechstelle) genauer beschrieben. | 
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.contactpoint), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point)  | 
-> | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
-> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
-
-<br>
-
-###  Datensatzserie: Rechtsgrundlage {#datensatzserie-rechtsgrundlage}
-> | *URI*                      | [`dcatap:applicableLegislation`](http://data.europa.eu/r5r/applicableLegislation) |
-> |:---------------------------|:-------------------------------------------|
-> | Wertebereich               | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) |
-> | Verbindlichkeit            | Optional |
-> | Multiplizität              | `[*]`                   |
-> | Beschreibung               | Die Rechtsvorschriften, die die Erstellung oder Verwaltung der Datensatzserie vorschreiben. |
-> | Verwendungshinweis | Handelt es sich um ein High Value Dataset, muss `http://data.europa.eu/eli/reg_impl/2023/138/oj` angegeben werden.<br>Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden. | 
-> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.applicablelegislation)  | 
 > | Änderungen zur Vorversion | 3.0: Neu hinzugefügt. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
@@ -1402,6 +1419,20 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 
 <br>
 
+###  Datensatzserie: Rechtsgrundlage {#datensatzserie-rechtsgrundlage}
+> | *URI*                      | [`dcatap:applicableLegislation`](http://data.europa.eu/r5r/applicableLegislation) |
+> |:---------------------------|:-------------------------------------------|
+> | Wertebereich               | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) |
+> | Verbindlichkeit            | Optional |
+> | Multiplizität              | `[*]`                   |
+> | Beschreibung               | Die Rechtsvorschriften, die die Erstellung oder Verwaltung der Datensatzserie vorschreiben. |
+> | Verwendungshinweis | Für Datensatzserien mit Bezug zur HVD-Verordnung wird empfohlen, `http://data.europa.eu/eli/reg_impl/2023/138/oj` anzugeben.<br>Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden. | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.applicablelegislation)  | 
+> | Änderungen zur Vorversion | Harmonisierung: Neu hinzugefügt. | 
+> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
+
+<br>
+
 
 
 ***
@@ -1418,7 +1449,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 <br>
 
 Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert: 
-[`dcterms:license`](#distribution-lizenz), [`dcterms:title`](#distribution-titel), [`dcterms:modified`](#distribution-aktualisierungsdatum), [`dcatde:licenseAttributionByText`](#distribution-namensnennungstext-by-clauses), [`dcterms:description`](#distribution-beschreibung), [`dcat:spatialResolutionInMeters`](#distribution-raumliche-auflosung-in-meter), [`spdx:checksum`](#distribution-prufsumme).<br>
+[`dcterms:license`](#distribution-lizenz), [`dcterms:title`](#distribution-titel), [`dcterms:modified`](#distribution-aktualisierungsdatum), [`dcatde:licenseAttributionByText`](#distribution-namensnennungstext-by-clauses), [`dcterms:description`](#distribution-beschreibung), [`dcat:spatialResolutionInMeters`](#distribution-raumliche-auflosung-in-meter), [`dcatap:applicableLegislation`](#distribution-rechtsgrundlage), [`spdx:checksum`](#distribution-prufsumme).<br>
 
 
 |                                 | Eigenschaft  | Wertebereich      | <small>Verbind&shy;lichkeit</small> | Mult. | Interop. |
@@ -1445,6 +1476,7 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 | [Status](#distribution-status) | `adms:status` | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Räumliche Auflösung in Meter](#distribution-raumliche-auflosung-in-meter) | `dcat:spatialResolutionInMeters` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..1]` | <abbr title='Eigenes ergänzt.'>E</abbr> |
 | [Zeitliche Auflösung](#distribution-zeitliche-auflosung) | `dcat:temporalResolution` | [`rdfs:Literal`](http://www.w3.org/2000/01/rdf-schema#Literal) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
+| [Rechtsgrundlage](#distribution-rechtsgrundlage) | `dcatap:applicableLegislation` | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Ausliefernder Datenservice](#distribution-ausliefernder-datenservice) | `dcat:accessService` | [`dcat:DataService`](http://www.w3.org/ns/dcat#DataService) | <small>Optional</small> | `[*]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 | [Prüfsumme](#distribution-prufsumme) | `spdx:checksum` | [`spdx:Checksum`](http://spdx.org/rdf/terms#Checksum) | <small>Optional</small> | `[0..1]` | <abbr title='Unverändert übernommen.'>A</abbr> |
 
@@ -1741,9 +1773,23 @@ Die folgenden Eigenschaften wurden von DCAT-AP.de hinzugefügt oder verändert:
 > | Multiplizität              | `[0..1]`                   |
 > | Beschreibung               | Diese Eigenschaft bezieht sich auf den kürzesten in der Distribution auflösbaren Zeitraum. |
 > | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.temporalresolution), [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial_resolution)  | 
-> | Änderungen zur Vorversion | 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 
+> | Änderungen zur Vorversion | Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 
 > | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
 
+<br>
+
+###  Distribution: Rechtsgrundlage {#distribution-rechtsgrundlage}
+> | *URI*                      | [`dcatap:applicableLegislation`](http://data.europa.eu/r5r/applicableLegislation) |
+> |:---------------------------|:-------------------------------------------|
+> | Wertebereich               | [`eli:LegalResource`](http://data.europa.eu/eli/ontology#LegalResource) |
+> | Verbindlichkeit            | Optional |
+> | Multiplizität              | `[*]`                   |
+> | Beschreibung               | Die Rechtsvorschriften, die die Erstellung oder Verwaltung der Distribution vorschreiben. |
+> | Verwendungshinweis | Für Distributionen mit Bezug zur HVD-Verordnung wird empfohlen, `http://data.europa.eu/eli/reg_impl/2023/138/oj` anzugeben.<br>Ansonsten wird die Verwendung eine ELI-Identifiers empfohlen. Ist dieser nicht bekannt, soll ein möglichst stabiler Link zum Gesetz verwendet werden. | 
+> | Weiterführende Dokumentationen | [DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.applicablelegislation)  | 
+> | Änderungen zur Vorversion | Harmonisierung: Neu hinzugefügt. | 
+> | Interoperabilitätslevel    | <abbr title='Unverändert übernommen.'>A</abbr> |
+> | Änderungen durch DCAT-AP.de | Verwendungshinweis ergänzt. | 
 <br>
 
 ###  Distribution: Ausliefernder Datenservice {#distribution-ausliefernder-datenservice}

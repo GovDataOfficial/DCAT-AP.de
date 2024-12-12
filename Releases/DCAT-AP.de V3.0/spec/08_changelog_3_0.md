@@ -10,6 +10,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Veröffentlichungsdatum](#katalog-veroffentlichungsdatum) (`dcterms:issued`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 | [Aktualisierungsdatum](#katalog-aktualisierungsdatum) (`dcterms:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 | [Rechte](#katalog-rechte) (`dcterms:rights`) | 3.0: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt. | 
+| [Rechtsgrundlage](#katalog-rechtsgrundlage) (`dcatap:applicableLegislation`) | Harmonisierung: Neu hinzugefügt. | 
 | [Datensatz](#katalog-datensatz) (`dcat:dataset`) | 3.0: Harmonisierung: Kardinalität von `1..*` auf `*` geändert. Verbindlichkeit auf "Empfohlen" gesenkt. | 
 
 
@@ -29,7 +30,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Aktualisierungsdatum](#datensatz-aktualisierungsdatum) (`dcterms:modified`) | 3.0: `xsd:gYear` und `xsd:gYearMonth` zum Wertebereich hinzugefügt. | 
 | [Versionsbezeichnung](#datensatz-versionsbezeichnung) (`dcat:version`) | 3.0: Neu hinzugefügt. | 
 | [Versionsbezeichnung (DEPRECATED)](#datensatz-versionsbezeichnung-deprecated) (`owl:versionInfo`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
-| [Rechtsgrundlage](#datensatz-rechtsgrundlage) (`dcatap:applicableLegislation`) | 3.0: Neu hinzugefügt. | 
+| [Rechtsgrundlage](#datensatz-rechtsgrundlage) (`dcatap:applicableLegislation`) | Harmonisierung: Neu hinzugefügt. | 
 | [Rechtsgrundlage für die Zugangseröffnung (DEPRECATED)](#datensatz-rechtsgrundlage-zugangseroffnung) (`dcatde:legalBasis`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
 | [Grad der Zugänglichkeit](#datensatz-grad-zuganglichkeit) (`dcterms:accessRights`) | 3.0: Kontrolliertes Vokabular hinzugefügt. | 
 | [Qualitätssicherungsprozess (DEPRECATED)](#datensatz-qualitatssicherungsprozess) (`dcatde:qualityProcessURI`) | 3.0: [DEPRECATED](#glossar-deprecated) | 
@@ -60,6 +61,7 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Beschreibung des Endpunktes](#datenservice-beschreibung-endpunkt) (`dcat:endpointDescription`) | 3.0: In Anlehnung an DCAT-AP 3.0 wurde ein neuer Verwendungshinweis aufgenommen. | 
 | [Grad der Zugänglichkeit](#datenservice-grad-zuganglichkeit) (`dcterms:accessRights`) | 3.0: Kontrolliertes Vokabular hinzugefügt. | 
 | [Format](#datenservice-format) (`dcterms:format`) | 3.0: Eigenschaft aufgenommen. | 
+| [Rechtsgrundlage](#datenservice-rechtsgrundlage) (`dcatap:applicableLegislation`) | Harmonisierung: Neu hinzugefügt. | 
 | [Herausgeber](#datenservice-herausgeber) (`dcterms:publisher`) | 3.0: Eigenschaft aufgenommen.<br>3.0: Anforderung: Nutzung verpflichtend gemacht. | 
 
 
@@ -76,10 +78,10 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 |:----------------------|:--------------------------------|
 | [Titel](#datensatzserie-titel) (`dcterms:title`) | 3.0: Neu hinzugefügt. | 
 | [Beschreibung](#datensatzserie-beschreibung) (`dcterms:description`) | 3.0: Neu hinzugefügt. | 
-| [Rechtsgrundlage](#datensatzserie-rechtsgrundlage) (`dcatap:applicableLegislation`) | 3.0: Neu hinzugefügt. | 
 | [Aktualisierungsfrequenz](#datensatzserie-aktualisierungsfrequenz) (`dcterms:accrualPeriodicity`) | 3.0: Neu hinzugefügt. | 
 | [Veröffentlichungsdatum](#datensatzserie-veroffentlichungsdatum) (`dcterms:issued`) | 3.0: Neu hinzugefügt. | 
 | [Aktualisierungsdatum](#datensatzserie-aktualisierungsdatum) (`dcterms:modified`) | 3.0: Neu hinzugefügt. | 
+| [Rechtsgrundlage](#datensatzserie-rechtsgrundlage) (`dcatap:applicableLegislation`) | Harmonisierung: Neu hinzugefügt. | 
 | [Räumliche Abdeckung](#datensatzserie-raumliche-abdeckung) (`dcterms:spatial`) | 3.0: Neu hinzugefügt. | 
 | [Herausgeber](#datensatzserie-herausgeber) (`dcterms:publisher`) | 3.0: Neu hinzugefügt.<br>3.0: Anforderung: Nutzung verpflichtend gemacht. | 
 | [Zeitliche Abdeckung](#datensatzserie-zeitliche-abdeckung) (`dcterms:temporal`) | 3.0: Neu hinzugefügt. | 
@@ -104,7 +106,8 @@ Bei ihren Eigenschaften gibt es folgende Änderungen zur Vorversion:
 | [Rechte](#distribution-rechte) (`dcterms:rights`) | 3.0: In "Rechte" umbenannt und Verwendungshinweis hinzugefügt. | 
 | [Status](#distribution-status) (`adms:status`) | 3.0: Änderung des kontrollierten Vokabulars. | 
 | [Räumliche Auflösung in Meter](#distribution-raumliche-auflosung-in-meter) (`dcat:spatialResolutionInMeters`) | 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 
-| [Zeitliche Auflösung](#distribution-zeitliche-auflosung) (`dcat:temporalResolution`) | 3.0: Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 
+| [Zeitliche Auflösung](#distribution-zeitliche-auflosung) (`dcat:temporalResolution`) | Errata: Eigenschaft aufgeführt, existierte bereits in DCAT-AP 2.0. | 
+| [Rechtsgrundlage](#distribution-rechtsgrundlage) (`dcatap:applicableLegislation`) | Harmonisierung: Neu hinzugefügt. | 
 | [Prüfsumme](#distribution-prufsumme) (`spdx:checksum`) | 3.0: Harmonisierung: Verwendungshinweis hinzugefügt. | 
 
 
