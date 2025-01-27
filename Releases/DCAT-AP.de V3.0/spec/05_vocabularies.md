@@ -1,13 +1,13 @@
 # Kontrollierte Vokabulare 
 
-Durch die Profilbildung und Einbeziehung von DCAT, DCAT-AP und DCAT-AP.de sind obligatorische und optionale Vokabulare auf unterschiedlicher Ebene zu berücksichtigen. Die folgenden Kapitel führen, neben Anforderungen an den Entwurf und Betrieb von Vokabularen, konkrete Wertelisten aus dem Geltungsbereich DCAT (ADMS, Dublin Core), DCAT-AP und DCAT-AP.de auf
+Durch die Profilbildung und Einbeziehung von DCAT, DCAT-AP und DCAT-AP.de sind obligatorische und optionale Vokabulare auf unterschiedlicher Ebene zu berücksichtigen. Die folgenden Kapitel führen, neben Anforderungen an den Entwurf und Betrieb von Vokabularen, konkrete Wertelisten aus dem Geltungsbereich DCAT (ADMS, Dublin Core), DCAT-AP und DCAT-AP.de auf.
 
 __Anforderungen an kontrollierte Vokabulare__
 
 Die nachfolgende Liste beschreibt [Anforderungen](28), die für neue kontrollierte Vokabulare in diesem Application Profile oder bei Erweiterungen auf kommunaler und Landesebene berücksichtigt werden sollten. 
 Das kontrollierte Vokabular sollte:
- -	unter einer offenen Lizenz veröffentlicht sein,
- -	von einer Institution der Europäischen Union – „Recognised Standards Organisation“ oder einer anderen vertrauenswürdigen Instanz – gepflegt werden,
+ - unter einer offenen Lizenz veröffentlicht sein,
+ - von einer Institution der Europäischen Union – „Recognised Standards Organisation“ oder einer anderen vertrauenswürdigen Instanz – gepflegt werden,
  - ausreichend dokumentiert sein,
  - mehrsprachige Beschreibungen haben (idealerweise sollten alle offiziell in der Europäischen Union vertretenen Sprachen prinzipiell unterstützt werden),
  - eine relativ geringe Anzahl von Begriffen beinhalten (10-25), die allgemein genug sind, um eine Vielzahl von Ressourcen zu klassifizieren,
@@ -164,16 +164,6 @@ Weitere Details und Beispiele finden Sie im [Konventionenhandbuch](https://www.d
 > | Beispiel                       | Statistische Daten: `<http://publications.europa.eu/resource/authority/dataset-type/STATISTICAL>` |
 
 
-## EU Vokabular "Data Theme" {#kv-data-theme}
-> | Betroffene Eigenschaften       | [`dcat:theme`](#datensatz-kategorie) |
-> |:-------------------------------|:-------------------------|
-> | Verbindlichkeit Vokabular      | Pflicht                  |
-> | Verwendung in Klassen          | [`dcat:Dataset`](#datensatz-kategorie) |
-> | Menschenlesbare Ansicht        | [EU Vocabularies: data-theme](https://op.europa.eu/de/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme) |
-> | Basis-URI                      | `http://publications.europa.eu/resource/authority/data-theme/`                   |
-> | Beispiel                       | Gesundheit: `<http://publications.europa.eu/resource/authority/data-theme/HEAL>` |
-
-
 ## EU Vokabular "Access Right" {#kv-access-right}
 Die Access right authority table ist ein kontrolliertes Vokabular, in dem die Zugriffsrechte oder -beschränkungen auf Ressourcen aufgeführt sind. Sie ist für DCAT-Beschreibungen von Datensätzen gedacht, aber nicht auf diese beschränkt.
 
@@ -201,7 +191,7 @@ Weitere Details und Beispiele finden Sie im [Konventionenhandbuch](https://www.d
 
 
 ## IANA Vokabular "Media Types" {#kv-iana-media-types}
-Die von DCAT eingeführten Eigenschaften zur Angabe des Fomats im weiteren Sinne, verwenden die IANA-Liste als kontrolliertes Vokabular.
+Die von DCAT eingeführten Eigenschaften zur Angabe des Formats im weiteren Sinne verwenden die IANA-Liste als kontrolliertes Vokabular.
 Auch hier können fehlende Einträge bei Bedarf eingetragen werden: https://www.iana.org/form/media-types
 
 > | Betroffene Eigenschaften       | [`dcat:mediaType`](#distribution-medientyp) <br> [`dcat:compressFormat`](#distribution-kompressionsformat) <br> [`dcat:packageFormat`](#distribution-paketformat) |
@@ -214,7 +204,7 @@ Auch hier können fehlende Einträge bei Bedarf eingetragen werden: https://www.
 
 
 ## EU Vokabular "Distribution Status" {#kv-distribution-status}
-Die Liste der möglichen Status wurde aus der ADMS-Spezifikation herausgelöste und ins Publication Office überführte.
+Die Liste der möglichen Status wurde aus der ADMS-Spezifikation herausgelöst und ins Publication Office überführt.
 
 > | Betroffene Eigenschaften       | [`adms:status` ](#distribution-status) |
 > |:-------------------------------|:---------------------------------------|

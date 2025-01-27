@@ -63,7 +63,7 @@ Das Application Profile verwendet Begriffe von verschiedenen existierenden Spezi
 | `vcard`      | `http://www.w3.org/2006/vcard/ns#`      | File format standard for electronic business cards                                                         |
 | `xsd`        | `http://www.w3.org/2001/XMLSchema#`     | XML Schema Part 2: Datatypes Second Edition                                                                |
 
-Im Rahmen der Offene Welt-Annahme (OWA) und dem Grundsatz "Jeder kann Alles über Alles sagen" (AAA) [LINKEDDATA_TUM], steht es Nutzern von DCAT-AP.de frei, Eigenschaften und Klassen aus anderen Ontologien für die Beschreibung ihrer Metadaten zu verwenden. Die in dieser Spezifikatione beschriebenen Klassen und Eigenschaften DÜRFEN dabei jedoch nicht zu einem anderen Zweck erneut benutzt werden.
+Im Rahmen der Offene Welt-Annahme (OWA) und dem Grundsatz "Jeder kann Alles über Alles sagen" (AAA), steht es Nutzern von DCAT-AP.de frei, Eigenschaften und Klassen aus anderen Ontologien für die Beschreibung ihrer Metadaten zu verwenden. Die in dieser Spezifikation beschriebenen Klassen und Eigenschaften DÜRFEN dabei jedoch nicht zu einem anderen Zweck erneut benutzt werden.
 
 ## Bekannte Nutzungen von DCAT-AP und DCAT-AP.de
 

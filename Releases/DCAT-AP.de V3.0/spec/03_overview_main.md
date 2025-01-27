@@ -1,8 +1,8 @@
 # Überblick über das DCAT-AP.de Modell {#ueberblick-datenmodell}
 
-Als Austauschstandard für allgemeine offene Verwaltungsdaten ist der Hauptanwendungsfall von DCAT-AP.de der Austausch von Metadaten zwischen Datenportalen. Dabei wird in der Regel ein Katalog (`dcat:Catalog`) bereitstellt, der Datensätze (`dcat:Dataset`), Datenservices (`dcat:DataService`) und/oder Datensatzserien (`dcat:DatasetSeries`) beinhaltet. Die Zugang zu den eigentlichen Daten wird zudem in Distributionen (`dcat:Distribution`) beschrieben, die daher auch eine zentrale Bedeutung haben. Diese fünf Klassen (und die Superklasse `dcat:Resource` werden im [UML-Diagramm](#uml-diagramm) rot hervorgehoben.)
+Als Austauschstandard für allgemeine offene Verwaltungsdaten ist der Hauptanwendungsfall von DCAT-AP.de der Austausch von Metadaten zwischen Datenportalen. Dabei wird in der Regel ein Katalog (`dcat:Catalog`) bereitstellt, der Datensätze (`dcat:Dataset`), Datenservices (`dcat:DataService`) und/oder Datensatzserien (`dcat:DatasetSeries`) beinhaltet. Der Zugang zu den eigentlichen Daten wird zudem in Distributionen (`dcat:Distribution`) beschrieben, die daher auch eine zentrale Bedeutung haben. Diese fünf Klassen (und die Superklasse `dcat:Resource` werden im [UML-Diagramm](#uml-diagramm) rot hervorgehoben.)
 
-Darüber hinaus beschreiben wir nur solche Klassen, die (im W3C-DCAT oder DCAT-AP) über mindestens eine Eigenschaft verfügen und zudem in DCAT-AP.de nicht durch ein kontrolliertes Vokabular abgedeckt werden. Daraus ergibt sich folgende Klassenübersicht:
+Darüber hinaus werden nur solche Klassen beschrieben, die (im W3C-DCAT oder DCAT-AP) über mindestens eine Eigenschaft verfügen und zudem in DCAT-AP.de nicht durch ein kontrolliertes Vokabular abgedeckt werden. Daraus ergibt sich folgende Klassenübersicht:
 
 | Hauptklassen                             |                                                          | Unterstützungsklassen            |
 | ---------------------------------------- | -------------------------------------------------------- | -------------------------------- |
