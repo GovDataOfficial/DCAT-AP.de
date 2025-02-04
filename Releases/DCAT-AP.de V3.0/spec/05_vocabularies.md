@@ -163,6 +163,14 @@ Weitere Details und Beispiele finden Sie im [Konventionenhandbuch](https://www.d
 > | Basis-URI                      | `http://publications.europa.eu/resource/authority/dataset-type/` |
 > | Beispiel                       | Statistische Daten: `<http://publications.europa.eu/resource/authority/dataset-type/STATISTICAL>` |
 
+## EU Vokabular "Data Theme" {#kv-data-theme}
+> | Betroffene Eigenschaften       | [`dcat:theme`](#datensatz-kategorie) |
+> |:-------------------------------|:-------------------------|
+> | Verbindlichkeit Vokabular      | Pflicht                  |
+> | Verwendung in Klassen          | [`dcat:Dataset`](#datensatz-kategorie) |
+> | Menschenlesbare Ansicht        | [EU Vocabularies: data-theme](https://op.europa.eu/de/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme) |
+> | Basis-URI                      | `http://publications.europa.eu/resource/authority/data-theme/`                   |
+> | Beispiel                       | Gesundheit: `<http://publications.europa.eu/resource/authority/data-theme/HEAL>` |
 
 ## EU Vokabular "Access Right" {#kv-access-right}
 Die Access right authority table ist ein kontrolliertes Vokabular, in dem die Zugriffsrechte oder -beschränkungen auf Ressourcen aufgeführt sind. Sie ist für DCAT-Beschreibungen von Datensätzen gedacht, aber nicht auf diese beschränkt.
